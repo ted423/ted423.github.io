@@ -23,7 +23,7 @@
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
 <meta property="og:type" content="website">
 <meta property="og:title" content="个人小站">
-<meta property="og:url" content="http://example.com/tags/MIT/index.html">
+<meta property="og:url" content="http://example.com/categories/Problem/index.html">
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
 <meta property="og:locale" content="zh_CN">
@@ -359,17 +359,23 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/2020/06/19/Picture/" >
+        <a class="abstract-title" href = "/2019/09/02/Windows%20Fast%20Shutdown/" >
             
-                <span>[软件推荐]图片类相关软件</span>
+                <span>[Untitled Post]</span>
         </a>
         <div class="abstract-content">
-            看图我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，速度相当快，相对来讲XnViewMP搜索类别更细，功能性更强，但是Xnview里的结果是一次性的，一旦点开一张图片结果就会消失。就个人感觉，XnView的规划很乱，设计也是乱七八糟，唯有功能比较多而已。况且XnView和XnViewMP的使用界面和方式还有很多不一样，感觉怪怪的。MassiGra的各种按键自定义简直可怕，而且支持读取压缩包里的图片，其实SumatraPDF也支持读取压缩包里的图片强力推荐下Honeyview，给我一种“就是他了”感...
+            这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/02</span>
             </div>
             <!-- tags  -->
             
@@ -377,17 +383,11 @@
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "分类汇总">分类汇总</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "问题处理">问题处理</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "SVG">SVG</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "开源">开源</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "GPLv2">GPLv2</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "GPLv3">GPLv3</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "MIT">MIT</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
     
 </div>
             
