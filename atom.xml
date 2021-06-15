@@ -156,4 +156,33 @@
     
   </entry>
   
+  <entry>
+    <title></title>
+    <link href="http://example.com/2019/09/02/Windows%20Fast%20Shutdown/"/>
+    <id>http://example.com/2019/09/02/Windows%20Fast%20Shutdown/</id>
+    <published>2019-09-01T17:49:25.447Z</published>
+    <updated>2019-07-02T16:07:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)</p><p>个人处理方法</p><p>打开注册表管理器，找到</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Control Panel\Desktop\</span><br></pre></td></tr></table></figure><p>新建一个<code>AutoEndTasks</code>，值改为<code>1</code><br>注意新建的时候选<strong>字符串值</strong>，也就是类型那里是<code>REG_SZ</code></p><p>找到<code>WaitToKillAppTimeout</code>(找不到就新建，类型应该是同上)<br>数值改小即可</p><p><del>不过笔记本的这个值没改过，我想大概是有软件直接取消了阻止Windows 关机这个功能吧。</del></p><p>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)  –<time>2018-02-26</time></p><p>Windows Update 以后会偷偷再把值给取消掉 –<time>2019-07-03</time></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)&lt;/p&gt;
+&lt;p&gt;个人处理方</summary>
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="问题处理" scheme="http://example.com/tags/%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86/"/>
+    
+    <category term="Windows 10" scheme="http://example.com/tags/Windows-10/"/>
+    
+    <category term="Regedit" scheme="http://example.com/tags/Regedit/"/>
+    
+  </entry>
+  
 </feed>

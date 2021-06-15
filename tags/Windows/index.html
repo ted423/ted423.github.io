@@ -394,6 +394,47 @@
         </div>
     </article>
     
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2019/09/02/Windows%20Fast%20Shutdown/" >
+            
+                <span>[Untitled Post]</span>
+        </a>
+        <div class="abstract-content">
+            这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "问题处理">问题处理</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
     <!-- paginator  -->
     
 </main>
@@ -527,9 +568,16 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 5
+        Total : 6
         </div>
         <!-- search  -->
         
@@ -604,6 +652,20 @@
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2021/06/02/px-pt-em/" >[转载]常用px,pt,em换算表</a>
         </li>
     
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2019 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/2019/09/02/Windows%20Fast%20Shutdown/" >[Untitled Post]</a>
+        </li>
+    
     </div>
   </div>
         <div class="sidebar-panel-tags">
@@ -634,6 +696,12 @@
         <span class="sidebar-tag-name" data-tags="Code"><span class="iconfont-archer">&#xe606;</span>Code</span>
     
         <span class="sidebar-tag-name" data-tags="Document"><span class="iconfont-archer">&#xe606;</span>Document</span>
+    
+        <span class="sidebar-tag-name" data-tags="问题处理"><span class="iconfont-archer">&#xe606;</span>问题处理</span>
+    
+        <span class="sidebar-tag-name" data-tags="Windows 10"><span class="iconfont-archer">&#xe606;</span>Windows 10</span>
+    
+        <span class="sidebar-tag-name" data-tags="Regedit"><span class="iconfont-archer">&#xe606;</span>Regedit</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
