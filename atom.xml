@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-10T07:24:30.402Z</updated>
+  <updated>2021-06-16T07:27:14.336Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[软件推荐]WizTree - 磁盘空间分析</title>
+    <link href="http://example.com/2021/06/16/Software/WizTree/"/>
+    <id>http://example.com/2021/06/16/Software/WizTree/</id>
+    <published>2021-06-16T07:25:16.874Z</published>
+    <updated>2021-06-16T07:27:14.336Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.diskanalyzer.com/">https://www.diskanalyzer.com/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.diskanalyzer.com/&quot;&gt;https://www.diskanalyzer.com/&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>Git 设置和取消代理</title>
@@ -122,8 +147,8 @@
   
   <entry>
     <title>[软件推荐]图片类相关软件</title>
-    <link href="http://example.com/2020/06/19/Picture/"/>
-    <id>http://example.com/2020/06/19/Picture/</id>
+    <link href="http://example.com/2020/06/19/Software/Picture/"/>
+    <id>http://example.com/2020/06/19/Software/Picture/</id>
     <published>2020-06-19T14:46:50.085Z</published>
     <updated>2021-06-10T07:01:32.219Z</updated>
     
