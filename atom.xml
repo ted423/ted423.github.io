@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-16T15:53:30.426Z</updated>
+  <updated>2021-06-17T07:50:24.520Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <title>[软件推荐]WizTree - 磁盘空间分析</title>
     <link href="http://example.com/2021/06/16/Software/WizTree/"/>
     <id>http://example.com/2021/06/16/Software/WizTree/</id>
-    <published>2021-06-16T13:16:57.979Z</published>
-    <updated>2021-06-16T15:53:30.426Z</updated>
+    <published>2021-06-16T07:25:16.874Z</published>
+    <updated>2021-06-17T07:50:24.520Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.diskanalyzer.com/">https://www.diskanalyzer.com/</a><br>之前还看到一个<a href="http://www.uderzo.it/main_products/space_sniffer/">SpaceSniffer</a>，一直在用，不过WizTree一直在维护(相反SpaceSniffer最后更新已经是2018)。大文件提示会比较直观.百分比占用会比图形更准确，好理解。<br>前者会边扫图形边变化，前期图形会失真，并且整体速度略慢<br>据说Wiztree是直接对NTFS文件系统的MFT进行文件分析，不过我测试是对的网络路径(小文件太多估计有影响)<br>固此，我倾向于用WizTree 完全取代 SpaceSniffer</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.diskanalyzer.com/">https://www.diskanalyzer.com/</a><br>之前还看到一个<a href="http://www.uderzo.it/main_products/space_sniffer/">SpaceSniffer</a>，是一直在用，不过目前来看WizTree一直在维护(相反SpaceSniffer最后更新已经是2018)。<br>比较而言后者大文件提示会比较直观.百分比占用会比图形更准确，好理解。<br>前者会边扫图形边变化，前期图形会失真，并且整体速度略慢<br>据说Wiztree是直接对NTFS文件系统的MFT进行文件分析，不过我测试是对的网络路径(小文件太多估计有影响)<br>固此，我倾向于用WizTree 完全取代 SpaceSniffer</p>]]></content>
     
     
       
