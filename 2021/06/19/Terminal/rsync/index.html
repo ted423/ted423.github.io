@@ -20,25 +20,22 @@
     <meta name="keywords" content="hexo,hexo-theme,hexo-blog,软件,资料,动画,漫画,游戏,ted423">
     
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    <meta name="description" content="这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师) 个人处理方法 打开注册表管理器，找到 1HKEY_CURRENT_USER\Control Panel\Desktop\ 新建一个AutoEndTas">
+    <meta name="description" content="rsync -avzP   source root@ip:&#x2F;目录 –log-file&#x3D;$HOME&#x2F;.rsync.log –remove-source-files 其中z为压缩，在网络性能足够的情况下，不开会快">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法">
-<meta property="og:url" content="http://example.com/2019/09/02/Windows%20Fast%20Shutdown/index.html">
+<meta property="og:title" content="rsync">
+<meta property="og:url" content="http://example.com/2021/06/19/Terminal/rsync/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师) 个人处理方法 打开注册表管理器，找到 1HKEY_CURRENT_USER\Control Panel\Desktop\ 新建一个AutoEndTas">
+<meta property="og:description" content="rsync -avzP   source root@ip:&#x2F;目录 –log-file&#x3D;$HOME&#x2F;.rsync.log –remove-source-files 其中z为压缩，在网络性能足够的情况下，不开会快">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-09-01T17:49:25.447Z">
-<meta property="article:modified_time" content="2019-07-02T16:07:00.000Z">
+<meta property="article:published_time" content="2021-06-19T04:09:17.630Z">
+<meta property="article:modified_time" content="2021-06-18T07:19:50.000Z">
 <meta property="article:author" content="ted423">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="问题处理">
-<meta property="article:tag" content="Windows 10">
-<meta property="article:tag" content="Regedit">
+<meta property="article:tag" content="Terminal">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法 · ted423个人小站</title>
+    <title>rsync · ted423个人小站</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -235,7 +232,7 @@
                 <a href="/" >个人小站</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</a>
+                <a href="#" class="post-name">rsync</a>
             </div>
     </div>
     
@@ -265,7 +262,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法
+            rsync
             <!-- 404 -->
             
         </h1>
@@ -284,24 +281,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "问题处理">问题处理</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Terminal">Terminal</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">239</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">36</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/09/02</span>
+                    <span class="post-intro-time">2021/06/19</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -425,15 +416,8 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)</p>
-<p>个人处理方法</p>
-<p>打开注册表管理器，找到</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Control Panel\Desktop\</span><br></pre></td></tr></table></figure>
-<p>新建一个<code>AutoEndTasks</code>，值改为<code>1</code><br>注意新建的时候选<strong>字符串值</strong>，也就是类型那里是<code>REG_SZ</code></p>
-<p>找到<code>WaitToKillAppTimeout</code>(找不到就新建，类型应该是同上)<br>数值改小即可</p>
-<p><del>不过笔记本的这个值没改过，我想大概是有软件直接取消了阻止Windows 关机这个功能吧。</del></p>
-<p>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)  –<time>2018-02-26</time></p>
-<p>Windows Update 以后会偷偷再把值给取消掉 –<time>2019-07-03</time></p>
+        <p>rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log</p>
+<p>–remove-source-files<br> 其中z为压缩，在网络性能足够的情况下，不开会快</p>
 
     </article>
     <!-- license  -->
@@ -442,13 +426,13 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2020/06/19/Software/Picture/" title= "[软件推荐]图片类相关软件">
-                    <div class="nextTitle">[软件推荐]图片类相关软件</div>
-                </a>
-            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2021/06/16/Software/WizTree/" title= "[软件推荐]WizTree - 磁盘空间分析">
+                    <div class="prevTitle">[软件推荐]WizTree - 磁盘空间分析</div>
+                </a>
             
         </li>
     </ul>

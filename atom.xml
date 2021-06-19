@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-06-17T07:50:24.520Z</updated>
+  <updated>2021-06-18T07:19:50.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rsync</title>
+    <link href="http://example.com/2021/06/19/Terminal/rsync/"/>
+    <id>http://example.com/2021/06/19/Terminal/rsync/</id>
+    <published>2021-06-19T04:09:17.630Z</published>
+    <updated>2021-06-18T07:19:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log</p><p>–remove-source-files<br> 其中z为压缩，在网络性能足够的情况下，不开会快</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log&lt;/p&gt;
+&lt;p&gt;–remove-source-files&lt;br&gt; 其中z为压缩，在网络性能足够的情况下，不开会快&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="Terminal" scheme="http://example.com/tags/Terminal/"/>
+    
+  </entry>
   
   <entry>
     <title>[软件推荐]WizTree - 磁盘空间分析</title>
@@ -143,6 +167,33 @@
     
     
     <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我为什么仍在使用迅雷</title>
+    <link href="http://example.com/2021/04/24/Software/Use%20Thunder/"/>
+    <id>http://example.com/2021/04/24/Software/Use%20Thunder/</id>
+    <published>2021-04-24T08:05:36.197Z</published>
+    <updated>2021-06-19T12:48:39.573Z</updated>
+    
+    <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;当然啦，毫无疑问迅雷是个傻逼软件。&lt;br&gt;上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。&lt;/p&gt;
+&lt;p&gt;不过上个图&lt;br&gt;&lt;a href=&quot;https://www.z4a.net/image/gEUKSJ&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="资源类" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
     
   </entry>
   
