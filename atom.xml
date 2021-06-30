@@ -67,6 +67,42 @@
   </entry>
   
   <entry>
+    <title>[软件推荐]图片类相关软件</title>
+    <link href="http://example.com/2021/06/10/Software/Picture/"/>
+    <id>http://example.com/2021/06/10/Software/Picture/</id>
+    <published>2021-06-10T11:35:13.116Z</published>
+    <updated>2021-06-30T11:26:59.281Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="看图"><a href="#看图" class="headerlink" title="看图"></a>看图</h1><p>我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，速度相当快，相对来讲XnViewMP搜索类别更细，功能性更强，但是Xnview里的结果是一次性的，一旦点开一张图片结果就会消失。就个人感觉，XnView的规划很乱，设计也是乱七八糟，唯有功能比较多而已。<br>况且XnView和XnViewMP的使用界面和方式还有很多不一样，感觉怪怪的。<br><del>MassiGra的各种按键自定义简直可怕，而且支持读取压缩包里的图片，其实SumatraPDF也支持读取压缩包里的图片<br>强力推荐下Honeyview，给我一种“就是他了”感觉的软件，比MassiGra简单很多，但又能完全取代的一款软件</del><br>因为Honeyview说除安全修补，不再更新，所以想找替代，结果Honeyview 2021还有更新，nomacs一年没更新，MaxView两年。</p><ul><li>XnViewMP :<a href="http://www.xnview.com/en/xnviewmp/">http://www.xnview.com/en/xnviewmp/</a> (QT开发跨平台)</li><li>Honeyview:<a href="http://www.bandisoft.com/honeyview/cn/">http://www.bandisoft.com/honeyview/cn/</a> (商业软件)</li><li>nomacs: <a href="https://nomacs.org/">https://nomacs.org/</a> (GPLv3)</li><li><del>ACDsee Ultimate:-|<a href="http://www.acdsee.com/en/index">官网</a></del></li><li><del>MaxView: <a href="http://www.dayanzai.me/maxview.html">http://www.dayanzai.me/maxview.html</a>|<a href="https://www.faststone.org/FSMaxViewDownload.htm">官网</a></del></li></ul><p>看压缩包漫画，首选还是Honeyview，SumatraPDF目前感觉用起来不错，nomacs只支持zip/cbz<br>但如果看对比图或者比较专用的使用的话Honeyview就不太行，滚动图片会移位</p><h1 id="图片管理"><a href="#图片管理" class="headerlink" title="图片管理"></a>图片管理</h1><p>Adobe Bridge CC<br><a href="http://www.adobe.com/cn/products/bridge.html">http://www.adobe.com/cn/products/bridge.html</a></p><p>这款软件是我找来取代ACDsee的图片管理功能的，毕竟ACDsee收费，并且其不能在资源管理器里打开，也不能用其他图片浏览软件打开图片，Adobe Bridge CC 虽然不像ACDsee那样可以根据图片的宽和高来搜索图片，但可以根据图片的长宽比来分类，缺点是界面有点丑。<br>值得一提的是Adobe lightroom CC 反而不支持通过图片的长宽比来分类，简直让人难以理解。</p><h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul><li>GIMP:<a href="http://www.gimp.org/">http://www.gimp.org/</a>(取代photoshop用的)</li><li>ShareX: <a href="https://getsharex.com/">https://getsharex.com/</a>|[Github(<a href="https://github.com/ShareX/ShareX)]|[%E4%BB%8B%E7%BB%8D](https://ted423.bitcron.com/post/software/picture/ShareX)">https://github.com/ShareX/ShareX)]|[介绍](https://ted423.bitcron.com/post/software/picture/ShareX)</a></li><li><del>Greenshot:<a href="http://getgreenshot.org/">http://getgreenshot.org/</a>|<a href="https://github.com/greenshot/greenshot">Github</a> (开源的截屏工具，GPLv3)</del></li><li><del>GifCam:<a href="http://www.dayanzai.me/gifcam.html">http://www.dayanzai.me/gifcam.html</a>(录屏工具)</del></li><li><del>LICEcap:<a href="http://www.cockos.com/licecap/">http://www.cockos.com/licecap/</a>(录屏工具，并且开源免费，GPLv2)</del></li><li>Inkscape <a href="https://inkscape.org/">https://inkscape.org/</a>(SVG编辑工具,GPLv2)</li></ul><h1 id="几款重复图片查找工具"><a href="#几款重复图片查找工具" class="headerlink" title="几款重复图片查找工具"></a>几款重复图片查找工具</h1><p>(就效果来讲Duplicate Finder只支持jpg不过速度快些)</p><ul><li>Visipics: <a href="http://www.visipics.info/index.php?title=Main_Page">http://www.visipics.info/index.php?title=Main_Page</a></li><li>VistanitaDuplicateFinder: <a href="https://pan.baidu.com/s/1eR2lwjg">https://pan.baidu.com/s/1eR2lwjg</a></li><li>Duplicate Finder: <a href="http://duplicatefinder.firmtools.com/download.php">http://duplicatefinder.firmtools.com/download.php</a>(注册码:DFRZ-Y9KL-3UKK-HZBJ)</li><li>AntiDupl.NET: <a href="https://ermig1979.github.io/AntiDupl/english/index.html">https://ermig1979.github.io/AntiDupl/english/index.html</a>(MIT,挺强大的，就是太高端了，有些不会用，笑)</li></ul><hr><p><time>2021-06-10</time>增加nomacs<br><time>2021-05-02</time>增加ShareX<br><time>2017-6-6 19:53</time>增加 Adobe Bridge CC<br><time>2017-6-13 20:38</time>增加LICEcap</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;看图&quot;&gt;&lt;a href=&quot;#看图&quot; class=&quot;headerlink&quot; title=&quot;看图&quot;&gt;&lt;/a&gt;看图&lt;/h1&gt;&lt;p&gt;我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="分类汇总" scheme="http://example.com/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
+    
+    <category term="SVG" scheme="http://example.com/tags/SVG/"/>
+    
+    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="GPLv2" scheme="http://example.com/tags/GPLv2/"/>
+    
+    <category term="GPLv3" scheme="http://example.com/tags/GPLv3/"/>
+    
+    <category term="MIT" scheme="http://example.com/tags/MIT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git 设置和取消代理</title>
     <link href="http://example.com/2021/06/10/git%20proxy/"/>
     <id>http://example.com/2021/06/10/git%20proxy/</id>
@@ -341,38 +377,30 @@
   </entry>
   
   <entry>
-    <title>[软件推荐]图片类相关软件</title>
-    <link href="http://example.com/2020/06/19/Software/Picture/"/>
-    <id>http://example.com/2020/06/19/Software/Picture/</id>
-    <published>2020-06-19T14:46:50.085Z</published>
-    <updated>2021-06-10T07:01:32.219Z</updated>
+    <title>压缩软件问题记录</title>
+    <link href="http://example.com/2019/09/02/Software/Compression-defect/"/>
+    <id>http://example.com/2019/09/02/Software/Compression-defect/</id>
+    <published>2019-09-01T17:49:29.482Z</published>
+    <updated>2021-06-24T13:13:43.431Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="看图"><a href="#看图" class="headerlink" title="看图"></a>看图</h1><p>我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，速度相当快，相对来讲XnViewMP搜索类别更细，功能性更强，但是Xnview里的结果是一次性的，一旦点开一张图片结果就会消失。就个人感觉，XnView的规划很乱，设计也是乱七八糟，唯有功能比较多而已。<br>况且XnView和XnViewMP的使用界面和方式还有很多不一样，感觉怪怪的。<br><del>MassiGra的各种按键自定义简直可怕，而且支持读取压缩包里的图片，其实SumatraPDF也支持读取压缩包里的图片<br>强力推荐下Honeyview，给我一种“就是他了”感觉的软件，比MassiGra简单很多，但又能完全取代的一款软件</del><br>因为Honeyview说除安全修补，不再更新，所以想找替代，结果Honeyview 2021还有更新，nomacs一年没更新，MaxView两年。</p><ul><li>XnViewMP :<a href="http://www.xnview.com/en/xnviewmp/">http://www.xnview.com/en/xnviewmp/</a> (QT开发跨平台)</li><li>Honeyview:<a href="http://www.bandisoft.com/honeyview/cn/">http://www.bandisoft.com/honeyview/cn/</a> (商业软件)</li><li>nomacs: <a href="https://nomacs.org/">https://nomacs.org/</a> (GPLv3)</li><li><del>ACDsee Ultimate:-|<a href="http://www.acdsee.com/en/index">官网</a></del></li><li><del>MaxView: <a href="http://www.dayanzai.me/maxview.html">http://www.dayanzai.me/maxview.html</a>|<a href="https://www.faststone.org/FSMaxViewDownload.htm">官网</a></del></li></ul><p>看压缩包漫画，首选还是Honeyview，SumatraPDF目前感觉用起来不错，nomacs只支持zip/cbz</p><h1 id="图片管理"><a href="#图片管理" class="headerlink" title="图片管理"></a>图片管理</h1><p>Adobe Bridge CC<br><a href="http://www.adobe.com/cn/products/bridge.html">http://www.adobe.com/cn/products/bridge.html</a></p><p>这款软件是我找来取代ACDsee的图片管理功能的，毕竟ACDsee收费，并且其不能在资源管理器里打开，也不能用其他图片浏览软件打开图片，Adobe Bridge CC 虽然不像ACDsee那样可以根据图片的宽和高来搜索图片，但可以根据图片的长宽比来分类，缺点是界面有点丑。<br>值得一提的是Adobe lightroom CC 反而不支持通过图片的长宽比来分类，简直让人难以理解。</p><h1 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h1><ul><li>GIMP:<a href="http://www.gimp.org/">http://www.gimp.org/</a>(取代photoshop用的)</li><li>ShareX: <a href="https://getsharex.com/">https://getsharex.com/</a>|[Github(<a href="https://github.com/ShareX/ShareX)]|[%E4%BB%8B%E7%BB%8D](https://ted423.bitcron.com/post/software/picture/ShareX)">https://github.com/ShareX/ShareX)]|[介绍](https://ted423.bitcron.com/post/software/picture/ShareX)</a></li><li><del>Greenshot:<a href="http://getgreenshot.org/">http://getgreenshot.org/</a>|<a href="https://github.com/greenshot/greenshot">Github</a> (开源的截屏工具，GPLv3)</del></li><li><del>GifCam:<a href="http://www.dayanzai.me/gifcam.html">http://www.dayanzai.me/gifcam.html</a>(录屏工具)</del></li><li><del>LICEcap:<a href="http://www.cockos.com/licecap/">http://www.cockos.com/licecap/</a>(录屏工具，并且开源免费，GPLv2)</del></li><li>Inkscape <a href="https://inkscape.org/">https://inkscape.org/</a>(SVG编辑工具,GPLv2)</li></ul><h1 id="几款重复图片查找工具"><a href="#几款重复图片查找工具" class="headerlink" title="几款重复图片查找工具"></a>几款重复图片查找工具</h1><p>(就效果来讲Duplicate Finder只支持jpg不过速度快些)</p><ul><li>Visipics: <a href="http://www.visipics.info/index.php?title=Main_Page">http://www.visipics.info/index.php?title=Main_Page</a></li><li>VistanitaDuplicateFinder: <a href="https://pan.baidu.com/s/1eR2lwjg">https://pan.baidu.com/s/1eR2lwjg</a></li><li>Duplicate Finder: <a href="http://duplicatefinder.firmtools.com/download.php">http://duplicatefinder.firmtools.com/download.php</a>(注册码:DFRZ-Y9KL-3UKK-HZBJ)</li><li>AntiDupl.NET: <a href="https://ermig1979.github.io/AntiDupl/english/index.html">https://ermig1979.github.io/AntiDupl/english/index.html</a>(MIT,挺强大的，就是太高端了，有些不会用，笑)</li></ul><hr><p><time>2021-06-10</time>增加nomacs<br><time>2021-05-02</time>增加ShareX<br><time>2017-6-6 19:53</time>增加 Adobe Bridge CC<br><time>2017-6-13 20:38</time>增加LICEcap</p>]]></content>
+    <content type="html"><![CDATA[<p>#Bandzip<br>无法对7z文件进行直接修改。</p><p>#Peazip</p><ul><li>无法选取多个文件进行压缩(2021-06-24未测试)</li><li>8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内</li><li>强烈不建议使用</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;看图&quot;&gt;&lt;a href=&quot;#看图&quot; class=&quot;headerlink&quot; title=&quot;看图&quot;&gt;&lt;/a&gt;看图&lt;/h1&gt;&lt;p&gt;我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，</summary>
+    <summary type="html">&lt;p&gt;#Bandzip&lt;br&gt;无法对7z文件进行直接修改。&lt;/p&gt;
+&lt;p&gt;#Peazip&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无法选取多个文件进行压缩(2021-06-24未测试)&lt;/li&gt;
+&lt;li&gt;8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内&lt;/li&gt;</summary>
       
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
+    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
-    
-    <category term="分类汇总" scheme="http://example.com/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
-    
-    <category term="SVG" scheme="http://example.com/tags/SVG/"/>
-    
-    <category term="开源" scheme="http://example.com/tags/%E5%BC%80%E6%BA%90/"/>
-    
-    <category term="GPLv2" scheme="http://example.com/tags/GPLv2/"/>
-    
-    <category term="GPLv3" scheme="http://example.com/tags/GPLv3/"/>
-    
-    <category term="MIT" scheme="http://example.com/tags/MIT/"/>
     
   </entry>
   
