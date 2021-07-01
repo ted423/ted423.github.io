@@ -537,28 +537,30 @@
   </entry>
   
   <entry>
-    <title>[Android]Connectbot - Android terminal</title>
-    <link href="http://example.com/2020/06/19/Software/Android/Connectbot/"/>
-    <id>http://example.com/2020/06/19/Software/Android/Connectbot/</id>
-    <published>2020-06-19T14:46:50.170Z</published>
-    <updated>2021-06-17T10:35:42.832Z</updated>
+    <title>[开源]SumatraPDF</title>
+    <link href="http://example.com/2020/06/19/Software/Document&amp;Texteditor/SumatraPDF/"/>
+    <id>http://example.com/2020/06/19/Software/Document&amp;Texteditor/SumatraPDF/</id>
+    <published>2020-06-19T14:46:50.224Z</published>
+    <updated>2021-07-01T03:34:53.628Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://play.google.com/store/apps/details?id=org.connectbot&amp;hl=zh_TW">https://play.google.com/store/apps/details?id=org.connectbot&amp;hl=zh_TW</a><br>一个SSH客户端<br>选择local就是连到本机的terminal<br>可以用来看IP，看DNS什么的。<br><code>getprop</code> 可以在安卓下看配置项<br>然后可以通过<code>grep</code>来筛选你要的信息</p>]]></content>
+    <content type="html"><![CDATA[<p>由于adobe reader免费，这个软件还是有些尴尬的。不过在epub和其他格式的文件方面很有优势，甚至可以拿来看压缩包形式的漫画。<br>只不过由于他的名字，不是很显眼。<br>不过2016到现在都没出新的release,似乎在忙着重构？看epub和cbz使用中都遇到了一些小问题<a href="https://forum.sumatrapdfreader.org/t/something-about-epub-and-cbz/2244">https://forum.sumatrapdfreader.org/t/something-about-epub-and-cbz/2244</a></p><h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="https://www.sumatrapdfreader.org/free-pdf-reader.html">https://www.sumatrapdfreader.org/free-pdf-reader.html</a></p><h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><p><a href="https://github.com/sumatrapdfreader/sumatrapdf">https://github.com/sumatrapdfreader/sumatrapdf</a></p><p>Sumatra PDF是由Krzysztof Kowalczyk所开发的轻量级PDF查看器，属于自由软件。使用GPLv3协议</p><p>Sumatra PDF 由下列两个函式库组成：</p><pre><code>MuPDF - PDF函式库Poppler - PDF函式库</code></pre><p>Sumatra PDF的设计风格极简。软件的安装档案体积小，只有大约1MB，比起Adobe Reader的安装档案27.5MB小很多，启动也较快速，并且拥有多20多种语言接口。由于只有一个档案，可以视为是可携式软件。</p><p>Sumatra PDF有一个实用的功能，就是它可以记住每一个PDF档案上使用者最后浏览的页面，这使得浏览电子书非常方便。</p><p>SumatraPDF, also known as Sumatra, is a PDF reader for Microsoft Windows only. The program also opens Open XML Paper Specification, DjVu, EPUB, XPS, CHM, CBZ and CBR, and MOBI files. It is written primarily by two contributors: zeniko and Krzysztof Kowalczyk</p><p>Sumatra includes free software code under version three of the GNU General Public License, while the included Unrar utility is under a commercial “all rights reserved” freeware licence, making Sumatra overall freeware.<br>#Prerelease<br>重构中<br><a href="https://www.sumatrapdfreader.org/prerelease.html">https://www.sumatrapdfreader.org/prerelease.html</a></p><hr><p>囧了，我发现 <a href="http://www.gxxd.net.cn:1001/date/T/A2095750.pdf(%E5%A4%B1%E6%95%88%E8%BF%9E%E6%8E%A5)">http://www.gxxd.net.cn:1001/date/T/A2095750.pdf(失效连接)</a> 只有火狐能正常显示，其他所有pdf软件都因为没有字体显示不出来，CSS大法好</p><hr><p><time>2020-06-03</time>增加Prerelease网页</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=org.connectbot&amp;amp;hl=zh_TW&quot;&gt;https://play.google.com/store/apps/details?id=org.con</summary>
+    <summary type="html">&lt;p&gt;由于adobe reader免费，这个软件还是有些尴尬的。不过在epub和其他格式的文件方面很有优势，甚至可以拿来看压缩包形式的漫画。&lt;br&gt;只不过由于他的名字，不是很显眼。&lt;br&gt;不过2016到现在都没出新的release,似乎在忙着重构？看epub和cbz使用中都遇到了</summary>
       
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
     
-    <category term="Android" scheme="http://example.com/tags/Android/"/>
+    <category term="GPLv3" scheme="http://example.com/tags/GPLv3/"/>
     
-    <category term="Software" scheme="http://example.com/tags/Software/"/>
+    <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
+    
+    <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
     
   </entry>
   
