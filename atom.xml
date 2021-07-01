@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-01T08:09:59.338Z</updated>
+  <updated>2021-07-01T08:20:12.394Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/07/01/Software/Compression/7-Zip-zstd/"/>
     <id>http://example.com/2021/07/01/Software/Compression/7-Zip-zstd/</id>
     <published>2021-07-01T07:10:41.474Z</published>
-    <updated>2021-07-01T08:09:59.338Z</updated>
+    <updated>2021-07-01T08:20:12.394Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论</p>]]></content>
     
@@ -32,6 +32,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
@@ -49,7 +51,7 @@
     <link href="http://example.com/2021/07/01/Software/Document&amp;Texteditor/notepad/"/>
     <id>http://example.com/2021/07/01/Software/Document&amp;Texteditor/notepad/</id>
     <published>2021-07-01T03:13:17.556Z</published>
-    <updated>2021-07-01T04:01:24.653Z</updated>
+    <updated>2021-07-01T08:19:35.530Z</updated>
     
     <content type="html"><![CDATA[<p>本博有俩文本编辑器，其实我用过很多，所以就写写<br>最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。<br>最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）<br>小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。</p><p>之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。<br>另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址就很难，并且很难保证还能用。装起来也比较复杂，有点费时。</p><p>notepad3,必装,就是没有扩展之类的功能<br>sublime text，会有奇奇怪怪的输入法问题(当时写这个似乎是因为在Linux上面用)</p>]]></content>
     
@@ -60,6 +62,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
@@ -77,7 +81,7 @@
     <link href="http://example.com/2021/06/24/Software/Compression/Compression-defect/"/>
     <id>http://example.com/2021/06/24/Software/Compression/Compression-defect/</id>
     <published>2021-06-24T13:11:29.875Z</published>
-    <updated>2021-07-01T07:24:17.343Z</updated>
+    <updated>2021-07-01T08:20:18.249Z</updated>
     
     <content type="html"><![CDATA[<p>#Bandzip<br>无法对7z文件进行直接修改。</p><p>#Peazip</p><ul><li>无法选取多个文件进行压缩(2021-06-24未测试)</li><li>8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内</li><li>强烈不建议使用</li></ul>]]></content>
     
@@ -93,12 +97,72 @@
     
     
     
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
     
     <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
     
     <category term="Compression" scheme="http://example.com/tags/Compression/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</title>
+    <link href="http://example.com/2021/06/19/Software/thunder/"/>
+    <id>http://example.com/2021/06/19/Software/thunder/</id>
+    <published>2021-06-19T12:40:27.107Z</published>
+    <updated>2021-07-01T08:19:02.784Z</updated>
+    
+    <content type="html"><![CDATA[<p>目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别<br>&lt;&gt;<br>Thunder 11 支持迅雷云盘取回<br>迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！</p><p>我给的不是最新的，可以去他博客翻下最新的<br><a href="https://www.luochenzhimu.com/?s=thunder">https://www.luochenzhimu.com/?s=thunder</a></p><p>【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷11】上我们重新设计了主界面框架，许多忠实雷友们过去一直吐槽的太像浏览器的问题，现在已经得到解决。</p><p>【迅雷11】的最大亮点，是我们开创性的将【下载】与【云盘】合二为一。</p><p>当您下载网络中的文件时，可以灵活的选择将文件下载到【电脑】或者【云盘】。</p><h1 id="下载列表"><a href="#下载列表" class="headerlink" title="下载列表"></a>下载列表</h1><p>首先要从下载列表说起，在这个版本中，我们将下载列表的任务分类，由原来【迅雷9、迅雷X】采用的纵向排列，改为横向排列。这是由于纵向排列时，每次需要切换任务分类，都要在上下分类之间长距离的移动鼠标，使用较为不便。</p><h1 id="悬浮窗"><a href="#悬浮窗" class="headerlink" title="悬浮窗"></a>悬浮窗</h1><p>悬浮窗也迎来了变化，从【迅雷7】一直用到【迅雷X】的圆形悬浮窗，现在终于改版啦！</p><p>迅雷11新的悬浮窗看上去像是个立方体，当有正在下载的任务时，会在右侧展开一个简短的进度条。</p><p>这个全新的设计可以更清晰的显示下载进度，视觉效果也炫酷不少哦。</p><h1 id="立即添加（到云盘）"><a href="#立即添加（到云盘）" class="headerlink" title="立即添加（到云盘）"></a>立即添加（到云盘）</h1><p>如果您是会员用户，当您选中任意一个下载中的任务时，在下载任务的下方会出现一个新的扩展栏，可以让您快捷的将任务添加到云盘里。</p><h1 id="下载列表展示云盘取回"><a href="#下载列表展示云盘取回" class="headerlink" title="下载列表展示云盘取回"></a>下载列表展示云盘取回</h1><p>在迅雷11过去的几个版本中，从云盘取回的任务，都只展示在云盘模块的【传输列表】里，对于经常需要查看云盘取回文件的用户来说颇为不便。现在通过下载列表也可以查看云盘取回的文件了。</p><p>#更新信息</p><ul><li>下载列表的任务分类由纵向排列改为横向排列</li><li>采用全新视觉设计的悬浮窗</li><li>新增【手机扫码免费加速】功能</li><li>左侧栏【下载、云盘】右侧增加数字红点（可展示当前正在下载的任务数，以及正在云添加和上传的文件数）</li><li>下载列表中视频任务下方增加【云盘播放】功能</li><li>下载列表中非视频任务下方增加【立即添加（到云盘）】功能</li><li>下载列表中支持展示从云盘取回的文件</li><li>新增【云盘视频智能缓存】功能，改善云盘视频播放体验（可在设置中心停用）</li><li>修正某些情况下，播放组件下载解码器失败的问题</li><li>云盘增加文件【举报、申诉】功能</li><li>云盘传输列表入口移至顶部</li><li>云盘回收站改为独立对话框</li></ul><h1 id="落尘之木优化内容"><a href="#落尘之木优化内容" class="headerlink" title="落尘之木优化内容"></a>落尘之木优化内容</h1><ol><li>本地VIP专享悬浮窗</li><li>移除发现栏</li><li>精简多余菜单</li><li>自动识别VIP用户，非VIP直升本地超级会员</li><li>移除下载区文字广告</li><li>移除头像悬浮广告</li><li>禁止更新版本</li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>使用方法：<br>先下载迅雷11安装：<a href="https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe">https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe</a><br>运行，稍等片刻<br>有三个选项：【1】迅雷11去广告、【2】迅雷11去广告小窗口、【3】非会员保持蓝悬浮窗<br>命令窗口输入对应数字回车</p><p>迅雷 Thunder11.0.3.1014 落尘之木去广告<br>落尘之木：<a href="https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip">https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip</a><br>迅雷云盘：<a href="https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1">https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1</a> 提取码：gqxf<br>百度网盘：<a href="https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999">https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999</a> 提取码：9999<br>蓝奏云：<a href="https://wwx.lanzoux.com/b04b4u5je">https://wwx.lanzoux.com/b04b4u5je</a></p><hr><p><time>2018-12-21 22:13</time>更新为10.1.7.262<br><time>2020-10-23</time>Thunder11.0.3.1014</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别&lt;br&gt;&amp;lt;&amp;gt;&lt;br&gt;Thunder 11 支持迅雷云盘取回&lt;br&gt;迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！&lt;/p&gt;
+&lt;p&gt;我给的不是最新的，可以去他博客</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="第三方修改|绿化" scheme="http://example.com/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
+    
+    <category term="资源类" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我为什么仍在使用迅雷</title>
+    <link href="http://example.com/2021/06/19/Software/Use%20Thunder/"/>
+    <id>http://example.com/2021/06/19/Software/Use%20Thunder/</id>
+    <published>2021-06-19T12:40:27.106Z</published>
+    <updated>2021-07-01T08:19:08.090Z</updated>
+    
+    <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;当然啦，毫无疑问迅雷是个傻逼软件。&lt;br&gt;上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。&lt;/p&gt;
+&lt;p&gt;不过上个图&lt;br&gt;&lt;a href=&quot;https://www.z4a.net/image/gEUKSJ&quot;</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
+    
+    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="资源类" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
     
   </entry>
   
@@ -261,7 +325,7 @@
     <link href="http://example.com/2021/04/29/Software/Document&amp;Texteditor/notepad3/"/>
     <id>http://example.com/2021/04/29/Software/Document&amp;Texteditor/notepad3/</id>
     <published>2021-04-29T09:18:08.278Z</published>
-    <updated>2021-07-01T04:03:49.705Z</updated>
+    <updated>2021-07-01T08:19:39.229Z</updated>
     
     <content type="html"><![CDATA[<ul><li><a href="https://www.rizonesoft.com/downloads/notepad3/">https://www.rizonesoft.com/downloads/notepad3/</a></li><li><a href="https://github.com/rizonesoft/Notepad3">https://github.com/rizonesoft/Notepad3</a><br>先说开源协议我没看懂，并没写开源协议的名字，感觉有点像MIT？没细看规则。反正是Copyright类的。</li></ul><p>曾经有个notepad2，最大的作用是完全替换微软的notepad，使用的是映像劫持的方式。所以即便装了别的文本编辑器，我也还是喜欢再装一个notepad2以便彻底干死微软的。<br>可惜弃更了。</p><p>所以这个notepad3也能做到，并且开源。就是不知道会不会有Notepad4。</p><h2 id="缺点应该就是扩展性方面了，比如简繁转换，格式化代码啥的就没。"><a href="#缺点应该就是扩展性方面了，比如简繁转换，格式化代码啥的就没。" class="headerlink" title="缺点应该就是扩展性方面了，比如简繁转换，格式化代码啥的就没。"></a>缺点应该就是扩展性方面了，比如简繁转换，格式化代码啥的就没。</h2>]]></content>
     
@@ -275,6 +339,8 @@
     
     
     
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
     
@@ -285,38 +351,11 @@
   </entry>
   
   <entry>
-    <title>我为什么仍在使用迅雷</title>
-    <link href="http://example.com/2021/04/24/Software/Use%20Thunder/"/>
-    <id>http://example.com/2021/04/24/Software/Use%20Thunder/</id>
-    <published>2021-04-24T08:05:36.197Z</published>
-    <updated>2021-06-19T12:48:39.573Z</updated>
-    
-    <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;当然啦，毫无疑问迅雷是个傻逼软件。&lt;br&gt;上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。&lt;/p&gt;
-&lt;p&gt;不过上个图&lt;br&gt;&lt;a href=&quot;https://www.z4a.net/image/gEUKSJ&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
-    
-    <category term="资源类" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Office Tool Plus</title>
     <link href="http://example.com/2021/04/12/Software/Document&amp;Texteditor/Office%20Tool%20Plus/"/>
     <id>http://example.com/2021/04/12/Software/Document&amp;Texteditor/Office%20Tool%20Plus/</id>
     <published>2021-04-12T11:25:34.138Z</published>
-    <updated>2021-07-01T03:29:14.164Z</updated>
+    <updated>2021-07-01T08:19:46.779Z</updated>
     
     <content type="html"><![CDATA[<p>第三方Office部署工具 神器<br>不过清理的话，并不会完全干净(不过微软官方工具也一样)<br><a href="https://otp.landian.vip/zh-cn/">https://otp.landian.vip/zh-cn/</a></p>]]></content>
     
@@ -328,6 +367,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
@@ -343,7 +384,7 @@
     <link href="http://example.com/2020/12/11/Software/NoMachine/"/>
     <id>http://example.com/2020/12/11/Software/NoMachine/</id>
     <published>2020-12-11T03:13:33.033Z</published>
-    <updated>2021-07-01T05:42:50.253Z</updated>
+    <updated>2021-07-01T08:18:53.315Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://www.nomachine.com/">https://www.nomachine.com/</a></p><p>推荐理由: 免费(ssh协议连接收费)，支持Linux<br>其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。<br>最起码你不要纠结各种桌面环境之间的兼容性问题。</p><p>不过呢，问题还是有的。<br>默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）<br>然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。</p><p>在低速率网络下要考虑到切到VP8或者MJGEP？这种情况下画面会很烂。<br>不过RDP虽然画面好点，但是会失联。要重连才行</p><p>开源的使用NX协议的叫x2go</p><p><del>已知问题：(可能是QNAP虚拟机导致的混合BUG)</del><br>Ubuntu下，手动启动和服务自动启动展示的画面是不一样的。手动启动连接会是主画面，自动启动会是新建一个桌面出来。并且会登录卡死(这个有可能是混合Bug)</p><p>BTW，网上一堆把Teamviewer，Anydesk，向日葵这类内网穿透式的软件不加详细区分就放在一起讲的，甚至还把这类内网穿透当成优点，不知道是不是因为智商不够。<br>BTW2，在同样环境下，Anydesk效果不如向日葵，不知道是不是因为服务器在国外</p>]]></content>
     
@@ -355,6 +396,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
@@ -396,33 +439,6 @@
   </entry>
   
   <entry>
-    <title>[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</title>
-    <link href="http://example.com/2020/10/23/Software/thunder/"/>
-    <id>http://example.com/2020/10/23/Software/thunder/</id>
-    <published>2020-10-23T11:44:13.033Z</published>
-    <updated>2021-06-19T12:49:26.832Z</updated>
-    
-    <content type="html"><![CDATA[<p>目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别<br>&lt;&gt;<br>Thunder 11 支持迅雷云盘取回<br>迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！</p><p>我给的不是最新的，可以去他博客翻下最新的<br><a href="https://www.luochenzhimu.com/?s=thunder">https://www.luochenzhimu.com/?s=thunder</a></p><p>【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷11】上我们重新设计了主界面框架，许多忠实雷友们过去一直吐槽的太像浏览器的问题，现在已经得到解决。</p><p>【迅雷11】的最大亮点，是我们开创性的将【下载】与【云盘】合二为一。</p><p>当您下载网络中的文件时，可以灵活的选择将文件下载到【电脑】或者【云盘】。</p><h1 id="下载列表"><a href="#下载列表" class="headerlink" title="下载列表"></a>下载列表</h1><p>首先要从下载列表说起，在这个版本中，我们将下载列表的任务分类，由原来【迅雷9、迅雷X】采用的纵向排列，改为横向排列。这是由于纵向排列时，每次需要切换任务分类，都要在上下分类之间长距离的移动鼠标，使用较为不便。</p><h1 id="悬浮窗"><a href="#悬浮窗" class="headerlink" title="悬浮窗"></a>悬浮窗</h1><p>悬浮窗也迎来了变化，从【迅雷7】一直用到【迅雷X】的圆形悬浮窗，现在终于改版啦！</p><p>迅雷11新的悬浮窗看上去像是个立方体，当有正在下载的任务时，会在右侧展开一个简短的进度条。</p><p>这个全新的设计可以更清晰的显示下载进度，视觉效果也炫酷不少哦。</p><h1 id="立即添加（到云盘）"><a href="#立即添加（到云盘）" class="headerlink" title="立即添加（到云盘）"></a>立即添加（到云盘）</h1><p>如果您是会员用户，当您选中任意一个下载中的任务时，在下载任务的下方会出现一个新的扩展栏，可以让您快捷的将任务添加到云盘里。</p><h1 id="下载列表展示云盘取回"><a href="#下载列表展示云盘取回" class="headerlink" title="下载列表展示云盘取回"></a>下载列表展示云盘取回</h1><p>在迅雷11过去的几个版本中，从云盘取回的任务，都只展示在云盘模块的【传输列表】里，对于经常需要查看云盘取回文件的用户来说颇为不便。现在通过下载列表也可以查看云盘取回的文件了。</p><p>#更新信息</p><ul><li>下载列表的任务分类由纵向排列改为横向排列</li><li>采用全新视觉设计的悬浮窗</li><li>新增【手机扫码免费加速】功能</li><li>左侧栏【下载、云盘】右侧增加数字红点（可展示当前正在下载的任务数，以及正在云添加和上传的文件数）</li><li>下载列表中视频任务下方增加【云盘播放】功能</li><li>下载列表中非视频任务下方增加【立即添加（到云盘）】功能</li><li>下载列表中支持展示从云盘取回的文件</li><li>新增【云盘视频智能缓存】功能，改善云盘视频播放体验（可在设置中心停用）</li><li>修正某些情况下，播放组件下载解码器失败的问题</li><li>云盘增加文件【举报、申诉】功能</li><li>云盘传输列表入口移至顶部</li><li>云盘回收站改为独立对话框</li></ul><h1 id="落尘之木优化内容"><a href="#落尘之木优化内容" class="headerlink" title="落尘之木优化内容"></a>落尘之木优化内容</h1><ol><li>本地VIP专享悬浮窗</li><li>移除发现栏</li><li>精简多余菜单</li><li>自动识别VIP用户，非VIP直升本地超级会员</li><li>移除下载区文字广告</li><li>移除头像悬浮广告</li><li>禁止更新版本</li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>使用方法：<br>先下载迅雷11安装：<a href="https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe">https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe</a><br>运行，稍等片刻<br>有三个选项：【1】迅雷11去广告、【2】迅雷11去广告小窗口、【3】非会员保持蓝悬浮窗<br>命令窗口输入对应数字回车</p><p>迅雷 Thunder11.0.3.1014 落尘之木去广告<br>落尘之木：<a href="https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip">https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip</a><br>迅雷云盘：<a href="https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1">https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1</a> 提取码：gqxf<br>百度网盘：<a href="https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999">https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999</a> 提取码：9999<br>蓝奏云：<a href="https://wwx.lanzoux.com/b04b4u5je">https://wwx.lanzoux.com/b04b4u5je</a></p><hr><p><time>2018-12-21 22:13</time>更新为10.1.7.262<br><time>2020-10-23</time>Thunder11.0.3.1014</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别&lt;br&gt;&amp;lt;&amp;gt;&lt;br&gt;Thunder 11 支持迅雷云盘取回&lt;br&gt;迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！&lt;/p&gt;
-&lt;p&gt;我给的不是最新的，可以去他博客</summary>
-      
-    
-    
-    
-    
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
-    
-    <category term="第三方修改|绿化" scheme="http://example.com/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
-    
-    <category term="资源类" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</title>
     <link href="http://example.com/2020/06/19/Software/Document&amp;Texteditor/Advanced%20Office%20Password%20Recovery/"/>
     <id>http://example.com/2020/06/19/Software/Document&amp;Texteditor/Advanced%20Office%20Password%20Recovery/</id>
@@ -438,6 +454,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
   </entry>
@@ -460,6 +478,8 @@
     
     
     
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
     
@@ -474,7 +494,7 @@
     <link href="http://example.com/2020/06/19/Software/Document&amp;Texteditor/Office%202013/"/>
     <id>http://example.com/2020/06/19/Software/Document&amp;Texteditor/Office%202013/</id>
     <published>2020-06-19T14:46:50.240Z</published>
-    <updated>2021-07-01T03:29:19.282Z</updated>
+    <updated>2021-07-01T08:19:43.655Z</updated>
     
     <content type="html"><![CDATA[<p>MSDN I tell you上面并没有提供Office 2013 SP1的VOL版本<br>所以网上找了这些</p><h1 id="Office-2013-32位专业增强版"><a href="#Office-2013-32位专业增强版" class="headerlink" title="Office 2013 32位专业增强版"></a>Office 2013 32位专业增强版</h1><p><a href="ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_W32_ChnSimp_MLF_X19-35809.ISO|902180864|BBE5CFB869A057C75DC996C14548FAD0|/">ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_W32_ChnSimp_MLF_X19-35809.ISO|902180864|BBE5CFB869A057C75DC996C14548FAD0|/</a></p><h1 id="Office-2013-64位专业增强版"><a href="#Office-2013-64位专业增强版" class="headerlink" title="Office 2013 64位专业增强版"></a>Office 2013 64位专业增强版</h1><p><a href="ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_64Bit_ChnSimp_MLF_X19-35964.ISO|1025097728|FC8D97E422611094CDB2FA3BAB59D9B3|/">ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_64Bit_ChnSimp_MLF_X19-35964.ISO|1025097728|FC8D97E422611094CDB2FA3BAB59D9B3|/</a></p><h1 id="Visio-2013-32位专业版"><a href="#Visio-2013-32位专业版" class="headerlink" title="Visio 2013 32位专业版"></a>Visio 2013 32位专业版</h1><p><a href="ed2k://|file|SW_DVD5_Visio_Pro_2013w_SP1_W32_ChnSimp_MLF_X19-36364.ISO|547115008|40F6729143B4A489161C5A8F5391606E|/">ed2k://|file|SW_DVD5_Visio_Pro_2013w_SP1_W32_ChnSimp_MLF_X19-36364.ISO|547115008|40F6729143B4A489161C5A8F5391606E|/</a></p><h1 id="Visio-2013-64位专业版"><a href="#Visio-2013-64位专业版" class="headerlink" title="Visio 2013 64位专业版"></a>Visio 2013 64位专业版</h1><p><a href="ed2k://|file|SW_DVD5_Visio_Pro_2013w_SP1_64Bit_ChnSimp_MLF_X19-36392.ISO|643063808|6548A528DEE991D0F4B56BB8D4869CA3|/">ed2k://|file|SW_DVD5_Visio_Pro_2013w_SP1_64Bit_ChnSimp_MLF_X19-36392.ISO|643063808|6548A528DEE991D0F4B56BB8D4869CA3|/</a></p><h1 id="Project-2013-32位专业版"><a href="#Project-2013-32位专业版" class="headerlink" title="Project 2013 32位专业版"></a>Project 2013 32位专业版</h1><p><a href="ed2k://|file|SW_DVD5_Project_Pro_2013w_SP1_W32_ChnSimp_MLF_X19-35745.ISO|504264704|322060CDE0C97F53369A0493958FD85E|/">ed2k://|file|SW_DVD5_Project_Pro_2013w_SP1_W32_ChnSimp_MLF_X19-35745.ISO|504264704|322060CDE0C97F53369A0493958FD85E|/</a></p><h1 id="Project-2013-64位专业版"><a href="#Project-2013-64位专业版" class="headerlink" title="Project 2013 64位专业版"></a>Project 2013 64位专业版</h1><p><a href="ed2k://|file|SW_DVD5_Project_Pro_2013w_SP1_64Bit_ChnSimp_MLF_X19-35806.ISO|587982848|A574F009A37D716F7D0C54D6586761B0|/">ed2k://|file|SW_DVD5_Project_Pro_2013w_SP1_64Bit_ChnSimp_MLF_X19-35806.ISO|587982848|A574F009A37D716F7D0C54D6586761B0|/</a></p><h1 id="Office2013-32位标准版"><a href="#Office2013-32位标准版" class="headerlink" title="Office2013 32位标准版"></a>Office2013 32位标准版</h1><p><a href="ed2k://|file|SW_DVD5_Office_2013w_SP1_W32_ChnSimp_MLF_X19-34732.ISO|797986816|F3ED685BC823F3E3C7FCFCFD4C8139F8|/">ed2k://|file|SW_DVD5_Office_2013w_SP1_W32_ChnSimp_MLF_X19-34732.ISO|797986816|F3ED685BC823F3E3C7FCFCFD4C8139F8|/</a></p><h1 id="Office2013-64位标准版"><a href="#Office2013-64位标准版" class="headerlink" title="Office2013 64位标准版"></a>Office2013 64位标准版</h1><p><a href="ed2k://|file|SW_DVD5_Office_2013w_SP1_64Bit_ChnSimp_MLF_X19-34892.ISO|904058880|806CEB6791B949E7952591E8129C2CA6|/">ed2k://|file|SW_DVD5_Office_2013w_SP1_64Bit_ChnSimp_MLF_X19-34892.ISO|904058880|806CEB6791B949E7952591E8129C2CA6|/</a></p>]]></content>
     
@@ -486,6 +506,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
@@ -501,7 +523,7 @@
     <link href="http://example.com/2020/06/19/Software/Document&amp;Texteditor/Pdfsam/"/>
     <id>http://example.com/2020/06/19/Software/Document&amp;Texteditor/Pdfsam/</id>
     <published>2020-06-19T14:46:50.235Z</published>
-    <updated>2021-07-01T03:33:28.769Z</updated>
+    <updated>2021-07-01T08:19:50.489Z</updated>
     
     <content type="html"><![CDATA[<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="https://pdfsam.org/zh/">https://pdfsam.org/zh/</a></p><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>基础版本开源免费，进阶版本提供更多功能，不开源且收费。<br>比较喜欢这种模式，所以推荐</p><h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><p><a href="https://github.com/torakiki/pdfsam">https://github.com/torakiki/pdfsam</a></p>]]></content>
     
@@ -513,6 +535,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
@@ -534,7 +558,7 @@
     <link href="http://example.com/2020/06/19/Software/Document&amp;Texteditor/Sigil/"/>
     <id>http://example.com/2020/06/19/Software/Document&amp;Texteditor/Sigil/</id>
     <published>2020-06-19T14:46:50.229Z</published>
-    <updated>2021-07-01T03:32:17.014Z</updated>
+    <updated>2021-07-01T08:19:59.029Z</updated>
     
     <content type="html"><![CDATA[<p>#官网<br><a href="https://sigil-ebook.com/">https://sigil-ebook.com/</a></p><p>#Github<br><a href="https://github.com/Sigil-Ebook/Sigil">https://github.com/Sigil-Ebook/Sigil</a><br>既然可以编辑，当然可以拿来阅读，但是没有类似翻页、书签这种阅读功能，所以还是拿来编辑吧。</p>]]></content>
     
@@ -546,6 +570,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
