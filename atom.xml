@@ -45,6 +45,36 @@
   </entry>
   
   <entry>
+    <title>压缩软件问题记录</title>
+    <link href="http://example.com/2021/06/24/Software/Compression/Compression-defect/"/>
+    <id>http://example.com/2021/06/24/Software/Compression/Compression-defect/</id>
+    <published>2021-06-24T13:11:29.875Z</published>
+    <updated>2021-07-01T07:24:17.343Z</updated>
+    
+    <content type="html"><![CDATA[<p>#Bandzip<br>无法对7z文件进行直接修改。</p><p>#Peazip</p><ul><li>无法选取多个文件进行压缩(2021-06-24未测试)</li><li>8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内</li><li>强烈不建议使用</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;#Bandzip&lt;br&gt;无法对7z文件进行直接修改。&lt;/p&gt;
+&lt;p&gt;#Peazip&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无法选取多个文件进行压缩(2021-06-24未测试)&lt;/li&gt;
+&lt;li&gt;8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内&lt;/li&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="Compression" scheme="http://example.com/tags/Compression/"/>
+    
+  </entry>
+  
+  <entry>
     <title>rsync</title>
     <link href="http://example.com/2021/06/19/Terminal/rsync/"/>
     <id>http://example.com/2021/06/19/Terminal/rsync/</id>
@@ -527,32 +557,6 @@
     <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
     
     <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Android]Connectbot - Android terminal</title>
-    <link href="http://example.com/2020/06/19/Software/Android/Connectbot/"/>
-    <id>http://example.com/2020/06/19/Software/Android/Connectbot/</id>
-    <published>2020-06-19T14:46:50.170Z</published>
-    <updated>2021-06-17T10:35:42.832Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://play.google.com/store/apps/details?id=org.connectbot&amp;hl=zh_TW">https://play.google.com/store/apps/details?id=org.connectbot&amp;hl=zh_TW</a><br>一个SSH客户端<br>选择local就是连到本机的terminal<br>可以用来看IP，看DNS什么的。<br><code>getprop</code> 可以在安卓下看配置项<br>然后可以通过<code>grep</code>来筛选你要的信息</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://play.google.com/store/apps/details?id=org.connectbot&amp;amp;hl=zh_TW&quot;&gt;https://play.google.com/store/apps/details?id=org.con</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
-    
-    
-    <category term="Android" scheme="http://example.com/tags/Android/"/>
-    
-    <category term="Software" scheme="http://example.com/tags/Software/"/>
     
   </entry>
   
