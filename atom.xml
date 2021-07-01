@@ -234,6 +234,35 @@
   </entry>
   
   <entry>
+    <title>[Remote]NoMachine 远程工具</title>
+    <link href="http://example.com/2020/12/11/Software/NoMachine/"/>
+    <id>http://example.com/2020/12/11/Software/NoMachine/</id>
+    <published>2020-12-11T03:13:33.033Z</published>
+    <updated>2021-07-01T02:54:52.753Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.nomachine.com/">https://www.nomachine.com/</a></p><p>推荐理由: 免费(ssh协议连接收费)，支持Linux<br>其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。<br>最起码你不要纠结各种桌面环境之间的兼容性问题。</p><p>不过呢，问题还是有的。<br>默认直接给你开共享桌面。如果你只想装个client，但实际上，你装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至向日葵这傻逼软件还开了个便携版远程路径的自启）<br>然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。</p><p>在低速率网络下要考虑到切到VP8或者MJGEP？这种情况下画面会很烂。<br>不过RDP虽然画面好点，但是会失联。要重连才行</p><p><del>已知问题：(可能是QNAP虚拟机导致的混合BUG)</del><br>Ubuntu下，手动启动和服务自动启动展示的画面是不一样的。手动启动连接会是主画面，自动启动会是新建一个桌面出来。并且会登录卡死(这个有可能是混合Bug)</p><p>BTW，网上一堆把Teamviewer，Anydesk，向日葵这类内网穿透式的软件不加详细区分就放在一起讲的，甚至还把这类内网穿透当成优点，不知道是不是因为智商不够。<br>BTW2，在同样环境下，Anydesk效果不如向日葵，不知道是不是因为服务器在国外</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.nomachine.com/&quot;&gt;https://www.nomachine.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;推荐理由: 免费(ssh协议连接收费)，支持Linux&lt;br&gt;其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。</summary>
+      
+    
+    
+    
+    
+    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="OS X" scheme="http://example.com/tags/OS-X/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Android]Solid Explorer File Manager - 文件管理软件</title>
     <link href="http://example.com/2020/11/08/Software/Android/Solid%20Explorer%20File%20Manager/"/>
     <id>http://example.com/2020/11/08/Software/Android/Solid%20Explorer%20File%20Manager/</id>
