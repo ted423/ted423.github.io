@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-01T08:20:12.394Z</updated>
+  <updated>2021-07-02T01:32:03.617Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2021/07/01/Software/Compression/7-Zip-zstd/"/>
     <id>http://example.com/2021/07/01/Software/Compression/7-Zip-zstd/</id>
     <published>2021-07-01T07:10:41.474Z</published>
-    <updated>2021-07-01T08:20:12.394Z</updated>
+    <updated>2021-07-02T01:32:03.617Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p>]]></content>
     
     
       
