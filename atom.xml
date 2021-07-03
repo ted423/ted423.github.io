@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-02T01:32:03.617Z</updated>
+  <updated>2021-07-03T06:07:09.879Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>请勿购买QNAP</title>
+    <link href="http://example.com/2021/07/03/etc/NoQNAP/"/>
+    <id>http://example.com/2021/07/03/etc/NoQNAP/</id>
+    <published>2021-07-03T06:02:19.048Z</published>
+    <updated>2021-07-03T06:07:09.879Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文属于用啥黑啥系列。<br>在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。<br>像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。<br>剩下的就有群晖的贵了。</p><p>因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入你的视野。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本文属于用啥黑啥系列。&lt;br&gt;在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。&lt;br&gt;像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。&lt;br&gt;剩下的就有群晖的贵了。&lt;/p&gt;
+&lt;p&gt;因此留给你的选择大概不多，QNAP这性价比高，普及率还</summary>
+      
+    
+    
+    
+    
+    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>[开源]7-Zip-zstd 7z增强版</title>
@@ -552,39 +575,6 @@
     <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
     
     <category term="AGPLv3" scheme="http://example.com/tags/AGPLv3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]Sigil - epub编辑器</title>
-    <link href="http://example.com/2020/06/19/Software/Document&amp;Texteditor/Sigil/"/>
-    <id>http://example.com/2020/06/19/Software/Document&amp;Texteditor/Sigil/</id>
-    <published>2020-06-19T14:46:50.229Z</published>
-    <updated>2021-07-01T08:19:59.029Z</updated>
-    
-    <content type="html"><![CDATA[<p>#官网<br><a href="https://sigil-ebook.com/">https://sigil-ebook.com/</a></p><p>#Github<br><a href="https://github.com/Sigil-Ebook/Sigil">https://github.com/Sigil-Ebook/Sigil</a><br>既然可以编辑，当然可以拿来阅读，但是没有类似翻页、书签这种阅读功能，所以还是拿来编辑吧。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;#官网&lt;br&gt;&lt;a href=&quot;https://sigil-ebook.com/&quot;&gt;https://sigil-ebook.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;#Github&lt;br&gt;&lt;a href=&quot;https://github.com/Sigil-Ebook/Sigil&quot;&gt;h</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
-    
-    <category term="GPLv3" scheme="http://example.com/tags/GPLv3/"/>
-    
-    <category term="OS X" scheme="http://example.com/tags/OS-X/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
-    
-    <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
     
   </entry>
   
