@@ -17,7 +17,7 @@
     <meta name="renderer" content="webkit">
     <meta name="copyright" content="ted423">
     
-    <meta name="keywords" content="hexo,hexo-blog,软件,资料,动画,漫画,游戏,ted423">
+    <meta name="keywords" content="hexo,hexo-blog,软件,Software,动画,Anime,漫画,Comic,游戏,Game,ted423">
     
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
     <meta name="description" content="https:&#x2F;&#x2F;github.com&#x2F;mcmilk&#x2F;7-Zip-zstd之前某个群吐槽问7z是不是还是VC6编译，别人给的不会覆盖掉原版的7z总之不错。虽然还没详细用到我能推翻之前的结论另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可">
@@ -226,21 +226,52 @@
     
 <header class="header">
 
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
+    <!-- top read progress line -->
+    <div class="header-element">
+        
+        <div class="read-progress"></div>
+        
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+        <div class="header-sidebar-menu">
+        
+            
+            <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- back to home page text -->
+    <a class="home-link header-element" href=/>个人小站</a>
+    <!-- toggle banner for post layout -->
+    
     
     <div class="banner">
-            <div class="blog-title">
-                <a href="/" >个人小站</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">[开源]7-Zip-zstd 7z增强版</a>
-            </div>
+    
+        <div class="blog-title header-element">
+            <a href="/" >个人小站</a>
+        </div>
+        <div class="post-title header-element">
+            <a href="#" class="post-name">[开源]7-Zip-zstd 7z增强版</a>
+        </div>
     </div>
     
-    <a class="home-link" href=/>个人小站</a>
 </header>
+    
+<footer class="footer-fixed">
+
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+        <div class="back-top">
+        
+            
+            <div>&#xe639;</div>
+            
+        </div>
+    </div>
+</footer>
     <div class="wrapper">
         <div class="site-intro" style="
 
@@ -455,8 +486,7 @@ height:50vh;
 <!-- City版安装代码已完成 -->
     
     
-    <!-- gitalk评论 -->
-
+     
     <!-- utteranc评论 -->
 
     <!-- partial('_partial/comment/changyan') -->
@@ -489,6 +519,13 @@ height:50vh;
             
         
     
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                    
+                    <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
         
     
         
@@ -540,6 +577,8 @@ height:50vh;
     <div class="copyright">
         <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
     </div>
+    <!-- website approve for Chinese user -->
+    
     <!-- 不蒜子  -->
     
     <div class="busuanzi-container">
@@ -571,7 +610,6 @@ top:50vh;
         
     </div>
     
-    <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
         <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
@@ -1099,9 +1137,24 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 40
+        Total : 41
         </div>
         <!-- search  -->
         
@@ -1128,6 +1181,16 @@ top:50vh;
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/Terminal/rsync/" >rsync</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/Software/x2go/" >[开源]x2go - 远程连接</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1239,6 +1302,11 @@ top:50vh;
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
+        </li>
+    
+    
     
     
     
@@ -1277,35 +1345,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Terminal/rsync/" >rsync</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Compression/Compression-defect/" >压缩软件问题记录</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2020 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
         </li>
     
     

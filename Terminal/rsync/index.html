@@ -17,20 +17,21 @@
     <meta name="renderer" content="webkit">
     <meta name="copyright" content="ted423">
     
-    <meta name="keywords" content="hexo,hexo-blog,软件,资料,动画,漫画,游戏,ted423">
+    <meta name="keywords" content="hexo,hexo-blog,软件,Software,动画,Anime,漫画,Comic,游戏,Game,ted423">
     
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    <meta name="description" content="rsync -avzP   source root@ip:&#x2F;目录 –log-file&#x3D;$HOME&#x2F;.rsync.log –remove-source-files 其中z为压缩，在网络性能足够的情况下，不开会快">
+    <meta name="description" content="不正常的使用rsync可能会造成灾难性的后果 rsync -avzP   source root@ip:&#x2F;目录 –log-file&#x3D;$HOME&#x2F;.rsync.log 常用参数-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代">
 <meta property="og:type" content="article">
 <meta property="og:title" content="rsync">
 <meta property="og:url" content="http://example.com/Terminal/rsync/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="rsync -avzP   source root@ip:&#x2F;目录 –log-file&#x3D;$HOME&#x2F;.rsync.log –remove-source-files 其中z为压缩，在网络性能足够的情况下，不开会快">
+<meta property="og:description" content="不正常的使用rsync可能会造成灾难性的后果 rsync -avzP   source root@ip:&#x2F;目录 –log-file&#x3D;$HOME&#x2F;.rsync.log 常用参数-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-19T04:09:17.630Z">
-<meta property="article:modified_time" content="2021-06-18T07:19:50.000Z">
+<meta property="article:published_time" content="2021-07-07T16:06:53.219Z">
+<meta property="article:modified_time" content="2021-07-04T16:27:54.010Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Terminal">
+<meta property="article:tag" content="Linux">
 <meta name="twitter:card" content="summary">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -223,21 +224,52 @@
     
 <header class="header">
 
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
+    <!-- top read progress line -->
+    <div class="header-element">
+        
+        <div class="read-progress"></div>
+        
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+        <div class="header-sidebar-menu">
+        
+            
+            <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- back to home page text -->
+    <a class="home-link header-element" href=/>个人小站</a>
+    <!-- toggle banner for post layout -->
+    
     
     <div class="banner">
-            <div class="blog-title">
-                <a href="/" >个人小站</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">rsync</a>
-            </div>
+    
+        <div class="blog-title header-element">
+            <a href="/" >个人小站</a>
+        </div>
+        <div class="post-title header-element">
+            <a href="#" class="post-name">rsync</a>
+        </div>
     </div>
     
-    <a class="home-link" href=/>个人小站</a>
 </header>
+    
+<footer class="footer-fixed">
+
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+        <div class="back-top">
+        
+            
+            <div>&#xe639;</div>
+            
+        </div>
+    </div>
+</footer>
     <div class="wrapper">
         <div class="site-intro" style="
 
@@ -283,16 +315,18 @@ height:50vh;
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Terminal">Terminal</a>
     
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
+    
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">36</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">413</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2021/06/19</span>
+                    <span class="post-intro-time">2021/07/08</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -416,8 +450,11 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log</p>
-<p>–remove-source-files<br> 其中z为压缩，在网络性能足够的情况下，不开会快</p>
+        <p><del>不正常的使用rsync可能会造成灾难性的后果</del></p>
+<p>rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log</p>
+<h1 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h1><p>-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)<br>-u, –update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时间晚于要备份的文件。（不覆盖更新的文件）<br>–ignore-existing参数表示只要该文件在目标目录中已经存在，就跳过去，不再同步这些文件。<br>-n 参数或–dry-run参数模拟将要执行的操作，而并不真的执行。配合-v参数使用，可以看到哪些内容会被同步过去。<br>-P 参数是–progress和–partial这两个参数的结合。<br>–remove-source-files 字面意思，注意不要乱用–delete<br> 其中z为压缩，在网络性能足够的情况下，不开会快</p>
+<hr>
+<p> 如无必要不要使用<br> -c、–checksum参数改变rsync的校验方式。默认情况下，rsync 只检查文件的大小和最后修改日期是否发生变化，如果发生变化，就重新传输；使用这个参数以后，则通过判断文件内容的校验和，决定是否重新传输。(比较操蛋的是这玩意校验是整个文件hash，所以全读一遍还是很慢的。)</p>
 
     </article>
     <!-- license  -->
@@ -426,17 +463,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/Software/Use%20Thunder/" title= "我为什么仍在使用迅雷">
-                    <div class="nextTitle">我为什么仍在使用迅雷</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/Software/WizTree/" title= "[软件推荐]WizTree - 磁盘空间分析">
-                    <div class="prevTitle">[软件推荐]WizTree - 磁盘空间分析</div>
+                <a href= "/Software/x2go/" title= "[开源]x2go - 远程连接">
+                    <div class="prevTitle">[开源]x2go - 远程连接</div>
                 </a>
             
         </li>
@@ -447,8 +479,7 @@ height:50vh;
 <!-- City版安装代码已完成 -->
     
     
-    <!-- gitalk评论 -->
-
+     
     <!-- utteranc评论 -->
 
     <!-- partial('_partial/comment/changyan') -->
@@ -481,6 +512,13 @@ height:50vh;
             
         
     
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                    
+                    <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
         
     
         
@@ -532,6 +570,8 @@ height:50vh;
     <div class="copyright">
         <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
     </div>
+    <!-- website approve for Chinese user -->
+    
     <!-- 不蒜子  -->
     
     <div class="busuanzi-container">
@@ -560,10 +600,9 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">常用参数</span></a></li></ol>
     </div>
     
-    <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
         <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
@@ -1091,9 +1130,24 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 40
+        Total : 41
         </div>
         <!-- search  -->
         
@@ -1120,6 +1174,16 @@ top:50vh;
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/Terminal/rsync/" >rsync</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/Software/x2go/" >[开源]x2go - 远程连接</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1231,6 +1295,11 @@ top:50vh;
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
+        </li>
+    
+    
     
     
     
@@ -1269,35 +1338,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Terminal/rsync/" >rsync</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Compression/Compression-defect/" >压缩软件问题记录</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2020 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
         </li>
     
     

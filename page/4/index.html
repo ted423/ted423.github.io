@@ -17,7 +17,7 @@
     <meta name="renderer" content="webkit">
     <meta name="copyright" content="ted423">
     
-    <meta name="keywords" content="hexo,hexo-blog,软件,资料,动画,漫画,游戏,ted423">
+    <meta name="keywords" content="hexo,hexo-blog,软件,Software,动画,Anime,漫画,Comic,游戏,Game,ted423">
     
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
@@ -219,12 +219,41 @@
     
 <header class="header index-header">
 
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
+    <!-- top read progress line -->
+    <div class="header-element">
+        
+        <div class="read-progress"></div>
+        
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+        <div class="header-sidebar-menu">
+        
+            
+            <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- back to home page text -->
+    <a class="home-link header-element" href=/>个人小站</a>
+    <!-- toggle banner for post layout -->
     
-    <a class="home-link" href=/>个人小站</a>
 </header>
+    
+<footer class="footer-fixed index-footer-fixed">
+
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+        <div class="back-top">
+        
+            
+            <div>&#xe639;</div>
+            
+        </div>
+    </div>
+</footer>
     <div class="wrapper">
         <div class="site-intro" style="
 
@@ -365,6 +394,41 @@ height:50vh;
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
             <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/etc/source-han-sans/" >
+            
+                <span>[Font]思源黑体</span>
+        </a>
+        <div class="abstract-content">
+            https://github.com/adobe-fonts/source-han-sans这个字体是Adobe和Google共同开发的，谷歌那里叫Noto SansOpenType/CFF Pan-CJK fonts
+微软雅黑的版权坑https://zhuanlan.zhihu.com/p/30568782
+可惜的在于这个字体只支持自用，除非对方电脑也有安装，否则是无法显示的。
+另外，用了一段时间，虽然微软雅黑有这样那样的问题，但思源黑体真的真的不好看。
+在微软上表现比较更好的Source-Han-TrueTypehttps://github.com/Pal3love/Source-H...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SIL Open Font">SIL Open Font</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Font">Font</a>
+    
+</div>
+            
+        </div>
+    </article>
     
     
     
@@ -673,41 +737,10 @@ https://write-box.appspot.com
         </div>
     </article>
     
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/etc/Fonts/" >
-            
-                <span>[Font]字体包</span>
-        </a>
-        <div class="abstract-content">
-            所有的资源我都没留字体，放到了一起
-https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Font">Font</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/page/3/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+        <a class="extend prev" rel="prev" href="/page/3/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -716,6 +749,10 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
             <div class="profile">
     <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg >
     <div class="profile-name">ted423</div>
+    
+    <div class="profile-signature">
+        Hello world
+    </div>
     
     
     <div class="profile-social">
@@ -729,6 +766,13 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
             
         
     
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                    
+                    <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
         
     
         
@@ -815,6 +859,13 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
         
     
         
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                    
+                    <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
+        
     
         
     
@@ -865,6 +916,8 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
     <div class="copyright">
         <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
     </div>
+    <!-- website approve for Chinese user -->
+    
     <!-- 不蒜子  -->
     
     <div class="busuanzi-container">
@@ -878,7 +931,6 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
     </div>
     <!-- toc -->
     
-    <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
         <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
@@ -1406,9 +1458,24 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 40
+        Total : 41
         </div>
         <!-- search  -->
         
@@ -1435,6 +1502,16 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/Terminal/rsync/" >rsync</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/Software/x2go/" >[开源]x2go - 远程连接</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1546,6 +1623,11 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
+        </li>
+    
+    
     
     
     
@@ -1584,35 +1666,7 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Terminal/rsync/" >rsync</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Compression/Compression-defect/" >压缩软件问题记录</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2020 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
         </li>
     
     

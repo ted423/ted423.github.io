@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-03T06:45:12.024Z</updated>
+  <updated>2021-07-04T16:27:54.010Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,85 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rsync</title>
+    <link href="http://example.com/Terminal/rsync/"/>
+    <id>http://example.com/Terminal/rsync/</id>
+    <published>2021-07-07T16:06:53.219Z</published>
+    <updated>2021-07-04T16:27:54.010Z</updated>
+    
+    <content type="html"><![CDATA[<p><del>不正常的使用rsync可能会造成灾难性的后果</del></p><p>rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log</p><h1 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h1><p>-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)<br>-u, –update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时间晚于要备份的文件。（不覆盖更新的文件）<br>–ignore-existing参数表示只要该文件在目标目录中已经存在，就跳过去，不再同步这些文件。<br>-n 参数或–dry-run参数模拟将要执行的操作，而并不真的执行。配合-v参数使用，可以看到哪些内容会被同步过去。<br>-P 参数是–progress和–partial这两个参数的结合。<br>–remove-source-files 字面意思，注意不要乱用–delete<br> 其中z为压缩，在网络性能足够的情况下，不开会快</p><hr><p> 如无必要不要使用<br> -c、–checksum参数改变rsync的校验方式。默认情况下，rsync 只检查文件的大小和最后修改日期是否发生变化，如果发生变化，就重新传输；使用这个参数以后，则通过判断文件内容的校验和，决定是否重新传输。(比较操蛋的是这玩意校验是整个文件hash，所以全读一遍还是很慢的。)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;del&gt;不正常的使用rsync可能会造成灾难性的后果&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log&lt;/p&gt;
+&lt;h1 id=&quot;常用参数&quot;&gt;&lt;a href=&quot;#常用参数&quot; cl</summary>
+      
+    
+    
+    
+    
+    <category term="Terminal" scheme="http://example.com/tags/Terminal/"/>
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]x2go - 远程连接</title>
+    <link href="http://example.com/Software/x2go/"/>
+    <id>http://example.com/Software/x2go/</id>
+    <published>2021-07-07T16:06:53.056Z</published>
+    <updated>2021-07-07T14:55:11.259Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://wiki.x2go.org/doku.php/start">https://wiki.x2go.org/doku.php/start</a><br>本来想吐槽x2go的，后面发现是自己的问题。<br>闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。<br>看到x2go用NX协议就也想试试，毕竟开源。<br>首先是跟nomachine不兼容。<br>当然这是小事。</p><p>x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。<br>使用桌面登录会跟你显示器登录是不一样。<br>当然还能用X11<br>这里引入一个小故事</p><p>当我看到x2go在x11可以选择桌面的时候我是很激动的(<br>毕竟这意味着我可以弄一个别人看不到的桌面。<br>然后我闲着无聊重启了下我就傻逼了。<br>我连不进去了，因为Debian同学没登陆么的桌面，于是我跑到电脑前，登录进了系统，然后再跑回位置上连。(直接使用xfce这些桌面没这个问题。)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://wiki.x2go.org/doku.php/start&quot;&gt;https://wiki.x2go.org/doku.php/start&lt;/a&gt;&lt;br&gt;本来想吐槽x2go的，后面发现是自己的问题。&lt;br&gt;闲着无聊试新的远程方式，看看有没合心意的</summary>
+      
+    
+    
+    
+    
+    <category term="GPLv2" scheme="http://example.com/tags/GPLv2/"/>
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu注意事项</title>
+    <link href="http://example.com/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
+    <id>http://example.com/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
+    <published>2021-07-07T16:06:52.955Z</published>
+    <updated>2021-07-07T01:44:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><p>在文件夹中ctrl+h可以显示隐藏文件夹</p><h1 id="Root"><a href="#Root" class="headerlink" title="Root"></a>Root</h1><p>这篇文章以前写的，目前建议是<code>sudo</code>或者<code>sudo -i</code>用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03</p><p>Debian默认创建的用户不在sudoers中，因此大部分用户可能会比较习惯<code>su root</code> - 2021-07-07<br>原文<a href="http://shewolfep.iteye.com/blog/413396">http://shewolfep.iteye.com/blog/413396</a></p><p>新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。<br>Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。</p><p>如何设定/改变/启用 root 使用者的密码?<br><code>sudo passwd root</code><br>当你使用完毕后屏蔽 root 帐号 使用:<br><code>sudo passwd -l root</code><br>这个将锁住 root 帐号.<br>如何在终端机模式下切换到 root 身份?</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -s -H</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot; title=&quot;快捷键&quot;&gt;&lt;/a&gt;快捷键&lt;/h1&gt;&lt;p&gt;在文件夹中ctrl+h可以显示隐藏文件夹&lt;/p&gt;
+&lt;h1 id=&quot;Root&quot;&gt;&lt;a href=&quot;#Root&quot; class=&quot;head</summary>
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+    <category term="Ubuntu" scheme="http://example.com/tags/Ubuntu/"/>
+    
+    <category term="转载" scheme="http://example.com/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>去你妈的不求甚解</title>
@@ -208,30 +287,6 @@
     <category term="Windows" scheme="http://example.com/tags/Windows/"/>
     
     <category term="资源类" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>rsync</title>
-    <link href="http://example.com/Terminal/rsync/"/>
-    <id>http://example.com/Terminal/rsync/</id>
-    <published>2021-06-19T04:09:17.630Z</published>
-    <updated>2021-06-18T07:19:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log</p><p>–remove-source-files<br> 其中z为压缩，在网络性能足够的情况下，不开会快</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log&lt;/p&gt;
-&lt;p&gt;–remove-source-files&lt;br&gt; 其中z为压缩，在网络性能足够的情况下，不开会快&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="Terminal" scheme="http://example.com/tags/Terminal/"/>
     
   </entry>
   
@@ -506,64 +561,6 @@
     
     <category term="Software" scheme="http://example.com/categories/Software/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>[文本编辑器]Everedit - 这才是真正的国产良心</title>
-    <link href="http://example.com/Software/Document&amp;Texteditor/Everedit/"/>
-    <id>http://example.com/Software/Document&amp;Texteditor/Everedit/</id>
-    <published>2020-06-19T14:46:50.245Z</published>
-    <updated>2015-11-16T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我已入正的一款软件。<br>100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。<br>打个比方</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A720 ꜠ ꜡ Ꜣ ꜣ Ꜥ ꜥ Ꜧ ꜧ Ꜩ ꜩ Ꜫ ꜫ Ꜭ ꜭ Ꜯ ꜯ</span><br><span class="line">A730 ꜰ ꜱ Ꜳ ꜳ Ꜵ ꜵ Ꜷ ꜷ Ꜹ ꜹ Ꜻ ꜻ Ꜽ ꜽ Ꜿ ꜿ</span><br><span class="line">A740 Ꝁ ꝁ Ꝃ ꝃ Ꝅ ꝅ Ꝇ ꝇ Ꝉ ꝉ Ꝋ ꝋ Ꝍ ꝍ Ꝏ ꝏ</span><br><span class="line">A750 Ꝑ ꝑ Ꝓ ꝓ Ꝕ ꝕ Ꝗ ꝗ Ꝙ ꝙ Ꝛ ꝛ Ꝝ ꝝ Ꝟ ꝟ</span><br><span class="line">A760 Ꝡ ꝡ Ꝣ ꝣ Ꝥ ꝥ Ꝧ ꝧ Ꝩ ꝩ Ꝫ ꝫ Ꝭ ꝭ Ꝯ ꝯ</span><br><span class="line">A770 ꝰ ꝱ ꝲ ꝳ ꝴ ꝵ ꝶ ꝷ ꝸ Ꝺ ꝺ Ꝼ ꝼ Ᵹ Ꝿ ꝿ</span><br><span class="line">A780 Ꞁ ꞁ Ꞃ ꞃ Ꞅ ꞅ Ꞇ ꞇ ꞈ ꞉ ꞊ Ꞌ ꞌ      </span><br><span class="line">A7F0                       ꟻ ꟼ ꟽ ꟾ ꟿ</span><br><span class="line">FB00 ﬀ ﬁ ﬂ ﬃ ﬄ ﬅ ﬆ                  </span><br></pre></td></tr></table></figure><p>上面的一些字符就有好多文本编辑器没法完全正常显示(其实跟字体有关，因为字体支持的字符是有限的，只有一些考虑全面的字体包含的字符才多，比如宋体)</p><p>功能的话，比如自动换行，js beauty之类的，反正我挺喜欢的。<br>还不像sublime text，会有奇奇怪怪的输入法问题</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;我已入正的一款软件。&lt;br&gt;100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。&lt;br&gt;打个比方&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
-    
-    <category term="正版" scheme="http://example.com/tags/%E6%AD%A3%E7%89%88/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[中文]Office 2013 SP1 VOL各种版本</title>
-    <link href="http://example.com/Software/Document&amp;Texteditor/Office%202013/"/>
-    <id>http://example.com/Software/Document&amp;Texteditor/Office%202013/</id>
-    <published>2020-06-19T14:46:50.240Z</published>
-    <updated>2021-07-01T08:19:43.655Z</updated>
-    
-    <content type="html"><![CDATA[<p>MSDN I tell you上面并没有提供Office 2013 SP1的VOL版本<br>所以网上找了这些</p><h1 id="Office-2013-32位专业增强版"><a href="#Office-2013-32位专业增强版" class="headerlink" title="Office 2013 32位专业增强版"></a>Office 2013 32位专业增强版</h1><p><a href="ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_W32_ChnSimp_MLF_X19-35809.ISO|902180864|BBE5CFB869A057C75DC996C14548FAD0|/">ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_W32_ChnSimp_MLF_X19-35809.ISO|902180864|BBE5CFB869A057C75DC996C14548FAD0|/</a></p><h1 id="Office-2013-64位专业增强版"><a href="#Office-2013-64位专业增强版" class="headerlink" title="Office 2013 64位专业增强版"></a>Office 2013 64位专业增强版</h1><p><a href="ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_64Bit_ChnSimp_MLF_X19-35964.ISO|1025097728|FC8D97E422611094CDB2FA3BAB59D9B3|/">ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_64Bit_ChnSimp_MLF_X19-35964.ISO|1025097728|FC8D97E422611094CDB2FA3BAB59D9B3|/</a></p><h1 id="Visio-2013-32位专业版"><a href="#Visio-2013-32位专业版" class="headerlink" title="Visio 2013 32位专业版"></a>Visio 2013 32位专业版</h1><p><a href="ed2k://|file|SW_DVD5_Visio_Pro_2013w_SP1_W32_ChnSimp_MLF_X19-36364.ISO|547115008|40F6729143B4A489161C5A8F5391606E|/">ed2k://|file|SW_DVD5_Visio_Pro_2013w_SP1_W32_ChnSimp_MLF_X19-36364.ISO|547115008|40F6729143B4A489161C5A8F5391606E|/</a></p><h1 id="Visio-2013-64位专业版"><a href="#Visio-2013-64位专业版" class="headerlink" title="Visio 2013 64位专业版"></a>Visio 2013 64位专业版</h1><p><a href="ed2k://|file|SW_DVD5_Visio_Pro_2013w_SP1_64Bit_ChnSimp_MLF_X19-36392.ISO|643063808|6548A528DEE991D0F4B56BB8D4869CA3|/">ed2k://|file|SW_DVD5_Visio_Pro_2013w_SP1_64Bit_ChnSimp_MLF_X19-36392.ISO|643063808|6548A528DEE991D0F4B56BB8D4869CA3|/</a></p><h1 id="Project-2013-32位专业版"><a href="#Project-2013-32位专业版" class="headerlink" title="Project 2013 32位专业版"></a>Project 2013 32位专业版</h1><p><a href="ed2k://|file|SW_DVD5_Project_Pro_2013w_SP1_W32_ChnSimp_MLF_X19-35745.ISO|504264704|322060CDE0C97F53369A0493958FD85E|/">ed2k://|file|SW_DVD5_Project_Pro_2013w_SP1_W32_ChnSimp_MLF_X19-35745.ISO|504264704|322060CDE0C97F53369A0493958FD85E|/</a></p><h1 id="Project-2013-64位专业版"><a href="#Project-2013-64位专业版" class="headerlink" title="Project 2013 64位专业版"></a>Project 2013 64位专业版</h1><p><a href="ed2k://|file|SW_DVD5_Project_Pro_2013w_SP1_64Bit_ChnSimp_MLF_X19-35806.ISO|587982848|A574F009A37D716F7D0C54D6586761B0|/">ed2k://|file|SW_DVD5_Project_Pro_2013w_SP1_64Bit_ChnSimp_MLF_X19-35806.ISO|587982848|A574F009A37D716F7D0C54D6586761B0|/</a></p><h1 id="Office2013-32位标准版"><a href="#Office2013-32位标准版" class="headerlink" title="Office2013 32位标准版"></a>Office2013 32位标准版</h1><p><a href="ed2k://|file|SW_DVD5_Office_2013w_SP1_W32_ChnSimp_MLF_X19-34732.ISO|797986816|F3ED685BC823F3E3C7FCFCFD4C8139F8|/">ed2k://|file|SW_DVD5_Office_2013w_SP1_W32_ChnSimp_MLF_X19-34732.ISO|797986816|F3ED685BC823F3E3C7FCFCFD4C8139F8|/</a></p><h1 id="Office2013-64位标准版"><a href="#Office2013-64位标准版" class="headerlink" title="Office2013 64位标准版"></a>Office2013 64位标准版</h1><p><a href="ed2k://|file|SW_DVD5_Office_2013w_SP1_64Bit_ChnSimp_MLF_X19-34892.ISO|904058880|806CEB6791B949E7952591E8129C2CA6|/">ed2k://|file|SW_DVD5_Office_2013w_SP1_64Bit_ChnSimp_MLF_X19-34892.ISO|904058880|806CEB6791B949E7952591E8129C2CA6|/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;MSDN I tell you上面并没有提供Office 2013 SP1的VOL版本&lt;br&gt;所以网上找了这些&lt;/p&gt;
-&lt;h1 id=&quot;Office-2013-32位专业增强版&quot;&gt;&lt;a href=&quot;#Office-2013-32位专业增强版&quot; class=&quot;headerli</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
-    
-    <category term="Office" scheme="http://example.com/tags/Office/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
     
   </entry>
   

@@ -17,18 +17,18 @@
     <meta name="renderer" content="webkit">
     <meta name="copyright" content="ted423">
     
-    <meta name="keywords" content="hexo,hexo-blog,软件,资料,动画,漫画,游戏,ted423">
+    <meta name="keywords" content="hexo,hexo-blog,软件,Software,动画,Anime,漫画,Comic,游戏,Game,ted423">
     
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    <meta name="description" content="快捷键在文件夹中ctrl+h可以显示隐藏文件夹 Root这篇文章以前写的，目前建议是sudo或者sudo -i用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03 原文http:&#x2F;&#x2F;shewolfep.iteye.com&#x2F;blog&#x2F;413396 新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。Ubun">
+    <meta name="description" content="快捷键在文件夹中ctrl+h可以显示隐藏文件夹 Root这篇文章以前写的，目前建议是sudo或者sudo -i用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03 Debian默认创建的用户不在sudoers中，因此大部分用户可能会比较习惯su root - 2021-07-07原文http:&#x2F;&#x2F;shewolfep.iteye.com&#x2F;blog&#x2F;413396 新接触u">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu注意事项">
 <meta property="og:url" content="http://example.com/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="快捷键在文件夹中ctrl+h可以显示隐藏文件夹 Root这篇文章以前写的，目前建议是sudo或者sudo -i用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03 原文http:&#x2F;&#x2F;shewolfep.iteye.com&#x2F;blog&#x2F;413396 新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。Ubun">
+<meta property="og:description" content="快捷键在文件夹中ctrl+h可以显示隐藏文件夹 Root这篇文章以前写的，目前建议是sudo或者sudo -i用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03 Debian默认创建的用户不在sudoers中，因此大部分用户可能会比较习惯su root - 2021-07-07原文http:&#x2F;&#x2F;shewolfep.iteye.com&#x2F;blog&#x2F;413396 新接触u">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-06-19T14:46:48.813Z">
-<meta property="article:modified_time" content="2021-07-03T05:52:23.403Z">
+<meta property="article:published_time" content="2021-07-07T16:06:52.955Z">
+<meta property="article:modified_time" content="2021-07-07T01:44:16.000Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Ubuntu">
@@ -225,21 +225,52 @@
     
 <header class="header">
 
-    <div class="read-progress"></div>
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
+    <!-- top read progress line -->
+    <div class="header-element">
+        
+        <div class="read-progress"></div>
+        
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+        <div class="header-sidebar-menu">
+        
+            
+            <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- back to home page text -->
+    <a class="home-link header-element" href=/>个人小站</a>
+    <!-- toggle banner for post layout -->
+    
     
     <div class="banner">
-            <div class="blog-title">
-                <a href="/" >个人小站</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">Ubuntu注意事项</a>
-            </div>
+    
+        <div class="blog-title header-element">
+            <a href="/" >个人小站</a>
+        </div>
+        <div class="post-title header-element">
+            <a href="#" class="post-name">Ubuntu注意事项</a>
+        </div>
     </div>
     
-    <a class="home-link" href=/>个人小站</a>
 </header>
+    
+<footer class="footer-fixed">
+
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+        <div class="back-top">
+        
+            
+            <div>&#xe639;</div>
+            
+        </div>
+    </div>
+</footer>
     <div class="wrapper">
         <div class="site-intro" style="
 
@@ -293,12 +324,12 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">188</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">217</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2020/06/19</span>
+                    <span class="post-intro-time">2021/07/08</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -424,7 +455,7 @@ height:50vh;
     <article class="article-entry">
         <h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><p>在文件夹中ctrl+h可以显示隐藏文件夹</p>
 <h1 id="Root"><a href="#Root" class="headerlink" title="Root"></a>Root</h1><p>这篇文章以前写的，目前建议是<code>sudo</code>或者<code>sudo -i</code>用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03</p>
-<p>原文<a target="_blank" rel="noopener" href="http://shewolfep.iteye.com/blog/413396">http://shewolfep.iteye.com/blog/413396</a></p>
+<p>Debian默认创建的用户不在sudoers中，因此大部分用户可能会比较习惯<code>su root</code> - 2021-07-07<br>原文<a target="_blank" rel="noopener" href="http://shewolfep.iteye.com/blog/413396">http://shewolfep.iteye.com/blog/413396</a></p>
 <p>新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。<br>Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。</p>
 <p>如何设定/改变/启用 root 使用者的密码?<br><code>sudo passwd root</code><br>当你使用完毕后屏蔽 root 帐号 使用:<br><code>sudo passwd -l root</code><br>这个将锁住 root 帐号.<br>如何在终端机模式下切换到 root 身份?</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -s -H</span><br></pre></td></tr></table></figure>
@@ -437,16 +468,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/etc/source-han-sans/" title= "[Font]思源黑体">
-                    <div class="nextTitle">[Font]思源黑体</div>
+                <a href= "/Software/x2go/" title= "[开源]x2go - 远程连接">
+                    <div class="nextTitle">[开源]x2go - 远程连接</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/etc/why%20PT/" title= "为什么我入了PT">
-                    <div class="prevTitle">为什么我入了PT</div>
+                <a href= "/etc/Fuck/" title= "去你妈的不求甚解">
+                    <div class="prevTitle">去你妈的不求甚解</div>
                 </a>
             
         </li>
@@ -457,8 +488,7 @@ height:50vh;
 <!-- City版安装代码已完成 -->
     
     
-    <!-- gitalk评论 -->
-
+     
     <!-- utteranc评论 -->
 
     <!-- partial('_partial/comment/changyan') -->
@@ -491,6 +521,13 @@ height:50vh;
             
         
     
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                    
+                    <img class="profile-qr" src="/assets/example_qr.png" />
+                </span>
+            
         
     
         
@@ -542,6 +579,8 @@ height:50vh;
     <div class="copyright">
         <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
     </div>
+    <!-- website approve for Chinese user -->
+    
     <!-- 不蒜子  -->
     
     <div class="busuanzi-container">
@@ -573,7 +612,6 @@ top:50vh;
         <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="toc-number">1.</span> <span class="toc-text">快捷键</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Root"><span class="toc-number">2.</span> <span class="toc-text">Root</span></a></li></ol>
     </div>
     
-    <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
     <ul class="sidebar-tabs sidebar-tabs-active-0">
         <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
@@ -1101,9 +1139,24 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 40
+        Total : 41
         </div>
         <!-- search  -->
         
@@ -1130,6 +1183,16 @@ top:50vh;
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/Terminal/rsync/" >rsync</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span><a class="archive-post-title" href= "/Software/x2go/" >[开源]x2go - 远程连接</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1241,6 +1304,11 @@ top:50vh;
         </li>
     
     
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
+        </li>
+    
+    
     
     
     
@@ -1279,35 +1347,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Terminal/rsync/" >rsync</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Compression/Compression-defect/" >压缩软件问题记录</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2020 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
         </li>
     
     
