@@ -69,33 +69,6 @@
   </entry>
   
   <entry>
-    <title>Ubuntu注意事项</title>
-    <link href="http://example.com/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
-    <id>http://example.com/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</id>
-    <published>2021-07-07T16:06:52.955Z</published>
-    <updated>2021-07-07T01:44:16.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h1><p>在文件夹中ctrl+h可以显示隐藏文件夹</p><h1 id="Root"><a href="#Root" class="headerlink" title="Root"></a>Root</h1><p>这篇文章以前写的，目前建议是<code>sudo</code>或者<code>sudo -i</code>用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03</p><p>Debian默认创建的用户不在sudoers中，因此大部分用户可能会比较习惯<code>su root</code> - 2021-07-07<br>原文<a href="http://shewolfep.iteye.com/blog/413396">http://shewolfep.iteye.com/blog/413396</a></p><p>新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。<br>Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。</p><p>如何设定/改变/启用 root 使用者的密码?<br><code>sudo passwd root</code><br>当你使用完毕后屏蔽 root 帐号 使用:<br><code>sudo passwd -l root</code><br>这个将锁住 root 帐号.<br>如何在终端机模式下切换到 root 身份?</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -s -H</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;快捷键&quot;&gt;&lt;a href=&quot;#快捷键&quot; class=&quot;headerlink&quot; title=&quot;快捷键&quot;&gt;&lt;/a&gt;快捷键&lt;/h1&gt;&lt;p&gt;在文件夹中ctrl+h可以显示隐藏文件夹&lt;/p&gt;
-&lt;h1 id=&quot;Root&quot;&gt;&lt;a href=&quot;#Root&quot; class=&quot;head</summary>
-      
-    
-    
-    
-    
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
-    
-    <category term="Ubuntu" scheme="http://example.com/tags/Ubuntu/"/>
-    
-    <category term="转载" scheme="http://example.com/tags/%E8%BD%AC%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
     <title>去你妈的不求甚解</title>
     <link href="http://example.com/etc/Fuck/"/>
     <id>http://example.com/etc/Fuck/</id>
@@ -561,6 +534,35 @@
     
     <category term="Software" scheme="http://example.com/categories/Software/"/>
     
+    
+  </entry>
+  
+  <entry>
+    <title>[文本编辑器]Everedit - 这才是真正的国产良心</title>
+    <link href="http://example.com/Software/Document&amp;Texteditor/Everedit/"/>
+    <id>http://example.com/Software/Document&amp;Texteditor/Everedit/</id>
+    <published>2020-06-19T14:46:50.245Z</published>
+    <updated>2015-11-16T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我已入正的一款软件。<br>100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。<br>打个比方</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A720 ꜠ ꜡ Ꜣ ꜣ Ꜥ ꜥ Ꜧ ꜧ Ꜩ ꜩ Ꜫ ꜫ Ꜭ ꜭ Ꜯ ꜯ</span><br><span class="line">A730 ꜰ ꜱ Ꜳ ꜳ Ꜵ ꜵ Ꜷ ꜷ Ꜹ ꜹ Ꜻ ꜻ Ꜽ ꜽ Ꜿ ꜿ</span><br><span class="line">A740 Ꝁ ꝁ Ꝃ ꝃ Ꝅ ꝅ Ꝇ ꝇ Ꝉ ꝉ Ꝋ ꝋ Ꝍ ꝍ Ꝏ ꝏ</span><br><span class="line">A750 Ꝑ ꝑ Ꝓ ꝓ Ꝕ ꝕ Ꝗ ꝗ Ꝙ ꝙ Ꝛ ꝛ Ꝝ ꝝ Ꝟ ꝟ</span><br><span class="line">A760 Ꝡ ꝡ Ꝣ ꝣ Ꝥ ꝥ Ꝧ ꝧ Ꝩ ꝩ Ꝫ ꝫ Ꝭ ꝭ Ꝯ ꝯ</span><br><span class="line">A770 ꝰ ꝱ ꝲ ꝳ ꝴ ꝵ ꝶ ꝷ ꝸ Ꝺ ꝺ Ꝼ ꝼ Ᵹ Ꝿ ꝿ</span><br><span class="line">A780 Ꞁ ꞁ Ꞃ ꞃ Ꞅ ꞅ Ꞇ ꞇ ꞈ ꞉ ꞊ Ꞌ ꞌ      </span><br><span class="line">A7F0                       ꟻ ꟼ ꟽ ꟾ ꟿ</span><br><span class="line">FB00 ﬀ ﬁ ﬂ ﬃ ﬄ ﬅ ﬆ                  </span><br></pre></td></tr></table></figure><p>上面的一些字符就有好多文本编辑器没法完全正常显示(其实跟字体有关，因为字体支持的字符是有限的，只有一些考虑全面的字体包含的字符才多，比如宋体)</p><p>功能的话，比如自动换行，js beauty之类的，反正我挺喜欢的。<br>还不像sublime text，会有奇奇怪怪的输入法问题</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我已入正的一款软件。&lt;br&gt;100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。&lt;br&gt;打个比方&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+    <category term="正版" scheme="http://example.com/tags/%E6%AD%A3%E7%89%88/"/>
+    
+    <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
     
   </entry>
   
