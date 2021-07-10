@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-10T08:33:07.545Z</updated>
+  <updated>2021-07-10T09:02:05.013Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="http://example.com/Software/x2go/"/>
     <id>http://example.com/Software/x2go/</id>
     <published>2021-07-07T16:10:16.926Z</published>
-    <updated>2021-07-10T08:33:07.545Z</updated>
+    <updated>2021-07-10T09:02:05.013Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h1><p><a href="https://wiki.x2go.org/doku.php/start">https://wiki.x2go.org/doku.php/start</a><br>本来想吐槽x2go的，后面发现是自己的问题。<br>闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。<br>看到x2go用NX协议就也想试试，毕竟开源。<br>首先是跟nomachine不兼容。<br>当然这是小事。</p><p>x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。<br>使用桌面登录会跟你显示器登录是不一样。<br>当然还能用X11<br>这里引入一个小故事</p><p>当我看到x2go在x11可以选择桌面的时候我是很激动的(<br>毕竟这意味着我可以弄一个别人看不到的桌面。<br>然后我闲着无聊重启了下我就傻逼了。<br>我连不进去了，因为Debian同学没登陆么的桌面，于是我跑到电脑前，登录进了系统，然后再跑回位置上连。(直接使用xfce这些桌面没这个问题。)</p><h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><ol><li>与显示器同步的画面必须要到电脑前登录，否则x2go的x11 foward不工作。</li><li>利用x2go创建的远程画面会卡死。只能强关，关了之后原画面显示内容丢失，甚至我重启开那一会不动，桌面就死了，当然这可能是Mint的锅，不过谁知道呢</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>不推荐使用，最后有滚回去使用NoMachine了</p><h1 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h1><p><a href="https://wiki.x2go.org/doku.php/start">https://wiki.x2go.org/doku.php/start</a><br>本来想吐槽x2go的，后面发现是自己的问题。<br>闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。<br>看到x2go用NX协议就也想试试，毕竟开源。<br>首先是跟nomachine不兼容。<br>当然这是小事。</p><p>x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。<br>使用桌面登录会跟你显示器登录是不一样。<br>当然还能用X11<br>这里引入一个小故事</p><p>当我看到x2go在x11可以选择桌面的时候我是很激动的(x11)(<br>毕竟这意味着我可以弄一个别人看不到的桌面。<br>然后我闲着无聊重启了下我就傻逼了。<br>我连不进去了，因为Debian同学没登陆么的桌面，于是我跑到电脑前，登录进了系统，然后再跑回位置上连。(直接使用xfce这些桌面没这个问题。)</p><h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><ol><li>与显示器同步的画面必须要到电脑前登录，否则x2go的x11 foward不工作。(这点NoMachine默认只支持同步显示，并且无需现场登录)</li><li>利用x2go创建的远程画面会卡死。只能强关，关了之后原画面显示内容丢失，甚至我重启开那一会不动，桌面就死了。<del>当然这可能是Mint的锅，不过谁知道呢</del>(我又仔细看了下，我装的是xubuntu,那没事了)</li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://wiki.x2go.org/doku.php/start&quot;&gt;https://wiki.x2go.org/d</summary>
+    <summary type="html">&lt;p&gt;不推荐使用，最后有滚回去使用NoMachine了&lt;/p&gt;
+&lt;h1 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://wiki.x2go.org/doku.ph</summary>
       
     
     
@@ -39,6 +40,8 @@
     <category term="Linux" scheme="http://example.com/tags/Linux/"/>
     
     <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
+    
+    <category term="不推荐" scheme="http://example.com/tags/%E4%B8%8D%E6%8E%A8%E8%8D%90/"/>
     
   </entry>
   
