@@ -20,15 +20,15 @@
     <meta name="keywords" content="hexo,hexo-blog,软件,Software,动画,Anime,漫画,Comic,游戏,Game,ted423">
     
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    <meta name="description" content="看来到处都是vnc教程不是没道理的。">
+    <meta name="description" content="看来到处都是vnc教程不是没道理的。 最早接触的Win,所以一切自然都会跟Win比。最初被xrdp气的够呛，xrdp实现的是Windows能通过rdp访问Linux，但核心还是vnc。Wvnc给我最初的印象就是同步显示，因为遇到对端看不到的，我就会想到RDP。(当然以对Windows和Linux的桌面理解来说，可能有所偏颇) 以下的Linux桌面英文应该叫session，也就是会话譬如，如果结束掉">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 远程Gui的一些问题">
+<meta property="og:title" content="Linux GUi 远程的一些问题">
 <meta property="og:url" content="http://example.com/Software/Remote/Linux%20Remote/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="看来到处都是vnc教程不是没道理的。">
+<meta property="og:description" content="看来到处都是vnc教程不是没道理的。 最早接触的Win,所以一切自然都会跟Win比。最初被xrdp气的够呛，xrdp实现的是Windows能通过rdp访问Linux，但核心还是vnc。Wvnc给我最初的印象就是同步显示，因为遇到对端看不到的，我就会想到RDP。(当然以对Windows和Linux的桌面理解来说，可能有所偏颇) 以下的Linux桌面英文应该叫session，也就是会话譬如，如果结束掉">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-07-14T02:41:39.870Z">
-<meta property="article:modified_time" content="2021-07-14T02:43:41.798Z">
+<meta property="article:modified_time" content="2021-07-14T06:29:22.637Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Remote">
@@ -36,7 +36,7 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     
-    <title>Linux 远程Gui的一些问题 · ted423个人小站</title>
+    <title>Linux GUi 远程的一些问题 · ted423个人小站</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -266,7 +266,7 @@
             <a href="/" >个人小站</a>
         </div>
         <div class="post-title header-element">
-            <a href="#" class="post-name">Linux 远程Gui的一些问题</a>
+            <a href="#" class="post-name">Linux GUi 远程的一些问题</a>
         </div>
     </div>
     
@@ -309,7 +309,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Linux 远程Gui的一些问题
+            Linux GUi 远程的一些问题
             <!-- 404 -->
             
         </h1>
@@ -336,7 +336,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">15</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">612</span>阅读时长: <span class="post-count reading-time">2 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -466,6 +466,11 @@ height:50vh;
             <main class="main post-page">
     <article class="article-entry">
         <p>看来到处都是vnc教程不是没道理的。</p>
+<p>最早接触的Win,所以一切自然都会跟Win比。<br>最初被xrdp气的够呛，xrdp实现的是Windows能通过rdp访问Linux，但核心还是vnc。W<br>vnc给我最初的印象就是同步显示，因为遇到对端看不到的，我就会想到RDP。(当然以对Windows和Linux的桌面理解来说，可能有所偏颇) 以下的Linux桌面英文应该叫session，也就是会话<br>譬如，如果结束掉一个Linux桌面，里面跑的进程都会结束。</p>
+<h1 id="x11-Forward"><a href="#x11-Forward" class="headerlink" title="x11 Forward"></a>x11 Forward</h1><h2 id="Mobaxterm"><a href="#Mobaxterm" class="headerlink" title="Mobaxterm"></a>Mobaxterm</h2><p>我对x11最初的印象就是结束了之后就再也连不上了(其实现在也是)<br>连接开始之前黑半天，然后好不容易连上了，关掉就再也连不回去。(并且结束会导致桌面close，上面的所有进程都会结束)<br>在对端开机不登录的情况下 使用x11的时候，对端无法进行登录操作(大概登录管理器无法启动桌面？)结束后正常。<br>在对端登录的情况下，Mobaxterm无法使用x11显示画面。其实我没太理解Mobaxterm是怎么做的，起码其他的地方查了很少有显示整个桌面的教程，大多都是程序的Forwarding</p>
+<h2 id="x2go"><a href="#x2go" class="headerlink" title="x2go"></a>x2go</h2><p>利用x2go也可以用x11，不过比较奇葩的是他不会创建桌面。也就是对端不登陆他不会自己创建(跟Mobaxterm刚好相反)<br>可以利用x2go 直接创建桌面之后再用x11，不过显示效果并不如直接nx协议连。(x2go创建的桌面不会在关闭时结束，但是对端登录是看不到的，两个桌面)<br>进程里可以看到 /usr/bin/x2goruncommand 启动的session</p>
+<h1 id="NX协议相关"><a href="#NX协议相关" class="headerlink" title="NX协议相关"></a>NX协议相关</h1><h2 id="Nomachine"><a href="#Nomachine" class="headerlink" title="Nomachine"></a>Nomachine</h2><p>Nomachine在一些服务器上好好的，但在那种台式机上，intel i3-6100带核显和一台独显机子都出现了不接显示器卡顿的问题，原因不明<br>同样环境x2go正常</p>
+<h2 id="x2go-1"><a href="#x2go-1" class="headerlink" title="x2go"></a>x2go</h2><p>x2go中相关使用的桌面都会创建，不会显示对端原生桌面。原生桌面只能使用x11来看<br>但是x2go的自行创建的桌面在那台电脑上会卡死，<br>x2go会在未设置和确认的情况下挂载本机的文件夹到目标服务器<br>所以目前想使用大概还是得跑目标机子上登录然后跑回来x11这么用</p>
 
     </article>
     <!-- license  -->
@@ -604,7 +609,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#x11-Forward"><span class="toc-number">1.</span> <span class="toc-text">x11 Forward</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Mobaxterm"><span class="toc-number">1.1.</span> <span class="toc-text">Mobaxterm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x2go"><span class="toc-number">1.2.</span> <span class="toc-text">x2go</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NX%E5%8D%8F%E8%AE%AE%E7%9B%B8%E5%85%B3"><span class="toc-number">2.</span> <span class="toc-text">NX协议相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nomachine"><span class="toc-number">2.1.</span> <span class="toc-text">Nomachine</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#x2go-1"><span class="toc-number">2.2.</span> <span class="toc-text">x2go</span></a></li></ol></li></ol>
     </div>
     
     <div class="sidebar sidebar-hide">
@@ -1573,7 +1578,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Remote/Linux%20Remote/" >Linux 远程Gui的一些问题</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Remote/Linux%20Remote/" >Linux GUi 远程的一些问题</a>
         </li>
     
     
@@ -1680,8 +1685,6 @@ top:50vh;
         <span class="sidebar-tag-name" data-tags="过时"><span class="iconfont-archer">&#xe606;</span>过时</span>
     
         <span class="sidebar-tag-name" data-tags="Font"><span class="iconfont-archer">&#xe606;</span>Font</span>
-    
-        <span class="sidebar-tag-name" data-tags="不推荐"><span class="iconfont-archer">&#xe606;</span>不推荐</span>
     
         <span class="sidebar-tag-name" data-tags="Remote"><span class="iconfont-archer">&#xe606;</span>Remote</span>
     
