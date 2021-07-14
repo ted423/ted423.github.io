@@ -403,15 +403,47 @@
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/Software/x2go/" >
+        <a class="abstract-title" href = "/Software/Remote/Linux%20Remote/" >
+            
+                <span>Linux 远程Gui的一些问题</span>
+        </a>
+        <div class="abstract-content">
+            看来到处都是vnc教程不是没道理的。
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/14</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Remote">Remote</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/Software/Remote/x2go/" >
             
                 <span>[开源]x2go - 远程连接</span>
         </a>
         <div class="abstract-content">
-            不推荐使用，最后又滚回去使用NoMachine了
+            不推荐使用，最后又滚回去使用NoMachine了判断可能是NX协议的锅，具体见Nomachine里
 网址https://wiki.x2go.org/doku.php/start本来想吐槽x2go的，后面发现是自己的问题。闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。看到x2go用NX协议就也想试试，毕竟开源。首先是跟nomachine不兼容。当然这是小事。
 x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。使用桌面登录会跟你显示器登录是不一样。当然还能用X11这里引入一个小故事
-当我看到x2go在x11可以选择桌面的时候我是很激动的(x11)(...
+当我看到x2go...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -710,38 +742,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "资源类">资源类</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/Software/WizTree/" >
-            
-                <span>[软件推荐]WizTree - 磁盘空间分析</span>
-        </a>
-        <div class="abstract-content">
-            https://www.diskanalyzer.com/之前还看到一个SpaceSniffer，是一直在用，不过目前来看WizTree一直在维护(相反SpaceSniffer最后更新已经是2018)。比较而言后者大文件提示会比较直观.百分比占用会比图形更准确，好理解。前者会边扫图形边变化，前期图形会失真，并且整体速度略慢据说Wiztree是直接对NTFS文件系统的MFT进行文件分析，不过我测试是对的网络路径(小文件太多估计有影响)固此，我倾向于用WizTree 完全取代 SpaceSniffer
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/16</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Personal Free">Personal Free</a>
     
 </div>
             
@@ -1380,9 +1380,22 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 41
+        Total : 42
         </div>
         <!-- search  -->
         
@@ -1470,7 +1483,7 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span><a class="archive-post-title" href= "/Software/NoMachine/" >[Remote]NoMachine 远程工具</a>
+            <span class="archive-post-date">12/11</span><a class="archive-post-title" href= "/Software/Remote/NoMachine/" >[Remote]NoMachine 远程工具</a>
         </li>
     
     
@@ -1529,11 +1542,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         </li>
     
     
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
-        </li>
-    
-    
     
     
     
@@ -1573,6 +1581,20 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Compression/Compression-defect/" >压缩软件问题记录</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2020 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span><a class="archive-post-title" href= "/Software/Compression/winrar/" >[烈火]WinRAR v6.02 简体中文版</a>
         </li>
     
     
@@ -1782,7 +1804,21 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/x2go/" >[开源]x2go - 远程连接</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Remote/Linux%20Remote/" >Linux 远程Gui的一些问题</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Software/Remote/x2go/" >[开源]x2go - 远程连接</a>
         </li>
     
     </div>
@@ -1877,6 +1913,8 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         <span class="sidebar-tag-name" data-tags="Font"><span class="iconfont-archer">&#xe606;</span>Font</span>
     
         <span class="sidebar-tag-name" data-tags="不推荐"><span class="iconfont-archer">&#xe606;</span>不推荐</span>
+    
+        <span class="sidebar-tag-name" data-tags="Remote"><span class="iconfont-archer">&#xe606;</span>Remote</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
