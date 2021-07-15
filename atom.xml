@@ -3,11 +3,11 @@
   <title>个人小站</title>
   
   <subtitle>Take&amp;Give</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://ted423.github.io/"/>
   <updated>2021-07-15T09:39:15.308Z</updated>
-  <id>http://example.com/</id>
+  <id>http://ted423.github.io/</id>
   
   <author>
     <name>ted423</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>不建议使用Refs</title>
-    <link href="http://example.com/Software/No%20Refs/"/>
-    <id>http://example.com/Software/No%20Refs/</id>
+    <link href="http://ted423.github.io/Software/No%20Refs/"/>
+    <id>http://ted423.github.io/Software/No%20Refs/</id>
     <published>2021-07-15T09:13:08.906Z</published>
     <updated>2021-07-15T09:39:15.308Z</updated>
     
@@ -33,17 +33,17 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
   </entry>
   
   <entry>
     <title>Linux GUi 远程的一些问题</title>
-    <link href="http://example.com/Software/Remote/Linux%20Remote/"/>
-    <id>http://example.com/Software/Remote/Linux%20Remote/</id>
+    <link href="http://ted423.github.io/Software/Remote/Linux%20Remote/"/>
+    <id>http://ted423.github.io/Software/Remote/Linux%20Remote/</id>
     <published>2021-07-14T02:41:39.870Z</published>
     <updated>2021-07-15T09:15:31.138Z</updated>
     
@@ -58,19 +58,19 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
-    <category term="Remote" scheme="http://example.com/tags/Remote/"/>
+    <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
     
   </entry>
   
   <entry>
     <title>[开源]x2go - 远程连接</title>
-    <link href="http://example.com/Software/Remote/x2go/"/>
-    <id>http://example.com/Software/Remote/x2go/</id>
+    <link href="http://ted423.github.io/Software/Remote/x2go/"/>
+    <id>http://ted423.github.io/Software/Remote/x2go/</id>
     <published>2021-07-07T16:10:16.926Z</published>
     <updated>2021-07-15T09:15:42.833Z</updated>
     
@@ -85,23 +85,23 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="GPLv2" scheme="http://example.com/tags/GPLv2/"/>
+    <category term="GPLv2" scheme="http://ted423.github.io/tags/GPLv2/"/>
     
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
-    <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
-    <category term="Remote" scheme="http://example.com/tags/Remote/"/>
+    <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
     
   </entry>
   
   <entry>
     <title>rsync</title>
-    <link href="http://example.com/Terminal/rsync/"/>
-    <id>http://example.com/Terminal/rsync/</id>
+    <link href="http://ted423.github.io/Terminal/rsync/"/>
+    <id>http://ted423.github.io/Terminal/rsync/</id>
     <published>2021-07-07T16:06:53.219Z</published>
     <updated>2021-07-04T16:27:54.010Z</updated>
     
@@ -118,16 +118,16 @@
     
     
     
-    <category term="Terminal" scheme="http://example.com/tags/Terminal/"/>
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>去你妈的不求甚解</title>
-    <link href="http://example.com/etc/Fuck/"/>
-    <id>http://example.com/etc/Fuck/</id>
+    <link href="http://ted423.github.io/etc/Fuck/"/>
+    <id>http://ted423.github.io/etc/Fuck/</id>
     <published>2021-07-03T06:11:52.599Z</published>
     <updated>2021-07-03T06:45:12.024Z</updated>
     
@@ -142,14 +142,14 @@
     
     
     
-    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
   </entry>
   
   <entry>
     <title>请勿购买QNAP</title>
-    <link href="http://example.com/etc/NoQNAP/"/>
-    <id>http://example.com/etc/NoQNAP/</id>
+    <link href="http://ted423.github.io/etc/NoQNAP/"/>
+    <id>http://ted423.github.io/etc/NoQNAP/</id>
     <published>2021-07-03T06:02:19.048Z</published>
     <updated>2021-07-03T08:03:49.158Z</updated>
     
@@ -165,14 +165,14 @@
     
     
     
-    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
   </entry>
   
   <entry>
     <title>[开源]7-Zip-zstd 7z增强版</title>
-    <link href="http://example.com/Software/Compression/7-Zip-zstd/"/>
-    <id>http://example.com/Software/Compression/7-Zip-zstd/</id>
+    <link href="http://ted423.github.io/Software/Compression/7-Zip-zstd/"/>
+    <id>http://ted423.github.io/Software/Compression/7-Zip-zstd/</id>
     <published>2021-07-01T07:10:41.474Z</published>
     <updated>2021-07-02T01:32:03.617Z</updated>
     
@@ -186,23 +186,23 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
-    <category term="Compression" scheme="http://example.com/tags/Compression/"/>
+    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
     
-    <category term="LGPLv2.1" scheme="http://example.com/tags/LGPLv2-1/"/>
+    <category term="LGPLv2.1" scheme="http://ted423.github.io/tags/LGPLv2-1/"/>
     
   </entry>
   
   <entry>
     <title>文本编辑器类的个人选择</title>
-    <link href="http://example.com/Software/Document&amp;Texteditor/notepad/"/>
-    <id>http://example.com/Software/Document&amp;Texteditor/notepad/</id>
+    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad/"/>
+    <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad/</id>
     <published>2021-07-01T03:13:17.556Z</published>
     <updated>2021-07-01T08:19:35.530Z</updated>
     
@@ -216,23 +216,23 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="分类汇总" scheme="http://example.com/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
+    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
     
-    <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
+    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
     
   </entry>
   
   <entry>
     <title>压缩软件问题记录</title>
-    <link href="http://example.com/Software/Compression/Compression-defect/"/>
-    <id>http://example.com/Software/Compression/Compression-defect/</id>
+    <link href="http://ted423.github.io/Software/Compression/Compression-defect/"/>
+    <id>http://ted423.github.io/Software/Compression/Compression-defect/</id>
     <published>2021-06-24T13:11:29.875Z</published>
     <updated>2021-07-01T08:20:18.249Z</updated>
     
@@ -250,21 +250,21 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="Compression" scheme="http://example.com/tags/Compression/"/>
+    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
     
   </entry>
   
   <entry>
     <title>[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</title>
-    <link href="http://example.com/Software/thunder/"/>
-    <id>http://example.com/Software/thunder/</id>
+    <link href="http://ted423.github.io/Software/thunder/"/>
+    <id>http://ted423.github.io/Software/thunder/</id>
     <published>2021-06-19T12:40:27.107Z</published>
     <updated>2021-07-01T08:19:02.784Z</updated>
     
@@ -279,21 +279,21 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="第三方修改|绿化" scheme="http://example.com/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
+    <category term="第三方修改|绿化" scheme="http://ted423.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
     
-    <category term="资源类" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
+    <category term="资源类" scheme="http://ted423.github.io/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>我为什么仍在使用迅雷</title>
-    <link href="http://example.com/Software/Use%20Thunder/"/>
-    <id>http://example.com/Software/Use%20Thunder/</id>
+    <link href="http://ted423.github.io/Software/Use%20Thunder/"/>
+    <id>http://ted423.github.io/Software/Use%20Thunder/</id>
     <published>2021-06-19T12:40:27.106Z</published>
     <updated>2021-07-01T08:19:08.090Z</updated>
     
@@ -308,21 +308,21 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="资源类" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
+    <category term="资源类" scheme="http://ted423.github.io/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>[软件推荐]WizTree - 磁盘空间分析</title>
-    <link href="http://example.com/Software/WizTree/"/>
-    <id>http://example.com/Software/WizTree/</id>
+    <link href="http://ted423.github.io/Software/WizTree/"/>
+    <id>http://ted423.github.io/Software/WizTree/</id>
     <published>2021-06-16T07:25:16.874Z</published>
     <updated>2021-06-17T07:50:24.520Z</updated>
     
@@ -336,19 +336,19 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="Personal Free" scheme="http://example.com/tags/Personal-Free/"/>
+    <category term="Personal Free" scheme="http://ted423.github.io/tags/Personal-Free/"/>
     
   </entry>
   
   <entry>
     <title>Git 设置和取消代理</title>
-    <link href="http://example.com/Code/git%20proxy/"/>
-    <id>http://example.com/Code/git%20proxy/</id>
+    <link href="http://ted423.github.io/Code/git%20proxy/"/>
+    <id>http://ted423.github.io/Code/git%20proxy/</id>
     <published>2021-06-10T07:22:03.877Z</published>
     <updated>2021-06-10T07:24:30.402Z</updated>
     
@@ -362,19 +362,19 @@
     
     
     
-    <category term="Git" scheme="http://example.com/categories/Git/"/>
+    <category term="Git" scheme="http://ted423.github.io/categories/Git/"/>
     
     
-    <category term="Git" scheme="http://example.com/tags/Git/"/>
+    <category term="Git" scheme="http://ted423.github.io/tags/Git/"/>
     
-    <category term="Proxy" scheme="http://example.com/tags/Proxy/"/>
+    <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
     
   </entry>
   
   <entry>
     <title>Python pip相关</title>
-    <link href="http://example.com/Code/pip/"/>
-    <id>http://example.com/Code/pip/</id>
+    <link href="http://ted423.github.io/Code/pip/"/>
+    <id>http://ted423.github.io/Code/pip/</id>
     <published>2021-06-02T13:09:46.901Z</published>
     <updated>2020-10-08T02:55:00.000Z</updated>
     
@@ -389,19 +389,19 @@
     
     
     
-    <category term="Code" scheme="http://example.com/categories/Code/"/>
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
     
     
-    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    <category term="Python" scheme="http://ted423.github.io/tags/Python/"/>
     
-    <category term="Code" scheme="http://example.com/tags/Code/"/>
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
     
   </entry>
   
   <entry>
     <title>[转载]常用px,pt,em换算表</title>
-    <link href="http://example.com/px-pt-em/"/>
-    <id>http://example.com/px-pt-em/</id>
+    <link href="http://ted423.github.io/px-pt-em/"/>
+    <id>http://ted423.github.io/px-pt-em/</id>
     <published>2021-06-02T13:09:46.900Z</published>
     <updated>2016-03-14T11:54:00.000Z</updated>
     
@@ -415,19 +415,19 @@
     
     
     
-    <category term="Code" scheme="http://example.com/categories/Code/"/>
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
     
     
-    <category term="Code" scheme="http://example.com/tags/Code/"/>
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
     
-    <category term="Document" scheme="http://example.com/tags/Document/"/>
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
   </entry>
   
   <entry>
     <title>也许要再见了，Bitcron&amp;Farbox</title>
-    <link href="http://example.com/etc/Bye/"/>
-    <id>http://example.com/etc/Bye/</id>
+    <link href="http://ted423.github.io/etc/Bye/"/>
+    <id>http://ted423.github.io/etc/Bye/</id>
     <published>2021-05-02T06:58:50.701Z</published>
     <updated>2021-12-21T07:11:00.000Z</updated>
     
@@ -442,17 +442,17 @@
     
     
     
-    <category term="个人观点" scheme="http://example.com/categories/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/categories/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
     
-    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
   </entry>
   
   <entry>
     <title>[文本编辑器]Notepad3</title>
-    <link href="http://example.com/Software/Document&amp;Texteditor/notepad3/"/>
-    <id>http://example.com/Software/Document&amp;Texteditor/notepad3/</id>
+    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad3/"/>
+    <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad3/</id>
     <published>2021-04-29T09:18:08.278Z</published>
     <updated>2021-07-02T02:10:51.438Z</updated>
     
@@ -468,23 +468,23 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
+    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
     
-    <category term="Open Source" scheme="http://example.com/tags/Open-Source/"/>
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
-    <category term="3-clause BSD license" scheme="http://example.com/tags/3-clause-BSD-license/"/>
+    <category term="3-clause BSD license" scheme="http://ted423.github.io/tags/3-clause-BSD-license/"/>
     
   </entry>
   
   <entry>
     <title>Office Tool Plus</title>
-    <link href="http://example.com/Software/Document&amp;Texteditor/Office%20Tool%20Plus/"/>
-    <id>http://example.com/Software/Document&amp;Texteditor/Office%20Tool%20Plus/</id>
+    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/Office%20Tool%20Plus/"/>
+    <id>http://ted423.github.io/Software/Document&amp;Texteditor/Office%20Tool%20Plus/</id>
     <published>2021-04-12T11:25:34.138Z</published>
     <updated>2021-07-01T08:19:46.779Z</updated>
     
@@ -499,21 +499,21 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="Office" scheme="http://example.com/tags/Office/"/>
+    <category term="Office" scheme="http://ted423.github.io/tags/Office/"/>
     
-    <category term="Document&amp;Texteditor" scheme="http://example.com/tags/Document-Texteditor/"/>
+    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
     
   </entry>
   
   <entry>
     <title>[Remote]NoMachine 远程工具</title>
-    <link href="http://example.com/Software/Remote/NoMachine/"/>
-    <id>http://example.com/Software/Remote/NoMachine/</id>
+    <link href="http://ted423.github.io/Software/Remote/NoMachine/"/>
+    <id>http://ted423.github.io/Software/Remote/NoMachine/</id>
     <published>2020-12-11T03:13:33.033Z</published>
     <updated>2021-06-30T16:00:00.000Z</updated>
     
@@ -528,27 +528,27 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="个人观点" scheme="http://example.com/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
-    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="Personal Free" scheme="http://example.com/tags/Personal-Free/"/>
+    <category term="Personal Free" scheme="http://ted423.github.io/tags/Personal-Free/"/>
     
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
-    <category term="OS X" scheme="http://example.com/tags/OS-X/"/>
+    <category term="OS X" scheme="http://ted423.github.io/tags/OS-X/"/>
     
-    <category term="Remote" scheme="http://example.com/tags/Remote/"/>
+    <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
     
   </entry>
   
   <entry>
     <title>[Android]Solid Explorer File Manager - 文件管理软件</title>
-    <link href="http://example.com/Software/Android/Solid%20Explorer%20File%20Manager/"/>
-    <id>http://example.com/Software/Android/Solid%20Explorer%20File%20Manager/</id>
+    <link href="http://ted423.github.io/Software/Android/Solid%20Explorer%20File%20Manager/"/>
+    <id>http://ted423.github.io/Software/Android/Solid%20Explorer%20File%20Manager/</id>
     <published>2020-11-08T07:38:15.023Z</published>
     <updated>2020-11-08T07:39:00.000Z</updated>
     
@@ -562,14 +562,14 @@
     
     
     
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Android" scheme="http://example.com/tags/Android/"/>
+    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
     
-    <category term="Software" scheme="http://example.com/tags/Software/"/>
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
-    <category term="正版" scheme="http://example.com/tags/%E6%AD%A3%E7%89%88/"/>
+    <category term="正版" scheme="http://ted423.github.io/tags/%E6%AD%A3%E7%89%88/"/>
     
   </entry>
   
