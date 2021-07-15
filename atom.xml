@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-07-14T07:46:13.168Z</updated>
+  <updated>2021-07-15T09:39:15.308Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>不建议使用Refs</title>
+    <link href="http://example.com/Software/No%20Refs/"/>
+    <id>http://example.com/Software/No%20Refs/</id>
+    <published>2021-07-15T09:13:08.906Z</published>
+    <updated>2021-07-15T09:39:15.308Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview">https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview</a></p><p>目前 REFS 上未提供以下功能：<br>功能         | ReFS   |    NTFS<br>    —      | —    |  —<br>文件系统压缩 |否      |是<br>文件系统加密 |  否    |是<br>事务         |  否    |是<br>对象 ID      |   否   |是<br>卸载数据传输 (ODX)|否 |是<br>短名称      |否|是<br>扩展的属性|否|是<br>磁盘配额|否|是<br>可引导|否|是<br>页面文件支持|否|是<br>在可移动媒体上受支持|否|是</p><p>以下功能仅可用于 REFS：<br>功能|ReFS|NTFS<br>— | —|—<br>块克隆|是|否<br>稀疏 VDL|是|否<br>镜像加速奇偶校验|是（在存储空间直通上）|否<br>文件级快照|是1|否</p><p>其他不说就算了，引导啥的可有可无，毕竟Refs目标是存储用的文件系统。<br>结果你不支持压缩….</p><p>举个例子吧，zfs 上 10t 压缩率 1.44x(当然要看文件)，原本是14T。<br>那么问题来了，NTFS也支持Dedupe<br>甚至磁盘配额是AD共享文件服务器非常重要的功能。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview&quot;&gt;https://docs.microsoft.com/zh-cn/windows-server/stor</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux GUi 远程的一些问题</title>
     <link href="http://example.com/Software/Remote/Linux%20Remote/"/>
     <id>http://example.com/Software/Remote/Linux%20Remote/</id>
     <published>2021-07-14T02:41:39.870Z</published>
-    <updated>2021-07-14T07:46:13.168Z</updated>
+    <updated>2021-07-15T09:15:31.138Z</updated>
     
     <content type="html"><![CDATA[<p>看来到处都是vnc教程不是没道理的。</p><p>最早接触的Win,所以一切自然都会跟Win比。<br>最初被xrdp气的够呛，xrdp实现的是Windows能通过rdp访问Linux，但核心还是vnc。W<br>vnc给我最初的印象就是同步显示，因为遇到对端看不到的，我就会想到RDP。(当然以对Windows和Linux的桌面理解来说，可能有所偏颇) 以下的Linux桌面英文应该叫session，也就是会话<br>譬如，如果结束掉一个Linux桌面，里面跑的进程都会结束。</p><h1 id="x11-Forward"><a href="#x11-Forward" class="headerlink" title="x11 Forward"></a>x11 Forward</h1><h2 id="Mobaxterm"><a href="#Mobaxterm" class="headerlink" title="Mobaxterm"></a>Mobaxterm</h2><p>我对x11最初的印象就是结束了之后就再也连不上了(其实现在也是)<br>连接开始之前黑半天，然后好不容易连上了，关掉就再也连不回去。(并且结束会导致桌面close，上面的所有进程都会结束)<br>在对端开机不登录的情况下 使用x11的时候，对端无法进行登录操作(大概登录管理器无法启动桌面？)结束后正常。<br>在对端登录的情况下，Mobaxterm无法使用x11显示画面。其实我没太理解Mobaxterm是怎么做的，起码其他的地方查了很少有显示整个桌面的教程，大多都是程序的Forwarding</p><h2 id="x2go"><a href="#x2go" class="headerlink" title="x2go"></a>x2go</h2><p>利用x2go也可以用x11，不过比较奇葩的是他不会创建桌面。也就是对端不登陆他不会自己创建(跟Mobaxterm刚好相反)<br>可以利用x2go 直接创建桌面之后再用x11，不过显示效果并不如直接nx协议连。(x2go创建的桌面不会在关闭时结束，但是对端登录是看不到的，两个桌面)<br>进程里可以看到 /usr/bin/x2goruncommand 启动的session</p><h1 id="NX协议相关"><a href="#NX协议相关" class="headerlink" title="NX协议相关"></a>NX协议相关</h1><h2 id="Nomachine"><a href="#Nomachine" class="headerlink" title="Nomachine"></a>Nomachine</h2><p>Nomachine在一些服务器上好好的，但在那种台式机上，intel i3-6100带核显和一台独显机子都出现了不接显示器卡顿的问题，原因不明<br>同样环境x2go正常</p><h2 id="x2go-1"><a href="#x2go-1" class="headerlink" title="x2go"></a>x2go</h2><p>x2go中相关使用的桌面都会创建，不会显示对端原生桌面。原生桌面只能使用x11来看<br>但是x2go的自行创建的桌面在那台电脑上会卡死，<br>x2go会在未设置和确认的情况下挂载本机的文件夹到目标服务器<br>所以目前想使用大概还是得跑目标机子上登录然后跑回来x11这么用</p><h1 id="VNC"><a href="#VNC" class="headerlink" title="VNC"></a>VNC</h1><p>最后还是回归VNC的怀抱了…<br>用的tigervnc-standalone-server<br>丝滑般流畅</p>]]></content>
     
@@ -33,6 +57,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="Linux" scheme="http://example.com/tags/Linux/"/>
@@ -46,7 +72,7 @@
     <link href="http://example.com/Software/Remote/x2go/"/>
     <id>http://example.com/Software/Remote/x2go/</id>
     <published>2021-07-07T16:10:16.926Z</published>
-    <updated>2021-07-14T07:23:10.008Z</updated>
+    <updated>2021-07-15T09:15:42.833Z</updated>
     
     <content type="html"><![CDATA[<p><del>不推荐使用，最后又滚回去使用NoMachine了</del><br><del>然后发现NoMachine有别的问题</del></p><h1 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h1><p><a href="https://wiki.x2go.org/doku.php/start">https://wiki.x2go.org/doku.php/start</a><br>本来想吐槽x2go的，后面发现是自己的问题。<br>闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。<br>看到x2go用NX协议就也想试试，毕竟开源。<br>首先是跟nomachine不兼容。<br>当然这是小事。</p><p>x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。<br>使用桌面登录会跟你显示器登录是不一样。<br>当然还能用X11<br>这里引入一个小故事</p><p>当我看到x2go在x11可以选择桌面的时候我是很激动的(x11)(<br>毕竟这意味着我可以弄一个别人看不到的桌面。<br>然后我闲着无聊重启了下我就傻逼了。<br>我连不进去了，因为Debian同学没登陆么的桌面，于是我跑到电脑前，登录进了系统，然后再跑回位置上连。(直接使用xfce这些桌面没这个问题。)</p><h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><ol><li>与显示器同步的画面必须要到电脑前登录，否则x2go的x11 foward不工作。(这点NoMachine默认只支持同步显示，并且无需现场登录)</li><li>利用x2go创建的远程画面会卡死。只能强关，关了之后原画面显示内容丢失，甚至我重启开那一会不动，桌面就死了。<del>当然这可能是Mint的锅，不过谁知道呢</del>(我又仔细看了下，我装的是xubuntu,那没事了)</li></ol>]]></content>
     
@@ -58,6 +84,8 @@
       
     
     
+    
+    <category term="Software" scheme="http://example.com/categories/Software/"/>
     
     
     <category term="GPLv2" scheme="http://example.com/tags/GPLv2/"/>
@@ -542,28 +570,6 @@
     <category term="Software" scheme="http://example.com/tags/Software/"/>
     
     <category term="正版" scheme="http://example.com/tags/%E6%AD%A3%E7%89%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</title>
-    <link href="http://example.com/Software/Document&amp;Texteditor/Advanced%20Office%20Password%20Recovery/"/>
-    <id>http://example.com/Software/Document&amp;Texteditor/Advanced%20Office%20Password%20Recovery/</id>
-    <published>2020-06-19T14:46:50.252Z</published>
-    <updated>2018-05-15T03:24:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>很早以前用的，现在就不清楚了<br>就是暴力破解工具哈。<br>软件也是大眼仔破解的<br><a href="http://www.dayanzai.me/officeps.html">http://www.dayanzai.me/officeps.html</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;很早以前用的，现在就不清楚了&lt;br&gt;就是暴力破解工具哈。&lt;br&gt;软件也是大眼仔破解的&lt;br&gt;&lt;a href=&quot;http://www.dayanzai.me/officeps.html&quot;&gt;http://www.dayanzai.me/officeps.html&lt;/a&gt;&lt;/p&gt;</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://example.com/categories/Software/"/>
-    
     
   </entry>
   
