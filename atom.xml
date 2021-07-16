@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-07-16T00:22:14.708Z</updated>
+  <updated>2021-07-16T07:43:15.875Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,13 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[AD]时间提供程序 NtpClient 报错处理</title>
+    <link href="http://ted423.github.io/Document/Issue/NtpClient/"/>
+    <id>http://ted423.github.io/Document/Issue/NtpClient/</id>
+    <published>2021-07-16T02:26:06.643Z</published>
+    <updated>2021-07-16T07:43:15.875Z</updated>
+    
+    <content type="html"><![CDATA[<p>报错信息如下<br>“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。 “</p><p>看到了这篇文章<br><a href="https://shiyousan.com/post/635774974180847748">https://shiyousan.com/post/635774974180847748</a></p><p>有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，<a href="https://www.azurew.com/windows/windows-server-2016/3098.html">https://www.azurew.com/windows/windows-server-2016/3098.html</a>，也可以不这么设)</p><p><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server">https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server</a></p><p><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings</a><br>还没折腾完，等会再更</p><p>我手头的系统都没有类似设置项，查询的都是看注册表，除了个别设了个内网机子(没报错的那台)<br>别的都是time.windows.com,0x8或0x9，但是ping不通<br>理论上Server自己进行过NTP所以应该能用才是</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;报错信息如下&lt;br&gt;“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。 “&lt;/p&gt;
+&lt;p&gt;看到了这篇文章&lt;b</summary>
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="Windows AD" scheme="http://ted423.github.io/tags/Windows-AD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>不建议使用Refs</title>
     <link href="http://ted423.github.io/Software/No%20Refs/"/>
     <id>http://ted423.github.io/Software/No%20Refs/</id>
     <published>2021-07-15T09:13:08.906Z</published>
-    <updated>2021-07-16T00:22:14.708Z</updated>
+    <updated>2021-07-16T07:39:43.152Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview">https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview</a></p><p>目前 REFS 上未提供以下功能</p><table><thead><tr><th>功能</th><th>ReFS</th><th>NTFS</th></tr></thead><tbody><tr><td>文件系统压缩</td><td>否</td><td>是</td></tr><tr><td>文件系统加密</td><td>否</td><td>是</td></tr><tr><td>事务</td><td>否</td><td>是</td></tr><tr><td>对象 ID</td><td>否</td><td>是</td></tr><tr><td>卸载数据传输 (ODX)</td><td>否</td><td>是</td></tr><tr><td>短名称</td><td>否</td><td>是</td></tr><tr><td>扩展的属性</td><td>否</td><td>是</td></tr><tr><td>磁盘配额</td><td>否</td><td>是</td></tr><tr><td>可引导</td><td>否</td><td>是</td></tr><tr><td>页面文件支持</td><td>否</td><td>是</td></tr><tr><td>在可移动媒体上受支持</td><td>否</td><td>是</td></tr></tbody></table><p>以下功能仅可用于 REFS</p><table><thead><tr><th>功能</th><th>ReFS</th><th>NTFS</th></tr></thead><tbody><tr><td>块克隆</td><td>是</td><td>否</td></tr><tr><td>稀疏 VDL</td><td>是</td><td>否</td></tr><tr><td>镜像加速奇偶校验</td><td>是（在存储空间直通上）</td><td>否</td></tr><tr><td>文件级快照</td><td>是1</td><td>否</td></tr></tbody></table><p>其他不说就算了，引导啥的可有可无，毕竟Refs目标是存储用的文件系统。<br>结果你不支持压缩….</p><p>举个例子吧，zfs 上 10t 压缩率 1.44x(当然要看文件)，原本是14T。<br>那么问题来了，NTFS也支持Dedupe<br>甚至磁盘配额是AD共享文件服务器非常重要的功能。</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview">https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview</a></p><p>目前 REFS 上未提供以下功能</p><table><thead><tr><th>功能</th><th>ReFS</th><th>NTFS</th></tr></thead><tbody><tr><td>文件系统压缩</td><td>否</td><td>是</td></tr><tr><td>文件系统加密</td><td>否</td><td>是</td></tr><tr><td>事务</td><td>否</td><td>是</td></tr><tr><td>对象 ID</td><td>否</td><td>是</td></tr><tr><td>卸载数据传输 (ODX)</td><td>否</td><td>是</td></tr><tr><td>短名称</td><td>否</td><td>是</td></tr><tr><td>扩展的属性</td><td>否</td><td>是</td></tr><tr><td>磁盘配额</td><td>否</td><td>是</td></tr><tr><td>可引导</td><td>否</td><td>是</td></tr><tr><td>页面文件支持</td><td>否</td><td>是</td></tr><tr><td>在可移动媒体上受支持</td><td>否</td><td>是</td></tr></tbody></table><p>以下功能仅可用于 REFS</p><table><thead><tr><th>功能</th><th>ReFS</th><th>NTFS</th></tr></thead><tbody><tr><td>块克隆</td><td>是</td><td>否</td></tr><tr><td>稀疏 VDL</td><td>是</td><td>否</td></tr><tr><td>镜像加速奇偶校验</td><td>是（在存储空间直通上）</td><td>否</td></tr><tr><td>文件级快照</td><td>是1</td><td>否</td></tr></tbody></table><p>其他不说就算了，引导啥的可有可无，毕竟Refs目标是存储用的文件系统。<br><del>结果你不支持压缩….</del></p><p>举个例子吧，zfs 上 10t 压缩率 1.44x(当然要看文件)，原本是14T。<br>那么问题来了，NTFS也支持Dedupe<br>甚至磁盘配额是AD共享文件服务器非常重要的功能。</p><hr><p>我错了，NTFS压缩性能好差的样子…..<br>硬是压得只有10MB/s的速度了，还好我拿C盘又测了下，差点以为网络问题</p>]]></content>
     
     
       
@@ -542,34 +569,6 @@
     <category term="OS X" scheme="http://ted423.github.io/tags/OS-X/"/>
     
     <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Android]Solid Explorer File Manager - 文件管理软件</title>
-    <link href="http://ted423.github.io/Software/Android/Solid%20Explorer%20File%20Manager/"/>
-    <id>http://ted423.github.io/Software/Android/Solid%20Explorer%20File%20Manager/</id>
-    <published>2020-11-08T07:38:15.023Z</published>
-    <updated>2020-11-08T07:39:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这玩意我入了正<br>国内系统自带的明显功能不全，小米的或许可以，但是自带广告。<br>华为的有SMB功能，但逻辑堪称傻逼。<br>一加就不说了，网络上的评价是对的。<br>开源那个Amaze就挺无语，支持SMB，但是锁屏会断<br><a href="https://play.google.com/store/apps/details?id=pl.solidexplorer2">https://play.google.com/store/apps/details?id=pl.solidexplorer2</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这玩意我入了正&lt;br&gt;国内系统自带的明显功能不全，小米的或许可以，但是自带广告。&lt;br&gt;华为的有SMB功能，但逻辑堪称傻逼。&lt;br&gt;一加就不说了，网络上的评价是对的。&lt;br&gt;开源那个Amaze就挺无语，支持SMB，但是锁屏会断&lt;br&gt;&lt;a href=&quot;https://pla</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="正版" scheme="http://ted423.github.io/tags/%E6%AD%A3%E7%89%88/"/>
     
   </entry>
   
