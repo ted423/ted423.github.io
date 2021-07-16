@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-07-15T10:45:36.039Z</updated>
+  <updated>2021-07-16T00:22:14.708Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://ted423.github.io/Software/No%20Refs/"/>
     <id>http://ted423.github.io/Software/No%20Refs/</id>
     <published>2021-07-15T09:13:08.906Z</published>
-    <updated>2021-07-15T10:45:36.039Z</updated>
+    <updated>2021-07-16T00:22:14.708Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview">https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview</a></p><p>目前 REFS 上未提供以下功能：<br>|功能         | ReFS   |    NTFS|<br>|    —      | —    |  —|<br>|文件系统压缩 |否      |是|<br>|文件系统加密 |  否    |是|<br>|事务         |  否    |是|<br>|对象 ID      |   否   |是|<br>|卸载数据传输 (ODX)|否 |是|<br>|短名称      |否|是|<br>|扩展的属性|否|是|<br>|磁盘配额|否|是|<br>|可引导|否|是|<br>|页面文件支持|否|是|<br>|在可移动媒体上受支持|否|是|</p><p>以下功能仅可用于 REFS</p><table><thead><tr><th>功能</th><th>ReFS</th><th>NTFS</th></tr></thead><tbody><tr><td>块克隆</td><td>是</td><td>否</td></tr><tr><td>稀疏 VDL</td><td>是</td><td>否</td></tr><tr><td>镜像加速奇偶校验</td><td>是（在存储空间直通上）</td><td>否</td></tr><tr><td>文件级快照</td><td>是1</td><td>否</td></tr></tbody></table><p>其他不说就算了，引导啥的可有可无，毕竟Refs目标是存储用的文件系统。<br>结果你不支持压缩….</p><p>举个例子吧，zfs 上 10t 压缩率 1.44x(当然要看文件)，原本是14T。<br>那么问题来了，NTFS也支持Dedupe<br>甚至磁盘配额是AD共享文件服务器非常重要的功能。</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview">https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview</a></p><p>目前 REFS 上未提供以下功能</p><table><thead><tr><th>功能</th><th>ReFS</th><th>NTFS</th></tr></thead><tbody><tr><td>文件系统压缩</td><td>否</td><td>是</td></tr><tr><td>文件系统加密</td><td>否</td><td>是</td></tr><tr><td>事务</td><td>否</td><td>是</td></tr><tr><td>对象 ID</td><td>否</td><td>是</td></tr><tr><td>卸载数据传输 (ODX)</td><td>否</td><td>是</td></tr><tr><td>短名称</td><td>否</td><td>是</td></tr><tr><td>扩展的属性</td><td>否</td><td>是</td></tr><tr><td>磁盘配额</td><td>否</td><td>是</td></tr><tr><td>可引导</td><td>否</td><td>是</td></tr><tr><td>页面文件支持</td><td>否</td><td>是</td></tr><tr><td>在可移动媒体上受支持</td><td>否</td><td>是</td></tr></tbody></table><p>以下功能仅可用于 REFS</p><table><thead><tr><th>功能</th><th>ReFS</th><th>NTFS</th></tr></thead><tbody><tr><td>块克隆</td><td>是</td><td>否</td></tr><tr><td>稀疏 VDL</td><td>是</td><td>否</td></tr><tr><td>镜像加速奇偶校验</td><td>是（在存储空间直通上）</td><td>否</td></tr><tr><td>文件级快照</td><td>是1</td><td>否</td></tr></tbody></table><p>其他不说就算了，引导啥的可有可无，毕竟Refs目标是存储用的文件系统。<br>结果你不支持压缩….</p><p>举个例子吧，zfs 上 10t 压缩率 1.44x(当然要看文件)，原本是14T。<br>那么问题来了，NTFS也支持Dedupe<br>甚至磁盘配额是AD共享文件服务器非常重要的功能。</p>]]></content>
     
     
       
