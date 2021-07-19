@@ -467,6 +467,42 @@ http...
         </div>
     </article>
     
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/Issue/Kerberos/" >
+            
+                <span>Windows域中Kerberos问题造成的共享目录无法访问</span>
+        </a>
+        <div class="abstract-content">
+            参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
+原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
+可以使用如下注册表
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
     <!-- paginator  -->
     
 </main>
@@ -1217,9 +1253,41 @@ http...
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 49
+        Total : 51
         </div>
         <!-- search  -->
         
@@ -1250,6 +1318,11 @@ http...
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span><a class="archive-post-title" href= "/Software/nfs%20squash/" >NFS squash特性相关</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1705,6 +1778,20 @@ http...
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Issue/NtpClient/" >[AD]时间提供程序 NtpClient 报错处理</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Issue/Kerberos/" >Windows域中Kerberos问题造成的共享目录无法访问</a>
         </li>
     
     </div>

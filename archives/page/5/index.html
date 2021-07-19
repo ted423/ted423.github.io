@@ -403,6 +403,42 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/etc/Monospaced%20Font/" >
+            
+                <span>等宽字体(Monospaced Font)推荐</span>
+        </a>
+        <div class="abstract-content">
+            因为用EverEdit可以自己设置字体，结果就因为用了普通字体代码对不齐闹了笑话，所以就想起来找等宽字体。
+Source Code Pro大名顶顶的Adobe的作品https://github.com/adobe-fonts/source-code-pro
+OpenType fonts
+使用 SIL Open Font License
+来源:https://www.oschina.net/news/40762/10-great-free-monospaced-fonts-for-programming其他的我都没试，毕竟等宽字体这种，好看不到哪去，差不多就行了。
+Impression o...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "SIL Open Font">SIL Open Font</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Font">Font</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/etc/OS%20X/" >
             
                 <span>对OS X的不满</span>
@@ -692,23 +728,20 @@ http://pan.baidu.com/s/1dDvhFSP
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/Windows%20Fast%20Shutdown/" >
+        <a class="abstract-title" href = "/Issue/Kerberos/" >
             
-                <span>[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
+                <span>Windows域中Kerberos问题造成的共享目录无法访问</span>
         </a>
         <div class="abstract-content">
-            这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
-个人处理方法
-打开注册表管理器，找到
-1HKEY_CURRENT_USER\Control Panel\Desktop\
-新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
-找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
-不过笔记本的这个值没改过，我想大概...
+            参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
+原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
+可以使用如下注册表
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
             <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/02</span>
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
             </div>
             <!-- tags  -->
             
@@ -716,11 +749,9 @@ http://pan.baidu.com/s/1dDvhFSP
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "问题处理">问题处理</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
     
 </div>
             
@@ -730,7 +761,7 @@ http://pan.baidu.com/s/1dDvhFSP
     <!-- paginator  -->
     
     <nav class="page-nav">
-        <a class="extend prev" rel="prev" href="/archives/page/4/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span>
+        <a class="extend prev" rel="prev" href="/archives/page/4/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/page/6/">6</a><a class="extend next" rel="next" href="/archives/page/6/">NEXT &gt;</a>
     </nav>
     
 </main>
@@ -1481,9 +1512,41 @@ http://pan.baidu.com/s/1dDvhFSP
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 49
+        Total : 51
         </div>
         <!-- search  -->
         
@@ -1514,6 +1577,11 @@ http://pan.baidu.com/s/1dDvhFSP
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span><a class="archive-post-title" href= "/Software/nfs%20squash/" >NFS squash特性相关</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1969,6 +2037,20 @@ http://pan.baidu.com/s/1dDvhFSP
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Issue/NtpClient/" >[AD]时间提供程序 NtpClient 报错处理</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/Issue/Kerberos/" >Windows域中Kerberos问题造成的共享目录无法访问</a>
         </li>
     
     </div>

@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-07-19T06:47:22.991Z</updated>
+  <updated>2021-07-19T06:58:34.018Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NFS squash特性相关</title>
+    <link href="http://ted423.github.io/Software/nfs%20squash/"/>
+    <id>http://ted423.github.io/Software/nfs%20squash/</id>
+    <published>2021-07-19T06:48:07.358Z</published>
+    <updated>2021-07-19T06:58:34.018Z</updated>
+    
+    <content type="html"><![CDATA[<p>写这篇文章是因为之前写的那个samba的想到了。顺带整理下。<br>这篇文章通篇都为猜测，未作有效以及查证相关检测。</p><p>在阅读这篇文章之前你需要了解</p><ol><li>Linux是多用户操作系统，用户以及组的保存都是基于id(uid gid)</li><li><a href="http://linux.vbird.org/linux_server/0430nis.php">NIS Server</a></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;写这篇文章是因为之前写的那个samba的想到了。顺带整理下。&lt;br&gt;这篇文章通篇都为猜测，未作有效以及查证相关检测。&lt;/p&gt;
+&lt;p&gt;在阅读这篇文章之前你需要了解&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Linux是多用户操作系统，用户以及组的保存都是基于id(uid gid)&lt;/li&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 客户端无法正常登录 Linux samba服务器</title>
@@ -523,38 +549,6 @@
     
     
     <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[文本编辑器]Notepad3</title>
-    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad3/"/>
-    <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad3/</id>
-    <published>2021-04-29T09:18:08.278Z</published>
-    <updated>2021-07-02T02:10:51.438Z</updated>
-    
-    <content type="html"><![CDATA[<ul><li><a href="https://www.rizonesoft.com/downloads/notepad3/">https://www.rizonesoft.com/downloads/notepad3/</a></li><li><a href="https://github.com/rizonesoft/Notepad3">https://github.com/rizonesoft/Notepad3</a></li></ul><p>先说开源协议我没看懂，并没写开源协议的名字，感觉有点像MIT？没细看规则。反正是Copyright类的。<br>对了下，是3-clause BSD的License</p><p>曾经有个notepad2，最大的作用是完全替换微软的notepad，使用的是映像劫持的方式。所以即便装了别的文本编辑器，我也还是喜欢再装一个notepad2以便彻底干死微软的。<br>可惜弃更了。</p><p>所以这个notepad3也能做到，并且开源。就是不知道会不会有Notepad4。</p><p>缺点应该就是扩展性方面了，比如简繁转换，格式化代码啥的就没。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.rizonesoft.com/downloads/notepad3/&quot;&gt;https://www.rizonesoft.com/downloads/notepad3/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
-    <category term="3-clause BSD license" scheme="http://ted423.github.io/tags/3-clause-BSD-license/"/>
     
   </entry>
   
