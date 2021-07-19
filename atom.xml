@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-07-16T09:51:08.683Z</updated>
+  <updated>2021-07-19T03:23:11.695Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vncserver -localhost no</title>
+    <link href="http://ted423.github.io/Software/Remote/vncserver%20-localhost%20no/"/>
+    <id>http://ted423.github.io/Software/Remote/vncserver%20-localhost%20no/</id>
+    <published>2021-07-19T03:17:31.760Z</published>
+    <updated>2021-07-19T03:23:11.695Z</updated>
+    
+    <content type="html"><![CDATA[<p>记住这条命令，这是我被坑过最惨的一次。(理论上算是我找了个不错的教程？)<br>第一次能用就没管了，结果重启手动启动连不上。<br>跑vncserver连不上，看了有端口，也没开防火墙，最后仔细查，结果绑在了127.0.0.1上，本机IP带5901连不通。<br>默认localhost yes -&gt; [-localhost yes|no]    Only accept VNC connections from localhost<br>这是脑子多大坑才会有这种设置项。<br>目测是最近出来的？ 不然咋啥教程都不说明</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;记住这条命令，这是我被坑过最惨的一次。(理论上算是我找了个不错的教程？)&lt;br&gt;第一次能用就没管了，结果重启手动启动连不上。&lt;br&gt;跑vncserver连不上，看了有端口，也没开防火墙，最后仔细查，结果绑在了127.0.0.1上，本机IP带5901连不通。&lt;br&gt;默认loc</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
+    
+  </entry>
   
   <entry>
     <title>[AD]时间提供程序 NtpClient 报错处理</title>
@@ -534,41 +560,6 @@
     <category term="Office" scheme="http://ted423.github.io/tags/Office/"/>
     
     <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Remote]NoMachine 远程工具</title>
-    <link href="http://ted423.github.io/Software/Remote/NoMachine/"/>
-    <id>http://ted423.github.io/Software/Remote/NoMachine/</id>
-    <published>2020-12-11T03:13:33.033Z</published>
-    <updated>2021-06-30T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.nomachine.com/">https://www.nomachine.com/</a></p><p>推荐理由: 免费(ssh协议连接收费)，支持Linux<br>其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。<br>最起码你不要纠结各种桌面环境之间的兼容性问题。</p><p>不过呢，问题还是有的。<br>默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）<br>然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。</p><p>在低速率网络下要考虑到切到VP8或者MJGEP？这种情况下画面会很烂。<br>不过RDP虽然画面好点，但是会失联。要重连才行</p><p>开源的使用NX协议的叫x2go</p><p>已知问题：<br><del>Ubuntu下，手动启动和服务自动启动展示的画面是不一样的。手动启动连接会是主画面，自动启动会是新建一个桌面出来。并且会登录卡死(这个有可能是混合Bug)(可能是QNAP虚拟机导致的混合BUG)</del><br>同样是Ubuntu下，xubuntu以及kubuntu都有，普通台式机(服务器反而正常)，在不接显示器的情况下，速度飞快，拔掉显示器，窗口拖动非常卡。同环境直接x11 Forward反而效果很好。但x11会黑非常久(不用x2go的情况下)<br>另外还有开机不接屏，或者长期不接屏的情况下，接显示器上去不亮的情况（<del>虽然这个肯定不是Nomachine或者NX的锅，应该是Linux的锅</del></p><p>BTW，网上一堆把Teamviewer，Anydesk，向日葵这类内网穿透式的软件不加详细区分就放在一起讲的，甚至还把这类内网穿透当成优点，不知道是不是因为智商不够。<br>BTW2，在同样环境下，Anydesk效果不如向日葵，不知道是不是因为服务器在国外</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.nomachine.com/&quot;&gt;https://www.nomachine.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;推荐理由: 免费(ssh协议连接收费)，支持Linux&lt;br&gt;其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Personal Free" scheme="http://ted423.github.io/tags/Personal-Free/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="OS X" scheme="http://ted423.github.io/tags/OS-X/"/>
-    
-    <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
     
   </entry>
   
