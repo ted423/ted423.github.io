@@ -451,13 +451,14 @@ height:50vh;
                 <span>NFS squash特性相关</span>
         </a>
         <div class="abstract-content">
-            写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章通篇都为猜测，未作有效以及查证相关检测。
+            写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章大部分都为猜测，未作有效以及查证相关检测。
 在阅读这篇文章之前你需要了解
 
-Linux是多用户操作系统，用户以及组的保存都是基于id(uid gid)
+Linux是多用户操作系统
+用户以及组的保存都是基于id(uid gid)
+root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group里可以看，但是不同的Linux版本可能会有不同
 NIS Server
-
-
+Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
