@@ -403,6 +403,42 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/Issue/Kerberos/" >
+            
+                <span>Windows域中Kerberos问题造成的共享目录无法访问</span>
+        </a>
+        <div class="abstract-content">
+            参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
+原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
+可以使用如下注册表
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/Windows%20Fast%20Shutdown/" >
             
                 <span>[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
