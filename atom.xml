@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-07-19T03:23:11.695Z</updated>
+  <updated>2021-07-19T06:47:22.991Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 客户端无法正常登录 Linux samba服务器</title>
+    <link href="http://ted423.github.io/Issue/samba/"/>
+    <id>http://ted423.github.io/Issue/samba/</id>
+    <published>2021-07-19T06:19:34.148Z</published>
+    <updated>2021-07-19T06:47:22.991Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯<br>Windows Server可以架设NFS基于身份和基于IP的验证<br><img src="https://files.catbox.moe/xmdnnq.png" alt="Windows 客户端无法正常登录 Linux samba服务器"></p><p>理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。</p><p>说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS)<br>samba systemctl status log有这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Jul 19 14:16:07 pve smbd[14765]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14766]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14767]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14768]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14769]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:09 pve smbd[14803]: pam_unix(samba:session): session opened for user XX(uid=1000) by (uid=0)</span><br><span class="line">Jul 19 14:16:24 pve smbd[14803]: pam_unix(samba:session): session closed for user XX</span><br><span class="line">Jul 19 14:16:52 pve smbd[15315]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:53 pve smbd[15322]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:54 pve smbd[15329]: pam_unix(samba:session): session closed for user nobody</span><br></pre></td></tr></table></figure><p>现象就是Windows Client访问不会弹框要你填用户名密码，直接报错，必须去凭据管理器里添加了账号密码才能访问。相反Linux Client会正常弹框.<br>不过Linux弹框还会问你是否匿名访问。<br>很可能Windows就直接匿名访问但是被拒。但其实有些问题，大多数时候Win访问SMB是直接使用当前账号密码作为凭证，如不成功会提示你再输入用户密码。<br>或者可能跟SMBv2 v3有关？<br>不得而知</p><p>BTW，samba+NFS 无身份验证可能需要在samba里设777，不然会发生很蛋疼的问题。<br>例如其他NFS客户端无法访问修改samba里创建的文件。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯&lt;br&gt;Windows Server可以架设NFS基于身份和基于IP的验证&lt;br&gt;&lt;img src=&quot;https://files.catbox.moe/xmdnnq.png&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
   
   <entry>
     <title>vncserver -localhost no</title>
@@ -39,6 +61,35 @@
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[AD]时间提供程序 NtpClient 报错处理</title>
+    <link href="http://ted423.github.io/Issue/NtpClient/"/>
+    <id>http://ted423.github.io/Issue/NtpClient/</id>
+    <published>2021-07-16T02:26:06.643Z</published>
+    <updated>2021-07-19T06:47:18.125Z</updated>
+    
+    <content type="html"><![CDATA[<p>报错信息如下<br>“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”</p><p>看到了这篇文章<br><a href="https://shiyousan.com/post/635774974180847748">https://shiyousan.com/post/635774974180847748</a></p><p>有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，<a href="https://www.azurew.com/windows/windows-server-2016/3098.html">https://www.azurew.com/windows/windows-server-2016/3098.html</a>，也可以不这么设)</p><p><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server">https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server</a></p><p><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings</a><br>还没折腾完，等会再更</p><p>我手头的系统都没有类似设置项，查询的都是看注册表，除了个别设了个内网机子(没报错的那台)<br>别的都是time.windows.com,0x8或0x9，但是ping不通<br>理论上Server自己进行过NTP所以应该能用才是</p><p>说下个人猜测，默认AD域会自动开启NTP Server，注册表里能看到enable，普通电脑默认不开NTP Server。很可能单纯的是网络问题，原先两个域控，我看提示有问题的那个域防火墙开了，但其他工作或者公共的防火墙是关的。<br>而另一台刚好相反，别的都开了，把域防火墙关了……………..</p><hr><p>问题得到了有效的解决<br>之前的是事件报告<br>“时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有效的时间数据。”</p><p>然后基本每条后面跟最前面那种报错报告。<br>似乎成功不会进事件，也就是最后日志只能看到16号的。所以后面应该都成功了。<br>究其原因 123端口是udp的，也就是telnet不通，所以不大好判断。总之是防火墙的锅，所以理论按那个文章写的似乎没有任何意义。<br>也不知道前任是怎么做出这种奇葩配置的，两个防火墙刚好配的相反(域防火墙应该专门针对域里的机子，然后把公用，工作关了就很emmmm)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;报错信息如下&lt;br&gt;“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”&lt;/p&gt;
+&lt;p&gt;看到了这篇文章&lt;br</summary>
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="Windows AD" scheme="http://ted423.github.io/tags/Windows-AD/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   
@@ -504,70 +555,6 @@
     <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
     <category term="3-clause BSD license" scheme="http://ted423.github.io/tags/3-clause-BSD-license/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Office Tool Plus</title>
-    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/Office%20Tool%20Plus/"/>
-    <id>http://ted423.github.io/Software/Document&amp;Texteditor/Office%20Tool%20Plus/</id>
-    <published>2021-04-12T11:25:34.138Z</published>
-    <updated>2021-07-01T08:19:46.779Z</updated>
-    
-    <content type="html"><![CDATA[<p>第三方Office部署工具 神器<br>不过清理的话，并不会完全干净(不过微软官方工具也一样)<br><a href="https://otp.landian.vip/zh-cn/">https://otp.landian.vip/zh-cn/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;第三方Office部署工具 神器&lt;br&gt;不过清理的话，并不会完全干净(不过微软官方工具也一样)&lt;br&gt;&lt;a href=&quot;https://otp.landian.vip/zh-cn/&quot;&gt;https://otp.landian.vip/zh-cn/&lt;/a&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Office" scheme="http://ted423.github.io/tags/Office/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Remote]NoMachine 远程工具</title>
-    <link href="http://ted423.github.io/Software/Remote/NoMachine/"/>
-    <id>http://ted423.github.io/Software/Remote/NoMachine/</id>
-    <published>2020-12-11T03:13:33.033Z</published>
-    <updated>2021-06-30T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.nomachine.com/">https://www.nomachine.com/</a></p><p>推荐理由: 免费(ssh协议连接收费)，支持Linux<br>其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。<br>最起码你不要纠结各种桌面环境之间的兼容性问题。</p><p>不过呢，问题还是有的。<br>默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）<br>然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。</p><p>在低速率网络下要考虑到切到VP8或者MJGEP？这种情况下画面会很烂。<br>不过RDP虽然画面好点，但是会失联。要重连才行</p><p>开源的使用NX协议的叫x2go</p><p>已知问题：<br><del>Ubuntu下，手动启动和服务自动启动展示的画面是不一样的。手动启动连接会是主画面，自动启动会是新建一个桌面出来。并且会登录卡死(这个有可能是混合Bug)(可能是QNAP虚拟机导致的混合BUG)</del><br>同样是Ubuntu下，xubuntu以及kubuntu都有，普通台式机(服务器反而正常)，在不接显示器的情况下，速度飞快，拔掉显示器，窗口拖动非常卡。同环境直接x11 Forward反而效果很好。但x11会黑非常久(不用x2go的情况下)<br>另外还有开机不接屏，或者长期不接屏的情况下，接显示器上去不亮的情况（<del>虽然这个肯定不是Nomachine或者NX的锅，应该是Linux的锅</del></p><p>BTW，网上一堆把Teamviewer，Anydesk，向日葵这类内网穿透式的软件不加详细区分就放在一起讲的，甚至还把这类内网穿透当成优点，不知道是不是因为智商不够。<br>BTW2，在同样环境下，Anydesk效果不如向日葵，不知道是不是因为服务器在国外</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.nomachine.com/&quot;&gt;https://www.nomachine.com/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;推荐理由: 免费(ssh协议连接收费)，支持Linux&lt;br&gt;其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Personal Free" scheme="http://ted423.github.io/tags/Personal-Free/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="OS X" scheme="http://ted423.github.io/tags/OS-X/"/>
-    
-    <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
     
   </entry>
   
