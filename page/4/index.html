@@ -416,48 +416,6 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/Software/Remote/NoMachine/" >
-            
-                <span>[Remote]NoMachine 远程工具</span>
-        </a>
-        <div class="abstract-content">
-            https://www.nomachine.com/
-推荐理由: 免费(ssh协议连接收费)，支持Linux其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。最起码你不要纠结各种桌面环境之间的兼容性问题。
-不过呢，问题还是有的。默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。
-在低速率网络下要考虑到切到VP8或者...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Personal Free">Personal Free</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "OS X">OS X</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Remote">Remote</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/Software/Android/Connectbot/" >
             
                 <span>[Android]Connectbot - Android terminal</span>
@@ -766,6 +724,47 @@ To upgrade all local packages; you could use pip-review:
         <a class="post-tag" href="javascript:void(0);" data-tags = "第三方修改|绿化">第三方修改|绿化</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "大眼仔~旭">大眼仔~旭</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/Windows%20Fast%20Shutdown/" >
+            
+                <span>[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
+        </a>
+        <div class="abstract-content">
+            这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "问题处理">问题处理</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
     
 </div>
             
@@ -2354,12 +2353,12 @@ To upgrade all local packages; you could use pip-review:
     
         </ul>
     
-    <div class="archive-year"> 2014 </div>
+    <div class="archive-year"> 2019 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span><a class="archive-post-title" href= "/Software/Windbg/" >[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
+            <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/Software/Windbg/" >[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
         </li>
     
     </div>
