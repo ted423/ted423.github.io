@@ -446,42 +446,9 @@ height:50vh;
     
     
     <article class="index-post">
-        <a class="abstract-title" href = "/Issue/SMB/" >
-            
-                <span>[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
-        </a>
-        <div class="abstract-content">
-            其实最简单的方法是重启。
-说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/24</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
         <a class="abstract-title" href = "/Issue/samba/" >
             
-                <span>[问题处理]Windows 客户端无法正常登录 Linux samba服务器</span>
+                <span>[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
         </a>
         <div class="abstract-content">
             其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证
@@ -501,6 +468,39 @@ height:50vh;
         <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/Issue/SMB/" >
+            
+                <span>[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
+        </a>
+        <div class="abstract-content">
+            其实最简单的方法是重启。
+说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
     
@@ -1877,7 +1877,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/19</span><a class="archive-post-title" href= "/Issue/samba/" >[问题处理]Windows 客户端无法正常登录 Linux samba服务器</a>
+            <span class="archive-post-date">07/19</span><a class="archive-post-title" href= "/Issue/samba/" >[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a>
         </li>
     
     
