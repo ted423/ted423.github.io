@@ -214,10 +214,10 @@
   
   <entry>
     <title>NFS squash特性相关</title>
-    <link href="http://ted423.github.io/Software/nfs%20squash/"/>
-    <id>http://ted423.github.io/Software/nfs%20squash/</id>
-    <published>2021-07-19T06:48:07.358Z</published>
-    <updated>2021-07-19T07:30:15.211Z</updated>
+    <link href="http://ted423.github.io/Software/NFS%20Squash/"/>
+    <id>http://ted423.github.io/Software/NFS%20Squash/</id>
+    <published>2021-07-19T11:51:46.817Z</published>
+    <updated>2021-07-19T07:30:15.000Z</updated>
     
     <content type="html"><![CDATA[<p>写这篇文章是因为之前写的那个samba的想到了。顺带整理下。<br>这篇文章大部分都为猜测，未作有效以及查证相关检测。</p><p>在阅读这篇文章之前你需要了解</p><ol><li>Linux是多用户操作系统</li><li>用户以及组的保存都是基于id(uid gid)</li><li>root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在<code>/etc/group</code>里可以看，但是不同的Linux版本可能会有不同</li><li><a href="http://linux.vbird.org/linux_server/0430nis.php">NIS Server</a></li><li><a href="http://linux.vbird.org/linux_enterprise/kerberos.php">Kerberos</a> (Attention，我知道这个是AD域主要的验证方式，具体见<a href="https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview</a>,<a href="https://ted423.github.io/Issue/Kerberos/">https://ted423.github.io/Issue/Kerberos/</a>。但我目前的理解是Kerberos并不在NIS中使用，这个条目可能甚至跟整篇文章无关，但是NFS可以使用Kerberos进行验证)</li></ol><p>众所周知<br>no_root_squash、root_squash、all_squash<br>但是所有文章只说了root帐户是否被映射为nobody，root_squash是把root映射为nobody。那么问题来了，其他用户呢？<br>众所周知<br>Linux是多用户操作系统。所以，其他用户如字面意思，不会被映射为nobody。这也是我踩得一个坑(<br>这几个设置，其实是要配合NIS来看的。<br>在多台Linux中，NIS保证用户以及组ID一致，然后挂载NFS确保相关的权限问题。</p><p>如果你没有NIS Server，你就只要用all_squash就好了，别的你都不用仔细理解，除非你是root everything的用户。<br>否则你会发现你的NFS Server文件夹文件权限里出现一堆乱七八糟的ID。或者因为用户ID、组ID重复变成了奇怪的问题<br>(其实个人用Linux的话，我感觉你能用samba就用samba吧，哪怕是两台Linux。基于IP的验证其实还是适合企业用)</p><p>扩展阅读(我还没看)<br><a href="https://en.wikipedia.org/wiki/NIS%2B">NIS+</a></p>]]></content>
     
@@ -377,7 +377,7 @@
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/</id>
     <published>2021-07-07T16:06:53.041Z</published>
-    <updated>2021-07-23T16:39:53.669Z</updated>
+    <updated>2021-04-24T08:28:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
     
