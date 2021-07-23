@@ -42,6 +42,95 @@
   </entry>
   
   <entry>
+    <title>[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/IDM/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/IDM/</id>
+    <published>2021-07-23T15:39:10.802Z</published>
+    <updated>2019-05-23T03:07:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>就个人感觉来说，这个软件强制添加扩展项，并且在Chrome的体验并不好。这货就是专为百度网盘准备的。<br>不过Cent browser可以调用，部分资源可以比迅雷下载速度高，并且代理支持PAC就相当棒,下载国外慢速资源会很好用</p><p>目前百度封了IDM，<del>我也找到了proxyee-down这个替代品。毕竟能不用破解软件就不用比较好</del></p><p>缺点是每次更新版本设置都会还原，然后每次都会提示装扩展，下载文件夹里给你生成一堆文件夹。(当然这个问题可能跟这是修改的人弄的安装包有关)</p><p>烈火的IDM要购买才能看了<br><del>roustar31的可能会有exe损坏的提醒</del><br>#来源<br><a href="https://www.repaik.com/forum.php?mod=viewthread&amp;tid=32105">https://www.repaik.com/forum.php?mod=viewthread&amp;tid=32105</a><br>(网站停止运营)</p><p>#介绍<br>Internet Download Manager，简称IDM，是国外的一款优秀下载工具，该软件同时是一款共享软件。目前凭借着下载计算的速度优势在外媒网站中均受好评，现在已被多数国人熟知。Internet Download Manager提升你的下载速度最多达5倍，安排下载时程，带有续传功能，可以恢复因为断线、网络问题、计算机当机甚至无预警的停电导致下传到一半的资料。</p><p>此程序具有动态档案分割、多重下载点技术，而且它会重复使用现有的联机，而不需再重新联机登入一遍。聪明的in-speed技术会动态地将所有设定应用到某种联机类型，以充分利用下载速度。</p><p>#更新日志<br>05/11/19</p><p>Version 6.33 Build 2 Final is available (May/11/2019)</p><p>What’s new in version 6.33 Build 2?</p><ul><li>Updated the new feature to download from file sharing web sites</li><li>Fixed problems of IDM 33 with Windows XP</li><li>Fixed bugs</li></ul><p>#本版特点</p><ul><li>去菜单栏的 “注册” 菜单项</li><li>去帮助菜单的多余菜单项</li><li>去关于页面的多余按钮 - 不再集成体积较大的教程文件（以集成帮助文件）</li><li>由于修正 win8.1 下载对话框不全导致对话框马脸，不再修改对话框（美观比不全更重要 ^_^）</li><li>除去多国语言，只留简体中文</li><li>除去自动检查更新功能和定期自动检查更新</li></ul><ul><li>完善官方简体中文语言，使用起来更爽</li><li>优化选项：16 线程下载，不开机启动，监视浏览器等等</li><li>优化安装包脚本：自动清理可能的启动项残留</li><li>集成一款新主题，默认启用</li></ul><ul><li>安装完毕就是已经注册版，不写 hosts，无需注册码</li><li>免疫盗版提示弹窗）</li><li>安装完毕就是简体中文版本</li><li>卸载可选保留记录和数据</li><li>完全支持覆盖安装论坛任意版本</li><li>修正官方下载对话框在 Win10 下跑马边框的问题 </li></ul><hr><p><time>2018-10-11</time>改成roustar31的<br><time>2019-05-23</time>更新版本</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;就个人感觉来说，这个软件强制添加扩展项，并且在Chrome的体验并不好。这货就是专为百度网盘准备的。&lt;br&gt;不过Cent browser可以调用，部分资源可以比迅雷下载速度高，并且代理支持PAC就相当棒,下载国外慢速资源会很好用&lt;/p&gt;
+&lt;p&gt;目前百度封了IDM，&lt;del&gt;</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="破解" scheme="http://ted423.github.io/tags/%E7%A0%B4%E8%A7%A3/"/>
+    
+    <category term="第三方修改|绿化" scheme="http://ted423.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+    <category term="roustar31" scheme="http://ted423.github.io/tags/roustar31/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>下载DropBox离线安装包的方法(可能失效)</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/dropbox/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/dropbox/</id>
+    <published>2021-07-23T15:39:10.794Z</published>
+    <updated>2016-12-10T13:31:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一直无法理解那些给软件下载地址非要给个下载器的。特别对于开代理的，非要忍受那个下载器没速度的奇葩问题。<br>原来dropbox是提供离线下载包的，现在不知道为什么又取消了。<br>目前可以在dropbox的(下载页面)[<a href="https://www.dropbox.com/install#downloaded]%E4%B8%8A">https://www.dropbox.com/install#downloaded]上</a><br>找到下载连接：<a href="https://www.dropbox.com/download?os=win&amp;full=1">https://www.dropbox.com/download?os=win&amp;full=1</a><br>在地址链接后加上“&amp;full=1”即可。<br><a href="https://www.dropbox.com/download?os=win&amp;full=1">https://www.dropbox.com/download?os=win&amp;full=1</a></p><hr><p>现在由于有clash应该没太大问题 - 2021-07-24</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一直无法理解那些给软件下载地址非要给个下载器的。特别对于开代理的，非要忍受那个下载器没速度的奇葩问题。&lt;br&gt;原来dropbox是提供离线下载包的，现在不知道为什么又取消了。&lt;br&gt;目前可以在dropbox的(下载页面)[&lt;a href=&quot;https://www.dropb</summary>
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="过时" scheme="http://ted423.github.io/tags/%E8%BF%87%E6%97%B6/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]Torrent File Editor</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/torrent%20file%20editor/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/torrent%20file%20editor/</id>
+    <published>2021-07-23T15:39:10.788Z</published>
+    <updated>2020-06-26T11:06:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>种子文件修改器，主要用来改tracker，文件信息改了，种子使用的时候会出错<br><a href="https://torrent-file-editor.github.io/">https://torrent-file-editor.github.io/</a></p><hr><p><time>2020-06-26 19:06</time> 没注意projeect转到github了，果然都在逃离sourceforge</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;种子文件修改器，主要用来改tracker，文件信息改了，种子使用的时候会出错&lt;br&gt;&lt;a href=&quot;https://torrent-file-editor.github.io/&quot;&gt;https://torrent-file-editor.github.io/&lt;/a&gt;&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="GPLv3" scheme="http://ted423.github.io/tags/GPLv3/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+    <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>不推荐使用Windows Defender</title>
     <link href="http://ted423.github.io/Software/No%20WD/"/>
     <id>http://ted423.github.io/Software/No%20WD/</id>
@@ -284,6 +373,64 @@
   </entry>
   
   <entry>
+    <title>我为什么仍在使用迅雷</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/</id>
+    <published>2021-07-07T16:06:53.041Z</published>
+    <updated>2021-07-23T16:39:53.669Z</updated>
+    
+    <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;当然啦，毫无疑问迅雷是个傻逼软件。&lt;br&gt;上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。&lt;/p&gt;
+&lt;p&gt;不过上个图&lt;br&gt;&lt;a href=&quot;https://www.z4a.net/image/gEUKSJ&quot;</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/thunder/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/thunder/</id>
+    <published>2021-07-07T16:06:53.032Z</published>
+    <updated>2021-07-01T08:19:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别<br>&lt;&gt;<br>Thunder 11 支持迅雷云盘取回<br>迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！</p><p>我给的不是最新的，可以去他博客翻下最新的<br><a href="https://www.luochenzhimu.com/?s=thunder">https://www.luochenzhimu.com/?s=thunder</a></p><p>【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷11】上我们重新设计了主界面框架，许多忠实雷友们过去一直吐槽的太像浏览器的问题，现在已经得到解决。</p><p>【迅雷11】的最大亮点，是我们开创性的将【下载】与【云盘】合二为一。</p><p>当您下载网络中的文件时，可以灵活的选择将文件下载到【电脑】或者【云盘】。</p><h1 id="下载列表"><a href="#下载列表" class="headerlink" title="下载列表"></a>下载列表</h1><p>首先要从下载列表说起，在这个版本中，我们将下载列表的任务分类，由原来【迅雷9、迅雷X】采用的纵向排列，改为横向排列。这是由于纵向排列时，每次需要切换任务分类，都要在上下分类之间长距离的移动鼠标，使用较为不便。</p><h1 id="悬浮窗"><a href="#悬浮窗" class="headerlink" title="悬浮窗"></a>悬浮窗</h1><p>悬浮窗也迎来了变化，从【迅雷7】一直用到【迅雷X】的圆形悬浮窗，现在终于改版啦！</p><p>迅雷11新的悬浮窗看上去像是个立方体，当有正在下载的任务时，会在右侧展开一个简短的进度条。</p><p>这个全新的设计可以更清晰的显示下载进度，视觉效果也炫酷不少哦。</p><h1 id="立即添加（到云盘）"><a href="#立即添加（到云盘）" class="headerlink" title="立即添加（到云盘）"></a>立即添加（到云盘）</h1><p>如果您是会员用户，当您选中任意一个下载中的任务时，在下载任务的下方会出现一个新的扩展栏，可以让您快捷的将任务添加到云盘里。</p><h1 id="下载列表展示云盘取回"><a href="#下载列表展示云盘取回" class="headerlink" title="下载列表展示云盘取回"></a>下载列表展示云盘取回</h1><p>在迅雷11过去的几个版本中，从云盘取回的任务，都只展示在云盘模块的【传输列表】里，对于经常需要查看云盘取回文件的用户来说颇为不便。现在通过下载列表也可以查看云盘取回的文件了。</p><p>#更新信息</p><ul><li>下载列表的任务分类由纵向排列改为横向排列</li><li>采用全新视觉设计的悬浮窗</li><li>新增【手机扫码免费加速】功能</li><li>左侧栏【下载、云盘】右侧增加数字红点（可展示当前正在下载的任务数，以及正在云添加和上传的文件数）</li><li>下载列表中视频任务下方增加【云盘播放】功能</li><li>下载列表中非视频任务下方增加【立即添加（到云盘）】功能</li><li>下载列表中支持展示从云盘取回的文件</li><li>新增【云盘视频智能缓存】功能，改善云盘视频播放体验（可在设置中心停用）</li><li>修正某些情况下，播放组件下载解码器失败的问题</li><li>云盘增加文件【举报、申诉】功能</li><li>云盘传输列表入口移至顶部</li><li>云盘回收站改为独立对话框</li></ul><h1 id="落尘之木优化内容"><a href="#落尘之木优化内容" class="headerlink" title="落尘之木优化内容"></a>落尘之木优化内容</h1><ol><li>本地VIP专享悬浮窗</li><li>移除发现栏</li><li>精简多余菜单</li><li>自动识别VIP用户，非VIP直升本地超级会员</li><li>移除下载区文字广告</li><li>移除头像悬浮广告</li><li>禁止更新版本</li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>使用方法：<br>先下载迅雷11安装：<a href="https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe">https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe</a><br>运行，稍等片刻<br>有三个选项：【1】迅雷11去广告、【2】迅雷11去广告小窗口、【3】非会员保持蓝悬浮窗<br>命令窗口输入对应数字回车</p><p>迅雷 Thunder11.0.3.1014 落尘之木去广告<br>落尘之木：<a href="https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip">https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip</a><br>迅雷云盘：<a href="https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1">https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1</a> 提取码：gqxf<br>百度网盘：<a href="https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999">https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999</a> 提取码：9999<br>蓝奏云：<a href="https://wwx.lanzoux.com/b04b4u5je">https://wwx.lanzoux.com/b04b4u5je</a></p><hr><p><time>2018-12-21 22:13</time>更新为10.1.7.262<br><time>2020-10-23</time>Thunder11.0.3.1014</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别&lt;br&gt;&amp;lt;&amp;gt;&lt;br&gt;Thunder 11 支持迅雷云盘取回&lt;br&gt;迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！&lt;/p&gt;
+&lt;p&gt;我给的不是最新的，可以去他博客</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="第三方修改|绿化" scheme="http://ted423.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
+    
+    <category term="资源类" scheme="http://ted423.github.io/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>去你妈的不求甚解</title>
     <link href="http://ted423.github.io/etc/Fuck/"/>
     <id>http://ted423.github.io/etc/Fuck/</id>
@@ -417,143 +564,6 @@
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</title>
-    <link href="http://ted423.github.io/Software/thunder/"/>
-    <id>http://ted423.github.io/Software/thunder/</id>
-    <published>2021-06-19T12:40:27.107Z</published>
-    <updated>2021-07-01T08:19:02.784Z</updated>
-    
-    <content type="html"><![CDATA[<p>目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别<br>&lt;&gt;<br>Thunder 11 支持迅雷云盘取回<br>迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！</p><p>我给的不是最新的，可以去他博客翻下最新的<br><a href="https://www.luochenzhimu.com/?s=thunder">https://www.luochenzhimu.com/?s=thunder</a></p><p>【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷11】上我们重新设计了主界面框架，许多忠实雷友们过去一直吐槽的太像浏览器的问题，现在已经得到解决。</p><p>【迅雷11】的最大亮点，是我们开创性的将【下载】与【云盘】合二为一。</p><p>当您下载网络中的文件时，可以灵活的选择将文件下载到【电脑】或者【云盘】。</p><h1 id="下载列表"><a href="#下载列表" class="headerlink" title="下载列表"></a>下载列表</h1><p>首先要从下载列表说起，在这个版本中，我们将下载列表的任务分类，由原来【迅雷9、迅雷X】采用的纵向排列，改为横向排列。这是由于纵向排列时，每次需要切换任务分类，都要在上下分类之间长距离的移动鼠标，使用较为不便。</p><h1 id="悬浮窗"><a href="#悬浮窗" class="headerlink" title="悬浮窗"></a>悬浮窗</h1><p>悬浮窗也迎来了变化，从【迅雷7】一直用到【迅雷X】的圆形悬浮窗，现在终于改版啦！</p><p>迅雷11新的悬浮窗看上去像是个立方体，当有正在下载的任务时，会在右侧展开一个简短的进度条。</p><p>这个全新的设计可以更清晰的显示下载进度，视觉效果也炫酷不少哦。</p><h1 id="立即添加（到云盘）"><a href="#立即添加（到云盘）" class="headerlink" title="立即添加（到云盘）"></a>立即添加（到云盘）</h1><p>如果您是会员用户，当您选中任意一个下载中的任务时，在下载任务的下方会出现一个新的扩展栏，可以让您快捷的将任务添加到云盘里。</p><h1 id="下载列表展示云盘取回"><a href="#下载列表展示云盘取回" class="headerlink" title="下载列表展示云盘取回"></a>下载列表展示云盘取回</h1><p>在迅雷11过去的几个版本中，从云盘取回的任务，都只展示在云盘模块的【传输列表】里，对于经常需要查看云盘取回文件的用户来说颇为不便。现在通过下载列表也可以查看云盘取回的文件了。</p><p>#更新信息</p><ul><li>下载列表的任务分类由纵向排列改为横向排列</li><li>采用全新视觉设计的悬浮窗</li><li>新增【手机扫码免费加速】功能</li><li>左侧栏【下载、云盘】右侧增加数字红点（可展示当前正在下载的任务数，以及正在云添加和上传的文件数）</li><li>下载列表中视频任务下方增加【云盘播放】功能</li><li>下载列表中非视频任务下方增加【立即添加（到云盘）】功能</li><li>下载列表中支持展示从云盘取回的文件</li><li>新增【云盘视频智能缓存】功能，改善云盘视频播放体验（可在设置中心停用）</li><li>修正某些情况下，播放组件下载解码器失败的问题</li><li>云盘增加文件【举报、申诉】功能</li><li>云盘传输列表入口移至顶部</li><li>云盘回收站改为独立对话框</li></ul><h1 id="落尘之木优化内容"><a href="#落尘之木优化内容" class="headerlink" title="落尘之木优化内容"></a>落尘之木优化内容</h1><ol><li>本地VIP专享悬浮窗</li><li>移除发现栏</li><li>精简多余菜单</li><li>自动识别VIP用户，非VIP直升本地超级会员</li><li>移除下载区文字广告</li><li>移除头像悬浮广告</li><li>禁止更新版本</li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>使用方法：<br>先下载迅雷11安装：<a href="https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe">https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe</a><br>运行，稍等片刻<br>有三个选项：【1】迅雷11去广告、【2】迅雷11去广告小窗口、【3】非会员保持蓝悬浮窗<br>命令窗口输入对应数字回车</p><p>迅雷 Thunder11.0.3.1014 落尘之木去广告<br>落尘之木：<a href="https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip">https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip</a><br>迅雷云盘：<a href="https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1">https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1</a> 提取码：gqxf<br>百度网盘：<a href="https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999">https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999</a> 提取码：9999<br>蓝奏云：<a href="https://wwx.lanzoux.com/b04b4u5je">https://wwx.lanzoux.com/b04b4u5je</a></p><hr><p><time>2018-12-21 22:13</time>更新为10.1.7.262<br><time>2020-10-23</time>Thunder11.0.3.1014</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别&lt;br&gt;&amp;lt;&amp;gt;&lt;br&gt;Thunder 11 支持迅雷云盘取回&lt;br&gt;迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！&lt;/p&gt;
-&lt;p&gt;我给的不是最新的，可以去他博客</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="第三方修改|绿化" scheme="http://ted423.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
-    
-    <category term="资源类" scheme="http://ted423.github.io/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我为什么仍在使用迅雷</title>
-    <link href="http://ted423.github.io/Software/Use%20Thunder/"/>
-    <id>http://ted423.github.io/Software/Use%20Thunder/</id>
-    <published>2021-06-19T12:40:27.106Z</published>
-    <updated>2021-07-01T08:19:08.090Z</updated>
-    
-    <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;当然啦，毫无疑问迅雷是个傻逼软件。&lt;br&gt;上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。&lt;/p&gt;
-&lt;p&gt;不过上个图&lt;br&gt;&lt;a href=&quot;https://www.z4a.net/image/gEUKSJ&quot;</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="资源类" scheme="http://ted423.github.io/tags/%E8%B5%84%E6%BA%90%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[软件推荐]WizTree - 磁盘空间分析</title>
-    <link href="http://ted423.github.io/Software/WizTree/"/>
-    <id>http://ted423.github.io/Software/WizTree/</id>
-    <published>2021-06-16T07:25:16.874Z</published>
-    <updated>2021-06-17T07:50:24.520Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.diskanalyzer.com/">https://www.diskanalyzer.com/</a><br>之前还看到一个<a href="http://www.uderzo.it/main_products/space_sniffer/">SpaceSniffer</a>，是一直在用，不过目前来看WizTree一直在维护(相反SpaceSniffer最后更新已经是2018)。<br>比较而言后者大文件提示会比较直观.百分比占用会比图形更准确，好理解。<br>前者会边扫图形边变化，前期图形会失真，并且整体速度略慢<br>据说Wiztree是直接对NTFS文件系统的MFT进行文件分析，不过我测试是对的网络路径(小文件太多估计有影响)<br>固此，我倾向于用WizTree 完全取代 SpaceSniffer</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.diskanalyzer.com/&quot;&gt;https://www.diskanalyzer.com/&lt;/a&gt;&lt;br&gt;之前还看到一个&lt;a href=&quot;http://www.uderzo.it/main_products/space_sni</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Personal Free" scheme="http://ted423.github.io/tags/Personal-Free/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git 设置和取消代理</title>
-    <link href="http://ted423.github.io/Code/git%20proxy/"/>
-    <id>http://ted423.github.io/Code/git%20proxy/</id>
-    <published>2021-06-10T07:22:03.877Z</published>
-    <updated>2021-07-16T09:57:26.889Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy socks5://127.0.0.1:7890</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure><p>吐槽下git的升级连续用了3个裸IP<br>https那个没用</p><hr><p>似乎可能Win下cmd里用就是会解析成IP丢到代理里(</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
-      
-    
-    
-    
-    <category term="Git" scheme="http://ted423.github.io/categories/Git/"/>
-    
-    
-    <category term="Git" scheme="http://ted423.github.io/tags/Git/"/>
-    
-    <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python pip相关</title>
-    <link href="http://ted423.github.io/Code/pip/"/>
-    <id>http://ted423.github.io/Code/pip/</id>
-    <published>2021-06-02T13:09:46.901Z</published>
-    <updated>2020-10-08T02:55:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>python pip 便携版相关:<a href="https://www.jianshu.com/p/6f09ed6f828a">https://www.jianshu.com/p/6f09ed6f828a</a></p><p>python.exe -m  get-pip<br>升级pip命令 </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install --upgrade pip</span><br></pre></td></tr></table></figure><p>便携版pip相关操作都需要使用python -m pip，否则在同时具有系统python环境跟便携版的情况下，即便直接在便携版pip所在目录执行pip都不会操作便携版的环境</p><p>To upgrade all local packages; you could use pip-review:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pip-review</span><br><span class="line">$ pip-review --local --interactive</span><br></pre></td></tr></table></figure><p>可以考虑使用代理</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install --proxy=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">7890</span> --upgrade pip</span><br><span class="line">pip-review --local --proxy=<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">7890</span> --interactive</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>不过目前没找到便携版直接用pip-review的方法<br>而且其特性会找到系统环境，最终还是手动设置了环境变量才行</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;python pip 便携版相关:&lt;a href=&quot;https://www.jianshu.com/p/6f09ed6f828a&quot;&gt;https://www.jianshu.com/p/6f09ed6f828a&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;python.exe -m  get-pi</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Python" scheme="http://ted423.github.io/tags/Python/"/>
-    
-    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
     
   </entry>
   
