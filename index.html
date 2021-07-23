@@ -446,6 +446,42 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/Software/No%20WD/" >
+            
+                <span>不推荐使用Windows Defender</span>
+        </a>
+        <div class="abstract-content">
+            首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。Server是1809，所以很可能遇到了是一个老版本的Bug
+现象就是Server上遇到问题文件自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以无法还原。
+然后测试中发生了一个神奇的现象。我的Windows loader很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了https://files.catbox.moe/r3nvvm.jpg
+解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个z...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows Server">Windows Server</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/Software/No%20Refs/" >
             
                 <span>不建议使用Refs</span>
@@ -793,39 +829,6 @@ x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不
         <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Remote">Remote</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/Terminal/rsync/" >
-            
-                <span>rsync</span>
-        </a>
-        <div class="abstract-content">
-            不正常的使用rsync可能会造成灾难性的后果
-rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
-常用参数-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)-u, –update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时间晚于要备份的文件。（不覆盖更新的文件）–ignore-exis...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Terminal">Terminal</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
     
 </div>
             
@@ -1708,9 +1711,26 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 51
+        Total : 52
         </div>
         <!-- search  -->
         
@@ -1741,6 +1761,11 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span><a class="archive-post-title" href= "/Software/No%20WD/" >不推荐使用Windows Defender</a>
+        </li>
     
     
         <li class="archive-post-item">

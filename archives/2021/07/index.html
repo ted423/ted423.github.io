@@ -403,6 +403,42 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/Software/No%20WD/" >
+            
+                <span>不推荐使用Windows Defender</span>
+        </a>
+        <div class="abstract-content">
+            首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。Server是1809，所以很可能遇到了是一个老版本的Bug
+现象就是Server上遇到问题文件自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以无法还原。
+然后测试中发生了一个神奇的现象。我的Windows loader很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了https://files.catbox.moe/r3nvvm.jpg
+解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个z...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows Server">Windows Server</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/Software/nfs%20squash/" >
             
                 <span>NFS squash特性相关</span>
@@ -766,38 +802,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         <div class="abstract-content">
             其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论https://www.zhihu.com/question/34935661https://www.zhihu.com/question/20840941
 更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "个人观点">个人观点</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/etc/NoQNAP/" >
-            
-                <span>请勿购买QNAP</span>
-        </a>
-        <div class="abstract-content">
-            本文属于用啥黑啥系列。在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。然后第二遇到的大概就是群晖的贵了。
-因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。
-那么问题来了，硬件性能好就一定好用么？我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的(网上一堆喊着x86的实际是x86_64)，在其他人的帮助下，我最终在这台破群晖上成功的跑起来了QB的docker，虽然还有点小问题，但是QNAP呢？跑起来了，登不进去。
-目前我用QNAP遇到的...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -1601,9 +1605,26 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 51
+        Total : 52
         </div>
         <!-- search  -->
         
@@ -1634,6 +1655,11 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span><a class="archive-post-title" href= "/Software/No%20WD/" >不推荐使用Windows Defender</a>
+        </li>
     
     
         <li class="archive-post-item">
