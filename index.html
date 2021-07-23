@@ -446,6 +446,39 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/Issue/SMB/" >
+            
+                <span>Windows明明分配了共享权限却无法正常访问共享路径</span>
+        </a>
+        <div class="abstract-content">
+            其实最简单的方法是重启。
+说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接，会用之前用的账号名密码就直接连上去了。这时候就有可能报错连不上net use &quot;路径&quot; /del全删掉，大部分就正常了。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/Software/No%20WD/" >
             
                 <span>不推荐使用Windows Defender</span>
@@ -794,39 +827,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Remote">Remote</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/Software/Remote/Linux%20Remote/" >
-            
-                <span>Linux GUi 远程的一些问题</span>
-        </a>
-        <div class="abstract-content">
-            看来到处都是vnc教程不是没道理的。
-最早接触的Win,所以一切自然都会跟Win比。最初被xrdp气的够呛，xrdp实现的是Windows能通过rdp访问Linux，但核心还是vnc。Wvnc给我最初的印象就是同步显示，因为遇到对端看不到的，我就会想到RDP。(当然以对Windows和Linux的桌面理解来说，可能有所偏颇) 以下的Linux桌面英文应该叫session，也就是会话譬如，如果结束掉一个Linux桌面，里面跑的进程都会结束。
-x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不上了(其实现在也是)连接开始之前黑半天，然后好不容易连上了，关掉就...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/14</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Remote">Remote</a>
     
@@ -1762,9 +1762,26 @@ x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 54
+        Total : 55
         </div>
         <!-- search  -->
         
@@ -1795,6 +1812,11 @@ x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span><a class="archive-post-title" href= "/Issue/SMB/" >Windows明明分配了共享权限却无法正常访问共享路径</a>
+        </li>
     
     
         <li class="archive-post-item">

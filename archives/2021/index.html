@@ -403,6 +403,39 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/Issue/SMB/" >
+            
+                <span>Windows明明分配了共享权限却无法正常访问共享路径</span>
+        </a>
+        <div class="abstract-content">
+            其实最简单的方法是重启。
+说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接，会用之前用的账号名密码就直接连上去了。这时候就有可能报错连不上net use &quot;路径&quot; /del全删掉，大部分就正常了。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/24</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/Software/No%20WD/" >
             
                 <span>不推荐使用Windows Defender</span>
@@ -783,36 +816,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         <a class="post-tag" href="javascript:void(0);" data-tags = "Terminal">Terminal</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Linux">Linux</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/etc/Fuck/" >
-            
-                <span>去你妈的不求甚解</span>
-        </a>
-        <div class="abstract-content">
-            其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论https://www.zhihu.com/question/34935661https://www.zhihu.com/question/20840941
-更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/03</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "个人观点">个人观点</a>
     
 </div>
             
@@ -1656,9 +1659,26 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 54
+        Total : 55
         </div>
         <!-- search  -->
         
@@ -1689,6 +1709,11 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     <div class="archive-year"> 2021 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span><a class="archive-post-title" href= "/Issue/SMB/" >Windows明明分配了共享权限却无法正常访问共享路径</a>
+        </li>
     
     
         <li class="archive-post-item">
