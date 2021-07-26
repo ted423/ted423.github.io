@@ -403,6 +403,47 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/" >
+            
+                <span>网络同步盘缺陷记录</span>
+        </a>
+        <div class="abstract-content">
+            优秀
+dropbox同步不够实时(服务器端的改变并不会立刻同步回本地)如果你希望他立刻进行一次完全的同步，你需要退出他的客户端再重新打开。
+Onedrive不支持局域网内同步,同步逻辑有缺陷，偶尔会干删一堆文件到回收站再重新下载的事(由于下调存储空间一事，已经不准备继续使用，准备转yandisk看看，15元/月才50G，我就呵呵了)
+快盘国内做的最好的同步盘，不过服务器实在…客户端弹窗简直烦人因为有秒传机制，会出现上传的某些文件永远无法下载（你也没法重传，因为秒传了）因为上一条，是否使用自己斟酌
+
+可用
+mega支持创建同名文件(夹)，不利于同步，同步依据文件修改时间，在修改时间不变改变...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "个人观点">个人观点</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "分类汇总">分类汇总</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Download&File hosting service">Download&File hosting service</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/Software/Document&Texteditor/Everedit/" >
             
                 <span>[文本编辑器]Everedit - 这才是真正的国产良心</span>
@@ -729,47 +770,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "Issue">Issue</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/Windows%20Fast%20Shutdown/" >
-            
-                <span>[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
-        </a>
-        <div class="abstract-content">
-            这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
-个人处理方法
-打开注册表管理器，找到
-1HKEY_CURRENT_USER\Control Panel\Desktop\
-新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
-找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
-不过笔记本的这个值没改过，我想大概...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/02</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "问题处理">问题处理</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
     
 </div>
             
@@ -1743,6 +1743,8 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
     
     
     
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 62
@@ -1780,6 +1782,11 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/26</span><a class="archive-post-title" href= "/Software/Download&File%20hosting%20service/4K/" >youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span><a class="archive-post-title" href= "/Software/Download&File%20hosting%20service/aria2c-defect/" >不使用aria2c的原因</a>
         </li>
     
     
@@ -2345,20 +2352,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/Software/Windbg/" >[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/28</span><a class="archive-post-title" href= "/Software/Download&File%20hosting%20service/aria2c-defect/" >不使用aria2c的原因</a>
         </li>
     
     </div>

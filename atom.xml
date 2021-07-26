@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2018-07-13T01:04:00.000Z</updated>
+  <updated>2017-02-28T13:54:00.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不使用aria2c的原因</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/aria2c-defect/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/aria2c-defect/</id>
+    <published>2021-07-26T11:46:38.153Z</published>
+    <updated>2017-02-28T13:54:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这已经是我第3次试图使用aria2c来代替IDM了，但最终我还是失败了。<br>想想还是记录下吧，避免以后再次忘了当初为什么放弃。<br>最早aria2c配置，自启动服务，扩展什么都折腾过。</p><h1 id="原生的问题"><a href="#原生的问题" class="headerlink" title="原生的问题"></a>原生的问题</h1><ol><li>下载时需要提供文件名，由于程序本身不具备GUI，又不支持自己生成文件名，对于很多要连接会跳转后通过特定post来提供文件名(例如百度网盘)。下载工具在使用上就会有很多限制，比较好的解决方式就是在浏览器上通过特定的工具来发送下载时的文件名，诸如chrome+aria2c integration之类。</li><li>但这些aria2c的补充通常不会有太强的完善性，因为那样无异于完全开发出一个下载工具，所以大部分GUI或者扩展之流也都会有些缺陷，诸如在路径的选择上。</li><li>多线程下载软件在不被服务器针对的情况下，其实很少在下载速度上有巨大的差别，可以说aria2c也并没有超出其他下载工具太多</li><li>这点才是我放弃的真正原因，就是aria2c取消任务后不会删除下载到一半的文件。</li></ol><p>其实在我看来aria2c之所以流行是因为chrome的原因。因为chrome自身下载实在是很特别，chrome上实现接管下载的扩展往往不是那么好用并且稳定。</p><p>#Cent Broswer+aria2c integration</p><ol><li>有时候扩展漏过了下载，没能传递到aria2c,浏览器自身开始了下载。</li><li>然后就是打开某些文件没法直接在浏览器看，会被下载接管</li><li>会干扰一些其他扩展的功能。</li></ol><p>#Motrix<br>优点：开源，前面也说了，”但这些aria2c的补充通常不会有太强的完善性，因为那样无异于完全开发出一个下载工具”</p><ol><li><a href="https://github.com/agalwood/Motrix/issues?q=is:issue+author:ted423+is:closed">https://github.com/agalwood/Motrix/issues?q=is%3Aissue+author%3Ated423+is%3Aclosed</a> PAC那个是我提错了，但别的属于没法满足我的使用习惯的。</li><li><a href="https://github.com/agalwood/Motrix/issues/created_by/ted423">https://github.com/agalwood/Motrix/issues/created_by/ted423</a> 这是还开着的。</li><li>抛开BT相关，各种功能并没法完全打败IDM。(例如IDM的队列可以设置下载间隔，遇上那种防批量下载的服务器就会很有用)</li></ol><p>干扰其他功能和浏览器原生功能我是不能忍得，最主要这是一种替代的不完美实现，何必呢。<br>不如直接点。<br>另一方面 cent broswer自身的内置下载在选取询问路径的情况下是可以调用迅雷或者IDM的</p><p>像我装了QB，IDM，迅雷，Motrix。<br>迅雷和QB都是最常开，剩下两者IDM作为补充，Motrix(aria2c)就很少开了</p><hr><p><time>2021-04-24</time>增加Motrix相关</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这已经是我第3次试图使用aria2c来代替IDM了，但最终我还是失败了。&lt;br&gt;想想还是记录下吧，避免以后再次忘了当初为什么放弃。&lt;br&gt;最早aria2c配置，自启动服务，扩展什么都折腾过。&lt;/p&gt;
+&lt;h1 id=&quot;原生的问题&quot;&gt;&lt;a href=&quot;#原生的问题&quot; class</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
   
   <entry>
     <title>youtube专用下载器 - 4K Video Downloader &amp; Instagram专用下载器 - 4K Stogram</title>
@@ -533,38 +562,6 @@
     <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
     
     <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>压缩软件问题记录</title>
-    <link href="http://ted423.github.io/Software/Compression/Compression-defect/"/>
-    <id>http://ted423.github.io/Software/Compression/Compression-defect/</id>
-    <published>2021-06-24T13:11:29.875Z</published>
-    <updated>2021-07-01T08:20:18.249Z</updated>
-    
-    <content type="html"><![CDATA[<p>#Bandzip<br>无法对7z文件进行直接修改。</p><p>#Peazip</p><ul><li>无法选取多个文件进行压缩(2021-06-24未测试)</li><li>8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内</li><li>强烈不建议使用</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;#Bandzip&lt;br&gt;无法对7z文件进行直接修改。&lt;/p&gt;
-&lt;p&gt;#Peazip&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;无法选取多个文件进行压缩(2021-06-24未测试)&lt;/li&gt;
-&lt;li&gt;8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内&lt;/li&gt;</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
     
   </entry>
   

@@ -403,6 +403,47 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/Windows%20Fast%20Shutdown/" >
+            
+                <span>[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
+        </a>
+        <div class="abstract-content">
+            这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/09/02</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "问题处理">问题处理</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Regedit">Regedit</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/Software/Windbg/" >
             
                 <span>[转载]WINDBG分析DMP方法（2012.8.19修改）</span>
@@ -426,42 +467,6 @@
         <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "转载">转载</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/Software/Download&File%20hosting%20service/aria2c-defect/" >
-            
-                <span>不使用aria2c的原因</span>
-        </a>
-        <div class="abstract-content">
-            这已经是我第3次试图使用aria2c来代替IDM了，但最终我还是失败了。想想还是记录下吧，避免以后再次忘了当初为什么放弃。最早aria2c配置，自启动服务，扩展什么都折腾过。
-原生的问题
-下载时需要提供文件名，由于程序本身不具备GUI，又不支持自己生成文件名，对于很多要连接会跳转后通过特定post来提供文件名(例如百度网盘)。下载工具在使用上就会有很多限制，比较好的解决方式就是在浏览器上通过特定的工具来发送下载时的文件名，诸如chrome+aria2c integration之类。
-但这些aria2c的补充通常不会有太强的完善性，因为那样无异于完全开发出一个下载工具，所以大部分GUI或者...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/02/28</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Download&File hosting service">Download&File hosting service</a>
     
 </div>
             
@@ -1435,6 +1440,8 @@
     
     
     
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 62
@@ -1472,6 +1479,11 @@
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/26</span><a class="archive-post-title" href= "/Software/Download&File%20hosting%20service/4K/" >youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span><a class="archive-post-title" href= "/Software/Download&File%20hosting%20service/aria2c-defect/" >不使用aria2c的原因</a>
         </li>
     
     
@@ -2037,20 +2049,6 @@
     
         <li class="archive-post-item">
             <span class="archive-post-date">09/02</span><a class="archive-post-title" href= "/Software/Windbg/" >[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/28</span><a class="archive-post-title" href= "/Software/Download&File%20hosting%20service/aria2c-defect/" >不使用aria2c的原因</a>
         </li>
     
     </div>
