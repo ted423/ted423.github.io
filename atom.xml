@@ -347,32 +347,6 @@
   </entry>
   
   <entry>
-    <title>rsync</title>
-    <link href="http://ted423.github.io/Terminal/rsync/"/>
-    <id>http://ted423.github.io/Terminal/rsync/</id>
-    <published>2021-07-07T16:06:53.219Z</published>
-    <updated>2021-07-04T16:27:54.010Z</updated>
-    
-    <content type="html"><![CDATA[<p><del>不正常的使用rsync可能会造成灾难性的后果</del></p><p>rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log</p><h1 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h1><p>-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)<br>-u, –update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时间晚于要备份的文件。（不覆盖更新的文件）<br>–ignore-existing参数表示只要该文件在目标目录中已经存在，就跳过去，不再同步这些文件。<br>-n 参数或–dry-run参数模拟将要执行的操作，而并不真的执行。配合-v参数使用，可以看到哪些内容会被同步过去。<br>-P 参数是–progress和–partial这两个参数的结合。<br>–remove-source-files 字面意思，注意不要乱用–delete<br> 其中z为压缩，在网络性能足够的情况下，不开会快</p><hr><p> 如无必要不要使用<br> -c、–checksum参数改变rsync的校验方式。默认情况下，rsync 只检查文件的大小和最后修改日期是否发生变化，如果发生变化，就重新传输；使用这个参数以后，则通过判断文件内容的校验和，决定是否重新传输。(比较操蛋的是这玩意校验是整个文件hash，所以全读一遍还是很慢的。)</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;del&gt;不正常的使用rsync可能会造成灾难性的后果&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log&lt;/p&gt;
-&lt;h1 id=&quot;常用参数&quot;&gt;&lt;a href=&quot;#常用参数&quot; cl</summary>
-      
-    
-    
-    
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>我为什么仍在使用迅雷</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/</id>
@@ -564,6 +538,32 @@
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rsync</title>
+    <link href="http://ted423.github.io/Code/Terminal/rsync/"/>
+    <id>http://ted423.github.io/Code/Terminal/rsync/</id>
+    <published>2021-06-18T07:15:26.038Z</published>
+    <updated>2021-07-04T16:27:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><del>不正常的使用rsync可能会造成灾难性的后果</del></p><p>rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log</p><h1 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h1><p>-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)<br>-u, –update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时间晚于要备份的文件。（不覆盖更新的文件）<br>–ignore-existing参数表示只要该文件在目标目录中已经存在，就跳过去，不再同步这些文件。<br>-n 参数或–dry-run参数模拟将要执行的操作，而并不真的执行。配合-v参数使用，可以看到哪些内容会被同步过去。<br>-P 参数是–progress和–partial这两个参数的结合。<br>–remove-source-files 字面意思，注意不要乱用–delete<br> 其中z为压缩，在网络性能足够的情况下，不开会快</p><hr><p> 如无必要不要使用<br> -c、–checksum参数改变rsync的校验方式。默认情况下，rsync 只检查文件的大小和最后修改日期是否发生变化，如果发生变化，就重新传输；使用这个参数以后，则通过判断文件内容的校验和，决定是否重新传输。(比较操蛋的是这玩意校验是整个文件hash，所以全读一遍还是很慢的。)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;del&gt;不正常的使用rsync可能会造成灾难性的后果&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log&lt;/p&gt;
+&lt;h1 id=&quot;常用参数&quot;&gt;&lt;a href=&quot;#常用参数&quot; cl</summary>
+      
+    
+    
+    
+    
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
   </entry>
   
