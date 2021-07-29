@@ -448,6 +448,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/NFS%20Squash/">
+                
+                <span class="abstract-title-text">NFS squash特性相关</span>
+            </a>
+            <div class="abstract-content">
+                写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章大部分都为猜测，未作有效以及查证相关检测。
+在阅读这篇文章之前你需要了解
+
+Linux是多用户操作系统
+用户以及组的保存都是基于id(uid gid)
+root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group里可以看，但是不同的Linux版本可能会有不同
+NIS Server
+Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Remote/vncserver%20-localhost%20no/">
                 
                 <span class="abstract-title-text">vncserver -localhost no</span>
@@ -845,45 +884,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         <a class="post-tag" href="javascript:void(0);" data-tags="Compression">Compression</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="LGPLv2.1">LGPLv2.1</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Document&Texteditor/notepad/">
-                
-                <span class="abstract-title-text">文本编辑器类的个人选择</span>
-            </a>
-            <div class="abstract-content">
-                本博有俩文本编辑器，其实我用过很多，所以就写写最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。
-之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
     
 </div>
 
@@ -1306,7 +1306,24 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1867,7 +1884,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 62
+        Total : 63
         </div>
         <!-- search  -->
         
@@ -1900,6 +1917,12 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/29</span>
+            <a class="archive-post-title" href="/Issue/svn/">[Untitled Post]</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/26</span>

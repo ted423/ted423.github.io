@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2017-02-28T13:54:00.000Z</updated>
+  <updated>2021-07-29T02:03:43.287Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://ted423.github.io/Issue/svn/"/>
+    <id>http://ted423.github.io/Issue/svn/</id>
+    <published>2021-07-29T02:03:43.287Z</published>
+    <updated>2021-07-29T02:03:43.287Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>不使用aria2c的原因</title>
@@ -532,36 +545,6 @@
     <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
     
     <category term="LGPLv2.1" scheme="http://ted423.github.io/tags/LGPLv2-1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文本编辑器类的个人选择</title>
-    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad/"/>
-    <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad/</id>
-    <published>2021-07-01T03:13:17.556Z</published>
-    <updated>2021-07-01T08:19:35.530Z</updated>
-    
-    <content type="html"><![CDATA[<p>本博有俩文本编辑器，其实我用过很多，所以就写写<br>最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。<br>最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）<br>小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。</p><p>之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。<br>另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址就很难，并且很难保证还能用。装起来也比较复杂，有点费时。</p><p>notepad3,必装,就是没有扩展之类的功能<br>sublime text，会有奇奇怪怪的输入法问题(当时写这个似乎是因为在Linux上面用)</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;本博有俩文本编辑器，其实我用过很多，所以就写写&lt;br&gt;最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。&lt;br&gt;最后发现Everedit不错，价格是100多的</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
     
   </entry>
   
