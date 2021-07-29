@@ -1,0 +1,2657 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <!-- title -->
+
+
+    
+
+<!-- keywords -->
+
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="ted423">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="ted423">
+    
+        <meta name="keywords" content="hexo,hexo-blog,软件,Software,动画,Anime,漫画,Comic,游戏,Game,ted423">
+    
+    <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    <meta name="description" content="原文地址:http:&#x2F;&#x2F;www.guoxue.com&#x2F;?p&#x3D;13846作者:毕宝魁 嘛，一直觉得这句话有问题，今天才真算是懂了 【内容摘要】《论语》中载孔子“唯女子与小人为难养”一语，后世对其解释纷纭，无论是批评还是维护，都未能说到关键处。本文对孔子说这句话的背景进行考察，然后指出其针对的具体对象以及“女子与小人”所代表的具体类型，指出孔子这句话的真实含义。 　　【关 键 词】孔子；女子与小人；嫔">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[转载]《论语》中“唯女子与小人为难养”本义辨析">
+<meta property="og:url" content="http://ted423.github.io/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="原文地址:http:&#x2F;&#x2F;www.guoxue.com&#x2F;?p&#x3D;13846作者:毕宝魁 嘛，一直觉得这句话有问题，今天才真算是懂了 【内容摘要】《论语》中载孔子“唯女子与小人为难养”一语，后世对其解释纷纭，无论是批评还是维护，都未能说到关键处。本文对孔子说这句话的背景进行考察，然后指出其针对的具体对象以及“女子与小人”所代表的具体类型，指出孔子这句话的真实含义。 　　【关 键 词】孔子；女子与小人；嫔">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-19T14:46:48.790Z">
+<meta property="article:modified_time" content="2016-03-13T14:08:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="转载">
+<meta name="twitter:card" content="summary">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/assets/favicon.ico">
+    
+    <title>[转载]《论语》中“唯女子与小人为难养”本义辨析 · ted423个人小站</title>
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+    (function (w) {
+        'use strict'
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function () {}
+        }
+        // define on the loadCSS obj
+        var rp = (loadCSS.relpreload = {})
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function () {
+            var ret
+            try {
+                ret = w.document.createElement('link').relList.supports('preload')
+            } catch (e) {
+                ret = false
+            }
+            return function () {
+                return ret
+            }
+        })()
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function (link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || 'all'
+
+            function enableStylesheet() {
+                link.media = finalMedia
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener('load', enableStylesheet)
+            } else if (link.attachEvent) {
+                link.attachEvent('onload', enableStylesheet)
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function () {
+                link.rel = 'stylesheet'
+                link.media = 'only x'
+            })
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000)
+        }
+
+        // loop through link elements in DOM
+        rp.poly = function () {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return
+            }
+            var links = w.document.getElementsByTagName('link')
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i]
+                // qualify links to those with rel=preload and as=style attrs
+                if (
+                    link.rel === 'preload' &&
+                    link.getAttribute('as') === 'style' &&
+                    !link.getAttribute('data-loadcss')
+                ) {
+                    // prevent rerunning on link
+                    link.setAttribute('data-loadcss', true)
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link)
+                }
+            }
+        }
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly()
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500)
+            if (w.addEventListener) {
+                w.addEventListener('load', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            }
+        }
+
+        // commonjs
+        if (typeof exports !== 'undefined') {
+            exports.loadCSS = loadCSS
+        } else {
+            w.loadCSS = loadCSS
+        }
+    })(typeof global !== 'undefined' ? global : this)
+</script>
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
+    <!-- algolia -->
+    
+        <script>
+            var hits = JSON.parse('{"per_page":10}')
+            var labels = JSON.parse('{"input_placeholder":"Search for Posts","hits_empty":"We did not find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}')
+
+            var algolia = {
+                applicationID: 'U1SD35XLQS',
+                apiKey: '3d71b4e6d428e7e228b06019ae2c9a29',
+                indexName: 'github',
+                hits: hits,
+                labels: labels
+            }
+        </script>
+    
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ == undefined) {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js" />')
+        }
+    </script>
+    
+        <body class="post-body">
+    
+        <!-- header -->
+        <header class="header header-mobile">
+    <!-- top read progress line -->
+    <div class="header-element">
+        <div class="read-progress"></div>
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+            <div class="header-sidebar-menu">
+        
+            
+                <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- header actions -->
+    <div class="header-actions">
+        <!-- theme mode switch button -->
+        <span class="header-theme-btn header-element">
+            <i class="fas fa-adjust"></i>
+        </span>
+        <!-- back to home page text -->
+        <span class="home-link header-element">
+            <a href=/>个人小站</a>
+        </span>
+    </div>
+    <!-- toggle banner for post layout -->
+    
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">个人小站</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">[转载]《论语》中“唯女子与小人为难养”本义辨析</a>
+            </div>
+        </div>
+    
+</header>
+
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
+        <!-- fixed footer -->
+        <footer class="footer-fixed">
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+            <div class="back-top back-top-hidden">
+        
+        
+            <div>&#xe639;</div>
+        
+        </div>
+    </div>
+</footer>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="site-intro" style="
+
+
+
+
+
+
+
+    height:50vh;
+
+">
+    
+    <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
+            
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+                [转载]《论语》中“唯女子与小人为难养”本义辨析
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+                
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
+    
+</div>
+
+                
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">5.5k</span>阅读时长: <span class="post-count reading-time">18 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2020/06/19</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            <script>
+  // get user agent
+  function getBrowserVersions() {
+    var u = window.navigator.userAgent
+    return {
+      userAgent: u,
+      trident: u.indexOf('Trident') > -1, //IE内核
+      presto: u.indexOf('Presto') > -1, //opera内核
+      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+      iPad: u.indexOf('iPad') > -1, //是否为iPad
+      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
+    }
+  }
+  var browser = {
+    versions: getBrowserVersions(),
+  }
+  console.log('userAgent: ' + browser.versions.userAgent)
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded')
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document
+        .getElementsByClassName('intro-title')[0]
+        .classList.add('intro-fade-in')
+      document
+        .getElementsByClassName('intro-subtitle')[0]
+        .classList.add('intro-fade-in')
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in')
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb() {
+    if (browser.versions.uc) {
+      console.log('UCBrowser')
+      fontLoaded()
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular'],
+        },
+        loading: function () {
+          // 所有字体开始加载
+          // console.log('font loading');
+        },
+        active: function () {
+          // 所有字体已渲染
+          fontLoaded()
+        },
+        inactive: function () {
+          // 字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout')
+          fontLoaded()
+        },
+        timeout: 5000, // Set the timeout to two seconds
+      })
+    }
+  }
+
+  function asyncErr() {
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0]
+    o.src = u
+    if (cb) {
+      o.addEventListener(
+        'load',
+        function (e) {
+          cb(null, e)
+        },
+        false
+      )
+    }
+    if (err) {
+      o.addEventListener(
+        'error',
+        function (e) {
+          err(null, e)
+        },
+        false
+      )
+    }
+    s.parentNode.insertBefore(o, s)
+  }
+
+  var asyncLoadWithFallBack = function (arr, success, reject) {
+    var currReject = function () {
+      reject()
+      arr.shift()
+      if (arr.length) async(arr[0], success, currReject)
+    }
+
+    async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack(
+    [
+      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
+      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
+      "/lib/webfontloader.min.js",
+    ],
+    asyncCb,
+    asyncErr
+  )
+</script>
+        
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <div class="container container-unloaded">
+                <main class="main post-page">
+    <article class="article-entry">
+        <p>原文地址:<a target="_blank" rel="noopener" href="http://www.guoxue.com/?p=13846">http://www.guoxue.com/?p=13846</a><br>作者:毕宝魁</p>
+<p>嘛，一直觉得这句话有问题，今天才真算是懂了</p>
+<p>【内容摘要】《论语》中载孔子“唯女子与小人为难养”一语，后世对其解释纷纭，无论是批评还是维护，都未能说到关键处。本文对孔子说这句话的背景进行考察，然后指出其针对的具体对象以及“女子与小人”所代表的具体类型，指出孔子这句话的真实含义。</p>
+<p>　　【关 键 词】孔子；女子与小人；嫔妃姬妾；宦竖；两类人</p>
+<p>　　【作者简介】毕宝魁，（1952-），男，辽宁铁岭人，研究方向为古代文学，辽宁大学文学院教授。</p>
+<p>　　《论语》自从问世以来，备受重视，有“经”的品质和意义。正因如此，对其中任何一句话，都值得仔细研究和推敲，尤其是涉及到一些关键语言，更要详细考证，尽量真正理解阐释出孔子的原义。这是一切评价和议论的出发点。下面就关于“女子与小人为难养”这句话的本义进行考证辨析。<br>　　<br>    《论语·阳货篇》其中一章是：</p>
+<p>　　子曰：“唯女子与小人为难养也，近之则不孙，远之则怨。”<sup>[1]</sup></p>
+<p>　　本章颇为后世诟病，被认为是孔子歧视女性最重要而直接的证据。把女子归入到小人一类，白纸黑字，又不是版本问题，没有人怀疑这句话出自孔子之口的真实性。不知什么原因，汉儒对这句话均无注。</p>
+<p>　　宋邢昺疏曰：“正义曰：此章言女子与小人皆无正性，难蓄养。所以难养者，以其亲近之则不孙顺，疏远之则好生怨恨。此言女子，举其大率耳，若其禀性贤明，若文母之类，则非所论也。<sup>”[1]</sup>很明显是维护孔子并为之解释，说孔子不是指所有女子，像文王之母那样贤良的女性不在此论之列。可以感觉到邢昺似乎也认为孔子这句话说得有点偏颇，于是为之辩解。但难以服人，因从孔子原话体会不出这种意思。</p>
+<p>　　刘宝楠正义云：“此为有家国者戒也。养犹待也。左僖二十四年传：女德无极，妇怨无极。杜注：妇女之志，近之则不知止足，远之则忿怨无已。即此难养之意。”<sup>[2]</sup> 前面两句颇有启发性，即指出孔子这句话针对的是有国有家的执政者，是对统治一方的领导人提出的告诫，养就是对待的意思。这很符合孔子的原意。后面引用杜佑注《左传》之语则是对于孔子话的解释，并无新意。朱熹说：“此小人，亦谓仆隶下人也。君子之于臣妾，庄以莅之，慈以畜之，则无二者之患矣。”<sup>[3]</sup> 这里对于女子与小人的理解接近孔子原意，“臣妾”二字值得注意。但还显得笼统，意思表述不太清楚。康有为说：“‘女子’本又作‘竖子’，今从之。……‘竖子’。谓仆隶之类。”<sup>[4]</sup> 对于理解孔子之话均无帮助，类似解释不俱引。</p>
+<p>　　近年注释讲解《论语》影响较大者有三书，一是南怀瑾的《论语别裁》，二是杨伯峻的《论语译注》，三是李泽厚的《论语今读》，杨伯峻对于本章没有新解，故略而不论。南怀瑾好像站在维护孔子立场上，实际是强化了误解前提下孔子歧视妇女的观点，他说：</p>
+<p>　　我赞成孔子的话，这是没有办法来替妇女们辩护的。孔子说女子与小人最难办了，对她太爱护了，太好了，她就恃宠而骄，搞得你啼笑皆非，动辄得咎。对她不好，她又恨死你，至死方休，这的确是事实，是无可否认的天下难事。但问题是，世界上的男人，够得上资格免刑于‘小人’罪名的，实在也少之又少。孔子一句话，虽然表面上骂尽了天下的女人，但是又有几个男人不在被骂之列呢？”<sup>[5]</sup></p>
+<p>　　如果仔细体会，南怀瑾先生认为孔子这句话不但把天下所有的女人都骂尽，而且绝大多数的男人也在被骂之列。这样理解，孔子就是一位“海骂”的人了。这根本不是孔子性格和思想的表现，实在是对孔子原意的极大歪曲，有很大的误导作用。好像在支持孔子的观点，客观上却产生了挑唆后人怨恨孔子的作用。</p>
+<p>　　李泽厚先生则在南怀瑾说法上向前一步，并把孔子对于妇女的观点与西方中世纪基督教相比较，他说：</p>
+<p>　　这章最为现代妇女所诟病。好些人写文章来批评，好些人写文章来辩说，其实都不必要。相反，我以为这句话相当准确地描述了妇女性格的某些特征。对她们亲密，她们有时就过分随便，任意笑骂打闹。而稍一疏远，便埋怨不已。这种心理性格特征本身并无所谓好坏，只是由性格产生的差别而已；应说它是心理学的某种事实，并不必含褒贬含义。至于把‘小人’与妇女连在一起，这很难说有什么道理。……中国传统对妇女当然很不公平很不合理，孔学尤然。但比欧洲中世纪基督教认妇女没灵魂，以及火烧‘女巫’之严重迫害等等，仍略胜一筹。”<sup>[6]</sup></p>
+<p>　　与南怀瑾先生观点接近，好像孔子歧视诬蔑妇女还不算严重，比中世纪基督教严重迫害强多了。但李泽厚“至于把‘小人’与妇女连在一起，这很难说有什么道理”的话倒触及到一个关键问题，孔子为什么把“女子”和“小人”连在一起呢？这也是我们应当仔细思索的一点，同时也是我们破解其真实意蕴的一个门径。</p>
+<p>　　除此三书外，最近读到几本新出版的《论语》注解书，对这句话的解释更是五花八门，令人难以置信。如刘兆伟先生的新著《论语通要》，刘先生对于本章提出一种全新的见解，更是从维护孔子出发，认为孔子不但没有轻视女子，反而是关心青年女子。他将这句话翻译为：“咳！年轻女子一旦随从小人就难于生活了。接近他，他就不规矩；疏远他，他就怨恨。”<sup>[6]</sup> 并解释道：</p>
+<p>　　这是孔子对年轻女子的关怀与同情。《诗经·卫风·氓》：‘氓之蚩蚩，抱布贸丝。匪来贸丝，来即我谋。……三岁为妇，靡室劳矣。夙兴夜寐，靡有朝矣。言既遂矣，至于暴矣。兄弟不知，咥其笑矣。静言思之，躬自悼矣。’此写一位年轻女子轻信氓的情感，婚后小心谨慎、劳苦艰辛，可仍遭至虐待。回到娘家，兄弟还不理解，笑话她不会处事。她只有暗自伤心，悔恨过去的草率。《诗经》是孔子删编的教材，与此章相映，都是同情年轻女子，希望她们别上当受骗，其思想是一脉相承的。可见此章孔子同情年轻女子的思想不是偶然的。<sup>[6]</sup></p>
+<p>　　将本章全部重新解释，但从训诂学角度看，将几处关键的字词都进行削足适履的讲解，难以通顺，不一一加以辩驳，感觉特别牵强，将《诗经·卫风·氓》解释为同情年轻女子被骗婚遭受痛苦与本章相联系更显牵强。与孔子原话的本义越来越远。</p>
+<p>　　再如宿正伯著《道不尽的&lt;论语&gt;》，他说：</p>
+<p>　　近代以来，这句话是饱受诟病的，往往被举作孔子歧视妇女的证据。但我以为，恰恰是这样的话，彰显出孔子实事求是的学者本分。</p>
+<p>　　大凡男子，往往都害怕与女子打交道，因为她们扭扭捏捏、吞吞吐吐、真正的想法总是让你费心思去猜。生气了，你不知道她为什么生气；张狂了，你不知道她为什么张狂。孔子也是人，孔子也是男人，而对难缠的女友或者妻子（此处所言“女子”显然不是指母亲或者姐妹），无可奈何地发发牢骚，有何不可吗？所谓“圣人”，是后人加给他的；所谓“圣人的标准”，也是后人妄加树立的。谁说圣人就不可以有偏激、怨愤的言辞？倘若句句话都说得四平八稳，那圣人也就失去其光辉了！倒是我等后辈相当不实事求是。</p>
+<p>　　设身处地地品味孔子讲这句话时的心情、表情，他是在批评女子吗？我看不见得，说不定只是酸溜溜、甜蜜蜜地跟夫人开个玩笑罢了！</p>
+<p>　　再说了，就算孔子的言辞有点过分，难道天下的女同胞们就不能从中找到一些需要改进的地方吗？如果天下女子皆能因为孔子这样的批评而有所反省，有所改进，不也是很好的结果吗？<sup>[7]</sup></p>
+<p>　　好像站在孔子立场说话，反而加重错误理解下的歧视妇女的女气。</p>
+<p>　　杨润根说得更离谱，他把“女子”讲成是“女的子”，是离不开母亲怀抱的童男童女。<sup>[8]</sup> 怎么能够这样讲解“女子”呢？而这样理解和后面的“小人”又怎么可以并列呢？类似这样的随意曲解经典，实在令人难以接受。其他说法还有，不俱引。</p>
+<p>　　下面，综合考察本章孔子话语的真实含义，将其放在特定的背景下来思考，尽量接近孔子所要表达的本来的意义。</p>
+<p>　　一、对于孔子说此话背景的推测</p>
+<p>　　如果只从《论语》原文看，无法了解说这句话的具体背景，因为没有具体的背景提示，而且《论语》前后章之排列没有意义上的因果关系，因此，孤立看本章便无法确定孔子说这句话的真实用心。但联系孔子生平以及其思想性格的特点，再根据其带领弟子活动的一些具体情况却可以推测出来。</p>
+<p>　　《史记·孔子世家》载，孔子见过南子后，“居卫月馀，灵公与夫人同车，宦者雍渠参乘，出，使孔子为次乘，招摇巿过之。孔子曰：‘吾未见好德如好色者也。’於是丑之，去卫，过曹。”<sup>[8]</sup> 这里明确记载孔子“吾未见好德如好色者也”这句话是在这种背景下说的。但没有说明本章与这一背景事件的联系。我认为，孔子本章也是在这种背景下所说的。只不过不是同时说的而已。或者是离开卫国时与弟子感叹所言。之所以这样说，我们可以做这样的分析。</p>
+<p>　　二、卫灵公的“好色”有特殊性</p>
+<p>　　孔子在这里所说的“吾未见好德如好色者也”的“好色”一般都理解为卫灵公宠爱南子，这肯定是正确的，但这句话里的“好色”还应该包含着卫灵公对于雍渠和弥子瑕这样身边男人的宠爱。现在没有充分证据说明卫灵公是个双性恋者，但却有极大的嫌疑。从他对于弥子瑕的宠爱便可以推测出来。《韩非子·说难》：</p>
+<p>　　昔者弥子瑕有宠于卫君，卫国之法，窃驾君车者罪刖。弥子瑕母病，人闻有夜告弥子，弥子矫驾君车以出。君闻而贤之曰：‘孝哉！为母之故，忘其犯刖罪。’异日，与君游于果园，食桃而甘，不尽，以其半啖君。君曰：‘爱我哉！忘其口味，以啖寡人。’及色衰爱弛，得罪于君。君曰：‘是固尝矫驾吾车，又尝啖我以馀桃。’”<sup>[9]</sup></p>
+<p>　　“色衰爱弛”四个字最说明问题，弥子瑕与雍渠是卫灵公先后两个超乎寻常的男宠，这两人的身份属于宦竖，是服侍灵公并讨取其欢心的男人，即后世的宦官。一般来说，宦官是国君生活服务者，与“色”没有太大关系。弥子瑕是卫灵公前期宠信之人。《逸礼》曰：“卫史鰌病且死，谓其子曰：‘我死，治丧于北堂，吾生不能进蘧伯玉而退弥子瑕，是不能正君也，生不能正君者，死不当成礼，死而置尸于北堂，于我足矣。”<sup>[10]</sup>，史鰌比蘧伯玉年长很多。这里他只提到弥子瑕而没有提雍渠，说明他死前卫灵公宠爱的只有弥子瑕。弥子瑕“色衰爱弛”后才宠雍渠。而孔子这次离开卫国时，卫灵公已老，宠爱的就是雍渠。</p>
+<p>　　三、将“女子”与“小人”联系起来的契机</p>
+<p>　　这样，我们再看“灵公与夫人同车，宦者雍渠参乘，出，使孔子为次乘，招摇巿过之”这句话，就会很清楚当时的情况了。参乘，就是陪乘。古代乘车，尊者在左，御者在中，又一人在右，称参乘或车右。《史记·张释之冯唐列传》：“上就车，召释之参乘，徐行，问释之秦之敝。”<sup>[8]</sup> 这里的参乘肯定是同车无疑矣。前面所说是指战车，而此时是在首都，又是国君之车，因此御者独自在前，卫灵公等人在后面，卫灵公在中间，左边是夫人南子，右边是宠爱的宦官雍渠。司马迁《报任少卿书》中说：“昔卫灵公与雍渠同载，孔子适陈。”<sup>[11]</sup> 明确说“卫灵公与雍渠同载”，就是同乘一车之意。这样就可确定，雍渠跟卫灵公是同车，那么他的位置便肯定是右边，这也与春秋时期“参乘”的位置相同。行文至此，我们想象一下：年迈的卫灵公坐在中间，一边是美滋滋的南子，一边是满脸得意谄笑的雍渠，甚至可能还会打情骂俏，舞眉弄眼。豪华特制的车辆在前面大摇大摆，炫耀显赫，孔子的车跟在后面，对比下冷冷清清，招摇过市，两边都是看热闹的百姓。这时，孔子已六十多岁，奋斗大半生，周游列国即将结束，天下知名度很高，当时就有“圣人”之称，他老先生该如何感受？孔子当即便说了“吾未见好德如好色者也”这句话，“於是丑之，去卫”感觉自己的人格受到侮辱，毅然离开卫国。前文提到，这里“好色”本来已经包括卫灵公宠爱雍渠这一因素。在以谄媚巧佞来讨取国君欢心这方面，南子和弥子瑕、雍渠有相似之处，而南子和雍渠又同时陪伴卫灵公，甚至可能有两人同时献媚的丑态，于是孔子便把“女子与小人”联系在一起进行批评。因此，具体来说，孔子这句话是在这种情况感叹而言，当时指的就是南子和雍渠，而同时也包括他们俩代表的两类人：即君主的嫔妃姬妾等女子和在君主身边侍奉饮食起居献媚邀宠的男宠宦竖之小人。这两类人都挖空心思讨取君主的欢心，都不择手段，极尽谄媚之能事，也确实是“近之则不孙，远之则怨。”</p>
+<p>　　讨论至此，结论已经得出。我们再用一条佐证来衬托这一结论的可信性。我仔细阅读、翻译、注释《论语》不止一遍，除本章外看不到孔子批评女性的话。在《礼记·哀公问篇》中却看到孔子对于女性的尊重。哀公询问孔子怎样执政时，孔子明确强调要特别重视三个方面，即尊重妻子、尊重儿子、保护好自己的身体。</p>
+<p>　　孔子侍坐于哀公。哀公曰：“敢问人道谁为大？”孔子愀然作色而对曰：“君之及此言也，百姓之德也。故臣敢无辞而对：人道政为大。”公曰：“敢问何谓为政。”孔子对曰：“政者，正也。君为政，则百姓从政矣。君之所为，百姓之所从也。君所不为，百姓何从？”公曰：“敢问为政如之何？”孔子对曰：“夫妇别，父子亲，君臣严。三者正，则庶物从之矣。”公曰：“寡人虽无似也，愿闻所以行三言之道。可得闻乎？”孔子对曰：“古之为政，爱人为大。所以治爱人，礼为大。所以治礼，敬为大。敬之至矣，大昏为大。大昏至矣，大昏既至，冕而亲迎。亲之也，亲之也者。亲之也，是故君子兴敬为亲。舍敬是遗亲也。弗爱不亲，弗敬不正，爱与敬，其政之本与？”……孔子遂言曰：“昔三代明王之政，必敬其妻子也。有道，妻也者，亲之主也。敢不敬与？子也者，亲之后也。敢不敬与？君子无不敬也。敬身为大，身也者，亲之枝也。敢不敬与？不能敬其身，是伤其亲；伤其亲，是伤其本。伤其本，枝从而亡。三者，百姓之象也。身以及身，子以及子，妃以及妃。君行此三者，则忾乎天下矣。大王之道也如此，则国家顺矣。<sup>[12]</sup></p>
+<p>　　为说明问题，我们引用了这段文字。孔子晚年回到鲁国后，非常受尊重和礼遇，这是他回答哀公提问说的话。如果从思想史和政治史角度看，这段对话的“人道政为大”，“政者，正也”的观点都值得特别关注。但我们仅从孔子对待女性这一点来分析。孔子提出，“人道政为大”最大的人道是政治，所谓的政治，就是用“正”来治，来管理。政治的首要问题是正确处理夫妻、夫子、君臣的关系。而首要是夫妻，因此国君要特别重视成婚大礼，要特别敬重亲爱自己的妻子。这是政治的出发点，也是一切关系的出发点。“弗爱不亲，弗敬不正”太精彩了，这是孔子要求国君对待夫人的态度，也是要求一切男人对待自己妻子的态度。如果没有爱的感情就不会亲近，如果没有敬的心理就不会端庄稳重，夫妻关系就不正常。如果夫妻关系不正常，其他关系便很难理顺。从这段文字可以看出孔子将夫妻关系，将对妻子的尊敬亲爱看成是社会伦理关系最重要的关系，而且明确要求国君以及男人要重视敬爱自己的妻子，因此说孔子歧视女性是没有道理的。</p>
+<p>　　再归纳一下：如前文李泽厚先生所说“至于把‘小人’与妇女连在一起，这很难说有什么道理”，而宦竖和姬妾都是国君身边争宠之人，在这个意义上，“女子”和“小人”才可以紧密联系，才算是一类人，才都会“近之则不孙，远之则怨”。同时，“养”字也正好适用于这种人际关系，因为宦竖和姬妾都是国君豢养的人。这样理解，极其合理顺畅，每个字都各得其所。</p>
+<p>　　结论：孔子“唯女子与小人为难养”是在特定背景下发的感慨，是针对南子和雍渠谄媚卫灵公说的，其批评的对象是国君身边争风吃醋的嫔妃姬妾这样的女子和胁肩谄笑变换花样讨好主人的宦竖这类小人，不能以偏概全，用这句话来攻击孔子歧视诬蔑女性。</p>
+<p>参考文献：</p>
+<p>[1]邢昺.《论语注疏》[M]// 阮元《十三经注疏》，北京，中华书局1980。</p>
+<p>[2]刘宝楠.论语正义[M] //诸子集成:第一册.上海:上海书店影印本，1986。</p>
+<p>[3] 朱熹.《四书集注》，[M]，长沙，岳麓书社，1985年3月。</p>
+<p>[4] 康有为《论语注》[M]，北京，中华书局1984年1月。</p>
+<p>[5] 南怀瑾著述.《论语别裁》[M]，复旦大学出版社2007年3月。</p>
+<p>[6] 刘兆伟.《论语通要》[M]，北京，人民教育出版社2008年1月。</p>
+<p>[7] 宿正伯.《道不尽的&lt;论语&gt;》[M]，北京，中国文史出版社2008年1月。</p>
+<p>[8] 司马迁.《史记》[M]，北京，中华书局1959年点校本。</p>
+<p>[9]韩非著 王先慎集解《韩非子集解》[M] //诸子集成:第一册.上海:上海书店影印本，1986。</p>
+<p>[10] 欧阳询.《艺文类聚》[M]，上海，上海古籍出版社1965年。</p>
+<p>[11] 严可均校辑《全上古三代秦汉三国六朝文》[M]，北京，中华书局1958年12月。</p>
+<p>[12]郑玄注 孔颖达疏《礼记正义》[M]// 阮元《十三经注疏》，北京，中华书局1980。</p>
+<p>Spot the Difference: “It’s hard to raise none but women and flunky” in The Analects</p>
+<p>BI Bao-kui<br>（College of Chinese Literature， Liaoning University， Shenyang 110036，China）</p>
+<p>　　Abstract: Posterity gave different explanation on the sentence that it’s hard to raise none but women and flunky in the Analects， which didn’t hit the point whether criticism or maintenance. This paper tries to show the concrete object and type of “women and flunky” and real meaning by researching the background of this sentence.</p>
+<p>　　Key words: Confucius; women and flunky; concubines; eunuch; two types of person</p>
+
+    </article>
+    <!-- license -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="http://ted423.github.io">ted423</a>
+            <p>原文链接：<a href="http://ted423.github.io/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/">http://ted423.github.io/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/</a>
+            <p>发表日期：<a href="http://ted423.github.io/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/">June 19th 2020, 10:46:48 pm</a>
+            <p>更新日期：<a href="http://ted423.github.io/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/">March 13th 2016, 10:08:00 pm</a>
+            <p>版权声明：本站原创内容(一般是语句不通顺的那种)采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可，转载内容以及不带个人观点的分享不在此例</p>
+        </div>
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/" title="[转载]让“中国式的聪明”滚出中国">
+                    <div class="nextTitle">[转载]让“中国式的聪明”滚出中国</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/" title="推荐一些完本的轻小说">
+                    <div class="prevTitle">推荐一些完本的轻小说</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- comment -->
+     
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        
+        var disqus_config = function () {
+        this.page.url = "http://ted423.github.io/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "[转载]《论语》中“唯女子与小人为难养”本义辨析"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://https-ted423-github-io.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
+    
+</main>
+
+                <!-- profile -->
+                
+            </div>
+            <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+        <div class="social">
+            
+    
+        
+    
+        
+            
+                <a href="//github.com/ted423" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+    
+        
+    
+        
+            
+                <a href="//t.me/ted423" class="iconfont-archer telegram" target="_blank" title=telegram></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                <a href="//steamcommunity.com/profiles/76561198285165767/" class="iconfont-archer steam" target="_blank" title=steam></a>
+            
+        
+    
+        
+    
+        
+    
+
+
+        </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- website approve for Chinese user -->
+    
+    <!-- 不蒜子  -->
+    
+        <div class="busuanzi-container">
+            
+             
+                <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+            
+        </div>
+    	
+</footer>
+
+        </div>
+        <!-- toc -->
+        
+            <div class="toc-wrapper" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                
+            </div>
+        
+        <!-- sidebar -->
+        <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+        <div class="sidebar-panel-archives">
+    <!-- 在 ejs 中将 archive 按照时间排序 -->
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 62
+        </div>
+        <!-- search  -->
+        
+            <div class="site-search site-search-loading popup-trigger">
+                <span class="iconfont-archer search-icon">&#xe627;</span>
+            </div>
+        
+    </div>
+    
+    <div class="post-archive">
+    
+        
+            
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/px-pt-em/">[转载]常用px,pt,em换算表</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span>
+            <a class="archive-post-title" href="/Issue/SMB/">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span>
+            <a class="archive-post-title" href="/Issue/samba/">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/08</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad/">文本编辑器类的个人选择</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span>
+            <a class="archive-post-title" href="/Code/Terminal/rsync/">rsync</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/08</span>
+            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Advanced%20Office%20Password%20Recovery/">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Everedit/">[文本编辑器]Everedit - 这才是真正的国产良心</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/CentOS/">CentOS踩坑实录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Connectbot/">[Android]Connectbot - Android terminal</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Google%20Lens/">[Android]Google 智能镜头(Lens) - 二维码扫码软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Moon+/">[Android]最好的epub阅读器 静读天下专业版(Moon+ Reader Pro)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Picture/">[软件推荐]图片类相关软件</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/02</span>
+            <a class="archive-post-title" href="/Windows%20Fast%20Shutdown/">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/WizTree/">[软件推荐]WizTree - 磁盘空间分析</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Compression/Compression-defect/">压缩软件问题记录</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Fonts/">[Font]字体包</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Monospaced%20Font/">等宽字体(Monospaced Font)推荐</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/OS%20X/">对OS X的不满</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Write-box/">Write-box</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">Ubuntu注意事项</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">[转载]让“中国式的聪明”滚出中国</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/">[转载]《论语》中“唯女子与小人为难养”本义辨析</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">推荐一些完本的轻小说</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Impression%20of%20Font/">[Font]Impression of Font</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/source-han-sans/">[Font]思源黑体</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Code/git%20proxy/">Git 设置和取消代理</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Code/pip/">Python pip相关</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUi 远程的一些问题</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/x2go/">[开源]x2go - 远程连接</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/No%20Refs/">不建议使用Refs</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Issue/NtpClient/">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Issue/Kerberos/">Windows域中Kerberos问题造成的共享目录无法访问</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/02</span>
+            <a class="archive-post-title" href="/Software/Windbg/">[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
+        </li>
+    
+    </div>
+</div>
+
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="个人观点">
+                <span class="iconfont-archer">&#xe606;</span>
+                个人观点
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="分类汇总">
+                <span class="iconfont-archer">&#xe606;</span>
+                分类汇总
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="SVG">
+                <span class="iconfont-archer">&#xe606;</span>
+                SVG
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="GPLv2">
+                <span class="iconfont-archer">&#xe606;</span>
+                GPLv2
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="GPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                GPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="MIT">
+                <span class="iconfont-archer">&#xe606;</span>
+                MIT
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Git">
+                <span class="iconfont-archer">&#xe606;</span>
+                Git
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Proxy">
+                <span class="iconfont-archer">&#xe606;</span>
+                Proxy
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Python">
+                <span class="iconfont-archer">&#xe606;</span>
+                Python
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Code">
+                <span class="iconfont-archer">&#xe606;</span>
+                Code
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Document">
+                <span class="iconfont-archer">&#xe606;</span>
+                Document
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="问题处理">
+                <span class="iconfont-archer">&#xe606;</span>
+                问题处理
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows 10">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows 10
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Regedit">
+                <span class="iconfont-archer">&#xe606;</span>
+                Regedit
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Personal Free">
+                <span class="iconfont-archer">&#xe606;</span>
+                Personal Free
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Android">
+                <span class="iconfont-archer">&#xe606;</span>
+                Android
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Software">
+                <span class="iconfont-archer">&#xe606;</span>
+                Software
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="正版">
+                <span class="iconfont-archer">&#xe606;</span>
+                正版
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="破解">
+                <span class="iconfont-archer">&#xe606;</span>
+                破解
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="第三方修改|绿化">
+                <span class="iconfont-archer">&#xe606;</span>
+                第三方修改|绿化
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="大眼仔~旭">
+                <span class="iconfont-archer">&#xe606;</span>
+                大眼仔~旭
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Terminal">
+                <span class="iconfont-archer">&#xe606;</span>
+                Terminal
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Linux">
+                <span class="iconfont-archer">&#xe606;</span>
+                Linux
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="OS X">
+                <span class="iconfont-archer">&#xe606;</span>
+                OS X
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Office">
+                <span class="iconfont-archer">&#xe606;</span>
+                Office
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Document&Texteditor">
+                <span class="iconfont-archer">&#xe606;</span>
+                Document&Texteditor
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Open Source">
+                <span class="iconfont-archer">&#xe606;</span>
+                Open Source
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="AGPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                AGPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Compression">
+                <span class="iconfont-archer">&#xe606;</span>
+                Compression
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="LGPLv2.1">
+                <span class="iconfont-archer">&#xe606;</span>
+                LGPLv2.1
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="烈火">
+                <span class="iconfont-archer">&#xe606;</span>
+                烈火
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="3-clause BSD license">
+                <span class="iconfont-archer">&#xe606;</span>
+                3-clause BSD license
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="字体(Font)">
+                <span class="iconfont-archer">&#xe606;</span>
+                字体(Font)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="SIL Open Font">
+                <span class="iconfont-archer">&#xe606;</span>
+                SIL Open Font
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Ubuntu">
+                <span class="iconfont-archer">&#xe606;</span>
+                Ubuntu
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="转载">
+                <span class="iconfont-archer">&#xe606;</span>
+                转载
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="个人评价">
+                <span class="iconfont-archer">&#xe606;</span>
+                个人评价
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="完结">
+                <span class="iconfont-archer">&#xe606;</span>
+                完结
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="小说">
+                <span class="iconfont-archer">&#xe606;</span>
+                小说
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="过时">
+                <span class="iconfont-archer">&#xe606;</span>
+                过时
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Font">
+                <span class="iconfont-archer">&#xe606;</span>
+                Font
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Remote">
+                <span class="iconfont-archer">&#xe606;</span>
+                Remote
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows Server">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows Server
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows AD">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows AD
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Issue">
+                <span class="iconfont-archer">&#xe606;</span>
+                Issue
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Download&File hosting service">
+                <span class="iconfont-archer">&#xe606;</span>
+                Download&File hosting service
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="roustar31">
+                <span class="iconfont-archer">&#xe606;</span>
+                roustar31
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="macOS">
+                <span class="iconfont-archer">&#xe606;</span>
+                macOS
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="个人观点">
+            <span class="iconfont-archer">&#xe60a;</span>
+            个人观点
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Software">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Software
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Git">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Git
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Code">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Code
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Problem">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Problem
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="System">
+            <span class="iconfont-archer">&#xe60a;</span>
+            System
+        </span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMeta = {
+        root: "/",
+        author: "ted423"
+    }
+</script>
+
+        <!-- main func -->
+        <script src="/scripts/main.js"></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+            <div class="site-search site-search-loading">
+    <div class="algolia-popup popup">
+        <div class="algolia-search">
+            <div class="algolia-search-input-icon">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="algolia-search-input" id="algolia-search-input"></div>
+            <div class="popup-btn-close">
+                <i class="iconfont-archer">&#xe609;</i>
+            </div>
+        </div>
+
+        <div class="algolia-results">
+            <div id="algolia-stats" class="algolia-stats"></div>
+            <div id="algolia-hits"></div>
+            <div id="algolia-pagination" class="algolia-pagination"></div>
+        </div>
+    </div>
+</div>
+
+            <script src="/scripts/search.js" defer></script>
+        
+        <!-- busuanzi -->
+        
+            <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+            <script src="/scripts/share.js" async></script>    
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>
