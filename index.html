@@ -498,10 +498,15 @@
         <article class="index-post">
             <a class="abstract-title" href="/Issue/svn/">
                 
-                <span class="abstract-title-text">[Untitled Post]</span>
+                <span class="abstract-title-text">SVN踩得几个坑</span>
             </a>
             <div class="abstract-content">
-                
+                the server sent a truncated HTTP response bodyhttps://www.jianshu.com/p/ad53304dbdbf印象里这篇文章似乎没啥用，后面是要改appache的设置。
+备份大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果
+
+SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。
+svnadmin dump 出来的文件比服务器上的repo还要大。
+svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，所以记得...
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
@@ -509,6 +514,42 @@
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/29</span>
                 </div>
                 <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/rsync/">
+                
+                <span class="abstract-title-text">rsync</span>
+            </a>
+            <div class="abstract-content">
+                不正常的使用rsync可能会造成灾难性的后果
+rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
+常用参数1234567-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)-u, --update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时间晚于要备份的文件。（不覆盖更新的文件）--ig...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+</div>
+
                 
             </div>
         </article>
@@ -847,45 +888,6 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/git%20proxy/">
-                
-                <span class="abstract-title-text">Git 设置和取消代理</span>
-            </a>
-            <div class="abstract-content">
-                1git config --global http.proxy socks5://127.0.0.1:7890
-1git config --global --unset http.proxy
-吐槽下git的升级连续用了3个裸IPhttps那个没用
-
-似乎可能Win下cmd里用就是会解析成IP丢到代理里(
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/10</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Proxy">Proxy</a>
     
 </div>
 
@@ -1999,7 +2001,7 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/29</span>
-            <a class="archive-post-title" href="/Issue/svn/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
         </li>
     
         

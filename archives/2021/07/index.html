@@ -450,10 +450,15 @@
         <article class="index-post">
             <a class="abstract-title" href="/Issue/svn/">
                 
-                <span class="abstract-title-text">[Untitled Post]</span>
+                <span class="abstract-title-text">SVN踩得几个坑</span>
             </a>
             <div class="abstract-content">
-                
+                the server sent a truncated HTTP response bodyhttps://www.jianshu.com/p/ad53304dbdbf印象里这篇文章似乎没啥用，后面是要改appache的设置。
+备份大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果
+
+SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。
+svnadmin dump 出来的文件比服务器上的repo还要大。
+svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，所以记得...
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
@@ -1851,7 +1856,7 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/29</span>
-            <a class="archive-post-title" href="/Issue/svn/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
         </li>
     
         
