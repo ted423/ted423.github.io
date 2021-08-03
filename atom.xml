@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-07-29T04:06:40.090Z</updated>
+  <updated>2021-08-03T02:45:59.034Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,22 +17,52 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>傻逼微软 记一次关键日志 Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。</title>
+    <link href="http://ted423.github.io/System/Fuck%20Windows/"/>
+    <id>http://ted423.github.io/System/Fuck%20Windows/</id>
+    <published>2021-08-03T01:55:05.724Z</published>
+    <updated>2021-08-03T02:45:59.034Z</updated>
+    
+    <content type="html"><![CDATA[<p>突然看到关键日志其实把我吓了一跳。<br><code>Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。</code><br>想必是电脑快爆炸了。这可把我吓得不行。<br>然后呢，我的注意力就转移到了这“安全和维护”上。这破玩意到底在哪呢？<br>我宇宙无敌人间第一人性化操作系统Windows才不会告诉你我把他放哪了，少年啊，去寻找吧。</p><p>我找了半天终于在计算机右键属性里找到了这玩意(其实找了两次，第一次找到后气的不行然后关了。结果忘了这东西在哪又找了一次。)<br>然后发现一点都不”关键”，因为我关了UAC。<br>电脑是否需要启用UAC我在这里不再做讨论。毕竟Win10系列是你不开UAC通知，但UAC仍然有部分在那里。以至于管理员权限运行的软件读不到网络硬盘。</p><p>总而言之我就是折腾了半天发现这是个屁大的小事。（可以设置取消安全和维护对UAC的检测）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;突然看到关键日志其实把我吓了一跳。&lt;br&gt;&lt;code&gt;Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。&lt;/code&gt;&lt;br&gt;想必是电脑快爆炸了。这可把我吓得不行。&lt;br&gt;然后呢，我的注</summary>
+      
+    
+    
+    
+    <category term="System" scheme="http://ted423.github.io/categories/System/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SVN踩得几个坑</title>
     <link href="http://ted423.github.io/Issue/svn/"/>
     <id>http://ted423.github.io/Issue/svn/</id>
     <published>2021-07-29T02:03:43.287Z</published>
-    <updated>2021-07-29T04:06:40.090Z</updated>
+    <updated>2021-07-29T12:15:37.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="the-server-sent-a-truncated-HTTP-response-body"><a href="#the-server-sent-a-truncated-HTTP-response-body" class="headerlink" title="the server sent a truncated HTTP response body"></a>the server sent a truncated HTTP response body</h1><p><a href="https://www.jianshu.com/p/ad53304dbdbf">https://www.jianshu.com/p/ad53304dbdbf</a><br>印象里这篇文章似乎没啥用，后面是要改appache的设置。</p><h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果</p><ol><li>SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。</li><li>svnadmin dump 出来的文件比服务器上的repo还要大。</li><li>svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，<strong>所以记得一定要开log</strong></li><li>svnadmin hotcopy卡住，网上看跟文件系统有关，大概我用的NTFS</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="The-server-sent-a-truncated-HTTP-response-body"><a href="#The-server-sent-a-truncated-HTTP-response-body" class="headerlink" title="The server sent a truncated HTTP response body"></a>The server sent a truncated HTTP response body</h1><p><a href="https://www.jianshu.com/p/ad53304dbdbf">https://www.jianshu.com/p/ad53304dbdbf</a><br>印象里这篇文章似乎没啥用，后面是要改apache的设置。</p><h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果</p><ol><li>SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。</li><li>svnadmin dump 出来的文件比服务器上的repo还要大。</li><li>svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，<strong>所以记得一定要开log</strong></li><li>svnadmin hotcopy卡住，网上看跟文件系统有关，大概我用的NTFS</li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;the-server-sent-a-truncated-HTTP-response-body&quot;&gt;&lt;a href=&quot;#the-server-sent-a-truncated-HTTP-response-body&quot; class=&quot;headerlink&quot; title=&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;The-server-sent-a-truncated-HTTP-response-body&quot;&gt;&lt;a href=&quot;#The-server-sent-a-truncated-HTTP-response-body&quot; class=&quot;headerlink&quot; title=&quot;</summary>
       
     
     
     
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
   </entry>
   
@@ -235,35 +265,6 @@
   </entry>
   
   <entry>
-    <title>[问题处理]AD相关 时间提供程序 NtpClient 报错处理</title>
-    <link href="http://ted423.github.io/Issue/NtpClient/"/>
-    <id>http://ted423.github.io/Issue/NtpClient/</id>
-    <published>2021-07-20T13:34:12.993Z</published>
-    <updated>2021-07-23T17:42:22.037Z</updated>
-    
-    <content type="html"><![CDATA[<p>报错信息如下<br>“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”</p><p>看到了这篇文章<br><a href="https://shiyousan.com/post/635774974180847748">https://shiyousan.com/post/635774974180847748</a></p><p>有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。<del>(但实际不是，<a href="https://www.azurew.com/windows/windows-server-2016/3098.html">https://www.azurew.com/windows/windows-server-2016/3098.html</a>，也可以不这么设)</del><br>划掉，按个人理解，虽然没有显式的设置以及注明，但实际加域客户端默认都是找AD进行NTP，类似于潜规则。从之前的AD断电导致的客户端时间异常，以及一些相应的文章都表明如此。</p><p><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server">https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server</a></p><p><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings</a><br>还没折腾完，等会再更</p><p>我手头的系统都没有类似设置项，查询的都是看注册表，除了个别设了个内网机子(没报错的那台)<br>别的都是time.windows.com,0x8或0x9，但是ping不通<br>理论上Server自己进行过NTP所以应该能用才是</p><p>说下个人猜测，默认AD域会自动开启NTP Server，注册表里能看到enable，普通电脑默认不开NTP Server。很可能单纯的是网络问题，原先两个域控，我看提示有问题的那个域防火墙开了，但其他工作或者公共的防火墙是关的。<br>而另一台刚好相反，别的都开了，把域防火墙关了……………..</p><hr><p>问题得到了有效的解决<br>之前的是事件报告<br>“时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有效的时间数据。”</p><p>然后基本每条后面跟最前面那种报错报告。<br>似乎成功不会进事件，也就是最后日志只能看到16号的。所以后面应该都成功了。<br>究其原因 123端口是udp的，也就是telnet不通，所以不大好判断。总之是防火墙的锅，所以理论按那个文章写的似乎没有任何意义。<br>也不知道前任是怎么做出这种奇葩配置的，两个防火墙刚好配的相反(域防火墙应该专门针对域里的机子，然后把公用，工作关了就很emmmm)</p><hr><p>又仔细看了下，问题机子还有其他问题，在我来之前已经带病坚持了半年。然后我来了一年，就只动过上面的DHCP</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;报错信息如下&lt;br&gt;“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”&lt;/p&gt;
-&lt;p&gt;看到了这篇文章&lt;br</summary>
-      
-    
-    
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
-    
-    <category term="Windows AD" scheme="http://ted423.github.io/tags/Windows-AD/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</title>
     <link href="http://ted423.github.io/Issue/samba/"/>
     <id>http://ted423.github.io/Issue/samba/</id>
@@ -338,6 +339,35 @@
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]AD相关 时间提供程序 NtpClient 报错处理</title>
+    <link href="http://ted423.github.io/Issue/NtpClient/"/>
+    <id>http://ted423.github.io/Issue/NtpClient/</id>
+    <published>2021-07-16T02:26:06.643Z</published>
+    <updated>2021-08-03T02:07:44.459Z</updated>
+    
+    <content type="html"><![CDATA[<p>报错信息如下<br>“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”</p><p>看到了这篇文章<br><a href="https://shiyousan.com/post/635774974180847748">https://shiyousan.com/post/635774974180847748</a></p><p>有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。<del>(但实际不是，<a href="https://www.azurew.com/windows/windows-server-2016/3098.html">https://www.azurew.com/windows/windows-server-2016/3098.html</a>，也可以不这么设)</del><br>划掉，按个人理解，虽然没有显式的设置以及注明，但实际加域客户端默认都是找AD进行NTP，类似于潜规则。从之前的AD断电导致的客户端时间异常，以及一些相应的文章都表明如此。</p><p><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server">https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server</a></p><p><a href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings</a><br>还没折腾完，等会再更</p><p>我手头的系统都没有类似设置项，查询的都是看注册表，除了个别设了个内网机子(没报错的那台)<br>别的都是time.windows.com,0x8或0x9，但是ping不通<br>理论上Server自己进行过NTP所以应该能用才是</p><p>说下个人猜测，默认AD域会自动开启NTP Server，注册表里能看到enable，普通电脑默认不开NTP Server。很可能单纯的是网络问题，原先两个域控，我看提示有问题的那个域防火墙开了，但其他工作或者公共的防火墙是关的。<br>而另一台刚好相反，别的都开了，把域防火墙关了……………..</p><hr><p><del>问题得到了有效的解决</del><br>之前的是事件报告<br>“时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有效的时间数据。”</p><p>然后基本每条后面跟最前面那种报错报告。<br><del>似乎成功不会进事件，也就是最后日志只能看到16号的。所以后面应该都成功了。</del><br>究其原因 123端口是udp的，也就是telnet不通，所以不大好判断。总之是防火墙的锅，所以理论按那个文章写的似乎没有任何意义。<br>也不知道前任是怎么做出这种奇葩配置的，两个防火墙刚好配的相反(域防火墙应该专门针对域里的机子，然后把公用，工作关了就很emmmm)</p><hr><p>又仔细看了下，问题机子还有其他问题，在我来之前已经带病坚持了半年。然后我来了一年，就只动过上面的DHCP</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;报错信息如下&lt;br&gt;“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”&lt;/p&gt;
+&lt;p&gt;看到了这篇文章&lt;br</summary>
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="Windows AD" scheme="http://ted423.github.io/tags/Windows-AD/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   
@@ -522,36 +552,6 @@
     
     
     <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]7-Zip-zstd 7z增强版</title>
-    <link href="http://ted423.github.io/Software/Compression/7-Zip-zstd/"/>
-    <id>http://ted423.github.io/Software/Compression/7-Zip-zstd/</id>
-    <published>2021-07-01T07:10:41.474Z</published>
-    <updated>2021-07-02T01:32:03.617Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/mcmilk/7-Zip-zstd&quot;&gt;https://github.com/mcmilk/7-Zip-zstd&lt;/a&gt;&lt;br&gt;之前某个群吐槽问7z是不是还是VC6编译，别人给的&lt;br&gt;不会覆盖掉原版的7z&lt;br&gt;总之不</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
-    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
-    
-    <category term="LGPLv2.1" scheme="http://ted423.github.io/tags/LGPLv2-1/"/>
     
   </entry>
   
