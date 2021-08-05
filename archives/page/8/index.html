@@ -448,6 +448,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Kerberos/">
+                
+                <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
+            </a>
+            <div class="abstract-content">
+                参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
+原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
+可以使用如下注册表
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Code/WWW/2unicode/">
                 
                 <span class="abstract-title-text">[Javascript]中文等字符转化为unicode(UTF-16 LE)</span>
@@ -785,45 +824,6 @@ example
 
 个人对代码有调整
 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354ol&#123;	counter-reset: li; /* 初始化计数器 */	list-style: none; /* 移除浏览器默认编号 */	text-shadow: 0 1px 0 rgba(255,25...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CSS">CSS</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/Uncommon%20CSS%20units/">
-                
-                <span class="abstract-title-text">[转载]7个你可能不认识的CSS单位</span>
-            </a>
-            <div class="abstract-content">
-                译：Emma (https://github.com/simaQ/cssfun/issues/1)【如有雷同纯属巧合；如要转载，请注明出处(虽然概率接近于0)】
-注： 原文链接 7 CSS Units You Might Not Know About
-#rem#em被定义为相对于当前对象内文本的字体大小。炒个栗子，如果你给body小哥设置了font-size字体大小，那么body小哥的任何子元素的1em就是等于body设置的font-size。
-1234567891011&lt;body&gt;    &lt;div class=&quot;test&quot;&gt;Test&lt;/...
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
@@ -1367,7 +1367,24 @@ example
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -2062,7 +2079,7 @@ example
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 83
+        Total : 84
         </div>
         <!-- search  -->
         
@@ -2699,6 +2716,12 @@ example
         </li>
     
         
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span>
+            <a class="archive-post-title" href="/Code/Git/Failed%20to%20sync%20this%20branch/">[Git]处理 GitHub - Failed to sync this branch 的问题</a>
+        </li>
+    
+        
             
             
                 
@@ -3247,6 +3270,11 @@ example
                 iOS
             </span>
         
+            <span class="sidebar-tag-name" data-tags="Github">
+                <span class="iconfont-archer">&#xe606;</span>
+                Github
+            </span>
+        
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -3281,6 +3309,11 @@ example
         <span class="sidebar-category-name" data-categories="System">
             <span class="iconfont-archer">&#xe60a;</span>
             System
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Issue">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Issue
         </span>
     
     </div>
