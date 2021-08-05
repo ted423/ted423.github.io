@@ -448,159 +448,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/samba/">
-                
-                <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
-            </a>
-            <div class="abstract-content">
-                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证
-理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
-说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
-12345678910Jul 19 14:16:07 pve smbd[14765]: pam_uni...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/NFS%20Squash/">
-                
-                <span class="abstract-title-text">NFS squash特性相关</span>
-            </a>
-            <div class="abstract-content">
-                写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章大部分都为猜测，未作有效以及查证相关检测。
-在阅读这篇文章之前你需要了解
-
-Linux是多用户操作系统
-用户以及组的保存都是基于id(uid gid)
-root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group里可以看，但是不同的Linux版本可能会有不同
-NIS Server
-Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Remote/vncserver%20-localhost%20no/">
-                
-                <span class="abstract-title-text">vncserver -localhost no</span>
-            </a>
-            <div class="abstract-content">
-                记住这条命令，这是我被坑过最惨的一次。(理论上算是我找了个不错的教程？)第一次能用就没管了，结果重启手动启动连不上。跑vncserver连不上，看了有端口，也没开防火墙，最后仔细查，结果绑在了127.0.0.1上，本机IP带5901连不通。默认localhost yes -&gt; [-localhost yes|no]    Only accept VNC connections from localhost这是脑子多大坑才会有这种设置项。目测是最近出来的？ 不然咋啥教程都不说明
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/NtpClient/">
-                
-                <span class="abstract-title-text">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</span>
-            </a>
-            <div class="abstract-content">
-                报错信息如下“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”
-看到了这篇文章https://shiyousan.com/post/635774974180847748
-有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，https://www.azurew.com/windows/windows-server-2016/3098.html，也可以不这么设)划掉，按个...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/16</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows AD">Windows AD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Software/No%20Refs/">
                 
                 <span class="abstract-title-text">不建议使用Refs</span>
@@ -770,92 +617,13 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
                     <div class= abstract-tags >
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">
-                
-                <span class="abstract-title-text">我为什么仍在使用迅雷</span>
-            </a>
-            <div class="abstract-content">
-                当然啦，毫无疑问迅雷是个傻逼软件。上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。
-不过上个图
-嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。但实际上我尝试过很多次了。完全没有任何意义。但这里必须说清楚了，这种没速度不是单线程或者多线程导致的经常研究出国线路的同学应该很清楚才是。1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。
-至于原理，上个图吧剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/thunder/">
-                
-                <span class="abstract-title-text">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</span>
-            </a>
-            <div class="abstract-content">
-                目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别请特别注意尽量不要在迅雷下载目标文件夹里有部分或全部下载完成文件的情况下，把种子重新添加到迅雷，这个傻逼公司的傻逼开发脑子应该有屎，在你操作正常的情况下也会清掉你已经下载的文件，所以建议先备份或改名相应文件再手动操作
-Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！
-我给的不是最新的，可以去他博客翻下最新的https://www.luochenzhimu.com/?s=thunder
-【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷1...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="第三方修改|绿化">第三方修改|绿化</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
     
 </div>
 
@@ -897,10 +665,245 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         </article>
         <div class="index-post-divider"></div>
     
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/etc/NoQNAP/">
+                
+                <span class="abstract-title-text">请勿购买QNAP</span>
+            </a>
+            <div class="abstract-content">
+                本文属于用啥黑啥系列。在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。然后第二遇到的大概就是群晖的贵了。
+因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。
+那么问题来了，硬件性能好就一定好用么？我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的(网上一堆喊着x86的实际是x86_64)，在其他人的帮助下，我最终在这台破群晖上成功的跑起来了QB的docker，虽然还有点小问题，但是QNAP呢？跑起来了，登不进去。
+目前我用QNAP遇到的...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/03</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Compression/7-Zip-zstd/">
+                
+                <span class="abstract-title-text">[开源]7-Zip-zstd 7z增强版</span>
+            </a>
+            <div class="abstract-content">
+                https://github.com/mcmilk/7-Zip-zstd之前某个群吐槽问7z是不是还是VC6编译，别人给的不会覆盖掉原版的7z总之不错。虽然还没详细用到我能推翻之前的结论另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Compression">Compression</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="LGPLv2.1">LGPLv2.1</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Document&Texteditor/notepad/">
+                
+                <span class="abstract-title-text">文本编辑器类的个人选择</span>
+            </a>
+            <div class="abstract-content">
+                本博有俩文本编辑器，其实我用过很多，所以就写写最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。
+之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Compression/Compression-defect/">
+                
+                <span class="abstract-title-text">压缩软件问题记录</span>
+            </a>
+            <div class="abstract-content">
+                #Bandzip无法对7z文件进行直接修改。
+#Peazip
+
+无法选取多个文件进行压缩(2021-06-24未测试)
+8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内
+强烈不建议使用
+
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/24</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Compression">Compression</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/thunder/">
+                
+                <span class="abstract-title-text">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</span>
+            </a>
+            <div class="abstract-content">
+                目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别请特别注意尽量不要在迅雷下载目标文件夹里有部分或全部下载完成文件的情况下，把种子重新添加到迅雷，这个傻逼公司的傻逼开发脑子应该有屎，在你操作正常的情况下也会清掉你已经下载的文件，所以建议先备份或改名相应文件再手动操作
+Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！
+我给的不是最新的，可以去他博客翻下最新的https://www.luochenzhimu.com/?s=thunder
+【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷1...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="第三方修改|绿化">第三方修改|绿化</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">
+                
+                <span class="abstract-title-text">我为什么仍在使用迅雷</span>
+            </a>
+            <div class="abstract-content">
+                当然啦，毫无疑问迅雷是个傻逼软件。上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。
+不过上个图
+嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。但实际上我尝试过很多次了。完全没有任何意义。但这里必须说清楚了，这种没速度不是单线程或者多线程导致的经常研究出国线路的同学应该很清楚才是。1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。
+至于原理，上个图吧剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/2021/">&lt; PREV</a><a class="page-number" href="/archives/2021/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2021/page/3/">3</a><a class="page-number" href="/archives/2021/page/4/">4</a><a class="extend next" rel="next" href="/archives/2021/page/3/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/2021/">&lt; PREV</a><a class="page-number" href="/archives/2021/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2021/page/3/">3</a><a class="extend next" rel="next" href="/archives/2021/page/3/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -1371,7 +1374,30 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1924,7 +1950,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 74
+        Total : 75
         </div>
         <!-- search  -->
         
@@ -1939,147 +1965,12 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
             
             
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/px-pt-em/">[转载]常用px,pt,em换算表</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad/">文本编辑器类的个人选择</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/08</span>
-            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Advanced%20Office%20Password%20Recovery/">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Everedit/">[文本编辑器]Everedit - 这才是真正的国产良心</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Android/Connectbot/">[Android]Connectbot - Android terminal</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Android/Google%20Lens/">[Android]Google 智能镜头(Lens) - 二维码扫码软件</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Android/Moon+/">[Android]最好的epub阅读器 静读天下专业版(Moon+ Reader Pro)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Picture/">[软件推荐]图片类相关软件</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2019 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/02</span>
+            <span class="archive-post-date">06/15</span>
             <a class="archive-post-title" href="/Windows%20Fast%20Shutdown/">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</a>
         </li>
     
@@ -2089,43 +1980,13 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 
                 </ul>
             
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/WizTree/">[软件推荐]WizTree - 磁盘空间分析</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Compression/Compression-defect/">压缩软件问题记录</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+            <a class="archive-post-title" href="/Code/WWW/Uncommon%20CSS%20units/">[Untitled Post]</a>
         </li>
     
         
@@ -2140,172 +2001,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Fonts/">[Font]字体包</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Monospaced%20Font/">等宽字体(Monospaced Font)推荐</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/OS%20X/">对OS X的不满</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Write-box/">Write-box</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">Ubuntu注意事项</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">[转载]让“中国式的聪明”滚出中国</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/">[转载]《论语》中“唯女子与小人为难养”本义辨析</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">推荐一些完本的轻小说</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Impression%20of%20Font/">[Font]Impression of Font</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/source-han-sans/">[Font]思源黑体</a>
+            <a class="archive-post-title" href="/px-pt-em/">[转载]常用px,pt,em换算表</a>
         </li>
     
         
@@ -2350,124 +2046,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUi 远程的一些问题</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Remote/x2go/">[开源]x2go - 远程连接</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/29</span>
-            <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/26</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/CentOS/">CentOS踩坑实录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/No%20Refs/">不建议使用Refs</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
+            <a class="archive-post-title" href="/Issue/Kerberos/">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</a>
         </li>
     
         
@@ -2496,8 +2075,26 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/24</span>
+            <span class="archive-post-date">07/29</span>
+            <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span>
             <a class="archive-post-title" href="/Issue/SMB/">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span>
+            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
         </li>
     
         
@@ -2518,7 +2115,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/Kerberos/">Windows域中Kerberos问题造成的共享目录无法访问</a>
+            <a class="archive-post-title" href="/Software/No%20Refs/">不建议使用Refs</a>
         </li>
     
         
@@ -2532,20 +2129,8 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/08</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/08</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
         </li>
     
         
@@ -2560,13 +2145,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+            <a class="archive-post-title" href="/Software/Picture/">[软件推荐]图片类相关软件</a>
         </li>
     
         
@@ -2581,7 +2160,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
+            <a class="archive-post-title" href="/Software/Windbg/">[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
         </li>
     
         
@@ -2596,58 +2175,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/26</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/18</span>
-            <a class="archive-post-title" href="/Code/Terminal/rsync/">rsync</a>
+            <a class="archive-post-title" href="/Software/WizTree/">[软件推荐]WizTree - 磁盘空间分析</a>
         </li>
     
         
@@ -2659,18 +2187,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/2unicode/">[javascript]中文等字符转化为unicode(UTF-16 LE)</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -2680,52 +2196,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/CSS-middle/">[转]CSS布局奇淫技巧之--各种居中</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/itemscope/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/UTF-8/">UTF-8编码解码</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2019 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/02</span>
-            <a class="archive-post-title" href="/Software/Windbg/">[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
+            <a class="archive-post-title" href="/System/CentOS/">CentOS踩坑实录</a>
         </li>
     
         
@@ -2755,7 +2226,226 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/Uncommon%20CSS%20units/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Fonts/">[Font]字体包</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Impression%20of%20Font/">[Font]Impression of Font</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Monospaced%20Font/">等宽字体(Monospaced Font)推荐</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/OS%20X/">对OS X的不满</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">Ubuntu注意事项</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Write-box/">Write-box</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/source-han-sans/">[Font]思源黑体</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">[转载]让“中国式的聪明”滚出中国</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span>
+            <a class="archive-post-title" href="/Code/Terminal/rsync/">rsync</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/2unicode/">[javascript]中文等字符转化为unicode(UTF-16 LE)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/CSS-middle/">[转]CSS布局奇淫技巧之--各种居中</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/itemscope/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/UTF-8/">[javascript]UTF-8编码解码</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">[Untitled Post]</a>
         </li>
     
         
@@ -2773,20 +2463,386 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             <a class="archive-post-title" href="/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/">[Untitled Post]</a>
         </li>
     
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad/">文本编辑器类的个人选择</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/08</span>
+            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Advanced%20Office%20Password%20Recovery/">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Everedit/">[文本编辑器]Everedit - 这才是真正的国产良心</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Connectbot/">[Android]Connectbot - Android terminal</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Google%20Lens/">[Android]Google 智能镜头(Lens) - 二维码扫码软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Moon+/">[Android]最好的epub阅读器 静读天下专业版(Moon+ Reader Pro)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Compression/Compression-defect/">压缩软件问题记录</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUi 远程的一些问题</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/x2go/">[开源]x2go - 远程连接</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/">[转载]《论语》中“唯女子与小人为难养”本义辨析</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">推荐一些完本的轻小说</a>
+        </li>
+    
     </div>
 </div>
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
         
-            <span class="sidebar-tag-name" data-tags="个人观点">
+            <span class="sidebar-tag-name" data-tags="问题处理">
                 <span class="iconfont-archer">&#xe606;</span>
-                个人观点
+                问题处理
             </span>
         
             <span class="sidebar-tag-name" data-tags="Windows">
                 <span class="iconfont-archer">&#xe606;</span>
                 Windows
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows 10">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows 10
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Regedit">
+                <span class="iconfont-archer">&#xe606;</span>
+                Regedit
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Document">
+                <span class="iconfont-archer">&#xe606;</span>
+                Document
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Code">
+                <span class="iconfont-archer">&#xe606;</span>
+                Code
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Git">
+                <span class="iconfont-archer">&#xe606;</span>
+                Git
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Proxy">
+                <span class="iconfont-archer">&#xe606;</span>
+                Proxy
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Python">
+                <span class="iconfont-archer">&#xe606;</span>
+                Python
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Issue">
+                <span class="iconfont-archer">&#xe606;</span>
+                Issue
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows Server">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows Server
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows AD">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows AD
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Open Source">
+                <span class="iconfont-archer">&#xe606;</span>
+                Open Source
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Linux">
+                <span class="iconfont-archer">&#xe606;</span>
+                Linux
             </span>
         
             <span class="sidebar-tag-name" data-tags="分类汇总">
@@ -2814,44 +2870,9 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 MIT
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Git">
+            <span class="sidebar-tag-name" data-tags="转载">
                 <span class="iconfont-archer">&#xe606;</span>
-                Git
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Proxy">
-                <span class="iconfont-archer">&#xe606;</span>
-                Proxy
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Python">
-                <span class="iconfont-archer">&#xe606;</span>
-                Python
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Code">
-                <span class="iconfont-archer">&#xe606;</span>
-                Code
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Document">
-                <span class="iconfont-archer">&#xe606;</span>
-                Document
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="问题处理">
-                <span class="iconfont-archer">&#xe606;</span>
-                问题处理
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Windows 10">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows 10
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Regedit">
-                <span class="iconfont-archer">&#xe606;</span>
-                Regedit
+                转载
             </span>
         
             <span class="sidebar-tag-name" data-tags="Personal Free">
@@ -2859,89 +2880,14 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 Personal Free
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Android">
+            <span class="sidebar-tag-name" data-tags="个人观点">
                 <span class="iconfont-archer">&#xe606;</span>
-                Android
+                个人观点
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Software">
+            <span class="sidebar-tag-name" data-tags="Font">
                 <span class="iconfont-archer">&#xe606;</span>
-                Software
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="正版">
-                <span class="iconfont-archer">&#xe606;</span>
-                正版
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="破解">
-                <span class="iconfont-archer">&#xe606;</span>
-                破解
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="第三方修改|绿化">
-                <span class="iconfont-archer">&#xe606;</span>
-                第三方修改|绿化
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="大眼仔~旭">
-                <span class="iconfont-archer">&#xe606;</span>
-                大眼仔~旭
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Terminal">
-                <span class="iconfont-archer">&#xe606;</span>
-                Terminal
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Linux">
-                <span class="iconfont-archer">&#xe606;</span>
-                Linux
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="OS X">
-                <span class="iconfont-archer">&#xe606;</span>
-                OS X
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Office">
-                <span class="iconfont-archer">&#xe606;</span>
-                Office
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Document&Texteditor">
-                <span class="iconfont-archer">&#xe606;</span>
-                Document&Texteditor
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Open Source">
-                <span class="iconfont-archer">&#xe606;</span>
-                Open Source
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="AGPLv3">
-                <span class="iconfont-archer">&#xe606;</span>
-                AGPLv3
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Compression">
-                <span class="iconfont-archer">&#xe606;</span>
-                Compression
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="LGPLv2.1">
-                <span class="iconfont-archer">&#xe606;</span>
-                LGPLv2.1
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="烈火">
-                <span class="iconfont-archer">&#xe606;</span>
-                烈火
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="3-clause BSD license">
-                <span class="iconfont-archer">&#xe606;</span>
-                3-clause BSD license
+                Font
             </span>
         
             <span class="sidebar-tag-name" data-tags="字体(Font)">
@@ -2954,29 +2900,14 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 SIL Open Font
             </span>
         
+            <span class="sidebar-tag-name" data-tags="OS X">
+                <span class="iconfont-archer">&#xe606;</span>
+                OS X
+            </span>
+        
             <span class="sidebar-tag-name" data-tags="Ubuntu">
                 <span class="iconfont-archer">&#xe606;</span>
                 Ubuntu
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="转载">
-                <span class="iconfont-archer">&#xe606;</span>
-                转载
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="个人评价">
-                <span class="iconfont-archer">&#xe606;</span>
-                个人评价
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="完结">
-                <span class="iconfont-archer">&#xe606;</span>
-                完结
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="小说">
-                <span class="iconfont-archer">&#xe606;</span>
-                小说
             </span>
         
             <span class="sidebar-tag-name" data-tags="过时">
@@ -2984,44 +2915,14 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 过时
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Font">
+            <span class="sidebar-tag-name" data-tags="个人评价">
                 <span class="iconfont-archer">&#xe606;</span>
-                Font
+                个人评价
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Remote">
+            <span class="sidebar-tag-name" data-tags="Terminal">
                 <span class="iconfont-archer">&#xe606;</span>
-                Remote
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Windows Server">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows Server
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Windows AD">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows AD
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Issue">
-                <span class="iconfont-archer">&#xe606;</span>
-                Issue
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Download&File hosting service">
-                <span class="iconfont-archer">&#xe606;</span>
-                Download&File hosting service
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="roustar31">
-                <span class="iconfont-archer">&#xe606;</span>
-                roustar31
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="macOS">
-                <span class="iconfont-archer">&#xe606;</span>
-                macOS
+                Terminal
             </span>
         
             <span class="sidebar-tag-name" data-tags="javascript">
@@ -3044,6 +2945,106 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 CSS
             </span>
         
+            <span class="sidebar-tag-name" data-tags="Android">
+                <span class="iconfont-archer">&#xe606;</span>
+                Android
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Software">
+                <span class="iconfont-archer">&#xe606;</span>
+                Software
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="破解">
+                <span class="iconfont-archer">&#xe606;</span>
+                破解
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="第三方修改|绿化">
+                <span class="iconfont-archer">&#xe606;</span>
+                第三方修改|绿化
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="大眼仔~旭">
+                <span class="iconfont-archer">&#xe606;</span>
+                大眼仔~旭
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="正版">
+                <span class="iconfont-archer">&#xe606;</span>
+                正版
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Compression">
+                <span class="iconfont-archer">&#xe606;</span>
+                Compression
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="LGPLv2.1">
+                <span class="iconfont-archer">&#xe606;</span>
+                LGPLv2.1
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="烈火">
+                <span class="iconfont-archer">&#xe606;</span>
+                烈火
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Document&Texteditor">
+                <span class="iconfont-archer">&#xe606;</span>
+                Document&Texteditor
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Office">
+                <span class="iconfont-archer">&#xe606;</span>
+                Office
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="AGPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                AGPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="3-clause BSD license">
+                <span class="iconfont-archer">&#xe606;</span>
+                3-clause BSD license
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Download&File hosting service">
+                <span class="iconfont-archer">&#xe606;</span>
+                Download&File hosting service
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="roustar31">
+                <span class="iconfont-archer">&#xe606;</span>
+                roustar31
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="macOS">
+                <span class="iconfont-archer">&#xe606;</span>
+                macOS
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Remote">
+                <span class="iconfont-archer">&#xe606;</span>
+                Remote
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="完结">
+                <span class="iconfont-archer">&#xe606;</span>
+                完结
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="小说">
+                <span class="iconfont-archer">&#xe606;</span>
+                小说
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Javascript">
+                <span class="iconfont-archer">&#xe606;</span>
+                Javascript
+            </span>
+        
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -3055,14 +3056,9 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Software">
+        <span class="sidebar-category-name" data-categories="Problem">
             <span class="iconfont-archer">&#xe60a;</span>
-            Software
-        </span>
-    
-        <span class="sidebar-category-name" data-categories="Git">
-            <span class="iconfont-archer">&#xe60a;</span>
-            Git
+            Problem
         </span>
     
         <span class="sidebar-category-name" data-categories="Code">
@@ -3070,9 +3066,14 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             Code
         </span>
     
-        <span class="sidebar-category-name" data-categories="Problem">
+        <span class="sidebar-category-name" data-categories="Git">
             <span class="iconfont-archer">&#xe60a;</span>
-            Problem
+            Git
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Software">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Software
         </span>
     
         <span class="sidebar-category-name" data-categories="System">

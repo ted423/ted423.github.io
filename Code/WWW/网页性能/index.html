@@ -527,8 +527,7 @@
 <hr>
 <h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2><p>有些性能相关的事情几乎所有的设计师和前端工程师都会知道，比如尽量减少请求的数量，优化图片，把样式表放在<code>&lt;head&gt;</code>里，把JS放在<code>&lt;/body&gt;</code>之前，压缩处理JS和CSS文件等。这些基础的东西已经给用户带来了更快的浏览体验，不过这些只是沧海一粟罢了。</p>
 <p>需要注意的很重要的一点是：那些每天虐我们千百遍的浏览器是很聪明的。它们会暗自帮你做一大堆优化工作，所以很多的有关性能优化工作需要去了解浏览器会在哪些地方做文章，并且如何最大化利用这一点。不少有关性能调优技巧仅仅去从理解、利用和操控那些浏览器已经给我们做的东西入手。</p>
-<p>###样式放顶部，脚本放底部</p>
-<p>这是非常基础而又很容易被应用的规则，但是为什么它有作用呢？简要的说是这样的：</p>
+<h3 id="样式放顶部，脚本放底部"><a href="#样式放顶部，脚本放底部" class="headerlink" title="样式放顶部，脚本放底部"></a>样式放顶部，脚本放底部</h3><p>这是非常基础而又很容易被应用的规则，但是为什么它有作用呢？简要的说是这样的：</p>
 <ul>
 <li><strong>CSS会阻塞浏览器的渲染</strong>，所以你需要马上去处理它（即：放在文档头部<code>&lt;head&gt;</code>里）</li>
 <li><strong>JS会阻塞下载</strong>，所以为了防止它们耽搁页面上其它东西的显示你需要将其放到最后的地方。</li>
@@ -567,15 +566,13 @@
 <li>尽量的减少请求的数目</li>
 <li>由不同的域来提供资源可以使浏览器同时下载资源的数目最大化</li>
 </ul>
-<p>##HTTP请求和DNS查找</p>
-<p>每当你从任意的域请求一个资源的时候，一个有相关头部信息的HTTP请求便发出，资源被找到，获得响应。这是一个简化了很多的过程，但是整个过程差不多就是这样。对于这样的一个HTTP请求，所有相关的资源都在这个往返的过程中涉及到。这些请求正是前端性能的主要瓶颈所在，因为正如我们说过的，浏览器被并发的请求数量所限制。这就是为什么我们会常用子域名，进而使这些请求发生在不同的域上，增大请求并发的数量。</p>
+<h2 id="HTTP请求和DNS查找"><a href="#HTTP请求和DNS查找" class="headerlink" title="HTTP请求和DNS查找"></a>HTTP请求和DNS查找</h2><p>每当你从任意的域请求一个资源的时候，一个有相关头部信息的HTTP请求便发出，资源被找到，获得响应。这是一个简化了很多的过程，但是整个过程差不多就是这样。对于这样的一个HTTP请求，所有相关的资源都在这个往返的过程中涉及到。这些请求正是前端性能的主要瓶颈所在，因为正如我们说过的，浏览器被并发的请求数量所限制。这就是为什么我们会常用子域名，进而使这些请求发生在不同的域上，增大请求并发的数量。</p>
 <p>不过这样做有会有一个问题，就是DNS查询。每一次（没有被缓存的）一个新的域被引用，相应的HTTP请求会受累于一个耗时不短的DNS查询（差不多20到120ms的一个时间）来确定资源真实的所在地。Internet由一个个IP地址连接，而可以由域名来引用，而DNS则管理这样一个对应的系统。</p>
 <p>若每个被引用的新的域都在DNS查找上先花费时间的话，你最好确认这个花费是值得的。如果是一个小站（比如CSS Wizardry），那么由子域提供资源则有点不值得了。浏览器也许在从一个域下并发获取资源的耗时会比在多的域下执行DNS查找后并发获取的时间要短。</p>
 <p>如果你有一大堆资源需要获取，那么你也许可以考虑将这些资源放在多个子域下，多出来的DNS查询时间对于更多的并发下载数目来说可能是值得的。如果你有比如40个资源，将它们放在两个子域下或许是很值得的，两次额外的DNS查询总共三个域给网站提供服务还是比较划算的。</p>
 <p>DNS查询的代价很高，因此你需要确定上面的那种方案更适合你的网站：花些时间在DNS的查找上还是把所有的东西放在一个域下。</p>
 <p>很重要的一点是一旦HTML从比如<code>foo.com</code>获取到后，对这个域的DNS查找已经发生过了，所以接下来所有到foo.com的请求不会再受制于DNS查询了。</p>
-<p>###DNS预获取</p>
-<p>如果你像我这样在网站上会放一些比如Twitter的控件、Analytics，亦或是Web字体，那么你将不得不链到这样的外部网站，而这时会引发DNS查找的。我的建议是一般在没有仔细考虑这些东西对性能的影响之前不要轻易使用它们，但是如果你是真的需要用到的话，下面的技巧会有些作用……</p>
+<h3 id="DNS预获取"><a href="#DNS预获取" class="headerlink" title="DNS预获取"></a>DNS预获取</h3><p>如果你像我这样在网站上会放一些比如Twitter的控件、Analytics，亦或是Web字体，那么你将不得不链到这样的外部网站，而这时会引发DNS查找的。我的建议是一般在没有仔细考虑这些东西对性能的影响之前不要轻易使用它们，但是如果你是真的需要用到的话，下面的技巧会有些作用……</p>
 <p>由于这些东西在其它的域上，这就意味着，比如你的Web字体相关的CSS将会和你自己网站上的CSS同时被下载，当然这是一个好的方面，但是脚本任然会阻塞（除非脚本的加载是<a target="_blank" rel="noopener" href="http://css-tricks.com/thinking-async/">异步</a>的）。</p>
 <p>这里真正的问题是DNS查找会牵扯到第三方的域名。不过幸运的是，有一种超快并、简单的方法来加速这个过程：DNS预获取。</p>
 <p>DNS预获取就跟上面所描述的那样，能够被非常简单的实现。如果你需要从，比如<code>widget.foo.com</code>获取资源的话，你可以通过简单的在<code>&lt;head&gt;</code>里加入下面的片段来预先获取提供者的DNS：</p>
@@ -583,12 +580,10 @@
 
 <p>这行简单的单面会告诉那些支持DNS预获取的浏览器在需要资源前先去查找相关域名的DNS。这意味着当浏览器处理到相应插件的<code>&lt;script&gt;</code>元素的时候DNS查询已经完成了。它给了浏览器一个小起步。</p>
 <p>这个简单的link元素（<a target="_blank" rel="noopener" href="https://github.com/csswizardry/csswizardry.github.com/blob/b52472cea6a0f087944afda750839d7c96fab7d3/_layouts/default.html#L7-L15">我用在了CSS Wizardry上</a>）是一个完全向后兼容的，并且不会带来任何的性能影响。想想它能够带来多大的性能提升吧！</p>
-<p>###深入阅读</p>
-<ul>
+<h3 id="深入阅读"><a href="#深入阅读" class="headerlink" title="深入阅读"></a>深入阅读</h3><ul>
 <li><a target="_blank" rel="noopener" href="http://calendar.perfplanet.com/2012/speed-up-your-site-using-prefetching/">Speed Up Your Site Using Prefetching</a></li>
 </ul>
-<p>##资源预获取</p>
-<p>和DNS预获取一样，对网站的任何资源的预获取也很简单。为了明确那些资源是我们需要预获取的，我们必须首先了解浏览器是怎样在核实请求一个资源的。</p>
+<h2 id="资源预获取"><a href="#资源预获取" class="headerlink" title="资源预获取"></a>资源预获取</h2><p>和DNS预获取一样，对网站的任何资源的预获取也很简单。为了明确那些资源是我们需要预获取的，我们必须首先了解浏览器是怎样在核实请求一个资源的。</p>
 <p>CSS里面引用的Web字体和图片的表现大体上有相同。浏览器在处理到一段需要这些资源的HTML的文件时才会去开始获取它们。就如我之前所说的，这是浏览器非常聪明的一个例子。想象一下如果浏览器处理那些引用图片CSS的时候在声明的地方就开始下载这些图片：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.page--home</span>         &#123; <span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">home.jpg</span>); &#125;</span><br><span class="line"><span class="selector-class">.page--about</span>        &#123; <span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">about.jpg</span>); &#125;</span><br><span class="line"><span class="selector-class">.page--portfolio</span>    &#123; <span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">portfolio.jpg</span>); &#125;</span><br><span class="line"><span class="selector-class">.page--contact</span>      &#123; <span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">contact.jpg</span>); &#125;</span><br></pre></td></tr></table></figure>
 
@@ -602,12 +597,10 @@
 <p>我提过字体和图片的表现是差不多的，上面的那条规则对字体文件同样使用，不过你不能通过隐藏的div载入一个字体（需要通过预获取的link）。</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;webfont.woff&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>所以基本上我们这里做的就是对浏览器耍些花招让它提前下载资源，到应用我们的CSS的时候，就可以直接使用已经下载好的资源了（或者正在下载中）。漂亮！</p>
-<p>###深入阅读</p>
-<ul>
+<h3 id="深入阅读-1"><a href="#深入阅读-1" class="headerlink" title="深入阅读"></a>深入阅读</h3><ul>
 <li><a target="_blank" rel="noopener" href="http://calendar.perfplanet.com/2012/speed-up-your-site-using-prefetching/">Speed Up Your Site Using Prefetching</a></li>
 </ul>
-<p>##CSS与性能</p>
-<p>很多的建议都有说道如果使用资源域，你应该将所有的静态资源都放在上面。包括了CSS，JS，图片等。</p>
+<h2 id="CSS与性能"><a href="#CSS与性能" class="headerlink" title="CSS与性能"></a>CSS与性能</h2><p>很多的建议都有说道如果使用资源域，你应该将所有的静态资源都放在上面。包括了CSS，JS，图片等。</p>
 <p>不过我们在工作中发现，你不应当由资源子域提供CSS文件……</p>
 <p>还记得之前我们讨论过CSS是怎样阻塞页面渲染的？浏览器希望尽快的获得你的CSS文件，越快越好。CSS是条关键路径。所谓关键路径是从用户发起请求到真正的在浏览器上看到什么东西的一条必经之路。正是由于它阻塞了渲染，CSS才是关键路径，JS和图片则不是。你所希望的是使这条路走的尽量快，所以最好没有DNS的查询。</p>
 <p>在工作中，我们创建了这样一个网站，在接近线上的环境里所有资源全放在一个主机（比如<code>foo.com</code>）下，不过当这个环境变得更像真实的场景的时候，我们有奖所有的资源放到了<code>s1.foo.com</code>和<code>s2.foo.com</code>下。也就是说所有的图片、JS、CSS、字体等都从这两个域下获取，这样引发了DNS的查询。问题在于，在查询缓存失败情况下，为了开始获取CSS文件而必须经历的DNS查询会拖慢这条关键路径的节奏。我们的图片大片的不清楚，说明出现了理应不存来的时延。最佳实践告诉我们应该将这些资源全放在子域上，不是么？不过不包括CSS。DNS查询耗费了大段的时间从而拖慢了整个网页的渲染。</p>
@@ -626,8 +619,7 @@
 <ul>
 <li><a target="_blank" rel="noopener" href="http://www.phpied.com/css-and-the-critical-path/">CSS and the critial path</a></li>
 </ul>
-<p>##压缩和最小化</p>
-<p>这是两个你能（并且应该）对文字类资源做的事情。去除多余的空格和注释来最小化，通过压缩进一步缩减文件的大小。</p>
+<h2 id="压缩和最小化"><a href="#压缩和最小化" class="headerlink" title="压缩和最小化"></a>压缩和最小化</h2><p>这是两个你能（并且应该）对文字类资源做的事情。去除多余的空格和注释来最小化，通过压缩进一步缩减文件的大小。</p>
 <p>如果两者选其一的话，仅压缩会比最小化更高效。不过，你应该尽量两个都用。</p>
 <p>将gzip压缩打开通常需要一些.htaccess的技巧，不过我的好朋友Nick Payne指出，.htaccess从服务器端来看并不是特别好的方式，这是因为每次有新的请求时.htaccess都会被计算一次，所以实际上会有很大的消耗。</p>
 <p>下面摘自<a target="_blank" rel="noopener" href="http://httpd.apache.org/docs/2.2/howto/htaccess.html">Apache的官方文档</a>：</p>
@@ -640,16 +632,15 @@
 <p>Gzip，正如其它的压缩算法一样，将任何文本输入通过对重复的/可重复的字符串操作而达到压缩效果。很多有重复字符串的代码都能够很高效地通过gzip进行压缩。比如：CSS文件里面重复的<code>backgrounnd-image</code>，HTML里面的<code>&lt;strong&gt;</code>标签。</p>
 <p>Gzip能够很明显地减小文件的大小，你应该毫无疑问地启用它。<a target="_blank" rel="noopener" href="https://github.com/h5bp/html5-boilerplate/blob/dac15682b35ad69f519205e1b82694d0cab189ca/.htaccess#L153">这里</a>有个很好的.htaccess文件作为模板。</p>
 <p>压缩你的内容会节省大量的资源。在写这篇文章的时候，inuit.css大约有77kb。压缩后打大小只有5.52kb。最小化和压缩后的给我们减少93%的体积。并且由于gzip在文本文件上效果不错，你甚至可以对SVG和字体文件得到不错的压缩结果！</p>
-<p>##图片优化</p>
-<p>除了使用一些优化工具外，我对优化图片的艺术了解的并不是很多，不过在处理图片上包括后期处理是一个很有趣的主题。</p>
-<p>###Spriting<br>CSS sprite技术对于一个高性能的网站是必不可少的，通过一个HTTP请求加载一张大的图片而不要通过几个请求加载几张小图。然而问题在于不是所有的图片是能够被切分放入sprite中。你也许需要一个图标作为一个不定宽度元素的背景，不过你显然不能将器sprite化，因为sprite在非固定宽度的元素上不那么好用。也许你可以用空白来填充图标左右的空间，但这些被浪费的像素又会会造成其它的性能问题</p>
+<h2 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h2><p>除了使用一些优化工具外，我对优化图片的艺术了解的并不是很多，不过在处理图片上包括后期处理是一个很有趣的主题。</p>
+<h3 id="Spriting"><a href="#Spriting" class="headerlink" title="Spriting"></a>Spriting</h3><p>CSS sprite技术对于一个高性能的网站是必不可少的，通过一个HTTP请求加载一张大的图片而不要通过几个请求加载几张小图。然而问题在于不是所有的图片是能够被切分放入sprite中。你也许需要一个图标作为一个不定宽度元素的背景，不过你显然不能将器sprite化，因为sprite在非固定宽度的元素上不那么好用。也许你可以用空白来填充图标左右的空间，但这些被浪费的像素又会会造成其它的性能问题</p>
 <p>为了解决这些不能sprite化的元素，我们需要被称为“spriting元素”的东西。它基本上是一个空元素，一般用<code>&lt;i&gt;</code>，它的作用就是一个带有背景的空元素。</p>
 <p>在我开发Sky Bet、YouTube这样用，Facebook这样用，Jonathan Snook在SMACSS里有一大段都是它们。</p>
 <p>基本的做法是，如果你不能将一个宽度不固定元素sprite化，那么就插入一个宽高确定的空元素，这样你就可是使用sprite技术了，比如这样：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/profile/&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;icon  icon--person&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> Profile</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>在这里，我们不能sprite化<code>&lt;li&gt;</code>元素或者<code>&lt;a&gt;</code>元素，因此，我们在其中插入一个将图标作为背景的空<code>&lt;i&gt;</code>元素。这是我关于性能最喜欢的事情之一，将优化性能的聪明做法和传统的“坏”标记结合起来。真是有趣！</p>
-<p>###Retina下的图片<br>你不需要将所有的图片都适应Retina屏幕。一个2x的图片包含有标准图片4倍的像素。四 倍 像 素。当然这不是说在传输的时候也是四倍大小-感谢图片自身的编码格式-不过这意味着一旦图片被解压缩并由浏览器渲染出来，4倍相对于标准图片大小内存将被占用。</p>
+<h3 id="Retina下的图片"><a href="#Retina下的图片" class="headerlink" title="Retina下的图片"></a>Retina下的图片</h3><p>你不需要将所有的图片都适应Retina屏幕。一个2x的图片包含有标准图片4倍的像素。四 倍 像 素。当然这不是说在传输的时候也是四倍大小-感谢图片自身的编码格式-不过这意味着一旦图片被解压缩并由浏览器渲染出来，4倍相对于标准图片大小内存将被占用。</p>
 <p>如果我们好好思考一下，retina图片多数(即使不总是)是作为手机上高保真的UI组件显示的。手机的内存通常会比其它终端要少。Retina这烧内存的东西居然主要是提供给那些内存不那么多的终端用的……在你决定是否要全盘使用retina图片一定要三思啊，或者你可以做些明智的妥协？</p>
 <p>视网膜屏幕（Retina）是很好的东西，清晰的体验，不过如果要花5秒去下载换得这样的体验是不值得的。在大多数情况下，速度要胜于美学。</p>
 <p>你可以聪明地给所有的终端提供1.5x大小的图片，以换取还算好的图片体现，不过我觉得最好的选择还是谨慎使用retina图片。</p>
@@ -660,22 +651,19 @@
 <li>可压缩</li>
 </ul>
 <p>工作中Matt Allen给我们做了一套图标字体，能够能和sprite元素一起提供retine支持可缩放的图标。</p>
-<p>###渐进显示的JPG</p>
-<p>性能的一个有趣的方面是从人的感知所体现的。不是数字反应出来的东西，而是感觉上一个网站的载入速度有多快。</p>
+<h3 id="渐进显示的JPG"><a href="#渐进显示的JPG" class="headerlink" title="渐进显示的JPG"></a>渐进显示的JPG</h3><p>性能的一个有趣的方面是从人的感知所体现的。不是数字反应出来的东西，而是感觉上一个网站的载入速度有多快。</p>
 <p>当显示大的JPG图片的时候，你也许对那种一点一点往下显示的载入方式更熟悉。先是100像素，然后暂停，接着50像素，暂停，突然图片另外200像素又跳了出来，哗，接着整个图片终于显示完全了。</p>
 <p>这是传统的基本类型的JPG的工作方式，停停顿顿的体验。切换到渐进显示的JPG后你可以让它们通过更流行的方式载入：首先显示的是整个图片，不过都是一些像素块，然后逐渐地变得清晰起来。这听起来比前一种方式要差，不过感觉起来载入得更快。用户会马上有东西可看，并且图片的质量逐渐提高。这种类型的JPG会比基本的要稍微大一些，不过使体验快了许多。</p>
 <p>要启用渐进式的JPG你仅需要在Photoshop另存为web格式的时候勾选相应的复选框就行了。收工！</p>
-<p>####深入阅读</p>
-<ul>
+<h4 id="深入阅读-2"><a href="#深入阅读-2" class="headerlink" title="深入阅读"></a>深入阅读</h4><ul>
 <li><a target="_blank" rel="noopener" href="http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/">Progressive jpegs: a new best practice</a></li>
 </ul>
-<p>###完全不用图片<br>比用CSS sprite、SVG和避免retina兼容更好的做法就是什么图片都不用。如果你能100%用图片还原设计，而纯CSS方法能够做到75%的还原度，那么纯CSS的解决方案会更好（当然代码不要超过100行）。避免图片就潜在地减少了HTTP请求，也有助于维护。尽量不用图片把。</p>
-<p>##总结</p>
-<p>于是我们有了一些 (但不怎么多)可做的事情可以用来利用浏览器并使你的前端交互更快。了解一些浏览器如何工作的知识可以让我们进一步操控它并提高我们前端页面的速度。</p>
+<h3 id="完全不用图片"><a href="#完全不用图片" class="headerlink" title="完全不用图片"></a>完全不用图片</h3><p>比用CSS sprite、SVG和避免retina兼容更好的做法就是什么图片都不用。如果你能100%用图片还原设计，而纯CSS方法能够做到75%的还原度，那么纯CSS的解决方案会更好（当然代码不要超过100行）。避免图片就潜在地减少了HTTP请求，也有助于维护。尽量不用图片把。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>于是我们有了一些 (但不怎么多)可做的事情可以用来利用浏览器并使你的前端交互更快。了解一些浏览器如何工作的知识可以让我们进一步操控它并提高我们前端页面的速度。</p>
 <p>如果你有任何需要补充或者不同意、需修正的地方，请加入论坛中这一分支的讨论。性能的世界对我来说依然相对较新，因此我期待不断学习他人，并有所进步。</p>
 <p>我真心希望这篇文字能在某种程度上启发到你，也让你接触到你之前可能从未想过的一些新东西。我也希望这篇文章可以帮助你了解到性能的乐趣。</p>
 <p>我要特别感谢Nick Payne和Andy Davies在我写这篇文章的过程中帮助弄清了一些事情。太感谢了！</p>
-<p>##深入阅读<br>如果你觉得这篇文章不错，并且想了解更多的话，我强烈建议读读下面的文章：</p>
+<h2 id="深入阅读-3"><a href="#深入阅读-3" class="headerlink" title="深入阅读"></a>深入阅读</h2><p>如果你觉得这篇文章不错，并且想了解更多的话，我强烈建议读读下面的文章：</p>
 <ul>
 <li>Souders’ <a target="_blank" rel="noopener" href="http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309">High Performance Websites</a> and <a target="_blank" rel="noopener" href="http://www.amazon.com/Even-Faster-Web-Sites-Performance/dp/0596522304">Even Faster Websites</a>.</li>
 <li><a target="_blank" rel="noopener" href="http://www.phpied.com/">Stoyan Stefanov</a>‘s site.</li>
@@ -705,11 +693,6 @@
             
         </li>
         <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href="/Windows%20Fast%20Shutdown/" title="[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法">
-                    <div class="prevTitle">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</div>
-                </a>
             
         </li>
     </ul>
@@ -863,7 +846,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">基础部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E5%B0%91%E7%9A%84%E8%AF%B7%E6%B1%82%E6%95%B0%E7%9B%AE"><span class="toc-number">1.1.</span> <span class="toc-text">更少的请求数目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E8%A1%8C%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8C%96"><span class="toc-number">1.2.</span> <span class="toc-text">并行的最大化</span></a></li></ol></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86"><span class="toc-number">1.</span> <span class="toc-text">基础部分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B7%E5%BC%8F%E6%94%BE%E9%A1%B6%E9%83%A8%EF%BC%8C%E8%84%9A%E6%9C%AC%E6%94%BE%E5%BA%95%E9%83%A8"><span class="toc-number">1.1.</span> <span class="toc-text">样式放顶部，脚本放底部</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E5%B0%91%E7%9A%84%E8%AF%B7%E6%B1%82%E6%95%B0%E7%9B%AE"><span class="toc-number">1.2.</span> <span class="toc-text">更少的请求数目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E8%A1%8C%E7%9A%84%E6%9C%80%E5%A4%A7%E5%8C%96"><span class="toc-number">1.3.</span> <span class="toc-text">并行的最大化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP%E8%AF%B7%E6%B1%82%E5%92%8CDNS%E6%9F%A5%E6%89%BE"><span class="toc-number">2.</span> <span class="toc-text">HTTP请求和DNS查找</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DNS%E9%A2%84%E8%8E%B7%E5%8F%96"><span class="toc-number">2.1.</span> <span class="toc-text">DNS预获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5%E9%98%85%E8%AF%BB"><span class="toc-number">2.2.</span> <span class="toc-text">深入阅读</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E9%A2%84%E8%8E%B7%E5%8F%96"><span class="toc-number">3.</span> <span class="toc-text">资源预获取</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5%E9%98%85%E8%AF%BB-1"><span class="toc-number">3.1.</span> <span class="toc-text">深入阅读</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS%E4%B8%8E%E6%80%A7%E8%83%BD"><span class="toc-number">4.</span> <span class="toc-text">CSS与性能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E5%92%8C%E6%9C%80%E5%B0%8F%E5%8C%96"><span class="toc-number">5.</span> <span class="toc-text">压缩和最小化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E4%BC%98%E5%8C%96"><span class="toc-number">6.</span> <span class="toc-text">图片优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Spriting"><span class="toc-number">6.1.</span> <span class="toc-text">Spriting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Retina%E4%B8%8B%E7%9A%84%E5%9B%BE%E7%89%87"><span class="toc-number">6.2.</span> <span class="toc-text">Retina下的图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%90%E8%BF%9B%E6%98%BE%E7%A4%BA%E7%9A%84JPG"><span class="toc-number">6.3.</span> <span class="toc-text">渐进显示的JPG</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5%E9%98%85%E8%AF%BB-2"><span class="toc-number">6.3.1.</span> <span class="toc-text">深入阅读</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%8C%E5%85%A8%E4%B8%8D%E7%94%A8%E5%9B%BE%E7%89%87"><span class="toc-number">6.4.</span> <span class="toc-text">完全不用图片</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E5%85%A5%E9%98%85%E8%AF%BB-3"><span class="toc-number">8.</span> <span class="toc-text">深入阅读</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
@@ -1247,7 +1230,30 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1800,7 +1806,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 74
+        Total : 75
         </div>
         <!-- search  -->
         
@@ -1815,147 +1821,12 @@
         
             
             
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/px-pt-em/">[转载]常用px,pt,em换算表</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad/">文本编辑器类的个人选择</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/08</span>
-            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Advanced%20Office%20Password%20Recovery/">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Everedit/">[文本编辑器]Everedit - 这才是真正的国产良心</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Android/Connectbot/">[Android]Connectbot - Android terminal</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Android/Google%20Lens/">[Android]Google 智能镜头(Lens) - 二维码扫码软件</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Android/Moon+/">[Android]最好的epub阅读器 静读天下专业版(Moon+ Reader Pro)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Picture/">[软件推荐]图片类相关软件</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2019 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/02</span>
+            <span class="archive-post-date">06/15</span>
             <a class="archive-post-title" href="/Windows%20Fast%20Shutdown/">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</a>
         </li>
     
@@ -1965,43 +1836,13 @@
                 
                 </ul>
             
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/WizTree/">[软件推荐]WizTree - 磁盘空间分析</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Compression/Compression-defect/">压缩软件问题记录</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+            <a class="archive-post-title" href="/Code/WWW/Uncommon%20CSS%20units/">[Untitled Post]</a>
         </li>
     
         
@@ -2016,172 +1857,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Fonts/">[Font]字体包</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Monospaced%20Font/">等宽字体(Monospaced Font)推荐</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/OS%20X/">对OS X的不满</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Write-box/">Write-box</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">Ubuntu注意事项</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">[转载]让“中国式的聪明”滚出中国</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/">[转载]《论语》中“唯女子与小人为难养”本义辨析</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">推荐一些完本的轻小说</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Impression%20of%20Font/">[Font]Impression of Font</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/source-han-sans/">[Font]思源黑体</a>
+            <a class="archive-post-title" href="/px-pt-em/">[转载]常用px,pt,em换算表</a>
         </li>
     
         
@@ -2226,124 +1902,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUi 远程的一些问题</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Remote/x2go/">[开源]x2go - 远程连接</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/29</span>
-            <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/26</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/CentOS/">CentOS踩坑实录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/No%20Refs/">不建议使用Refs</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
+            <a class="archive-post-title" href="/Issue/Kerberos/">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</a>
         </li>
     
         
@@ -2372,8 +1931,26 @@
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/24</span>
+            <span class="archive-post-date">07/29</span>
+            <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span>
             <a class="archive-post-title" href="/Issue/SMB/">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span>
+            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
         </li>
     
         
@@ -2394,7 +1971,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/Kerberos/">Windows域中Kerberos问题造成的共享目录无法访问</a>
+            <a class="archive-post-title" href="/Software/No%20Refs/">不建议使用Refs</a>
         </li>
     
         
@@ -2408,20 +1985,8 @@
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/08</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/08</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
         </li>
     
         
@@ -2436,13 +2001,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+            <a class="archive-post-title" href="/Software/Picture/">[软件推荐]图片类相关软件</a>
         </li>
     
         
@@ -2457,7 +2016,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
+            <a class="archive-post-title" href="/Software/Windbg/">[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
         </li>
     
         
@@ -2472,58 +2031,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/26</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/18</span>
-            <a class="archive-post-title" href="/Code/Terminal/rsync/">rsync</a>
+            <a class="archive-post-title" href="/Software/WizTree/">[软件推荐]WizTree - 磁盘空间分析</a>
         </li>
     
         
@@ -2535,18 +2043,6 @@
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/2unicode/">[javascript]中文等字符转化为unicode(UTF-16 LE)</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -2556,52 +2052,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/CSS-middle/">[转]CSS布局奇淫技巧之--各种居中</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/itemscope/">[Untitled Post]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/UTF-8/">UTF-8编码解码</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">[Untitled Post]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2019 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/02</span>
-            <a class="archive-post-title" href="/Software/Windbg/">[转载]WINDBG分析DMP方法（2012.8.19修改）</a>
+            <a class="archive-post-title" href="/System/CentOS/">CentOS踩坑实录</a>
         </li>
     
         
@@ -2631,7 +2082,226 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/Uncommon%20CSS%20units/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Fonts/">[Font]字体包</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Impression%20of%20Font/">[Font]Impression of Font</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Monospaced%20Font/">等宽字体(Monospaced Font)推荐</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/OS%20X/">对OS X的不满</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">Ubuntu注意事项</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/Write-box/">Write-box</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/source-han-sans/">[Font]思源黑体</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">[转载]让“中国式的聪明”滚出中国</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span>
+            <a class="archive-post-title" href="/Code/Terminal/rsync/">rsync</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/2unicode/">[javascript]中文等字符转化为unicode(UTF-16 LE)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/CSS-middle/">[转]CSS布局奇淫技巧之--各种居中</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/itemscope/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/UTF-8/">[javascript]UTF-8编码解码</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">[Untitled Post]</a>
         </li>
     
         
@@ -2649,20 +2319,386 @@
             <a class="archive-post-title" href="/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/">[Untitled Post]</a>
         </li>
     
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad/">文本编辑器类的个人选择</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/08</span>
+            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Advanced%20Office%20Password%20Recovery/">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Everedit/">[文本编辑器]Everedit - 这才是真正的国产良心</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Connectbot/">[Android]Connectbot - Android terminal</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Google%20Lens/">[Android]Google 智能镜头(Lens) - 二维码扫码软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Android/Moon+/">[Android]最好的epub阅读器 静读天下专业版(Moon+ Reader Pro)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Compression/Compression-defect/">压缩软件问题记录</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUi 远程的一些问题</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Remote/x2go/">[开源]x2go - 远程连接</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E5%94%AF%E5%A5%B3%E5%AD%90%E4%B8%8E%E5%B0%8F%E4%BA%BA%E4%B8%BA%E9%9A%BE%E5%85%BB/">[转载]《论语》中“唯女子与小人为难养”本义辨析</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">推荐一些完本的轻小说</a>
+        </li>
+    
     </div>
 </div>
 
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
         
-            <span class="sidebar-tag-name" data-tags="个人观点">
+            <span class="sidebar-tag-name" data-tags="问题处理">
                 <span class="iconfont-archer">&#xe606;</span>
-                个人观点
+                问题处理
             </span>
         
             <span class="sidebar-tag-name" data-tags="Windows">
                 <span class="iconfont-archer">&#xe606;</span>
                 Windows
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows 10">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows 10
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Regedit">
+                <span class="iconfont-archer">&#xe606;</span>
+                Regedit
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Document">
+                <span class="iconfont-archer">&#xe606;</span>
+                Document
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Code">
+                <span class="iconfont-archer">&#xe606;</span>
+                Code
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Git">
+                <span class="iconfont-archer">&#xe606;</span>
+                Git
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Proxy">
+                <span class="iconfont-archer">&#xe606;</span>
+                Proxy
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Python">
+                <span class="iconfont-archer">&#xe606;</span>
+                Python
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Issue">
+                <span class="iconfont-archer">&#xe606;</span>
+                Issue
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows Server">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows Server
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows AD">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows AD
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Open Source">
+                <span class="iconfont-archer">&#xe606;</span>
+                Open Source
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Linux">
+                <span class="iconfont-archer">&#xe606;</span>
+                Linux
             </span>
         
             <span class="sidebar-tag-name" data-tags="分类汇总">
@@ -2690,44 +2726,9 @@
                 MIT
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Git">
+            <span class="sidebar-tag-name" data-tags="转载">
                 <span class="iconfont-archer">&#xe606;</span>
-                Git
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Proxy">
-                <span class="iconfont-archer">&#xe606;</span>
-                Proxy
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Python">
-                <span class="iconfont-archer">&#xe606;</span>
-                Python
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Code">
-                <span class="iconfont-archer">&#xe606;</span>
-                Code
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Document">
-                <span class="iconfont-archer">&#xe606;</span>
-                Document
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="问题处理">
-                <span class="iconfont-archer">&#xe606;</span>
-                问题处理
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Windows 10">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows 10
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Regedit">
-                <span class="iconfont-archer">&#xe606;</span>
-                Regedit
+                转载
             </span>
         
             <span class="sidebar-tag-name" data-tags="Personal Free">
@@ -2735,89 +2736,14 @@
                 Personal Free
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Android">
+            <span class="sidebar-tag-name" data-tags="个人观点">
                 <span class="iconfont-archer">&#xe606;</span>
-                Android
+                个人观点
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Software">
+            <span class="sidebar-tag-name" data-tags="Font">
                 <span class="iconfont-archer">&#xe606;</span>
-                Software
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="正版">
-                <span class="iconfont-archer">&#xe606;</span>
-                正版
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="破解">
-                <span class="iconfont-archer">&#xe606;</span>
-                破解
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="第三方修改|绿化">
-                <span class="iconfont-archer">&#xe606;</span>
-                第三方修改|绿化
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="大眼仔~旭">
-                <span class="iconfont-archer">&#xe606;</span>
-                大眼仔~旭
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Terminal">
-                <span class="iconfont-archer">&#xe606;</span>
-                Terminal
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Linux">
-                <span class="iconfont-archer">&#xe606;</span>
-                Linux
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="OS X">
-                <span class="iconfont-archer">&#xe606;</span>
-                OS X
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Office">
-                <span class="iconfont-archer">&#xe606;</span>
-                Office
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Document&Texteditor">
-                <span class="iconfont-archer">&#xe606;</span>
-                Document&Texteditor
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Open Source">
-                <span class="iconfont-archer">&#xe606;</span>
-                Open Source
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="AGPLv3">
-                <span class="iconfont-archer">&#xe606;</span>
-                AGPLv3
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Compression">
-                <span class="iconfont-archer">&#xe606;</span>
-                Compression
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="LGPLv2.1">
-                <span class="iconfont-archer">&#xe606;</span>
-                LGPLv2.1
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="烈火">
-                <span class="iconfont-archer">&#xe606;</span>
-                烈火
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="3-clause BSD license">
-                <span class="iconfont-archer">&#xe606;</span>
-                3-clause BSD license
+                Font
             </span>
         
             <span class="sidebar-tag-name" data-tags="字体(Font)">
@@ -2830,29 +2756,14 @@
                 SIL Open Font
             </span>
         
+            <span class="sidebar-tag-name" data-tags="OS X">
+                <span class="iconfont-archer">&#xe606;</span>
+                OS X
+            </span>
+        
             <span class="sidebar-tag-name" data-tags="Ubuntu">
                 <span class="iconfont-archer">&#xe606;</span>
                 Ubuntu
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="转载">
-                <span class="iconfont-archer">&#xe606;</span>
-                转载
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="个人评价">
-                <span class="iconfont-archer">&#xe606;</span>
-                个人评价
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="完结">
-                <span class="iconfont-archer">&#xe606;</span>
-                完结
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="小说">
-                <span class="iconfont-archer">&#xe606;</span>
-                小说
             </span>
         
             <span class="sidebar-tag-name" data-tags="过时">
@@ -2860,44 +2771,14 @@
                 过时
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Font">
+            <span class="sidebar-tag-name" data-tags="个人评价">
                 <span class="iconfont-archer">&#xe606;</span>
-                Font
+                个人评价
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Remote">
+            <span class="sidebar-tag-name" data-tags="Terminal">
                 <span class="iconfont-archer">&#xe606;</span>
-                Remote
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Windows Server">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows Server
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Windows AD">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows AD
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Issue">
-                <span class="iconfont-archer">&#xe606;</span>
-                Issue
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Download&File hosting service">
-                <span class="iconfont-archer">&#xe606;</span>
-                Download&File hosting service
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="roustar31">
-                <span class="iconfont-archer">&#xe606;</span>
-                roustar31
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="macOS">
-                <span class="iconfont-archer">&#xe606;</span>
-                macOS
+                Terminal
             </span>
         
             <span class="sidebar-tag-name" data-tags="javascript">
@@ -2920,6 +2801,106 @@
                 CSS
             </span>
         
+            <span class="sidebar-tag-name" data-tags="Android">
+                <span class="iconfont-archer">&#xe606;</span>
+                Android
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Software">
+                <span class="iconfont-archer">&#xe606;</span>
+                Software
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="破解">
+                <span class="iconfont-archer">&#xe606;</span>
+                破解
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="第三方修改|绿化">
+                <span class="iconfont-archer">&#xe606;</span>
+                第三方修改|绿化
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="大眼仔~旭">
+                <span class="iconfont-archer">&#xe606;</span>
+                大眼仔~旭
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="正版">
+                <span class="iconfont-archer">&#xe606;</span>
+                正版
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Compression">
+                <span class="iconfont-archer">&#xe606;</span>
+                Compression
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="LGPLv2.1">
+                <span class="iconfont-archer">&#xe606;</span>
+                LGPLv2.1
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="烈火">
+                <span class="iconfont-archer">&#xe606;</span>
+                烈火
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Document&Texteditor">
+                <span class="iconfont-archer">&#xe606;</span>
+                Document&Texteditor
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Office">
+                <span class="iconfont-archer">&#xe606;</span>
+                Office
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="AGPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                AGPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="3-clause BSD license">
+                <span class="iconfont-archer">&#xe606;</span>
+                3-clause BSD license
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Download&File hosting service">
+                <span class="iconfont-archer">&#xe606;</span>
+                Download&File hosting service
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="roustar31">
+                <span class="iconfont-archer">&#xe606;</span>
+                roustar31
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="macOS">
+                <span class="iconfont-archer">&#xe606;</span>
+                macOS
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Remote">
+                <span class="iconfont-archer">&#xe606;</span>
+                Remote
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="完结">
+                <span class="iconfont-archer">&#xe606;</span>
+                完结
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="小说">
+                <span class="iconfont-archer">&#xe606;</span>
+                小说
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Javascript">
+                <span class="iconfont-archer">&#xe606;</span>
+                Javascript
+            </span>
+        
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -2931,14 +2912,9 @@
         <div class="sidebar-panel-categories">
     <div class="sidebar-categories-name">
     
-        <span class="sidebar-category-name" data-categories="Software">
+        <span class="sidebar-category-name" data-categories="Problem">
             <span class="iconfont-archer">&#xe60a;</span>
-            Software
-        </span>
-    
-        <span class="sidebar-category-name" data-categories="Git">
-            <span class="iconfont-archer">&#xe60a;</span>
-            Git
+            Problem
         </span>
     
         <span class="sidebar-category-name" data-categories="Code">
@@ -2946,9 +2922,14 @@
             Code
         </span>
     
-        <span class="sidebar-category-name" data-categories="Problem">
+        <span class="sidebar-category-name" data-categories="Git">
             <span class="iconfont-archer">&#xe60a;</span>
-            Problem
+            Git
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Software">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Software
         </span>
     
         <span class="sidebar-category-name" data-categories="System">

@@ -88,68 +88,11 @@
   </entry>
   
   <entry>
-    <title>不使用aria2c的原因</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/aria2c-defect/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/aria2c-defect/</id>
-    <published>2021-07-26T11:46:38.153Z</published>
-    <updated>2017-02-28T13:54:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这已经是我第3次试图使用aria2c来代替IDM了，但最终我还是失败了。<br>想想还是记录下吧，避免以后再次忘了当初为什么放弃。<br>最早aria2c配置，自启动服务，扩展什么都折腾过。</p><h1 id="原生的问题"><a href="#原生的问题" class="headerlink" title="原生的问题"></a>原生的问题</h1><ol><li>下载时需要提供文件名，由于程序本身不具备GUI，又不支持自己生成文件名，对于很多要连接会跳转后通过特定post来提供文件名(例如百度网盘)。下载工具在使用上就会有很多限制，比较好的解决方式就是在浏览器上通过特定的工具来发送下载时的文件名，诸如chrome+aria2c integration之类。</li><li>但这些aria2c的补充通常不会有太强的完善性，因为那样无异于完全开发出一个下载工具，所以大部分GUI或者扩展之流也都会有些缺陷，诸如在路径的选择上。</li><li>多线程下载软件在不被服务器针对的情况下，其实很少在下载速度上有巨大的差别，可以说aria2c也并没有超出其他下载工具太多</li><li>这点才是我放弃的真正原因，就是aria2c取消任务后不会删除下载到一半的文件。</li></ol><p>其实在我看来aria2c之所以流行是因为chrome的原因。因为chrome自身下载实在是很特别，chrome上实现接管下载的扩展往往不是那么好用并且稳定。</p><p>#Cent Broswer+aria2c integration</p><ol><li>有时候扩展漏过了下载，没能传递到aria2c,浏览器自身开始了下载。</li><li>然后就是打开某些文件没法直接在浏览器看，会被下载接管</li><li>会干扰一些其他扩展的功能。</li></ol><p>#Motrix<br>优点：开源，前面也说了，”但这些aria2c的补充通常不会有太强的完善性，因为那样无异于完全开发出一个下载工具”</p><ol><li><a href="https://github.com/agalwood/Motrix/issues?q=is:issue+author:ted423+is:closed">https://github.com/agalwood/Motrix/issues?q=is%3Aissue+author%3Ated423+is%3Aclosed</a> PAC那个是我提错了，但别的属于没法满足我的使用习惯的。</li><li><a href="https://github.com/agalwood/Motrix/issues/created_by/ted423">https://github.com/agalwood/Motrix/issues/created_by/ted423</a> 这是还开着的。</li><li>抛开BT相关，各种功能并没法完全打败IDM。(例如IDM的队列可以设置下载间隔，遇上那种防批量下载的服务器就会很有用)</li></ol><p>干扰其他功能和浏览器原生功能我是不能忍得，最主要这是一种替代的不完美实现，何必呢。<br>不如直接点。<br>另一方面 cent broswer自身的内置下载在选取询问路径的情况下是可以调用迅雷或者IDM的</p><p>像我装了QB，IDM，迅雷，Motrix。<br>迅雷和QB都是最常开，剩下两者IDM作为补充，Motrix(aria2c)就很少开了</p><hr><p><time>2021-04-24</time>增加Motrix相关</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这已经是我第3次试图使用aria2c来代替IDM了，但最终我还是失败了。&lt;br&gt;想想还是记录下吧，避免以后再次忘了当初为什么放弃。&lt;br&gt;最早aria2c配置，自启动服务，扩展什么都折腾过。&lt;/p&gt;
-&lt;h1 id=&quot;原生的问题&quot;&gt;&lt;a href=&quot;#原生的问题&quot; class</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>youtube专用下载器 - 4K Video Downloader &amp; Instagram专用下载器 - 4K Stogram</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/4K/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/4K/</id>
-    <published>2021-07-26T11:46:31.538Z</published>
-    <updated>2018-07-13T01:04:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>目前遇到了Stogram不激活没法全下下来的问题<br>#4K Video Downloader</p><ul><li><a href="https://www.4kdownload.com/zh-cn/">https://www.4kdownload.com/zh-cn/</a></li></ul><p>#4K Stogram </p><ul><li><a href="https://www.4kdownload.com/zh-tw/products/product-stogram">https://www.4kdownload.com/zh-tw/products/product-stogram</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;目前遇到了Stogram不激活没法全下下来的问题&lt;br&gt;#4K Video Downloader&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.4kdownload.com/zh-cn/&quot;&gt;https://www.4kdownload.com/zh-c</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</title>
     <link href="http://ted423.github.io/Issue/SMB/"/>
     <id>http://ted423.github.io/Issue/SMB/</id>
-    <published>2021-07-23T16:08:31.448Z</published>
-    <updated>2021-07-23T16:31:03.746Z</updated>
+    <published>2021-07-26T00:52:34.070Z</published>
+    <updated>2021-07-23T16:31:03.000Z</updated>
     
     <content type="html"><![CDATA[<p>其实最简单的方法是重启。</p><p>说下原因，敲下<code>net use</code>你会看到显示了一堆共享路径的连接。<br>也就是说Win的话，你不重启他不会重新去连接。<br>这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)<br><code>net use &quot;路径&quot; /del</code>全删掉，大部分重连就正常了。<br>如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤</p>]]></content>
     
@@ -170,77 +113,18 @@
   </entry>
   
   <entry>
-    <title>[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/IDM/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/IDM/</id>
-    <published>2021-07-23T15:39:10.802Z</published>
-    <updated>2019-05-23T03:07:00.000Z</updated>
+    <title>[转载]WINDBG分析DMP方法（2012.8.19修改）</title>
+    <link href="http://ted423.github.io/Software/Windbg/"/>
+    <id>http://ted423.github.io/Software/Windbg/</id>
+    <published>2021-07-26T00:52:33.605Z</published>
+    <updated>2013-12-31T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>就个人感觉来说，这个软件强制添加扩展项，并且在Chrome的体验并不好。这货就是专为百度网盘准备的。<br>不过Cent browser可以调用，部分资源可以比迅雷下载速度高，并且代理支持PAC就相当棒,下载国外慢速资源会很好用</p><p>目前百度封了IDM，<del>我也找到了proxyee-down这个替代品。毕竟能不用破解软件就不用比较好</del></p><p>缺点是每次更新版本设置都会还原，然后每次都会提示装扩展，下载文件夹里给你生成一堆文件夹。(当然这个问题可能跟这是修改的人弄的安装包有关)</p><p>烈火的IDM要购买才能看了<br><del>roustar31的可能会有exe损坏的提醒</del><br>#来源<br><a href="https://www.repaik.com/forum.php?mod=viewthread&amp;tid=32105">https://www.repaik.com/forum.php?mod=viewthread&amp;tid=32105</a><br>(网站停止运营)</p><p>#介绍<br>Internet Download Manager，简称IDM，是国外的一款优秀下载工具，该软件同时是一款共享软件。目前凭借着下载计算的速度优势在外媒网站中均受好评，现在已被多数国人熟知。Internet Download Manager提升你的下载速度最多达5倍，安排下载时程，带有续传功能，可以恢复因为断线、网络问题、计算机当机甚至无预警的停电导致下传到一半的资料。</p><p>此程序具有动态档案分割、多重下载点技术，而且它会重复使用现有的联机，而不需再重新联机登入一遍。聪明的in-speed技术会动态地将所有设定应用到某种联机类型，以充分利用下载速度。</p><p>#更新日志<br>05/11/19</p><p>Version 6.33 Build 2 Final is available (May/11/2019)</p><p>What’s new in version 6.33 Build 2?</p><ul><li>Updated the new feature to download from file sharing web sites</li><li>Fixed problems of IDM 33 with Windows XP</li><li>Fixed bugs</li></ul><p>#本版特点</p><ul><li>去菜单栏的 “注册” 菜单项</li><li>去帮助菜单的多余菜单项</li><li>去关于页面的多余按钮 - 不再集成体积较大的教程文件（以集成帮助文件）</li><li>由于修正 win8.1 下载对话框不全导致对话框马脸，不再修改对话框（美观比不全更重要 ^_^）</li><li>除去多国语言，只留简体中文</li><li>除去自动检查更新功能和定期自动检查更新</li></ul><ul><li>完善官方简体中文语言，使用起来更爽</li><li>优化选项：16 线程下载，不开机启动，监视浏览器等等</li><li>优化安装包脚本：自动清理可能的启动项残留</li><li>集成一款新主题，默认启用</li></ul><ul><li>安装完毕就是已经注册版，不写 hosts，无需注册码</li><li>免疫盗版提示弹窗）</li><li>安装完毕就是简体中文版本</li><li>卸载可选保留记录和数据</li><li>完全支持覆盖安装论坛任意版本</li><li>修正官方下载对话框在 Win10 下跑马边框的问题 </li></ul><hr><p><time>2018-10-11</time>改成roustar31的<br><time>2019-05-23</time>更新版本</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;就个人感觉来说，这个软件强制添加扩展项，并且在Chrome的体验并不好。这货就是专为百度网盘准备的。&lt;br&gt;不过Cent browser可以调用，部分资源可以比迅雷下载速度高，并且代理支持PAC就相当棒,下载国外慢速资源会很好用&lt;/p&gt;
-&lt;p&gt;目前百度封了IDM，&lt;del&gt;</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="破解" scheme="http://ted423.github.io/tags/%E7%A0%B4%E8%A7%A3/"/>
-    
-    <category term="第三方修改|绿化" scheme="http://ted423.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-    <category term="roustar31" scheme="http://ted423.github.io/tags/roustar31/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>下载DropBox离线安装包的方法(可能失效)</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/dropbox/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/dropbox/</id>
-    <published>2021-07-23T15:39:10.794Z</published>
-    <updated>2016-12-10T13:31:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>一直无法理解那些给软件下载地址非要给个下载器的。特别对于开代理的，非要忍受那个下载器没速度的奇葩问题。<br>原来dropbox是提供离线下载包的，现在不知道为什么又取消了。<br>目前可以在dropbox的(下载页面)[<a href="https://www.dropbox.com/install#downloaded]%E4%B8%8A">https://www.dropbox.com/install#downloaded]上</a><br>找到下载连接：<a href="https://www.dropbox.com/download?os=win&amp;full=1">https://www.dropbox.com/download?os=win&amp;full=1</a><br>在地址链接后加上“&amp;full=1”即可。<br><a href="https://www.dropbox.com/download?os=win&amp;full=1">https://www.dropbox.com/download?os=win&amp;full=1</a></p><hr><p>现在由于有clash应该没太大问题 - 2021-07-24</p>]]></content>
+    <content type="html"><![CDATA[<p>Windbg下载地址:<a href="http://www.windbg.org/">http://www.windbg.org/</a><br>然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。<br>像别的什么软件可能也会要不同的组件？<br>另外这憨逼SDK不同版本还能同时装<br>原文:<a href="http://bbs.icafe8.com/thread-400104-1-1.html">http://bbs.icafe8.com/thread-400104-1-1.html</a></p><ol><li><p>点击File里的”Symbol File Path”</p></li><li><p>然后把<code>SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols</code><br> 复制进去。(<a href="http://msdl.microsoft.com/download/symbols">http://msdl.microsoft.com/download/symbols</a> 为微软符号表服务器地址)</p></li><li><p>点OK,然后保存工作空间并关闭windbg，下次需要看DUMP的时候，打开windbg.exe，直接可以把抓来的DMP文件拖到打开的界面里面就可以分析了。</p></li><li><p>自动分析命令 !analyze -v</p></li></ol><p>就个人来讲，能力有限，我所能理解的就到这里了，剩下的建议看原文</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;一直无法理解那些给软件下载地址非要给个下载器的。特别对于开代理的，非要忍受那个下载器没速度的奇葩问题。&lt;br&gt;原来dropbox是提供离线下载包的，现在不知道为什么又取消了。&lt;br&gt;目前可以在dropbox的(下载页面)[&lt;a href=&quot;https://www.dropb</summary>
-      
-    
-    
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="过时" scheme="http://ted423.github.io/tags/%E8%BF%87%E6%97%B6/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]Torrent File Editor</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/torrent%20file%20editor/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/torrent%20file%20editor/</id>
-    <published>2021-07-23T15:39:10.788Z</published>
-    <updated>2020-06-26T11:06:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>种子文件修改器，主要用来改tracker，文件信息改了，种子使用的时候会出错<br><a href="https://torrent-file-editor.github.io/">https://torrent-file-editor.github.io/</a></p><hr><p><time>2020-06-26 19:06</time> 没注意projeect转到github了，果然都在逃离sourceforge</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;种子文件修改器，主要用来改tracker，文件信息改了，种子使用的时候会出错&lt;br&gt;&lt;a href=&quot;https://torrent-file-editor.github.io/&quot;&gt;https://torrent-file-editor.github.io/&lt;/a&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;Windbg下载地址:&lt;a href=&quot;http://www.windbg.org/&quot;&gt;http://www.windbg.org/&lt;/a&gt;&lt;br&gt;然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。&lt;br&gt;像别的什么软件可能也会要</summary>
       
     
     
@@ -250,11 +134,7 @@
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="GPLv3" scheme="http://ted423.github.io/tags/GPLv3/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-    <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
+    <category term="转载" scheme="http://ted423.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
     
   </entry>
   
@@ -286,37 +166,11 @@
   </entry>
   
   <entry>
-    <title>[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</title>
-    <link href="http://ted423.github.io/Issue/samba/"/>
-    <id>http://ted423.github.io/Issue/samba/</id>
-    <published>2021-07-19T11:51:48.059Z</published>
-    <updated>2021-07-23T17:30:06.207Z</updated>
-    
-    <content type="html"><![CDATA[<p>其实是个小问题，我很快就解决了。<del>但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯</del><br>Windows Server可以架设NFS基于身份和基于IP的验证<br><img src="https://files.catbox.moe/xmdnnq.png" alt="Windows 客户端无法正常登录 Linux samba服务器"></p><p>理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。</p><p>说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)<br>samba systemctl status log有这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Jul 19 14:16:07 pve smbd[14765]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14766]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14767]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14768]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14769]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:09 pve smbd[14803]: pam_unix(samba:session): session opened for user XX(uid=1000) by (uid=0)</span><br><span class="line">Jul 19 14:16:24 pve smbd[14803]: pam_unix(samba:session): session closed for user XX</span><br><span class="line">Jul 19 14:16:52 pve smbd[15315]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:53 pve smbd[15322]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:54 pve smbd[15329]: pam_unix(samba:session): session closed for user nobody</span><br></pre></td></tr></table></figure><p>现象就是Windows Client访问不会弹框要你填用户名密码，直接报错，必须去凭据管理器里添加了账号密码才能访问。<br>相反Linux Client会正常弹框.不过Linux弹框还会问你是否匿名访问。<br>很可能Windows就直接匿名访问但是被拒。但其实有些问题，大多数时候Win访问SMB是直接使用当前账号密码作为凭证，如不成功会提示你再输入用户密码。<br>或者可能跟SMBv2 v3有关？<br>不得而知</p><p>BTW，samba+NFS 无身份验证可能需要在samba里设777，不然会发生很蛋疼的问题。<br>例如其他NFS客户端无法访问修改samba里创建的文件。</p><hr><p>似乎破案了，Windows 7以及Server 2016会正常弹出验证框，其他有几台Win 10是提示不安全的匿名被阻止(这个是组策略可以解决)。<br><del>所以很可能是出问题的机子装有或曾经装有NFS Client(一台曾装有访问过但是后面停了NFS Client出问题，但因为是NFS，不曾保留账号密码才是，一台现装但从没访问过有问题)</del><br>另Samba也支持同名帐户同密码可以直接访问(如上面所说，Win访问SMB是直接使用当前账号密码作为凭证)</p><hr><p>行吧，我傻逼了，提示不安全的匿名被阻止的机子，explorer直接访问就是直接报错。<br>所以这个应该被归类为 Windows 10 Bug 系列。以后运行东西请优先通过”，运行”否则你可能无法收到正确的报错提示。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;其实是个小问题，我很快就解决了。&lt;del&gt;但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯&lt;/del&gt;&lt;br&gt;Windows Server可以架设NFS基于身份和基于IP的验证&lt;br&gt;&lt;img src=&quot;https://files.catbox.moe/</summary>
-      
-    
-    
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-  </entry>
-  
-  <entry>
     <title>NFS squash特性相关</title>
     <link href="http://ted423.github.io/Software/NFS%20Squash/"/>
     <id>http://ted423.github.io/Software/NFS%20Squash/</id>
-    <published>2021-07-19T11:51:46.817Z</published>
-    <updated>2021-07-19T07:30:15.000Z</updated>
+    <published>2021-07-19T06:48:07.358Z</published>
+    <updated>2021-07-19T07:30:15.211Z</updated>
     
     <content type="html"><![CDATA[<p>写这篇文章是因为之前写的那个samba的想到了。顺带整理下。<br>这篇文章大部分都为猜测，未作有效以及查证相关检测。</p><p>在阅读这篇文章之前你需要了解</p><ol><li>Linux是多用户操作系统</li><li>用户以及组的保存都是基于id(uid gid)</li><li>root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在<code>/etc/group</code>里可以看，但是不同的Linux版本可能会有不同</li><li><a href="http://linux.vbird.org/linux_server/0430nis.php">NIS Server</a></li><li><a href="http://linux.vbird.org/linux_enterprise/kerberos.php">Kerberos</a> (Attention，我知道这个是AD域主要的验证方式，具体见<a href="https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview</a>,<a href="https://ted423.github.io/Issue/Kerberos/">https://ted423.github.io/Issue/Kerberos/</a>。但我目前的理解是Kerberos并不在NIS中使用，这个条目可能甚至跟整篇文章无关，但是NFS可以使用Kerberos进行验证)</li></ol><p>众所周知<br>no_root_squash、root_squash、all_squash<br>但是所有文章只说了root帐户是否被映射为nobody，root_squash是把root映射为nobody。那么问题来了，其他用户呢？<br>众所周知<br>Linux是多用户操作系统。所以，其他用户如字面意思，不会被映射为nobody。这也是我踩得一个坑(<br>这几个设置，其实是要配合NIS来看的。<br>在多台Linux中，NIS保证用户以及组ID一致，然后挂载NFS确保相关的权限问题。</p><p>如果你没有NIS Server，你就只要用all_squash就好了，别的你都不用仔细理解，除非你是root everything的用户。<br>否则你会发现你的NFS Server文件夹文件权限里出现一堆乱七八糟的ID。或者因为用户ID、组ID重复变成了奇怪的问题<br>(其实个人用Linux的话，我感觉你能用samba就用samba吧，哪怕是两台Linux。基于IP的验证其实还是适合企业用)</p><p>扩展阅读(我还没看)<br><a href="https://en.wikipedia.org/wiki/NIS%2B">NIS+</a></p>]]></content>
     
@@ -334,6 +188,32 @@
     
     
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</title>
+    <link href="http://ted423.github.io/Issue/samba/"/>
+    <id>http://ted423.github.io/Issue/samba/</id>
+    <published>2021-07-19T06:19:34.148Z</published>
+    <updated>2021-07-23T17:30:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实是个小问题，我很快就解决了。<del>但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯</del><br>Windows Server可以架设NFS基于身份和基于IP的验证<br><img src="https://files.catbox.moe/xmdnnq.png" alt="Windows 客户端无法正常登录 Linux samba服务器"></p><p>理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。</p><p>说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)<br>samba systemctl status log有这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Jul 19 14:16:07 pve smbd[14765]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14766]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14767]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14768]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14769]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:09 pve smbd[14803]: pam_unix(samba:session): session opened for user XX(uid=1000) by (uid=0)</span><br><span class="line">Jul 19 14:16:24 pve smbd[14803]: pam_unix(samba:session): session closed for user XX</span><br><span class="line">Jul 19 14:16:52 pve smbd[15315]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:53 pve smbd[15322]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:54 pve smbd[15329]: pam_unix(samba:session): session closed for user nobody</span><br></pre></td></tr></table></figure><p>现象就是Windows Client访问不会弹框要你填用户名密码，直接报错，必须去凭据管理器里添加了账号密码才能访问。<br>相反Linux Client会正常弹框.不过Linux弹框还会问你是否匿名访问。<br>很可能Windows就直接匿名访问但是被拒。但其实有些问题，大多数时候Win访问SMB是直接使用当前账号密码作为凭证，如不成功会提示你再输入用户密码。<br>或者可能跟SMBv2 v3有关？<br>不得而知</p><p>BTW，samba+NFS 无身份验证可能需要在samba里设777，不然会发生很蛋疼的问题。<br>例如其他NFS客户端无法访问修改samba里创建的文件。</p><hr><p>似乎破案了，Windows 7以及Server 2016会正常弹出验证框，其他有几台Win 10是提示不安全的匿名被阻止(这个是组策略可以解决)。<br><del>所以很可能是出问题的机子装有或曾经装有NFS Client(一台曾装有访问过但是后面停了NFS Client出问题，但因为是NFS，不曾保留账号密码才是，一台现装但从没访问过有问题)</del><br>另Samba也支持同名帐户同密码可以直接访问(如上面所说，Win访问SMB是直接使用当前账号密码作为凭证)</p><hr><p>行吧，我傻逼了，提示不安全的匿名被阻止的机子，explorer直接访问就是直接报错。<br>所以这个应该被归类为 Windows 10 Bug 系列。以后运行东西请优先通过”，运行”否则你可能无法收到正确的报错提示。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;其实是个小问题，我很快就解决了。&lt;del&gt;但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯&lt;/del&gt;&lt;br&gt;Windows Server可以架设NFS基于身份和基于IP的验证&lt;br&gt;&lt;img src=&quot;https://files.catbox.moe/</summary>
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   
@@ -384,11 +264,11 @@
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
     <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
     
     <category term="Windows AD" scheme="http://ted423.github.io/tags/Windows-AD/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   
@@ -464,30 +344,74 @@
     <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="GPLv2" scheme="http://ted423.github.io/tags/GPLv2/"/>
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    <category term="GPLv2" scheme="http://ted423.github.io/tags/GPLv2/"/>
     
     <category term="Remote" scheme="http://ted423.github.io/tags/Remote/"/>
     
   </entry>
   
   <entry>
-    <title>我为什么仍在使用迅雷</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/</id>
-    <published>2021-07-07T16:06:53.041Z</published>
-    <updated>2021-04-24T08:28:00.000Z</updated>
+    <title>去你妈的不求甚解</title>
+    <link href="http://ted423.github.io/etc/Fuck/"/>
+    <id>http://ted423.github.io/etc/Fuck/</id>
+    <published>2021-07-03T06:11:52.599Z</published>
+    <updated>2021-07-03T06:45:12.024Z</updated>
     
-    <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
+    <content type="html"><![CDATA[<p>其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论<br><a href="https://www.zhihu.com/question/34935661">https://www.zhihu.com/question/34935661</a><br><a href="https://www.zhihu.com/question/20840941">https://www.zhihu.com/question/20840941</a></p><p>更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)<br><a href="https://www.google.com/search?q=qbittorrent+x86+%E7%BE%A4%E6%99%96&amp;oq=qbittorrent+x86+%E7%BE%A4%E6%99%96&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie=UTF-8">https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie=UTF-8</a></p><p>结果放眼望去，全是x64的。甚至包括一堆码农的博客(<br>造成的结果就是，如果你真想找x86的软件包，那大概是真找不到的(因为实际也没有，没人编译，不过你大概短期内也无法确认，实际上没这么个东西。不过docker还是有一个的)</p><p>当遇到类似问题的时候，总会有这么一种观点，不求甚解。<br>只要大家都能理解就好了。<br>甚至还有人意志坚定的指责那些纠正的人。</p><p>结果呢？<br>就是大家都活成了傻逼的样子</p><p>就如同这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">请听题：“铁骑”的正确读音是什么？</span><br><span class="line">A. tiě jì</span><br><span class="line">B. tiě qí</span><br><span class="line"></span><br><span class="line">再听题：“空穴来风”的正确释义是什么？</span><br><span class="line"></span><br><span class="line">A. 出现的传言都有一定的根源和依据。</span><br><span class="line">B. 传言没有依据。</span><br><span class="line"></span><br><span class="line">最后一题：一斤等于多少两？</span><br><span class="line">A. 16两</span><br><span class="line">B. 10两</span><br><span class="line"></span><br><span class="line">你以为A是正确答案，其实《现代汉语词典》里的答案都是B。语言这东西嘛，就是约定俗成，互相理解即可，强行纠正没什么意义。说不定哪天，这两个字就增加了释义了呢。</span><br><span class="line"></span><br><span class="line">作者：yuantj</span><br><span class="line">链接：https://www.zhihu.com/question/20840941/answer/1890453633</span><br><span class="line">来源：知乎</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure><p><a href="https://zhuanlan.zhihu.com/p/161624772">https://zhuanlan.zhihu.com/p/161624772</a></p><p>网上查了下汉典(<br>没这奇怪的意思<br>《现代汉语词典》你还在看么？我不看(</p><p>当我发现搜中文很难搜到我需要的东西的时候，我很悲伤。<br>当现在开始不断地嘲讽自主研发浏览器，自主研发系统的时候，其实我很高兴。</p><p>目前我遇到的情况是，搞软件，搞开发的分不清内外网。做硬件开发的，一堆板子用相同的MAC地址问我为什么上不了网。</p><p>什么样的土壤，结出什么样的果实。<br>我并不指望在这种风气下，学术以及科技发展能有啥好结果。</p><p>跟能讨论的人讨论。跟不能讨论的人，(这就是我为什么注销了知乎。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;当然啦，毫无疑问迅雷是个傻逼软件。&lt;br&gt;上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。&lt;/p&gt;
-&lt;p&gt;不过上个图&lt;br&gt;&lt;a href=&quot;https://www.z4a.net/image/gEUKSJ&quot;</summary>
+    <summary type="html">&lt;p&gt;其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论&lt;br&gt;&lt;a href=&quot;https://www.zhihu.com/question/34935661&quot;&gt;https://www.zhihu.com/question/34935661&lt;/a&gt;&lt;br</summary>
+      
+    
+    
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>请勿购买QNAP</title>
+    <link href="http://ted423.github.io/etc/NoQNAP/"/>
+    <id>http://ted423.github.io/etc/NoQNAP/</id>
+    <published>2021-07-03T06:02:19.048Z</published>
+    <updated>2021-07-03T08:03:49.158Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文属于用啥黑啥系列。<br>在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。<br>像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。<br>然后第二遇到的大概就是群晖的贵了。</p><p>因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。</p><p>那么问题来了，硬件性能好就一定好用么？<br>我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的(网上一堆喊着x86的实际是x86_64)，在其他人的帮助下，我最终在这台破群晖上成功的跑起来了QB的docker，虽然还有点小问题，但是QNAP呢？跑起来了，登不进去。</p><p>目前我用QNAP遇到的问题有</p><ol><li>原系统DNS本机架了个dnsmasq，配置啥的都是锁死的，重启自动还原，然后不定时就对自己进行DNS投毒，给一些域名解析返回10.0.0.1。扩展阅读: <a href="https://www.google.com/search?q=dnsmasq+%E8%BF%94%E5%9B%9E+10.0.0.1">https://www.google.com/search?q=dnsmasq+返回+10.0.0.1</a></li><li>想改的话，web里配置没用，只能进ssh改(但是重启会还原，所以每次都要改)，但是改了之后就天天告诉你硬盘分析上传失败(虽然我也不在乎这个)</li><li>qb、tr有了(de要钱，rt还是个pro版本)</li><li>docker折腾了，进不去，各种界面不如群晖那么方便。</li><li>最后逼得我上了虚拟机，结果自带的vnc因为安全相关，不允许访问剪贴板。自带支持的spice也是同样。</li><li>Nomachine相关问题: <a href="https://ted423.github.io/2020/12/11/Software/NoMachine/">https://ted423.github.io/2020/12/11/Software/NoMachine/</a>，目测QNAP虚拟机的VNC画面可能创建的比较特殊</li></ol><p>简要的问题在于，你买了QNAP，系统就只能用QNAP的，当你发现你不喜欢这个系统的时候。就很尴尬了。<br>在我的使用环境中，经常要ssh进去，比如结束进程，或者mount。但是QNAP又是有自己一套体系的，你没法确保他的命令和别的完全是一致的，效果也是一致的。比如docker，无形中增加了很多学习难度。</p><p>东西不是有就行了的，有些甚至你不知道他到底实现到什么程度。</p><p>目前大部分软件都是第三方开发的Qoolbox(qb升级换位置，然后变成了两个软件)，他要是哪天不干了就很麻烦。相对群晖那边会自己编译弄套件的似乎多些。</p><p>当然，QNAP 4盘位的空间利用率还是不错的，你弄个DIY的，电源就占很大位置。<br>可能还有别的解决方案，不过我只负责吐槽</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本文属于用啥黑啥系列。&lt;br&gt;在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。&lt;br&gt;像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。&lt;br&gt;然后第二遇到的大概就是群晖的贵了。&lt;/p&gt;
+&lt;p&gt;因此留给你的选择大概不多，QNAP这性价比</summary>
+      
+    
+    
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]7-Zip-zstd 7z增强版</title>
+    <link href="http://ted423.github.io/Software/Compression/7-Zip-zstd/"/>
+    <id>http://ted423.github.io/Software/Compression/7-Zip-zstd/</id>
+    <published>2021-07-01T07:10:41.474Z</published>
+    <updated>2021-07-02T01:32:03.617Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/mcmilk/7-Zip-zstd&quot;&gt;https://github.com/mcmilk/7-Zip-zstd&lt;/a&gt;&lt;br&gt;之前某个群吐槽问7z是不是还是VC6编译，别人给的&lt;br&gt;不会覆盖掉原版的7z&lt;br&gt;总之不</summary>
       
     
     
@@ -495,11 +419,75 @@
     <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
+    
+    <category term="LGPLv2.1" scheme="http://ted423.github.io/tags/LGPLv2-1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文本编辑器类的个人选择</title>
+    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad/"/>
+    <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad/</id>
+    <published>2021-07-01T03:13:17.556Z</published>
+    <updated>2021-07-01T08:19:35.530Z</updated>
+    
+    <content type="html"><![CDATA[<p>本博有俩文本编辑器，其实我用过很多，所以就写写<br>最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。<br>最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）<br>小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。</p><p>之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。<br>另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址就很难，并且很难保证还能用。装起来也比较复杂，有点费时。</p><p>notepad3,必装,就是没有扩展之类的功能<br>sublime text，会有奇奇怪怪的输入法问题(当时写这个似乎是因为在Linux上面用)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本博有俩文本编辑器，其实我用过很多，所以就写写&lt;br&gt;最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。&lt;br&gt;最后发现Everedit不错，价格是100多的</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>压缩软件问题记录</title>
+    <link href="http://ted423.github.io/Software/Compression/Compression-defect/"/>
+    <id>http://ted423.github.io/Software/Compression/Compression-defect/</id>
+    <published>2021-06-24T13:11:29.875Z</published>
+    <updated>2021-07-01T08:20:18.249Z</updated>
+    
+    <content type="html"><![CDATA[<p>#Bandzip<br>无法对7z文件进行直接修改。</p><p>#Peazip</p><ul><li>无法选取多个文件进行压缩(2021-06-24未测试)</li><li>8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内</li><li>强烈不建议使用</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;#Bandzip&lt;br&gt;无法对7z文件进行直接修改。&lt;/p&gt;
+&lt;p&gt;#Peazip&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无法选取多个文件进行压缩(2021-06-24未测试)&lt;/li&gt;
+&lt;li&gt;8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内&lt;/li&gt;</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
     
   </entry>
   
@@ -507,7 +495,7 @@
     <title>[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/thunder/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/thunder/</id>
-    <published>2021-07-07T16:06:53.032Z</published>
+    <published>2021-06-19T12:40:27.107Z</published>
     <updated>2020-10-23T02:28:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别<br><strong>请特别注意尽量不要在迅雷下载目标文件夹里有部分或全部下载完成文件的情况下，把种子重新添加到迅雷，这个傻逼公司的傻逼开发脑子应该有屎，在你操作正常的情况下也会清掉你已经下载的文件，所以建议先备份或改名相应文件再手动操作</strong></p><p>Thunder 11 支持迅雷云盘取回<br>迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！</p><p>我给的不是最新的，可以去他博客翻下最新的<br><a href="https://www.luochenzhimu.com/?s=thunder">https://www.luochenzhimu.com/?s=thunder</a></p><p>【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷11】上我们重新设计了主界面框架，许多忠实雷友们过去一直吐槽的太像浏览器的问题，现在已经得到解决。</p><p>【迅雷11】的最大亮点，是我们开创性的将【下载】与【云盘】合二为一。</p><p>当您下载网络中的文件时，可以灵活的选择将文件下载到【电脑】或者【云盘】。</p><h1 id="下载列表"><a href="#下载列表" class="headerlink" title="下载列表"></a>下载列表</h1><p>首先要从下载列表说起，在这个版本中，我们将下载列表的任务分类，由原来【迅雷9、迅雷X】采用的纵向排列，改为横向排列。这是由于纵向排列时，每次需要切换任务分类，都要在上下分类之间长距离的移动鼠标，使用较为不便。</p><h1 id="悬浮窗"><a href="#悬浮窗" class="headerlink" title="悬浮窗"></a>悬浮窗</h1><p>悬浮窗也迎来了变化，从【迅雷7】一直用到【迅雷X】的圆形悬浮窗，现在终于改版啦！</p><p>迅雷11新的悬浮窗看上去像是个立方体，当有正在下载的任务时，会在右侧展开一个简短的进度条。</p><p>这个全新的设计可以更清晰的显示下载进度，视觉效果也炫酷不少哦。</p><h1 id="立即添加（到云盘）"><a href="#立即添加（到云盘）" class="headerlink" title="立即添加（到云盘）"></a>立即添加（到云盘）</h1><p>如果您是会员用户，当您选中任意一个下载中的任务时，在下载任务的下方会出现一个新的扩展栏，可以让您快捷的将任务添加到云盘里。</p><h1 id="下载列表展示云盘取回"><a href="#下载列表展示云盘取回" class="headerlink" title="下载列表展示云盘取回"></a>下载列表展示云盘取回</h1><p>在迅雷11过去的几个版本中，从云盘取回的任务，都只展示在云盘模块的【传输列表】里，对于经常需要查看云盘取回文件的用户来说颇为不便。现在通过下载列表也可以查看云盘取回的文件了。</p><p>#更新信息</p><ul><li>下载列表的任务分类由纵向排列改为横向排列</li><li>采用全新视觉设计的悬浮窗</li><li>新增【手机扫码免费加速】功能</li><li>左侧栏【下载、云盘】右侧增加数字红点（可展示当前正在下载的任务数，以及正在云添加和上传的文件数）</li><li>下载列表中视频任务下方增加【云盘播放】功能</li><li>下载列表中非视频任务下方增加【立即添加（到云盘）】功能</li><li>下载列表中支持展示从云盘取回的文件</li><li>新增【云盘视频智能缓存】功能，改善云盘视频播放体验（可在设置中心停用）</li><li>修正某些情况下，播放组件下载解码器失败的问题</li><li>云盘增加文件【举报、申诉】功能</li><li>云盘传输列表入口移至顶部</li><li>云盘回收站改为独立对话框</li></ul><h1 id="落尘之木优化内容"><a href="#落尘之木优化内容" class="headerlink" title="落尘之木优化内容"></a>落尘之木优化内容</h1><ol><li>本地VIP专享悬浮窗</li><li>移除发现栏</li><li>精简多余菜单</li><li>自动识别VIP用户，非VIP直升本地超级会员</li><li>移除下载区文字广告</li><li>移除头像悬浮广告</li><li>禁止更新版本</li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>使用方法：<br>先下载迅雷11安装：<a href="https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe">https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe</a><br>运行，稍等片刻<br>有三个选项：【1】迅雷11去广告、【2】迅雷11去广告小窗口、【3】非会员保持蓝悬浮窗<br>命令窗口输入对应数字回车</p><p>迅雷 Thunder11.0.3.1014 落尘之木去广告<br>落尘之木：<a href="https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip">https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip</a><br>迅雷云盘：<a href="https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1">https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1</a> 提取码：gqxf<br>百度网盘：<a href="https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999">https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999</a> 提取码：9999<br>蓝奏云：<a href="https://wwx.lanzoux.com/b04b4u5je">https://wwx.lanzoux.com/b04b4u5je</a></p><hr><p><time>2018-12-21 22:13</time>更新为10.1.7.262<br><time>2020-10-23</time>Thunder11.0.3.1014</p>]]></content>
@@ -532,24 +520,31 @@
   </entry>
   
   <entry>
-    <title>去你妈的不求甚解</title>
-    <link href="http://ted423.github.io/etc/Fuck/"/>
-    <id>http://ted423.github.io/etc/Fuck/</id>
-    <published>2021-07-03T06:11:52.599Z</published>
-    <updated>2021-07-03T06:45:12.024Z</updated>
+    <title>我为什么仍在使用迅雷</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/</id>
+    <published>2021-06-19T12:40:27.106Z</published>
+    <updated>2021-04-24T08:28:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论<br><a href="https://www.zhihu.com/question/34935661">https://www.zhihu.com/question/34935661</a><br><a href="https://www.zhihu.com/question/20840941">https://www.zhihu.com/question/20840941</a></p><p>更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)<br><a href="https://www.google.com/search?q=qbittorrent+x86+%E7%BE%A4%E6%99%96&amp;oq=qbittorrent+x86+%E7%BE%A4%E6%99%96&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie=UTF-8">https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie=UTF-8</a></p><p>结果放眼望去，全是x64的。甚至包括一堆码农的博客(<br>造成的结果就是，如果你真想找x86的软件包，那大概是真找不到的(因为实际也没有，没人编译，不过你大概短期内也无法确认，实际上没这么个东西。不过docker还是有一个的)</p><p>当遇到类似问题的时候，总会有这么一种观点，不求甚解。<br>只要大家都能理解就好了。<br>甚至还有人意志坚定的指责那些纠正的人。</p><p>结果呢？<br>就是大家都活成了傻逼的样子</p><p>就如同这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">请听题：“铁骑”的正确读音是什么？</span><br><span class="line">A. tiě jì</span><br><span class="line">B. tiě qí</span><br><span class="line"></span><br><span class="line">再听题：“空穴来风”的正确释义是什么？</span><br><span class="line"></span><br><span class="line">A. 出现的传言都有一定的根源和依据。</span><br><span class="line">B. 传言没有依据。</span><br><span class="line"></span><br><span class="line">最后一题：一斤等于多少两？</span><br><span class="line">A. 16两</span><br><span class="line">B. 10两</span><br><span class="line"></span><br><span class="line">你以为A是正确答案，其实《现代汉语词典》里的答案都是B。语言这东西嘛，就是约定俗成，互相理解即可，强行纠正没什么意义。说不定哪天，这两个字就增加了释义了呢。</span><br><span class="line"></span><br><span class="line">作者：yuantj</span><br><span class="line">链接：https://www.zhihu.com/question/20840941/answer/1890453633</span><br><span class="line">来源：知乎</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure><p><a href="https://zhuanlan.zhihu.com/p/161624772">https://zhuanlan.zhihu.com/p/161624772</a></p><p>网上查了下汉典(<br>没这奇怪的意思<br>《现代汉语词典》你还在看么？我不看(</p><p>当我发现搜中文很难搜到我需要的东西的时候，我很悲伤。<br>当现在开始不断地嘲讽自主研发浏览器，自主研发系统的时候，其实我很高兴。</p><p>目前我遇到的情况是，搞软件，搞开发的分不清内外网。做硬件开发的，一堆板子用相同的MAC地址问我为什么上不了网。</p><p>什么样的土壤，结出什么样的果实。<br>我并不指望在这种风气下，学术以及科技发展能有啥好结果。</p><p>跟能讨论的人讨论。跟不能讨论的人，(这就是我为什么注销了知乎。</p>]]></content>
+    <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论&lt;br&gt;&lt;a href=&quot;https://www.zhihu.com/question/34935661&quot;&gt;https://www.zhihu.com/question/34935661&lt;/a&gt;&lt;br</summary>
+    <summary type="html">&lt;p&gt;当然啦，毫无疑问迅雷是个傻逼软件。&lt;br&gt;上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。&lt;/p&gt;
+&lt;p&gt;不过上个图&lt;br&gt;&lt;a href=&quot;https://www.z4a.net/image/gEUKSJ&quot;</summary>
       
     
     
     
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
     
   </entry>
   
