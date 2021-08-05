@@ -448,6 +448,42 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/SMB/">
+                
+                <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
+            </a>
+            <div class="abstract-content">
+                其实最简单的方法是重启。
+说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Windbg/">
                 
                 <span class="abstract-title-text">[转载]WINDBG分析DMP方法（2012.8.19修改）</span>
@@ -854,39 +890,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/Fuck/">
-                
-                <span class="abstract-title-text">去你妈的不求甚解</span>
-            </a>
-            <div class="abstract-content">
-                其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论https://www.zhihu.com/question/34935661https://www.zhihu.com/question/20840941
-更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
     
 </div>
 
@@ -2125,8 +2128,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         
-        
-        
     
     
     
@@ -2258,6 +2259,12 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/29</span>
             <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
         </li>
@@ -2299,21 +2306,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Software/No%20Refs/">不建议使用Refs</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
         </li>
     
         
@@ -2403,13 +2395,13 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
                 
                 </ul>
             
-            <div class="archive-year"> 2020 </div>
+            <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
         </li>
     
         
@@ -2418,13 +2410,19 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
                 
                 </ul>
             
-            <div class="archive-year"> Invalid date </div>
+            <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
+            <span class="archive-post-date">11/08</span>
+            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
         </li>
     
         
@@ -2616,12 +2614,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/08</span>
-            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
