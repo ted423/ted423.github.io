@@ -448,6 +448,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/samba/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
+            </a>
+            <div class="abstract-content">
+                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证
+理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
+说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
+12345678910Jul 19 14:16:07 pve smbd[14765]: pam_uni...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/NFS%20Squash/">
                 
                 <span class="abstract-title-text">NFS squash特性相关</span>
@@ -838,41 +877,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             <div class="abstract-content">
                 其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论https://www.zhihu.com/question/34935661https://www.zhihu.com/question/20840941
 更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/NoQNAP/">
-                
-                <span class="abstract-title-text">请勿购买QNAP</span>
-            </a>
-            <div class="abstract-content">
-                本文属于用啥黑啥系列。在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。然后第二遇到的大概就是群晖的贵了。
-因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。
-那么问题来了，硬件性能好就一定好用么？我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的(网上一堆喊着x86的实际是x86_64)，在其他人的帮助下，我最终在这台破群晖上成功的跑起来了QB的docker，虽然还有点小问题，但是QNAP呢？跑起来了，登不进去。
-目前我用QNAP遇到的...
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
@@ -1317,7 +1321,61 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1784,7 +1842,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 64
+        Total : 70
         </div>
         <!-- search  -->
         
@@ -1817,6 +1875,18 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
@@ -2162,27 +2232,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> Invalid date </div>
             <ul class="year-list">
             
@@ -2228,45 +2277,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/29</span>
-            <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/26</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/26</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/18</span>
-            <a class="archive-post-title" href="/Code/Terminal/rsync/">rsync</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
@@ -2302,14 +2312,14 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/24</span>
-            <a class="archive-post-title" href="/Issue/SMB/">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</a>
+            <span class="archive-post-date">07/29</span>
+            <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/19</span>
-            <a class="archive-post-title" href="/Issue/samba/">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a>
+            <span class="archive-post-date">07/24</span>
+            <a class="archive-post-title" href="/Issue/SMB/">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</a>
         </li>
     
         
@@ -2333,18 +2343,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -2423,6 +2421,21 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
                 
                 </ul>
             
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span>
+            <a class="archive-post-title" href="/Issue/samba/">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> Invalid date </div>
             <ul class="year-list">
             
@@ -2430,6 +2443,66 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/Kerberos/">Windows域中Kerberos问题造成的共享目录无法访问</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/18</span>
+            <a class="archive-post-title" href="/Code/Terminal/rsync/">rsync</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
         </li>
     
         
@@ -2504,7 +2577,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
+            <a class="archive-post-title" href="/Code/WWW/2unicode/">中文等字符转化为unicode(UTF-16 LE)</a>
         </li>
     
         
@@ -2535,6 +2608,63 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/System/Fuck%20Windows/">傻逼微软 记一次关键日志 Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/itemscope/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/Uncommon%20CSS%20units/">[Untitled Post]</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/">[Untitled Post]</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
         </li>
     
     </div>
@@ -2786,6 +2916,21 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             <span class="sidebar-tag-name" data-tags="macOS">
                 <span class="iconfont-archer">&#xe606;</span>
                 macOS
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="javascript">
+                <span class="iconfont-archer">&#xe606;</span>
+                javascript
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="WWW">
+                <span class="iconfont-archer">&#xe606;</span>
+                WWW
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="字符编码">
+                <span class="iconfont-archer">&#xe606;</span>
+                字符编码
             </span>
         
     </div>
