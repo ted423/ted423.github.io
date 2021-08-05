@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-08-05T10:37:06.289Z</updated>
+  <updated>2016-06-22T12:56:00.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,141 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pac文件写法 代理自动配置(英语:Proxy auto-config,简称PAC)</title>
+    <link href="http://ted423.github.io/Code/WWW/pac/"/>
+    <id>http://ted423.github.io/Code/WWW/pac/</id>
+    <published>2021-08-05T11:32:08.827Z</published>
+    <updated>2016-06-22T12:56:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>火狐的autoproxy和Foxyproxy都开始出现这样那样的问题，于是我想到了.pac,没想到的是，这方法简单、有效，不但省了个扩展，还比扩展用起来舒服多了</p><p>一个PAC文件包含一个JavaScript形式的函数“FindProxyForURL(url, host)”。这个函数返回一个包含一个或多个访问规则的字符串。用户代理根据这些规则适用一个特定的代理其或者直接访问。当一个代理服务器无法响应的时候，多个访问规则提供了其他的后备访问方法。浏览器在访问其他页面以前，首先访问这个PAC文件。PAC文件中的URL可能是手工配置的，也可能是是通过网页的网络代理自发现协议（Web Proxy Autodiscovery Protocol）自动配置的。</p><p>网络代理自发现协议（WPAD）：浏览器通过DHCP和DNS的查询来搜索PAC文件的位置。(与本文无关)</p><p><strong>火狐可以打开浏览器控制台进行调试</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PAC file installed from file:///C:/Users/XX/Dropbox/Documents/GitHub/rules-GM-stylish-UC/test.pac</span><br><span class="line">PAC-alert: false</span><br></pre></td></tr></table></figure><p>#来源文档</p><ul><li><a href="http://findproxyforurl.com/pac-functions/">http://findproxyforurl.com/pac-functions/</a></li><li><a href="https://web.archive.org/web/20070602031929/http://wp.netscape.com/eng/mozilla/2.0/relnotes/demo/proxy-live.html">https://web.archive.org/web/20070602031929/http://wp.netscape.com/eng/mozilla/2.0/relnotes/demo/proxy-live.html</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file">https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file</a></li></ul><p>#既定参数<br><strong>url</strong>：the full URL being accessed.<br><strong>host</strong>：the hostname extracted from the URL.  it is the exact same string as between :// and the first : or / after that. The port number is not included in this parameter. It can be extracted from the URL when necessary.<br><strong>ret</strong>：(the return value) a string describing the configuration. The format of this string is defined below. </p><p>#返回值<br>Instruction|Meaning<br>—|—<br>DIRECT|Fetch the object directly from the content HTTP server denoted by its URL<br>PROXY host:port|Fetch the object via the proxy HTTP server at the given location (name and port)<br>SOCKS host:port|Fetch the object via the SOCKS server at the given location (name and port) </p><p>SOCKS可以写SOCKS5或者SOCKS4的样子，写SOCKS就是SOCKS4。<br>区别在于用SOCKS4只支持TCP，而用SOCKS5支持UDP，还有支持各种身份验证机制。但用SOCKS5是远程代理解析DNS(FF是这样)。</p><h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PROXY w3proxy.netscape.com:<span class="number">8080</span>; PROXY mozilla.netscape.com:<span class="number">8081</span></span><br><span class="line"><span class="comment">//Primary proxy is w3proxy:8080; if that goes down start using mozilla:8081 until the primary proxy comes up again.</span></span><br><span class="line">PROXY w3proxy.netscape.com:<span class="number">8080</span>; PROXY mozilla.netscape.com:<span class="number">8081</span>; DIRECT</span><br><span class="line"><span class="comment">//Same as above, but if both proxies go down, automatically start making direct connections. </span></span><br><span class="line">PROXY w3proxy.netscape.com:<span class="number">8080</span>; SOCKS socks:<span class="number">1080</span></span><br><span class="line"><span class="comment">//Use SOCKS if the primary proxy goes down.</span></span><br><span class="line"><span class="comment">//就个人来讲，喜欢只写一个值，这样好知道代理是不是挂了</span></span><br></pre></td></tr></table></figure><p>#函数<br>就是用看起来很吓唬人的函数名实现一个很简单的功能，除了url跟host，其他都是用来唬人的<br>##Hostname based conditions</p><p>###isPlainHostName(host)<br>This function will return true if the hostname contains no dots, e.g. <a href="http://intranet/">http://intranet</a><br>Useful when applying exceptions for internal websites, e.g. may not require resolution of a hostname to IP address to determine if local.<br>主要保证没有”.”，通常这样的属于内网的主机名<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If user requests plain hostnames, e.g. http://intranet/, </span></span><br><span class="line"><span class="comment">// http://webserver-name01/, send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (isPlainHostName(host))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>###localHostOrDomainIs(host, hostdom)<br>Evaluates hostname and only returns true if exact hostname match is found.<br>似乎是通过判断”.”间隔的内容是否相同来实现的(可以没有，但不能不一样)<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the Host requested is &quot;www&quot; or &quot;www.google.com&quot;, send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (localHostOrDomainIs(host, <span class="string">&quot;www.google.com&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the Host requested is &quot;google.com&quot; or a subdomain of google.com, e.g. &quot;example.google.com&quot;, send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (localHostOrDomainIs(host, <span class="string">&quot;.google.com&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>###isResolvable(host)<br>Attempts to resolve a hostname to an IP address and returns true if successful. WARNING – This may cause a browser to temporarily hang if a domain isn’t resolvable.<br>判断域名是否可以被解析<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the host requested can be resolved by DNS, send via proxy1.example.com.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (isResolvable(host))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br></pre></td></tr></table></figure><p>###isInNet(host, pattern, mask)<br>This function evaluates the IP address of a hostname, and if within a specified subnet returns true. If a hostname is passed the function will resolve the hostname to an IP address.<br>判断IP是否在指定的网段内，<code>dnsResolve</code>这个函数的作用在下面有。最后个参数是子网掩码，如果不懂的话可以去查下子网掩码是做什么的。<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (isInNet(dnsResolve(host), <span class="string">&quot;172.16.0.0&quot;</span>, <span class="string">&quot;255.240.0.0&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>##Related utility functions<br>###dnsDomainIs(host, domain)<br>Evaluates hostnames and returns true if hostnames match. Used mainly to match and exception individual hostnames.<br>判断是否是同域名，但这个函数很奇葩，火狐里诸如<code>if(dnsDomainIs(&quot;aaaa&quot;, &quot;aa&quot;))</code>是返回<strong>true</strong>的(别的没测，个人猜测是通过判断第一个字符串是否包含第二个字符串来实现的)<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the hostname matches or contains google.com (e.g. maps.google.com, www.google.com),</span></span><br><span class="line"><span class="comment">// send direct to the Internet.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (dnsDomainIs(host, <span class="string">&quot;.google.com&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>###myIpAddress()<br>Returns the IP address of the host machine.<br>返回你的当前IP地址，就是网卡获取的多少就是多少<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the machine requesting a website falls within IP range,</span></span><br><span class="line"><span class="comment">// send traffic via proxy 10.10.5.1 running on port 8080.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (isInNet(myIpAddress(), <span class="string">&quot;10.10.1.0&quot;</span>, <span class="string">&quot;255.255.255.0&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;PROXY 10.10.5.1:8080&quot;</span>;</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PAC file installed from file:///C:/Users/XX/Dropbox/Documents/GitHub/rules-GM-stylish-UC/test.pac</span><br><span class="line">PAC-alert: 192.168.1.7</span><br></pre></td></tr></table></figure><p>###dnsResolve(host)<br>Resolves hostnames to an IP address. This function can be used to reduce the number of DNS lookups, e.g. below example.<br>按我的理解这就是把域名解析成IP的，上面的英文其实我觉得有点问题。通常配合<code>isInNet</code>使用。(在火狐上使用会影响页面加载)<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If IP of the requested host falls within any of the ranges specified, send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (isInNet(dnsResolve(host), <span class="string">&quot;10.0.0.0&quot;</span>, <span class="string">&quot;255.0.0.0&quot;</span>) ||</span><br><span class="line">    isInNet(dnsResolve(host), <span class="string">&quot;172.16.0.0&quot;</span>,  <span class="string">&quot;255.240.0.0&quot;</span>) ||</span><br><span class="line">    isInNet(dnsResolve(host), <span class="string">&quot;192.168.0.0&quot;</span>, <span class="string">&quot;255.255.0.0&quot;</span>) ||</span><br><span class="line">    isInNet(dnsResolve(host), <span class="string">&quot;127.0.0.0&quot;</span>, <span class="string">&quot;255.255.255.0&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>###dnsDomainLevels(host)<br>Allows rules to be time based, e.g. only return a proxy during specific days.<br>就是数下字符串里有几个”.”,例如<code>dnsDomainLevels(&quot;www.netscape.com/www.www&quot;)</code>会返回3<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If hostname contains any dots, send via proxy1.example.com, otherwise send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (dnsDomainLevels(host) &gt; <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>##URL/hostname based conditions<br>###shExpMatch(str, shexp)<br>Will attempt to match hostname or URL to a specified shell expression, and returns true if matched.<br>通过主机名或URL进行匹配,其实就是一个能用通配符(&#42;)的检测<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Any requests with a hostname ending with the extension .local</span></span><br><span class="line"><span class="comment">// will be sent direct to the Internet.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (shExpMatch(url, <span class="string">&quot;*.local&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A request for the host vpn.domain.com or any request for a file or folder in the</span></span><br><span class="line"><span class="comment">// location http://abcdomain.com/folder/ will be sent direct to the Internet.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;vpn.domain.com&quot;</span>) ||</span><br><span class="line">    shExpMatch(url, <span class="string">&quot;http://abcdomain.com/folder/*&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>##Time based conditions<br>###weekdayRange(wd1, wd2, gmt)<br>Allows rules to be time based, e.g. only return a proxy during specific days.<br><strong>wd1</strong><br>    and<br><strong>wd2</strong><br>    are one of the weekday strings:</p><pre><code>SUN MON TUE WED THU FRI SAT</code></pre><p><strong>gmt</strong><br>    is either the string: GMT or is left out.<br>在wd1到wd2时会返回true,gmt是格林尼治标准时间<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If during the period of Monday to Friday, proxy1.example.com will be returned, otherwise</span></span><br><span class="line"><span class="comment">// users will go direct for any day outside this period.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (weekdayRange(<span class="string">&quot;MON&quot;</span>, <span class="string">&quot;FRI&quot;</span>)) <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>###dateRange</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">dateRange(day)</span><br><span class="line">dateRange(day1, day2)</span><br><span class="line">dateRange(mon)</span><br><span class="line">dateRange(month1, month2)</span><br><span class="line">dateRange(year)</span><br><span class="line">dateRange(year1, year2)</span><br><span class="line">dateRange(day1, month1, day2, month2)</span><br><span class="line">dateRange(month1, year1, month2, year2)</span><br><span class="line">dateRange(day1, month1, year1, day2, month2, year2)</span><br><span class="line">dateRange(day1, month1, year1, day2, month2, year2, gmt)</span><br></pre></td></tr></table></figure><p>Allows rules to be time based, e.g. only return a proxy during specific months.</p><p><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If during the period of January to March, proxy1.example.com will be returned, otherwise</span></span><br><span class="line"><span class="comment">// users will go direct for any month outside this period.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (dateRange(<span class="string">&quot;JAN&quot;</span>, <span class="string">&quot;MAR&quot;</span>)) <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>###timeRange</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">timeRange(hour)</span><br><span class="line">timeRange(hour1, hour2)</span><br><span class="line">timeRange(hour1, min1, hour2, min2)</span><br><span class="line">timeRange(hour1, min1, sec1, hour2, min2, sec2)</span><br><span class="line">timeRange(hour1, min1, sec1, hour2, min2, sec2, gmt)</span><br></pre></td></tr></table></figure><p>Allows rules to be time based, e.g. only return a proxy during specific hours.</p><p><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If during the period 8am to 6pm, proxy1.example.com will be returned, otherwise</span></span><br><span class="line"><span class="comment">// users will go direct for any time outside this period.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (timeRange(<span class="number">8</span>, <span class="number">18</span>)) <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure><p>##Logging utility<br>###alert<br>The alert() function is not specified in the original PAC specification, although support for this is included in Internet Explorer and Firefox.The function can be used to output the value of a variable or result of a function in a manner that is viewable by the end-user. This can be useful for troubleshooting PAC file rule issues.</p><p>See <a href="http://findproxyforurl.com/debug-pac-file/">debug PAC file</a> article for an advanced example of using this function.<br><strong>Example:</strong></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Outputs the resolved IP address of the host in the browser</span></span><br><span class="line"><span class="comment">// to end-user or error console. </span></span><br><span class="line"> </span><br><span class="line">resolved_host = dnsResolve(host);</span><br><span class="line">alert(resolved_host);</span><br></pre></td></tr></table></figure><p>#个人用代码<br><a href="https://github.com/ted423/rules-GM-stylish-UC/blob/master/proxy-1080.pac">https://github.com/ted423/rules-GM-stylish-UC/blob/master/proxy-1080.pac</a></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">FindProxyForURL</span>(<span class="params">url, host</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">proxy = <span class="string">&quot;PROXY 127.0.0.1:8080&quot;</span></span><br><span class="line"><span class="keyword">if</span> (isInNet(dnsResolve(host), <span class="string">&quot;198.0.0.1&quot;</span>, <span class="string">&quot;255.0.0.0&quot;</span>))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (isPlainHostName(host)) <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.google.*&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.googleapis.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.google-analytics.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.googleusercontent.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.gstatic.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.googlecode.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.dropbox.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.dropboxstatic.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.iobit.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.mediafire.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.blogspot.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">if</span> (shExpMatch(host, <span class="string">&quot;*.blogger.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line"><span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>#Other<br>##MIME type<br>application/x-ns-proxy-autoconfig</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;火狐的autoproxy和Foxyproxy都开始出现这样那样的问题，于是我想到了.pac,没想到的是，这方法简单、有效，不但省了个扩展，还比扩展用起来舒服多了&lt;/p&gt;
+&lt;p&gt;一个PAC文件包含一个JavaScript形式的函数“FindProxyForURL(url, h</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网页符号转义</title>
+    <link href="http://ted423.github.io/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/"/>
+    <id>http://ted423.github.io/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/</id>
+    <published>2021-08-05T11:32:08.812Z</published>
+    <updated>2015-10-31T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>HTML ISO-8859-1 参考手册<br><a href="http://www.w3school.com.cn/tags/html_ref_entities.html">http://www.w3school.com.cn/tags/html_ref_entities.html</a></p><h1 id="带有实体名称的-ASCII-实体"><a href="#带有实体名称的-ASCII-实体" class="headerlink" title="带有实体名称的 ASCII 实体"></a>带有实体名称的 ASCII 实体</h1><table><thead><tr><th>结果</th><th>描述</th><th>实体名称</th><th>实体编号</th></tr></thead><tbody><tr><td>“</td><td>quotation mark</td><td>&amp;quot;</td><td>&amp;#34;</td></tr><tr><td>‘</td><td>apostrophe</td><td>&amp;apos;</td><td>&amp;#39;</td></tr><tr><td>&amp;</td><td>ampersand</td><td>&amp;amp;</td><td>&amp;#38;</td></tr><tr><td>&lt;</td><td>less-than</td><td>&amp;lt;</td><td>&amp;#60;</td></tr></tbody></table><blockquote><p>|greater-than|&amp;gt;|&amp;#62;</p></blockquote><h1 id="ISO-8859-1-符号实体"><a href="#ISO-8859-1-符号实体" class="headerlink" title="ISO 8859-1 符号实体"></a>ISO 8859-1 符号实体</h1><table><thead><tr><th>结果</th><th>描述</th><th>实体名称</th><th>实体编号</th></tr></thead><tbody><tr><td>non-breaking space</td><td>&amp;nbsp;</td><td>&amp;#160;</td><td></td></tr><tr><td>¡</td><td>inverted exclamation mark</td><td>&amp;iexcl;</td><td>&amp;#161;</td></tr><tr><td>¢</td><td>cent</td><td>&amp;cent;</td><td>&amp;#162;</td></tr><tr><td>£</td><td>pound</td><td>&amp;pound;</td><td>&amp;#163;</td></tr><tr><td>¤</td><td>currency</td><td>&amp;curren;</td><td>&amp;#164;</td></tr><tr><td>¥</td><td>yen</td><td>&amp;yen;</td><td>&amp;#165;</td></tr><tr><td>¦</td><td>broken vertical bar</td><td>&amp;brvbar;</td><td>&amp;#166;</td></tr><tr><td>§</td><td>section</td><td>&amp;sect;</td><td>&amp;#167;</td></tr><tr><td>¨</td><td>spacing diaeresis</td><td>&amp;uml;</td><td>&amp;#168;</td></tr><tr><td>©</td><td>copyright</td><td>&amp;copy;</td><td>&amp;#169;</td></tr><tr><td>ª</td><td>feminine ordinal indicator</td><td>&amp;ordf;</td><td>&amp;#170;</td></tr><tr><td>«</td><td>angle quotation mark (left)</td><td>&amp;laquo;</td><td>&amp;#171;</td></tr><tr><td>¬</td><td>negation</td><td>&amp;not;</td><td>&amp;#172;</td></tr><tr><td>­</td><td>soft hyphen</td><td>&amp;shy;</td><td>&amp;#173;</td></tr><tr><td>®</td><td>registered trademark</td><td>&amp;reg;</td><td>&amp;#174;</td></tr><tr><td>¯</td><td>spacing macron</td><td>&amp;macr;</td><td>&amp;#175;</td></tr><tr><td>°</td><td>degree</td><td>&amp;deg;</td><td>&amp;#176;</td></tr><tr><td>±</td><td>plus-or-minus</td><td>&amp;plusmn;</td><td>&amp;#177;</td></tr><tr><td>²</td><td>superscript 2</td><td>&amp;sup2;</td><td>&amp;#178;</td></tr><tr><td>³</td><td>superscript 3</td><td>&amp;sup3;</td><td>&amp;#179;</td></tr><tr><td>´</td><td>spacing acute</td><td>&amp;acute;</td><td>&amp;#180;</td></tr><tr><td>µ</td><td>micro</td><td>&amp;micro;</td><td>&amp;#181;</td></tr><tr><td>¶</td><td>paragraph</td><td>&amp;para;</td><td>&amp;#182;</td></tr><tr><td>·</td><td>middle dot</td><td>&amp;middot;</td><td>&amp;#183;</td></tr><tr><td>¸</td><td>spacing cedilla</td><td>&amp;cedil;</td><td>&amp;#184;</td></tr><tr><td>¹</td><td>superscript 1</td><td>&amp;sup1;</td><td>&amp;#185;</td></tr><tr><td>º</td><td>masculine ordinal indicator</td><td>&amp;ordm;</td><td>&amp;#186;</td></tr><tr><td>»</td><td>angle quotation mark (right)</td><td>&amp;raquo;</td><td>&amp;#187;</td></tr><tr><td>¼</td><td>fraction 1/4</td><td>&amp;frac14;</td><td>&amp;#188;</td></tr><tr><td>½</td><td>fraction 1/2</td><td>&amp;frac12;</td><td>&amp;#189;</td></tr><tr><td>¾</td><td>fraction 3/4</td><td>&amp;frac34;</td><td>&amp;#190;</td></tr><tr><td>¿</td><td>inverted question mark</td><td>&amp;iquest;</td><td>&amp;#191;</td></tr><tr><td>×</td><td>multiplication</td><td>&amp;times;</td><td>&amp;#215;</td></tr><tr><td>÷</td><td>division</td><td>&amp;divide;</td><td>&amp;#247;</td></tr></tbody></table><h1 id="ISO-8859-1-字符实体"><a href="#ISO-8859-1-字符实体" class="headerlink" title="ISO 8859-1 字符实体#"></a>ISO 8859-1 字符实体#</h1><table><thead><tr><th>结果</th><th>描述</th><th>实体名称</th><th>实体编号</th></tr></thead><tbody><tr><td>À</td><td>capital a, grave accent</td><td>&amp;Agrave;</td><td>&amp;#192;</td></tr><tr><td>Á</td><td>capital a, acute accent</td><td>&amp;Aacute;</td><td>&amp;#193;</td></tr><tr><td>Â</td><td>capital a, circumflex accent</td><td>&amp;Acirc;</td><td>&amp;#194;</td></tr><tr><td>Ã</td><td>capital a, tilde</td><td>&amp;Atilde;</td><td>&amp;#195;</td></tr><tr><td>Ä</td><td>capital a, umlaut mark</td><td>&amp;Auml;</td><td>&amp;#196;</td></tr><tr><td>Å</td><td>capital a, ring</td><td>&amp;Aring;</td><td>&amp;#197;</td></tr><tr><td>Æ</td><td>capital ae</td><td>&amp;AElig;</td><td>&amp;#198;</td></tr><tr><td>Ç</td><td>capital c, cedilla</td><td>&amp;Ccedil;</td><td>&amp;#199;</td></tr><tr><td>È</td><td>capital e, grave accent</td><td>&amp;Egrave;</td><td>&amp;#200;</td></tr><tr><td>É</td><td>capital e, acute accent</td><td>&amp;Eacute;</td><td>&amp;#201;</td></tr><tr><td>Ê</td><td>capital e, circumflex accent</td><td>&amp;Ecirc;</td><td>&amp;#202;</td></tr><tr><td>Ë</td><td>capital e, umlaut mark</td><td>&amp;Euml;</td><td>&amp;#203;</td></tr><tr><td>Ì</td><td>capital i, grave accent</td><td>&amp;Igrave;</td><td>&amp;#204;</td></tr><tr><td>Í</td><td>capital i, acute accent</td><td>&amp;Iacute;</td><td>&amp;#205;</td></tr><tr><td>Î</td><td>capital i, circumflex accent</td><td>&amp;Icirc;</td><td>&amp;#206;</td></tr><tr><td>Ï</td><td>capital i, umlaut mark</td><td>&amp;Iuml;</td><td>&amp;#207;</td></tr><tr><td>Ð</td><td>capital eth, Icelandic</td><td>&amp;ETH;</td><td>&amp;#208;</td></tr><tr><td>Ñ</td><td>capital n, tilde</td><td>&amp;Ntilde;</td><td>&amp;#209;</td></tr><tr><td>Ò</td><td>capital o, grave accent</td><td>&amp;Ograve;</td><td>&amp;#210;</td></tr><tr><td>Ó</td><td>capital o, acute accent</td><td>&amp;Oacute;</td><td>&amp;#211;</td></tr><tr><td>Ô</td><td>capital o, circumflex accent</td><td>&amp;Ocirc;</td><td>&amp;#212;</td></tr><tr><td>Õ</td><td>capital o, tilde</td><td>&amp;Otilde;</td><td>&amp;#213;</td></tr><tr><td>Ö</td><td>capital o, umlaut mark</td><td>&amp;Ouml;</td><td>&amp;#214;</td></tr><tr><td>Ø</td><td>capital o, slash</td><td>&amp;Oslash;</td><td>&amp;#216;</td></tr><tr><td>Ù</td><td>capital u, grave accent</td><td>&amp;Ugrave;</td><td>&amp;#217;</td></tr><tr><td>Ú</td><td>capital u, acute accent</td><td>&amp;Uacute;</td><td>&amp;#218;</td></tr><tr><td>Û</td><td>capital u, circumflex accent</td><td>&amp;Ucirc;</td><td>&amp;#219;</td></tr><tr><td>Ü</td><td>capital u, umlaut mark</td><td>&amp;Uuml;</td><td>&amp;#220;</td></tr><tr><td>Ý</td><td>capital y, acute accent</td><td>&amp;Yacute;</td><td>&amp;#221;</td></tr><tr><td>Þ</td><td>capital THORN, Icelandic</td><td>&amp;THORN;</td><td>&amp;#222;</td></tr><tr><td>ß</td><td>small sharp s, German</td><td>&amp;szlig;</td><td>&amp;#223;</td></tr><tr><td>à</td><td>small a, grave accent</td><td>&amp;agrave;</td><td>&amp;#224;</td></tr><tr><td>á</td><td>small a, acute accent</td><td>&amp;aacute;</td><td>&amp;#225;</td></tr><tr><td>â</td><td>small a, circumflex accent</td><td>&amp;acirc;</td><td>&amp;#226;</td></tr><tr><td>ã</td><td>small a, tilde</td><td>&amp;atilde;</td><td>&amp;#227;</td></tr><tr><td>ä</td><td>small a, umlaut mark</td><td>&amp;auml;</td><td>&amp;#228;</td></tr><tr><td>å</td><td>small a, ring</td><td>&amp;aring;</td><td>&amp;#229;</td></tr><tr><td>æ</td><td>small ae</td><td>&amp;aelig;</td><td>&amp;#230;</td></tr><tr><td>ç</td><td>small c, cedilla</td><td>&amp;ccedil;</td><td>&amp;#231;</td></tr><tr><td>è</td><td>small e, grave accent</td><td>&amp;egrave;</td><td>&amp;#232;</td></tr><tr><td>é</td><td>small e, acute accent</td><td>&amp;eacute;</td><td>&amp;#233;</td></tr><tr><td>ê</td><td>small e, circumflex accent</td><td>&amp;ecirc;</td><td>&amp;#234;</td></tr><tr><td>ë</td><td>small e, umlaut mark</td><td>&amp;euml;</td><td>&amp;#235;</td></tr><tr><td>ì</td><td>small i, grave accent</td><td>&amp;igrave;</td><td>&amp;#236;</td></tr><tr><td>í</td><td>small i, acute accent</td><td>&amp;iacute;</td><td>&amp;#237;</td></tr><tr><td>î</td><td>small i, circumflex accent</td><td>&amp;icirc;</td><td>&amp;#238;</td></tr><tr><td>ï</td><td>small i, umlaut mark</td><td>&amp;iuml;</td><td>&amp;#239;</td></tr><tr><td>ð</td><td>small eth, Icelandic</td><td>&amp;eth;</td><td>&amp;#240;</td></tr><tr><td>ñ</td><td>small n, tilde</td><td>&amp;ntilde;</td><td>&amp;#241;</td></tr><tr><td>ò</td><td>small o, grave accent</td><td>&amp;ograve;</td><td>&amp;#242;</td></tr><tr><td>ó</td><td>small o, acute accent</td><td>&amp;oacute;</td><td>&amp;#243;</td></tr><tr><td>ô</td><td>small o, circumflex accent</td><td>&amp;ocirc;</td><td>&amp;#244;</td></tr><tr><td>õ</td><td>small o, tilde</td><td>&amp;otilde;</td><td>&amp;#245;</td></tr><tr><td>ö</td><td>small o, umlaut mark</td><td>&amp;ouml;</td><td>&amp;#246;</td></tr><tr><td>ø</td><td>small o, slash</td><td>&amp;oslash;</td><td>&amp;#248;</td></tr><tr><td>ù</td><td>small u, grave accent</td><td>&amp;ugrave;</td><td>&amp;#249;</td></tr><tr><td>ú</td><td>small u, acute accent</td><td>&amp;uacute;</td><td>&amp;#250;</td></tr><tr><td>û</td><td>small u, circumflex accent</td><td>&amp;ucirc;</td><td>&amp;#251;</td></tr><tr><td>ü</td><td>small u, umlaut mark</td><td>&amp;uuml;</td><td>&amp;#252;</td></tr><tr><td>ý</td><td>small y, acute accent</td><td>&amp;yacute;</td><td>&amp;#253;</td></tr><tr><td>þ</td><td>small thorn, Icelandic</td><td>&amp;thorn;</td><td>&amp;#254;</td></tr><tr><td>ÿ</td><td>small y, umlaut mark</td><td>&amp;yuml;</td><td>&amp;#255;</td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;HTML ISO-8859-1 参考手册&lt;br&gt;&lt;a href=&quot;http://www.w3school.com.cn/tags/html_ref_entities.html&quot;&gt;http://www.w3school.com.cn/tags/html_ref_entitie</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="字符编码" scheme="http://ted423.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Javascript]浏览器嗅探</title>
+    <link href="http://ted423.github.io/Code/WWW/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%97%85%E6%8E%A2/"/>
+    <id>http://ted423.github.io/Code/WWW/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%97%85%E6%8E%A2/</id>
+    <published>2021-08-05T11:32:07.158Z</published>
+    <updated>2021-08-05T12:06:28.021Z</updated>
+    
+    <content type="html"><![CDATA[<script>document.writeln("Useragent="+window.navigator.userAgent+"<br>");document.writeln("浏览器原型="+window.navigator.appName+"<br>");document.writeln("浏览器代码名="+window.navigator.appCodeName+"<br>");document.writeln("浏览器平台及版本信息="+window.navigator.appVersion+"<br>");document.writeln("浏览器语言="+window.navigator.language+"<br>");document.writeln("是否开启cookies="+window.navigator.cookieEnabled+"<br>");for(i=0;i<window.navigator.plugins.length;i++){document.writeln("插件"+i+"="+window.navigator.plugins[i].name+"<br>");document.writeln("插件信息"+i+"="+window.navigator.plugins[i].description+"<br>");}document.writeln("CPU等级="+window.navigator.cpuClass+"<br>");document.writeln("是否处于联网模式="+window.navigator.onLine+"<br>");document.writeln("系统默认语言="+window.navigator.systemLanguage+"<br>");document.writeln("软件平台="+window.navigator.platform+"<br>");document.writeln("系统设置语言="+window.navigator.userLanguage+"<br>");document.writeln("当前浏览器页面编码："+document.characterSet+"<br>");</script><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;Useragent=&quot;</span>+<span class="built_in">window</span>.navigator.userAgent+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;浏览器原型=&quot;</span>+<span class="built_in">window</span>.navigator.appName+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;浏览器代码名=&quot;</span>+<span class="built_in">window</span>.navigator.appCodeName+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;浏览器平台及版本信息=&quot;</span>+<span class="built_in">window</span>.navigator.appVersion+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;浏览器语言=&quot;</span>+<span class="built_in">window</span>.navigator.language+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;是否开启cookies=&quot;</span>+<span class="built_in">window</span>.navigator.cookieEnabled+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;CPU等级=&quot;</span>+<span class="built_in">window</span>.navigator.cpuClass+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="built_in">window</span>.navigator.plugins.length;i++)&#123;</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;插件&quot;</span>+i+<span class="string">&quot;=&quot;</span>+<span class="built_in">window</span>.navigator.plugins[i].name+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;插件信息&quot;</span>+i+<span class="string">&quot;=&quot;</span>+<span class="built_in">window</span>.navigator.plugins[i].description+<span class="string">&quot;&lt;br&gt;&quot;</span>);&#125;</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;是否处于联网模式=&quot;</span>+<span class="built_in">window</span>.navigator.onLine+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;系统默认语言=&quot;</span>+<span class="built_in">window</span>.navigator.systemLanguage+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;软件平台=&quot;</span>+<span class="built_in">window</span>.navigator.platform+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;系统设置语言=&quot;</span>+<span class="built_in">window</span>.navigator.userLanguage+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;当前浏览器页面编码：&quot;</span>+<span class="built_in">document</span>.characterSet+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;script&gt;
+document.writeln(&quot;Useragent=&quot;+window.navigator.userAgent+&quot;&lt;br&gt;&quot;);
+document.writeln(&quot;浏览器原型=&quot;+window.navigator.appName+&quot;&lt;br&gt;&quot;);
+docum</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Javascript" scheme="http://ted423.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WordPress修改固定链接之后,无法访问的解决办法</title>
+    <link href="http://ted423.github.io/Code/WWW/WordPress%E4%BF%AE%E6%94%B9%E5%9B%BA%E5%AE%9A%E9%93%BE%E6%8E%A5%E4%B9%8B%E5%90%8E%20%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <id>http://ted423.github.io/Code/WWW/WordPress%E4%BF%AE%E6%94%B9%E5%9B%BA%E5%AE%9A%E9%93%BE%E6%8E%A5%E4%B9%8B%E5%90%8E%20%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</id>
+    <published>2021-08-05T11:32:06.308Z</published>
+    <updated>2016-05-03T23:47:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>原文链接:<a href="http://www.inlojv.com/wordpress-modify-fixed-link.html">http://www.inlojv.com/wordpress-modify-fixed-link.html</a></p><p>主要是方法二所说的问题，也就是apache里mod_rewrite 模块没有启用。</p><p>修改apache里面的配置文件httpd.conf </p><p>主要修改两个地方 </p><ol><li><p>开启apache中的rewrite模块，在httpd.conf 中找到<br> <code>#LoadModule rewrite_module modules/mod_rewrite.so</code><br> 把前面的#号去掉，变成<br> <code>LoadModule rewrite_module modules/mod_rewrite.so</code></p></li><li><p>开启AllowOverride ，怎么做？ 也是在httpd.conf 中找到<code>AllowOverride None</code>将它改成<code>AllowOverride All</code><br>特别注意的是：AllowOverride可能会有好几处，只需要修改 <code>&lt;Directory /&gt;</code> 和 你站点所在的根目录的一处<br>如<code>&lt;Directory “F:/…… /www/htdocs”&gt; </code> 即可</p></li></ol><p>如果不懂，索性将这几处全部改了 。全部改好，必须保存 并且重启apache 。</p><p>问题即可解决。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;原文链接:&lt;a href=&quot;http://www.inlojv.com/wordpress-modify-fixed-link.html&quot;&gt;http://www.inlojv.com/wordpress-modify-fixed-link.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;主</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手机版网页的meta</title>
+    <link href="http://ted423.github.io/Code/WWW/%E6%89%8B%E6%9C%BA%E7%89%88%E7%BD%91%E9%A1%B5%E7%9A%84meta/"/>
+    <id>http://ted423.github.io/Code/WWW/%E6%89%8B%E6%9C%BA%E7%89%88%E7%BD%91%E9%A1%B5%E7%9A%84meta/</id>
+    <published>2021-08-05T11:32:03.342Z</published>
+    <updated>2015-08-02T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0&quot; /&gt;</span><br></pre></td></tr></table></figure><p>具体参考这里，我还没完全看懂<br><a href="http://stackoverflow.com/questions/11345896/full-webpage-and-disabled-zoom-viewport-meta-tag-for-all-mobile-browsers">http://stackoverflow.com/questions/11345896/full-webpage-and-disabled-zoom-viewport-meta-tag-for-all-mobile-browsers</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
+    
+    <category term="iOS" scheme="http://ted423.github.io/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>[Javascript]获取文本节点</title>
@@ -402,155 +537,6 @@
     
     
     <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]7-Zip-zstd 7z增强版</title>
-    <link href="http://ted423.github.io/Software/Compression/7-Zip-zstd/"/>
-    <id>http://ted423.github.io/Software/Compression/7-Zip-zstd/</id>
-    <published>2021-07-01T07:10:41.474Z</published>
-    <updated>2021-07-02T01:32:03.617Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/mcmilk/7-Zip-zstd&quot;&gt;https://github.com/mcmilk/7-Zip-zstd&lt;/a&gt;&lt;br&gt;之前某个群吐槽问7z是不是还是VC6编译，别人给的&lt;br&gt;不会覆盖掉原版的7z&lt;br&gt;总之不</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
-    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
-    
-    <category term="LGPLv2.1" scheme="http://ted423.github.io/tags/LGPLv2-1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文本编辑器类的个人选择</title>
-    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad/"/>
-    <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad/</id>
-    <published>2021-07-01T03:13:17.556Z</published>
-    <updated>2021-07-01T08:19:35.530Z</updated>
-    
-    <content type="html"><![CDATA[<p>本博有俩文本编辑器，其实我用过很多，所以就写写<br>最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。<br>最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）<br>小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。</p><p>之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。<br>另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址就很难，并且很难保证还能用。装起来也比较复杂，有点费时。</p><p>notepad3,必装,就是没有扩展之类的功能<br>sublime text，会有奇奇怪怪的输入法问题(当时写这个似乎是因为在Linux上面用)</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;本博有俩文本编辑器，其实我用过很多，所以就写写&lt;br&gt;最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。&lt;br&gt;最后发现Everedit不错，价格是100多的</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>压缩软件问题记录</title>
-    <link href="http://ted423.github.io/Software/Compression/Compression-defect/"/>
-    <id>http://ted423.github.io/Software/Compression/Compression-defect/</id>
-    <published>2021-06-24T13:11:29.875Z</published>
-    <updated>2021-07-01T08:20:18.249Z</updated>
-    
-    <content type="html"><![CDATA[<p>#Bandzip<br>无法对7z文件进行直接修改。</p><p>#Peazip</p><ul><li>无法选取多个文件进行压缩(2021-06-24未测试)</li><li>8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内</li><li>强烈不建议使用</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;#Bandzip&lt;br&gt;无法对7z文件进行直接修改。&lt;/p&gt;
-&lt;p&gt;#Peazip&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;无法选取多个文件进行压缩(2021-06-24未测试)&lt;/li&gt;
-&lt;li&gt;8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内&lt;/li&gt;</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/thunder/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/thunder/</id>
-    <published>2021-06-19T12:40:27.107Z</published>
-    <updated>2020-10-23T02:28:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别<br><strong>请特别注意尽量不要在迅雷下载目标文件夹里有部分或全部下载完成文件的情况下，把种子重新添加到迅雷，这个傻逼公司的傻逼开发脑子应该有屎，在你操作正常的情况下也会清掉你已经下载的文件，所以建议先备份或改名相应文件再手动操作</strong></p><p>Thunder 11 支持迅雷云盘取回<br>迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！</p><p>我给的不是最新的，可以去他博客翻下最新的<br><a href="https://www.luochenzhimu.com/?s=thunder">https://www.luochenzhimu.com/?s=thunder</a></p><p>【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷11】上我们重新设计了主界面框架，许多忠实雷友们过去一直吐槽的太像浏览器的问题，现在已经得到解决。</p><p>【迅雷11】的最大亮点，是我们开创性的将【下载】与【云盘】合二为一。</p><p>当您下载网络中的文件时，可以灵活的选择将文件下载到【电脑】或者【云盘】。</p><h1 id="下载列表"><a href="#下载列表" class="headerlink" title="下载列表"></a>下载列表</h1><p>首先要从下载列表说起，在这个版本中，我们将下载列表的任务分类，由原来【迅雷9、迅雷X】采用的纵向排列，改为横向排列。这是由于纵向排列时，每次需要切换任务分类，都要在上下分类之间长距离的移动鼠标，使用较为不便。</p><h1 id="悬浮窗"><a href="#悬浮窗" class="headerlink" title="悬浮窗"></a>悬浮窗</h1><p>悬浮窗也迎来了变化，从【迅雷7】一直用到【迅雷X】的圆形悬浮窗，现在终于改版啦！</p><p>迅雷11新的悬浮窗看上去像是个立方体，当有正在下载的任务时，会在右侧展开一个简短的进度条。</p><p>这个全新的设计可以更清晰的显示下载进度，视觉效果也炫酷不少哦。</p><h1 id="立即添加（到云盘）"><a href="#立即添加（到云盘）" class="headerlink" title="立即添加（到云盘）"></a>立即添加（到云盘）</h1><p>如果您是会员用户，当您选中任意一个下载中的任务时，在下载任务的下方会出现一个新的扩展栏，可以让您快捷的将任务添加到云盘里。</p><h1 id="下载列表展示云盘取回"><a href="#下载列表展示云盘取回" class="headerlink" title="下载列表展示云盘取回"></a>下载列表展示云盘取回</h1><p>在迅雷11过去的几个版本中，从云盘取回的任务，都只展示在云盘模块的【传输列表】里，对于经常需要查看云盘取回文件的用户来说颇为不便。现在通过下载列表也可以查看云盘取回的文件了。</p><p>#更新信息</p><ul><li>下载列表的任务分类由纵向排列改为横向排列</li><li>采用全新视觉设计的悬浮窗</li><li>新增【手机扫码免费加速】功能</li><li>左侧栏【下载、云盘】右侧增加数字红点（可展示当前正在下载的任务数，以及正在云添加和上传的文件数）</li><li>下载列表中视频任务下方增加【云盘播放】功能</li><li>下载列表中非视频任务下方增加【立即添加（到云盘）】功能</li><li>下载列表中支持展示从云盘取回的文件</li><li>新增【云盘视频智能缓存】功能，改善云盘视频播放体验（可在设置中心停用）</li><li>修正某些情况下，播放组件下载解码器失败的问题</li><li>云盘增加文件【举报、申诉】功能</li><li>云盘传输列表入口移至顶部</li><li>云盘回收站改为独立对话框</li></ul><h1 id="落尘之木优化内容"><a href="#落尘之木优化内容" class="headerlink" title="落尘之木优化内容"></a>落尘之木优化内容</h1><ol><li>本地VIP专享悬浮窗</li><li>移除发现栏</li><li>精简多余菜单</li><li>自动识别VIP用户，非VIP直升本地超级会员</li><li>移除下载区文字广告</li><li>移除头像悬浮广告</li><li>禁止更新版本</li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>使用方法：<br>先下载迅雷11安装：<a href="https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe">https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe</a><br>运行，稍等片刻<br>有三个选项：【1】迅雷11去广告、【2】迅雷11去广告小窗口、【3】非会员保持蓝悬浮窗<br>命令窗口输入对应数字回车</p><p>迅雷 Thunder11.0.3.1014 落尘之木去广告<br>落尘之木：<a href="https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip">https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip</a><br>迅雷云盘：<a href="https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1">https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1</a> 提取码：gqxf<br>百度网盘：<a href="https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999">https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999</a> 提取码：9999<br>蓝奏云：<a href="https://wwx.lanzoux.com/b04b4u5je">https://wwx.lanzoux.com/b04b4u5je</a></p><hr><p><time>2018-12-21 22:13</time>更新为10.1.7.262<br><time>2020-10-23</time>Thunder11.0.3.1014</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别&lt;br&gt;&lt;strong&gt;请特别注意尽量不要在迅雷下载目标文件夹里有部分或全部下载完成文件的情况下，把种子重新添加到迅雷，这个傻逼公司的傻逼开发脑子应该有屎，在你操作正常的情况下也会清掉你已经下载的文件</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="第三方修改|绿化" scheme="http://ted423.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我为什么仍在使用迅雷</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/</id>
-    <published>2021-06-19T12:40:27.106Z</published>
-    <updated>2021-04-24T08:28:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;当然啦，毫无疑问迅雷是个傻逼软件。&lt;br&gt;上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。&lt;/p&gt;
-&lt;p&gt;不过上个图&lt;br&gt;&lt;a href=&quot;https://www.z4a.net/image/gEUKSJ&quot;</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
     
   </entry>
   
