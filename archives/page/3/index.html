@@ -448,6 +448,123 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/No%20WD/">
+                
+                <span class="abstract-title-text">不推荐使用Windows Defender</span>
+            </a>
+            <div class="abstract-content">
+                首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。Server是1809，所以很可能遇到了是一个老版本的Bug
+现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。
+然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了
+解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。而里面，都是...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/NFS%20Squash/">
+                
+                <span class="abstract-title-text">NFS squash特性相关</span>
+            </a>
+            <div class="abstract-content">
+                写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章大部分都为猜测，未作有效以及查证相关检测。
+在阅读这篇文章之前你需要了解
+
+Linux是多用户操作系统
+用户以及组的保存都是基于id(uid gid)
+root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group里可以看，但是不同的Linux版本可能会有不同
+NIS Server
+Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/samba/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
+            </a>
+            <div class="abstract-content">
+                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证
+理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
+说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
+12345678910Jul 19 14:16:07 pve smbd[14765]: pam_uni...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Remote/vncserver%20-localhost%20no/">
                 
                 <span class="abstract-title-text">vncserver -localhost no</span>
@@ -767,127 +884,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Compression/7-Zip-zstd/">
-                
-                <span class="abstract-title-text">[开源]7-Zip-zstd 7z增强版</span>
-            </a>
-            <div class="abstract-content">
-                https://github.com/mcmilk/7-Zip-zstd之前某个群吐槽问7z是不是还是VC6编译，别人给的不会覆盖掉原版的7z总之不错。虽然还没详细用到我能推翻之前的结论另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Compression">Compression</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="LGPLv2.1">LGPLv2.1</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Document&Texteditor/notepad/">
-                
-                <span class="abstract-title-text">文本编辑器类的个人选择</span>
-            </a>
-            <div class="abstract-content">
-                本博有俩文本编辑器，其实我用过很多，所以就写写最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。
-之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Compression/Compression-defect/">
-                
-                <span class="abstract-title-text">压缩软件问题记录</span>
-            </a>
-            <div class="abstract-content">
-                #Bandzip无法对7z文件进行直接修改。
-#Peazip
-
-无法选取多个文件进行压缩(2021-06-24未测试)
-8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内
-强烈不建议使用
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/24</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Compression">Compression</a>
     
 </div>
 
@@ -1465,7 +1461,73 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -2262,7 +2324,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 93
+        Total : 97
         </div>
         <!-- search  -->
         
@@ -2419,6 +2481,21 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Software/No%20Refs/">不建议使用Refs</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
         </li>
     
         
@@ -2811,6 +2888,12 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Android/Connectbot/">[Android]Connectbot - Android terminal</a>
         </li>
     
@@ -2848,6 +2931,24 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
             <a class="archive-post-title" href="/Code/npm%20proxy/">npm设置代理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/Party%20is%20over/">[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/AOA%20-%20Miniskirt/">[性感MV]AOA - Miniskirt</a>
         </li>
     
         
@@ -2917,12 +3018,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
-        </li>
-    
-        
             
             
                 
@@ -2988,12 +3083,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
         </li>
     
@@ -3007,12 +3096,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
         </li>
     
         
@@ -3093,13 +3176,19 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/html2bbcode/">HTML转BBCODE[HTML2BBCODE]</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
         </li>
     
         
@@ -3118,6 +3207,12 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
         </li>
     
         
@@ -3147,13 +3242,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+            <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
         </li>
     
         
@@ -3259,6 +3348,21 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/Myriad%20Colors%20Phantom%20World/">无彩限的怪灵世界[無彩限のファントム・ワールド](Myriad Colors Phantom World/Musaigen no Phantom World)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Music/LRC/Maria%20Arredondo-Burning/">[LRC]Maria Arredondo-Burning</a>
         </li>
     
     </div>
@@ -3607,6 +3711,41 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
                 ☆
             </span>
         
+            <span class="sidebar-tag-name" data-tags="HD">
+                <span class="iconfont-archer">&#xe606;</span>
+                HD
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="720P">
+                <span class="iconfont-archer">&#xe606;</span>
+                720P
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="无损">
+                <span class="iconfont-archer">&#xe606;</span>
+                无损
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="歌词(LRC)">
+                <span class="iconfont-archer">&#xe606;</span>
+                歌词(LRC)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="多行(Autolyric)">
+                <span class="iconfont-archer">&#xe606;</span>
+                多行(Autolyric)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="建设中">
+                <span class="iconfont-archer">&#xe606;</span>
+                建设中
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="480P">
+                <span class="iconfont-archer">&#xe606;</span>
+                480P
+            </span>
+        
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -3651,6 +3790,11 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <span class="sidebar-category-name" data-categories="Anime">
             <span class="iconfont-archer">&#xe60a;</span>
             Anime
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Music">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Music
         </span>
     
     </div>

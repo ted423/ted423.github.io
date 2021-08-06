@@ -448,6 +448,124 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/px-pt-em/">
+                
+                <span class="abstract-title-text">[转载]常用px,pt,em换算表</span>
+            </a>
+            <div class="abstract-content">
+                原文:http://www.cnblogs.com/zhangpengshou/archive/2012/08/04/2623061.html
+
+pt (point，磅)：是一个物理长度单位，指的是72分之一英寸。
+px (pixel，像素)：是一个虚拟长度单位，是计算机系统的数字化图像长度单位，如果px要换算成物理长度，需要指定精度DPI(Dots Per Inch，每英寸像素数)，在扫描打印时一般都有DPI可选。Windows系统默认是96dpi，Apple系统默认是72dpi。
+em(相对长度单位，相对于当前对象内文本的字体尺寸)：是一个相对长度单位，最初是指字母M的宽度，故名em...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/02</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/PC-wifi/">
+                
+                <span class="abstract-title-text">[Terminal]计算机建立虚拟Wifi热点</span>
+            </a>
+            <div class="abstract-content">
+                Win 10有个直接开热点的设置，所以下面可能就用不到了https://www.intel.cn/content/www/cn/zh/support/articles/000023257/network-and-i-o/wireless-networking.html
+需要注意的是，开启WIFI热点时可能会导致有线网通过DHCP获取另外网段的IP时出现问题，需要取消第3步操作后，也就是共享网络勾选，才可以通过DHCP获取到IP
+
+输入netsh wlan show driver先看是否支持承载网络
+打开CMD,输入1netsh wlan set hostednetwork mode=al...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/02</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/Failed%20to%20sync%20this%20branch/">
+                
+                <span class="abstract-title-text">[Git]处理 GitHub - Failed to sync this branch 的问题</span>
+            </a>
+            <div class="abstract-content">
+                其实估计跟前段时间乱玩rebase有关,用 git push正常，但是sync就会提示”GitHub - Failed to sync this branch”
+打开git shell输入git status
+它会提示你原因我这里提示是 “Could not open file .git/rebase-merge/done for reading: No such file or directory”
+把rebase-merge整个删掉后就正常了
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/02</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Document&Texteditor/notepad3/">
                 
                 <span class="abstract-title-text">[文本编辑器]Notepad3</span>
@@ -729,128 +847,6 @@ qbittorrent
         <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/dropbox/">
-                
-                <span class="abstract-title-text">下载DropBox离线安装包的方法(可能失效)</span>
-            </a>
-            <div class="abstract-content">
-                一直无法理解那些给软件下载地址非要给个下载器的。特别对于开代理的，非要忍受那个下载器没速度的奇葩问题。原来dropbox是提供离线下载包的，现在不知道为什么又取消了。目前可以在dropbox的(下载页面)[https://www.dropbox.com/install#downloaded]上找到下载连接：https://www.dropbox.com/download?os=win&amp;full=1在地址链接后加上“&amp;full=1”即可。https://www.dropbox.com/download?os=win&amp;full=1
-
-现在由于有clash应该没太大问题...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/IDM/">
-                
-                <span class="abstract-title-text">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</span>
-            </a>
-            <div class="abstract-content">
-                就个人感觉来说，这个软件强制添加扩展项，并且在Chrome的体验并不好。这货就是专为百度网盘准备的。不过Cent browser可以调用，部分资源可以比迅雷下载速度高，并且代理支持PAC就相当棒,下载国外慢速资源会很好用
-目前百度封了IDM，我也找到了proxyee-down这个替代品。毕竟能不用破解软件就不用比较好
-缺点是每次更新版本设置都会还原，然后每次都会提示装扩展，下载文件夹里给你生成一堆文件夹。(当然这个问题可能跟这是修改的人弄的安装包有关)
-烈火的IDM要购买才能看了roustar31的可能会有exe损坏的提醒#来源https://www.repaik.com/forum.p...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="破解">破解</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="第三方修改|绿化">第三方修改|绿化</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="roustar31">roustar31</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">
-                
-                <span class="abstract-title-text">[开源]Torrent File Editor</span>
-            </a>
-            <div class="abstract-content">
-                种子文件修改器，主要用来改tracker，文件信息改了，种子使用的时候会出错https://torrent-file-editor.github.io/
-
-2020-06-26 19:06 没注意projeect转到github了，果然都在逃离sourceforge
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv3">GPLv3</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="macOS">macOS</a>
     
 </div>
 
@@ -1428,7 +1424,73 @@ qbittorrent
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -2225,7 +2287,7 @@ qbittorrent
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 93
+        Total : 97
         </div>
         <!-- search  -->
         
@@ -2382,6 +2444,21 @@ qbittorrent
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Software/No%20Refs/">不建议使用Refs</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
         </li>
     
         
@@ -2774,6 +2851,12 @@ qbittorrent
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Android/Connectbot/">[Android]Connectbot - Android terminal</a>
         </li>
     
@@ -2811,6 +2894,24 @@ qbittorrent
         <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
             <a class="archive-post-title" href="/Code/npm%20proxy/">npm设置代理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/Party%20is%20over/">[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/AOA%20-%20Miniskirt/">[性感MV]AOA - Miniskirt</a>
         </li>
     
         
@@ -2880,12 +2981,6 @@ qbittorrent
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%20Tool%20Plus/">Office Tool Plus</a>
-        </li>
-    
-        
             
             
                 
@@ -2951,12 +3046,6 @@ qbittorrent
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Office%202013/">[中文]Office 2013 SP1 VOL各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
         </li>
     
@@ -2970,12 +3059,6 @@ qbittorrent
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
         </li>
     
         
@@ -3056,13 +3139,19 @@ qbittorrent
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/html2bbcode/">HTML转BBCODE[HTML2BBCODE]</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
         </li>
     
         
@@ -3081,6 +3170,12 @@ qbittorrent
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
         </li>
     
         
@@ -3110,13 +3205,7 @@ qbittorrent
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+            <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
         </li>
     
         
@@ -3222,6 +3311,21 @@ qbittorrent
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/Myriad%20Colors%20Phantom%20World/">无彩限的怪灵世界[無彩限のファントム・ワールド](Myriad Colors Phantom World/Musaigen no Phantom World)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Music/LRC/Maria%20Arredondo-Burning/">[LRC]Maria Arredondo-Burning</a>
         </li>
     
     </div>
@@ -3570,6 +3674,41 @@ qbittorrent
                 ☆
             </span>
         
+            <span class="sidebar-tag-name" data-tags="HD">
+                <span class="iconfont-archer">&#xe606;</span>
+                HD
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="720P">
+                <span class="iconfont-archer">&#xe606;</span>
+                720P
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="无损">
+                <span class="iconfont-archer">&#xe606;</span>
+                无损
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="歌词(LRC)">
+                <span class="iconfont-archer">&#xe606;</span>
+                歌词(LRC)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="多行(Autolyric)">
+                <span class="iconfont-archer">&#xe606;</span>
+                多行(Autolyric)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="建设中">
+                <span class="iconfont-archer">&#xe606;</span>
+                建设中
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="480P">
+                <span class="iconfont-archer">&#xe606;</span>
+                480P
+            </span>
+        
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
@@ -3614,6 +3753,11 @@ qbittorrent
         <span class="sidebar-category-name" data-categories="Anime">
             <span class="iconfont-archer">&#xe60a;</span>
             Anime
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Music">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Music
         </span>
     
     </div>
