@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-08-05T15:19:05.000Z</updated>
+  <updated>2016-02-17T13:04:00.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]解决任务栏出现两个图标(火狐)的问题</title>
+    <link href="http://ted423.github.io/Issue/%E4%B8%A4%E4%B8%AA%E5%9B%BE%E6%A0%87/"/>
+    <id>http://ted423.github.io/Issue/%E4%B8%A4%E4%B8%AA%E5%9B%BE%E6%A0%87/</id>
+    <published>2021-08-06T16:32:01.496Z</published>
+    <updated>2016-02-17T13:04:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>原帖:<a href="http://tieba.baidu.com/p/3923325915">http://tieba.baidu.com/p/3923325915</a></p><p>具体跟<a href="https://msdn.microsoft.com/en-us/library/dd378459%28VS.85%29.aspx">Application User Model IDs</a>有关</p><p>可以看到火狐有以下注册表（我才不会说我没记路径直接搜TaskBarIDs的，结果只有FF跟Thunderbird有这个），大概是为了区分不同通道的火狐。(但yysy,只有火狐出这个问题还是挺拉的 -2021-08-06)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\SOFTWARE\Mozilla\Firefox\TaskBarIDs</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs</span><br><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Mozilla\Firefox\TaskBarIDs</span><br></pre></td></tr></table></figure><p>删掉TaskBarIDs就OK了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;原帖:&lt;a href=&quot;http://tieba.baidu.com/p/3923325915&quot;&gt;http://tieba.baidu.com/p/3923325915&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;具体跟&lt;a href=&quot;https://msdn.microsoft.com/en</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
+    
+    <category term="Regedit" scheme="http://ted423.github.io/tags/Regedit/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Firefox" scheme="http://ted423.github.io/tags/Firefox/"/>
+    
+  </entry>
   
   <entry>
     <title>npm设置代理</title>
@@ -523,33 +556,6 @@ docum</summary>
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="转载" scheme="http://ted423.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不推荐使用Windows Defender</title>
-    <link href="http://ted423.github.io/Software/No%20WD/"/>
-    <id>http://ted423.github.io/Software/No%20WD/</id>
-    <published>2021-07-23T09:16:33.346Z</published>
-    <updated>2021-07-28T08:31:23.623Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。<br>Server是1809，所以很可能遇到了是一个老版本的Bug</p><p>现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。</p><p>然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了<br><img src="https://files.catbox.moe/3s73lh.jpg" alt="不推荐使用Windows Defender"></p><p>解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。<br>而里面，都是文本文件。<br>要知道，压缩几个文件，每次生成的包可能都是不同的hash值。这种情况下的报毒，细思极恐。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。&lt;br&gt;Server是1809，所以很可能遇到了是一个老版本的Bug&lt;/p&gt;
-&lt;p&gt;现象就是Server上遇到问题文件(Windows loader.exe</summary>
-      
-    
-    
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
-    
-    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
     
   </entry>
   

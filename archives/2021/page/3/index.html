@@ -448,6 +448,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/No%20WD/">
+                
+                <span class="abstract-title-text">不推荐使用Windows Defender</span>
+            </a>
+            <div class="abstract-content">
+                首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。Server是1809，所以很可能遇到了是一个老版本的Bug
+现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。
+然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了
+解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。而里面，都是...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/NFS%20Squash/">
                 
                 <span class="abstract-title-text">NFS squash特性相关</span>
@@ -845,45 +884,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Compression/7-Zip-zstd/">
-                
-                <span class="abstract-title-text">[开源]7-Zip-zstd 7z增强版</span>
-            </a>
-            <div class="abstract-content">
-                https://github.com/mcmilk/7-Zip-zstd之前某个群吐槽问7z是不是还是VC6编译，别人给的不会覆盖掉原版的7z总之不错。虽然还没详细用到我能推翻之前的结论另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Compression">Compression</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="LGPLv2.1">LGPLv2.1</a>
     
 </div>
 
@@ -1521,7 +1521,26 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -2450,7 +2469,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 105
+        Total : 106
         </div>
         <!-- search  -->
         
@@ -3023,6 +3042,12 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span>
+            <a class="archive-post-title" href="/Issue/%E4%B8%A4%E4%B8%AA%E5%9B%BE%E6%A0%87/">[问题处理]解决任务栏出现两个图标(火狐)的问题</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
