@@ -264,34 +264,6 @@
   </entry>
   
   <entry>
-    <title>[Javascript]中文等字符转化为unicode(UTF-16 LE)</title>
-    <link href="http://ted423.github.io/Code/WWW/2unicode/"/>
-    <id>http://ted423.github.io/Code/WWW/2unicode/</id>
-    <published>2021-08-05T11:32:08.822Z</published>
-    <updated>2014-12-31T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>嘛，挺不错的。<br>原文:<a href="http://blog.csdn.net/geovindu/article/details/9119725">http://blog.csdn.net/geovindu/article/details/9119725</a></p><p>利用的javascript的 charCodeAt<br><a href="http://www.w3school.com.cn/jsref/jsref_charCodeAt.asp">http://www.w3school.com.cn/jsref/jsref_charCodeAt.asp</a><br>相关函数还有unescape() 以及escape()<br>网页上的unicode码常见的形式除了”\uXXXX”还有”&#xXXXX;”,其中“&#xXXXX;”是16进制，“&amp;#XXXX”为10进制<br><input id="i0" name="lang" onclick="refresh()" type="radio" checked/><br><label for="i0" title="\u00FF only">Java String Encoder</label><br><input id="i1" name="lang" onclick="refresh()" type="radio" /><br><label for="i1" title="\xFF and \u0100">JavaScript String Encoder</label><br><input id="i2" name="lang" onclick="refresh()" type="radio" /><br><label for="i2" title="\xFF and \u0100">Decoder</label></p><div>    <textarea onkeyup="refresh()" rows="8" cols="100">// Paste some Java or JavaScript code into this window.german = "Übergröße 塘㙍镇";smilie = "☺";</textarea></div><pre><code id="result" name="result">This encoding utility requires JavaScript.</code></pre><script type="text/javascript">// 127 bytesvar encodeJavaScriptString = function f(a, b) {  return ++b                                 //`b` is a number (including 0) when `replace` calls the function    ? '\\' + (                               //all escape sequences start with a backslash      (a = a.charCodeAt()) >> 12             //all characters from U+1000 and above        ? 'u'                                //must start with `\u`        : a >> 8                             //all characters from U+0100 to U+0FFF          ? 'u0'                             //must start with `\u0`          : 'x'                              //characters from U+007F to U+00FF can start with `\u00` or `\x`      ) + a.toString(16).toUpperCase()       //add the upper case hex string (it does not contain leading zeros)    : a.replace(/[^\0-~]/g, f)               //else call the function for all non-ASCII characters (all except U+0000 to U+007E)}// 115 bytesvar encodeJavaString = function e(a, b){  return ++b                                 //`b` is a number when `replace` calls the function    ? '\\u' +                                //in Java all escape sequences must start with `\u`      ('00' + a.charCodeAt().toString(16))   //build a hex string with at least 4 characters      .slice(-4).toUpperCase()               //use the last 4 characters and make them upper case    : a.replace(/[^\0-~]/g, e)               //else call the function for all non-ASCII characters (all except U+0000 to U+007E)}// 89 bytesvar reconvert = function (str,b){ str = str.replace(/(\\u)(\w{4})/gi,function($0){ return (String.fromCharCode(parseInt((escape($0).replace(/(%5Cu)(\w{4})/g,"$2")),16))); }); str = str.replace(/(&#x)(\w{4});/gi,function($0){ return String.fromCharCode(parseInt(escape($0).replace(/(%26%23x)(\w{4})(%3B)/g,"$2"),16)); }); return str; } var refresh = function(){    var t = document.getElementsByTagName('TEXTAREA')[0];    var p = document.getElementsByTagName('CODE')[0];    if(document.getElementById('i1').checked)var f = encodeJavaScriptString;    else if (document.getElementById('i0').checked)var f = encodeJavaString;    else var f = reconvert;    p.firstChild.data = f(t.value).replace(/\r\n/g, '\n');}refresh();</script><p>源码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">&lt;input id=&quot;i0&quot; name=&quot;lang&quot; onclick=&quot;refresh()&quot; type=&quot;radio&quot; checked/&gt;</span><br><span class="line">&lt;label for=&quot;i0&quot; title=&quot;\u00FF only&quot;&gt;Java String Encoder&lt;/label&gt;</span><br><span class="line">&lt;input id=&quot;i1&quot; name=&quot;lang&quot; onclick=&quot;refresh()&quot; type=&quot;radio&quot; /&gt;</span><br><span class="line">&lt;label for=&quot;i1&quot; title=&quot;\xFF and \u0100&quot;&gt;JavaScript String Encoder&lt;/label&gt;</span><br><span class="line">&lt;input id=&quot;i2&quot; name=&quot;lang&quot; onclick=&quot;refresh()&quot; type=&quot;radio&quot; /&gt;</span><br><span class="line">&lt;label for=&quot;i2&quot; title=&quot;\xFF and \u0100&quot;&gt;Decoder&lt;/label&gt;</span><br><span class="line">&lt;div&gt;</span><br><span class="line">&lt;textarea onkeyup=&quot;refresh()&quot; rows=&quot;8&quot; cols=&quot;100&quot;&gt;// Paste some Java or JavaScript code into this window.</span><br><span class="line">german = &quot;Übergröße 塘㙍镇&quot;;</span><br><span class="line">smilie = &quot;☺&quot;;</span><br><span class="line">&lt;/textarea&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;pre&gt;&lt;code id=&quot;result&quot; name=&quot;result&quot;&gt;This encoding utility requires JavaScript.&lt;/code&gt;&lt;/pre&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 127 bytes</span><br><span class="line">var encodeJavaScriptString = function f(a, b)</span><br><span class="line">&#123;</span><br><span class="line">  return ++b                                 //`b` is a number (including 0) when `replace` calls the function</span><br><span class="line">    ? &#x27;\\&#x27; + (                               //all escape sequences start with a backslash</span><br><span class="line">      (a = a.charCodeAt()) &gt;&gt; 12             //all characters from U+1000 and above</span><br><span class="line">        ? &#x27;u&#x27;                                //must start with `\u`</span><br><span class="line">        : a &gt;&gt; 8                             //all characters from U+0100 to U+0FFF</span><br><span class="line">          ? &#x27;u0&#x27;                             //must start with `\u0`</span><br><span class="line">          : &#x27;x&#x27;                              //characters from U+007F to U+00FF can start with `\u00` or `\x`</span><br><span class="line">      ) + a.toString(16).toUpperCase()       //add the upper case hex string (it does not contain leading zeros)</span><br><span class="line">    : a.replace(/[^\0-~]/g, f)               //else call the function for all non-ASCII characters (all except U+0000 to U+007E)</span><br><span class="line">&#125;</span><br><span class="line">// 115 bytes</span><br><span class="line">var encodeJavaString = function e(a, b)</span><br><span class="line">&#123;</span><br><span class="line">  return ++b                                 //`b` is a number when `replace` calls the function</span><br><span class="line">    ? &#x27;\\u&#x27; +                                //in Java all escape sequences must start with `\u`</span><br><span class="line">      (&#x27;00&#x27; + a.charCodeAt().toString(16))   //build a hex string with at least 4 characters</span><br><span class="line">      .slice(-4).toUpperCase()               //use the last 4 characters and make them upper case</span><br><span class="line">    : a.replace(/[^\0-~]/g, e)               //else call the function for all non-ASCII characters (all except U+0000 to U+007E)</span><br><span class="line">&#125;</span><br><span class="line">// 89 bytes</span><br><span class="line">var reconvert = function (str,b)&#123; </span><br><span class="line">str = str.replace(/(\\u)(\w&#123;4&#125;)/gi,function($0)&#123; </span><br><span class="line">return (String.fromCharCode(parseInt((escape($0).replace(/(%5Cu)(\w&#123;4&#125;)/g,&quot;$2&quot;)),16))); </span><br><span class="line">&#125;); </span><br><span class="line"></span><br><span class="line">str = str.replace(/(&amp;#x)(\w&#123;4&#125;);/gi,function($0)&#123; </span><br><span class="line">return String.fromCharCode(parseInt(escape($0).replace(/(%26%23x)(\w&#123;4&#125;)(%3B)/g,&quot;$2&quot;),16)); </span><br><span class="line">&#125;); </span><br><span class="line">return str; </span><br><span class="line">&#125; </span><br><span class="line">var refresh = function()</span><br><span class="line">&#123;</span><br><span class="line">var t = document.getElementsByTagName(&#x27;TEXTAREA&#x27;)[0];</span><br><span class="line">var p = document.getElementsByTagName(&#x27;CODE&#x27;)[0];</span><br><span class="line">if(document.getElementById(&#x27;i1&#x27;).checked)var f = encodeJavaScriptString;</span><br><span class="line">else if (document.getElementById(&#x27;i0&#x27;).checked)var f = encodeJavaString;</span><br><span class="line">else var f = reconvert;</span><br><span class="line">p.firstChild.data = f(t.value).replace(/\r\n/g, &#x27;\n&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">refresh();</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;嘛，挺不错的。&lt;br&gt;原文:&lt;a href=&quot;http://blog.csdn.net/geovindu/article/details/9119725&quot;&gt;http://blog.csdn.net/geovindu/article/details/9119725&lt;/a&gt;&lt;/</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="javascript" scheme="http://ted423.github.io/tags/javascript/"/>
-    
-    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
-    
-    <category term="字符编码" scheme="http://ted423.github.io/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
     <title>网页符号转义</title>
     <link href="http://ted423.github.io/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/"/>
     <id>http://ted423.github.io/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/</id>
@@ -549,6 +521,33 @@ docum</summary>
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="转载" scheme="http://ted423.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不推荐使用Windows Defender</title>
+    <link href="http://ted423.github.io/Software/No%20WD/"/>
+    <id>http://ted423.github.io/Software/No%20WD/</id>
+    <published>2021-07-23T09:16:33.346Z</published>
+    <updated>2021-07-28T08:31:23.623Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。<br>Server是1809，所以很可能遇到了是一个老版本的Bug</p><p>现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。</p><p>然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了<br><img src="https://files.catbox.moe/3s73lh.jpg" alt="不推荐使用Windows Defender"></p><p>解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。<br>而里面，都是文本文件。<br>要知道，压缩几个文件，每次生成的包可能都是不同的hash值。这种情况下的报毒，细思极恐。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。&lt;br&gt;Server是1809，所以很可能遇到了是一个老版本的Bug&lt;/p&gt;
+&lt;p&gt;现象就是Server上遇到问题文件(Windows loader.exe</summary>
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
     
   </entry>
   
