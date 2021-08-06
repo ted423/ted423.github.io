@@ -463,6 +463,42 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/rsync/">
+                
+                <span class="abstract-title-text">rsync</span>
+            </a>
+            <div class="abstract-content">
+                不正常的使用rsync可能会造成灾难性的后果
+rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
+常用参数1234567 其中z为压缩，在网络性能足够的情况下，不开会快-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)-u, --update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/No%20WD/">
                 
                 <span class="abstract-title-text">不推荐使用Windows Defender</span>
@@ -676,45 +712,6 @@ NTFS
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/NFS%20Squash/">
-                
-                <span class="abstract-title-text">NFS squash特性相关</span>
-            </a>
-            <div class="abstract-content">
-                写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章大部分都为猜测，未作有效以及查证相关检测。
-在阅读这篇文章之前你需要了解
-
-Linux是多用户操作系统
-用户以及组的保存都是基于id(uid gid)
-root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group里可以看，但是不同的Linux版本可能会有不同
-NIS Server
-Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
 </div>
 
@@ -2652,12 +2649,6 @@ x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">07/29</span>
             <a class="archive-post-title" href="/Issue/svn/">SVN踩得几个坑</a>
         </li>
@@ -2670,20 +2661,23 @@ x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/19</span>
-            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">07/19</span>
             <a class="archive-post-title" href="/Issue/samba/">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
         </li>
     
         
@@ -2710,6 +2704,18 @@ x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/03</span>
