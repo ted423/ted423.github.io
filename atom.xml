@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-08-09T06:20:57.738Z</updated>
+  <updated>2021-08-09T06:27:05.226Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://ted423.github.io/Software/winscppwd/"/>
     <id>http://ted423.github.io/Software/winscppwd/</id>
     <published>2021-08-09T06:12:40.310Z</published>
-    <updated>2021-08-09T06:20:57.738Z</updated>
+    <updated>2021-08-09T06:27:05.226Z</updated>
     
-    <content type="html"><![CDATA[<p>起因是忘了某机器密码，然后曾保存到了Winscp里<br>不过配置里的密码是加密的。</p><p>网上所有帖子都指向了<a href="/file/winscppwd.exe">winscppwd</a>，并且我查到以前有这么个开源项目<a href="https://bitbucket.org/knarf/winscppwd/overview">https://bitbucket.org/knarf/winscppwd/overview</a>，但现在看已经404了</p><p>看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看<br><a href="https://github.com/winscp/winscp/blob/master/source/core/Security.cpp">https://github.com/winscp/winscp/blob/master/source/core/Security.cpp</a><br>不过我看不懂，有人看得懂的话，可以试试手工解密</p>]]></content>
+    <content type="html"><![CDATA[<p>起因是忘了某机器密码，然后曾保存到了Winscp里<br>不过配置里的密码是加密的。</p><p>网上所有帖子都指向了<a href="/file/winscppwd.exe">winscppwd</a>，并且我查到以前有这么个开源项目<a href="https://bitbucket.org/knarf/winscppwd/overview">https://bitbucket.org/knarf/winscppwd/overview</a>，但现在看已经404了</p><p>似乎是2012年的软件<br>但是现在仍能正常使用</p><p>看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看<br><a href="https://github.com/winscp/winscp/blob/master/source/core/Security.cpp">https://github.com/winscp/winscp/blob/master/source/core/Security.cpp</a><br>不过我看不懂，有人看得懂的话，可以试试手工解密</p><p>另外有看到<a href="https://github.com/dzxs/winscppassword/">https://github.com/dzxs/winscppassword/</a><br>但这个我没试能不能用</p>]]></content>
     
     
       
