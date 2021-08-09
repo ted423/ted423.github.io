@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-08-09T06:27:05.226Z</updated>
+  <updated>2021-08-09T07:15:07.505Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]Windows Update:0x80072EFE</title>
+    <link href="http://ted423.github.io/Issue/0x80072EFE/"/>
+    <id>http://ted423.github.io/Issue/0x80072EFE/</id>
+    <published>2021-08-09T07:07:44.166Z</published>
+    <updated>2021-08-09T07:15:07.505Z</updated>
+    
+    <content type="html"><![CDATA[<p>2008 R2遇到<br>这个问题是由于update agent过旧导致的<br>理论Windows7早期版本也有问题，会导致后台占用很多内存</p><p>从文章得知Win8 和2012也有更新包，但是报错不明</p><p>更新包似乎是这两个系统通用的<br><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent">https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2008 R2遇到&lt;br&gt;这个问题是由于update agent过旧导致的&lt;br&gt;理论Windows7早期版本也有问题，会导致后台占用很多内存&lt;/p&gt;
+&lt;p&gt;从文章得知Win8 和2012也有更新包，但是报错不明&lt;/p&gt;
+&lt;p&gt;更新包似乎是这两个系统通用的&lt;br&gt;&lt;a hr</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
   
   <entry>
     <title>winscppwd - Winscp Password解密</title>
@@ -524,32 +554,6 @@ docum</summary>
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[转载]WINDBG分析DMP方法（2012.8.19修改）</title>
-    <link href="http://ted423.github.io/Software/Windbg/"/>
-    <id>http://ted423.github.io/Software/Windbg/</id>
-    <published>2021-07-26T00:52:33.605Z</published>
-    <updated>2013-12-31T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Windbg下载地址:<a href="http://www.windbg.org/">http://www.windbg.org/</a><br>然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。<br>像别的什么软件可能也会要不同的组件？<br>另外这憨逼SDK不同版本还能同时装<br>原文:<a href="http://bbs.icafe8.com/thread-400104-1-1.html">http://bbs.icafe8.com/thread-400104-1-1.html</a></p><ol><li><p>点击File里的”Symbol File Path”</p></li><li><p>然后把<code>SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols</code><br> 复制进去。(<a href="http://msdl.microsoft.com/download/symbols">http://msdl.microsoft.com/download/symbols</a> 为微软符号表服务器地址)</p></li><li><p>点OK,然后保存工作空间并关闭windbg，下次需要看DUMP的时候，打开windbg.exe，直接可以把抓来的DMP文件拖到打开的界面里面就可以分析了。</p></li><li><p>自动分析命令 !analyze -v</p></li></ol><p>就个人来讲，能力有限，我所能理解的就到这里了，剩下的建议看原文</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Windbg下载地址:&lt;a href=&quot;http://www.windbg.org/&quot;&gt;http://www.windbg.org/&lt;/a&gt;&lt;br&gt;然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。&lt;br&gt;像别的什么软件可能也会要</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="转载" scheme="http://ted423.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
     
   </entry>
   
