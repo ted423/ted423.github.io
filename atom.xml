@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-08-09T08:53:15.622Z</updated>
+  <updated>2021-08-09T08:54:34.426Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[问题处理]处理Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</title>
+    <title>[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</title>
     <link href="http://ted423.github.io/Issue/python-win/"/>
     <id>http://ted423.github.io/Issue/python-win/</id>
     <published>2021-08-09T08:49:12.683Z</published>
-    <updated>2021-08-09T08:53:15.622Z</updated>
+    <updated>2021-08-09T08:54:34.426Z</updated>
     
     <content type="html"><![CDATA[<p>简单说就是Win10在<code>C:\Users\XX\AppData\Local\Microsoft\WindowsApps</code>下放了两个0kb的python.exe以及python3.exe用于弹Windows Store，并把这个路径加到了个人的环境变量。</p><p>而且这个环境变量优先级高所以会优先运行。</p><p>傻逼微软。</p><p>资源管理器里似乎删不掉，要命令行删</p>]]></content>
     
