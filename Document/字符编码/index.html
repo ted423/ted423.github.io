@@ -1422,7 +1422,7 @@
 </tr>
 </tbody></table>
 <p>注：LE为小端序，上表中UTF-16(LE)里的”,”用于标出和UTF-8里对应关系。</p>
-<p>可以在这里<a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/code/www/utf-8">UTF-8</a>以及这里<a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/code/www/2unicode">UTF-16 LE</a>验证</p>
+<p>可以在这里<a href="https://ted423.github.io/Code/WWW/UTF-8/">UTF-8</a>以及这里<a href="https://ted423.github.io/Code/WWW/2unicode/">UTF-16 LE</a>验证</p>
 <h1 id="UCS-2、UCS-4与UTF-16、UTF-32"><a href="#UCS-2、UCS-4与UTF-16、UTF-32" class="headerlink" title="UCS-2、UCS-4与UTF-16、UTF-32"></a>UCS-2、UCS-4与UTF-16、UTF-32</h1><p>UCS-2对每一个Unicode码位使用2bytes字集(16位bit);<br>UCS-4对每一个Unicode码位使用4bytes字集(32位bit);<br>UTF-16可看成是UCS-2的父集。在没有辅助平面字符（surrogate code points）前，UTF-16与UCS-2所指的是同一的意思。但当引入辅助平面字符后，就称为UTF-16了。现在若有软件声称自己支持UCS-2编码，那其实是暗指它不能支持在UTF-16中超过2bytes的字集。对于小于0x10000的UCS码，UTF-16编码就等于UCS码。<br>UTF-32 原本是 UCS-4 的子集，但JTC1/SC2/WG2声明，所有未来对字符的指定都将会限制在BMP及其14个补充平面。<br>于是就现状而言，除了 UTF-32 标准包含额外的 Unicode 意涵，UCS-4 和 UTF-32 大体是相同的。</p>
 <h2 id="字节顺序标记-BOM"><a href="#字节顺序标记-BOM" class="headerlink" title="字节顺序标记-BOM"></a>字节顺序标记-BOM</h2><table>
 <thead>
@@ -1506,7 +1506,7 @@
         <div class="license-wrapper">
             <p>原文作者：<a href="http://ted423.github.io">ted423</a>
             <p>原文链接：<a href="http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</a>
-            <p>发表日期：<a href="http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">六月 19日 2020, 10:46:48 晚上</a>
+            <p>发表日期：<a href="http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">June 19th 2020, 10:46:48 pm</a>
             <p>更新日期：<a href="http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">June 21st 2018, 9:53:00 pm</a>
             <p>版权声明：本站原创内容(一般是语句不通顺的那种)采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可，转载内容以及不带个人观点的分享不在此例，摘抄有Wiki的内容的文章统一根据Wiki采用 CC BY-SA 3.0</p>
         </div>
