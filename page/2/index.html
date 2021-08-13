@@ -463,30 +463,31 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/">
+            <a class="abstract-title" href="/Code/Git/git%20proxy/">
                 
-                <span class="abstract-title-text">[Javascript]获取文本节点</span>
+                <span class="abstract-title-text">Git 设置和取消代理</span>
             </a>
             <div class="abstract-content">
-                主要经常遇见某元素下面是元素加文本节点的模式，需要对文本节点操作就很痛苦，因为Selector没法直接选到文本节点上，而前面的元素可能又包含干扰项总之如下
-1$(&quot;Selector&quot;)[0].nextSibling
+                1git config --global http.proxy socks5://127.0.0.1:7890
+1git config --global --unset http.proxy
+吐槽下git的升级连续用了3个裸IPhttps那个没用
 
-跑个题https://webdesigncss.pixnet.net/blog/post/223197231-如何用原生js取得siblings这篇文章似乎也很有用
+似乎可能Win下cmd里用就是会解析成IP丢到代理里(
 
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/10</span>
                 </div>
                 <!-- tags -->
                 
                     <div class= abstract-tags >
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Proxy">Proxy</a>
     
 </div>
 
@@ -599,45 +600,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/samba/">
-                
-                <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
-            </a>
-            <div class="abstract-content">
-                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证
-理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
-说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
-12345678910Jul 19 14:16:07 pve smbd[14765]: pam_uni...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -822,6 +784,45 @@ NTFS
         <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/samba/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
+            </a>
+            <div class="abstract-content">
+                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证
+理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
+说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
+12345678910Jul 19 14:16:07 pve smbd[14765]: pam_uni...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
