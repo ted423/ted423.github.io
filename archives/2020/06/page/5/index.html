@@ -448,6 +448,46 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
+                
+                <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
+            </a>
+            <div class="abstract-content">
+                不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动
+Widnows 7改AHCI找到下面的注册表子项：
+1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci
+在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态
+改IDE是找到
+1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide
+...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/KB3093266/">
                 
                 <span class="abstract-title-text">[问题处理]KB3093266 错误码:0x80004005</span>
@@ -815,45 +855,10 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/%E4%BC%98%E5%8C%96/Windows.edb/">
-                
-                <span class="abstract-title-text">清理Windows.edb(搜索索引文件)</span>
-            </a>
-            <div class="abstract-content">
-                C:\ProgramData\Microsoft\Search\Data\Applications\Windows\Windows.edb就是索引文件了，通常来说，你索引的文件越多，这玩意会越大。并且你要知道，微软的搜索非常非常的烂。所以用Everything等软件代替吧，然后把控制面板里索引里的除了开始菜单和用户的其他都删了。(这个可以快速搜索文档以及快捷方式 -2021-08-06)
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="优化">优化</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/2020/06/page/4/">&lt; PREV</a><a class="page-number" href="/archives/2020/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/3/">3</a><a class="page-number" href="/archives/2020/06/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/2020/06/page/6/">6</a><a class="page-number" href="/archives/2020/06/page/7/">7</a><a class="page-number" href="/archives/2020/06/page/8/">8</a><a class="extend next" rel="next" href="/archives/2020/06/page/6/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/2020/06/page/4/">&lt; PREV</a><a class="page-number" href="/archives/2020/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/3/">3</a><a class="page-number" href="/archives/2020/06/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/2020/06/page/6/">6</a><a class="page-number" href="/archives/2020/06/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/9/">9</a><a class="extend next" rel="next" href="/archives/2020/06/page/6/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -1598,7 +1603,68 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -2545,7 +2611,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 128
+        Total : 129
         </div>
         <!-- search  -->
         
@@ -2956,12 +3022,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]cookie操作测试</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/itemscope/">HTML5 数据结构(structured-data) 之 微数据(microdata)</a>
         </li>
     
@@ -3049,6 +3109,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/11</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">11/08</span>
@@ -3148,6 +3214,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]cookie操作测试</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/CSS-middle/">[转]CSS布局奇淫技巧之--各种居中</a>
         </li>
     
@@ -3224,21 +3296,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUi 远程的一些问题</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
         </li>
     
         
@@ -3345,6 +3402,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/15</span>
+            <a class="archive-post-title" href="/Issue/Windows%20Fast%20Shutdown/">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">05/02</span>
             <a class="archive-post-title" href="/Code/Git/Failed%20to%20sync%20this%20branch/">[Git]处理 GitHub - Failed to sync this branch 的问题</a>
         </li>
@@ -3367,6 +3430,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
         </li>
     
@@ -3380,24 +3449,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/npm-error/">Windows npm error 处理办法</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/ol-prettify/">[转载]本文介绍如何使用CSS 3美化有序列表的计数器样式</a>
         </li>
     
         
@@ -3419,6 +3470,33 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">推荐一些完本的轻小说</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/npm-error/">Windows npm error 处理办法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/ol-prettify/">[转载]本文介绍如何使用CSS 3美化有序列表的计数器样式</a>
         </li>
     
         
@@ -3592,30 +3670,9 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/15</span>
-            <a class="archive-post-title" href="/Issue/Windows%20Fast%20Shutdown/">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -3855,6 +3912,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span>
+            <a class="archive-post-title" href="/Anime/Batman%20Ninja/">忍者蝙蝠俠[Batman Ninja] 2018</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">Windows 关闭休眠功能</a>
         </li>
@@ -3868,7 +3931,25 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%B8%A6%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86/">带有密码的 Windows 系统自动登录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Zootopia/">[Disney]疯狂动物城[Zootopia]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">[资料]无签名UTF8和带签名UTF8格式</a>
         </li>
     
         
@@ -3898,21 +3979,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
                 
                 </ul>
             
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%B8%A6%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86/">带有密码的 Windows 系统自动登录</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> Invalid date </div>
             <ul class="year-list">
             
@@ -3920,27 +3986,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/python-win/">[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">[资料]无签名UTF8和带签名UTF8格式</a>
         </li>
     
         
