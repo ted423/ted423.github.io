@@ -448,6 +448,80 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">
+                
+                <span class="abstract-title-text">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</span>
+            </a>
+            <div class="abstract-content">
+                突然间想搞清楚unicode以及utf-8之间的关系，虽说之前有点印象，但还是云里雾里的，于是查了下。简单说就是太混乱，没弄清楚也跑出来写文章的很多，很难有文章能真正全说清楚的。当然我也是按我的理解来写的，不一定都对。
+基本知识字符集 - Character Set编码 - encoding代码页 - CodePage代码页是一个选定字符代码的列表，与字符集其实是差不多的概念，只不过代码页是计算机用来切换编码的概念(从Page来理解)。最早来自IBM，后来被微软，oracle ,SAP等广泛采用。由于最开始每个国家都在搞自己的locale编码(也就是ANSI，随后会有详细解释)，导致每个...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
+                
+                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
+            </a>
+            <div class="abstract-content">
+                带签名的UTF8：
+带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
+无签名的UTF8：
+相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
+那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
+BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Comic/R18/TJ_studio/">
                 
                 <span class="abstract-title-text">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</span>
@@ -767,90 +841,10 @@ this.Change是图片切换的宽度，但由于原生的计算有些问题，thi
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/npm-error/">
-                
-                <span class="abstract-title-text">Windows npm error 处理办法</span>
-            </a>
-            <div class="abstract-content">
-                windows上运行npm 报Error: ENOENT, stat ‘C:\Users\XX\AppData\Roaming\npm’ 错误解决方法报错路径为： C:\Users\“你用户名”\AppData\Roaming\   这个路径下建个npm文件(夹)即可正常使用npm 命令了！目测跟配置文件有关
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/ol-prettify/">
-                
-                <span class="abstract-title-text">[转载]本文介绍如何使用CSS 3美化有序列表的计数器样式</span>
-            </a>
-            <div class="abstract-content">
-                来源http://www.html5online.com.cn/series/css3/css313.html
-example
-
-1
-2
-3
-3.1
-3.2
-4
-
-个人对代码有调整
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354ol&#123;	counter-reset: li; /* 初始化计数器 */	list-style: none; /* 移除浏览器默认编号 */	text-shadow: 0 1px 0 rgba(255,25...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CSS">CSS</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/2020/page/6/">&lt; PREV</a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/5/">5</a><a class="page-number" href="/archives/2020/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/archives/2020/page/8/">8</a><a class="page-number" href="/archives/2020/page/9/">9</a><a class="extend next" rel="next" href="/archives/2020/page/8/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/2020/page/6/">&lt; PREV</a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/5/">5</a><a class="page-number" href="/archives/2020/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/archives/2020/page/8/">8</a><a class="page-number" href="/archives/2020/page/9/">9</a><a class="page-number" href="/archives/2020/page/10/">10</a><a class="extend next" rel="next" href="/archives/2020/page/8/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -1630,7 +1624,79 @@ example
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -2601,7 +2667,7 @@ example
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 135
+        Total : 139
         </div>
         <!-- search  -->
         
@@ -3339,6 +3405,42 @@ example
                 
                 </ul>
             
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">推荐一些完本的轻小说</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
@@ -3420,6 +3522,12 @@ example
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
         </li>
     
@@ -3432,45 +3540,9 @@ example
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
         </li>
     
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">推荐一些完本的轻小说</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -3657,12 +3729,6 @@ example
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -3902,8 +3968,8 @@ example
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">Windows 关闭休眠功能</a>
+            <span class="archive-post-date">06/25</span>
+            <a class="archive-post-title" href="/Anime/Batman%20Ninja/">忍者蝙蝠俠[Batman Ninja] 2018</a>
         </li>
     
         
@@ -3916,12 +3982,6 @@ example
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%B8%A6%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86/">带有密码的 Windows 系统自动登录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Anime/Zootopia/">[Disney]疯狂动物城[Zootopia]</a>
         </li>
     
         
@@ -3943,6 +4003,33 @@ example
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/Windows.edb/">清理Windows.edb(搜索索引文件)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">Windows 关闭休眠功能</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Anime/Frozen/">[Disney]冰雪奇缘[Frozen]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Anime/Zootopia/">[Disney]疯狂动物城[Zootopia]</a>
         </li>
     
         
@@ -4037,12 +4124,6 @@ example
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/25</span>
-            <a class="archive-post-title" href="/Anime/Batman%20Ninja/">忍者蝙蝠俠[Batman Ninja] 2018</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Cars/">赛车总动员系列[Cars]</a>
         </li>
@@ -4089,7 +4170,13 @@ example
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Anime/Frozen/">[Disney]冰雪奇缘[Frozen]</a>
+            <a class="archive-post-title" href="/Anime/Ralph/">[Disney]无敌破坏王[Wreck-It Ralph] 2012&无敌破坏王2：大闹互联网[Ralph Breaks the Internet] 2018</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Anime/Sing/">欢乐好声音[Sing] 2016</a>
         </li>
     
         
@@ -4120,6 +4207,36 @@ example
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/K-ON/">轻音少女[K-ON](けいおん)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Anime/Mayo%20Chiki!/">迷茫管家与懦弱的我[Mayo Chiki!]</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Anime/Penguin%20Highway/">企鹅公路[Penguin Highway] 2018</a>
         </li>
     
     </div>
