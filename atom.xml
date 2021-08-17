@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-08-17T10:16:32.813Z</updated>
+  <updated>2021-08-17T10:40:41.601Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ted423.github.io/Anime/Disney/"/>
     <id>http://ted423.github.io/Anime/Disney/</id>
     <published>2021-08-17T10:12:56.594Z</published>
-    <updated>2021-08-17T10:16:32.813Z</updated>
+    <updated>2021-08-17T10:40:41.601Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://pic3.zhimg.com/80/v2-270d4d166fccc436272b46ca7d73a978_720w.png" alt="Disney"></p><p>这个图来自<a href="https://www.zhihu.com/question/54993822/answer/142147320">https://www.zhihu.com/question/54993822/answer/142147320</a></p><p>通常说的迪士尼的动画指的 华特迪士尼动画工作室 制作的动画</p>]]></content>
     
@@ -38,6 +38,8 @@
     
     
     <category term="Anime" scheme="http://ted423.github.io/tags/Anime/"/>
+    
+    <category term="迪士尼[Disney]" scheme="http://ted423.github.io/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC-Disney/"/>
     
   </entry>
   
