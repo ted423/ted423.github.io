@@ -498,6 +498,109 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/git%20proxy/">
+                
+                <span class="abstract-title-text">[Git]设置和取消代理</span>
+            </a>
+            <div class="abstract-content">
+                1git config --global http.proxy socks5://127.0.0.1:7890
+1git config --global --unset http.proxy
+吐槽下git的升级连续用了3个裸IPhttps那个没用
+
+似乎可能Win下cmd里用就是会解析成IP丢到代理里(
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Proxy">Proxy</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/git/">
+                
+                <span class="abstract-title-text">[Git]一些命令</span>
+            </a>
+            <div class="abstract-content">
+                如无特别说明，本人的所有Git操作都是以Github为主
+本地分支删除git 文档https://git-scm.com/docs查看项目的分支们(包括本地和远程) 
+1$ git branch -a  
+
+删除本地分支 
+1$ git branch -d &lt;BranchName&gt;
+reset 删除错误提交的commit使用这个的前提条件是没有push,一般不建议push -fgit reset --hard &lt;commit_id&gt; 回退到某一版本。git reset --hard head~1 回退一个版本(数字2自然就是两个版本啦)然后 git push --...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/21</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Code/Git/conflict/">
                 
                 <span class="abstract-title-text">[Git]conflicts 处理</span>
@@ -831,85 +934,6 @@
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/winscppwd/">
-                
-                <span class="abstract-title-text">winscppwd - Winscp Password解密</span>
-            </a>
-            <div class="abstract-content">
-                起因是忘了某机器密码，然后曾保存到了Winscp里不过配置里的密码是加密的。
-网上所有帖子都指向了winscppwd，并且我查到以前有这么个开源项目https://bitbucket.org/knarf/winscppwd/overview，但现在看已经404了
-似乎是2012年的软件但是现在仍能正常使用
-看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看https://github.com/winscp/winscp/blob/master/source/core/Security.cpp不过我看不懂，有人看得懂的话，可以试试手工解密
-另外有看到https://g...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/NFS%20Squash/">
-                
-                <span class="abstract-title-text">NFS squash特性相关</span>
-            </a>
-            <div class="abstract-content">
-                写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章大部分都为猜测，未作有效以及查证相关检测。
-在阅读这篇文章之前你需要了解
-
-Linux是多用户操作系统
-用户以及组的保存都是基于id(uid gid)
-root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group里可以看，但是不同的Linux版本可能会有不同
-NIS Server
-Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
 </div>
 
@@ -1882,7 +1906,22 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -3121,7 +3160,7 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 155
+        Total : 156
         </div>
         <!-- search  -->
         
@@ -4090,7 +4129,7 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Code/Git/git%20proxy/">Git 设置和取消代理</a>
+            <a class="archive-post-title" href="/Code/Git/git%20proxy/">[Git]设置和取消代理</a>
         </li>
     
         
@@ -4676,6 +4715,12 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         <li class="archive-post-item">
             <span class="archive-post-date">05/29</span>
             <a class="archive-post-title" href="/Browser/Extension/ipvfoo/">[扩展]ipvfoo - 显示网页所有加载网址的解析IP</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span>
+            <a class="archive-post-title" href="/Code/Git/git/">[Git]一些命令</a>
         </li>
     
         
