@@ -180,9 +180,9 @@
     
     <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
     
-    <category term="1080P" scheme="http://ted423.github.io/tags/1080P/"/>
-    
     <category term="JP" scheme="http://ted423.github.io/tags/JP/"/>
+    
+    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
     
   </entry>
   
@@ -271,9 +271,9 @@
     
     <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
     
-    <category term="1080P" scheme="http://ted423.github.io/tags/1080P/"/>
-    
     <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
+    
+    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
     
   </entry>
   
@@ -299,7 +299,7 @@
     
     <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
     
-    <category term="1080P" scheme="http://ted423.github.io/tags/1080P/"/>
+    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
     
   </entry>
   
