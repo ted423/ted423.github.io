@@ -448,6 +448,107 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/Remote/Linux%20Remote/">
+                
+                <span class="abstract-title-text">Linux GUi 远程的一些问题</span>
+            </a>
+            <div class="abstract-content">
+                看来到处都是vnc教程不是没道理的。
+最早接触的Win,所以一切自然都会跟Win比。最初被xrdp气的够呛，xrdp实现的是Windows能通过rdp访问Linux，但核心还是vnc。Wvnc给我最初的印象就是同步显示，因为遇到对端看不到的，我就会想到RDP。(当然以对Windows和Linux的桌面理解来说，可能有所偏颇) 以下的Linux桌面英文应该叫session，也就是会话譬如，如果结束掉一个Linux桌面，里面跑的进程都会结束。
+x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不上了(其实现在也是)连接开始之前黑半天，然后好不容易连上了，关掉就...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/14</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Remote/x2go/">
+                
+                <span class="abstract-title-text">[开源]x2go - 远程连接</span>
+            </a>
+            <div class="abstract-content">
+                不推荐使用，最后又滚回去使用NoMachine了然后发现NoMachine有别的问题
+网址https://wiki.x2go.org/doku.php/start本来想吐槽x2go的，后面发现是自己的问题。闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。看到x2go用NX协议就也想试试，毕竟开源。首先是跟nomachine不兼容。当然这是小事。
+x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。使用桌面登录会跟你显示器登录是不一样。当然还能用X11这里引入一个小故事
+当我看到x2go在x11可以选...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/etc/Fuck/">
                 
                 <span class="abstract-title-text">去你妈的不求甚解</span>
@@ -778,7 +879,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         <article class="index-post">
             <a class="abstract-title" href="/Code/Terminal/rsync/">
                 
-                <span class="abstract-title-text">rsync</span>
+                <span class="abstract-title-text">[Terminal]rsync</span>
             </a>
             <div class="abstract-content">
                 不正常的使用rsync可能会造成灾难性的后果
@@ -794,113 +895,24 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
                 
                     <div class= abstract-tags >
     
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/WizTree/">
-                
-                <span class="abstract-title-text">[软件推荐]WizTree - 磁盘空间分析</span>
-            </a>
-            <div class="abstract-content">
-                https://www.diskanalyzer.com/之前还看到一个SpaceSniffer，是一直在用，不过目前来看WizTree一直在维护(相反SpaceSniffer最后更新已经是2018)。比较而言后者大文件提示会比较直观.百分比占用会比图形更准确，好理解。前者会边扫图形边变化，前期图形会失真，并且整体速度略慢据说Wiztree是直接对NTFS文件系统的MFT进行文件分析，不过我测试是对的网络路径(小文件太多估计有影响)固此，我倾向于用WizTree 完全取代 SpaceSniffer
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/16</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Personal Free">Personal Free</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Windows%20Fast%20Shutdown/">
-                
-                <span class="abstract-title-text">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
-            </a>
-            <div class="abstract-content">
-                这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
-个人处理方法
-打开注册表管理器，找到
-1HKEY_CURRENT_USER\Control Panel\Desktop\
-新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
-找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
-不过笔记本的这个值没改过，我想大概...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/15</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -1797,7 +1809,23 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
         
         
         
@@ -3046,7 +3074,7 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 156
+        Total : 158
         </div>
         <!-- search  -->
         
@@ -3442,7 +3470,7 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/18</span>
-            <a class="archive-post-title" href="/Code/Terminal/rsync/">rsync</a>
+            <a class="archive-post-title" href="/Code/Terminal/rsync/">[Terminal]rsync</a>
         </li>
     
         
@@ -3454,6 +3482,12 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/08</span>
+            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -3537,14 +3571,44 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Compression/Compression-defect/">压缩软件问题记录</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Code/WWW/WordPress%E4%BF%AE%E6%94%B9%E5%9B%BA%E5%AE%9A%E9%93%BE%E6%8E%A5%E4%B9%8B%E5%90%8E%20%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">WordPress修改固定链接之后,无法访问的解决办法</a>
+            <a class="archive-post-title" href="/Code/WWW/%E6%89%8B%E6%9C%BA%E7%89%88%E7%BD%91%E9%A1%B5%E7%9A%84meta/">手机版网页的meta</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Code/WWW/WordPress%E4%BF%AE%E6%94%B9%E5%9B%BA%E5%AE%9A%E9%93%BE%E6%8E%A5%E4%B9%8B%E5%90%8E%20%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">WordPress修改固定链接之后,无法访问的解决办法</a>
         </li>
     
         
@@ -3592,51 +3656,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
         </li>
     
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/08</span>
-            <a class="archive-post-title" href="/Software/Android/Solid%20Explorer%20File%20Manager/">[Android]Solid Explorer File Manager - 文件管理软件</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/Compression/Compression-defect/">压缩软件问题记录</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Code/WWW/%E6%89%8B%E6%9C%BA%E7%89%88%E7%BD%91%E9%A1%B5%E7%9A%84meta/">手机版网页的meta</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -3895,61 +3914,13 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
+            <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Code/npm%20proxy/">npm设置代理</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/Party%20is%20over/">[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/AOA%20-%20Miniskirt/">[性感MV]AOA - Miniskirt</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/R18/SY-118/">[R18]SY-118</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/">[MV]AKB48 - ハステとワステ</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/15</span>
-            <a class="archive-post-title" href="/Issue/Windows%20Fast%20Shutdown/">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/02</span>
-            <a class="archive-post-title" href="/Code/Git/Failed%20to%20sync%20this%20branch/">[Git]处理 GitHub - Failed to sync this branch 的问题</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/02</span>
-            <a class="archive-post-title" href="/Code/Terminal/PC-wifi/">[Terminal]计算机建立虚拟Wifi热点</a>
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%97%85%E6%8E%A2/">[Javascript]浏览器嗅探</a>
         </li>
     
         
@@ -3958,19 +3929,28 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
                 
                 </ul>
             
-            <div class="archive-year"> 2020 </div>
+            <div class="archive-year"> Invalid date </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Code/Git/Failed%20to%20sync%20this%20branch/">[Git]处理 GitHub - Failed to sync this branch 的问题</a>
         </li>
     
         
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%97%85%E6%8E%A2/">[Javascript]浏览器嗅探</a>
+            <span class="archive-post-date">05/02</span>
+            <a class="archive-post-title" href="/Code/Terminal/PC-wifi/">[Terminal]计算机建立虚拟Wifi热点</a>
         </li>
     
         
@@ -4009,6 +3989,57 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
                 
                 </ul>
             
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/09</span>
+            <a class="archive-post-title" href="/Issue/0x80072EFE/">[问题处理]Windows Update:0x80072EFE</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/09</span>
+            <a class="archive-post-title" href="/Software/winscppwd/">winscppwd - Winscp Password解密</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Code/npm%20proxy/">npm设置代理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/AOA%20-%20Miniskirt/">[性感MV]AOA - Miniskirt</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/R18/SY-118/">[R18]SY-118</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/">[MV]AKB48 - ハステとワステ</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> Invalid date </div>
             <ul class="year-list">
             
@@ -4031,6 +4062,21 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/Toradora/">[Anime]龙与虎[Toradora](とらドラ!)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/Party%20is%20over/">[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</a>
         </li>
     
         
@@ -4084,9 +4130,48 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
                 
                 </ul>
             
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/15</span>
+            <a class="archive-post-title" href="/Issue/Windows%20Fast%20Shutdown/">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span>
+            <a class="archive-post-title" href="/Anime/Batman%20Ninja/">[JP][WB]忍者蝙蝠俠[Batman Ninja] 2018</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">[资料]无签名UTF8和带签名UTF8格式</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -4300,27 +4385,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/09</span>
-            <a class="archive-post-title" href="/Issue/0x80072EFE/">[问题处理]Windows Update:0x80072EFE</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/09</span>
-            <a class="archive-post-title" href="/Software/winscppwd/">winscppwd - Winscp Password解密</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
@@ -4377,12 +4441,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/25</span>
-            <a class="archive-post-title" href="/Anime/Batman%20Ninja/">[JP][WB]忍者蝙蝠俠[Batman Ninja] 2018</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Cars/">[PIXAR]赛车总动员系列[Cars]</a>
         </li>
@@ -4393,6 +4451,30 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             <a class="archive-post-title" href="/Anime/Frozen/">[Disney]冰雪奇缘[Frozen]</a>
         </li>
     
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Anime/Mayo%20Chiki!/">[JP]迷茫管家与懦弱的我[Mayo Chiki!]</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -4415,33 +4497,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/The%20Angry%20Bird/">愤怒的小鸟[The Angry Birds Movie] 2016</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">[资料]无签名UTF8和带签名UTF8格式</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Anime/Mayo%20Chiki!/">[JP]迷茫管家与懦弱的我[Mayo Chiki!]</a>
         </li>
     
         
@@ -4570,6 +4625,21 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
                 
                 </ul>
             
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/18</span>
+            <a class="archive-post-title" href="/Code/Github/">个人Github</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
@@ -4662,14 +4732,20 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span>
-            <a class="archive-post-title" href="/Browser/no%20allow%20paste/">去除"欺诈警告:粘贴您不了解的东西时请务必小心，这可能...</a>
+            <span class="archive-post-date">12/01</span>
+            <a class="archive-post-title" href="/Browser/Extension/Image%20Search%20Options/">[扩展]Image Search Options - 右键搜图</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/13</span>
-            <a class="archive-post-title" href="/Browser/translate%20on%20Firefox/">火狐最值得用的实现翻译功能的脚本</a>
+            <span class="archive-post-date">09/20</span>
+            <a class="archive-post-title" href="/Code/Terminal/cmd/">[Terminal]常用CMD&批处理命令</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span>
+            <a class="archive-post-title" href="/Browser/no%20allow%20paste/">去除"欺诈警告:粘贴您不了解的东西时请务必小心，这可能...</a>
         </li>
     
         
@@ -4758,8 +4834,8 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/01</span>
-            <a class="archive-post-title" href="/Browser/Extension/Image%20Search%20Options/">[扩展]Image Search Options - 右键搜图</a>
+            <span class="archive-post-date">01/13</span>
+            <a class="archive-post-title" href="/Browser/translate%20on%20Firefox/">火狐最值得用的实现翻译功能的脚本</a>
         </li>
     
         
