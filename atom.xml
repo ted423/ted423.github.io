@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-08-18T08:59:29.222Z</updated>
+  <updated>2021-08-18T09:07:08.790Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://ted423.github.io/Code/Github/"/>
     <id>http://ted423.github.io/Code/Github/</id>
     <published>2021-08-18T08:54:35.000Z</published>
-    <updated>2021-08-18T08:59:29.222Z</updated>
+    <updated>2021-08-18T09:07:08.790Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/ted423">https://github.com/ted423</a></p><h1 id="Bitcron-Ink-modify"><a href="#Bitcron-Ink-modify" class="headerlink" title="Bitcron-Ink-modify"></a><del>Bitcron-Ink-modify</del></h1><p>目前用的主题<br><a href="https://github.com/ted423/Bitcron-Ink-modify">https://github.com/ted423/Bitcron-Ink-modify</a></p><h1 id="Farbox-Remux-Theme"><a href="#Farbox-Remux-Theme" class="headerlink" title="Farbox-Remux-Theme"></a><del>Farbox-Remux-Theme</del></h1><p>这个主题，用Ink的框架，外观改的像Rock一些，然后加入了font-awesome</p><h1 id="Farbox-Ink-Modify"><a href="#Farbox-Ink-Modify" class="headerlink" title="Farbox-Ink-Modify"></a><del>Farbox-Ink-Modify</del></h1><p>对原生的Ink修改了些东西，后来觉得主题太花了，又想搞点自己的乱七八糟的东西进去，就没继续弄了。</p><h1 id="Farbox-Rock-Modify"><a href="#Farbox-Rock-Modify" class="headerlink" title="Farbox-Rock-Modify"></a><del>Farbox-Rock-Modify</del></h1><p>从别人那里fork的，把里面的字体修复了，也稍微调整了下，但为了配合我的喜好改动的话还需要做很多工作，所以就放弃了</p><h1 id="Lrc-parser"><a href="#Lrc-parser" class="headerlink" title="Lrc-parser"></a>Lrc-parser</h1><p>javascript的Lrc解析器，<del>博客内在用的，具体见<a href="https://ted423.bitcron.com/tags/%E6%AD%8C%E8%AF%8D(LRC)">https://ted423.bitcron.com/tags/歌词(LRC)</a></del></p><h1 id="Wifi-analyze"><a href="#Wifi-analyze" class="headerlink" title="Wifi-analyze"></a>Wifi-analyze</h1><p>我的毕业设计，就是个wifi检测的软件，不过没继续弄，因为不知道具体要加些什么</p><h1 id="rules-GM-stylish-UC"><a href="#rules-GM-stylish-UC" class="headerlink" title="rules-GM-stylish-UC"></a>rules-GM-stylish-UC</h1><p>基本都是自己改的火狐相关的东西<br>包括</p><ul><li>代理自动配置(英语:Proxy auto-config,简称PAC):<del><a href="https://ted423.bitcron.com/post/code/www/pac">https://ted423.bitcron.com/post/code/www/pac</a></del></li><li>GM脚本:<del><a href="https://ted423.bitcron.com/post/browser/gm/shou-cang-gm">https://ted423.bitcron.com/post/browser/gm/shou-cang-gm</a></del></li></ul><h1 id="Download-Plus"><a href="#Download-Plus" class="headerlink" title="Download-Plus"></a><del>Download-Plus</del></h1><p>火狐扩展，基于XThunder改动，<del>不过这段时间没时间弄</del></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/ted423">https://github.com/ted423</a></p><h1 id="Lrc-parser"><a href="#Lrc-parser" class="headerlink" title="Lrc-parser"></a>Lrc-parser</h1><p>javascript的Lrc解析器，<del>博客内在用的，具体见<a href="https://ted423.bitcron.com/tags/%E6%AD%8C%E8%AF%8D(LRC)">https://ted423.bitcron.com/tags/歌词(LRC)</a></del></p><h1 id="Wifi-analyze"><a href="#Wifi-analyze" class="headerlink" title="Wifi-analyze"></a>Wifi-analyze</h1><p>我的毕业设计，就是个wifi检测的软件，不过没继续弄，因为不知道具体要加些什么</p><h1 id="rules-GM-stylish-UC"><a href="#rules-GM-stylish-UC" class="headerlink" title="rules-GM-stylish-UC"></a>rules-GM-stylish-UC</h1><p>基本都是自己改的火狐相关的东西<br>包括</p><ul><li>代理自动配置(英语:Proxy auto-config,简称PAC):<del><a href="https://ted423.bitcron.com/post/code/www/pac">https://ted423.bitcron.com/post/code/www/pac</a></del></li><li>GM脚本:<del><a href="https://ted423.bitcron.com/post/browser/gm/shou-cang-gm">https://ted423.bitcron.com/post/browser/gm/shou-cang-gm</a></del></li></ul><h1 id="Bitcron-Ink-modify"><a href="#Bitcron-Ink-modify" class="headerlink" title="Bitcron-Ink-modify"></a><del>Bitcron-Ink-modify</del></h1><p>目前用的主题<br><a href="https://github.com/ted423/Bitcron-Ink-modify">https://github.com/ted423/Bitcron-Ink-modify</a></p><h1 id="Farbox-Remux-Theme"><a href="#Farbox-Remux-Theme" class="headerlink" title="Farbox-Remux-Theme"></a><del>Farbox-Remux-Theme</del></h1><p>这个主题，用Ink的框架，外观改的像Rock一些，然后加入了font-awesome</p><h1 id="Farbox-Ink-Modify"><a href="#Farbox-Ink-Modify" class="headerlink" title="Farbox-Ink-Modify"></a><del>Farbox-Ink-Modify</del></h1><p>对原生的Ink修改了些东西，后来觉得主题太花了，又想搞点自己的乱七八糟的东西进去，就没继续弄了。</p><h1 id="Farbox-Rock-Modify"><a href="#Farbox-Rock-Modify" class="headerlink" title="Farbox-Rock-Modify"></a><del>Farbox-Rock-Modify</del></h1><p>从别人那里fork的，把里面的字体修复了，也稍微调整了下，但为了配合我的喜好改动的话还需要做很多工作，所以就放弃了</p><h1 id="Download-Plus"><a href="#Download-Plus" class="headerlink" title="Download-Plus"></a><del>Download-Plus</del></h1><p>火狐扩展，基于XThunder改动，<del>不过这段时间没时间弄</del></p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ted423&quot;&gt;https://github.com/ted423&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Bitcron-Ink-modify&quot;&gt;&lt;a href=&quot;#Bitcron-Ink-modify&quot; class=&quot;he</summary>
+&lt;h1 id=&quot;Lrc-parser&quot;&gt;&lt;a href=&quot;#Lrc-parser&quot; class=&quot;headerlink&quot; title=</summary>
       
     
     
