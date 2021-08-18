@@ -561,12 +561,25 @@
     </tr>
 </table>
 <ul class="num" id="idNum">
-
+</ul>
+</div>
+<br />
+<div>
+    <input id="idAuto" type="button" value="停止" />
+    <input id="idPre" type="button" value="&lt;&lt;" />
+    <input id="idNext" type="button" value="&gt;&gt;" />
+    <select id="idTween">
+        <option value="0">默认缓动</option>
+        <option value="1">方式1</option>
+        <option value="2">方式2</option>
+    </select>
+</div>
 <style type="text/css"> 
 .container{border:1px solid #333;}
 .container img{border:0;}
 .num{ position:absolute; right:5px; bottom:5px;}
 .num li{
+    float: left;
     list-style:none;
     color: #fff;
     text-align: center;
