@@ -448,74 +448,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E4%B8%A2%E5%A4%B1%E7%9A%84dll/">
-                
-                <span class="abstract-title-text">[问题处理]丢失的dll系列以及软件无法启动的处理</span>
-            </a>
-            <div class="abstract-content">
-                关联常用运行库
-
-
-
-缺失dll or 报错
-处理办法
-
-
-
-MSVCR71.dll、msvcp71.dll
-VC7
-
-
-ATL100.dll、MSVCR100.dll
-安装VC++ 2010 SP1 Redistributable Package
-
-
-mfc110u.dll、MSVCP110.dll、MSVCR110.dll
-安装Visual C++ Redistributable for Visual Studio 2012 Update 4
-
-
-应用程序并行配置不正确，使用命令行sxstrace.exe工具
-安装VC++ 2005(or 2008) SP1 Redistributa...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Issue/%E4%B8%A4%E4%B8%AA%E5%9B%BE%E6%A0%87/">
                 
                 <span class="abstract-title-text">[问题处理]解决任务栏出现两个图标(火狐)的问题</span>
@@ -931,6 +863,57 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <div class="abstract-content">
                 突然间想搞清楚unicode以及utf-8之间的关系，虽说之前有点印象，但还是云里雾里的，于是查了下。简单说就是太混乱，没弄清楚也跑出来写文章的很多，很难有文章能真正全说清楚的。当然我也是按我的理解来写的，不一定都对。
 基本知识字符集 - Character Set编码 - encoding代码页 - CodePage代码页是一个选定字符代码的列表，与字符集其实是差不多的概念，只不过代码页是计算机用来切换编码的概念(从Page来理解)。最早来自IBM，后来被微软，oracle ,SAP等广泛采用。由于最开始每个国家都在搞自己的locale编码(也就是ANSI，随后会有详细解释)，导致每个...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
+                
+                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
+            </a>
+            <div class="abstract-content">
+                带签名的UTF8：
+带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
+无签名的UTF8：
+相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
+那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
+BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
@@ -1793,7 +1776,44 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -2894,7 +2914,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 144
+        Total : 145
         </div>
         <!-- search  -->
         
@@ -3449,12 +3469,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
         </li>
     
@@ -3468,12 +3482,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
         </li>
     
         
@@ -3497,25 +3505,13 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
+            <a class="archive-post-title" href="/Code/WWW/html2bbcode/">HTML转BBCODE[HTML2BBCODE]</a>
         </li>
     
         
@@ -3563,6 +3559,42 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/getSelection-in-Firefox/">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
         </li>
     
@@ -3570,6 +3602,21 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/10</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
         </li>
     
         
@@ -3641,12 +3688,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -3756,18 +3797,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/html2bbcode/">HTML转BBCODE[HTML2BBCODE]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">[Javascript] 图片滑动切换效果</a>
         </li>
     
         
@@ -4184,12 +4213,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%9C%A8%E7%BA%BF%E8%B4%AD%E4%B9%B0%E9%9F%B3%E4%B9%90/">清除我的文档中右键菜单中的在线购买音乐(聯機購買音樂)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%B8%A6%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86/">带有密码的 Windows 系统自动登录</a>
         </li>
     
@@ -4215,6 +4238,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Sing/">欢乐好声音[Sing] 2016</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a>
         </li>
     
         
@@ -4247,6 +4276,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/%E4%BC%98%E5%8C%96/%E5%9C%A8%E7%BA%BF%E8%B4%AD%E4%B9%B0%E9%9F%B3%E4%B9%90/">清除我的文档中右键菜单中的在线购买音乐(聯機購買音樂)</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -4287,12 +4322,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/The%20Angry%20Bird/">愤怒的小鸟[The Angry Birds Movie] 2016</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a>
         </li>
     
         
@@ -4434,6 +4463,21 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/JP/Baka%20to%20Test%20to%20Shoukanjuu/">[JP]笨蛋测验召唤兽[Baka to Test to Shoukanjuu](バカとテストと召喚獣にっ!)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/16</span>
+            <a class="archive-post-title" href="/Browser/Extension/chrome-extension-downloader/">Chrome 离线扩展下载网站两个</a>
         </li>
     
         
@@ -4970,6 +5014,16 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <span class="sidebar-tag-name" data-tags="迪士尼[Disney]">
                 <span class="iconfont-archer">&#xe606;</span>
                 迪士尼[Disney]
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Offline Install">
+                <span class="iconfont-archer">&#xe606;</span>
+                Offline Install
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Extension">
+                <span class="iconfont-archer">&#xe606;</span>
+                Extension
             </span>
         
     </div>
