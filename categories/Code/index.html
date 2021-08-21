@@ -498,6 +498,62 @@ GM脚本:https://ted423.bit...
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/cookie/">
+                
+                <span class="abstract-title-text">[Javascript]Cookie操作测试</span>
+            </a>
+            <div class="abstract-content">
+                测试页面尝试设置cookies里加入test cookie
+
+document.writeln("")
+function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
+{
+   cookieValue = escape(cookieValue);
+   if (cookieExpires == "")
+   {
+      var nowDate = new Date();
+      nowDate.setMonth(nowDate.getMonth() + 6);
+      cookieExpires ...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Code/npm%20proxy/">
                 
                 <span class="abstract-title-text">npm设置代理</span>
@@ -919,56 +975,6 @@ em(相对长度单位，相对于当前对象内文本的字体尺寸)：是一�
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Terminal/PC-wifi/">
-                
-                <span class="abstract-title-text">[Terminal]计算机建立虚拟Wifi热点</span>
-            </a>
-            <div class="abstract-content">
-                Win 10有个直接开热点的设置，所以下面可能就用不到了https://www.intel.cn/content/www/cn/zh/support/articles/000023257/network-and-i-o/wireless-networking.html
-需要注意的是，开启WIFI热点时可能会导致有线网通过DHCP获取另外网段的IP时出现问题，需要取消第3步操作后，也就是共享网络勾选，才可以通过DHCP获取到IP
-
-输入netsh wlan show driver先看是否支持承载网络
-打开CMD,输入1netsh wlan set hostednetwork mode=al...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/02</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
 </div>
 
@@ -3201,6 +3207,8 @@ em(相对长度单位，相对于当前对象内文本的字体尺寸)：是一�
         
         
         
+        
+        
     
     
     
@@ -3602,6 +3610,12 @@ em(相对长度单位，相对于当前对象内文本的字体尺寸)：是一�
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span>
+            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]Cookie操作测试</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
             <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
         </li>
@@ -3631,12 +3645,6 @@ em(相对长度单位，相对于当前对象内文本的字体尺寸)：是一�
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/2unicode/">[Javascript]中文等字符转化为unicode(UTF-16 LE)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]cookie操作测试</a>
         </li>
     
         

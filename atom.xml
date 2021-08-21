@@ -69,6 +69,35 @@
   </entry>
   
   <entry>
+    <title>[Javascript]Cookie操作测试</title>
+    <link href="http://ted423.github.io/Code/WWW/cookie/"/>
+    <id>http://ted423.github.io/Code/WWW/cookie/</id>
+    <published>2021-08-16T11:33:38.537Z</published>
+    <updated>2016-02-19T07:59:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>测试页面<br>尝试设置cookies里加入test cookie</p><script>document.writeln("<br>")function setCookie (cookieName, cookieValue, cookiePath, cookieExpires){   cookieValue = escape(cookieValue);   if (cookieExpires == "")   {      var nowDate = new Date();      nowDate.setMonth(nowDate.getMonth() + 6);      cookieExpires = nowDate.toGMTString();   }   if (cookiePath != "")   {      cookiePath = ";Path=" + cookiePath;   }   document.cookie = cookieName + "=" + cookieValue +       ";expires=" + cookieExpires + cookiePath;}function getCookieValue(cookieName){   var cookieValue = document.cookie;   var cookieStartsAt = cookieValue.indexOf(" " + cookieName + "=");  if (cookieStartsAt == -1)  {      cookieStartsAt = cookieValue.indexOf(cookieName + "=");  }   if (cookieStartsAt == -1)   {      cookieValue = null;   }   else   {      cookieStartsAt = cookieValue.indexOf("=", cookieStartsAt) + 1;      var cookieEndsAt = cookieValue.indexOf(";", cookieStartsAt);      if (cookieEndsAt == -1)      {         cookieEndsAt = cookieValue.length;      }      cookieValue = unescape(cookieValue.substring(cookieStartsAt, cookieEndsAt));   }   return cookieValue;}setCookie("TestCookie","Yes","","");if(getCookieValue("TestCookie")==null)document.writeln("SetCookie wrong<br>");else document.writeln("SetCookie sucess :<br>"+document.cookie+"<br>");</script><p>源码</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;&lt;br&gt;&quot;</span>)</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span> (<span class="params">cookieName, cookieValue, cookiePath, cookieExpires</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   cookieValue = <span class="built_in">escape</span>(cookieValue);</span><br><span class="line">   <span class="keyword">if</span> (cookieExpires == <span class="string">&quot;&quot;</span>)</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="keyword">var</span> nowDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">      nowDate.setMonth(nowDate.getMonth() + <span class="number">6</span>);</span><br><span class="line">      cookieExpires = nowDate.toGMTString();</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">if</span> (cookiePath != <span class="string">&quot;&quot;</span>)</span><br><span class="line">   &#123;</span><br><span class="line">      cookiePath = <span class="string">&quot;;Path=&quot;</span> + cookiePath;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="built_in">document</span>.cookie = cookieName + <span class="string">&quot;=&quot;</span> + cookieValue + </span><br><span class="line">      <span class="string">&quot;;expires=&quot;</span> + cookieExpires + cookiePath;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookieValue</span>(<span class="params">cookieName</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">var</span> cookieValue = <span class="built_in">document</span>.cookie;</span><br><span class="line">   <span class="keyword">var</span> cookieStartsAt = cookieValue.indexOf(<span class="string">&quot; &quot;</span> + cookieName + <span class="string">&quot;=&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (cookieStartsAt == -<span class="number">1</span>)</span><br><span class="line">  &#123;</span><br><span class="line">      cookieStartsAt = cookieValue.indexOf(cookieName + <span class="string">&quot;=&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> (cookieStartsAt == -<span class="number">1</span>)</span><br><span class="line">   &#123;</span><br><span class="line">      cookieValue = <span class="literal">null</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line"></span><br><span class="line">      cookieStartsAt = cookieValue.indexOf(<span class="string">&quot;=&quot;</span>, cookieStartsAt) + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">var</span> cookieEndsAt = cookieValue.indexOf(<span class="string">&quot;;&quot;</span>, cookieStartsAt);</span><br><span class="line">      <span class="keyword">if</span> (cookieEndsAt == -<span class="number">1</span>)</span><br><span class="line">      &#123;</span><br><span class="line">         cookieEndsAt = cookieValue.length;</span><br><span class="line">      &#125;</span><br><span class="line">      cookieValue = <span class="built_in">unescape</span>(cookieValue.substring(cookieStartsAt, cookieEndsAt));</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> cookieValue;</span><br><span class="line">&#125;</span><br><span class="line">setCookie(<span class="string">&quot;TestCookie&quot;</span>,<span class="string">&quot;Yes&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="string">&quot;&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(getCookieValue(<span class="string">&quot;TestCookie&quot;</span>)==<span class="literal">null</span>)</span><br><span class="line"><span class="built_in">document</span>.writeln(<span class="string">&quot;SetCookie wrong&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">document</span>.writeln(<span class="string">&quot;SetCookie sucess :&lt;br&gt;&quot;</span>+<span class="built_in">document</span>.cookie+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;测试页面&lt;br&gt;尝试设置cookies里加入test cookie&lt;/p&gt;
+&lt;script&gt;
+document.writeln(&quot;&lt;br&gt;&quot;)
+function setCookie (cookieName, cookieValue, cookiePath, cookieEx</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Javascript" scheme="http://ted423.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</title>
     <link href="http://ted423.github.io/Issue/python-win/"/>
     <id>http://ted423.github.io/Issue/python-win/</id>
@@ -535,30 +564,6 @@
     <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
     
     <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]SVN踩得几个坑</title>
-    <link href="http://ted423.github.io/Issue/svn/"/>
-    <id>http://ted423.github.io/Issue/svn/</id>
-    <published>2021-07-29T02:03:43.287Z</published>
-    <updated>2021-08-06T10:05:49.901Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="The-server-sent-a-truncated-HTTP-response-body"><a href="#The-server-sent-a-truncated-HTTP-response-body" class="headerlink" title="The server sent a truncated HTTP response body"></a>The server sent a truncated HTTP response body</h1><p><a href="https://www.jianshu.com/p/ad53304dbdbf">https://www.jianshu.com/p/ad53304dbdbf</a><br>印象里这篇文章似乎没啥用，后面是要改apache的设置。</p><h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果</p><ol><li>SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。</li><li>svnadmin dump 出来的文件比服务器上的repo还要大。</li><li>svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，<strong>所以记得一定要开log</strong></li><li>svnadmin hotcopy卡住，网上看跟文件系统有关，大概我用的NTFS</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;The-server-sent-a-truncated-HTTP-response-body&quot;&gt;&lt;a href=&quot;#The-server-sent-a-truncated-HTTP-response-body&quot; class=&quot;headerlink&quot; title=&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
   </entry>
   

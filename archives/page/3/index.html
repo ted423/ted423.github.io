@@ -448,6 +448,45 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/svn/">
+                
+                <span class="abstract-title-text">[问题处理]SVN踩得几个坑</span>
+            </a>
+            <div class="abstract-content">
+                The server sent a truncated HTTP response bodyhttps://www.jianshu.com/p/ad53304dbdbf印象里这篇文章似乎没啥用，后面是要改apache的设置。
+备份大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果
+
+SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。
+svnadmin dump 出来的文件比服务器上的repo还要大。
+svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，所以记得一...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/29</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/SMB/">
                 
                 <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
@@ -895,59 +934,6 @@ x11 ForwardMobaxterm我对x11最初的印象就是结束了之后就再也连不
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Remote/x2go/">
-                
-                <span class="abstract-title-text">[开源]x2go - 远程连接</span>
-            </a>
-            <div class="abstract-content">
-                不推荐使用，最后又滚回去使用NoMachine了然后发现NoMachine有别的问题
-网址https://wiki.x2go.org/doku.php/start本来想吐槽x2go的，后面发现是自己的问题。闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。看到x2go用NX协议就也想试试，毕竟开源。首先是跟nomachine不兼容。当然这是小事。
-x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。使用桌面登录会跟你显示器登录是不一样。当然还能用X11这里引入一个小故事
-当我看到x2go在x11可以选...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
     
@@ -3182,6 +3168,8 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         
+        
+        
     
     
     
@@ -3583,6 +3571,12 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span>
+            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]Cookie操作测试</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
             <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
         </li>
@@ -3612,12 +3606,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/2unicode/">[Javascript]中文等字符转化为unicode(UTF-16 LE)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]cookie操作测试</a>
         </li>
     
         

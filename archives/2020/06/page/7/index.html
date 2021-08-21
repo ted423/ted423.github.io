@@ -588,62 +588,6 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/cookie/">
-                
-                <span class="abstract-title-text">[Javascript]cookie操作测试</span>
-            </a>
-            <div class="abstract-content">
-                测试页面尝试设置cookies里加入test cookie
-
-document.writeln("")
-function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
-{
-   cookieValue = escape(cookieValue);
-   if (cookieExpires == "")
-   {
-      var nowDate = new Date();
-      nowDate.setMonth(nowDate.getMonth() + 6);
-      cookieExpires ...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Code/WWW/CSS-middle/">
                 
                 <span class="abstract-title-text">[转]CSS布局奇淫技巧之--各种居中</span>
@@ -948,10 +892,71 @@ function GetSelectedText (){
         </article>
         <div class="index-post-divider"></div>
     
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/UTF-8/">
+                
+                <span class="abstract-title-text">[Javascript]UTF-8编码解码</span>
+            </a>
+            <div class="abstract-content">
+                编码本来不准备写的，因为实现起来比较简单，不过平时有时侯自己要用。网上那一堆，全部一模一样的效果,解个繁体出来都是乱码
+
+解码
+
+编码
+
+
+
+var refresh = function()
+{
+    if(document.getElementById('decode').checked){
+        document.getElementById("result").textContent="";
+        var s=document.getElementById("toutf-8").value;
+        var a=s.split(/%(?![A-Fa-f...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/2020/06/page/6/">&lt; PREV</a><a class="page-number" href="/archives/2020/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/5/">5</a><a class="page-number" href="/archives/2020/06/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/archives/2020/06/page/8/">8</a><a class="page-number" href="/archives/2020/06/page/9/">9</a><a class="page-number" href="/archives/2020/06/page/10/">10</a><a class="extend next" rel="next" href="/archives/2020/06/page/8/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/2020/06/page/6/">&lt; PREV</a><a class="page-number" href="/archives/2020/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/5/">5</a><a class="page-number" href="/archives/2020/06/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/archives/2020/06/page/8/">8</a><a class="page-number" href="/archives/2020/06/page/9/">9</a><a class="extend next" rel="next" href="/archives/2020/06/page/8/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -3172,6 +3177,8 @@ function GetSelectedText (){
         
         
         
+        
+        
     
     
     
@@ -3573,6 +3580,12 @@ function GetSelectedText (){
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span>
+            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]Cookie操作测试</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
             <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
         </li>
@@ -3602,12 +3615,6 @@ function GetSelectedText (){
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/2unicode/">[Javascript]中文等字符转化为unicode(UTF-16 LE)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]cookie操作测试</a>
         </li>
     
         

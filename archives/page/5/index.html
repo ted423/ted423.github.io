@@ -448,6 +448,62 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Windows%20Fast%20Shutdown/">
+                
+                <span class="abstract-title-text">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
+            </a>
+            <div class="abstract-content">
+                这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/15</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Code/Git/git%20proxy/">
                 
                 <span class="abstract-title-text">[Git]设置和取消代理</span>
@@ -903,43 +959,6 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         <a class="post-tag" href="javascript:void(0);" data-tags="Browser">Browser</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Chromium(Chrome)">Chromium(Chrome)</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Anime/Batman%20Ninja/">
-                
-                <span class="abstract-title-text">[JP][WB]忍者蝙蝠俠[Batman Ninja] 2018</span>
-            </a>
-            <div class="abstract-content">
-                
-◎译　　名　忍者蝙蝠侠 / ニンジャバットマン◎片　　名　Batman Ninja◎年　　代　2018◎产　　地　日本 / 美国◎类　　别　动作 / 动画◎语　　言　日语 / 英语◎上映日期　2018-04-24(美国) / 2018-06-15(日本)◎IMDb评分  5.6/10 from 16430 users◎IMDb链接  https://www.imdb.com/title/tt7451284◎豆瓣评分　7.0/10 from 14387 users◎豆瓣链接　https://movie.douban.com/subject/27160683/◎片　　长　85分钟◎导　　演...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="JP">JP</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Anime">Anime</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="US">US</a>
     
 </div>
 
@@ -3172,6 +3191,8 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         
         
         
+        
+        
     
     
     
@@ -3573,6 +3594,12 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span>
+            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]Cookie操作测试</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
             <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
         </li>
@@ -3602,12 +3629,6 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/2unicode/">[Javascript]中文等字符转化为unicode(UTF-16 LE)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/cookie/">[Javascript]cookie操作测试</a>
         </li>
     
         
