@@ -448,61 +448,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Code/Git/git/">
-                
-                <span class="abstract-title-text">[Git]一些命令</span>
-            </a>
-            <div class="abstract-content">
-                如无特别说明，本人的所有Git操作都是以Github为主
-git 文档https://git-scm.com/docs
-本地分支删除查看项目的分支们(包括本地和远程) 
-1$ git branch -a  
-
-删除本地分支 
-1$ git branch -d &lt;BranchName&gt;
-reset 删除错误提交的commit使用这个的前提条件是没有push,一般不建议push -fgit reset --hard &lt;commit_id&gt; 回退到某一版本。git reset --hard head~1 回退一个版本(数字2自然就是两个版本啦)然后 git push -...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/21</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Browser/Cent/">
                 
                 <span class="abstract-title-text">[推荐]Cent Browser - 第三方Chromium修改版</span>
@@ -813,7 +758,7 @@ magnet:?xt=urn:btih:T6DSP32CMBLWBTTNO3BKKYOEGFZRGTYI&amp;dn=&amp;tr=http://208.6
         <article class="index-post">
             <a class="abstract-title" href="/Comic/%E5%A4%A9%E9%99%8D%E5%A6%96%E7%8B%90/">
                 
-                <span class="abstract-title-text">[完结漫画]天降妖狐(おきつね日和)</span>
+                <span class="abstract-title-text">[Comic]天降妖狐(おきつね日和)</span>
             </a>
             <div class="abstract-content">
                 在线地址http://manhua.dmzj.com/tianjiangyaohu/作为一个日文维基都没有记录的作品来讲真是杯具啊，不过呢，虽然结局仓促了些，也仍然算是一步剧情不错的作品。
@@ -941,6 +886,60 @@ m...
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/conflict/">
+                
+                <span class="abstract-title-text">[Git]conflicts 处理</span>
+            </a>
+            <div class="abstract-content">
+                rebase 可能会造成冲突多人同时编辑也会造成conflict
+需要将所有冲突的commit纳入rebase，此时rebase会提示conflict并且暂停
+其实此时你的本地文件会变成冲突时的文件，你要做的就是编辑该文件将冲突处也就是Github使用
+12345&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD(code1)=======(code2)&gt;&gt;&gt;&gt;&gt;&gt;&gt; &lt;commit_id&gt;... commit_name
+括起来的冲突内容
+中只保留你需要内容，使用 git add (文件)
+随后你只要git rebas...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
     
 </div>
 
@@ -4485,12 +4484,6 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Browser/GM/GM/">个人原创以及修改的GM脚本</a>
         </li>
     
@@ -4498,6 +4491,21 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Browser/GM/%E6%94%B6%E8%97%8FGM/">个人收藏的GM脚本</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Comic/R18/TJ_studio/">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</a>
         </li>
     
         
@@ -5118,7 +5126,7 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">09/02</span>
-            <a class="archive-post-title" href="/Comic/%E5%A4%A9%E9%99%8D%E5%A6%96%E7%8B%90/">[完结漫画]天降妖狐(おきつね日和)</a>
+            <a class="archive-post-title" href="/Comic/%E5%A4%A9%E9%99%8D%E5%A6%96%E7%8B%90/">[Comic]天降妖狐(おきつね日和)</a>
         </li>
     
         
@@ -5202,7 +5210,7 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/01</span>
-            <a class="archive-post-title" href="/Comic/%E5%A5%B3%E4%BB%86%E6%9D%89%E8%8F%9C%E6%8B%A8%E4%BA%91%E8%A7%81%E6%97%A5%E7%9A%84%E7%94%9F%E6%B4%BB/">[完结漫画]女仆杉菜拨云见日的生活(つくし日和) - 樱翼汉化组</a>
+            <a class="archive-post-title" href="/Comic/%E5%A5%B3%E4%BB%86%E6%9D%89%E8%8F%9C%E6%8B%A8%E4%BA%91%E8%A7%81%E6%97%A5%E7%9A%84%E7%94%9F%E6%B4%BB/">[Comic]女仆杉菜拨云见日的生活(つくし日和) - 樱翼汉化组</a>
         </li>
     
         
@@ -5220,13 +5228,13 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/25</span>
-            <a class="archive-post-title" href="/Comic/%E8%8A%B1%E4%B8%B8%E5%B9%BC%E7%A8%9A%E5%9B%AD/">[完结漫画]花丸幼稚园|花丸幼儿园</a>
+            <a class="archive-post-title" href="/Comic/%E8%8A%B1%E4%B8%B8%E5%B9%BC%E7%A8%9A%E5%9B%AD/">[Comic]花丸幼稚园|花丸幼儿园</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/25</span>
-            <a class="archive-post-title" href="/Comic/%E6%8F%89%E8%83%B8%E9%99%A4%E7%81%B5%E5%B8%88/">揉胸除灵师/驱魔神手(揉み払い師)[空詠大智]</a>
+            <a class="archive-post-title" href="/Comic/%E6%8F%89%E8%83%B8%E9%99%A4%E7%81%B5%E5%B8%88/">[Comic]揉胸除灵师/驱魔神手(揉み払い師)[空詠大智]</a>
         </li>
     
         
@@ -5295,13 +5303,13 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Comic/%E7%8E%B0%E5%9C%A8%E5%B0%B1%E6%83%B3%E5%91%8A%E8%AF%89%E5%93%A5%E5%93%A5%EF%BC%81%E6%88%91%E6%98%AF%E5%A6%B9%E5%A6%B9/">[完结漫画]现在就想告诉哥哥！我是妹妹/いますぐお兄ちゃんに妹だっていいたい!(Ima Sugu Oniichan ni Imōto da tte Iitai!)[天轻汉化组]</a>
+            <a class="archive-post-title" href="/Comic/%E7%8E%B0%E5%9C%A8%E5%B0%B1%E6%83%B3%E5%91%8A%E8%AF%89%E5%93%A5%E5%93%A5%EF%BC%81%E6%88%91%E6%98%AF%E5%A6%B9%E5%A6%B9/">[Comic]现在就想告诉哥哥！我是妹妹/いますぐお兄ちゃんに妹だっていいたい!(Ima Sugu Oniichan ni Imōto da tte Iitai!)[天轻汉化组]</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Comic/%E5%93%87%EF%BC%81/">[小島あきら]哇/WA!当我们同在一起(わ！)[完结漫画]</a>
+            <a class="archive-post-title" href="/Comic/%E5%93%87%EF%BC%81/">[Comic][小島あきら]哇/WA!当我们同在一起(わ！)</a>
         </li>
     
     </div>
