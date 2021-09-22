@@ -448,96 +448,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/Kerberos/">
-                
-                <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
-            </a>
-            <div class="abstract-content">
-                参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
-原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
-可以使用如下注册表
-1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">
-                
-                <span class="abstract-title-text">[问题处理]RDP不允许使用已保存的账号密码登陆</span>
-            </a>
-            <div class="abstract-content">
-                主要表现为其他电脑(可能一般是加了域的电脑)，在RDP到Windows 10的电脑并保存账号以及密码后，第二次登陆提示你的凭据不工作，不允许使用保存的凭据登陆远程计算机/Your system administrator does not allow the use of saved credentials to log on to the remote computer。
-解决方法一个是可以通过改组策略(Windows 10那台电脑的)，
-但更推荐的是在凭据管理器增加普通凭据(一般正常保存的RDP凭据位为”TERMSRV/“开头)
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Issue/TLS1.2/">
                 
                 <span class="abstract-title-text">[问题处理]农业银行证书导致Internet Explorer的TLS 1.2自动取消勾选从而导致Windows Store无法打开</span>
@@ -950,6 +860,109 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/2unicode/">
+                
+                <span class="abstract-title-text">[Javascript]中文等字符转化为unicode(UTF-16 LE)</span>
+            </a>
+            <div class="abstract-content">
+                嘛，挺不错的。原文:http://blog.csdn.net/geovindu/article/details/9119725
+利用的javascript的 charCodeAthttp://www.w3school.com.cn/jsref/jsref_charCodeAt.asp相关函数还有unescape() 以及escape()网页上的unicode码常见的形式除了”\uXXXX”还有”&#xXXXX;”,其中“&#xXXXX;”是16进制，“&amp;#XXXX”为10进制Java String EncoderJavaScript String EncoderDecoder
+
+...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/CSS-middle/">
+                
+                <span class="abstract-title-text">[转]CSS布局奇淫技巧之--各种居中</span>
+            </a>
+            <div class="abstract-content">
+                转这篇文章就是我发现这段代码有效，并且我居然不知道为什么有用。
+1234567.demo &#123;    position:fixed;    top: 50%;    left: 50%;    transform: translate(-50%, -50%);&#125;
+原文http://www.cnblogs.com/2050/p/3392803.html
+居中是我们使用css来布局时常遇到的情况。使用css来进行居中时，有时一个属性就能搞定，有时则需要一定的技巧才能兼容到所有浏览器，本文就居中的一些常用方法做个简单的介绍。
+注：本文所讲方法除了特别说明外，都是兼容IE6+、...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="CSS">CSS</a>
     
 </div>
 
@@ -3996,6 +4009,10 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
+        
+        
+        
+        
     
     
     
@@ -4473,12 +4490,6 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
         </li>
     
@@ -4595,6 +4606,12 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
         </li>
@@ -4620,12 +4637,6 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -4879,6 +4890,21 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Browser/GM/%E6%94%B6%E8%97%8FGM/">个人收藏的GM脚本</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
         </li>
     
         
@@ -6175,11 +6201,6 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
             <span class="sidebar-tag-name" data-tags="SIL Open Font">
                 <span class="iconfont-archer">&#xe606;</span>
                 SIL Open Font
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="OS X">
-                <span class="iconfont-archer">&#xe606;</span>
-                OS X
             </span>
         
             <span class="sidebar-tag-name" data-tags="Ubuntu">

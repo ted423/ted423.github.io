@@ -719,6 +719,65 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/Remote/NoMachine/">
+                
+                <span class="abstract-title-text">[Remote]NoMachine 远程工具</span>
+            </a>
+            <div class="abstract-content">
+                https://www.nomachine.com/
+推荐理由免费(ssh协议连接收费)，支持Linux其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。最起码你不要纠结各种桌面环境之间的兼容性问题。
+不过呢，问题还是有的。默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。(后来不知道咋就好了)
+在低速率网络下要考...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Personal Free">Personal Free</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="macOS">macOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Compression/Compression-defect/">
                 
                 <span class="abstract-title-text">压缩软件问题记录</span>
@@ -863,56 +922,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Terminal/rsync/">
-                
-                <span class="abstract-title-text">[Terminal]rsync</span>
-            </a>
-            <div class="abstract-content">
-                不正常的使用rsync可能会造成灾难性的后果
-rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
-常用参数1234567 其中z为压缩，在网络性能足够的情况下，不开会快-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)-u, --update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
 </div>
 
@@ -3959,6 +3968,10 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         
         
         
+        
+        
+        
+        
     
     
     
@@ -4436,12 +4449,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
         </li>
     
@@ -4558,6 +4565,12 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
         </li>
@@ -4583,12 +4596,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -4842,6 +4849,21 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Browser/GM/%E6%94%B6%E8%97%8FGM/">个人收藏的GM脚本</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
         </li>
     
         
@@ -6138,11 +6160,6 @@ rsync -avzP   source root@ip:/目录 –log-file=$HOME/.rsync.log
             <span class="sidebar-tag-name" data-tags="SIL Open Font">
                 <span class="iconfont-archer">&#xe606;</span>
                 SIL Open Font
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="OS X">
-                <span class="iconfont-archer">&#xe606;</span>
-                OS X
             </span>
         
             <span class="sidebar-tag-name" data-tags="Ubuntu">

@@ -448,76 +448,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/etc/why%20PT/">
-                
-                <span class="abstract-title-text">为什么我入了PT</span>
-            </a>
-            <div class="abstract-content">
-                首先我发现PT还是蛮好入的，短短10天时间我已经加了9个PT了。小站开注啊，求种都还是有的。只要有心，加PT并不难。虽说两个外站PT还不太好下手，但国内的基本都能混下去。(几个开注的站还是有遇到吸血的，一些是根本没注意规则的。我运气比较好)
-BT做种的越来越少，下完就跑的越来越多，PT大家都在抱怨抢不到上传。BT天天纠结断种，PT天天盼望着有人来下载。BT我传了几个T，后头一看做种的个位数。PT我传了1.X的分享率，然后就没我什么事了
-离线已经越来越不行了，各种离线的服务质量都在下降，迅雷以前的热门种子现在下都会卡一半，百度离线的各种BUG就没停过
-下面这个基本坚定了我入PT的决心htt...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人评价">个人评价</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/Write-box/">
-                
-                <span class="abstract-title-text">Write-box</span>
-            </a>
-            <div class="abstract-content">
-                不得不说…..farbox的在线编辑器有点让人蛋碎。
-于是找到了Writebox完美解决了在线编辑的问题。
-https://write-box.appspot.com
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">
                 
                 <span class="abstract-title-text">[转载]让“中国式的聪明”滚出中国</span>
@@ -881,6 +811,96 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/Kerberos/">
+                
+                <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
+            </a>
+            <div class="abstract-content">
+                参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
+原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
+可以使用如下注册表
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">
+                
+                <span class="abstract-title-text">[问题处理]RDP不允许使用已保存的账号密码登陆</span>
+            </a>
+            <div class="abstract-content">
+                主要表现为其他电脑(可能一般是加了域的电脑)，在RDP到Windows 10的电脑并保存账号以及密码后，第二次登陆提示你的凭据不工作，不允许使用保存的凭据登陆远程计算机/Your system administrator does not allow the use of saved credentials to log on to the remote computer。
+解决方法一个是可以通过改组策略(Windows 10那台电脑的)，
+但更推荐的是在凭据管理器增加普通凭据(一般正常保存的RDP凭据位为”TERMSRV/“开头)
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -3927,6 +3947,10 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         
+        
+        
+        
+        
     
     
     
@@ -4404,12 +4428,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/SumatraPDF/">[开源]SumatraPDF</a>
         </li>
     
@@ -4526,6 +4544,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
         </li>
@@ -4551,12 +4575,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/11</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
@@ -4810,6 +4828,21 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Browser/GM/%E6%94%B6%E8%97%8FGM/">个人收藏的GM脚本</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Sigil/">[开源]Sigil - epub编辑器</a>
         </li>
     
         
@@ -6106,11 +6139,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <span class="sidebar-tag-name" data-tags="SIL Open Font">
                 <span class="iconfont-archer">&#xe606;</span>
                 SIL Open Font
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="OS X">
-                <span class="iconfont-archer">&#xe606;</span>
-                OS X
             </span>
         
             <span class="sidebar-tag-name" data-tags="Ubuntu">
