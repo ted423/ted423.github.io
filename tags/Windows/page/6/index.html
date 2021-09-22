@@ -485,8 +485,6 @@
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
-    
 </div>
 
                 
@@ -631,8 +629,6 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
-    
 </div>
 
                 
@@ -685,8 +681,6 @@ REG
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
     
 </div>
 
@@ -797,6 +791,53 @@ REG
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Optimization/Chrome's%20File%20System%20folder/">
+                
+                <span class="abstract-title-text">[优化]处理MEGA使用HTML5 File System API占用的空间</span>
+            </a>
+            <div class="abstract-content">
+                MEGA的下载是先使用HTML5 File System API先把文件丢到本地，然后再生成一个下载框，但是这些文件是不能通过浏览器自带的清理清掉空间。蛋疼的在于你下载了多大的文件，Chrome的配置文件就会增加多大的空间，并且越来越大只能手动找到配置文件夹里的File System(C:\Users\XX\AppData\Local\Google\Chrome\User Data\Default\File System)里手动进行删除
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/07/29</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Optimization"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Optimization
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Chrome">Chrome</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Download&File%20hosting%20service/dropbox/">
                 
                 <span class="abstract-title-text">下载DropBox离线安装包的方法(可能失效)</span>
@@ -874,56 +915,6 @@ REG
         <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Optimization/%E5%B8%A6%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86/">
-                
-                <span class="abstract-title-text">[优化]带有密码的 Windows 系统自动登录</span>
-            </a>
-            <div class="abstract-content">
-                这是一篇充满了安全隐患的文章，不过一切都由需求衡量 -2021-08-06一个可以用优化软件。。不过密码在注册表里明文保存“Windows + R”快捷键调出运行命令窗口（注意:必须调出运行窗口输入下列命令,直接点击开始菜单在搜索框中输入无效）.
-在窗口中输入“control userpasswords2”后回车（注意：control后面有一个空格）。
-这时Windows 7中的用户帐户(UserAccounts)窗口会自动弹出。
-去掉“要使用本机，用户必须输入用户名和密码(E)”前的勾选！点击应用按钮就会立即弹出一个自动登录窗口(AutomaticallyLogOn)。
-现在将您的帐户...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/08/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Optimization"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Optimization
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
     
 </div>
 
@@ -2030,7 +2021,41 @@ REG
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -3781,7 +3806,7 @@ REG
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 198
+        Total : 200
         </div>
         <!-- search  -->
         
@@ -5526,6 +5551,12 @@ REG
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/28</span>
+            <a class="archive-post-title" href="/Comic/R18/%E3%81%BE%E3%81%84%E3%81%99%E3%81%86%E3%81%83%E3%83%BC%E3%81%A8%E3%81%A7%E3%81%B3%E3%82%8B/">[雛原えみ] まいすうぃーとでびる [中国翻訳]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/24</span>
             <a class="archive-post-title" href="/Comic/R18/%E5%85%AD%E8%8A%B1%E3%81%A1%E3%82%83%E3%82%93%E3%81%B5%E3%81%A8%E3%82%82%E3%82%82%E3%81%BA%E3%82%8D%E3%81%BA%E3%82%8D%E3%81%BE%E3%81%98%E3%81%8B%E3%82%8F%E3%81%84%E3%81%99%E3%81%8E/">[R18](C95) [裏FMO (フミオ)] 六花ちゃんふとももぺろぺろまじかわいすぎ (SSSS.GRIDMAN)</a>
         </li>
@@ -5642,6 +5673,12 @@ REG
         <li class="archive-post-item">
             <span class="archive-post-date">07/29</span>
             <a class="archive-post-title" href="/Code/WWW/svg-tool/">几个关于SVG处理的网站</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/29</span>
+            <a class="archive-post-title" href="/Optimization/Chrome's%20File%20System%20folder/">[优化]处理MEGA使用HTML5 File System API占用的空间</a>
         </li>
     
         
@@ -6304,11 +6341,6 @@ REG
             <span class="sidebar-tag-name" data-tags="Chromium(Chrome)">
                 <span class="iconfont-archer">&#xe606;</span>
                 Chromium(Chrome)
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Optimization">
-                <span class="iconfont-archer">&#xe606;</span>
-                Optimization
             </span>
         
             <span class="sidebar-tag-name" data-tags="Comic">
