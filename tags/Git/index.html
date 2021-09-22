@@ -711,6 +711,58 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         </article>
         <div class="index-post-divider"></div>
     
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/Github%20Commit%20failed/">
+                
+                <span class="abstract-title-text">处理Github的Commit failed:Failed to create a new commit</span>
+            </a>
+            <div class="abstract-content">
+                2015.02.15确认没再出现类似错误，大概Github的Windows客户端更新了
+好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是.git文件夹里有个index.lock的问题…..只要删掉就好了。大概在创建commit的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成commit,但由于之前已经有了index.lock（但没生成commit），而git不允许index.lock的覆盖，所以就卡住了…
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
     <!-- paginator  -->
     
 </main>
