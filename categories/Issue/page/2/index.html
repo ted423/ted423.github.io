@@ -930,19 +930,24 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/Apache/">
+            <a class="abstract-title" href="/Issue/Driver/">
                 
-                <span class="abstract-title-text">[问题处理]Linux下Apache2无法启动的原因排查</span>
+                <span class="abstract-title-text">[问题处理]Windows 手动安装驱动</span>
             </a>
             <div class="abstract-content">
-                先用journalctl | tail
-看看系统日志，一般来讲都是配置不对导致的apache2ctl configtest则是具体看配置哪里有问题的
+                症状有时候会遇到明明找到了驱动安装包但是Windows一直找不到驱动。
+原因分析微软会有个找驱动的默认路径，一些驱动安装包会自动改掉它，导致微软找驱动不在正确路径
+操作
+设备管理器里右键问题设备，点击更新驱动，然后选到第二项，将位置选到“C:\Windows\”并确保“包括子文件夹”已勾选。
+如仍不行，可尝试手动安装，需找到正确的驱动，更新时仍然选到第二项，并点击“从计算机的设备驱动程序列表里选择”，这时要点击从磁盘安装。
+但还有种情况就是提供的驱动程序并不匹配，有次我就强行在inf里添加设备ID安装了驱动，虽然成功了并且能使用，但其实个人并不建议这么做。
 
+etc微软自动查找驱动的路径...
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/29</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/02</span>
                 </div>
                 <!-- tags -->
                 
@@ -961,7 +966,9 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         </span>
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -2183,7 +2190,26 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4324,7 +4350,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 221
+        Total : 222
         </div>
         <!-- search  -->
         
@@ -6047,6 +6073,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">05/09</span>
             <a class="archive-post-title" href="/Issue/wufuc/">wufuc - 禁掉Unsupported Hardware的弹窗</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span>
+            <a class="archive-post-title" href="/Issue/Driver/">[问题处理]Windows 手动安装驱动</a>
         </li>
     
         
