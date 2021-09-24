@@ -448,6 +448,56 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/">
+                
+                <span class="abstract-title-text">Ubuntu 和Windows 7共存的GRUB启动顺序</span>
+            </a>
+            <div class="abstract-content">
+                Grub会自动在C盘加入双系统启动的配置，而且默认会启动Ubuntu，把 windows 7放在最后面。如果要启动windows的话，需要按向下的箭头4、5次，非常麻烦。现阶段还是使用windows要多一点，所以需要修改Grub让 windows第一个启动。Ubuntu 11.04使用的Grub版本是1.99，配置文件是Linux系统下的/boot/grub/grub.cfg这个文件。进入Linux找到此文件，直 接用文本编辑器修改，结果提示只读文件无权操作，在文件右键修改属性，结果还是不行，看来必须要命令行才可以。进入终端，到目录/boot/grub下执 行如下命令：/boot/gru...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Ubuntu">Ubuntu</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
                 
                 <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
@@ -908,58 +958,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E5%85%B3%E9%97%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A/">
-                
-                <span class="abstract-title-text">关闭打开文件的安全警告 不提示 这些文件可能对你的计算机有害</span>
-            </a>
-            <div class="abstract-content">
-                在组策略中用户配置 –&gt; 管理模板 –&gt; Windows组件 –&gt; 附件管理器打开 “低风险文件类型的包含列表”启用后把相关扩展名添加进去。例如.exe;.js
-另外一个是访问SMB遇到的处理方式打开“INTERNET 选项”，“安全”选项卡；在“本地Intranet”的“站点”中；把你本地的网络段加上，如“192.168..”，“10...*”
-
-2019-12-19 增加网络映射里放执行文件的问题
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="组策略(gpedit.msc)">组策略(gpedit.msc)</a>
     
 </div>
 
