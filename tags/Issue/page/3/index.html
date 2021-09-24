@@ -448,6 +448,58 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E5%85%B3%E9%97%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A/">
+                
+                <span class="abstract-title-text">关闭打开文件的安全警告 不提示 这些文件可能对你的计算机有害</span>
+            </a>
+            <div class="abstract-content">
+                在组策略中用户配置 –&gt; 管理模板 –&gt; Windows组件 –&gt; 附件管理器打开 “低风险文件类型的包含列表”启用后把相关扩展名添加进去。例如.exe;.js
+另外一个是访问SMB遇到的处理方式打开“INTERNET 选项”，“安全”选项卡；在“本地Intranet”的“站点”中；把你本地的网络段加上，如“192.168..”，“10...*”
+
+2019-12-19 增加网络映射里放执行文件的问题
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="组策略(gpedit.msc)">组策略(gpedit.msc)</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/Auto-add-en-US/">
                 
                 <span class="abstract-title-text">[问题处理]Windows 10 自动添加美国键盘</span>
@@ -760,6 +812,58 @@ etc微软自动查找驱动的路径...
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E5%85%89%E9%A9%B1%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">
+                
+                <span class="abstract-title-text">由于其配置信息不完整或已损坏，Windows 无法启动该设备</span>
+            </a>
+            <div class="abstract-content">
+                总而言之，这类都属于卸载残留问题。会导致类似问题的还有各类安全软件 - 2021-09-22光驱没法用了，初步怀疑是daemon tools 安装时选了第2项那个SPd还是啥导致的,有个gear software当时用的笔记本，自带了光驱，嘛，不过已经是很久以前的事了。一些其他的设备也可能会出现这个问题，例如一些安全软件，在非常规卸载后会导致一些设备出现这个问题
+由于其配置信息(注册表中的)不完整或已损坏，Windows 无法启动这个硬件设备。 (代码19）
+
+原因分析有的时候，由于配置信息(注册表中的)不完整或系统已损坏
+表现症状Windows不能启动这个硬件设备，卸载后重新扫描还是显...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/CAservice/">
                 
                 <span class="abstract-title-text">关于华为EMUI系统自动禁止google相关应用联网问题</span>
@@ -857,117 +961,10 @@ etc微软自动查找驱动的路径...
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E5%90%8C%E6%AD%A5%E4%B8%AD%E5%BF%83/">
-                
-                <span class="abstract-title-text">[问题处理]Windows 取消同步中心的启动</span>
-            </a>
-            <div class="abstract-content">
-                问题描述在访问网络位置的时候，右键点击始终脱机可用会启用同步中心，之后会一直启动，并且无法手动取消同步
-解决方案
-在同步中心中找到脱机文件 
-进入计算机，找到对应的文件夹，右键取消始终脱机可用的勾选,并删除脱机副本
-找到注册表HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Syncmgr\Handlers
-删除&#123;750fdf10-2a26-11d1-a3ea-080036587f03&#125;这一项后同步中心会消失，并且之前设置的同步才会消失
-
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Lync/">
-                
-                <span class="abstract-title-text">[问题处理]Lync联系人名片显示异常</span>
-            </a>
-            <div class="abstract-content">
-                症状Lync是公司内部使用，公司有自己的Exchange服务器。联系人资料显示异常，如姓名不对(账号相同，更换其他人使用，但仍显示之前的人的姓名)，电话号码不显示，或者其他。
-原因分析由于删除Lync配置无效，但Lync跟outlook有联系，因此需要找到Outlook里相关配置进行删除。
-操作
-退出lync, 打开“%appdata%..\Local\Microsoft\Outlook”
-删除“Offline Address Books”文件夹，重新登录Lync
-如仍有问题，在Outlook里找到联系人名片以及Lync联系人名片删除
-如Outlook里删除不了，可能需要登录网页版的邮件...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/tags/Issue/page/2/">&lt; PREV</a><a class="page-number" href="/tags/Issue/">1</a><a class="page-number" href="/tags/Issue/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/tags/Issue/page/4/">4</a><a class="extend next" rel="next" href="/tags/Issue/page/4/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/tags/Issue/page/2/">&lt; PREV</a><a class="page-number" href="/tags/Issue/">1</a><a class="page-number" href="/tags/Issue/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/tags/Issue/page/4/">4</a><a class="page-number" href="/tags/Issue/page/5/">5</a><a class="extend next" rel="next" href="/tags/Issue/page/4/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -6937,11 +6934,6 @@ etc微软自动查找驱动的路径...
             <span class="sidebar-tag-name" data-tags="CMD">
                 <span class="iconfont-archer">&#xe606;</span>
                 CMD
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="Issus">
-                <span class="iconfont-archer">&#xe606;</span>
-                Issus
             </span>
         
             <span class="sidebar-tag-name" data-tags="Dropbox">
