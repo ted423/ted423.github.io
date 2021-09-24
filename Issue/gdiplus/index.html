@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ted423.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"U1SD35XLQS","apiKey":"3d71b4e6d428e7e228b06019ae2c9a29","indexName":"github","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="也可能是因为我当时特别喜欢禁止显卡相关程序的自启 - 2021-08-06先总结一下吧，这是由显卡这方面导致的问题，我去回滚了下驱动就好了，但有时也说不打清楚，因为更新显卡驱动之后是可以用的，但有时过段时间就会出问题。 具体介绍下gdiplus参考自这里 http:&#x2F;&#x2F;blog.163.com&#x2F;strive_only&#x2F;blog&#x2F;static&#x2F;8938016820096184453517&#x2F;GDI在W">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[问题处理]处理程序崩溃、故障模块为gdiplus.dll的问题">
+<meta property="og:url" content="http://ted423.github.io/Issue/gdiplus/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="也可能是因为我当时特别喜欢禁止显卡相关程序的自启 - 2021-08-06先总结一下吧，这是由显卡这方面导致的问题，我去回滚了下驱动就好了，但有时也说不打清楚，因为更新显卡驱动之后是可以用的，但有时过段时间就会出问题。 具体介绍下gdiplus参考自这里 http:&#x2F;&#x2F;blog.163.com&#x2F;strive_only&#x2F;blog&#x2F;static&#x2F;8938016820096184453517&#x2F;GDI在W">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2014-12-31T16:00:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Issue">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://ted423.github.io/Issue/gdiplus/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>[问题处理]处理程序崩溃、故障模块为gdiplus.dll的问题 | 个人小站</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">个人小站</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Take&Give</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/gdiplus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [问题处理]处理程序崩溃、故障模块为gdiplus.dll的问题
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2015-01-01 00:00:00" itemprop="dateCreated datePublished" datetime="2015-01-01T00:00:00+08:00">2015-01-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">في</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Issue/" itemprop="url" rel="index"><span itemprop="name">Issue</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>也可能是因为我当时特别喜欢禁止显卡相关程序的自启 - 2021-08-06<br>先总结一下吧，这是由显卡这方面导致的问题，我去回滚了下驱动就好了，但有时也说不打清楚，因为更新显卡驱动之后是可以用的，但有时过段时间就会出问题。</p>
+<p>具体介绍下gdiplus<br>参考自这里 <del><a target="_blank" rel="noopener" href="http://blog.163.com/strive_only/blog/static/8938016820096184453517/">http://blog.163.com/strive_only/blog/static/8938016820096184453517/</a></del><br>GDI在Windows中定义为GraphicsDevice Interface，即图形设备接口，是Windows API(Application ProgrammingInterface)的一个重要组成部分。它是Windows图形显示程序与实际物理设备之间的桥梁，GDI使得用户无需关心具体设备的细节，而只需在一个虚拟的环境(即逻辑设备)中进行操作。它的桥梁作用体现在：</p></p>
+<ol>
+<li><p>用户通过调用GDI函数将逻辑空间的操作转化为具体针对设备驱动程序的调用。<br>为实现图形设备无关性，Windows的绘图操作在一个设备描述表上进行。用户拥有自己的”逻辑坐标”系统，它独立于实际的物理设备，与”设备坐标”相对应。开发Windows应用程序时，程序员关心的是逻辑坐标，我们在逻辑坐标系上绘图，利用GDI将逻辑窗口映射到物理设备上。</p>
+</li>
+<li><p>GDI能检测具体设备的能力，并依据具体的设备以最优方式驱动这些设备，完成真实的显示。<br>GDI函数大致可分类为：设备上下文函数(如GetDC、CreateDC、DeleteDC)、画线函数(如LineTo、Polyline、Arc)、填充画图函数(如Ellipse、FillRect、Pie)、画图属性函数(如SetBkColor、SetBkMode、SetTextColor)、文本、字体函数(如TextOut、GetFontData)、位图函数(如SetPixel、BitBlt、StretchBlt)、坐标函数(如DPtoLP、LPtoDP、ScreenToClient、ClientToScreen)、映射函数(如SetMapMode、SetWindowExtEx、SetViewportExtEx)、元文件函数(如PlayMetaFile、SetWinMetaFileBits)、区域函数(如FillRgn、FrameRgn、InvertRgn)、路径函数(如BeginPath、EndPath、StrokeAndFillPath)、裁剪函数(如SelectClipRgn、SelectClipPath)等。</p>
+</li>
+</ol>
+<p>GDI虽然使程序员得到了一定程度的解脱，但是其编程方式仍很麻烦。譬如，显示一张位图，程序员需要进行”装入位图―读取位图文件头信息―启用设备场景―调色板变换”等一连串操作。而有了GDI+，这些问题便迎刃而解了。</p>
+<p>顾名思义，GDI+是GDI的增强版。它是微软在Windows 2000以后操作系统中提供的新接口，其通过一套部署为托管代码的类来展现，这套类被称为GDI+的”托管类接口”。GDI+主要提供了以下三类服务:</p>
+<ol>
+<li>二维矢量图形：GDI+提供了存储图形基元自身信息的类(或结构体)、存储图形基元绘制方式信息的类以及实际进行绘制的类；</li>
+<li>图像处理：大多数图片都难以划定为直线和曲线的集合，无法使用二维矢量图形方式进行处理。因此，GDI+为我们提供了Bitmap、Image等类,它们可用于显示、操作和保存BMP、JPG、GIF等图像格式。</li>
+<li>文字显示：GDI+支持使用各种字体、字号和样式来显示文本。</li>
+</ol>
+<p>GDI接口是基于函数的，而GDI+是基于C++类的对象化的应用程序编程接口，因此使用起来比GDI要方便。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/Issue/" rel="tag"># Issue</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Optimization/%E5%9C%A8%E7%BA%BF%E8%B4%AD%E4%B9%B0%E9%9F%B3%E4%B9%90/" rel="prev" title="[优化]清除我的文档中右键菜单中的在线购买音乐(聯機購買音樂)">
+      <i class="fa fa-chevron-left"></i> [优化]清除我的文档中右键菜单中的在线购买音乐(聯機購買音樂)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Code/%E5%BC%80%E6%BA%90/" rel="next" title="一张经典图，开源协议比较">
+      一张经典图，开源协议比较 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ted423</p>
+  <div class="site-description" itemprop="description">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">222</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">التصنيفات</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">106</span>
+        <span class="site-state-item-name">الوسوم</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ted423</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

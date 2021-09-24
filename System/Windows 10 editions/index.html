@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ted423.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"U1SD35XLQS","apiKey":"3d71b4e6d428e7e228b06019ae2c9a29","indexName":"github","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="镜像现在一般就两种版本。区别是激活方式不同，其中家庭单语言版基本算是特供版，也就是家庭版上再阉割了一下。专业教育版基于专业版和教育版之间，专业工作站版基于专业版和企业版之间。教育版功能会比企业版略少一些这样 个人去查了下各个版本的区别，然后还去改了下中文Wiki，然后差点就疯了。同样是微软官方提供的家庭版和专业版的比较，中文和英文的内容还有10%不一样。中文说家庭版有MDM，英文说没有。还有个 k">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 10 的各种版本">
+<meta property="og:url" content="http://ted423.github.io/System/Windows%2010%20editions/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="镜像现在一般就两种版本。区别是激活方式不同，其中家庭单语言版基本算是特供版，也就是家庭版上再阉割了一下。专业教育版基于专业版和教育版之间，专业工作站版基于专业版和企业版之间。教育版功能会比企业版略少一些这样 个人去查了下各个版本的区别，然后还去改了下中文Wiki，然后差点就疯了。同样是微软官方提供的家庭版和专业版的比较，中文和英文的内容还有10%不一样。中文说家庭版有MDM，英文说没有。还有个 k">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-19T14:46:50.177Z">
+<meta property="article:modified_time" content="2019-05-28T07:54:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Windows 10">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://ted423.github.io/System/Windows%2010%20editions/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>Windows 10 的各种版本 | 个人小站</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">个人小站</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Take&Give</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/System/Windows%2010%20editions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows 10 的各种版本
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2020-06-19 22:46:50" itemprop="dateCreated datePublished" datetime="2020-06-19T22:46:50+08:00">2020-06-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2019-05-28 15:54:00" itemprop="dateModified" datetime="2019-05-28T15:54:00+08:00">2019-05-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">في</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/System/" itemprop="url" rel="index"><span itemprop="name">System</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>镜像现在一般就两种版本。区别是激活方式不同，其中家庭单语言版基本算是特供版，也就是家庭版上再阉割了一下。专业教育版基于专业版和教育版之间，专业工作站版基于专业版和企业版之间。<br>教育版功能会比企业版略少一些这样</p>
+<p>个人去查了下各个版本的区别，然后还去改了下中文Wiki，然后差点就疯了。同样是微软官方提供的家庭版和专业版的比较，中文和英文的内容还有10%不一样。中文说家庭版有MDM，英文说没有。<br>还有个 kiosk mode 完全不知道干嘛的(应该是展示模式)，然后中文有个进行测试(???,进行什么测试？)</p>
+<p>企业方向的就别说了，最重要的一个SMB Direct(RDMA)中文版干脆就弄没了。</p>
+<p>然后不少功能到底支不支持，查都查不到，我估计一些功能微软自己员工都搞不清楚。</p>
+<p>言而总之，要是搞不清楚还是直接企业版走起吧，总之这个功能最全不会少。</p>
+<p>#Consumer editions(零售版)</p>
+<p>家庭版、家庭单语言版、教育版、专业版、专业教育版、专业工作站版。</p>
+<p>#Business editions(批量授权版)<br>专业版、企业版、教育版、专业工作站版、专业教育版。</p>
+<p>#N以及KN<br>Windows 10还特别为欧盟、瑞士提供了“N”（不带媒体播放器）版，以及韩国的“KN”版。这类版本不包含像Windows Media Player或相机这样的媒体相关功能。家用版、专业版以及企业版都有对应的N版或KN版产品。2004年在欧盟的判决下微软被要求发布不绑定Windows Media Player的Windows版本，而这个版本被微软命名为N版。N版与全功能版的售价相同，缺少的功能以“媒体功能包”的形式可以从微软官网上免费下载。</p>
+<p>这些版本缺少以下功能：</p>
+<ul>
+<li>播放或创建类：<ul>
+<li>音乐CD回放</li>
+<li>数字媒体文件</li>
+<li>DVD影片光盘</li>
+<li>媒体库中的数字内容</li>
+</ul>
+</li>
+<li>创建播放清单</li>
+<li>将CD音乐转成数字文件</li>
+<li>查阅数字文件中作者和标题的信息</li>
+<li>检阅音乐文件中专辑作者</li>
+<li>将音乐传入个人音乐播放器</li>
+<li>录制回放电视广播</li>
+<li>Internet Explorer不可回放：<ul>
+<li>适应流</li>
+<li>数字版权管理（DRM）<br>缺少的这些功能可以透过Groove音乐和电影与电视这两种应用程序来补足，另外也可安装第三方软件或媒体包以打开媒体文件。</li>
+</ul>
+</li>
+</ul>
+<p>#官方对比</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/windowsforbusiness/compare">中文企业用版本对比</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/windowsforbusiness/compare">英文企业用版本对比</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-hk/windows/compare">中文家庭版与专业版对比</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/windows/compare-windows-10-home-vs-pro">英文家庭版与专业版对比</a></li>
+</ul>
+<p>#Wiki上版本对比<br>参考吧，我还改了一些，之前连支持的内存大小都是错的。<br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Windows_10%E7%89%88%E6%9C%AC%E5%88%97%E8%A1%A8">https://zh.wikipedia.org/wiki/Windows_10版本列表</a><br>最新的可能还有修改(?本文放的2019年的，我当时改的英文版)</p>
+<table class="wikitable" style="margin:auto; width:auto; text-align:Center;">
+    <tbody>
+        <tr>
+            <th></th>
+            <th colspan="6"><span class="nowrap">桌面</span>
+            </th>
+            <th colspan="2"><span class="nowrap">移动版</span>
+            </th>
+            <th colspan="1"><span class="nowrap">物联网</span>
+            </th>
+        </tr>
+        <tr style="text-align:center;">
+            <th style="width:25em"><span class="nowrap">功能</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>家用版</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>专业版</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>专业教育版</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>教育版</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>专业工作站版</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>企业版</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>移动版</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>企业移动版</span>
+            </th>
+            <th style="width:18em"><span class="nowrap">Windows 10<br>物联网核心版</span>
+            </th>
+        </tr>
+        <tr style="text-align:center;">
+            <td style="background:#F2F2F2;"><span class="nowrap">架构</span>
+            </td>
+            <td colspan="6"><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/IA-32" title="IA-32">IA-32</a><br>x86-64</span>
+            </td>
+            <td colspan="3"><span class="nowrap">IA-32<br>ARMv7 <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/ARM_architecture" class="mw-redirect" title="ARM architecture">ARM</a></span>
+            </td>
+        </tr>
+        <tr style="text-align:center;">
+            <td style="background:#F2F2F2;"><span class="nowrap">渠道</span>
+            </td>
+            <td><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/OEM" class="mw-redirect" title="OEM">OEM</a><br>零售</span>
+            </td>
+            <td><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/OEM" class="mw-redirect" title="OEM">OEM</a><br>零售<br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/批量許可" class="mw-redirect" title="批量许可">批量许可</a></span>
+            </td>
+            <td><span class="nowrap">零售<br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/批量許可" class="mw-redirect" title="批量许可">批量许可</a></span>
+            </td>
+            <td><span class="nowrap">零售<br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/批量許可" class="mw-redirect" title="批量许可">批量许可</a></span>
+            </td>
+            <td><span class="nowrap">零售<br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/批量許可" class="mw-redirect" title="批量许可">批量许可</a></span>
+            </td>
+            <td><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/批量許可" class="mw-redirect" title="批量许可">批量许可</a></span>
+            </td>
+            <td><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/OEM" class="mw-redirect" title="OEM">OEM</a></span>
+            </td>
+            <td><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/批量許可" class="mw-redirect" title="批量许可">批量许可</a></span>
+            </td>
+            <td><span class="nowrap">Windows<br>开发人员中心</span>
+            </td>
+        </tr>
+        <tr style="text-align:center;">
+            <td style="background:#F2F2F2;"><span class="nowrap">N/KN版</span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr style="text-align:center;">
+            <td style="background:#F2F2F2;"><span class="nowrap">最大支援RAM</span>
+            </td>
+            <td><span class="nowrap">4<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Gigabyte" class="mw-redirect" title="Gigabyte">GB</a>（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/32-bit" class="mw-redirect" title="32-bit">32位</a>）</span>
+                <br><span class="nowrap">128<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Gigabyte" class="mw-redirect" title="Gigabyte">GB</a>（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/64-bit" class="mw-redirect" title="64-bit">64位元</a>）</span>
+            </td>
+            <td colspan="3"><span class="nowrap">4<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Gigabyte" class="mw-redirect" title="Gigabyte">GB</a>（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/32-bit" class="mw-redirect" title="32-bit">32位</a>）</span>
+                <br><span class="nowrap">2<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Terabyte" class="mw-redirect" title="Terabyte">TB</a>（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/64-bit" class="mw-redirect" title="64-bit">64位元</a>）</span>
+            </td>
+            <td colspan="2"><span class="nowrap">4<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Gigabyte" class="mw-redirect" title="Gigabyte">GB</a>（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/32-bit" class="mw-redirect" title="32-bit">32位</a>）</span>
+                <br><span class="nowrap">6<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Terabyte" class="mw-redirect" title="Terabyte">TB</a>（<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/64-bit" class="mw-redirect" title="64-bit">64位元</a>）</span>
+            </td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">Continuum</span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Microsoft_Cortana" class="mw-redirect" title="Microsoft Cortana">Cortana</a></span><span class="citation wikicite" id="endnote_Cortana僅在特定的市場發售；體驗也因地域和裝置有別；需要登錄後使用"><b><a href="#ref_Cortana僅在特定的市場發售；體驗也因地域和裝置有別；需要登錄後使用">^</a></b></span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td style="background: #FFD; color: black; vertical-align: middle; text-align: center;" class="partial table-partial">需更新至1703
+            </td>
+            <td style="background: #FFD; color: black; vertical-align: middle; text-align: center;" class="partial table-partial">需更新至1703</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td style="background: #FFD; color: black; vertical-align: middle; text-align: center;" class="partial table-partial">运行长期服务分支（LTSB）更新系统的装置除外</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">硬件装置加密</span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Microsoft_Edge" title="Microsoft Edge">Microsoft Edge</a></span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td style="background: #FFD; color: black; vertical-align: middle; text-align: center;" class="partial table-partial">运行长期服务分支（LTSB）更新系统的装置除外</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">微软账号</span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">移动设备管理</span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">商业应用程序旁加载</span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">虚拟桌面</span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">Windows Hello</span><span class="citation wikicite" id="endnote_Windows_Hello需要特定的硬體，包括指紋讀取器、感光紅外傳感器以及其它生物傳感器。"><b><a href="#ref_Windows_Hello需要特定的硬體，包括指紋讀取器、感光紅外傳感器以及其它生物傳感器。">^</a></b></span>
+            </td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/ReFS" title="ReFS">ReFS</a>支援</span>
+            </td>
+            <td colspan="2" style="background: #FFD; color: black; vertical-align: middle; text-align: center;" class="partial table-partial">在更新至1709后
+                <br>仅支援读取与写入</td>
+            <td style="background: #FFD; color: black; vertical-align: middle; text-align: center;" class="partial table-partial">在更新至1709后仅支援读取与写入</td>
+            <td style="background: #FFD; color: black; vertical-align: middle; text-align: center;" class="partial table-partial">在更新至1709后仅支援读取与写入</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;">Assigned Access 8.1</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/BitLocker" title="BitLocker">BitLocker</a>与<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/EFS" class="mw-redirect" title="EFS">EFS</a></span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;">Business Store</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">当前企业分支（CBB）</span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">加入<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/域名" title="域名">域名</a>和<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/群組原則" class="mw-redirect" title="群组原则">群组原则</a>管理</span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">企业数据保护</span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">企业用<br>Internet Explorer</span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">受指派的存取权</span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">动态布建</span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="ilh-all" data-orig-title="Hyper-V" data-lang-code="en" data-lang-name="英语" data-foreign-title="Hyper-V"><span class="ilh-page">Hyper-V</span>
+                <span
+                class="noprint ilh-comment">（<span class="ilh-lang">英语</span><span class="ilh-colon">：</span><span class="ilh-link"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Hyper-V" class="extiw" title="en:Hyper-V"><span lang="en" dir="auto">Hyper-V</span>
+                    </a>
+                    </span>）</span>
+                    </span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td style="background:#bfd; color:black; vertical-align:middle; text-align:center;" class="table-yes2"><span class="nowrap">仅<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/64-bit" class="mw-redirect" title="64-bit">64位元</a>SKUs</span>
+            </td>
+            <td style="background:#bfd; color:black; vertical-align:middle; text-align:center;" class="table-yes2"><span class="nowrap">仅<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/64-bit" class="mw-redirect" title="64-bit">64位元</a>SKUs</span>
+            </td>
+            <td style="background:#bfd; color:black; vertical-align:middle; text-align:center;" class="table-yes2"><span class="nowrap">仅<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/64-bit" class="mw-redirect" title="64-bit">64位元</a>SKUs</span>
+            </td>
+            <td style="background:#bfd; color:black; vertical-align:middle; text-align:center;" class="table-yes2"><span class="nowrap">仅<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/64-bit" class="mw-redirect" title="64-bit">64位元</a>SKUs</span>
+            </td>
+            <td style="background:#bfd; color:black; vertical-align:middle; text-align:center;" class="table-yes2"><span class="nowrap">仅<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/64-bit" class="mw-redirect" title="64-bit">64位元</a>SKUs</span>
+            </td>
+            <td colspan="3"><i><b>?</b></i>
+                <p>
+                    <br>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">加入<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Microsoft_Azure" title="Microsoft Azure">Microsoft Azure</a><br>的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Active_Directory" title="Active Directory">Active Directory</a></span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">私人目录</span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/遠端桌面" class="mw-redirect" title="远端桌面">远端桌面服务</a></span>
+            </td>
+            <td class="partial table-partial" style="background: #FFD; color: black; vertical-align: middle; text-align: center;">仅客户端</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;">企业用
+                <br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Windows_Update" title="Windows Update">Windows Update</a>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td colspan="3"><i><b>?</b></i>
+            </td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;">AppLocker</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;">BranchCache</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;">Credential Guard
+                <br>（<span class="ilh-all" data-orig-title="Pass the hash" data-lang-code="en" data-lang-name="英语" data-foreign-title="Pass the hash"><span class="ilh-page">Pass the hash</span>
+                <span
+                class="noprint ilh-comment">（<span class="ilh-lang">英语</span><span class="ilh-colon">：</span><span class="ilh-link"><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pass_the_hash" class="extiw" title="en:Pass the hash"><span lang="en" dir="auto">Pass the hash</span>
+                    </a>
+                    </span>）</span>
+                    </span>
+                    <br>攻击的缓解措施）</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;">Device Guard</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/DirectAccess" title="DirectAccess">DirectAccess</a>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">由<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/群組原則" class="mw-redirect" title="群组原则">群组原则</a>控制<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/開始畫面" class="mw-redirect" title="开始画面">开始画面</a></span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/使用者經驗" title="使用者经验">使用者经验</a>控制与锁定</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Windows_To_Go" title="Windows To Go">Windows To Go</a>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td style="background: #FFD; color: black; vertical-align: middle; text-align: center;" class="partial table-partial">控制台可以使用，但需准备企业版光碟</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+        </tr>
+        <tr>
+            <td style="background:#F2F2F2;"><span class="nowrap">长期服务分支（LTSB)</span>
+            </td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-yes" style="text-align:center; background:#90FF90">是</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否</td>
+            <td class="table-no" style="text-align:center; background:#FF9090">否
+                <p>
+                    <br>
+                </p>
+            </td>
+        </tr>
+        <tr style="text-align:center;">
+            <th>功能</th>
+            <th><span class="nowrap">Windows 10<br>家用版</span>
+            </th>
+            <th><span class="nowrap">Windows 10<br>专业版</span>
+            </th>
+            <th><span class="nowrap">Windows 10<br>专业教育版</span>
+            </th>
+            <th><span class="nowrap">Windows 10<br>教育版</span>
+            </th>
+            <th><span class="nowrap">Windows 10<br>专业工作站版</span>
+            </th>
+            <th><span class="nowrap">Windows 10<br>企业版</span>
+            </th>
+            <th><span class="nowrap">Windows 10<br>移动版</span>
+            </th>
+            <th><span class="nowrap">Windows 10<br>企业移动版</span>
+            </th>
+            <th><span class="nowrap">Windows 10<br>物联网核心版</span>
+            </th>
+        </tr>
+        <tr style="text-align:center;">
+            <th></th>
+            <th colspan="6"><span class="nowrap">桌面</span>
+            </th>
+            <th colspan="2"><span class="nowrap">手机等</span>
+            </th>
+            <th colspan="1"><span class="nowrap">物联网设备</span>
+            </th>
+        </tr>
+    </tbody>
+</table>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Windows/" rel="tag"># Windows</a>
+              <a href="/tags/Windows-10/" rel="tag"># Windows 10</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Software/Android/Connectbot/" rel="prev" title="[Android]Connectbot - Android terminal">
+      <i class="fa fa-chevron-left"></i> [Android]Connectbot - Android terminal
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/System/Linux%20old%20version/" rel="next" title="一些Linux历史版本的下载位置(官方)">
+      一些Linux历史版本的下载位置(官方) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ted423</p>
+  <div class="site-description" itemprop="description">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">222</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">التصنيفات</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">106</span>
+        <span class="site-state-item-name">الوسوم</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ted423</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

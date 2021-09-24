@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ted423.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"U1SD35XLQS","apiKey":"3d71b4e6d428e7e228b06019ae2c9a29","indexName":"github","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="HTML ISO-8859-1 参考手册http:&#x2F;&#x2F;www.w3school.com.cn&#x2F;tags&#x2F;html_ref_entities.html 带有实体名称的 ASCII 实体   结果 描述 实体名称 实体编号    “ quotation mark &amp;quot; &amp;#34;   ‘ apostrophe &amp;apos; &amp;#39;   &amp; amper">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页符号转义">
+<meta property="og:url" content="http://ted423.github.io/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="HTML ISO-8859-1 参考手册http:&#x2F;&#x2F;www.w3school.com.cn&#x2F;tags&#x2F;html_ref_entities.html 带有实体名称的 ASCII 实体   结果 描述 实体名称 实体编号    “ quotation mark &amp;quot; &amp;#34;   ‘ apostrophe &amp;apos; &amp;#39;   &amp; amper">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-05T11:32:08.812Z">
+<meta property="article:modified_time" content="2015-10-31T16:00:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="WWW">
+<meta property="article:tag" content="字符编码">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://ted423.github.io/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>网页符号转义 | 个人小站</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">个人小站</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Take&Give</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网页符号转义
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+
+              <time title="أُنشأ: 2021-08-05 19:32:08" itemprop="dateCreated datePublished" datetime="2021-08-05T19:32:08+08:00">2021-08-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">عُدل في</span>
+                <time title="عُدل: 2015-11-01 00:00:00" itemprop="dateModified" datetime="2015-11-01T00:00:00+08:00">2015-11-01</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">في</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>HTML ISO-8859-1 参考手册<br><a target="_blank" rel="noopener" href="http://www.w3school.com.cn/tags/html_ref_entities.html">http://www.w3school.com.cn/tags/html_ref_entities.html</a></p>
+<h1 id="带有实体名称的-ASCII-实体"><a href="#带有实体名称的-ASCII-实体" class="headerlink" title="带有实体名称的 ASCII 实体"></a>带有实体名称的 ASCII 实体</h1><table>
+<thead>
+<tr>
+<th>结果</th>
+<th>描述</th>
+<th>实体名称</th>
+<th>实体编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>“</td>
+<td>quotation mark</td>
+<td>&amp;quot;</td>
+<td>&amp;#34;</td>
+</tr>
+<tr>
+<td>‘</td>
+<td>apostrophe</td>
+<td>&amp;apos;</td>
+<td>&amp;#39;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>ampersand</td>
+<td>&amp;amp;</td>
+<td>&amp;#38;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less-than</td>
+<td>&amp;lt;</td>
+<td>&amp;#60;</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>|greater-than|&amp;gt;|&amp;#62;</p>
+</blockquote>
+<h1 id="ISO-8859-1-符号实体"><a href="#ISO-8859-1-符号实体" class="headerlink" title="ISO 8859-1 符号实体"></a>ISO 8859-1 符号实体</h1><table>
+<thead>
+<tr>
+<th>结果</th>
+<th>描述</th>
+<th>实体名称</th>
+<th>实体编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>non-breaking space</td>
+<td>&amp;nbsp;</td>
+<td>&amp;#160;</td>
+<td></td>
+</tr>
+<tr>
+<td>¡</td>
+<td>inverted exclamation mark</td>
+<td>&amp;iexcl;</td>
+<td>&amp;#161;</td>
+</tr>
+<tr>
+<td>¢</td>
+<td>cent</td>
+<td>&amp;cent;</td>
+<td>&amp;#162;</td>
+</tr>
+<tr>
+<td>£</td>
+<td>pound</td>
+<td>&amp;pound;</td>
+<td>&amp;#163;</td>
+</tr>
+<tr>
+<td>¤</td>
+<td>currency</td>
+<td>&amp;curren;</td>
+<td>&amp;#164;</td>
+</tr>
+<tr>
+<td>¥</td>
+<td>yen</td>
+<td>&amp;yen;</td>
+<td>&amp;#165;</td>
+</tr>
+<tr>
+<td>¦</td>
+<td>broken vertical bar</td>
+<td>&amp;brvbar;</td>
+<td>&amp;#166;</td>
+</tr>
+<tr>
+<td>§</td>
+<td>section</td>
+<td>&amp;sect;</td>
+<td>&amp;#167;</td>
+</tr>
+<tr>
+<td>¨</td>
+<td>spacing diaeresis</td>
+<td>&amp;uml;</td>
+<td>&amp;#168;</td>
+</tr>
+<tr>
+<td>©</td>
+<td>copyright</td>
+<td>&amp;copy;</td>
+<td>&amp;#169;</td>
+</tr>
+<tr>
+<td>ª</td>
+<td>feminine ordinal indicator</td>
+<td>&amp;ordf;</td>
+<td>&amp;#170;</td>
+</tr>
+<tr>
+<td>«</td>
+<td>angle quotation mark (left)</td>
+<td>&amp;laquo;</td>
+<td>&amp;#171;</td>
+</tr>
+<tr>
+<td>¬</td>
+<td>negation</td>
+<td>&amp;not;</td>
+<td>&amp;#172;</td>
+</tr>
+<tr>
+<td>­</td>
+<td>soft hyphen</td>
+<td>&amp;shy;</td>
+<td>&amp;#173;</td>
+</tr>
+<tr>
+<td>®</td>
+<td>registered trademark</td>
+<td>&amp;reg;</td>
+<td>&amp;#174;</td>
+</tr>
+<tr>
+<td>¯</td>
+<td>spacing macron</td>
+<td>&amp;macr;</td>
+<td>&amp;#175;</td>
+</tr>
+<tr>
+<td>°</td>
+<td>degree</td>
+<td>&amp;deg;</td>
+<td>&amp;#176;</td>
+</tr>
+<tr>
+<td>±</td>
+<td>plus-or-minus</td>
+<td>&amp;plusmn;</td>
+<td>&amp;#177;</td>
+</tr>
+<tr>
+<td>²</td>
+<td>superscript 2</td>
+<td>&amp;sup2;</td>
+<td>&amp;#178;</td>
+</tr>
+<tr>
+<td>³</td>
+<td>superscript 3</td>
+<td>&amp;sup3;</td>
+<td>&amp;#179;</td>
+</tr>
+<tr>
+<td>´</td>
+<td>spacing acute</td>
+<td>&amp;acute;</td>
+<td>&amp;#180;</td>
+</tr>
+<tr>
+<td>µ</td>
+<td>micro</td>
+<td>&amp;micro;</td>
+<td>&amp;#181;</td>
+</tr>
+<tr>
+<td>¶</td>
+<td>paragraph</td>
+<td>&amp;para;</td>
+<td>&amp;#182;</td>
+</tr>
+<tr>
+<td>·</td>
+<td>middle dot</td>
+<td>&amp;middot;</td>
+<td>&amp;#183;</td>
+</tr>
+<tr>
+<td>¸</td>
+<td>spacing cedilla</td>
+<td>&amp;cedil;</td>
+<td>&amp;#184;</td>
+</tr>
+<tr>
+<td>¹</td>
+<td>superscript 1</td>
+<td>&amp;sup1;</td>
+<td>&amp;#185;</td>
+</tr>
+<tr>
+<td>º</td>
+<td>masculine ordinal indicator</td>
+<td>&amp;ordm;</td>
+<td>&amp;#186;</td>
+</tr>
+<tr>
+<td>»</td>
+<td>angle quotation mark (right)</td>
+<td>&amp;raquo;</td>
+<td>&amp;#187;</td>
+</tr>
+<tr>
+<td>¼</td>
+<td>fraction 1/4</td>
+<td>&amp;frac14;</td>
+<td>&amp;#188;</td>
+</tr>
+<tr>
+<td>½</td>
+<td>fraction 1/2</td>
+<td>&amp;frac12;</td>
+<td>&amp;#189;</td>
+</tr>
+<tr>
+<td>¾</td>
+<td>fraction 3/4</td>
+<td>&amp;frac34;</td>
+<td>&amp;#190;</td>
+</tr>
+<tr>
+<td>¿</td>
+<td>inverted question mark</td>
+<td>&amp;iquest;</td>
+<td>&amp;#191;</td>
+</tr>
+<tr>
+<td>×</td>
+<td>multiplication</td>
+<td>&amp;times;</td>
+<td>&amp;#215;</td>
+</tr>
+<tr>
+<td>÷</td>
+<td>division</td>
+<td>&amp;divide;</td>
+<td>&amp;#247;</td>
+</tr>
+</tbody></table>
+<h1 id="ISO-8859-1-字符实体"><a href="#ISO-8859-1-字符实体" class="headerlink" title="ISO 8859-1 字符实体#"></a>ISO 8859-1 字符实体#</h1><table>
+<thead>
+<tr>
+<th>结果</th>
+<th>描述</th>
+<th>实体名称</th>
+<th>实体编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>À</td>
+<td>capital a, grave accent</td>
+<td>&amp;Agrave;</td>
+<td>&amp;#192;</td>
+</tr>
+<tr>
+<td>Á</td>
+<td>capital a, acute accent</td>
+<td>&amp;Aacute;</td>
+<td>&amp;#193;</td>
+</tr>
+<tr>
+<td>Â</td>
+<td>capital a, circumflex accent</td>
+<td>&amp;Acirc;</td>
+<td>&amp;#194;</td>
+</tr>
+<tr>
+<td>Ã</td>
+<td>capital a, tilde</td>
+<td>&amp;Atilde;</td>
+<td>&amp;#195;</td>
+</tr>
+<tr>
+<td>Ä</td>
+<td>capital a, umlaut mark</td>
+<td>&amp;Auml;</td>
+<td>&amp;#196;</td>
+</tr>
+<tr>
+<td>Å</td>
+<td>capital a, ring</td>
+<td>&amp;Aring;</td>
+<td>&amp;#197;</td>
+</tr>
+<tr>
+<td>Æ</td>
+<td>capital ae</td>
+<td>&amp;AElig;</td>
+<td>&amp;#198;</td>
+</tr>
+<tr>
+<td>Ç</td>
+<td>capital c, cedilla</td>
+<td>&amp;Ccedil;</td>
+<td>&amp;#199;</td>
+</tr>
+<tr>
+<td>È</td>
+<td>capital e, grave accent</td>
+<td>&amp;Egrave;</td>
+<td>&amp;#200;</td>
+</tr>
+<tr>
+<td>É</td>
+<td>capital e, acute accent</td>
+<td>&amp;Eacute;</td>
+<td>&amp;#201;</td>
+</tr>
+<tr>
+<td>Ê</td>
+<td>capital e, circumflex accent</td>
+<td>&amp;Ecirc;</td>
+<td>&amp;#202;</td>
+</tr>
+<tr>
+<td>Ë</td>
+<td>capital e, umlaut mark</td>
+<td>&amp;Euml;</td>
+<td>&amp;#203;</td>
+</tr>
+<tr>
+<td>Ì</td>
+<td>capital i, grave accent</td>
+<td>&amp;Igrave;</td>
+<td>&amp;#204;</td>
+</tr>
+<tr>
+<td>Í</td>
+<td>capital i, acute accent</td>
+<td>&amp;Iacute;</td>
+<td>&amp;#205;</td>
+</tr>
+<tr>
+<td>Î</td>
+<td>capital i, circumflex accent</td>
+<td>&amp;Icirc;</td>
+<td>&amp;#206;</td>
+</tr>
+<tr>
+<td>Ï</td>
+<td>capital i, umlaut mark</td>
+<td>&amp;Iuml;</td>
+<td>&amp;#207;</td>
+</tr>
+<tr>
+<td>Ð</td>
+<td>capital eth, Icelandic</td>
+<td>&amp;ETH;</td>
+<td>&amp;#208;</td>
+</tr>
+<tr>
+<td>Ñ</td>
+<td>capital n, tilde</td>
+<td>&amp;Ntilde;</td>
+<td>&amp;#209;</td>
+</tr>
+<tr>
+<td>Ò</td>
+<td>capital o, grave accent</td>
+<td>&amp;Ograve;</td>
+<td>&amp;#210;</td>
+</tr>
+<tr>
+<td>Ó</td>
+<td>capital o, acute accent</td>
+<td>&amp;Oacute;</td>
+<td>&amp;#211;</td>
+</tr>
+<tr>
+<td>Ô</td>
+<td>capital o, circumflex accent</td>
+<td>&amp;Ocirc;</td>
+<td>&amp;#212;</td>
+</tr>
+<tr>
+<td>Õ</td>
+<td>capital o, tilde</td>
+<td>&amp;Otilde;</td>
+<td>&amp;#213;</td>
+</tr>
+<tr>
+<td>Ö</td>
+<td>capital o, umlaut mark</td>
+<td>&amp;Ouml;</td>
+<td>&amp;#214;</td>
+</tr>
+<tr>
+<td>Ø</td>
+<td>capital o, slash</td>
+<td>&amp;Oslash;</td>
+<td>&amp;#216;</td>
+</tr>
+<tr>
+<td>Ù</td>
+<td>capital u, grave accent</td>
+<td>&amp;Ugrave;</td>
+<td>&amp;#217;</td>
+</tr>
+<tr>
+<td>Ú</td>
+<td>capital u, acute accent</td>
+<td>&amp;Uacute;</td>
+<td>&amp;#218;</td>
+</tr>
+<tr>
+<td>Û</td>
+<td>capital u, circumflex accent</td>
+<td>&amp;Ucirc;</td>
+<td>&amp;#219;</td>
+</tr>
+<tr>
+<td>Ü</td>
+<td>capital u, umlaut mark</td>
+<td>&amp;Uuml;</td>
+<td>&amp;#220;</td>
+</tr>
+<tr>
+<td>Ý</td>
+<td>capital y, acute accent</td>
+<td>&amp;Yacute;</td>
+<td>&amp;#221;</td>
+</tr>
+<tr>
+<td>Þ</td>
+<td>capital THORN, Icelandic</td>
+<td>&amp;THORN;</td>
+<td>&amp;#222;</td>
+</tr>
+<tr>
+<td>ß</td>
+<td>small sharp s, German</td>
+<td>&amp;szlig;</td>
+<td>&amp;#223;</td>
+</tr>
+<tr>
+<td>à</td>
+<td>small a, grave accent</td>
+<td>&amp;agrave;</td>
+<td>&amp;#224;</td>
+</tr>
+<tr>
+<td>á</td>
+<td>small a, acute accent</td>
+<td>&amp;aacute;</td>
+<td>&amp;#225;</td>
+</tr>
+<tr>
+<td>â</td>
+<td>small a, circumflex accent</td>
+<td>&amp;acirc;</td>
+<td>&amp;#226;</td>
+</tr>
+<tr>
+<td>ã</td>
+<td>small a, tilde</td>
+<td>&amp;atilde;</td>
+<td>&amp;#227;</td>
+</tr>
+<tr>
+<td>ä</td>
+<td>small a, umlaut mark</td>
+<td>&amp;auml;</td>
+<td>&amp;#228;</td>
+</tr>
+<tr>
+<td>å</td>
+<td>small a, ring</td>
+<td>&amp;aring;</td>
+<td>&amp;#229;</td>
+</tr>
+<tr>
+<td>æ</td>
+<td>small ae</td>
+<td>&amp;aelig;</td>
+<td>&amp;#230;</td>
+</tr>
+<tr>
+<td>ç</td>
+<td>small c, cedilla</td>
+<td>&amp;ccedil;</td>
+<td>&amp;#231;</td>
+</tr>
+<tr>
+<td>è</td>
+<td>small e, grave accent</td>
+<td>&amp;egrave;</td>
+<td>&amp;#232;</td>
+</tr>
+<tr>
+<td>é</td>
+<td>small e, acute accent</td>
+<td>&amp;eacute;</td>
+<td>&amp;#233;</td>
+</tr>
+<tr>
+<td>ê</td>
+<td>small e, circumflex accent</td>
+<td>&amp;ecirc;</td>
+<td>&amp;#234;</td>
+</tr>
+<tr>
+<td>ë</td>
+<td>small e, umlaut mark</td>
+<td>&amp;euml;</td>
+<td>&amp;#235;</td>
+</tr>
+<tr>
+<td>ì</td>
+<td>small i, grave accent</td>
+<td>&amp;igrave;</td>
+<td>&amp;#236;</td>
+</tr>
+<tr>
+<td>í</td>
+<td>small i, acute accent</td>
+<td>&amp;iacute;</td>
+<td>&amp;#237;</td>
+</tr>
+<tr>
+<td>î</td>
+<td>small i, circumflex accent</td>
+<td>&amp;icirc;</td>
+<td>&amp;#238;</td>
+</tr>
+<tr>
+<td>ï</td>
+<td>small i, umlaut mark</td>
+<td>&amp;iuml;</td>
+<td>&amp;#239;</td>
+</tr>
+<tr>
+<td>ð</td>
+<td>small eth, Icelandic</td>
+<td>&amp;eth;</td>
+<td>&amp;#240;</td>
+</tr>
+<tr>
+<td>ñ</td>
+<td>small n, tilde</td>
+<td>&amp;ntilde;</td>
+<td>&amp;#241;</td>
+</tr>
+<tr>
+<td>ò</td>
+<td>small o, grave accent</td>
+<td>&amp;ograve;</td>
+<td>&amp;#242;</td>
+</tr>
+<tr>
+<td>ó</td>
+<td>small o, acute accent</td>
+<td>&amp;oacute;</td>
+<td>&amp;#243;</td>
+</tr>
+<tr>
+<td>ô</td>
+<td>small o, circumflex accent</td>
+<td>&amp;ocirc;</td>
+<td>&amp;#244;</td>
+</tr>
+<tr>
+<td>õ</td>
+<td>small o, tilde</td>
+<td>&amp;otilde;</td>
+<td>&amp;#245;</td>
+</tr>
+<tr>
+<td>ö</td>
+<td>small o, umlaut mark</td>
+<td>&amp;ouml;</td>
+<td>&amp;#246;</td>
+</tr>
+<tr>
+<td>ø</td>
+<td>small o, slash</td>
+<td>&amp;oslash;</td>
+<td>&amp;#248;</td>
+</tr>
+<tr>
+<td>ù</td>
+<td>small u, grave accent</td>
+<td>&amp;ugrave;</td>
+<td>&amp;#249;</td>
+</tr>
+<tr>
+<td>ú</td>
+<td>small u, acute accent</td>
+<td>&amp;uacute;</td>
+<td>&amp;#250;</td>
+</tr>
+<tr>
+<td>û</td>
+<td>small u, circumflex accent</td>
+<td>&amp;ucirc;</td>
+<td>&amp;#251;</td>
+</tr>
+<tr>
+<td>ü</td>
+<td>small u, umlaut mark</td>
+<td>&amp;uuml;</td>
+<td>&amp;#252;</td>
+</tr>
+<tr>
+<td>ý</td>
+<td>small y, acute accent</td>
+<td>&amp;yacute;</td>
+<td>&amp;#253;</td>
+</tr>
+<tr>
+<td>þ</td>
+<td>small thorn, Icelandic</td>
+<td>&amp;thorn;</td>
+<td>&amp;#254;</td>
+</tr>
+<tr>
+<td>ÿ</td>
+<td>small y, umlaut mark</td>
+<td>&amp;yuml;</td>
+<td>&amp;#255;</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/WWW/" rel="tag"># WWW</a>
+              <a href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" rel="tag"># 字符编码</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Code/npm-error/" rel="prev" title="Windows npm error 处理办法">
+      <i class="fa fa-chevron-left"></i> Windows npm error 处理办法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/Code/Git/Failed%20to%20sync%20this%20branch/" rel="next" title="[Git]处理 GitHub - Failed to sync this branch 的问题">
+      [Git]处理 GitHub - Failed to sync this branch 的问题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%A6%E6%9C%89%E5%AE%9E%E4%BD%93%E5%90%8D%E7%A7%B0%E7%9A%84-ASCII-%E5%AE%9E%E4%BD%93"><span class="nav-number">1.</span> <span class="nav-text">带有实体名称的 ASCII 实体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ISO-8859-1-%E7%AC%A6%E5%8F%B7%E5%AE%9E%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">ISO 8859-1 符号实体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ISO-8859-1-%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93"><span class="nav-number">3.</span> <span class="nav-text">ISO 8859-1 字符实体#</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ted423</p>
+  <div class="site-description" itemprop="description">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">222</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">التصنيفات</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">106</span>
+        <span class="site-state-item-name">الوسوم</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ted423</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

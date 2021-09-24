@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ted423.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"appID":"U1SD35XLQS","apiKey":"3d71b4e6d428e7e228b06019ae2c9a29","indexName":"github","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="本文属于用啥黑啥系列。在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。然后第二遇到的大概就是群晖的贵了。 因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。 那么问题来了，硬件性能好就一定好用么？我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="请勿购买QNAP">
+<meta property="og:url" content="http://ted423.github.io/etc/NoQNAP/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="本文属于用啥黑啥系列。在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。然后第二遇到的大概就是群晖的贵了。 因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。 那么问题来了，硬件性能好就一定好用么？我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-07-03T06:02:19.048Z">
+<meta property="article:modified_time" content="2021-07-03T08:03:49.158Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="个人观点">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://ted423.github.io/etc/NoQNAP/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-cn'
+  };
+</script>
+
+  <title>请勿购买QNAP | 个人小站</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="تشغيل شريط التصفح">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">个人小站</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Take&Give</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>الأرشيفات</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-cn">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/etc/NoQNAP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          请勿购买QNAP
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">نُشر في</span>
+              
+
+              <time title="أُنشأ: 2021-07-03 14:02:19 / عُدل: 16:03:49" itemprop="dateCreated datePublished" datetime="2021-07-03T14:02:19+08:00">2021-07-03</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文属于用啥黑啥系列。<br>在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。<br>像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。<br>然后第二遇到的大概就是群晖的贵了。</p>
+<p>因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。</p>
+<p>那么问题来了，硬件性能好就一定好用么？<br>我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的(网上一堆喊着x86的实际是x86_64)，在其他人的帮助下，我最终在这台破群晖上成功的跑起来了QB的docker，虽然还有点小问题，但是QNAP呢？跑起来了，登不进去。</p>
+<p>目前我用QNAP遇到的问题有</p>
+<ol>
+<li>原系统DNS本机架了个dnsmasq，配置啥的都是锁死的，重启自动还原，然后不定时就对自己进行DNS投毒，给一些域名解析返回10.0.0.1。扩展阅读: <a target="_blank" rel="noopener" href="https://www.google.com/search?q=dnsmasq+%E8%BF%94%E5%9B%9E+10.0.0.1">https://www.google.com/search?q=dnsmasq+返回+10.0.0.1</a></li>
+<li>想改的话，web里配置没用，只能进ssh改(但是重启会还原，所以每次都要改)，但是改了之后就天天告诉你硬盘分析上传失败(虽然我也不在乎这个)</li>
+<li>qb、tr有了(de要钱，rt还是个pro版本)</li>
+<li>docker折腾了，进不去，各种界面不如群晖那么方便。</li>
+<li>最后逼得我上了虚拟机，结果自带的vnc因为安全相关，不允许访问剪贴板。自带支持的spice也是同样。</li>
+<li>Nomachine相关问题: <a href="https://ted423.github.io/2020/12/11/Software/NoMachine/">https://ted423.github.io/2020/12/11/Software/NoMachine/</a>，目测QNAP虚拟机的VNC画面可能创建的比较特殊</li>
+</ol>
+<p>简要的问题在于，你买了QNAP，系统就只能用QNAP的，当你发现你不喜欢这个系统的时候。就很尴尬了。<br>在我的使用环境中，经常要ssh进去，比如结束进程，或者mount。但是QNAP又是有自己一套体系的，你没法确保他的命令和别的完全是一致的，效果也是一致的。比如docker，无形中增加了很多学习难度。</p>
+<p>东西不是有就行了的，有些甚至你不知道他到底实现到什么程度。</p>
+<p>目前大部分软件都是第三方开发的Qoolbox(qb升级换位置，然后变成了两个软件)，他要是哪天不干了就很麻烦。相对群晖那边会自己编译弄套件的似乎多些。</p>
+<p>当然，QNAP 4盘位的空间利用率还是不错的，你弄个DIY的，电源就占很大位置。<br>可能还有别的解决方案，不过我只负责吐槽</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/" rel="tag"># 个人观点</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/Software/Compression/7-Zip-zstd/" rel="prev" title="[开源]7-Zip-zstd 7z增强版">
+      <i class="fa fa-chevron-left"></i> [开源]7-Zip-zstd 7z增强版
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/etc/Fuck/" rel="next" title="去你妈的不求甚解">
+      去你妈的不求甚解 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          المحتويات
+        </li>
+        <li class="sidebar-nav-overview">
+          عام
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ted423</p>
+  <div class="site-description" itemprop="description">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">222</span>
+          <span class="site-state-item-name">المقالات</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">التصنيفات</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">106</span>
+        <span class="site-state-item-name">الوسوم</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ted423</span>
+</div>
+  <div class="powered-by">تطبيق الموقع <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
