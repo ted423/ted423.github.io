@@ -836,14 +836,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">
+            <a class="abstract-title" href="/Issue/TLS1.2/">
                 
-                <span class="abstract-title-text">[问题处理]RDP不允许使用已保存的账号密码登陆</span>
+                <span class="abstract-title-text">[问题处理]农业银行证书导致Internet Explorer的TLS 1.2自动取消勾选从而导致Windows Store无法打开</span>
             </a>
             <div class="abstract-content">
-                主要表现为其他电脑(可能一般是加了域的电脑)，在RDP到Windows 10的电脑并保存账号以及密码后，第二次登陆提示你的凭据不工作，不允许使用保存的凭据登陆远程计算机/Your system administrator does not allow the use of saved credentials to log on to the remote computer。
-解决方法一个是可以通过改组策略(Windows 10那台电脑的)，
-但更推荐的是在凭据管理器增加普通凭据(一般正常保存的RDP凭据位为”TERMSRV/“开头)
+                (国产哈皮软件 -2021-08-06)言而总之，卸载就好了。看网上有说网银相关导致的TLS 1.2自动取消勾选(http://tieba.baidu.com/p/5991999977)也有说用友的(我不是财务所以没装过)我是卸载农业银行证书就可以了，不过之前很久没更新了，不太确定最新版是不是还有问题。并且最早没遇到这种问题，怀疑可能在某次Windows Update之后出现了不兼容现象。
 
             </div>
             <div class="abstract-post-meta">
@@ -887,13 +885,15 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/TLS1.2/">
+            <a class="abstract-title" href="/Issue/%E4%B8%A4%E4%B8%AA%E5%9B%BE%E6%A0%87/">
                 
-                <span class="abstract-title-text">[问题处理]农业银行证书导致Internet Explorer的TLS 1.2自动取消勾选从而导致Windows Store无法打开</span>
+                <span class="abstract-title-text">[问题处理]解决任务栏出现两个图标(火狐)的问题</span>
             </a>
             <div class="abstract-content">
-                (国产哈皮软件 -2021-08-06)言而总之，卸载就好了。看网上有说网银相关导致的TLS 1.2自动取消勾选(http://tieba.baidu.com/p/5991999977)也有说用友的(我不是财务所以没装过)我是卸载农业银行证书就可以了，不过之前很久没更新了，不太确定最新版是不是还有问题。并且最早没遇到这种问题，怀疑可能在某次Windows Update之后出现了不兼容现象。
-
+                找到的相关的贴:http://tieba.baidu.com/p/3923325915
+具体跟Application User Model IDs有关
+可以看到火狐有以下注册表（我才不会说我没记路径直接搜TaskBarIDs的，结果只有FF跟Thunderbird有这个），大概是为了区分不同通道的火狐。(但yysy,只有火狐出这个问题还是挺拉的 -2021-08-06)
+123HKEY_CURRENT_USER\SOFTWARE\Mozilla\Firefox\TaskBarIDsHKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs...
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
@@ -921,7 +921,11 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
     
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Firefox">Firefox</a>
     
 </div>
 
@@ -5528,12 +5532,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
                 
                 </ul>
             
-            <div class="archive-year"> Invalid date </div>
+            <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
+            <span class="archive-post-date">11/01</span>
             <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP不允许使用已保存的账号密码登陆</a>
         </li>
     

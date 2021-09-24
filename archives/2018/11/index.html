@@ -23,7 +23,7 @@
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
 <meta property="og:type" content="website">
 <meta property="og:title" content="个人小站">
-<meta property="og:url" content="http://ted423.github.io/archives/2020/06/page/9/index.html">
+<meta property="og:url" content="http://ted423.github.io/archives/2018/11/index.html">
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
 <meta property="og:locale">
@@ -448,23 +448,20 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">
+            <a class="abstract-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">
                 
-                <span class="abstract-title-text">[优化]Windows 关闭休眠功能</span>
+                <span class="abstract-title-text">[问题处理]RDP不允许使用已保存的账号密码登陆</span>
             </a>
             <div class="abstract-content">
-                hiberfil.sys在C盘下占了3G多(这个文件大小跟内存大小有关)，其实这玩意是休眠产生的，我平常不用，所以决定关闭它。通常来说，笔记本会非常需要休眠来省电，不过关机会更好就是了
-以管理员权限运行命令提示符(cmd)，执行以下命令：
-1powercfg -h off
-如需启用，则执行：
-1powercfg -h on
+                主要表现为其他电脑(可能一般是加了域的电脑)，在RDP到Windows 10的电脑并保存账号以及密码后，第二次登陆提示你的凭据不工作，不允许使用保存的凭据登陆远程计算机/Your system administrator does not allow the use of saved credentials to log on to the remote computer。
+解决方法一个是可以通过改组策略(Windows 10那台电脑的)，
+但更推荐的是在凭据管理器增加普通凭据(一般正常保存的RDP凭据位为”TERMSRV/“开头)
 
-2021-08-06本来想放个文章说明下休眠跟睡眠的，但看最开头是知乎，对这种社区似的知识分享，有些人又是冲着流量去的，质量可能还行，但是远不如Stack Overflow这种。比较开心的是看见了微软提供了MVP写的东西，但是……..开篇一堆废话就让我心头一凉，再然...
             </div>
             <div class="abstract-post-meta">
                 <!-- date -->
                 <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/01</span>
                 </div>
                 <!-- tags -->
                 
@@ -475,17 +472,19 @@
             
         
         
-        <span class="post-category" data-categories="Optimization"">
+        <span class="post-category" data-categories="Issue"">
             <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
-                Optimization
+                Issue
             </span>
         </span>
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -495,10 +494,6 @@
         <div class="index-post-divider"></div>
     
     <!-- paginator  -->
-    
-        <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/2020/06/page/8/">&lt; PREV</a><a class="page-number" href="/archives/2020/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/7/">7</a><a class="page-number" href="/archives/2020/06/page/8/">8</a><span class="page-number current">9</span>
-        </nav>
     
 </main>
 
@@ -5092,12 +5087,12 @@
                 
                 </ul>
             
-            <div class="archive-year"> Invalid date </div>
+            <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
+            <span class="archive-post-date">11/01</span>
             <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP不允许使用已保存的账号密码登陆</a>
         </li>
     

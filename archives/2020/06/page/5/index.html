@@ -642,57 +642,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">
-                
-                <span class="abstract-title-text">[问题处理]RDP不允许使用已保存的账号密码登陆</span>
-            </a>
-            <div class="abstract-content">
-                主要表现为其他电脑(可能一般是加了域的电脑)，在RDP到Windows 10的电脑并保存账号以及密码后，第二次登陆提示你的凭据不工作，不允许使用保存的凭据登陆远程计算机/Your system administrator does not allow the use of saved credentials to log on to the remote computer。
-解决方法一个是可以通过改组策略(Windows 10那台电脑的)，
-但更推荐的是在凭据管理器增加普通凭据(一般正常保存的RDP凭据位为”TERMSRV/“开头)
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Issue/TLS1.2/">
                 
                 <span class="abstract-title-text">[问题处理]农业银行证书导致Internet Explorer的TLS 1.2自动取消勾选从而导致Windows Store无法打开</span>
@@ -965,10 +914,60 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         </article>
         <div class="index-post-divider"></div>
     
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E6%9D%83%E9%99%90/">
+                
+                <span class="abstract-title-text">[转载]Windows权限问题处理</span>
+            </a>
+            <div class="abstract-content">
+                以注册表为例（1）右键需要操作的注册表项目－权限－高级－所有者/文件(文件夹)-属性-安全高级-所有者
+你会发现当前所有者是TrusteInstaller（windows系统安装的时候使用的账号，权限灰常高），而我们要做的是将这个所有者更改为我们的当前用户，比如这里是administators
+点击选择 将所有这更改为administrators，然后勾选替换子容器和对象的所有者（相当于应用设置到子键吧）应用确定以后返回到权限窗口，选择当前用户账号我的是administrators（xxxxx\administrators,将完全控制的选项点击设置为允许，点击应用，现在尝试编辑注册表项目...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/2020/06/page/4/">&lt; PREV</a><a class="page-number" href="/archives/2020/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/3/">3</a><a class="page-number" href="/archives/2020/06/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/2020/06/page/6/">6</a><a class="page-number" href="/archives/2020/06/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/9/">9</a><a class="extend next" rel="next" href="/archives/2020/06/page/6/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/2020/06/page/4/">&lt; PREV</a><a class="page-number" href="/archives/2020/06/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/06/page/3/">3</a><a class="page-number" href="/archives/2020/06/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/2020/06/page/6/">6</a><a class="page-number" href="/archives/2020/06/page/7/">7</a><a class="page-number" href="/archives/2020/06/page/8/">8</a><a class="extend next" rel="next" href="/archives/2020/06/page/6/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -5563,12 +5562,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
                 
                 </ul>
             
-            <div class="archive-year"> Invalid date </div>
+            <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
+            <span class="archive-post-date">11/01</span>
             <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP不允许使用已保存的账号密码登陆</a>
         </li>
     
