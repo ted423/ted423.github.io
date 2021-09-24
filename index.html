@@ -498,6 +498,209 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/NFS%20Squash/">
+                
+                <span class="abstract-title-text">NFS squash特性相关</span>
+            </a>
+            <div class="abstract-content">
+                写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章大部分都为猜测，未作有效以及查证相关检测。
+在阅读这篇文章之前你需要了解
+
+Linux是多用户操作系统
+用户以及组的保存都是基于id(uid gid)
+root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group里可以看，但是不同的Linux版本可能会有不同
+NIS Server
+Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/winscppwd/">
+                
+                <span class="abstract-title-text">winscppwd - Winscp Password解密</span>
+            </a>
+            <div class="abstract-content">
+                起因是忘了某机器密码，然后曾保存到了Winscp里不过配置里的密码是加密的。
+网上所有帖子都指向了winscppwd，并且我查到以前有这么个开源项目https://bitbucket.org/knarf/winscppwd/overview，但现在看已经404了
+似乎是2012年的软件但是现在仍能正常使用
+看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看https://github.com/winscp/winscp/blob/master/source/core/Security.cpp不过我看不懂，有人看得懂的话，可以试试手工解密
+另外有看到https://g...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/NtpClient/">
+                
+                <span class="abstract-title-text">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</span>
+            </a>
+            <div class="abstract-content">
+                报错信息如下“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”
+看到了这篇文章https://shiyousan.com/post/635774974180847748
+有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，https://www.azurew.com/windows/windows-server-2016/3098.html，也可以不这么设)划掉，按个...
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/16</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows AD">Windows AD</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/SMB/">
+                
+                <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
+            </a>
+            <div class="abstract-content">
+                其实最简单的方法是重启。
+说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。实在不行还有大杀器net use  * /del，不过需要注意这个会删掉网络映射，微软不支持带网络映射的直接重连，需要不删除映射重连的方式大概只有重启。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
+
+            </div>
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="far fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/0x80072EFE/">
                 
                 <span class="abstract-title-text">[问题处理]Windows Update:0x80072EFE</span>
@@ -596,82 +799,6 @@
         <a class="post-tag" href="javascript:void(0);" data-tags="macOS">macOS</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/NtpClient/">
-                
-                <span class="abstract-title-text">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</span>
-            </a>
-            <div class="abstract-content">
-                报错信息如下“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”
-看到了这篇文章https://shiyousan.com/post/635774974180847748
-有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，https://www.azurew.com/windows/windows-server-2016/3098.html，也可以不这么设)划掉，按个...
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/16</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows AD">Windows AD</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/SMB/">
-                
-                <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
-            </a>
-            <div class="abstract-content">
-                其实最简单的方法是重启。
-说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。实在不行还有大杀器net use  * /del，不过需要注意这个会删掉网络映射，微软不支持带网络映射的直接重连，需要不删除映射重连的方式大概只有重启。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/26</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -823,109 +950,6 @@ GM脚本:https://ted423.bit...
         <a class="post-tag" href="javascript:void(0);" data-tags="Anime">Anime</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="迪士尼[Disney]">迪士尼[Disney]</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/">
-                
-                <span class="abstract-title-text">[Javascript]获取文本节点</span>
-            </a>
-            <div class="abstract-content">
-                主要经常遇见某元素下面是元素加文本节点的模式，需要对文本节点操作就很痛苦，因为Selector没法直接选到文本节点上，而前面的元素可能又包含干扰项总之如下
-1$(&quot;Selector&quot;)[0].nextSibling
-
-跑个题https://webdesigncss.pixnet.net/blog/post/223197231-如何用原生js取得siblings这篇文章似乎也很有用
-其实如果最早不去搜什么文本节点，直接搜Sibling就好了
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/python-win/">
-                
-                <span class="abstract-title-text">[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</span>
-            </a>
-            <div class="abstract-content">
-                简单说就是Win10在C:\Users\XX\AppData\Local\Microsoft\WindowsApps下放了两个0kb的python.exe以及python3.exe用于弹Windows Store，并把这个路径加到了个人的环境变量。
-而且这个环境变量优先级高所以会优先运行。
-傻逼微软。
-资源管理器里似乎删不掉，要命令行删
-
-            </div>
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -4401,6 +4425,8 @@ GM脚本:https://ted423.bit...
         
         
         
+        
+        
     
     
     
@@ -4487,6 +4513,12 @@ GM脚本:https://ted423.bit...
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/29</span>
             <a class="archive-post-title" href="/Issue/svn/">[问题处理]SVN踩得几个坑</a>
         </li>
@@ -4499,23 +4531,20 @@ GM脚本:https://ted423.bit...
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/19</span>
-            <a class="archive-post-title" href="/Issue/samba/">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a>
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
         </li>
     
         
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span>
+            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
+        </li>
+    
         
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
+            <span class="archive-post-date">07/19</span>
+            <a class="archive-post-title" href="/Issue/samba/">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a>
         </li>
     
         
@@ -4542,18 +4571,6 @@ GM脚本:https://ted423.bit...
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/etc/Bye/">也许要再见了，Bitcron&Farbox</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
