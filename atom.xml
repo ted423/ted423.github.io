@@ -130,7 +130,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieEx</summary>
     <link href="http://ted423.github.io/Issue/0x80072EFE/"/>
     <id>http://ted423.github.io/Issue/0x80072EFE/</id>
     <published>2021-08-09T07:07:44.166Z</published>
-    <updated>2021-08-09T07:15:07.505Z</updated>
+    <updated>2021-09-24T08:23:16.695Z</updated>
     
     <content type="html"><![CDATA[<p>2008 R2遇到<br>这个问题是由于update agent过旧导致的<br>理论Windows7早期版本也有问题，会导致后台占用很多内存</p><p>从文章得知Win8 和2012也有更新包，但是报错不明</p><p>更新包似乎是这两个系统通用的<br><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent">https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent</a></p>]]></content>
     
@@ -152,6 +152,8 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieEx</summary>
     <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
     
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
     
   </entry>
   
