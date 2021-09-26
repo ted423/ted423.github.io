@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,8 +265,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -437,11 +433,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -459,9 +456,11 @@
 在Cortana搜索栏输入PowerShell后，在第一项点击右键，选择“以管理员身份运行”；
 在PowerShell中输入以下命...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2016/02/17">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -474,7 +473,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -499,6 +498,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -511,9 +511,11 @@
 你会发现当前所有者是TrusteInstaller（windows系统安装的时候使用的账号，权限灰常高），而我们要做的是将这个所有者更改为我们的当前用户，比如这里是administators
 点击选择 将所有这更改为administrators，然后勾选替换子容器和对象的所有者（相当于应用设置到子键吧）应用确定以后返回到权限窗口，选择当前用户账号我的是administrators（xxxxx\administrators,将完全控制的选项点击设置为允许，点击应用，现在尝试编辑注册表项目...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/08/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -526,7 +528,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -549,6 +551,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -564,9 +567,11 @@
 那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
 BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/10/28">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -579,7 +584,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -600,6 +605,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
+        
             
         
         <article class="index-post">
@@ -613,9 +619,11 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
 
 ...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -628,7 +636,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -651,6 +659,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
+        
             
         
         <article class="index-post">
@@ -665,9 +674,11 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
 居中是我们使用css来布局时常遇到的情况。使用css来进行居中时，有时一个属性就能搞定，有时则需要一定的技巧才能兼容到所有浏览器，本文就居中的一些常用方法做个简单的介绍。
 注：本文所讲方法除了特别说明外，都是兼容IE6+、...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/11/23">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -680,7 +691,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -703,6 +714,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
+        
             
         
         <article class="index-post">
@@ -720,9 +732,11 @@ function GetSelectedText (){
         (document.activeElement.nodeName == "INPUT" &&
         document.activeElement.g...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -735,7 +749,7 @@ function GetSelectedText (){
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -758,6 +772,7 @@ function GetSelectedText (){
         
         
         
+        
             
         
         <article class="index-post">
@@ -769,9 +784,11 @@ function GetSelectedText (){
                 转贴啊转载啥的挺方便的http://www.seabreezecomputers.com/html2bbcode/
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/04/18">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -784,7 +801,7 @@ function GetSelectedText (){
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -802,6 +819,7 @@ function GetSelectedText (){
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -827,9 +845,11 @@ function GetSelectedText (){
         
 ...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2016/03/08">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -842,7 +862,7 @@ function GetSelectedText (){
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -865,6 +885,7 @@ function GetSelectedText (){
         
         
         
+        
             
         
         <article class="index-post">
@@ -878,9 +899,11 @@ function GetSelectedText (){
 #rem#em被定义为相对于当前对象内文本的字体大小。炒个栗子，如果你给body小哥设置了font-size字体大小，那么body小哥的任何子元素的1em就是等于body设置的font-size。
 1234567891011&lt;body&gt;    &lt;div class=&quot;test&quot;&gt;Test&lt;/...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/08/08">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -893,7 +916,7 @@ function GetSelectedText (){
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -913,6 +936,7 @@ function GetSelectedText (){
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -939,9 +963,11 @@ var refresh = function()
         var s=document.getElementById("toutf-8").value;
         var a=s.split(/%(?![A-Fa-f...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/11/20">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -954,7 +980,7 @@ var refresh = function()
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -7249,8 +7275,14 @@ var refresh = function()
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -7275,7 +7307,7 @@ var refresh = function()
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         

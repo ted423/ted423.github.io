@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,8 +265,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -437,11 +433,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -465,9 +462,11 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
       nowDate.setMonth(nowDate.getMonth() + 6);
       cookieExpires ...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2016/02/19">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -480,7 +479,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -498,6 +497,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -516,9 +516,11 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
 其实如果最早不去搜什么文本节点，直接搜Sibling就好了
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/08/15">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
                 </div>
                 <!-- tags -->
@@ -531,7 +533,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -552,6 +554,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         
+        
             
         
         <article class="index-post">
@@ -565,9 +568,11 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
 
 ...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -580,7 +585,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -603,6 +608,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         
+        
             
         
         <article class="index-post">
@@ -620,9 +626,11 @@ function GetSelectedText (){
         (document.activeElement.nodeName == "INPUT" &&
         document.activeElement.g...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -635,7 +643,7 @@ function GetSelectedText (){
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -658,6 +666,7 @@ function GetSelectedText (){
         
         
         
+        
             
         
         <article class="index-post">
@@ -669,9 +678,11 @@ function GetSelectedText (){
                 转贴啊转载啥的挺方便的http://www.seabreezecomputers.com/html2bbcode/
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/04/18">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -684,7 +695,7 @@ function GetSelectedText (){
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -702,6 +713,7 @@ function GetSelectedText (){
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -728,9 +740,11 @@ var refresh = function()
         var s=document.getElementById("toutf-8").value;
         var a=s.split(/%(?![A-Fa-f...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/11/20">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -743,7 +757,7 @@ var refresh = function()
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -766,6 +780,7 @@ var refresh = function()
         
         
         
+        
             
         
         <article class="index-post">
@@ -781,9 +796,11 @@ document.writeln("浏览器代码名="+window.navigator.appCodeName+"");
 document.writeln("浏览器平台及版本信息="+window.navigator.appVersion+"");
 document.writeln("浏览器语言="+window.navigator.language+"...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -796,7 +813,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -819,6 +836,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         
+        
             
         
         <article class="index-post">
@@ -832,9 +850,11 @@ Github地址：https://github.com/ted423/rules-GM-stylish-UC/tree/master/GM
 原创tsdm no Popups(原创)天使动漫论坛签到防弹窗##脚本地址:https://greasyfork.org/scripts/2393-tsdm-no-popups老实说，我觉得天使的签到弹窗让人有些蛋疼…
 Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的”(ED2000.COM)”去除而已https://greasyfork.org/zh-CN/scr...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2017/02/27">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -847,7 +867,7 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -870,6 +890,7 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         
         
         
+        
             
         
         <article class="index-post">
@@ -882,9 +903,11 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
 E-Hentai Downloader打包下载用的，不知道E-Hentai的不要搜索，当没看到就好https://greasyfork.org/zh-CN/scripts/10379-e-hentai-downloader
 My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说站会很有用，可以屏蔽或者替换网站特色的阅读干扰，自定义性挺不错的https://greasyfork.org/zh-CN...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2019/07/24">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -897,7 +920,7 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -922,6 +945,7 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         
         
         
+        
             
         
         <article class="index-post">
@@ -933,9 +957,11 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
                 被恶心了，sourceforge上下东西，死活不给安装包，非要给下载器，以前遇到过，当时干脆换到sourceforge.jp上去了。但最近没这现象就又换回来了。
 结果今天出现就让我感到了奇怪，仔细一看。http://downloads.sourceforge.net/project/filezilla/FileZilla_Client/3.12.0.2/FileZilla_3.12.0.2_win64-setup.exe?r=&amp;ts=1436711882&amp;use_mirror=nchc跳转后是这么个域名，cdn.whitebinariesground.com瞬间就懂了！注...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/11/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/01</span>
                 </div>
                 <!-- tags -->
@@ -948,7 +974,7 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -7245,8 +7271,14 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -7271,7 +7303,7 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         
