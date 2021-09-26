@@ -460,6 +460,112 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/IP/">
+                
+                <span class="abstract-title-text">[转载]奇葩的IP地址</span>
+            </a>
+            <div class="abstract-content">
+                原文:http://blog.caoyue.me/post/ip-address-as-octal作者:且听疯吟一个奇怪的地址，形如 23.244.200.000000000354，而且这个地址居然还是可以访问的。很显然这不是域名，ping 一下，返回地址来自于 23.244.200.236，可以看出 000000000354 是 236 的八进制表示形式。
+混合进制原来 IP 地址居然可以混合进制来显示……前导的 0 的数字会被当作八进制来处理。而且可以同时使用不同进制：包括十六进制、八进制和十进制。比如 http://0x17.244.0xc8.00000354 这样奇葩的地址也是可...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/11/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
+                
+                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
+            </a>
+            <div class="abstract-content">
+                带签名的UTF8：
+带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
+无签名的UTF8：
+相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
+那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
+BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/10/28">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Anime/JP/Hyouka/">
                 
                 <span class="abstract-title-text">氷菓[Hyouka]</span>
@@ -913,129 +1019,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
-                
-                <span class="abstract-title-text">Ubuntu注意事项</span>
-            </a>
-            <div class="abstract-content">
-                快捷键在文件夹中ctrl+h可以显示隐藏文件夹
-Root这篇文章以前写的，目前建议是sudo或者sudo -i用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03
-Debian默认创建的用户不在sudoers中，因此大部分用户可能会比较习惯su root - 2021-07-07原文http://shewolfep.iteye.com/blog/413396
-新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。
-如何设定...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/09/16">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Ubuntu">Ubuntu</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Anime/JP/B%20gata%20H%20kei/">
-                
-                <span class="abstract-title-text">[JP]B型H系[B gata H kei]</span>
-            </a>
-            <div class="abstract-content">
-                
-    
-        
-            B型H系
-        
-        
-            
-        
-        
-            原作
-            山里阳子
-        
-        
-            导演
-            山本裕介
-        
-        
-            剧本统筹
-            西园悟
-        
-        
-            编剧
-            西园悟笔安一幸与口奈津江
-        
-        
-       ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/09/09">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Anime
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FHD">FHD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="JP">JP</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Anime">Anime</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="BDrip">BDrip</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="1080p">1080p</a>
     
 </div>
 
@@ -2424,7 +2407,70 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4759,7 +4805,7 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 235
+        Total : 238
         </div>
         <!-- search  -->
         
@@ -5362,21 +5408,6 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2020 </div>
             <ul class="year-list">
             
@@ -5393,12 +5424,6 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
-        </li>
-    
-        
             
             
                 
@@ -5411,6 +5436,21 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUi 远程的一些问题</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
         </li>
     
         
@@ -5551,6 +5591,18 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Anime/Cars/">[PIXAR]赛车总动员系列[Cars]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Anime/Frozen/">[Disney]冰雪奇缘[Frozen]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Zootopia/">[Disney]疯狂动物城[Zootopia]</a>
         </li>
     
@@ -5576,6 +5628,12 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
         </li>
     
         
@@ -6076,42 +6134,6 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/17</span>
-            <a class="archive-post-title" href="/Anime/Disney/">关于迪士尼[Disney]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Anime/Cars/">[PIXAR]赛车总动员系列[Cars]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Anime/Frozen/">[Disney]冰雪奇缘[Frozen]</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> Invalid date </div>
             <ul class="year-list">
             
@@ -6119,6 +6141,21 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/Mayo%20Chiki!/">[JP]迷茫管家与懦弱的我[Mayo Chiki!]</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/17</span>
+            <a class="archive-post-title" href="/Anime/Disney/">关于迪士尼[Disney]</a>
         </li>
     
         
@@ -6471,6 +6508,12 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/16</span>
+            <a class="archive-post-title" href="/Browser/Extension/chrome-extension-downloader/">Chrome 离线扩展下载网站两个</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">05/05</span>
             <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/%E5%A4%A9%E4%B9%8B%E7%81%AB/">[pixiv]推荐作者 - 天之火</a>
         </li>
@@ -6696,6 +6739,12 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span>
+            <a class="archive-post-title" href="/Video/R18/RIO/">[R18]柚木提娜[RIO](柚木ティナ)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/06</span>
             <a class="archive-post-title" href="/Browser/about%EF%BC%9Aconfig/">about:config的一些配置</a>
         </li>
@@ -6717,8 +6766,14 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/01</span>
-            <a class="archive-post-title" href="/Browser/Extension/Image%20Search%20Options/">[扩展]Image Search Options - 右键搜图</a>
+            <span class="archive-post-date">11/26</span>
+            <a class="archive-post-title" href="/Video/R18/SOE-768/">[R18]SOE-768</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span>
+            <a class="archive-post-title" href="/Video/R18/Czech%20Beauties/">[R18]X-Art - Czech Beauties - Caprice, Lisa</a>
         </li>
     
         
@@ -6837,8 +6892,8 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/02</span>
-            <a class="archive-post-title" href="/Code/%E5%BC%80%E6%BA%90/">一张经典图，开源协议比较</a>
+            <span class="archive-post-date">01/13</span>
+            <a class="archive-post-title" href="/Browser/translate%20on%20Firefox/">火狐最值得用的实现翻译功能的脚本</a>
         </li>
     
         
@@ -6874,6 +6929,12 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
             <div class="archive-year"> 2014 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span>
+            <a class="archive-post-title" href="/Video/R18/NNP-017/">[R18]NNP-017 素人連れ込みナンパSEX隠し撮り 9</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
@@ -6931,24 +6992,15 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
                 
                 </ul>
             
-            <div class="archive-year"> 2019 </div>
+            <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span>
-            <a class="archive-post-title" href="/Browser/Extension/chrome-extension-downloader/">Chrome 离线扩展下载网站两个</a>
+            <span class="archive-post-date">12/01</span>
+            <a class="archive-post-title" href="/Browser/Extension/Image%20Search%20Options/">[扩展]Image Search Options - 右键搜图</a>
         </li>
     
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
         
         <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
@@ -6957,14 +7009,14 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/13</span>
-            <a class="archive-post-title" href="/Browser/translate%20on%20Firefox/">火狐最值得用的实现翻译功能的脚本</a>
+            <span class="archive-post-date">01/03</span>
+            <a class="archive-post-title" href="/Browser/Firfox%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BC%96%E8%AF%91%E7%89%88/">第三方编译版火狐推荐</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/03</span>
-            <a class="archive-post-title" href="/Browser/Firfox%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BC%96%E8%AF%91%E7%89%88/">第三方编译版火狐推荐</a>
+            <span class="archive-post-date">01/02</span>
+            <a class="archive-post-title" href="/Code/%E5%BC%80%E6%BA%90/">一张经典图，开源协议比较</a>
         </li>
     
         
@@ -6998,21 +7050,6 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
             <a class="archive-post-title" href="/Comic/%E5%93%87%EF%BC%81/">[Comic][小島あきら]哇/WA!当我们同在一起(わ！)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Video/R18/SOE-768/">[Untitled Post]</a>
         </li>
     
     </div>
