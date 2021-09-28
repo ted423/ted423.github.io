@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,8 +265,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -437,11 +433,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -462,9 +459,11 @@ git 文档https://git-scm.com/docs
 1$ git branch -d &lt;BranchName&gt;
 reset 删除错误提交的commit使用这个的前提条件是没有push,一般不建议push -fgit reset --hard &lt;commit_id&gt; 回退到某一版本。git reset --hard head~1 回退一个版本(数字2自然就是两个版本啦)然后 git push -...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/04/21">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/21</span>
                 </div>
                 <!-- tags -->
@@ -477,7 +476,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -500,6 +499,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         
         
         
+        
             
         
         <article class="index-post">
@@ -511,9 +511,11 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
                 https://exhentai.org/g/1390564/4b9239dc3e/
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/04/18">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/18</span>
                 </div>
                 <!-- tags -->
@@ -535,6 +537,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         
         
         
+        
             
         
         <article class="index-post">
@@ -548,9 +551,11 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
 一些国产浏览器（如果不流氓的话还能接受
 360极速，有了Chrome没有的Bug，明明完整的复现了，结果论坛上人家懒得看，...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/04/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/13</span>
                 </div>
                 <!-- tags -->
@@ -563,7 +568,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -584,6 +589,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         
         
         
+        
             
         
         <article class="index-post">
@@ -596,9 +602,11 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
 Githubhttps://github.com/xuejianxianzun/PixivBatchDownloader
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/04/06">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/06</span>
                 </div>
                 <!-- tags -->
@@ -611,7 +619,7 @@ Githubhttps://github.com/xuejianxianzun/PixivBatchDownloader
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -7105,9 +7113,9 @@ Githubhttps://github.com/xuejianxianzun/PixivBatchDownloader
             Optimization
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture-Photo-Image
+            Picture&Photo&Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Software">
@@ -7151,8 +7159,14 @@ Githubhttps://github.com/xuejianxianzun/PixivBatchDownloader
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -7177,7 +7191,7 @@ Githubhttps://github.com/xuejianxianzun/PixivBatchDownloader
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         
