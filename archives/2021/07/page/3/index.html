@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -453,11 +456,9 @@
                 本博有俩文本编辑器，其实我用过很多，所以就写写最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。
 之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -470,7 +471,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -495,7 +496,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -507,11 +507,9 @@
                 我已入正的一款软件。100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。打个比方
 123456789A720 	꜠ 	꜡ 	Ꜣ 	ꜣ 	Ꜥ 	ꜥ 	Ꜧ 	ꜧ 	Ꜩ 	ꜩ 	Ꜫ 	ꜫ 	Ꜭ 	ꜭ 	Ꜯ 	ꜯA730 	ꜰ 	ꜱ 	Ꜳ 	ꜳ 	Ꜵ 	ꜵ 	Ꜷ 	ꜷ 	Ꜹ 	ꜹ 	Ꜻ 	ꜻ 	Ꜽ 	ꜽ 	Ꜿ 	ꜿA740 	Ꝁ 	ꝁ 	Ꝃ 	ꝃ 	Ꝅ 	ꝅ 	Ꝇ 	ꝇ 	Ꝉ 	ꝉ 	Ꝋ 	ꝋ 	Ꝍ 	ꝍ 	Ꝏ 	ꝏA750 	Ꝑ 	ꝑ 	Ꝓ 	ꝓ 	Ꝕ 	ꝕ 	Ꝗ 	ꝗ 	Ꝙ 	ꝙ 	Ꝛ 	ꝛ 	Ꝝ 	ꝝ 	Ꝟ 	ꝟA760 	Ꝡ 	ꝡ 	Ꝣ 	ꝣ 	Ꝥ 	ꝥ 	Ꝧ 	...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -524,7 +522,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -547,7 +545,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -559,11 +556,9 @@
                 很早以前用的，现在就不清楚了就是暴力破解工具哈。软件也是大眼仔破解的http://www.dayanzai.me/officeps.html
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/05/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -576,7 +571,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -593,7 +588,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -607,11 +601,9 @@ WinRAR是一款强大的压缩文件管理器，它提供了RAR和ZIP文件的�
 WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快压缩速度增加了内存占用。另外，RAR常规解压算法的速度稍有提高，恢复卷的创建和处理可以使用多个CPU核心来获得更高的处理速度。
 更新日志https://www.ra...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -624,7 +616,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -651,7 +643,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         
-        
             
         
         <article class="index-post">
@@ -669,11 +660,9 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
 
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -686,7 +675,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -709,7 +698,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         
-        
             
         
         <article class="index-post">
@@ -721,11 +709,9 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
                 https://github.com/mcmilk/7-Zip-zstd之前某个群吐槽问7z是不是还是VC6编译，别人给的不会覆盖掉原版的7z总之不错。虽然还没详细用到我能推翻之前的结论另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/02">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -738,7 +724,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -763,7 +749,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         
-        
             
         
         <article class="index-post">
@@ -775,11 +760,9 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
                 这玩意我入了正国内系统自带的明显功能不全，小米的或许可以，但是自带广告。华为的有SMB功能，但逻辑堪称傻逼。一加就不说了，网络上的评价是对的。开源那个Amaze就挺无语，支持SMB，但是锁屏会断https://play.google.com/store/apps/details?id=pl.solidexplorer2
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/11/08">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -792,7 +775,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -815,7 +798,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         
-        
             
         
         <article class="index-post">
@@ -829,11 +811,9 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
 这款软件的痛点是还支持cbz。并且支持的相当不错，让我可以舍弃prefect viewer了，界面也更舒服。(后面又把prefect viewer捡回来了，别问我为啥，忘了)
 #官网https://www.mo...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/07/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -846,7 +826,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -873,7 +853,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         
-        
             
         
         <article class="index-post">
@@ -888,11 +867,9 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
 不过感觉比用一个智障强。
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -905,7 +882,7 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -926,7 +903,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         
         
-        
             
         
         <article class="index-post">
@@ -938,11 +914,9 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
                 https://play.google.com/store/apps/details?id=org.connectbot&amp;hl=zh_TW一个SSH客户端选择local就是连到本机的terminal可以用来看IP，看DNS什么的。getprop 可以在安卓下看配置项然后可以通过grep来筛选你要的信息
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -955,7 +929,7 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -7453,9 +7427,9 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             Optimization
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Software">
@@ -7499,14 +7473,8 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -7531,7 +7499,7 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

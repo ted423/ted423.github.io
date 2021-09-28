@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,6 +269,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -448,12 +452,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -468,11 +471,9 @@
                 这玩意我入了正国内系统自带的明显功能不全，小米的或许可以，但是自带广告。华为的有SMB功能，但逻辑堪称傻逼。一加就不说了，网络上的评价是对的。开源那个Amaze就挺无语，支持SMB，但是锁屏会断https://play.google.com/store/apps/details?id=pl.solidexplorer2
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/11/08">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -485,7 +486,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -508,7 +509,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -522,11 +522,9 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
 我给的不是最新的，可以去他博客翻下最新的https://www.luochenzhimu.com/?s=thunder
 【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷1...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/10/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -539,7 +537,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -562,7 +560,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
-        
             
         
         <article class="index-post">
@@ -579,11 +576,9 @@ python.exe -m  get-pip升级pip命令
 To upgrade all local packages; you could use pip-review:
 12$ pip install pip-review$ ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/10/08">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -596,7 +591,7 @@ To upgrade all local packages; you could use pip-review:
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -617,7 +612,6 @@ To upgrade all local packages; you could use pip-review:
         
         
         
-        
             
         
         <article class="index-post">
@@ -631,11 +625,9 @@ chrome应用商店(推荐): https://chrome.google.com/webstore/detail/dbjbempljh
 Edge应用商店(推荐): https://microsoftedge.microsoft.com/addons/detail/odphnbhiddhdpoccbialllejaajemdio
 Firefox应用商店(推荐): https://addons.mozilla.org...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/07/22">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/22</span>
                 </div>
                 <!-- tags -->
@@ -648,7 +640,7 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -673,7 +665,6 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         
         
         
-        
             
         
         <article class="index-post">
@@ -687,11 +678,9 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
 2020-06-26 19:06 没注意projeect转到github了，果然都在逃离sourceforge
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/06/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
                 </div>
                 <!-- tags -->
@@ -704,7 +693,7 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -729,7 +718,6 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         
         
         
-        
             
         
         <article class="index-post">
@@ -741,11 +729,9 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
                 
 ◎译　　名　忍者蝙蝠侠 / ニンジャバットマン◎片　　名　Batman Ninja◎年　　代　2018◎产　　地　日本 / 美国◎类　　别　动作 / 动画◎语　　言　日语 / 英语◎上映日期　2018-04-24(美国) / 2018-06-15(日本)◎IMDb评分  5.6/10 from 16430 users◎IMDb链接  https://www.imdb.com/title/tt7451284◎豆瓣评分　7.0/10 from 14387 users◎豆瓣链接　https://movie.douban.com/subject/27160683/◎片　　长　85分钟◎导　　演...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/06/25">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -769,7 +755,6 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         
         
         
-        
             
         
         <article class="index-post">
@@ -780,13 +765,11 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
             <div class="abstract-content">
                 识别码:    YMDD-177发行日期:    2020-02-07长度:    140 分钟导演:    ひむろっく制作商:    桃太郎映像出版发行商:    若桃使用者评价:     (7.60)类别:    中出单体作品老板娘、女主人白人温泉演员:    メロディー・雛・マークス     
 DMMhttps://www.dmm.co.jp/mono/dvd/-/detail/=/cid=ymdd177/
-magnet:?xt=urn:btih:77238d6e4e71050847be60a87be55b880cdef299&amp;dn=+++%20[HD]%20YMDD-17...
+magnetmagnet:?xt=urn:btih:77238d6e4e71050847be60a87be55b880cdef299&amp;dn=+++%20[HD]%20Y...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/06/12">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/12</span>
                 </div>
                 <!-- tags -->
@@ -810,7 +793,6 @@ magnet:?xt=urn:btih:77238d6e4e71050847be60a87be55b880cdef299&amp;dn=+++%20[HD]%2
         
         
         
-        
             
         
         <article class="index-post">
@@ -825,11 +807,9 @@ Githubhttps://github.com/pmarks-net/ipvfoo
 Chrome Web Storehttps://chrome.google.com/webstore/detail/ecanpcehffngcegjmadlcijfolapggal
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/05/29">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/29</span>
                 </div>
                 <!-- tags -->
@@ -842,7 +822,7 @@ Chrome Web Storehttps://chrome.google.com/webstore/detail/ecanpcehffngcegjmadlci
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -860,7 +840,6 @@ Chrome Web Storehttps://chrome.google.com/webstore/detail/ecanpcehffngcegjmadlci
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -894,11 +873,9 @@ Chrome Web Storehttps://chrome.google.com/webstore/detail/ecanpcehffngcegjmadlci
         
        ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/04/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -911,7 +888,7 @@ Chrome Web Storehttps://chrome.google.com/webstore/detail/ecanpcehffngcegjmadlci
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -940,7 +917,6 @@ Chrome Web Storehttps://chrome.google.com/webstore/detail/ecanpcehffngcegjmadlci
         
         
         
-        
             
         
         <article class="index-post">
@@ -958,11 +934,9 @@ git 文档https://git-scm.com/docs
 1$ git branch -d &lt;BranchName&gt;
 reset 删除错误提交的commit使用这个的前提条件是没有push,一般不建议push -fgit reset --hard &lt;commit_id&gt; 回退到某一版本。git reset --hard head~1 回退一个版本(数字2自然就是两个版本啦)然后 git push -...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/04/21">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/21</span>
                 </div>
                 <!-- tags -->
@@ -975,7 +949,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -1006,7 +980,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1079,25 +1053,9 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
     
     
     
-        <div class="profile-link-item">
-            <a href="/about" class="about-me">
-                
-                ABOUT ME
-            </a>
+        <div class="about-me">
+            <a href="/about">ABOUT ME</a>
         </div>
-    
-    
-        
-        
-                
-                
-        <div class="profile-link-item">
-            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
-                
-                SEARCH
-            </a>
-        </div>
-    
     
 </div>
 
@@ -7572,9 +7530,9 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
             Optimization
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Software">
@@ -7618,14 +7576,8 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -7650,7 +7602,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

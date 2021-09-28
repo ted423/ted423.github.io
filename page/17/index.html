@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,6 +269,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -448,12 +452,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -473,11 +476,9 @@ Onedrive不支持局域网内同步,同步逻辑有缺陷，偶尔会干删一�
 可用
 mega支持创建同名文件(夹)，不利于同步，同步依据文件修改时间，在修改时间不变改变...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/28">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -490,7 +491,7 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -517,7 +518,6 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
         
         
         
-        
             
         
         <article class="index-post">
@@ -530,11 +530,9 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
 magnet:?xt=urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/24">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
                 </div>
                 <!-- tags -->
@@ -554,7 +552,6 @@ magnet:?xt=urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
         
         
         
-        
             
         
         <article class="index-post">
@@ -569,11 +566,9 @@ magnet:?xt=urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
 居中是我们使用css来布局时常遇到的情况。使用css来进行居中时，有时一个属性就能搞定，有时则需要一定的技巧才能兼容到所有浏览器，本文就居中的一些常用方法做个简单的介绍。
 注：本文所讲方法除了特别说明外，都是兼容IE6+、...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
                 </div>
                 <!-- tags -->
@@ -586,7 +581,7 @@ magnet:?xt=urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -606,7 +601,6 @@ magnet:?xt=urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -633,11 +627,9 @@ var refresh = function()
         var s=document.getElementById("toutf-8").value;
         var a=s.split(/%(?![A-Fa-f...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -650,7 +642,7 @@ var refresh = function()
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -673,7 +665,6 @@ var refresh = function()
         
         
         
-        
             
         
         <article class="index-post">
@@ -685,11 +676,9 @@ var refresh = function()
                 我已入正的一款软件。100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。打个比方
 123456789A720 	꜠ 	꜡ 	Ꜣ 	ꜣ 	Ꜥ 	ꜥ 	Ꜧ 	ꜧ 	Ꜩ 	ꜩ 	Ꜫ 	ꜫ 	Ꜭ 	ꜭ 	Ꜯ 	ꜯA730 	ꜰ 	ꜱ 	Ꜳ 	ꜳ 	Ꜵ 	ꜵ 	Ꜷ 	ꜷ 	Ꜹ 	ꜹ 	Ꜻ 	ꜻ 	Ꜽ 	ꜽ 	Ꜿ 	ꜿA740 	Ꝁ 	ꝁ 	Ꝃ 	ꝃ 	Ꝅ 	ꝅ 	Ꝇ 	ꝇ 	Ꝉ 	ꝉ 	Ꝋ 	ꝋ 	Ꝍ 	ꝍ 	Ꝏ 	ꝏA750 	Ꝑ 	ꝑ 	Ꝓ 	ꝓ 	Ꝕ 	ꝕ 	Ꝗ 	ꝗ 	Ꝙ 	ꝙ 	Ꝛ 	ꝛ 	Ꝝ 	ꝝ 	Ꝟ 	ꝟA760 	Ꝡ 	ꝡ 	Ꝣ 	ꝣ 	Ꝥ 	ꝥ 	Ꝧ 	...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -702,7 +691,7 @@ var refresh = function()
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -725,7 +714,6 @@ var refresh = function()
         
         
         
-        
             
         
         <article class="index-post">
@@ -740,11 +728,9 @@ https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
 
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -757,7 +743,7 @@ https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
         
         
         <span class="post-category" data-categories="Video"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Video
             </span>
@@ -784,7 +770,6 @@ https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
         
         
         
-        
             
         
         <article class="index-post">
@@ -796,11 +781,9 @@ https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
                 百合无限好magnet:?xt=urn:btih:F4C1E5877348813A5B8700B33AB5040F133DEB6B&amp;dn=X-Art%20-%20Czech%20Beauties%20-%20Caprice%2C%20Lisa%20%5B1080p%5D.mov
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/15</span>
                 </div>
                 <!-- tags -->
@@ -824,7 +807,6 @@ https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
         
         
         
-        
             
         
         <article class="index-post">
@@ -837,11 +819,9 @@ https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
 #网盘分流https://mega.nz/#!fg80BD7T!AjWaiYGx8ERNJwsWW2zpQ7tAM5B8tnG-OoA5GuHdvrE
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
                 </div>
                 <!-- tags -->
@@ -854,7 +834,7 @@ https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
         
         
         <span class="post-category" data-categories="Video"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Video
             </span>
@@ -881,7 +861,6 @@ https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
         
         
         
-        
             
         
         <article class="index-post">
@@ -901,11 +880,9 @@ EBOD-235 大量顔射オッケー!!（2012年10月13日）
 
 magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/14">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/14</span>
                 </div>
                 <!-- tags -->
@@ -931,7 +908,6 @@ magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
         
         
         
-        
             
         
         <article class="index-post">
@@ -950,11 +926,9 @@ magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
             原作
             BANDAI NAMCO...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -967,7 +941,7 @@ magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -1008,7 +982,7 @@ magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1081,25 +1055,9 @@ magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
     
     
     
-        <div class="profile-link-item">
-            <a href="/about" class="about-me">
-                
-                ABOUT ME
-            </a>
+        <div class="about-me">
+            <a href="/about">ABOUT ME</a>
         </div>
-    
-    
-        
-        
-                
-                
-        <div class="profile-link-item">
-            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
-                
-                SEARCH
-            </a>
-        </div>
-    
     
 </div>
 
@@ -7574,9 +7532,9 @@ magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
             Optimization
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Software">
@@ -7620,14 +7578,8 @@ magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -7652,7 +7604,7 @@ magnet:?xt=urn:btih:E323EFF91E1A9F386ABCB4...
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

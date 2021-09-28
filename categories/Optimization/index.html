@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -458,11 +461,9 @@
 
 2021-08-06本来想放个文章说明下休眠跟睡眠的，但看最开头是知乎，对这种社区似的知识分享，有些人又是冲着流量去的，质量可能还行，但是远不如Stack Overflow这种。比较开心的是看见了微软提供了MVP写的东西，但是……..开篇一堆废话就让我心头一凉，再然...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/18">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -475,7 +476,7 @@
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -493,7 +494,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -508,11 +508,9 @@
                 C:\ProgramData\Microsoft\Search\Data\Applications\Windows\Windows.edb就是索引文件了，通常来说，你索引的文件越多，这玩意会越大。并且你要知道，微软的搜索非常非常的烂。所以用Everything等软件代替吧，然后把控制面板里索引里的除了开始菜单和用户的其他都删了。(这个可以快速搜索文档以及快捷方式 -2021-08-06)
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/12/05">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/05</span>
                 </div>
                 <!-- tags -->
@@ -525,7 +523,7 @@
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -543,7 +541,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -564,11 +561,9 @@
 REG
 1234Windows ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/04/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/26</span>
                 </div>
                 <!-- tags -->
@@ -581,7 +576,7 @@ REG
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -604,7 +599,6 @@ REG
         
         
         
-        
             
         
         <article class="index-post">
@@ -616,11 +610,9 @@ REG
                 Windows 10默认应该不会有Thumbs.db了 -2021-09-22
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/08/06">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/06</span>
                 </div>
                 <!-- tags -->
@@ -633,7 +625,7 @@ REG
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -658,7 +650,6 @@ REG
         
         
         
-        
             
         
         <article class="index-post">
@@ -670,11 +661,9 @@ REG
                 MEGA的下载是先使用HTML5 File System API先把文件丢到本地，然后再生成一个下载框，但是这些文件是不能通过浏览器自带的清理清掉空间。蛋疼的在于你下载了多大的文件，Chrome的配置文件就会增加多大的空间，并且越来越大只能手动找到配置文件夹里的File System(C:\Users\XX\AppData\Local\Google\Chrome\User Data\Default\File System)里手动进行删除
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/07/29">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/07/29</span>
                 </div>
                 <!-- tags -->
@@ -687,7 +676,7 @@ REG
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -710,7 +699,6 @@ REG
         
         
         
-        
             
         
         <article class="index-post">
@@ -725,11 +713,9 @@ REG
 去掉“要使用本机，用户必须输入用户名和密码(E)”前的勾选！点击应用按钮就会立即弹出一个自动登录窗口(AutomaticallyLogOn)。
 现在将您的帐户...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/08/01</span>
                 </div>
                 <!-- tags -->
@@ -742,7 +728,7 @@ REG
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -763,7 +749,6 @@ REG
         
         
         
-        
             
         
         <article class="index-post">
@@ -776,11 +761,9 @@ REG
 目錄右鍵菜單中的聯機購買音樂是Windows Media Player產生的，只要在註冊表中刪除下面幾項就行了。
 123HKEY_CLASSES_ROOT\SystemFileAssociations\Directory.Audio\shellex\ContextMenuHandlersHKEY_CLASSES_ROOT\SystemFileAssociations\Director...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -793,7 +776,7 @@ REG
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -7289,9 +7272,9 @@ REG
             Optimization
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Software">
@@ -7335,14 +7318,8 @@ REG
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -7367,7 +7344,7 @@ REG
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

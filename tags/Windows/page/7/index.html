@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -453,11 +456,9 @@
                 在使用这个命令之前，首先需要了解Windows的活动分区的意思。并了解硬盘GPT格式下esp分区的作用，避免因其他原因导致引导失败。
 1234567891011121314151617181920212223242526272829303132333435363738394041bcdboot &lt;source&gt; [/l &lt;locale&gt;] [/s &lt;volume-letter&gt; [/f &lt;firmware&gt;]] [/v] [/m [&#123;OS Loader ID&#125;]] [/addlast] [/p] [/c]  source...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/08/19">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/19</span>
                 </div>
                 <!-- tags -->
@@ -470,7 +471,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -491,7 +492,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -503,11 +503,9 @@
                 Windows 10默认应该不会有Thumbs.db了 -2021-09-22
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/08/06">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/06</span>
                 </div>
                 <!-- tags -->
@@ -520,7 +518,7 @@
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -545,7 +543,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -557,11 +554,9 @@
                 MEGA的下载是先使用HTML5 File System API先把文件丢到本地，然后再生成一个下载框，但是这些文件是不能通过浏览器自带的清理清掉空间。蛋疼的在于你下载了多大的文件，Chrome的配置文件就会增加多大的空间，并且越来越大只能手动找到配置文件夹里的File System(C:\Users\XX\AppData\Local\Google\Chrome\User Data\Default\File System)里手动进行删除
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/07/29">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/07/29</span>
                 </div>
                 <!-- tags -->
@@ -574,7 +569,7 @@
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -597,7 +592,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -610,11 +604,9 @@
 需要说明的是该配置可能不包括RDP登录。因此远程服务器最好在配置服务器更新那选到自动下载并通知安装。否则还是会自动重启，并且其他配置会出现点击 更新和安全 就自动更新，然后偷偷重启的现象。
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/01/11">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/01/11</span>
                 </div>
                 <!-- tags -->
@@ -627,7 +619,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -654,7 +646,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -667,11 +658,9 @@
 
 现在由于有clash应该没太大问题...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/12/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/12/10</span>
                 </div>
                 <!-- tags -->
@@ -699,7 +688,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -717,11 +705,9 @@
 
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/08/03">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
                 </div>
                 <!-- tags -->
@@ -734,7 +720,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -755,7 +741,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -772,11 +757,9 @@
 如仍有问题，在Outlook里找到联系人名片以及Lync联系人名片删除
 如Outlook里删除不了，可能需要登录网页版的邮件...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/08/03">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
                 </div>
                 <!-- tags -->
@@ -789,7 +772,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -812,7 +795,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -824,11 +806,9 @@
                 简单说我被Everedit给坑了，鬼知道他设置自动关联会去关联.reg！更奇葩的是我不能手动把关联给改回去，因为手动关联regedit，Windows 10他居然会报错！！！我整个人都斯巴达了好么！好吧我是用Pchunter进行的修复（具体在系统杂项里）更奇怪的是注册表里显示的是(下面可以保存为reg使用)
 1234567Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\.reg]@=&quot;regfile&quot;[HKEY_CLASSES_ROOT\.reg\PersistentHandler]@=&quot;&#12...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/09">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/09</span>
                 </div>
                 <!-- tags -->
@@ -841,7 +821,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -861,7 +841,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -877,11 +856,9 @@
 这是那个英文网页的注册表脚本:
 12345678910111213141516Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\ftp]@=&quot;URL:File Tra...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/01</span>
                 </div>
                 <!-- tags -->
@@ -894,7 +871,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -914,7 +891,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -931,11 +907,9 @@
 批处理中一些参数（下面代码只能以批处理的方式执行）pause用来保证批处理运行完后，终端窗口不会被关闭
 12345678910111213@echo offecho 当前盘符：%~d0echo 当前盘符和路径：%~dp0echo 当前批处理全路径：%~f0echo 当前盘符和路径的短文件名格式：%~sdp0echo 当前CMD默认目录：%cd%echo 目录中有空格也可以加入&quot;&quo...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/09/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/20</span>
                 </div>
                 <!-- tags -->
@@ -948,7 +922,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -7448,9 +7422,9 @@
             Optimization
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Software">
@@ -7494,14 +7468,8 @@
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -7526,7 +7494,7 @@
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         
