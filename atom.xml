@@ -362,30 +362,6 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieEx</summary>
   </entry>
   
   <entry>
-    <title>[R18]MDS-513 童貞すてちゃえ 春咲あずみ</title>
-    <link href="http://ted423.github.io/Video/R18/MDS-513/"/>
-    <id>http://ted423.github.io/Video/R18/MDS-513/</id>
-    <published>2021-08-05T13:46:35.897Z</published>
-    <updated>2015-09-24T20:07:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="magnet:?xt=urn:btih:163A22F26435F1557DC3953FDD147C553DFCF5CD">magnet:?xt=urn:btih:163A22F26435F1557DC3953FDD147C553DFCF5CD</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;magnet:?xt=urn:btih:163A22F26435F1557DC3953FDD147C553DFCF5CD&quot;&gt;magnet:?xt=urn:btih:163A22F26435F1557DC3953FDD147C553DFCF5CD&lt;/a&gt;&lt;/</summary>
-      
-    
-    
-    
-    
-    <category term="R18" scheme="http://ted423.github.io/tags/R18/"/>
-    
-    <category term="JP" scheme="http://ted423.github.io/tags/JP/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[R18]SY-118</title>
     <link href="http://ted423.github.io/Video/R18/SY-118/"/>
     <id>http://ted423.github.io/Video/R18/SY-118/</id>
@@ -565,6 +541,34 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieEx</summary>
     <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
     
     <category term="Javascript" scheme="http://ted423.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>傻逼微软 记一次关键日志 Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。</title>
+    <link href="http://ted423.github.io/System/Fuck%20Windows/"/>
+    <id>http://ted423.github.io/System/Fuck%20Windows/</id>
+    <published>2021-08-03T01:55:05.724Z</published>
+    <updated>2021-08-03T02:45:59.034Z</updated>
+    
+    <content type="html"><![CDATA[<p>突然看到关键日志其实把我吓了一跳。<br><code>Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。</code><br>想必是电脑快爆炸了。这可把我吓得不行。<br>然后呢，我的注意力就转移到了这“安全和维护”上。这破玩意到底在哪呢？<br>我宇宙无敌人间第一人性化操作系统Windows才不会告诉你我把他放哪了，少年啊，去寻找吧。</p><p>我找了半天终于在计算机右键属性里找到了这玩意(其实找了两次，第一次找到后气的不行然后关了。结果忘了这东西在哪又找了一次。)<br>然后发现一点都不”关键”，因为我关了UAC。<br>电脑是否需要启用UAC我在这里不再做讨论。毕竟Win10系列是你不开UAC通知，但UAC仍然有部分在那里。以至于管理员权限运行的软件读不到网络硬盘。</p><p>总而言之我就是折腾了半天发现这是个屁大的小事。（可以设置取消安全和维护对UAC的检测）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;突然看到关键日志其实把我吓了一跳。&lt;br&gt;&lt;code&gt;Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。&lt;/code&gt;&lt;br&gt;想必是电脑快爆炸了。这可把我吓得不行。&lt;br&gt;然后呢，我的注</summary>
+      
+    
+    
+    
+    <category term="System" scheme="http://ted423.github.io/categories/System/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
     
   </entry>
   
