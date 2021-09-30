@@ -445,60 +445,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
-                
-                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
-            </a>
-            <div class="abstract-content">
-                带签名的UTF8：
-带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
-无签名的UTF8：
-相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
-那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
-BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/28">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Code/WWW/2unicode/">
                 
                 <span class="abstract-title-text">[Javascript]中文等字符转化为unicode(UTF-16 LE)</span>
@@ -989,6 +935,58 @@ var refresh = function()
         <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">
+                
+                <span class="abstract-title-text">迅雷(thunder)/快车(FlashGet)下载地址转换</span>
+            </a>
+            <div class="abstract-content">
+                原文: http://www.weste.net/2007/11-29/21525122417.html迅雷就在地址前后分别加上“AA”和“ZZ”，然后进行Base64编码
+快车是在地址前后分别加上了“[FLASHGET]”，然后Base64编码，编码后有在地址后加上“&amp;id数字&amp;数字”
+示例:对本页地址进行转换thunder://QUFodHRwczovL3RlZDQyMy5mYXJib3guY29tL3Bvc3QvYmlhbi1jaGVuZy1sZWkvd3d3L3hpYS16YWktZGktemhpLXpodWFuLWh1YW5aWg==
+Flashget://W0...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/08/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
     
 </div>
 
@@ -4545,6 +4543,8 @@ var refresh = function()
         
         
         
+        
+        
     
     
     
@@ -5270,6 +5270,12 @@ var refresh = function()
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/31</span>
+            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/22</span>
             <a class="archive-post-title" href="/Browser/Extension/ImageAssistant/">[扩展]图片助手(ImageAssistant)</a>
         </li>
@@ -5659,21 +5665,6 @@ var refresh = function()
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/etc/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">Ubuntu注意事项</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
         </li>
     
         
