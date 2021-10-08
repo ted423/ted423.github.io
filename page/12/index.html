@@ -460,6 +460,169 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Driver/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 手动安装驱动</span>
+            </a>
+            <div class="abstract-content">
+                症状有时候会遇到明明找到了驱动安装包但是Windows一直找不到驱动。
+原因分析微软会有个找驱动的默认路径，一些驱动安装包会自动改掉它，导致微软找驱动不在正确路径
+操作
+设备管理器里右键问题设备，点击更新驱动，然后选到第二项，将位置选到“C:\Windows\”并确保“包括子文件夹”已勾选。
+如仍不行，可尝试手动安装，需找到正确的驱动，更新时仍然选到第二项，并点击“从计算机的设备驱动程序列表里选择”，这时要点击从磁盘安装。
+但还有种情况就是提供的驱动程序并不匹配，有次我就强行在inf里添加设备ID安装了驱动，虽然成功了并且能使用，但其实个人并不建议这么做。
+
+etc微软自动查找驱动的路径...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/05/02">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/02</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/Apache/">
+                
+                <span class="abstract-title-text">[问题处理]Linux下Apache2无法启动的原因排查</span>
+            </a>
+            <div class="abstract-content">
+                先用journalctl | tail
+看看系统日志，一般来讲都是配置不对导致的apache2ctl configtest则是具体看配置哪里有问题的
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/29">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/29</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Optimization/Disable-MRT/">
+                
+                <span class="abstract-title-text">[优化]让微软不强制提供&#34;恶意软件删除工具&#34;</span>
+            </a>
+            <div class="abstract-content">
+                这个东西呢，偷偷安装，偷偷执行，在我做事的时候跳出来占内存、占CPU，还起不到什么作用。卸载还会自己跑回来，一个exe文件几百M。堪称微软神经病的最佳代表。处理办法如下在注册表中
+1HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft
+新建项MRT,然后在项里新建DWORD DontOfferThroughWUAU,值设为1
+然后powershell里输 
+1wusa /uninstall /kb:890830 /norestart
+看能不能卸掉，卸不掉的话就直接删MRT.exe和MRT-KB890830.exe吧
+REG
+1234Windows ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Optimization"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Optimization
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/Kerberos/">
                 
                 <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
@@ -773,190 +936,6 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Font">Font</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/CAservice/">
-                
-                <span class="abstract-title-text">关于华为EMUI系统自动禁止google相关应用联网问题</span>
-            </a>
-            <div class="abstract-content">
-                原因在于华为CAservice会去检测是否能联通谷歌的东西，否则就会自己禁止连接也只有在VPN一直开的情况下才会OK。其实还是很蛋疼理论Clash能比较好的解决问题 -2021-09-23
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/09/04">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/09/04</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Comic/%E5%A4%A9%E9%99%8D%E5%A6%96%E7%8B%90/">
-                
-                <span class="abstract-title-text">[Comic]天降妖狐(おきつね日和)</span>
-            </a>
-            <div class="abstract-content">
-                在线地址http://manhua.dmzj.com/tianjiangyaohu/作为一个日文维基都没有记录的作品来讲真是杯具啊，不过呢，虽然结局仓促了些，也仍然算是一步剧情不错的作品。
-官网:http://www.fujimishobo.co.jp/sp/201306okitsune/日文介绍:バカでスケベな龍太郎[って俺のことかーっ!?］の前に狐の少女・柊が現れたんだ。願いを叶えてくれると言うから、当然「モッテモテになりたい！」と叫んだね。ところがその対価に俺自身を欲しいってマジすか〜!?作者：泽野明
-来源链接http://pan.baidu.com/s/1kTHp5AZ
-BT
-m...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/09/02">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/09/02</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Comic
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Comic">Comic</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="完结">完结</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Anime/Mayo%20Chiki!/">
-                
-                <span class="abstract-title-text">[JP]迷茫管家与懦弱的我[Mayo Chiki!]</span>
-            </a>
-            <div class="abstract-content">
-                
-    
-        
-            迷茫管家与懦弱的我
-        
-        
-            
-                
-                    
-                
-            
-        
-        
-            原作
-            
-            朝野始
-        
-        
-            导演
-            
-            川口敬一郎
-            
-        
-        
-    ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/08/30">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Anime
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Anime">Anime</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="JP">JP</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="BDrip">BDrip</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FHD">FHD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="1080p">1080p</a>
     
 </div>
 
@@ -2379,7 +2358,35 @@ m...
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4636,7 +4643,7 @@ m...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 241
+        Total : 245
         </div>
         <!-- search  -->
         
@@ -4853,6 +4860,12 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">09/04</span>
             <a class="archive-post-title" href="/Issue/CAservice/">关于华为EMUI系统自动禁止google相关应用联网问题</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/11</span>
+            <a class="archive-post-title" href="/Issue/windows%2010%20update/">Windows 10 自动update自动重启的解决办法</a>
         </li>
     
         
@@ -5269,7 +5282,7 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/Party%20is%20over/">[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</a>
+            <a class="archive-post-title" href="/Video/AOA%20-%20Miniskirt/">[性感MV]AOA - Miniskirt</a>
         </li>
     
         
@@ -5286,53 +5299,8 @@ m...
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/NFS%20Squash/">NFS squash特性相关</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/CentOS/">CentOS踩坑实录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Picture/">[软件推荐]图片类相关软件</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">[优化]Windows 关闭休眠功能</a>
         </li>
     
         
@@ -5344,12 +5312,6 @@ m...
             <div class="archive-year"> 2019 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/19</span>
-            <a class="archive-post-title" href="/Issue/%E5%85%B3%E9%97%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A/">关闭打开文件的安全警告 不提示 这些文件可能对你的计算机有害</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/10</span>
@@ -5367,35 +5329,8 @@ m...
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/05</span>
-            <a class="archive-post-title" href="/Optimization/Windows.edb/">[优化]清理Windows.edb(搜索索引文件)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">05/09</span>
             <a class="archive-post-title" href="/Issue/wufuc/">wufuc - 禁掉Unsupported Hardware的弹窗</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Issue/%E5%85%89%E9%A9%B1%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">由于其配置信息不完整或已损坏，Windows 无法启动该设备</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2017 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/11</span>
-            <a class="archive-post-title" href="/Issue/windows%2010%20update/">Windows 10 自动update自动重启的解决办法</a>
         </li>
     
         
@@ -5434,9 +5369,132 @@ m...
                 
                 </ul>
             
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/Party%20is%20over/">[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/31</span>
+            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/CentOS/">CentOS踩坑实录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Picture/">[软件推荐]图片类相关软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Picture&Photo&Image/%E5%8F%AA%E6%98%AF%E7%AE%80%E8%A8%80/">[COS]只是简言</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">[优化]Windows 关闭休眠功能</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/26</span>
+            <a class="archive-post-title" href="/Video/%E5%85%B1%E5%90%8C%E5%AE%B6%E5%9C%92/">[Youtube]粵港澳大灣區主題曲 共同家園</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/19</span>
+            <a class="archive-post-title" href="/Issue/%E5%85%B3%E9%97%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A/">关闭打开文件的安全警告 不提示 这些文件可能对你的计算机有害</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/05</span>
+            <a class="archive-post-title" href="/Optimization/Windows.edb/">[优化]清理Windows.edb(搜索索引文件)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/Software/tools/">[软件推荐]有用的小工具们</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/26</span>
+            <a class="archive-post-title" href="/Optimization/Disable-MRT/">[优化]让微软不强制提供"恶意软件删除工具"</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/Issue/%E5%85%89%E9%A9%B1%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">由于其配置信息不完整或已损坏，Windows 无法启动该设备</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
@@ -5516,75 +5574,6 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/AOA%20-%20Miniskirt/">[性感MV]AOA - Miniskirt</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/31</span>
-            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Picture&Photo&Image/%E5%8F%AA%E6%98%AF%E7%AE%80%E8%A8%80/">[COS]只是简言</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/26</span>
-            <a class="archive-post-title" href="/Video/%E5%85%B1%E5%90%8C%E5%AE%B6%E5%9C%92/">[Youtube]粵港澳大灣區主題曲 共同家園</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2018 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/16</span>
-            <a class="archive-post-title" href="/Software/tools/">[软件推荐]有用的小工具们</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/26</span>
-            <a class="archive-post-title" href="/Optimization/Disable-MRT/">[优化]让微软不强制提供"恶意软件删除工具"</a>
         </li>
     
         
@@ -5944,6 +5933,72 @@ m...
                 
                 </ul>
             
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/24</span>
+            <a class="archive-post-title" href="/Code/Git/Git%20must%20be%20installed%20and%20in%20your%20PATH!/">[问题处理]MAC brew 之 Git must be installed and in your PATH!</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2017 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/10</span>
+            <a class="archive-post-title" href="/Code/Git/conflict/">[Git]conflicts 处理</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2015 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/Code/Git/Github%20Commit%20failed/">[Git]处理Github的Commit failed:Failed to create a new commit</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/Code/Git/Github/">个人Github</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Code/Git/git%20proxy/">[Git]设置和取消代理</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
             
@@ -5984,6 +6039,18 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span>
             <a class="archive-post-title" href="/Browser/Extension/ImageAssistant/">[扩展]图片助手(ImageAssistant)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Advanced%20Office%20Password%20Recovery/">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/Everedit/">[文本编辑器]Everedit - 这才是真正的国产良心</a>
         </li>
     
         
@@ -6068,6 +6135,12 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">网页符号转义</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
         </li>
     
         
@@ -6249,12 +6322,6 @@ m...
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">03/10</span>
-            <a class="archive-post-title" href="/Code/Git/conflict/">[Git]conflicts 处理</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">02/07</span>
             <a class="archive-post-title" href="/Comic/R18/%E6%AD%A6%E7%94%B0%E5%BC%98%E5%85%89/">[Hcomic] [武田弘光]シスターブリーダー + とらのあな限定特典[243P_中文_黑白]</a>
         </li>
@@ -6323,33 +6390,6 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
             <a class="archive-post-title" href="/Code/Terminal/System%E6%9D%83%E9%99%90/">[Terminal]获取system权限</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Code/Git/Github%20Commit%20failed/">[Git]处理Github的Commit failed:Failed to create a new commit</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Code/Git/Github/">个人Github</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Code/Git/git%20proxy/">[Git]设置和取消代理</a>
         </li>
     
         
@@ -6481,6 +6521,12 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Anime/Ralph/">[Disney]无敌破坏王[Wreck-It Ralph] 2012&无敌破坏王2：大闹互联网[Ralph Breaks the Internet] 2018</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Tangled/">[Disney]魔发奇缘[Tangled]</a>
         </li>
     
@@ -6517,31 +6563,7 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Advanced%20Office%20Password%20Recovery/">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/Everedit/">[文本编辑器]Everedit - 这才是真正的国产良心</a>
         </li>
     
         
@@ -6558,26 +6580,8 @@ m...
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/12</span>
-            <a class="archive-post-title" href="/Comic/R18/Michiking/">あんみつよもぎ亭 (みちきんぐ)_Michiking 系列</a>
+            <span class="archive-post-date">06/12</span>
+            <a class="archive-post-title" href="/Video/R18/YMDD-177/">[R18]YMDD-177</a>
         </li>
     
         
@@ -6593,6 +6597,12 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">11/06</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/23</span>
+            <a class="archive-post-title" href="/Video/R18/%E7%9B%B8%E6%B3%BD%E5%8D%97/">[R18]相泽南(相沢みなみ)</a>
         </li>
     
         
@@ -6658,13 +6668,37 @@ m...
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Anime/Ralph/">[Disney]无敌破坏王[Wreck-It Ralph] 2012&无敌破坏王2：大闹互联网[Ralph Breaks the Internet] 2018</a>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/12</span>
+            <a class="archive-post-title" href="/Comic/R18/Michiking/">あんみつよもぎ亭 (みちきんぐ)_Michiking 系列</a>
         </li>
     
         
@@ -6678,8 +6712,14 @@ m...
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/23</span>
-            <a class="archive-post-title" href="/Video/R18/%E7%9B%B8%E6%B3%BD%E5%8D%97/">[R18]相泽南(相沢みなみ)</a>
+            <span class="archive-post-date">09/02</span>
+            <a class="archive-post-title" href="/Video/Stellar%20-%20Marionette/">[Untitled Post]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span>
+            <a class="archive-post-title" href="/Video/rip/">压制组相关</a>
         </li>
     
         
@@ -6704,12 +6744,6 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">06/10</span>
             <a class="archive-post-title" href="/Comic/R18/%E4%B8%B8%E5%92%8C%E5%A4%AA%E9%83%8E/">[Hcomic]丸和太郎</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span>
-            <a class="archive-post-title" href="/Code/Git/Git%20must%20be%20installed%20and%20in%20your%20PATH!/">[问题处理]MAC brew 之 Git must be installed and in your PATH!</a>
         </li>
     
         
@@ -6769,13 +6803,13 @@ m...
                 
                 </ul>
             
-            <div class="archive-year"> 2020 </div>
+            <div class="archive-year"> 2019 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/12</span>
-            <a class="archive-post-title" href="/Video/R18/YMDD-177/">[R18]YMDD-177</a>
+            <span class="archive-post-date">05/17</span>
+            <a class="archive-post-title" href="/Video/%E4%BB%93%E7%A7%91%E5%8A%A0%E5%A5%88/">[Beach.Angels][仓科加奈 Kurashina Kana][FHD]</a>
         </li>
     
         
@@ -6802,6 +6836,12 @@ m...
             <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/22</span>
+            <a class="archive-post-title" href="/Video/%E5%88%9D%E9%9F%B3%E6%BC%94%E5%94%B1%E4%BC%9A/">初音演唱会[Hatsune Miku Live Party]专辑</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">11/15</span>
@@ -7545,6 +7585,16 @@ m...
             <span class="sidebar-tag-name" data-tags="小说">
                 <span class="iconfont-archer">&#xe606;</span>
                 小说
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="1080i">
+                <span class="iconfont-archer">&#xe606;</span>
+                1080i
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="初音ミク(Hatsune Miku)">
+                <span class="iconfont-archer">&#xe606;</span>
+                初音ミク(Hatsune Miku)
             </span>
         
     </div>
