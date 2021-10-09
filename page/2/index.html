@@ -460,6 +460,60 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/">
+                
+                <span class="abstract-title-text">[Javascript]获取文本节点</span>
+            </a>
+            <div class="abstract-content">
+                主要经常遇见某元素下面是元素加文本节点的模式，需要对文本节点操作就很痛苦，因为Selector没法直接选到文本节点上，而前面的元素可能又包含干扰项总之如下
+1$(&quot;Selector&quot;)[0].nextSibling
+
+跑个题https://webdesigncss.pixnet.net/blog/post/223197231-如何用原生js取得siblings这篇文章似乎也很有用
+其实如果最早不去搜什么文本节点，直接搜Sibling就好了
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/08/15">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/python-win/">
                 
                 <span class="abstract-title-text">[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</span>
@@ -555,48 +609,6 @@
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/svn/">
-                
-                <span class="abstract-title-text">[问题处理]SVN踩得几个坑</span>
-            </a>
-            <div class="abstract-content">
-                The server sent a truncated HTTP response bodyhttps://www.jianshu.com/p/ad53304dbdbf印象里这篇文章似乎没啥用，后面是要改apache的设置。
-备份大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果
-
-SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。
-svnadmin dump 出来的文件比服务器上的repo还要大。
-svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，所以记得一...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/06">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/29</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
     
 </div>
 
