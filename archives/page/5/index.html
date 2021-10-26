@@ -754,6 +754,64 @@ BT做种的越来越少，下完就跑的越来越多，PT大家都在抱怨抢�
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/fstab/">
+                
+                <span class="abstract-title-text">记一次很折腾的fstab mount iso</span>
+            </a>
+            <div class="abstract-content">
+                先放结果 
+1/share/1.iso /mnt/Disc1 udf defaults,ro,loop 0 0
+
+问题症结在这破iso不是一个标准iso
+12file 1.iso1.iso: data
+
+mount直接是可以Mount，但是到了fstab，就开始emmm……….
+报错wrong fs type, bad option, bad superblock网上查就是挂载格式问题然后试了各种类型都不对，直到找到这个https://www.linuxidc.com/Linux/2013-10/91264.htm
+总之就是先挂载，然后df -T看格式
+123/dev/loop9    ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2020/08/16">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/16</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Browser/Extension/ImageAssistant/">
                 
                 <span class="abstract-title-text">[扩展]图片助手(ImageAssistant)</span>
@@ -892,67 +950,10 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/4K/">
-                
-                <span class="abstract-title-text">youtube专用下载器 - 4K Video Downloader &amp; Instagram专用下载器 - 4K Stogram</span>
-            </a>
-            <div class="abstract-content">
-                目前遇到了Stogram不激活没法全下下来的问题#4K Video Downloader
-
-https://www.4kdownload.com/zh-cn/
-
-#4K Stogram 
-
-https://www.4kdownload.com/zh-tw/products/product-stogram
-
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/07/13">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/page/4/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/page/6/">6</a><a class="page-number" href="/archives/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/26/">26</a><a class="extend next" rel="next" href="/archives/page/6/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/page/4/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/page/6/">6</a><a class="page-number" href="/archives/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/27/">27</a><a class="extend next" rel="next" href="/archives/page/6/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2357,7 +2358,33 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4408,7 +4435,7 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 260
+        Total : 262
         </div>
         <!-- search  -->
         
@@ -6849,6 +6876,12 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span>
+            <a class="archive-post-title" href="/Issue/fstab/">记一次很折腾的fstab mount iso</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/11</span>
             <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
         </li>
@@ -6914,6 +6947,12 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         <li class="archive-post-item">
             <span class="archive-post-date">06/10</span>
             <a class="archive-post-title" href="/Comic/R18/%E4%B8%B8%E5%92%8C%E5%A4%AA%E9%83%8E/">[Hcomic]丸和太郎</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/02</span>
+            <a class="archive-post-title" href="/Document/67%E4%BB%A3U%E5%BC%BA%E8%A3%85%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">6、7代U装Windows 7强装显卡驱动</a>
         </li>
     
         

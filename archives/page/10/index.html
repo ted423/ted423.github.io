@@ -445,6 +445,60 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Kerberos/">
+                
+                <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
+            </a>
+            <div class="abstract-content">
+                参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
+原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
+可以使用如下注册表
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/TLS1.2/">
                 
                 <span class="abstract-title-text">[问题处理]农业银行证书导致Internet Explorer的TLS 1.2自动取消勾选从而导致Windows Store无法打开</span>
@@ -951,65 +1005,10 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/CSS-middle/">
-                
-                <span class="abstract-title-text">[转]CSS布局奇淫技巧之--各种居中</span>
-            </a>
-            <div class="abstract-content">
-                转这篇文章就是我发现这段代码有效，并且我居然不知道为什么有用。
-1234567.demo &#123;    position:fixed;    top: 50%;    left: 50%;    transform: translate(-50%, -50%);&#125;
-原文http://www.cnblogs.com/2050/p/3392803.html
-居中是我们使用css来布局时常遇到的情况。使用css来进行居中时，有时一个属性就能搞定，有时则需要一定的技巧才能兼容到所有浏览器，本文就居中的一些常用方法做个简单的介绍。
-注：本文所讲方法除了特别说明外，都是兼容IE6+、...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CSS">CSS</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/page/9/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><a class="page-number" href="/archives/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/archives/page/11/">11</a><a class="page-number" href="/archives/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/26/">26</a><a class="extend next" rel="next" href="/archives/page/11/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/page/9/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/8/">8</a><a class="page-number" href="/archives/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/archives/page/11/">11</a><a class="page-number" href="/archives/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/27/">27</a><a class="extend next" rel="next" href="/archives/page/11/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2414,7 +2413,33 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4465,7 +4490,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 260
+        Total : 262
         </div>
         <!-- search  -->
         
@@ -6906,6 +6931,12 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span>
+            <a class="archive-post-title" href="/Issue/fstab/">记一次很折腾的fstab mount iso</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/11</span>
             <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
         </li>
@@ -6971,6 +7002,12 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         <li class="archive-post-item">
             <span class="archive-post-date">06/10</span>
             <a class="archive-post-title" href="/Comic/R18/%E4%B8%B8%E5%92%8C%E5%A4%AA%E9%83%8E/">[Hcomic]丸和太郎</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/02</span>
+            <a class="archive-post-title" href="/Document/67%E4%BB%A3U%E5%BC%BA%E8%A3%85%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">6、7代U装Windows 7强装显卡驱动</a>
         </li>
     
         
