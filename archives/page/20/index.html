@@ -445,6 +445,64 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Optimization/Disable-MRT/">
+                
+                <span class="abstract-title-text">[优化]让微软不强制提供&#34;恶意软件删除工具&#34;</span>
+            </a>
+            <div class="abstract-content">
+                这个东西呢，偷偷安装，偷偷执行，在我做事的时候跳出来占内存、占CPU，还起不到什么作用。卸载还会自己跑回来，一个exe文件几百M。堪称微软神经病的最佳代表。处理办法如下在注册表中
+1HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft
+新建项MRT,然后在项里新建DWORD DontOfferThroughWUAU,值设为1
+然后powershell里输 
+1wusa /uninstall /kb:890830 /norestart
+看能不能卸掉，卸不掉的话就直接删MRT.exe和MRT-KB890830.exe吧
+REG
+1234Windows ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Optimization"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Optimization
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/magnet/">
                 
                 <span class="abstract-title-text">[资料]特殊的磁力链(magnet)</span>
@@ -874,60 +932,6 @@ m...
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Optimization/Thumbs.db/">
-                
-                <span class="abstract-title-text">[优化]通过组策略使系统不会自动生成Thumbs.db</span>
-            </a>
-            <div class="abstract-content">
-                Windows 10默认应该不会有Thumbs.db了 -2021-09-22
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/08/06">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/06</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Optimization
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="组策略(gpedit.msc)">组策略(gpedit.msc)</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
     
 </div>
 
@@ -2434,7 +2438,22 @@ m...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4737,7 +4756,7 @@ m...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 278
+        Total : 279
         </div>
         <!-- search  -->
         
@@ -7324,6 +7343,12 @@ m...
         <li class="archive-post-item">
             <span class="archive-post-date">04/29</span>
             <a class="archive-post-title" href="/Document/apt-source/">[资料]debian 更改软件源</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/28</span>
+            <a class="archive-post-title" href="/Software/Hardware/Disk%20manager/">硬盘管理工具</a>
         </li>
     
         
