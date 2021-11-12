@@ -445,63 +445,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
-                
-                <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
-            </a>
-            <div class="abstract-content">
-                不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动
-Widnows 7改AHCI找到下面的注册表子项：
-1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci
-在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态
-改IDE是找到
-1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide
-...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/01/14">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Issue/KB3093266/">
                 
                 <span class="abstract-title-text">[问题处理]KB3093266 错误码:0x80004005</span>
@@ -997,6 +940,60 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/2unicode/">
+                
+                <span class="abstract-title-text">[Javascript]中文等字符转化为unicode(UTF-16 LE)</span>
+            </a>
+            <div class="abstract-content">
+                嘛，挺不错的。原文:http://blog.csdn.net/geovindu/article/details/9119725
+利用的javascript的 charCodeAthttp://www.w3school.com.cn/jsref/jsref_charCodeAt.asp相关函数还有unescape() 以及escape()网页上的unicode码常见的形式除了”\uXXXX”还有”&#xXXXX;”,其中“&#xXXXX;”是16进制，“&amp;#XXXX”为10进制Java String EncoderJavaScript String EncoderDecoder
+
+...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/01/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
     
 </div>
 
@@ -5270,6 +5267,8 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
+        
+        
     
     
     
@@ -5466,12 +5465,6 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">[资料]无签名UTF8和带签名UTF8格式</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Maintenance/PowerTool/">[Untitled Post]</a>
         </li>
     
         
@@ -5828,6 +5821,12 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
             <div class="archive-year"> 2016 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/30</span>
+            <a class="archive-post-title" href="/Software/Maintenance/PowerTool/">[ARK工具]PowerTool</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/14</span>

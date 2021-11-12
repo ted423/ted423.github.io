@@ -460,52 +460,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Software/Document&Texteditor/Advanced%20Office%20Password%20Recovery/">
-                
-                <span class="abstract-title-text">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</span>
-            </a>
-            <div class="abstract-content">
-                很早以前用的，现在就不清楚了就是暴力破解工具哈。软件也是大眼仔破解的http://www.dayanzai.me/officeps.html
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/05/15">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Software/Fastcopy/">
                 
                 <span class="abstract-title-text">Fastcopy</span>
@@ -967,6 +921,64 @@ VictoriaVictoria 是一款继MHDD...
         <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Maintenance">Maintenance</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Optimization/Disable-MRT/">
+                
+                <span class="abstract-title-text">[优化]让微软不强制提供&#34;恶意软件删除工具&#34;</span>
+            </a>
+            <div class="abstract-content">
+                这个东西呢，偷偷安装，偷偷执行，在我做事的时候跳出来占内存、占CPU，还起不到什么作用。卸载还会自己跑回来，一个exe文件几百M。堪称微软神经病的最佳代表。处理办法如下在注册表中
+1HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft
+新建项MRT,然后在项里新建DWORD DontOfferThroughWUAU,值设为1
+然后powershell里输 
+1wusa /uninstall /kb:890830 /norestart
+看能不能卸掉，卸不掉的话就直接删MRT.exe和MRT-KB890830.exe吧
+REG
+1234Windows ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Optimization"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Optimization
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
     
 </div>
 
@@ -5341,6 +5353,8 @@ VictoriaVictoria 是一款继MHDD...
         
         
         
+        
+        
     
     
     
@@ -5537,12 +5551,6 @@ VictoriaVictoria 是一款继MHDD...
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">[资料]无签名UTF8和带签名UTF8格式</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Maintenance/PowerTool/">[Untitled Post]</a>
         </li>
     
         
@@ -5899,6 +5907,12 @@ VictoriaVictoria 是一款继MHDD...
             <div class="archive-year"> 2016 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/30</span>
+            <a class="archive-post-title" href="/Software/Maintenance/PowerTool/">[ARK工具]PowerTool</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/14</span>
