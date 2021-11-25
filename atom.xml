@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-08-17T10:40:41.601Z</updated>
+  <updated>2021-11-25T08:09:41.485Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cutree相关研究</title>
+    <link href="http://ted423.github.io/Document/cutree/"/>
+    <id>http://ted423.github.io/Document/cutree/</id>
+    <published>2021-11-25T08:09:00.000Z</published>
+    <updated>2021-11-25T08:09:41.485Z</updated>
+    
+    <content type="html"><![CDATA[<p>source<br>no-cutree crf 21  码率 4 214 kb/s<br>cutree    crf 19  码率 4 725 kb/s<br>cutree    crf 21  码率 2 903 kb/s<br> <a href="https://s3.pterclub.com:2096/image/vPb7zF"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.vpy---11586-1.th.png" alt="Stalingrad-2013-BluRay.vpy---11586-1.th.png"></a><br> <a href="https://s3.pterclub.com:2096/image/vPbrbK"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.mkv_20211124_093413.685.th.png" alt="Stalingrad-2013-BluRay.mkv_20211124_093413.685.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPbe3Z"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093610.586.th.png" alt="Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093610.586.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPbE6z"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree.mkv_20211124_093511.052.th.png" alt="Stalingrad-2013-BluRay_cutree.mkv_20211124_093511.052.th.png"></a></p><hr><p><a href="https://s3.pterclub.com:2096/image/vPbu6G"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.vpy---19973-1.th.png" alt="Stalingrad-2013-BluRay.vpy---19973-1.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPbn77"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.mkv_20211124_093432.459.th.png" alt="Stalingrad-2013-BluRay.mkv_20211124_093432.459.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPbIND"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093623.838.th.png" alt="Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093623.838.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPbOD5"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree.mkv_20211124_093525.268.th.png" alt="Stalingrad-2013-BluRay_cutree.mkv_20211124_093525.268.th.png"></a></p><hr><p>这个没放source<br><a href="https://s3.pterclub.com:2096/image/vPwPPt"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.mkv_20211124_093354.178.th.png" alt="Stalingrad-2013-BluRay.mkv_20211124_093354.178.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPwvbE"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093555.295.th.png" alt="Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093555.295.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPwAW4"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree.mkv_20211124_093458.739.th.png" alt="Stalingrad-2013-BluRay_cutree.mkv_20211124_093458.739.th.png"></a></p><hr><p>cutree crf 18.5<br>no-cutree crf 20.5 码率 4875 kb/s<br><a href="https://s3.pterclub.com:2096/image/vPnqYD"><img src="https://img.pterclub.com/images/2021/11/25/Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_153429.860.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_153429.860.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPnsZ5"><img src="https://img.pterclub.com/images/2021/11/25/Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_153534.319.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_153534.319.th.png"></a></p><p><a href="https://s3.pterclub.com:2096/image/vPnMqG"><img src="https://img.pterclub.com/images/2021/11/25/Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_153449.104.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_153449.104.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPn9F7"><img src="https://img.pterclub.com/images/2021/11/25/Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_153510.604.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_153510.604.th.png"></a></p><p>这次压制，前面场景no-cutree给的码率比较大，但是后面码率被 no-cutree反超<br>目前的结论是静态场景，cutree大幅占优，动态场景，no-cutree会有些优势<br>两者压制时间差不了太多<br>最后被ted423  编辑于&lt; 1</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;source&lt;br&gt;no-cutree crf 21  码率 4 214 kb/s&lt;br&gt;cutree    crf 19  码率 4 725 kb/s&lt;br&gt;cutree    crf 21  码率 2 903 kb/s&lt;br&gt; &lt;a href=&quot;https://s3.p</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="encode" scheme="http://ted423.github.io/tags/encode/"/>
+    
+  </entry>
   
   <entry>
     <title>关于迪士尼[Disney]</title>
@@ -447,9 +473,9 @@
     <link href="http://ted423.github.io/Issue/svn/"/>
     <id>http://ted423.github.io/Issue/svn/</id>
     <published>2021-07-29T02:03:43.287Z</published>
-    <updated>2021-10-22T01:38:26.467Z</updated>
+    <updated>2021-11-22T07:09:30.705Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="The-server-sent-a-truncated-HTTP-response-body"><a href="#The-server-sent-a-truncated-HTTP-response-body" class="headerlink" title="The server sent a truncated HTTP response body"></a>The server sent a truncated HTTP response body</h1><p><a href="https://www.jianshu.com/p/ad53304dbdbf">https://www.jianshu.com/p/ad53304dbdbf</a><br>印象里这篇文章似乎没啥用，后面是要改apache的设置。</p><h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果</p><ol><li>SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。</li><li>svnadmin dump 出来的文件比服务器上的repo还要大。</li><li>svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，<strong>所以记得一定要开log</strong></li><li>svnadmin hotcopy卡住，网上看跟文件系统有关，大概我用的NTFS</li></ol><h1 id="验证相关"><a href="#验证相关" class="headerlink" title="验证相关"></a>验证相关</h1><p><del>1.8 新增了一个设置，默认关了权限继承</del><br>应该说最新的跟1.6不一样，[/]给的权限无法继承，原因不明</p><h1 id="恢复相关"><a href="#恢复相关" class="headerlink" title="恢复相关"></a>恢复相关</h1><p>硬盘炸了，原来项目备份时报错”serialized hash missing terminator”<br>导致项目备份数据不对，恢复后无法使用。期间报错”打开文件系统“db”的BDB环境句柄时出错”(Berkeley DB error for filesystem DB_CONFIG)，”svn E160004 current file”(这个是恢复不了我瞎改导致的，实际文件正常的话recover会自动修正current,手动修改没意义，对不上就会报错)。”svn E200002 malformed representation for node-revision”<br>经确认是有报错之后，备份时丢失了format以及db文件夹下的一些数据<br>正常项目的db文件夹下，revs和revprops都会多套个叫0的文件夹(0-999放到0，1000-1999放到1这样)<br>revs里最大的数字为最终版本号。(不过这个不重要)<br>主要db文件夹下会需要fomart为(我这里是)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">layout sharded 1000</span><br></pre></td></tr></table></figure><p>而报错导致的备份的fomart都是2<br>还需要一个”min-unpacked-rev”(这个从正常项目拷一个塞进去就行)<br>然后<code>svnadmin recover</code>和<code>svnadmin verify</code>就行，但如果期间版本有问题，那就是另外一个问题了</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="The-server-sent-a-truncated-HTTP-response-body"><a href="#The-server-sent-a-truncated-HTTP-response-body" class="headerlink" title="The server sent a truncated HTTP response body"></a>The server sent a truncated HTTP response body</h1><p><a href="https://www.jianshu.com/p/ad53304dbdbf">https://www.jianshu.com/p/ad53304dbdbf</a><br>印象里这篇文章似乎没啥用，后面是要改apache的设置。</p><h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>大部分文章都强调不能cp和rsync。<del>但结果来说，rsync可能会成为最终结果</del></p><ol><li>SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。</li><li>svnadmin dump 出来的文件比服务器上的repo还要大。</li><li>svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，<strong>所以记得一定要开log</strong></li><li>svnadmin hotcopy卡住，网上看跟文件系统有关，大概我用的NTFS(NTFS ,samba都不行，只能nfs，samba不行的原因在于某文件创建后会卡住无法删除，改用nfs挂载同目录后正常)</li></ol><h1 id="验证相关"><a href="#验证相关" class="headerlink" title="验证相关"></a>验证相关</h1><p><del>1.8 新增了一个设置，默认关了权限继承</del><br>应该说最新的跟1.6不一样，[/]给的权限无法继承，原因不明</p><h1 id="恢复相关"><a href="#恢复相关" class="headerlink" title="恢复相关"></a>恢复相关</h1><p>硬盘炸了，原来项目备份时报错”serialized hash missing terminator”<br>导致项目备份数据不对，恢复后无法使用。期间报错”打开文件系统“db”的BDB环境句柄时出错”(Berkeley DB error for filesystem DB_CONFIG)，”svn E160004 current file”(这个是恢复不了我瞎改导致的，实际文件正常的话recover会自动修正current,手动修改没意义，对不上就会报错)。”svn E200002 malformed representation for node-revision”<br>经确认是有报错之后，备份时丢失了format以及db文件夹下的一些数据<br>正常项目的db文件夹下，revs和revprops都会多套个叫0的文件夹(0-999放到0，1000-1999放到1这样)<br>revs里最大的数字为最终版本号。(不过这个不重要)<br>主要db文件夹下会需要fomart为(我这里是)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">layout sharded 1000</span><br></pre></td></tr></table></figure><p>而报错导致的备份的fomart都是2<br>还需要一个”min-unpacked-rev”(这个从正常项目拷一个塞进去就行)<br>然后<code>svnadmin recover</code>和<code>svnadmin verify</code>就行，但如果期间版本有问题，那就是另外一个问题了</p>]]></content>
     
     
       
@@ -543,34 +569,6 @@
     <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
     
     <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</title>
-    <link href="http://ted423.github.io/Issue/samba/"/>
-    <id>http://ted423.github.io/Issue/samba/</id>
-    <published>2021-07-19T06:19:34.148Z</published>
-    <updated>2021-07-18T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>其实是个小问题，我很快就解决了。<del>但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯</del><br>Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)<br><img src="https://files.catbox.moe/xmdnnq.png" alt="Windows 客户端无法正常登录 Linux samba服务器"></p><p>理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。</p><p>说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)<br>samba systemctl status log有这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Jul 19 14:16:07 pve smbd[14765]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14766]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14767]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14768]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14769]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:09 pve smbd[14803]: pam_unix(samba:session): session opened for user XX(uid=1000) by (uid=0)</span><br><span class="line">Jul 19 14:16:24 pve smbd[14803]: pam_unix(samba:session): session closed for user XX</span><br><span class="line">Jul 19 14:16:52 pve smbd[15315]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:53 pve smbd[15322]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:54 pve smbd[15329]: pam_unix(samba:session): session closed for user nobody</span><br></pre></td></tr></table></figure><p>现象就是Windows Client访问不会弹框要你填用户名密码，直接报错，必须去凭据管理器里添加了账号密码才能访问。<br>相反Linux Client会正常弹框.不过Linux弹框还会问你是否匿名访问。<br>很可能Windows就直接匿名访问但是被拒。但其实有些问题，大多数时候Win访问SMB是直接使用当前账号密码作为凭证，如不成功会提示你再输入用户密码。<br>或者可能跟SMBv2 v3有关？<br>不得而知</p><p>BTW，samba+NFS 无身份验证可能需要在samba里设777，不然会发生很蛋疼的问题。<br>例如其他NFS客户端无法访问修改samba里创建的文件。</p><hr><p>似乎破案了，Windows 7以及Server 2016会正常弹出验证框，其他有几台Win 10是提示不安全的匿名被阻止(这个是组策略可以解决)。<br><del>所以很可能是出问题的机子装有或曾经装有NFS Client(一台曾装有访问过但是后面停了NFS Client出问题，但因为是NFS，不曾保留账号密码才是，一台现装但从没访问过有问题)</del><br>另Samba也支持同名帐户同密码可以直接访问(如上面所说，Win访问SMB是直接使用当前账号密码作为凭证)</p><hr><p>行吧，我傻逼了，提示不安全的匿名被阻止的机子，explorer直接访问就是直接报错。<br>所以这个应该被归类为 Windows 10 Bug 系列。以后运行东西请优先通过，”运行”否则你可能无法收到正确的报错提示。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;其实是个小问题，我很快就解决了。&lt;del&gt;但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯&lt;/del&gt;&lt;br&gt;Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
     
   </entry>
   
