@@ -445,6 +445,172 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/cmd/">
+                
+                <span class="abstract-title-text">[Terminal]常用CMD&amp;批处理命令</span>
+            </a>
+            <div class="abstract-content">
+                微软官方资料https://technet.microsoft.com/en-us/library/cc754340(v=ws.11).aspx
+大部分命令可以通过后面+” /?”来查看使用方法
+批处理中一些参数（下面代码只能以批处理的方式执行）pause用来保证批处理运行完后，终端窗口不会被关闭
+12345678910111213@echo offecho 当前盘符：%~d0echo 当前盘符和路径：%~dp0echo 当前批处理全路径：%~f0echo 当前盘符和路径的短文件名格式：%~sdp0echo 当前CMD默认目录：%cd%echo 目录中有空格也可以加入&quot;&quo...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/09/20">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/20</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+                
+                <span class="abstract-title-text">Ubuntu注意事项</span>
+            </a>
+            <div class="abstract-content">
+                快捷键在文件夹中ctrl+h可以显示隐藏文件夹
+Root这篇文章以前写的，目前建议是sudo或者sudo -i用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03
+Debian默认创建的用户不在sudoers中，因此大部分用户可能会比较习惯su root - 2021-07-07原文http://shewolfep.iteye.com/blog/413396
+新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。
+如何设定...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/09/16">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/16</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Ubuntu">Ubuntu</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="document">document</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Maintenance/PE/">
+                
+                <span class="abstract-title-text">【PE相关】两个PE以及FbinstTool</span>
+            </a>
+            <div class="abstract-content">
+                FbinstTool-PE相关工具由于种种复杂原因，不同BIOS对U盘CHS/LBA参数处理结果不尽相同，导致同一个U盘，在一台机器上BOOT成功，在另一台机器上就可能BOOT失败。
+wuwuzz注:早期硬盘也有类似问题，但最后通过多个工业标准，已经解决。而USB是万能接口，且有关标准未得到厂商统一遵守，问题更复杂
+开源社区的bean提出了巧妙构思，开发出fbinst，基本解决了BIOS下的CHS/LBA参数适应调整问题，使U盘BOOT成功率大大提高。(除非碰上了极度变态的主板和BIOS)。 
+FbinstTool既是Fbinst的GUI程序 
+FBA类型文件就是FbinstTool通常...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/09/10">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Maintenance">Maintenance</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Browser/no%20allow%20paste/">
                 
                 <span class="abstract-title-text">去除&#34;欺诈警告:粘贴您不了解的东西时请务必小心，这可能...</span>
@@ -799,213 +965,10 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Comic/%E5%8F%B6%E6%81%AD%E5%BC%98%E7%B3%BB%E5%88%97/">
-                
-                <span class="abstract-title-text">[Comic]叶恭弘系列</span>
-            </a>
-            <div class="abstract-content">
-                个人分享https://www.dropbox.com/sh/j7d28mgy7eh4pqs/AADZSMA7UGu1P7VzhN9TydYSa?dl=0
-魔法零蛋(エム×ゼロ)[M×0]内容简介
-    
-        
-            魔法零蛋
-        
-        
-            エム×ゼロ
-        
-        
-            M×0
-        
-        
-            **罗马字**
-            Emu Zero
-        
-        
-            **類型**
- ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/27</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Comic
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Comic">Comic</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="完结">完结</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Comic/%E8%8A%B1%E4%B8%B8%E5%B9%BC%E7%A8%9A%E5%9B%AD/">
-                
-                <span class="abstract-title-text">[Comic]花丸幼稚园|花丸幼儿园</span>
-            </a>
-            <div class="abstract-content">
-                
-    
-        花丸幼稚园
-    
-    
-        はなまる幼儿园
-    
-    
-        Hanamaru Kindergarten
-    
-    
-        日语假名
-        はなまるようちえん
-    
-    
-        罗马字
-        Hanamaru Yōchien
-    
-    
-        正式译名
-        
-            
-                 花丸幼儿园（玉皇朝）
-                
-                 花圈圈幼儿园（尖端出版）
-   ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Comic
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Comic">Comic</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="完结">完结</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="汉化">汉化</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Comic/%E6%B2%B3%E4%B8%8B%E6%B0%B4%E5%B8%8C%E7%B3%BB%E5%88%97/">
-                
-                <span class="abstract-title-text">[Comic]河下水希系列</span>
-            </a>
-            <div class="abstract-content">
-                我只提供我自己喜欢看的
-网盘分流
-http://pan.baidu.com/s/1o6JSJvO
-
-来源http://www.ed2000.com/ShowFile.asp?vid=2734538
-在线观看挂了不再补了，留个名字##她和夏天和我(彼女と夏と仆)http://manhua.dmzj.com/tahexiatianhewo/4055.shtml
-秋色妄想日和
-冰姬奇谭https://tw.manhuagui.com/comic/5317/##我的偶像##https://tw.manhuagui.com/comic/3666/
-御姐百分百
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Comic
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Comic">Comic</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="完结">完结</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="汉化">汉化</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/page/26/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/25/">25</a><a class="page-number" href="/archives/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/archives/page/28/">28</a><a class="page-number" href="/archives/page/29/">29</a><a class="extend next" rel="next" href="/archives/page/28/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/page/26/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/25/">25</a><a class="page-number" href="/archives/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/archives/page/28/">28</a><a class="page-number" href="/archives/page/29/">29</a><a class="page-number" href="/archives/page/30/">30</a><a class="extend next" rel="next" href="/archives/page/28/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2555,7 +2518,52 @@ http://pan.baidu.com/s/1o6JSJvO
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4918,7 +4926,7 @@ http://pan.baidu.com/s/1o6JSJvO
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 289
+        Total : 292
         </div>
         <!-- search  -->
         
@@ -5752,7 +5760,7 @@ http://pan.baidu.com/s/1o6JSJvO
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+            <a class="archive-post-title" href="/Software/No%20WD/">Server 不推荐使用Windows Defender</a>
         </li>
     
         
@@ -7614,6 +7622,12 @@ http://pan.baidu.com/s/1o6JSJvO
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span>
+            <a class="archive-post-title" href="/Software/Security/ESET/">ESET 问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span>
             <a class="archive-post-title" href="/Document/magnet/">[资料]特殊的磁力链(magnet)</a>
         </li>
@@ -7641,8 +7655,20 @@ http://pan.baidu.com/s/1o6JSJvO
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/09</span>
+            <a class="archive-post-title" href="/Software/Security/SpyShelter/">SpyShelter Firewall问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">03/04</span>
             <a class="archive-post-title" href="/Software/Maintenance/PCMaster/">[小俊][2016.11.06]软媒魔方 v6.2.1.0 绿色纯净版及经典版</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/21</span>
+            <a class="archive-post-title" href="/Software/Security/McAfee-bug/">McAfee VirusScan Enterprise的一些缺陷</a>
         </li>
     
         
@@ -8342,6 +8368,16 @@ http://pan.baidu.com/s/1o6JSJvO
             <span class="sidebar-tag-name" data-tags="encode">
                 <span class="iconfont-archer">&#xe606;</span>
                 encode
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Security Software">
+                <span class="iconfont-archer">&#xe606;</span>
+                Security Software
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="个人评价">
+                <span class="iconfont-archer">&#xe606;</span>
+                个人评价
             </span>
         
     </div>

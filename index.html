@@ -498,6 +498,50 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/No%20WD/">
+                
+                <span class="abstract-title-text">Server 不推荐使用Windows Defender</span>
+            </a>
+            <div class="abstract-content">
+                首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。Server是1809，所以很可能遇到了是一个老版本的Bug
+现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。
+然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了
+解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。而里面，都是...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/12/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/cutree/">
                 
                 <span class="abstract-title-text">cutree相关研究</span>
@@ -903,38 +947,10 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/rip/">
-                
-                <span class="abstract-title-text">压制组相关</span>
-            </a>
-            <div class="abstract-content">
-                现在跑去压制，所以稍微多了点了解在压制正常处理的情况下（同一编码器），码率基本决定画质，剩下的区别在于画面的瑕疵修复，这种属于主观观感。一部影片所需的码率跟画面大小是正相关的。如果你要挑个3000kbps视频码率的电影放35寸电脑显示器(或者70寸电视)上看然后嫌别人画面差的话，那主要应该是你的脑子的问题。
-一般来说压制也有分流派例如iNT组主要都是尽量靠近原生影片，但是码率最高要求是源片的75%以内就好。他们一般不降噪，所以一部片如果噪点太多的话，可能只会有720p的压制。通常会使用兼容性最好的音轨。最新的标准是DDP(EAC3)5.1 1024kbps,但是以前的要么是DTS 150...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/10/09">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/25</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><a class="extend next" rel="next" href="/page/2/">NEXT &gt;</a>
+            <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/2/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2585,7 +2601,52 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4948,7 +5009,7 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 289
+        Total : 292
         </div>
         <!-- search  -->
         
@@ -5782,7 +5843,7 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+            <a class="archive-post-title" href="/Software/No%20WD/">Server 不推荐使用Windows Defender</a>
         </li>
     
         
@@ -7644,6 +7705,12 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span>
+            <a class="archive-post-title" href="/Software/Security/ESET/">ESET 问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span>
             <a class="archive-post-title" href="/Document/magnet/">[资料]特殊的磁力链(magnet)</a>
         </li>
@@ -7671,8 +7738,20 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/09</span>
+            <a class="archive-post-title" href="/Software/Security/SpyShelter/">SpyShelter Firewall问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">03/04</span>
             <a class="archive-post-title" href="/Software/Maintenance/PCMaster/">[小俊][2016.11.06]软媒魔方 v6.2.1.0 绿色纯净版及经典版</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/21</span>
+            <a class="archive-post-title" href="/Software/Security/McAfee-bug/">McAfee VirusScan Enterprise的一些缺陷</a>
         </li>
     
         
@@ -8372,6 +8451,16 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
             <span class="sidebar-tag-name" data-tags="encode">
                 <span class="iconfont-archer">&#xe606;</span>
                 encode
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Security Software">
+                <span class="iconfont-archer">&#xe606;</span>
+                Security Software
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="个人评价">
+                <span class="iconfont-archer">&#xe606;</span>
+                个人评价
             </span>
         
     </div>

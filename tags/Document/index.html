@@ -22,7 +22,7 @@
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
 <meta property="og:type" content="website">
 <meta property="og:title" content="个人小站">
-<meta property="og:url" content="http://ted423.github.io/tags/Document/index.html">
+<meta property="og:url" content="http://ted423.github.io/tags/document/index.html">
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
 <meta property="og:locale">
@@ -445,30 +445,23 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Document/cutree/">
+            <a class="abstract-title" href="/Document/Ubuntu%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
                 
-                <span class="abstract-title-text">cutree相关研究</span>
+                <span class="abstract-title-text">Ubuntu注意事项</span>
             </a>
             <div class="abstract-content">
-                sourceno-cutree crf 21  码率 4 214 kb/scutree    crf 19  码率 4 725 kb/scutree    crf 21  码率 2 903 kb/s  
-
-
-
-这个没放source
-
-cutree crf 18.5 5355 kb/sno-cutree crf 20.5 码率 4875 kb/s  
-
-Source
-cutree crf 18.5
-no-cutree crf 20.5
-  这次压制，前面场景no-cutree给的码率比较大，但是后面码率被 no-cutree反超目前的结论是静态场景，cutree大幅占优，动态场景，no-c...
+                快捷键在文件夹中ctrl+h可以显示隐藏文件夹
+Root这篇文章以前写的，目前建议是sudo或者sudo -i用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03
+Debian默认创建的用户不在sudoers中，因此大部分用户可能会比较习惯su root - 2021-07-07原文http://shewolfep.iteye.com/blog/413396
+新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。
+如何设定...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/11/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/11/25</span>
+                <div class="abstract-date" title="Last updated: 2015/09/16">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/16</span>
                 </div>
                 <!-- tags -->
                 
@@ -486,482 +479,14 @@ no-cutree crf 20.5
             </span>
         </span>
     
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="encode">encode</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/madvr/">
-                
-                <span class="abstract-title-text">madVR 瞎写篇</span>
-            </a>
-            <div class="abstract-content">
-                参考http://lysandria1985.blogspot.com/2013/01/3-madvr.html?
-devicesprojector是投影仪的意思。properties 这项，madVR本身都提供比较详细的信息了，可以跳过calibration 是校色，没校色过或低端显示器选disable就好，最下面”disable GPU gamma ramps”如果没有校色过的话就不要勾选display modes 这里主要会切换显卡数出分辨率以及刷新率，主要是刷新率符合影片帧率，减少丢帧以及掉帧，需要设备支持，至于是否支持，可以参考Custom display modes个人建议是...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/05/12">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/12</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/SSL/">
-                
-                <span class="abstract-title-text">SSL 自签证书相关</span>
-            </a>
-            <div class="abstract-content">
-                还没完全弄懂，写点是点，捋捋思路。
-
-CA(Certificate Authority)被称为证书授权中心，是数字证书发放和管理的机构。
-根证书(root certificate)是CA认证中心给自己颁发的证书,是信任链的起始点。安装根证书意味着对这个CA认证中心的信任。
-数字证书颁发过程一般为：
-用户首先产生自己的密钥对，
-将公共密钥（公钥）及部分个人身份信息传送给认证中心
-认证中心在核实身份后，将执行一些必要的步骤，以确信请求确实由用户发送而来，然后，认证中心将发给用户一个数字证书，该证书内包含用户的个人信息和他的公钥信息，同时还附有认证中心的签名信息————————————————...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/03/22">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/22</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="建设中">建设中</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/HDR/">
-                
-                <span class="abstract-title-text">x265 HDR 参数计算方法</span>
-            </a>
-            <div class="abstract-content">
-                首先，不同的色彩空间有不同的G B R WP 数据通常，不同的片会有不同的L 数据
-1234Display P3--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&quot;BT.2020--master-display &quot;G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)L(40000000,50)&quot;
-
-–master-display &amp; –max-cll values ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/02/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/23</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/twitter/">
-                
-                <span class="abstract-title-text">[转载]推特怎么看全部的（或特定时间段的）推文？</span>
-            </a>
-            <div class="abstract-content">
-                例子https://twitter.com/search?q=(from%3AailycIS)%20until%3A2020-04-13%20since%3A2020-02-13&amp;src=typed_query方法一：使用搜索功效
-输入 用户名 例如 @EhimeJK(已销号的也能看见)
-
-点下拉列表找到高级搜索 
-
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/12/11">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/12/11</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
     
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/x265/">
-                
-                <span class="abstract-title-text">x265参数解析</span>
-            </a>
-            <div class="abstract-content">
-                参考资料
-
-https://tieba.baidu.com/p/6627144750
-https://x265.readthedocs.io/en/3.1/cli.html
-https://vcb-s.nmm-hd.org/Dark%20Shrine/[VCB-Studio][教程10]x265%202.9参数设置/[VCB-Studio][教程10]x265%202.9参数设置.pdf
-
-crf,qpqp 电脑认为的恒定画质(但一般不进行设置)crf 人眼认为的恒定画质，但是运动时候画质会降低来节省码率数值越低画质越好。一般低于等于18可以认为和原画差不多(主观观点)
-ctu &lt;...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/11/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/28</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
+        <a class="post-tag" href="javascript:void(0);" data-tags="Ubuntu">Ubuntu</a>
     
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="encode">encode</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/CPU_info/">
-                
-                <span class="abstract-title-text">两个CPU性能分对比的网站</span>
-            </a>
-            <div class="abstract-content">
-                https://www.cpubenchmark.net/https://www.cpu-monkey.com/en/
-前者信息比较充足一些这样就不用看啥天梯图了
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/10/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Hardware">Hardware</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/%E6%AD%BB%E9%93%BE%E6%A3%80%E6%B5%8B/">
-                
-                <span class="abstract-title-text">网站死链检测</span>
-            </a>
-            <div class="abstract-content">
-                brokenlinkcheck这是一个网站的在线检测http://www.brokenlinkcheck.com/broken-links.php#status但是他会将磁力链以及ed2k等链接当死链检测出来建议配合以下GM脚本使用
-
-https://greasyfork.org/zh-CN/scripts/13496-brokenlinkcheck-remove-unuse-link
-https://github.com/ted423/rules-GM-stylish-UC/blob/master/GM/Brokenlinkcheck_Remove_Unuse_Link.user.js...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/10/20">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/20</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="SEO">SEO</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/%E5%A3%B0%E9%81%93/">
-                
-                <span class="abstract-title-text">DTS 与 Dolby 声道相关</span>
-            </a>
-            <div class="abstract-content">
-                DTSL - LeftR - RightC - CenterLFE - Low Frequency Effect (woofer)S - SurroundLs - Left SurroundRs - Right SurroundLss - Left Side SurroundRss - Right Side SurroundCS - Center SurroundLs-r - Left Surround RearRs-r - Right Surround RearLW - Left WideRW - Right WideC-Oh -Center Over-HeadCh - Center ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/07/11">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/11</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="建设中">建设中</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
-                
-                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
-            </a>
-            <div class="abstract-content">
-                带签名的UTF8：
-带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
-无签名的UTF8：
-相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
-那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
-BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/28">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="document">document</a>
     
 </div>
 
@@ -971,10 +496,6 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         <div class="index-post-divider"></div>
     
     <!-- paginator  -->
-    
-        <nav class="page-nav">
-            <span class="page-number current">1</span><a class="page-number" href="/tags/Document/page/2/">2</a><a class="page-number" href="/tags/Document/page/3/">3</a><a class="page-number" href="/tags/Document/page/4/">4</a><a class="extend next" rel="next" href="/tags/Document/page/2/">NEXT &gt;</a>
-        </nav>
     
 </main>
 
@@ -2523,7 +2044,52 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -4886,7 +4452,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 289
+        Total : 292
         </div>
         <!-- search  -->
         
@@ -5720,7 +5286,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/No%20WD/">不推荐使用Windows Defender</a>
+            <a class="archive-post-title" href="/Software/No%20WD/">Server 不推荐使用Windows Defender</a>
         </li>
     
         
@@ -7582,6 +7148,12 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span>
+            <a class="archive-post-title" href="/Software/Security/ESET/">ESET 问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">04/10</span>
             <a class="archive-post-title" href="/Document/magnet/">[资料]特殊的磁力链(magnet)</a>
         </li>
@@ -7609,8 +7181,20 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/09</span>
+            <a class="archive-post-title" href="/Software/Security/SpyShelter/">SpyShelter Firewall问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">03/04</span>
             <a class="archive-post-title" href="/Software/Maintenance/PCMaster/">[小俊][2016.11.06]软媒魔方 v6.2.1.0 绿色纯净版及经典版</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/21</span>
+            <a class="archive-post-title" href="/Software/Security/McAfee-bug/">McAfee VirusScan Enterprise的一些缺陷</a>
         </li>
     
         
@@ -8310,6 +7894,484 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
             <span class="sidebar-tag-name" data-tags="encode">
                 <span class="iconfont-archer">&#xe606;</span>
                 encode
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Security Software">
+                <span class="iconfont-archer">&#xe606;</span>
+                Security Software
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="个人评价">
+                <span class="iconfont-archer">&#xe606;</span>
+                个人评价
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="Anime">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Anime
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Code">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Code
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Comic">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Comic
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Document">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Document
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Browser">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Browser
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Issue">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Issue
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Optimization">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Optimization
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Software">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Software
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="System">
+            <span class="iconfont-archer">&#xe60a;</span>
+            System
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Picture&Photo&Image
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Video">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Video
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Music">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Music
+        </span>
+    
+        <span class="sidebar-category-name" data-categories="Game">
+            <span class="iconfont-archer">&#xe60a;</span>
+            Game
+        </span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMeta = {
+        root: "/",
+        author: "ted423"
+    }
+</script>
+
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
+        <!-- main func -->
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+            <div class="site-search site-search-loading">
+    <div class="algolia-popup popup">
+        <div class="algolia-search">
+            <div class="algolia-search-input-icon">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="algolia-search-input" id="algolia-search-input"></div>
+            <div class="popup-btn-close">
+                <i class="iconfont-archer">&#xe609;</i>
+            </div>
+        </div>
+
+        <div class="algolia-results">
+            <div id="algolia-stats" class="algolia-stats"></div>
+            <div id="algolia-hits"></div>
+            <div id="algolia-pagination" class="algolia-pagination"></div>
+        </div>
+    </div>
+</div>
+
+            <script src="/scripts/search.js?v=" defer></script>
+        
+        <!-- busuanzi -->
+        
+            <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>
+Picture&Photo&Image">
+                <span class="iconfont-archer">&#xe606;</span>
+                Picture&Photo&Image
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="MV">
+                <span class="iconfont-archer">&#xe606;</span>
+                MV
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="AKB48">
+                <span class="iconfont-archer">&#xe606;</span>
+                AKB48
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="HD">
+                <span class="iconfont-archer">&#xe606;</span>
+                HD
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="720P">
+                <span class="iconfont-archer">&#xe606;</span>
+                720P
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="1080P">
+                <span class="iconfont-archer">&#xe606;</span>
+                1080P
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Youtube">
+                <span class="iconfont-archer">&#xe606;</span>
+                Youtube
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Vocaloid">
+                <span class="iconfont-archer">&#xe606;</span>
+                Vocaloid
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="480P">
+                <span class="iconfont-archer">&#xe606;</span>
+                480P
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Font">
+                <span class="iconfont-archer">&#xe606;</span>
+                Font
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="SIL Open Font">
+                <span class="iconfont-archer">&#xe606;</span>
+                SIL Open Font
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="macOS">
+                <span class="iconfont-archer">&#xe606;</span>
+                macOS
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="☆">
+                <span class="iconfont-archer">&#xe606;</span>
+                ☆
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Github">
+                <span class="iconfont-archer">&#xe606;</span>
+                Github
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Git">
+                <span class="iconfont-archer">&#xe606;</span>
+                Git
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="偶像大师(The iDOLM@STER)">
+                <span class="iconfont-archer">&#xe606;</span>
+                偶像大师(The iDOLM@STER)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="CSS">
+                <span class="iconfont-archer">&#xe606;</span>
+                CSS
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="HTML5">
+                <span class="iconfont-archer">&#xe606;</span>
+                HTML5
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="SEO">
+                <span class="iconfont-archer">&#xe606;</span>
+                SEO
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="iOS">
+                <span class="iconfont-archer">&#xe606;</span>
+                iOS
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="NEKO WORKs(Sayori)">
+                <span class="iconfont-archer">&#xe606;</span>
+                NEKO WORKs(Sayori)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="巧克力与香子兰">
+                <span class="iconfont-archer">&#xe606;</span>
+                巧克力与香子兰
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="R18">
+                <span class="iconfont-archer">&#xe606;</span>
+                R18
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="艦隊これくしょん -艦これ-">
+                <span class="iconfont-archer">&#xe606;</span>
+                艦隊これくしょん -艦これ-
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="pixiv">
+                <span class="iconfont-archer">&#xe606;</span>
+                pixiv
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Extension">
+                <span class="iconfont-archer">&#xe606;</span>
+                Extension
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Browser">
+                <span class="iconfont-archer">&#xe606;</span>
+                Browser
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="GM脚本">
+                <span class="iconfont-archer">&#xe606;</span>
+                GM脚本
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="歌词(LRC)">
+                <span class="iconfont-archer">&#xe606;</span>
+                歌词(LRC)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="多行(Autolyric)">
+                <span class="iconfont-archer">&#xe606;</span>
+                多行(Autolyric)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="破解">
+                <span class="iconfont-archer">&#xe606;</span>
+                破解
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="第三方修改|绿化">
+                <span class="iconfont-archer">&#xe606;</span>
+                第三方修改|绿化
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="大眼仔~旭">
+                <span class="iconfont-archer">&#xe606;</span>
+                大眼仔~旭
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="正版">
+                <span class="iconfont-archer">&#xe606;</span>
+                正版
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Compression">
+                <span class="iconfont-archer">&#xe606;</span>
+                Compression
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="LGPLv2.1">
+                <span class="iconfont-archer">&#xe606;</span>
+                LGPLv2.1
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="烈火">
+                <span class="iconfont-archer">&#xe606;</span>
+                烈火
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Document&Texteditor">
+                <span class="iconfont-archer">&#xe606;</span>
+                Document&Texteditor
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Office">
+                <span class="iconfont-archer">&#xe606;</span>
+                Office
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="AGPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                AGPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="3-clause BSD license">
+                <span class="iconfont-archer">&#xe606;</span>
+                3-clause BSD license
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Remote">
+                <span class="iconfont-archer">&#xe606;</span>
+                Remote
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Personal Free">
+                <span class="iconfont-archer">&#xe606;</span>
+                Personal Free
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Download&File hosting service">
+                <span class="iconfont-archer">&#xe606;</span>
+                Download&File hosting service
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="720p">
+                <span class="iconfont-archer">&#xe606;</span>
+                720p
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="无双系列">
+                <span class="iconfont-archer">&#xe606;</span>
+                无双系列
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Game Document">
+                <span class="iconfont-archer">&#xe606;</span>
+                Game Document
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Game">
+                <span class="iconfont-archer">&#xe606;</span>
+                Game
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="K-ON">
+                <span class="iconfont-archer">&#xe606;</span>
+                K-ON
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="小说">
+                <span class="iconfont-archer">&#xe606;</span>
+                小说
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="1080i">
+                <span class="iconfont-archer">&#xe606;</span>
+                1080i
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="初音ミク(Hatsune Miku)">
+                <span class="iconfont-archer">&#xe606;</span>
+                初音ミク(Hatsune Miku)
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Hardware">
+                <span class="iconfont-archer">&#xe606;</span>
+                Hardware
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="document">
+                <span class="iconfont-archer">&#xe606;</span>
+                document
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="安全软件">
+                <span class="iconfont-archer">&#xe606;</span>
+                安全软件
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Powershell">
+                <span class="iconfont-archer">&#xe606;</span>
+                Powershell
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Hardware Tool">
+                <span class="iconfont-archer">&#xe606;</span>
+                Hardware Tool
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="文件工具">
+                <span class="iconfont-archer">&#xe606;</span>
+                文件工具
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="破解&激活">
+                <span class="iconfont-archer">&#xe606;</span>
+                破解&激活
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Maintenance">
+                <span class="iconfont-archer">&#xe606;</span>
+                Maintenance
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="开源">
+                <span class="iconfont-archer">&#xe606;</span>
+                开源
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="ARK">
+                <span class="iconfont-archer">&#xe606;</span>
+                ARK
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="小俊">
+                <span class="iconfont-archer">&#xe606;</span>
+                小俊
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="encode">
+                <span class="iconfont-archer">&#xe606;</span>
+                encode
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Security Software">
+                <span class="iconfont-archer">&#xe606;</span>
+                Security Software
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="个人评价">
+                <span class="iconfont-archer">&#xe606;</span>
+                个人评价
             </span>
         
     </div>

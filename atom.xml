@@ -546,11 +546,11 @@
   </entry>
   
   <entry>
-    <title>不推荐使用Windows Defender</title>
+    <title>Server 不推荐使用Windows Defender</title>
     <link href="http://ted423.github.io/Software/No%20WD/"/>
     <id>http://ted423.github.io/Software/No%20WD/</id>
     <published>2021-07-23T09:16:33.346Z</published>
-    <updated>2021-07-28T08:31:23.623Z</updated>
+    <updated>2021-12-01T06:26:16.626Z</updated>
     
     <content type="html"><![CDATA[<p>首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。<br>Server是1809，所以很可能遇到了是一个老版本的Bug</p><p>现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。</p><p>然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了<br><img src="https://files.catbox.moe/3s73lh.jpg" alt="不推荐使用Windows Defender"></p><p>解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。<br>而里面，都是文本文件。<br>要知道，压缩几个文件，每次生成的包可能都是不同的hash值。这种情况下的报毒，细思极恐。</p>]]></content>
     
@@ -569,6 +569,8 @@
     <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
     
     <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
   </entry>
   
