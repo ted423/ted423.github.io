@@ -460,192 +460,23 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/SF%E7%9A%84%E8%AE%A8%E5%8E%8Ccdn/">
+            <a class="abstract-title" href="/Code/Terminal/PC-wifi/">
                 
-                <span class="abstract-title-text">SF(sourceforge)的恶心cdn</span>
+                <span class="abstract-title-text">[Terminal]计算机建立虚拟Wifi热点</span>
             </a>
             <div class="abstract-content">
-                被恶心了，sourceforge上下东西，死活不给安装包，非要给下载器，以前遇到过，当时干脆换到sourceforge.jp上去了。但最近没这现象就又换回来了。
-结果今天出现就让我感到了奇怪，仔细一看。http://downloads.sourceforge.net/project/filezilla/FileZilla_Client/3.12.0.2/FileZilla_3.12.0.2_win64-setup.exe?r=&amp;ts=1436711882&amp;use_mirror=nchc跳转后是这么个域名，cdn.whitebinariesground.com瞬间就懂了！注...
+                Win 10有个直接开热点的设置，所以下面可能就用不到了https://www.intel.cn/content/www/cn/zh/support/articles/000023257/network-and-i-o/wireless-networking.html
+需要注意的是，开启WIFI热点时可能会导致有线网通过DHCP获取另外网段的IP时出现问题，需要取消第3步操作后，也就是共享网络勾选，才可以通过DHCP获取到IP
+
+输入netsh wlan show driver先看是否支持承载网络
+打开CMD,输入1netsh wlan set hostednetwork mode=al...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/explorer_ftp/">
-                
-                <span class="abstract-title-text">解决无法在Windows资源管理器中查看此FTP站点的问题</span>
-            </a>
-            <div class="abstract-content">
-                http://social.technet.microsoft.com/Forums/en-US/ieitprocurrentver/thread/3d74bc03-b0c4-4ec1-88df-b938ec82c159/原来是注册表 [HKEY_CLASSES_ROOT\ftp] 的这个键值出了问题,那个网页上有脚本,复制下来保存为reg文件就可以了.
-这是那个英文网页的注册表脚本:
-12345678910111213141516Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\ftp]@=&quot;URL:File Tra...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E5%88%A0%E9%99%A4%E5%90%AF%E5%8A%A8%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9%E9%A1%B9/">
-                
-                <span class="abstract-title-text">[Terminal]Windiows系统下删除启动选择系统项</span>
-            </a>
-            <div class="abstract-content">
-                感觉这个文章有点过时了  –2019-06-11首先vista 及以后系统是不用boot.ini的，而msconfig无法删除。(老实说很早以前的事了，具体记不清也懒得再现环境)
-当时是别人的电脑，我在XP卸载360，结果系统进不去了。我直接把XP装了个win7，结果会有个旧版本的windows给你选择，一直处理不掉
-1、以管理员身份启动cmd窗口【一定要以管理员身份启动，否者提示无法打开启动配置文件，拒绝访问。启动方法可以按照C:/windows/system32/cmd.exe路径找到cmd.exe 然后鼠标右键选择 以管理员身份运行或者在任务管理器里用“运行新任务”】2、输入并执行...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CMD">CMD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/ol-prettify/">
-                
-                <span class="abstract-title-text">[转载]本文介绍如何使用CSS 3美化有序列表的计数器样式</span>
-            </a>
-            <div class="abstract-content">
-                来源http://www.html5online.com.cn/series/css3/css313.html
-example
-
-1
-2
-3
-3.1
-3.2
-4
-
-个人对代码有调整
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354ol&#123;	counter-reset: li; /* 初始化计数器 */	list-style: none; /* 移除浏览器默认编号 */	text-shadow: 0 1px 0 rgba(255,25...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/01</span>
+                <div class="abstract-date" title="Last updated: 2015/12/04">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
                 </div>
                 <!-- tags -->
                 
@@ -664,9 +495,211 @@ example
         </span>
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="建设中">建设中</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Browser/Extension/Image%20Search%20Options/">
+                
+                <span class="abstract-title-text">[扩展]Image Search Options - 右键搜图</span>
+            </a>
+            <div class="abstract-content">
+                我才发现这扩展是Saucenao开发的FF里我搜图片用的可是很顺手网址:https://saucenao.com/tools/
+同时有Firefox以及Chrome的扩展，但是Firefox的不知道战斗力高了多少倍，可惜火狐自身给自己来了一刀
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/12/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/12/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Browser"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Browser
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Chromium(Chrome)">Chromium(Chrome)</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Firefox">Firefox</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Extension">Extension</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Browser">Browser</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">
+                
+                <span class="abstract-title-text">网络同步盘缺陷记录</span>
+            </a>
+            <div class="abstract-content">
+                优秀
+dropbox同步不够实时(服务器端的改变并不会立刻同步回本地)如果你希望他立刻进行一次完全的同步，你需要退出他的客户端再重新打开。
+Onedrive不支持局域网内同步,同步逻辑有缺陷，偶尔会干删一堆文件到回收站再重新下载的事(由于下调存储空间一事，已经不准备继续使用，准备转yandisk看看，15元/月才50G，我就呵呵了)
+快盘国内做的最好的同步盘，不过服务器实在…客户端弹窗简直烦人因为有秒传机制，会出现上传的某些文件永远无法下载（你也没法重传，因为秒传了）因为上一条，是否使用自己斟酌
+
+可用
+mega支持创建同名文件(夹)，不利于同步，同步依据文件修改时间，在修改时间不变改变...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/11/28">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Dropbox">Dropbox</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Video/R18/SY-118/">
+                
+                <span class="abstract-title-text">[R18]SY-118</span>
+            </a>
+            <div class="abstract-content">
+                Abigaile Johnson1.5G WMV
+magnet:?xt=urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/11/24">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="R18">R18</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/CSS-middle/">
+                
+                <span class="abstract-title-text">[转]CSS布局奇淫技巧之--各种居中</span>
+            </a>
+            <div class="abstract-content">
+                转这篇文章就是我发现这段代码有效，并且我居然不知道为什么有用。
+1234567.demo &#123;    position:fixed;    top: 50%;    left: 50%;    transform: translate(-50%, -50%);&#125;
+原文http://www.cnblogs.com/2050/p/3392803.html
+居中是我们使用css来布局时常遇到的情况。使用css来进行居中时，有时一个属性就能搞定，有时则需要一定的技巧才能兼容到所有浏览器，本文就居中的一些常用方法做个简单的介绍。
+注：本文所讲方法除了特别说明外，都是兼容IE6+、...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/11/23">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
     
         <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
     
@@ -688,55 +721,95 @@ example
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">
+            <a class="abstract-title" href="/Video/%E5%88%9D%E9%9F%B3%E6%BC%94%E5%94%B1%E4%BC%9A/">
                 
-                <span class="abstract-title-text">网页符号转义</span>
+                <span class="abstract-title-text">初音演唱会[Hatsune Miku Live Party]专辑</span>
             </a>
             <div class="abstract-content">
-                HTML ISO-8859-1 参考手册http://www.w3school.com.cn/tags/html_ref_entities.html
-带有实体名称的 ASCII 实体
+                感觉对初音的热爱降下去了，不再维护#[philosophy-raws][Vocaloid相关蓝光合集][BDRIP][1080p 10bit][Live14+PV15+SP]
 
-
-结果
-描述
-实体名称
-实体编号
-
-
-
-“
-quotation mark
-&amp;quot;
-&amp;#34;
-
-
-‘
-apostrophe
-&amp;apos;
-&amp;#39;
-
-
-&amp;
-ampersand
-&amp;amp;
-&amp;#38;
-
-
-&lt;
-less-than
-&amp;lt;
-&amp;#60;
-
-
-
-|greater-than|&amp;gt;|&amp;#62;
-...
+magnet:?xt=urn:btih:VPRHSCCANDLKXAX7KIVO6Y6OLCXUJOD3
+http://share.dmhy.org/topics/view/392331_philosophy-raws_Vocaloid_BDRIP_1080p_10bit_Live_14_PV_15_SP_V2.html
+https://nyaa.net/view/685237
+https://nyaa.si/v...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
+                <div class="abstract-date" title="Last updated: 2015/11/22">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/22</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Video"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Video
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="BDrip">BDrip</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="FHD">FHD</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="BDMV">BDMV</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="1080P">1080P</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Vocaloid">Vocaloid</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="初音ミク(Hatsune Miku)">初音ミク(Hatsune Miku)</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/UTF-8/">
+                
+                <span class="abstract-title-text">[Javascript]UTF-8编码解码</span>
+            </a>
+            <div class="abstract-content">
+                编码本来不准备写的，因为实现起来比较简单，不过平时有时侯自己要用。网上那一堆，全部一模一样的效果,解个繁体出来都是乱码
+
+解码
+
+编码
+
+
+
+var refresh = function()
+{
+    if(document.getElementById('decode').checked){
+        document.getElementById("result").textContent="";
+        var s=document.getElementById("toutf-8").value;
+        var a=s.split(/%(?![A-Fa-f...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/11/20">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -760,6 +833,8 @@ less-than
     
         <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
     
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
 </div>
 
                 
@@ -774,24 +849,20 @@ less-than
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
+            <a class="abstract-title" href="/Document/Graphics%20display%20resolution/">
                 
-                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
+                <span class="abstract-title-text">FHD、HD、SD、1080p、1080I、720P等等的涵义</span>
             </a>
             <div class="abstract-content">
-                带签名的UTF8：
-带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
-无签名的UTF8：
-相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
-那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
-BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
+                我想大多都知道1080p的意思，但是我想说只是了解个大概不行。字母p意为逐行扫描（progressive scan），但是需注意的是只要水平扫描线超过1080条就能称之为1080p，比方说分辨率1000×1080同样能称为1080p.有了逐行扫描，就有隔行扫描（interlaced scan），1080I以及1080p的就在这里，当然，1080I只有540条线。另外1080I和540P是两个概念，具体就在逐行和隔行上,虽然都是540条线(笑)。还有个需要了解的概念是D端子,就因为这个，往往有人把1080I和540P划上等号。关于隔行扫描，还有个需要了解的概念就是去交错
+然后就到了High...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/28">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                <div class="abstract-date" title="Last updated: 2015/11/18">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/18</span>
                 </div>
                 <!-- tags -->
                 
@@ -812,7 +883,57 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Document&Texteditor/Everedit/">
+                
+                <span class="abstract-title-text">[文本编辑器]Everedit - 这才是真正的国产良心</span>
+            </a>
+            <div class="abstract-content">
+                我已入正的一款软件。100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。打个比方
+123456789A720 	꜠ 	꜡ 	Ꜣ 	ꜣ 	Ꜥ 	ꜥ 	Ꜧ 	ꜧ 	Ꜩ 	ꜩ 	Ꜫ 	ꜫ 	Ꜭ 	ꜭ 	Ꜯ 	ꜯA730 	ꜰ 	ꜱ 	Ꜳ 	ꜳ 	Ꜵ 	ꜵ 	Ꜷ 	ꜷ 	Ꜹ 	ꜹ 	Ꜻ 	ꜻ 	Ꜽ 	ꜽ 	Ꜿ 	ꜿA740 	Ꝁ 	ꝁ 	Ꝃ 	ꝃ 	Ꝅ 	ꝅ 	Ꝇ 	ꝇ 	Ꝉ 	ꝉ 	Ꝋ 	ꝋ 	Ꝍ 	ꝍ 	Ꝏ 	ꝏA750 	Ꝑ 	ꝑ 	Ꝓ 	ꝓ 	Ꝕ 	ꝕ 	Ꝗ 	ꝗ 	Ꝙ 	ꝙ 	Ꝛ 	ꝛ 	Ꝝ 	ꝝ 	Ꝟ 	ꝟA760 	Ꝡ 	ꝡ 	Ꝣ 	ꝣ 	Ꝥ 	ꝥ 	Ꝧ 	...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/11/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="正版">正版</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
     
 </div>
 
@@ -828,43 +949,23 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Anime/JP/Hyouka/">
+            <a class="abstract-title" href="/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/">
                 
-                <span class="abstract-title-text">氷菓[Hyouka]</span>
+                <span class="abstract-title-text">[MV]AKB48 - ハステとワステ</span>
             </a>
             <div class="abstract-content">
                 
-    
-        
-            〈古典部〉シリーズ
-        
-        
-            日语假名
-            こてんぶシリーズ
-        
-        
-            罗马字
-            Kotenbu Series
-        
-        
-            
-        
-        
-            原作
-            米泽穗信
-        
-        
-            导演
-            武本康弘
-        
-   ...
+网盘分流
+https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog
+
+
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                <div class="abstract-date" title="Last updated: 2015/11/15">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
                 </div>
                 <!-- tags -->
                 
@@ -875,185 +976,23 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
             
         
         
-        <span class="post-category" data-categories="Anime"">
+        <span class="post-category" data-categories="Video"">
             <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
-                Anime
+                Video
             </span>
         </span>
     
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Anime">Anime</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="JP">JP</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="BDrip">BDrip</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="FHD">FHD</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="1080p">1080p</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="BDMV">BDMV</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="MV">MV</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="☆">☆</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">
-                
-                <span class="abstract-title-text">[问题处理]多同步盘下Dropbox同步状态图标不见</span>
-            </a>
-            <div class="abstract-content">
-                简要地说Windows的overlayIcon(状态图标)最多不能超过15个(我这边好像是超过13个就不行),而Onedrive自己就占了一半(我同时用两个同步盘)这些信息保存在
-1HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
-个人的处理办法是Onedrive删一半，dropbox删一半，因为对我来说只要一个同步Ok的状态有了就行
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Dropbox">Dropbox</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">
-                
-                <span class="abstract-title-text">[R18]最近，妹妹的样子有点怪</span>
-            </a>
-            <div class="abstract-content">
-                可以当AV来看了
-
-magnet:?xt=urn:btih:94e8d4a43f730509867bc57a6d2688c5353a1348
-https://sukebei.nyaa.si/view/1050424
-https://sukebei.nyaa.net/view/1050424
-https://share.dmhy.org/topics/view/376383_maho_sub_VCB-Studio_What_s_Going_on_with_My_Sister_10bit_1080p_BDRip.html
-
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/10/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FHD">FHD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="1080p">1080p</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="R18">R18</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/KB3093266/">
-                
-                <span class="abstract-title-text">[问题处理]KB3093266 错误码:0x80004005</span>
-            </a>
-            <div class="abstract-content">
-                这个错误应该跟下载相关，我手动下载手动安装的这个安装包x64:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x64_9b2f96010adf1b547157c79c8ad52bdb26815e0b.cab
-x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x86_63c92652dc153...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/21">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="AKB48">AKB48</a>
     
 </div>
 
@@ -1065,7 +1004,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/page/23/">&lt; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/25/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/page/23/">&lt; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><span class="page-number current">24</span><a class="page-number" href="/page/25/">25</a><a class="page-number" href="/page/26/">26</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><a class="extend next" rel="next" href="/page/25/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2766,7 +2705,431 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5271,7 +5634,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 299
+        Total : 317
         </div>
         <!-- search  -->
         
@@ -5431,6 +5794,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">06/21</span>
             <a class="archive-post-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Issue/Apache/">[问题处理]Linux下Apache2无法启动的原因排查</a>
         </li>
     
         
@@ -5611,6 +5980,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         </li>
     
         
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/Issue/Adobe%20Acrobat%20update%20error/">[问题处理]Adobe Acrobat update error</a>
+        </li>
+    
+        
             
             
                 
@@ -5700,6 +6075,21 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
                 
                 </ul>
             
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">[优化]Windows 关闭休眠功能</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2019 </div>
             <ul class="year-list">
             
@@ -5732,6 +6122,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">12/05</span>
+            <a class="archive-post-title" href="/Optimization/Windows.edb/">[优化]清理Windows.edb(搜索索引文件)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">11/01</span>
             <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP不允许使用已保存的账号密码登陆</a>
         </li>
@@ -5750,8 +6146,8 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span>
-            <a class="archive-post-title" href="/Issue/Apache/">[问题处理]Linux下Apache2无法启动的原因排查</a>
+            <span class="archive-post-date">04/26</span>
+            <a class="archive-post-title" href="/Optimization/Disable-MRT/">[优化]让微软不强制提供"恶意软件删除工具"</a>
         </li>
     
         
@@ -5783,14 +6179,14 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/29</span>
-            <a class="archive-post-title" href="/Optimization/Chrome's%20File%20System%20folder/">[优化]处理MEGA使用HTML5 File System API占用的空间</a>
+            <span class="archive-post-date">08/06</span>
+            <a class="archive-post-title" href="/Optimization/Thumbs.db/">[优化]通过组策略使系统不会自动生成Thumbs.db</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/11</span>
-            <a class="archive-post-title" href="/Issue/windows%2010%20update/">Windows 10 自动update自动重启的解决办法</a>
+            <span class="archive-post-date">07/29</span>
+            <a class="archive-post-title" href="/Optimization/Chrome's%20File%20System%20folder/">[优化]处理MEGA使用HTML5 File System API占用的空间</a>
         </li>
     
         
@@ -5799,19 +6195,43 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
                 
                 </ul>
             
-            <div class="archive-year"> 2016 </div>
+            <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/03</span>
-            <a class="archive-post-title" href="/Issue/%E5%90%8C%E6%AD%A5%E4%B8%AD%E5%BF%83/">[问题处理]Windows 取消同步中心的启动</a>
+            <span class="archive-post-date">11/03</span>
+            <a class="archive-post-title" href="/Issue/CUE/">CUE无法使用以及乱码处理笔记</a>
         </li>
     
         
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
         <li class="archive-post-item">
-            <span class="archive-post-date">08/03</span>
-            <a class="archive-post-title" href="/Issue/Lync/">[问题处理]Lync联系人名片显示异常</a>
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">[问题处理]多同步盘下Dropbox同步状态图标不见</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2017 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/11</span>
+            <a class="archive-post-title" href="/Issue/windows%2010%20update/">Windows 10 自动update自动重启的解决办法</a>
         </li>
     
         
@@ -5831,12 +6251,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">11/03</span>
-            <a class="archive-post-title" href="/Issue/CUE/">CUE无法使用以及乱码处理笔记</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">11/01</span>
             <a class="archive-post-title" href="/Issue/SF%E7%9A%84%E8%AE%A8%E5%8E%8Ccdn/">SF(sourceforge)的恶心cdn</a>
         </li>
@@ -5845,27 +6259,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">08/01</span>
             <a class="archive-post-title" href="/Issue/KB3081444/">[问题处理]Windows 10 的KB3081444补丁安装失败的解决办法</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Issue/Adobe%20Acrobat%20update%20error/">[问题处理]Adobe Acrobat update error</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">[问题处理]多同步盘下Dropbox同步状态图标不见</a>
         </li>
     
         
@@ -5896,6 +6289,21 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/">Ubuntu 和Windows 7共存的GRUB启动顺序</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/03</span>
+            <a class="archive-post-title" href="/Issue/Lync/">[问题处理]Lync联系人名片显示异常</a>
         </li>
     
         
@@ -6022,6 +6430,21 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/%E5%88%A0%E9%99%A4%E5%90%AF%E5%8A%A8%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9%E9%A1%B9/">[Terminal]Windiows系统下删除启动选择系统项</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/03</span>
+            <a class="archive-post-title" href="/Issue/%E5%90%8C%E6%AD%A5%E4%B8%AD%E5%BF%83/">[问题处理]Windows 取消同步中心的启动</a>
         </li>
     
         
@@ -6167,14 +6590,23 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">[优化]Windows 关闭休眠功能</a>
+            <span class="archive-post-date">03/26</span>
+            <a class="archive-post-title" href="/Video/%E5%85%B1%E5%90%8C%E5%AE%B6%E5%9C%92/">[Youtube]粵港澳大灣區主題曲 共同家園</a>
         </li>
     
         
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
         <li class="archive-post-item">
-            <span class="archive-post-date">03/26</span>
-            <a class="archive-post-title" href="/Video/%E5%85%B1%E5%90%8C%E5%AE%B6%E5%9C%92/">[Youtube]粵港澳大灣區主題曲 共同家園</a>
+            <span class="archive-post-date">05/24</span>
+            <a class="archive-post-title" href="/Code/Git/Git%20must%20be%20installed%20and%20in%20your%20PATH!/">[问题处理]MAC brew 之 Git must be installed and in your PATH!</a>
         </li>
     
         
@@ -6188,20 +6620,8 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/05</span>
-            <a class="archive-post-title" href="/Optimization/Windows.edb/">[优化]清理Windows.edb(搜索索引文件)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>
             <a class="archive-post-title" href="/Software/tools/">[软件推荐]有用的小工具们</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/26</span>
-            <a class="archive-post-title" href="/Optimization/Disable-MRT/">[优化]让微软不强制提供"恶意软件删除工具"</a>
         </li>
     
         
@@ -6213,12 +6633,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/06</span>
-            <a class="archive-post-title" href="/Optimization/Thumbs.db/">[优化]通过组策略使系统不会自动生成Thumbs.db</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/02</span>
@@ -6259,6 +6673,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">08/01</span>
             <a class="archive-post-title" href="/Optimization/%E5%B8%A6%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86/">[优化]带有密码的 Windows 系统自动登录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/17</span>
+            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -6310,21 +6730,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/System/Fuck%20Windows/">傻逼微软 记一次关键日志 Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/17</span>
-            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -6656,6 +7061,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">02/23</span>
+            <a class="archive-post-title" href="/Comic/R18/kaguyuzu/">[Hcomic] いちごぱんつ (カグユヅ)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/04</span>
             <a class="archive-post-title" href="/Code/Terminal/Symlink/">[Terminal]符号链接</a>
         </li>
@@ -6671,20 +7082,47 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/28</span>
+            <a class="archive-post-title" href="/Comic/R18/%E3%81%BE%E3%81%84%E3%81%99%E3%81%86%E3%81%83%E3%83%BC%E3%81%A8%E3%81%A7%E3%81%B3%E3%82%8B/">[雛原えみ] まいすうぃーとでびる [中国翻訳]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/24</span>
+            <a class="archive-post-title" href="/Comic/R18/%E5%85%AD%E8%8A%B1%E3%81%A1%E3%82%83%E3%82%93%E3%81%B5%E3%81%A8%E3%82%82%E3%82%82%E3%81%BA%E3%82%8D%E3%81%BA%E3%82%8D%E3%81%BE%E3%81%98%E3%81%8B%E3%82%8F%E3%81%84%E3%81%99%E3%81%8E/">[R18](C95) [裏FMO (フミオ)] 六花ちゃんふとももぺろぺろまじかわいすぎ (SSSS.GRIDMAN)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">05/30</span>
             <a class="archive-post-title" href="/Comic/R18/P.E.T.S%20PARADISE/">[Hcomic] (C94) [銀糖製菓 (玉砂糖)] P.E.T.S PARADISE (アズールレーン) [有毒気漢化組]</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span>
-            <a class="archive-post-title" href="/Code/Git/Git%20must%20be%20installed%20and%20in%20your%20PATH!/">[问题处理]MAC brew 之 Git must be installed and in your PATH!</a>
+            <span class="archive-post-date">05/30</span>
+            <a class="archive-post-title" href="/Comic/R18/%E3%81%8A%E3%81%95%E3%81%AA%E3%81%AA%E3%81%98%E3%81%BF%E3%81%88%E3%81%A3%E3%81%A1/">[Hcomic][からじしぼたん (牡丹もちと)] おさななじみえっち [無邪気漢化組] [DL版]</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/24</span>
             <a class="archive-post-title" href="/Comic/R18/PROJECT%E3%83%8F%E3%83%A9%E3%82%AD%E3%83%AA%20(%E4%BB%8B%E9%8C%AF)/">[Hcomic] PROJECTハラキリ (介錯)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2018 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/02</span>
+            <a class="archive-post-title" href="/Comic/R18/konomi/">[Hcomic] (例大祭14) [きのこのみ (konomi)] 隣の咲夜さん (東方Project) [CE家族社]</a>
         </li>
     
         
@@ -6704,8 +7142,26 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span>
+            <a class="archive-post-title" href="/Comic/R18/sweet%20sweat/">[Hcomic] [雛原えみ] Sweet Sweat ( COMlC 快楽天 2017年8月号)[前线作♂战♀基地&猫咪汉化组]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/29</span>
             <a class="archive-post-title" href="/Code/WWW/svg-tool/">几个关于SVG处理的网站</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Comic/R18/%E3%83%AD%E3%83%AA%E3%82%AB%E3%83%AB%E3%83%86!/">[Hcomic] (C87) [青空少女 (白根戴斗)] ロリカルテ! (アイドルマスター) [脸肿汉化组]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/04</span>
+            <a class="archive-post-title" href="/Comic/R18/momi/">[Hcomic] momi x2</a>
         </li>
     
         
@@ -6842,6 +7298,18 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span>
+            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/14</span>
+            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUI 远程的一些问题</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
             <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
         </li>
@@ -6850,6 +7318,24 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/notepad/">文本编辑器类的个人选择</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
         </li>
     
         
@@ -6877,6 +7363,30 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span>
             <a class="archive-post-title" href="/Browser/Extension/ImageAssistant/">[扩展]图片助手(ImageAssistant)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
         </li>
     
         
@@ -6958,12 +7468,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/23</span>
-            <a class="archive-post-title" href="/Comic/R18/kaguyuzu/">[Hcomic] いちごぱんつ (カグユヅ)</a>
-        </li>
-    
-        
             
             
                 
@@ -6992,24 +7496,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/28</span>
-            <a class="archive-post-title" href="/Comic/R18/%E3%81%BE%E3%81%84%E3%81%99%E3%81%86%E3%81%83%E3%83%BC%E3%81%A8%E3%81%A7%E3%81%B3%E3%82%8B/">[雛原えみ] まいすうぃーとでびる [中国翻訳]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/24</span>
-            <a class="archive-post-title" href="/Comic/R18/%E5%85%AD%E8%8A%B1%E3%81%A1%E3%82%83%E3%82%93%E3%81%B5%E3%81%A8%E3%82%82%E3%82%82%E3%81%BA%E3%82%8D%E3%81%BA%E3%82%8D%E3%81%BE%E3%81%98%E3%81%8B%E3%82%8F%E3%81%84%E3%81%99%E3%81%8E/">[R18](C95) [裏FMO (フミオ)] 六花ちゃんふとももぺろぺろまじかわいすぎ (SSSS.GRIDMAN)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/30</span>
-            <a class="archive-post-title" href="/Comic/R18/%E3%81%8A%E3%81%95%E3%81%AA%E3%81%AA%E3%81%98%E3%81%BF%E3%81%88%E3%81%A3%E3%81%A1/">[Hcomic][からじしぼたん (牡丹もちと)] おさななじみえっち [無邪気漢化組] [DL版]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">05/16</span>
             <a class="archive-post-title" href="/Browser/Extension/chrome-extension-downloader/">Chrome 离线扩展下载网站两个</a>
         </li>
@@ -7023,12 +7509,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span>
-            <a class="archive-post-title" href="/Comic/R18/konomi/">[Hcomic] (例大祭14) [きのこのみ (konomi)] 隣の咲夜さん (東方Project) [CE家族社]</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/28</span>
@@ -7052,26 +7532,8 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span>
-            <a class="archive-post-title" href="/Comic/R18/sweet%20sweat/">[Hcomic] [雛原えみ] Sweet Sweat ( COMlC 快楽天 2017年8月号)[前线作♂战♀基地&猫咪汉化组]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Comic/R18/%E3%83%AD%E3%83%AA%E3%82%AB%E3%83%AB%E3%83%86!/">[Hcomic] (C87) [青空少女 (白根戴斗)] ロリカルテ! (アイドルマスター) [脸肿汉化组]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">06/30</span>
             <a class="archive-post-title" href="/Comic/R18/%E7%8C%AB%E8%80%B3%E8%88%9E%E5%85%88%E8%BC%A9/">[Hcomic][R18](COMIC1☆10) [ねこのこね (タケユウ)] 猫耳舞先輩 (無彩限のファントム・ワールド) [无毒汉化组]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span>
-            <a class="archive-post-title" href="/Comic/R18/momi/">[Hcomic] momi x2</a>
         </li>
     
         
@@ -7137,45 +7599,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/19</span>
-            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/14</span>
-            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUI 远程的一些问题</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> Invalid date </div>
             <ul class="year-list">
             
@@ -7224,6 +7647,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Anime/Ralph/">[Disney]无敌破坏王[Wreck-It Ralph] 2012&无敌破坏王2：大闹互联网[Ralph Breaks the Internet] 2018</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Tangled/">[Disney]魔发奇缘[Tangled]</a>
         </li>
     
@@ -7231,30 +7660,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Zootopia/">[Disney]疯狂动物城[Zootopia]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
         </li>
     
         
@@ -7278,13 +7683,37 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/12</span>
             <a class="archive-post-title" href="/Video/R18/YMDD-177/">[R18]YMDD-177</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span>
+            <a class="archive-post-title" href="/Video/Stellar%20-%20Marionette/">[性感MV]Stellar - Marionette(牵线木偶)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/12</span>
+            <a class="archive-post-title" href="/Comic/R18/Michiking/">あんみつよもぎ亭 (みちきんぐ)_Michiking 系列</a>
         </li>
     
         
@@ -7318,6 +7747,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">06/12</span>
             <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/ASK/">[pixiv]推荐作者 - ASK</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/10</span>
+            <a class="archive-post-title" href="/Comic/R18/%E4%B8%B8%E5%92%8C%E5%A4%AA%E9%83%8E/">[Hcomic]丸和太郎</a>
         </li>
     
         
@@ -7400,8 +7835,8 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/02</span>
-            <a class="archive-post-title" href="/Code/%E5%BC%80%E6%BA%90/">一张经典图，开源协议比较</a>
+            <span class="archive-post-date">09/20</span>
+            <a class="archive-post-title" href="/Game/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/357Weapon&Task/">真三国无双7 全秘藏武器获得条件 以及 任务注意事项</a>
         </li>
     
         
@@ -7432,6 +7867,21 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/Toradora/">[Anime]龙与虎[Toradora](とらドラ!)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2015 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/02</span>
+            <a class="archive-post-title" href="/Code/%E5%BC%80%E6%BA%90/">一张经典图，开源协议比较</a>
         </li>
     
         
@@ -7530,241 +7980,13 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/12</span>
-            <a class="archive-post-title" href="/Document/madvr/">madVR 瞎写篇</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/23</span>
-            <a class="archive-post-title" href="/Document/HDR/">x265 HDR 参数计算方法</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/28</span>
-            <a class="archive-post-title" href="/Document/x265/">x265参数解析</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/25</span>
-            <a class="archive-post-title" href="/Document/CPU_info/">两个CPU性能分对比的网站</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/20</span>
-            <a class="archive-post-title" href="/Document/%E6%AD%BB%E9%93%BE%E6%A3%80%E6%B5%8B/">网站死链检测</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/16</span>
-            <a class="archive-post-title" href="/Issue/fstab/">[问题处理]记一次很折腾的fstab mount iso</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/11</span>
-            <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Anime/Ralph/">[Disney]无敌破坏王[Wreck-It Ralph] 2012&无敌破坏王2：大闹互联网[Ralph Breaks the Internet] 2018</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/18</span>
-            <a class="archive-post-title" href="/Video/Stellar%20-%20Marionette/">[性感MV]Stellar - Marionette(牵线木偶)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span>
-            <a class="archive-post-title" href="/Video/Lemon/">[Youtube]Lemon-米津玄師 yurisa翻唱</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/07</span>
-            <a class="archive-post-title" href="/Document/Photobucket/">Photobucket去水印</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/12</span>
-            <a class="archive-post-title" href="/Comic/R18/Michiking/">あんみつよもぎ亭 (みちきんぐ)_Michiking 系列</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/08</span>
-            <a class="archive-post-title" href="/Document/%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E8%BD%AF%E4%BB%B6/">禁止win10开机自动打开上次未关闭程序</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2019 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/25</span>
-            <a class="archive-post-title" href="/etc/rip/">压制组相关</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/10</span>
-            <a class="archive-post-title" href="/Comic/R18/%E4%B8%B8%E5%92%8C%E5%A4%AA%E9%83%8E/">[Hcomic]丸和太郎</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/22</span>
-            <a class="archive-post-title" href="/Document/%E5%9B%BE%E7%A7%8D/">[资料]图种原理</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/17</span>
-            <a class="archive-post-title" href="/Video/%E4%BB%93%E7%A7%91%E5%8A%A0%E5%A5%88/">[Beach.Angels][仓科加奈 Kurashina Kana]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/02</span>
-            <a class="archive-post-title" href="/Document/67%E4%BB%A3U%E5%BC%BA%E8%A3%85%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">6、7代U装Windows 7强装显卡驱动</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2018 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/27</span>
-            <a class="archive-post-title" href="/Document/MX%20Player%20codec/">MX player 解码包选择</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span>
-            <a class="archive-post-title" href="/Document/magnet/">[资料]特殊的磁力链(magnet)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/07</span>
-            <a class="archive-post-title" href="/Game/%E7%BE%8E%E5%B0%91%E5%A5%B3%E4%B8%87%E5%8D%8E%E9%95%9C/">[R18]美少女万华镜</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/13</span>
-            <a class="archive-post-title" href="/Document/U%E7%9B%98%E9%87%8F%E4%BA%A7/">[资料]U盘量产简介</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">02/07</span>
             <a class="archive-post-title" href="/Comic/R18/%E3%81%8D%E3%81%8F%E3%82%89%E3%81%92%E5%B1%8B/">[R18]きくらげ屋 (きくらげ)系列</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/04</span>
-            <a class="archive-post-title" href="/Document/%E6%98%BE%E7%A4%BA%E5%99%A8%E6%8E%A5%E5%8F%A3/">[资料]你所不知道的显示器接口的一些信息</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/22</span>
-            <a class="archive-post-title" href="/Document/Video/">[半转载]播放器、视频基础知识</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/22</span>
-            <a class="archive-post-title" href="/Video/%E5%88%9D%E9%9F%B3%E6%BC%94%E5%94%B1%E4%BC%9A/">初音演唱会[Hatsune Miku Live Party]专辑</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span>
-            <a class="archive-post-title" href="/Document/%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/">[资料]高级搜索语法</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/20</span>
-            <a class="archive-post-title" href="/Game/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/357Weapon&Task/">真三国无双7 全秘藏武器获得条件 以及 任务注意事项</a>
         </li>
     
         
@@ -7820,8 +8042,44 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span>
+            <a class="archive-post-title" href="/Document/madvr/">madVR 瞎写篇</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span>
+            <a class="archive-post-title" href="/Software/ShareX/">[截图]ShareX</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/14</span>
+            <a class="archive-post-title" href="/Software/HWIDGen/">Win10数字权利激活工具以及KMS LongLife激活</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">03/22</span>
             <a class="archive-post-title" href="/Document/SSL/">SSL 自签证书相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/20</span>
+            <a class="archive-post-title" href="/Software/ffmpeg/">FFmpeg版本区别</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/24</span>
+            <a class="archive-post-title" href="/Software/System/Slax/">[不再推荐]Slax - Linux PE</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/23</span>
+            <a class="archive-post-title" href="/Document/HDR/">x265 HDR 参数计算方法</a>
         </li>
     
         
@@ -7841,6 +8099,78 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">11/28</span>
+            <a class="archive-post-title" href="/Document/x265/">x265参数解析</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/25</span>
+            <a class="archive-post-title" href="/Document/CPU_info/">两个CPU性能分对比的网站</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/20</span>
+            <a class="archive-post-title" href="/Document/%E6%AD%BB%E9%93%BE%E6%A3%80%E6%B5%8B/">网站死链检测</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/08</span>
+            <a class="archive-post-title" href="/Software/Vmware%20Mac%20OS%20X%20Unlocker/">Vmware Mac OS X Unlocker</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/21</span>
+            <a class="archive-post-title" href="/Software/Media/">[软件推荐]影音类软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span>
+            <a class="archive-post-title" href="/Issue/fstab/">[问题处理]记一次很折腾的fstab mount iso</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/13</span>
+            <a class="archive-post-title" href="/Software/MobaXterm/">MobaXterm</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/11</span>
+            <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/27</span>
+            <a class="archive-post-title" href="/Software/Clover/">[不再推荐][大眼仔~旭]Clover 3.5.4 多标签资源管理器，替代Explorer</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span>
+            <a class="archive-post-title" href="/Video/Lemon/">[Youtube]Lemon-米津玄師 yurisa翻唱</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/07</span>
+            <a class="archive-post-title" href="/Document/Photobucket/">Photobucket去水印</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/08</span>
+            <a class="archive-post-title" href="/Document/%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E8%BD%AF%E4%BB%B6/">禁止win10开机自动打开上次未关闭程序</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/08</span>
             <a class="archive-post-title" href="/Software/Maintenance/%E5%85%89%E7%9B%98%E6%98%A0%E5%83%8F/">光盘映像类软件</a>
         </li>
@@ -7856,14 +8186,32 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span>
+            <a class="archive-post-title" href="/Software/File-recovery/">文件恢复类软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/22</span>
             <a class="archive-post-title" href="/Code/Terminal/Powershell%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6/">[Terminal]Powershell执行策略限制相关</a>
         </li>
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span>
+            <a class="archive-post-title" href="/etc/rip/">压制组相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/20</span>
             <a class="archive-post-title" href="/Software/%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E8%BD%AF%E4%BB%B6/">批量重命名软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/Software/KeePassXC/">[开源]KeePassXC - 强大的密码管理软件以及密码自动填写工具</a>
         </li>
     
         
@@ -7880,6 +8228,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/05</span>
+            <a class="archive-post-title" href="/Software/Tera%20Term/">[不再推荐][开源]Tera Term - 远程连接工具 - SecureCRT替代者</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/01</span>
             <a class="archive-post-title" href="/Software/System/CentOS/">CentOS踩坑实录</a>
         </li>
@@ -7888,6 +8242,30 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">05/28</span>
             <a class="archive-post-title" href="/Software/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/27</span>
+            <a class="archive-post-title" href="/Software/ultracopier/">[不再推荐]ultracopier - 复制加强工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/27</span>
+            <a class="archive-post-title" href="/Software/Online%20PDF%20editor/">Online PDF editor</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/22</span>
+            <a class="archive-post-title" href="/Document/%E5%9B%BE%E7%A7%8D/">[资料]图种原理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/17</span>
+            <a class="archive-post-title" href="/Video/%E4%BB%93%E7%A7%91%E5%8A%A0%E5%A5%88/">[Beach.Angels][仓科加奈 Kurashina Kana]</a>
         </li>
     
         
@@ -7915,6 +8293,18 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         </li>
     
         
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/10</span>
+            <a class="archive-post-title" href="/Software/%E5%B8%B8%E7%94%A8%E8%BF%90%E8%A1%8C%E5%BA%93/">常用运行库</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/02</span>
+            <a class="archive-post-title" href="/Document/67%E4%BB%A3U%E5%BC%BA%E8%A3%85%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">6、7代U装Windows 7强装显卡驱动</a>
+        </li>
+    
+        
             
             
                 
@@ -7923,6 +8313,18 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/27</span>
+            <a class="archive-post-title" href="/Document/MX%20Player%20codec/">MX player 解码包选择</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/06</span>
+            <a class="archive-post-title" href="/Software/%E6%9C%AC%E5%9C%B0%E5%90%8C%E6%AD%A5/">本地同步软件</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/28</span>
@@ -7962,13 +8364,31 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/27</span>
+            <a class="archive-post-title" href="/Software/%E5%BD%95%E5%B1%8F/">[开源]两款录屏软件 LICEcap 以及 OBS Studio (Open Broadcaster Software)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/27</span>
             <a class="archive-post-title" href="/Software/Maintenance/WinNTSetup/">WinNTSetup - 系统部署工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/26</span>
+            <a class="archive-post-title" href="/Software/DISM++/">[封装]DISM++ 以及一些DISM相关的东西</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>
             <a class="archive-post-title" href="/Software/Security/ESET/">ESET 问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span>
+            <a class="archive-post-title" href="/Document/magnet/">[资料]特殊的磁力链(magnet)</a>
         </li>
     
         
@@ -7982,6 +8402,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/07</span>
+            <a class="archive-post-title" href="/Game/%E7%BE%8E%E5%B0%91%E5%A5%B3%E4%B8%87%E5%8D%8E%E9%95%9C/">[R18]美少女万华镜</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/05</span>
             <a class="archive-post-title" href="/Software/Maintenance/PCHunter/">[ARK工具]PC Hunter</a>
         </li>
@@ -7990,6 +8416,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">05/09</span>
             <a class="archive-post-title" href="/Software/Security/SpyShelter/">SpyShelter Firewall问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/13</span>
+            <a class="archive-post-title" href="/Document/U%E7%9B%98%E9%87%8F%E4%BA%A7/">[资料]U盘量产简介</a>
         </li>
     
         
@@ -8021,8 +8453,20 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span>
+            <a class="archive-post-title" href="/Software/FontForge/">[不再推荐][开源]字体编辑器 - FontForge</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
             <a class="archive-post-title" href="/Document/McAfee/">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span>
+            <a class="archive-post-title" href="/Document/%E6%98%BE%E7%A4%BA%E5%99%A8%E6%8E%A5%E5%8F%A3/">[资料]你所不知道的显示器接口的一些信息</a>
         </li>
     
         
@@ -8036,8 +8480,20 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">12/22</span>
+            <a class="archive-post-title" href="/Document/Video/">[半转载]播放器、视频基础知识</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">12/20</span>
             <a class="archive-post-title" href="/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/">[资料]Unicode字符编码表</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/22</span>
+            <a class="archive-post-title" href="/Video/%E5%88%9D%E9%9F%B3%E6%BC%94%E5%94%B1%E4%BC%9A/">初音演唱会[Hatsune Miku Live Party]专辑</a>
         </li>
     
         
@@ -8056,6 +8512,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">10/11</span>
             <a class="archive-post-title" href="/Document/telecom/">电信光猫通用用户名以及密码</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span>
+            <a class="archive-post-title" href="/Document/%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/">[资料]高级搜索语法</a>
         </li>
     
         
@@ -8668,11 +9130,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
                 Hardware Tool
             </span>
         
-            <span class="sidebar-tag-name" data-tags="文件工具">
-                <span class="iconfont-archer">&#xe606;</span>
-                文件工具
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="破解&激活">
                 <span class="iconfont-archer">&#xe606;</span>
                 破解&激活
@@ -8726,6 +9183,31 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <span class="sidebar-tag-name" data-tags="Network">
                 <span class="iconfont-archer">&#xe606;</span>
                 Network
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="不再推荐">
+                <span class="iconfont-archer">&#xe606;</span>
+                不再推荐
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows - Linux - OS X - Open Source - GPLv2 - GPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows - Linux - OS X - Open Source - GPLv2 - GPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="LGPL">
+                <span class="iconfont-archer">&#xe606;</span>
+                LGPL
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="VM">
+                <span class="iconfont-archer">&#xe606;</span>
+                VM
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL
             </span>
         
     </div>

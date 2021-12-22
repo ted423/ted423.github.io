@@ -460,6 +460,250 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/samba/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
+            </a>
+            <div class="abstract-content">
+                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)
+理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
+说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
+123456...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/07/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Remote/x2go/">
+                
+                <span class="abstract-title-text">[开源]x2go - 远程连接</span>
+            </a>
+            <div class="abstract-content">
+                不推荐使用，最后又滚回去使用NoMachine了然后发现NoMachine有别的问题
+网址https://wiki.x2go.org/doku.php/start本来想吐槽x2go的，后面发现是自己的问题。闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。看到x2go用NX协议就也想试试，毕竟开源。首先是跟nomachine不兼容。当然这是小事。
+x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。使用桌面登录会跟你显示器登录是不一样。当然还能用X11这里引入一个小故事
+当我看到x2go在x11可以选...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/07/15">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/etc/Fuck/">
+                
+                <span class="abstract-title-text">去你妈的不求甚解</span>
+            </a>
+            <div class="abstract-content">
+                其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论https://www.zhihu.com/question/34935661https://www.zhihu.com/question/20840941
+更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/07/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/03</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">
+                
+                <span class="abstract-title-text">[转载]让“中国式的聪明”滚出中国</span>
+            </a>
+            <div class="abstract-content">
+                文章后部有增加知乎的内容
+文/庄佩璋
+杨蕙如是台湾台东县台东市人，国立成功大学学士，澳洲昆士兰大学企管硕士。因为善用信用卡八倍红利回馈、网路拍卖、电视购物礼卷优惠，从中国信托银行倒赚一笔，成为卡奴们心中的英雄，被媒体封为“卡神”。
+杨蕙如赚钱的套路：办一张台湾某银行信用卡，获得刷卡消费红利点数（相当于“消费积分”）8倍的优惠，然后在购物台用信用卡购买了600万元（台币）的礼券，转卖给亲友后让亲友在网上拍卖，自己再从网上刷卡买回。这样她的红利点数（消费积分）迅速累积到800余万点，她用这些点数兑换航空公司的头等舱机票，以半价在网上出售，短短两个月内获利上百万元新台币。
+杨蕙如几年前与信用卡...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/07/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Document&Texteditor/notepad3/">
+                
+                <span class="abstract-title-text">[文本编辑器]Notepad3</span>
+            </a>
+            <div class="abstract-content">
+                
+https://www.rizonesoft.com/downloads/notepad3/
+https://github.com/rizonesoft/Notepad3
+
+先说开源协议我没看懂，并没写开源协议的名字，感觉有点像MIT？没细看规则。反正是Copyright类的。对了下，是3-clause BSD的License
+曾经有个notepad2，最大的作用是完全替换微软的notepad，使用的是映像劫持的方式。所以即便装了别的文本编辑器，我也还是喜欢再装一个notepad2以便彻底干死微软的。可惜弃更了。
+所以这个notepad3也能做到，并且开源。就是不知道会不会有Notep...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/07/02">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/04/29</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="3-clause BSD license">3-clause BSD license</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Compression/7-Zip-zstd/">
                 
                 <span class="abstract-title-text">[开源]7-Zip-zstd 7z增强版</span>
@@ -725,278 +969,10 @@ Office 2013 64位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_20
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Picture/">
-                
-                <span class="abstract-title-text">[软件推荐]图片类相关软件</span>
-            </a>
-            <div class="abstract-content">
-                看图我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，速度相当快，相对来讲XnViewMP搜索类别更细，功能性更强，但是Xnview里的结果是一次性的，一旦点开一张图片结果就会消失。就个人感觉，XnView的规划很乱，设计也是乱七八糟，唯有功能比较多而已。况且XnView和XnViewMP的使用界面和方式还有很多不一样，感觉怪怪的。MassiGra的各种按键自定义简直可怕，而且支持读取压缩包里的图片，其实SumatraPDF也支持读取压缩包里的图片强力推荐下Honeyview，给我一种“就是他了”感...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="SVG">SVG</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv3">GPLv3</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="MIT">MIT</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/NFS%20Squash/">
-                
-                <span class="abstract-title-text">NFS squash特性相关</span>
-            </a>
-            <div class="abstract-content">
-                写这篇文章是因为之前写的那个samba的想到了。顺带整理下。这篇文章大部分都为猜测，未作有效以及查证相关检测。
-在阅读这篇文章之前你需要了解
-
-Linux是多用户操作系统
-用户以及组的保存都是基于id(uid gid)
-root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group里可以看，但是不同的Linux版本可能会有不同
-NIS Server
-Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/19">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Terminal/rsync/">
-                
-                <span class="abstract-title-text">[Terminal]rsync</span>
-            </a>
-            <div class="abstract-content">
-                不正常的使用rsync可能会造成灾难性的后果请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avzP   source root@ip:/目录 --log-file=$HOME/.rsync.log
-常用参数123456789 其中z为压缩，在网络性能足够的情况下，不开会快-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/18">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Android/Connectbot/">
-                
-                <span class="abstract-title-text">[Android]Connectbot - Android terminal</span>
-            </a>
-            <div class="abstract-content">
-                https://play.google.com/store/apps/details?id=org.connectbot&amp;hl=zh_TW一个SSH客户端选择local就是连到本机的terminal可以用来看IP，看DNS什么的。getprop 可以在安卓下看配置项然后可以通过grep来筛选你要的信息
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/17">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Android/Google%20Lens/">
-                
-                <span class="abstract-title-text">[Android]Google 智能镜头(Lens) - 二维码扫码软件</span>
-            </a>
-            <div class="abstract-content">
-                原来小米的相机支持扫二维码，做的还不错，但是其他Android就没有主要是为了不用微信扫码，当然，这玩意相当的好用
-https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
-不过这个东东有缺点，必须装Google这个应用，扫码需要联网，不能本地解码，意味着还要翻。
-不过感觉比用一个智障强。
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/17">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/page/3/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/5/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/page/3/">&lt; PREV</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/32/">32</a><a class="extend next" rel="next" href="/page/5/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2697,7 +2673,431 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5202,7 +5602,7 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 299
+        Total : 317
         </div>
         <!-- search  -->
         
@@ -5362,6 +5762,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">06/21</span>
             <a class="archive-post-title" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Issue/Apache/">[问题处理]Linux下Apache2无法启动的原因排查</a>
         </li>
     
         
@@ -5542,6 +5948,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         </li>
     
         
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/Issue/Adobe%20Acrobat%20update%20error/">[问题处理]Adobe Acrobat update error</a>
+        </li>
+    
+        
             
             
                 
@@ -5631,6 +6043,21 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
                 
                 </ul>
             
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">[优化]Windows 关闭休眠功能</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2019 </div>
             <ul class="year-list">
             
@@ -5663,6 +6090,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">12/05</span>
+            <a class="archive-post-title" href="/Optimization/Windows.edb/">[优化]清理Windows.edb(搜索索引文件)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">11/01</span>
             <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP不允许使用已保存的账号密码登陆</a>
         </li>
@@ -5681,8 +6114,8 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span>
-            <a class="archive-post-title" href="/Issue/Apache/">[问题处理]Linux下Apache2无法启动的原因排查</a>
+            <span class="archive-post-date">04/26</span>
+            <a class="archive-post-title" href="/Optimization/Disable-MRT/">[优化]让微软不强制提供"恶意软件删除工具"</a>
         </li>
     
         
@@ -5714,14 +6147,14 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/29</span>
-            <a class="archive-post-title" href="/Optimization/Chrome's%20File%20System%20folder/">[优化]处理MEGA使用HTML5 File System API占用的空间</a>
+            <span class="archive-post-date">08/06</span>
+            <a class="archive-post-title" href="/Optimization/Thumbs.db/">[优化]通过组策略使系统不会自动生成Thumbs.db</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/11</span>
-            <a class="archive-post-title" href="/Issue/windows%2010%20update/">Windows 10 自动update自动重启的解决办法</a>
+            <span class="archive-post-date">07/29</span>
+            <a class="archive-post-title" href="/Optimization/Chrome's%20File%20System%20folder/">[优化]处理MEGA使用HTML5 File System API占用的空间</a>
         </li>
     
         
@@ -5730,19 +6163,43 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
                 
                 </ul>
             
-            <div class="archive-year"> 2016 </div>
+            <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/03</span>
-            <a class="archive-post-title" href="/Issue/%E5%90%8C%E6%AD%A5%E4%B8%AD%E5%BF%83/">[问题处理]Windows 取消同步中心的启动</a>
+            <span class="archive-post-date">11/03</span>
+            <a class="archive-post-title" href="/Issue/CUE/">CUE无法使用以及乱码处理笔记</a>
         </li>
     
         
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
         <li class="archive-post-item">
-            <span class="archive-post-date">08/03</span>
-            <a class="archive-post-title" href="/Issue/Lync/">[问题处理]Lync联系人名片显示异常</a>
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">[问题处理]多同步盘下Dropbox同步状态图标不见</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2017 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/11</span>
+            <a class="archive-post-title" href="/Issue/windows%2010%20update/">Windows 10 自动update自动重启的解决办法</a>
         </li>
     
         
@@ -5762,12 +6219,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">11/03</span>
-            <a class="archive-post-title" href="/Issue/CUE/">CUE无法使用以及乱码处理笔记</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">11/01</span>
             <a class="archive-post-title" href="/Issue/SF%E7%9A%84%E8%AE%A8%E5%8E%8Ccdn/">SF(sourceforge)的恶心cdn</a>
         </li>
@@ -5776,27 +6227,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">08/01</span>
             <a class="archive-post-title" href="/Issue/KB3081444/">[问题处理]Windows 10 的KB3081444补丁安装失败的解决办法</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Issue/Adobe%20Acrobat%20update%20error/">[问题处理]Adobe Acrobat update error</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">[问题处理]多同步盘下Dropbox同步状态图标不见</a>
         </li>
     
         
@@ -5827,6 +6257,21 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/">Ubuntu 和Windows 7共存的GRUB启动顺序</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/03</span>
+            <a class="archive-post-title" href="/Issue/Lync/">[问题处理]Lync联系人名片显示异常</a>
         </li>
     
         
@@ -5953,6 +6398,21 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/%E5%88%A0%E9%99%A4%E5%90%AF%E5%8A%A8%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9%E9%A1%B9/">[Terminal]Windiows系统下删除启动选择系统项</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/03</span>
+            <a class="archive-post-title" href="/Issue/%E5%90%8C%E6%AD%A5%E4%B8%AD%E5%BF%83/">[问题处理]Windows 取消同步中心的启动</a>
         </li>
     
         
@@ -6098,14 +6558,23 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">[优化]Windows 关闭休眠功能</a>
+            <span class="archive-post-date">03/26</span>
+            <a class="archive-post-title" href="/Video/%E5%85%B1%E5%90%8C%E5%AE%B6%E5%9C%92/">[Youtube]粵港澳大灣區主題曲 共同家園</a>
         </li>
     
         
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
         <li class="archive-post-item">
-            <span class="archive-post-date">03/26</span>
-            <a class="archive-post-title" href="/Video/%E5%85%B1%E5%90%8C%E5%AE%B6%E5%9C%92/">[Youtube]粵港澳大灣區主題曲 共同家園</a>
+            <span class="archive-post-date">05/24</span>
+            <a class="archive-post-title" href="/Code/Git/Git%20must%20be%20installed%20and%20in%20your%20PATH!/">[问题处理]MAC brew 之 Git must be installed and in your PATH!</a>
         </li>
     
         
@@ -6119,20 +6588,8 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">12/05</span>
-            <a class="archive-post-title" href="/Optimization/Windows.edb/">[优化]清理Windows.edb(搜索索引文件)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>
             <a class="archive-post-title" href="/Software/tools/">[软件推荐]有用的小工具们</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/26</span>
-            <a class="archive-post-title" href="/Optimization/Disable-MRT/">[优化]让微软不强制提供"恶意软件删除工具"</a>
         </li>
     
         
@@ -6144,12 +6601,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/06</span>
-            <a class="archive-post-title" href="/Optimization/Thumbs.db/">[优化]通过组策略使系统不会自动生成Thumbs.db</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/02</span>
@@ -6190,6 +6641,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">08/01</span>
             <a class="archive-post-title" href="/Optimization/%E5%B8%A6%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86/">[优化]带有密码的 Windows 系统自动登录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/17</span>
+            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -6241,21 +6698,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/System/Fuck%20Windows/">傻逼微软 记一次关键日志 Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/17</span>
-            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -6587,6 +7029,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">02/23</span>
+            <a class="archive-post-title" href="/Comic/R18/kaguyuzu/">[Hcomic] いちごぱんつ (カグユヅ)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/04</span>
             <a class="archive-post-title" href="/Code/Terminal/Symlink/">[Terminal]符号链接</a>
         </li>
@@ -6602,20 +7050,47 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/28</span>
+            <a class="archive-post-title" href="/Comic/R18/%E3%81%BE%E3%81%84%E3%81%99%E3%81%86%E3%81%83%E3%83%BC%E3%81%A8%E3%81%A7%E3%81%B3%E3%82%8B/">[雛原えみ] まいすうぃーとでびる [中国翻訳]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/24</span>
+            <a class="archive-post-title" href="/Comic/R18/%E5%85%AD%E8%8A%B1%E3%81%A1%E3%82%83%E3%82%93%E3%81%B5%E3%81%A8%E3%82%82%E3%82%82%E3%81%BA%E3%82%8D%E3%81%BA%E3%82%8D%E3%81%BE%E3%81%98%E3%81%8B%E3%82%8F%E3%81%84%E3%81%99%E3%81%8E/">[R18](C95) [裏FMO (フミオ)] 六花ちゃんふとももぺろぺろまじかわいすぎ (SSSS.GRIDMAN)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">05/30</span>
             <a class="archive-post-title" href="/Comic/R18/P.E.T.S%20PARADISE/">[Hcomic] (C94) [銀糖製菓 (玉砂糖)] P.E.T.S PARADISE (アズールレーン) [有毒気漢化組]</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span>
-            <a class="archive-post-title" href="/Code/Git/Git%20must%20be%20installed%20and%20in%20your%20PATH!/">[问题处理]MAC brew 之 Git must be installed and in your PATH!</a>
+            <span class="archive-post-date">05/30</span>
+            <a class="archive-post-title" href="/Comic/R18/%E3%81%8A%E3%81%95%E3%81%AA%E3%81%AA%E3%81%98%E3%81%BF%E3%81%88%E3%81%A3%E3%81%A1/">[Hcomic][からじしぼたん (牡丹もちと)] おさななじみえっち [無邪気漢化組] [DL版]</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/24</span>
             <a class="archive-post-title" href="/Comic/R18/PROJECT%E3%83%8F%E3%83%A9%E3%82%AD%E3%83%AA%20(%E4%BB%8B%E9%8C%AF)/">[Hcomic] PROJECTハラキリ (介錯)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2018 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/02</span>
+            <a class="archive-post-title" href="/Comic/R18/konomi/">[Hcomic] (例大祭14) [きのこのみ (konomi)] 隣の咲夜さん (東方Project) [CE家族社]</a>
         </li>
     
         
@@ -6635,8 +7110,26 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span>
+            <a class="archive-post-title" href="/Comic/R18/sweet%20sweat/">[Hcomic] [雛原えみ] Sweet Sweat ( COMlC 快楽天 2017年8月号)[前线作♂战♀基地&猫咪汉化组]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/29</span>
             <a class="archive-post-title" href="/Code/WWW/svg-tool/">几个关于SVG处理的网站</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Comic/R18/%E3%83%AD%E3%83%AA%E3%82%AB%E3%83%AB%E3%83%86!/">[Hcomic] (C87) [青空少女 (白根戴斗)] ロリカルテ! (アイドルマスター) [脸肿汉化组]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/04</span>
+            <a class="archive-post-title" href="/Comic/R18/momi/">[Hcomic] momi x2</a>
         </li>
     
         
@@ -6773,6 +7266,18 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/19</span>
+            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/14</span>
+            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUI 远程的一些问题</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
             <a class="archive-post-title" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a>
         </li>
@@ -6781,6 +7286,24 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">07/01</span>
             <a class="archive-post-title" href="/Software/Document&Texteditor/notepad/">文本编辑器类的个人选择</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/01</span>
+            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
         </li>
     
         
@@ -6808,6 +7331,30 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span>
             <a class="archive-post-title" href="/Browser/Extension/ImageAssistant/">[扩展]图片助手(ImageAssistant)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
         </li>
     
         
@@ -6889,12 +7436,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/23</span>
-            <a class="archive-post-title" href="/Comic/R18/kaguyuzu/">[Hcomic] いちごぱんつ (カグユヅ)</a>
-        </li>
-    
-        
             
             
                 
@@ -6923,24 +7464,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/28</span>
-            <a class="archive-post-title" href="/Comic/R18/%E3%81%BE%E3%81%84%E3%81%99%E3%81%86%E3%81%83%E3%83%BC%E3%81%A8%E3%81%A7%E3%81%B3%E3%82%8B/">[雛原えみ] まいすうぃーとでびる [中国翻訳]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/24</span>
-            <a class="archive-post-title" href="/Comic/R18/%E5%85%AD%E8%8A%B1%E3%81%A1%E3%82%83%E3%82%93%E3%81%B5%E3%81%A8%E3%82%82%E3%82%82%E3%81%BA%E3%82%8D%E3%81%BA%E3%82%8D%E3%81%BE%E3%81%98%E3%81%8B%E3%82%8F%E3%81%84%E3%81%99%E3%81%8E/">[R18](C95) [裏FMO (フミオ)] 六花ちゃんふとももぺろぺろまじかわいすぎ (SSSS.GRIDMAN)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/30</span>
-            <a class="archive-post-title" href="/Comic/R18/%E3%81%8A%E3%81%95%E3%81%AA%E3%81%AA%E3%81%98%E3%81%BF%E3%81%88%E3%81%A3%E3%81%A1/">[Hcomic][からじしぼたん (牡丹もちと)] おさななじみえっち [無邪気漢化組] [DL版]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">05/16</span>
             <a class="archive-post-title" href="/Browser/Extension/chrome-extension-downloader/">Chrome 离线扩展下载网站两个</a>
         </li>
@@ -6954,12 +7477,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span>
-            <a class="archive-post-title" href="/Comic/R18/konomi/">[Hcomic] (例大祭14) [きのこのみ (konomi)] 隣の咲夜さん (東方Project) [CE家族社]</a>
-        </li>
-    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/28</span>
@@ -6983,26 +7500,8 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span>
-            <a class="archive-post-title" href="/Comic/R18/sweet%20sweat/">[Hcomic] [雛原えみ] Sweet Sweat ( COMlC 快楽天 2017年8月号)[前线作♂战♀基地&猫咪汉化组]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Comic/R18/%E3%83%AD%E3%83%AA%E3%82%AB%E3%83%AB%E3%83%86!/">[Hcomic] (C87) [青空少女 (白根戴斗)] ロリカルテ! (アイドルマスター) [脸肿汉化组]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">06/30</span>
             <a class="archive-post-title" href="/Comic/R18/%E7%8C%AB%E8%80%B3%E8%88%9E%E5%85%88%E8%BC%A9/">[Hcomic][R18](COMIC1☆10) [ねこのこね (タケユウ)] 猫耳舞先輩 (無彩限のファントム・ワールド) [无毒汉化组]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/04</span>
-            <a class="archive-post-title" href="/Comic/R18/momi/">[Hcomic] momi x2</a>
         </li>
     
         
@@ -7068,45 +7567,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/19</span>
-            <a class="archive-post-title" href="/Software/Remote/vncserver%20-localhost%20no/">vncserver -localhost no</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/14</span>
-            <a class="archive-post-title" href="/Software/Remote/Linux%20Remote/">Linux GUI 远程的一些问题</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/01</span>
-            <a class="archive-post-title" href="/Software/Remote/NoMachine/">[Remote]NoMachine 远程工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/Use%20Thunder/">我为什么仍在使用迅雷</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/29</span>
-            <a class="archive-post-title" href="/Software/Document&Texteditor/notepad3/">[文本编辑器]Notepad3</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> Invalid date </div>
             <ul class="year-list">
             
@@ -7155,6 +7615,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Anime/Ralph/">[Disney]无敌破坏王[Wreck-It Ralph] 2012&无敌破坏王2：大闹互联网[Ralph Breaks the Internet] 2018</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Tangled/">[Disney]魔发奇缘[Tangled]</a>
         </li>
     
@@ -7162,30 +7628,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Anime/Zootopia/">[Disney]疯狂动物城[Zootopia]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/aria2c-defect/">不使用aria2c的原因</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/IDM/">[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</a>
         </li>
     
         
@@ -7209,13 +7651,37 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/">迅雷(thunder)/快车(FlashGet)下载地址转换</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/12</span>
             <a class="archive-post-title" href="/Video/R18/YMDD-177/">[R18]YMDD-177</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/18</span>
+            <a class="archive-post-title" href="/Video/Stellar%20-%20Marionette/">[性感MV]Stellar - Marionette(牵线木偶)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/12</span>
+            <a class="archive-post-title" href="/Comic/R18/Michiking/">あんみつよもぎ亭 (みちきんぐ)_Michiking 系列</a>
         </li>
     
         
@@ -7249,6 +7715,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">06/12</span>
             <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/ASK/">[pixiv]推荐作者 - ASK</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/10</span>
+            <a class="archive-post-title" href="/Comic/R18/%E4%B8%B8%E5%92%8C%E5%A4%AA%E9%83%8E/">[Hcomic]丸和太郎</a>
         </li>
     
         
@@ -7331,8 +7803,8 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/02</span>
-            <a class="archive-post-title" href="/Code/%E5%BC%80%E6%BA%90/">一张经典图，开源协议比较</a>
+            <span class="archive-post-date">09/20</span>
+            <a class="archive-post-title" href="/Game/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/357Weapon&Task/">真三国无双7 全秘藏武器获得条件 以及 任务注意事项</a>
         </li>
     
         
@@ -7363,6 +7835,21 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/Toradora/">[Anime]龙与虎[Toradora](とらドラ!)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2015 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/02</span>
+            <a class="archive-post-title" href="/Code/%E5%BC%80%E6%BA%90/">一张经典图，开源协议比较</a>
         </li>
     
         
@@ -7461,241 +7948,13 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/12</span>
-            <a class="archive-post-title" href="/Document/madvr/">madVR 瞎写篇</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/23</span>
-            <a class="archive-post-title" href="/Document/HDR/">x265 HDR 参数计算方法</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2020 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/28</span>
-            <a class="archive-post-title" href="/Document/x265/">x265参数解析</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/25</span>
-            <a class="archive-post-title" href="/Document/CPU_info/">两个CPU性能分对比的网站</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/20</span>
-            <a class="archive-post-title" href="/Document/%E6%AD%BB%E9%93%BE%E6%A3%80%E6%B5%8B/">网站死链检测</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/16</span>
-            <a class="archive-post-title" href="/Issue/fstab/">[问题处理]记一次很折腾的fstab mount iso</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/11</span>
-            <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Anime/Ralph/">[Disney]无敌破坏王[Wreck-It Ralph] 2012&无敌破坏王2：大闹互联网[Ralph Breaks the Internet] 2018</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">[转载]Web设计师和前端工程师要了解的前端性能知识</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/18</span>
-            <a class="archive-post-title" href="/Video/Stellar%20-%20Marionette/">[性感MV]Stellar - Marionette(牵线木偶)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/12</span>
-            <a class="archive-post-title" href="/Video/Lemon/">[Youtube]Lemon-米津玄師 yurisa翻唱</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/07</span>
-            <a class="archive-post-title" href="/Document/Photobucket/">Photobucket去水印</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/12</span>
-            <a class="archive-post-title" href="/Comic/R18/Michiking/">あんみつよもぎ亭 (みちきんぐ)_Michiking 系列</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/08</span>
-            <a class="archive-post-title" href="/Document/%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E8%BD%AF%E4%BB%B6/">禁止win10开机自动打开上次未关闭程序</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2019 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/25</span>
-            <a class="archive-post-title" href="/etc/rip/">压制组相关</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/10</span>
-            <a class="archive-post-title" href="/Comic/R18/%E4%B8%B8%E5%92%8C%E5%A4%AA%E9%83%8E/">[Hcomic]丸和太郎</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/22</span>
-            <a class="archive-post-title" href="/Document/%E5%9B%BE%E7%A7%8D/">[资料]图种原理</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/17</span>
-            <a class="archive-post-title" href="/Video/%E4%BB%93%E7%A7%91%E5%8A%A0%E5%A5%88/">[Beach.Angels][仓科加奈 Kurashina Kana]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/02</span>
-            <a class="archive-post-title" href="/Document/67%E4%BB%A3U%E5%BC%BA%E8%A3%85%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">6、7代U装Windows 7强装显卡驱动</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2018 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/27</span>
-            <a class="archive-post-title" href="/Document/MX%20Player%20codec/">MX player 解码包选择</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/10</span>
-            <a class="archive-post-title" href="/Document/magnet/">[资料]特殊的磁力链(magnet)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/07</span>
-            <a class="archive-post-title" href="/Game/%E7%BE%8E%E5%B0%91%E5%A5%B3%E4%B8%87%E5%8D%8E%E9%95%9C/">[R18]美少女万华镜</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/13</span>
-            <a class="archive-post-title" href="/Document/U%E7%9B%98%E9%87%8F%E4%BA%A7/">[资料]U盘量产简介</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">02/07</span>
             <a class="archive-post-title" href="/Comic/R18/%E3%81%8D%E3%81%8F%E3%82%89%E3%81%92%E5%B1%8B/">[R18]きくらげ屋 (きくらげ)系列</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/04</span>
-            <a class="archive-post-title" href="/Document/%E6%98%BE%E7%A4%BA%E5%99%A8%E6%8E%A5%E5%8F%A3/">[资料]你所不知道的显示器接口的一些信息</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/22</span>
-            <a class="archive-post-title" href="/Document/Video/">[半转载]播放器、视频基础知识</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/22</span>
-            <a class="archive-post-title" href="/Video/%E5%88%9D%E9%9F%B3%E6%BC%94%E5%94%B1%E4%BC%9A/">初音演唱会[Hatsune Miku Live Party]专辑</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/01</span>
-            <a class="archive-post-title" href="/Document/%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/">[资料]高级搜索语法</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/20</span>
-            <a class="archive-post-title" href="/Game/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/357Weapon&Task/">真三国无双7 全秘藏武器获得条件 以及 任务注意事项</a>
         </li>
     
         
@@ -7751,8 +8010,44 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/12</span>
+            <a class="archive-post-title" href="/Document/madvr/">madVR 瞎写篇</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/02</span>
+            <a class="archive-post-title" href="/Software/ShareX/">[截图]ShareX</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/14</span>
+            <a class="archive-post-title" href="/Software/HWIDGen/">Win10数字权利激活工具以及KMS LongLife激活</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">03/22</span>
             <a class="archive-post-title" href="/Document/SSL/">SSL 自签证书相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/20</span>
+            <a class="archive-post-title" href="/Software/ffmpeg/">FFmpeg版本区别</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/24</span>
+            <a class="archive-post-title" href="/Software/System/Slax/">[不再推荐]Slax - Linux PE</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/23</span>
+            <a class="archive-post-title" href="/Document/HDR/">x265 HDR 参数计算方法</a>
         </li>
     
         
@@ -7772,6 +8067,78 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">11/28</span>
+            <a class="archive-post-title" href="/Document/x265/">x265参数解析</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/25</span>
+            <a class="archive-post-title" href="/Document/CPU_info/">两个CPU性能分对比的网站</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/20</span>
+            <a class="archive-post-title" href="/Document/%E6%AD%BB%E9%93%BE%E6%A3%80%E6%B5%8B/">网站死链检测</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/08</span>
+            <a class="archive-post-title" href="/Software/Vmware%20Mac%20OS%20X%20Unlocker/">Vmware Mac OS X Unlocker</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/21</span>
+            <a class="archive-post-title" href="/Software/Media/">[软件推荐]影音类软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/16</span>
+            <a class="archive-post-title" href="/Issue/fstab/">[问题处理]记一次很折腾的fstab mount iso</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/13</span>
+            <a class="archive-post-title" href="/Software/MobaXterm/">MobaXterm</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/11</span>
+            <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/27</span>
+            <a class="archive-post-title" href="/Software/Clover/">[不再推荐][大眼仔~旭]Clover 3.5.4 多标签资源管理器，替代Explorer</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/12</span>
+            <a class="archive-post-title" href="/Video/Lemon/">[Youtube]Lemon-米津玄師 yurisa翻唱</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/07</span>
+            <a class="archive-post-title" href="/Document/Photobucket/">Photobucket去水印</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/08</span>
+            <a class="archive-post-title" href="/Document/%E7%A6%81%E6%AD%A2%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E8%BD%AF%E4%BB%B6/">禁止win10开机自动打开上次未关闭程序</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/08</span>
             <a class="archive-post-title" href="/Software/Maintenance/%E5%85%89%E7%9B%98%E6%98%A0%E5%83%8F/">光盘映像类软件</a>
         </li>
@@ -7787,14 +8154,32 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span>
+            <a class="archive-post-title" href="/Software/File-recovery/">文件恢复类软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/22</span>
             <a class="archive-post-title" href="/Code/Terminal/Powershell%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6/">[Terminal]Powershell执行策略限制相关</a>
         </li>
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span>
+            <a class="archive-post-title" href="/etc/rip/">压制组相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/20</span>
             <a class="archive-post-title" href="/Software/%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E8%BD%AF%E4%BB%B6/">批量重命名软件</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/17</span>
+            <a class="archive-post-title" href="/Software/KeePassXC/">[开源]KeePassXC - 强大的密码管理软件以及密码自动填写工具</a>
         </li>
     
         
@@ -7811,6 +8196,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/05</span>
+            <a class="archive-post-title" href="/Software/Tera%20Term/">[不再推荐][开源]Tera Term - 远程连接工具 - SecureCRT替代者</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/01</span>
             <a class="archive-post-title" href="/Software/System/CentOS/">CentOS踩坑实录</a>
         </li>
@@ -7819,6 +8210,30 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">05/28</span>
             <a class="archive-post-title" href="/Software/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/27</span>
+            <a class="archive-post-title" href="/Software/ultracopier/">[不再推荐]ultracopier - 复制加强工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/27</span>
+            <a class="archive-post-title" href="/Software/Online%20PDF%20editor/">Online PDF editor</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/22</span>
+            <a class="archive-post-title" href="/Document/%E5%9B%BE%E7%A7%8D/">[资料]图种原理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/17</span>
+            <a class="archive-post-title" href="/Video/%E4%BB%93%E7%A7%91%E5%8A%A0%E5%A5%88/">[Beach.Angels][仓科加奈 Kurashina Kana]</a>
         </li>
     
         
@@ -7846,6 +8261,18 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         </li>
     
         
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/10</span>
+            <a class="archive-post-title" href="/Software/%E5%B8%B8%E7%94%A8%E8%BF%90%E8%A1%8C%E5%BA%93/">常用运行库</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/02</span>
+            <a class="archive-post-title" href="/Document/67%E4%BB%A3U%E5%BC%BA%E8%A3%85%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/">6、7代U装Windows 7强装显卡驱动</a>
+        </li>
+    
+        
             
             
                 
@@ -7854,6 +8281,18 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/27</span>
+            <a class="archive-post-title" href="/Document/MX%20Player%20codec/">MX player 解码包选择</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/06</span>
+            <a class="archive-post-title" href="/Software/%E6%9C%AC%E5%9C%B0%E5%90%8C%E6%AD%A5/">本地同步软件</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/28</span>
@@ -7893,13 +8332,31 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/27</span>
+            <a class="archive-post-title" href="/Software/%E5%BD%95%E5%B1%8F/">[开源]两款录屏软件 LICEcap 以及 OBS Studio (Open Broadcaster Software)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/27</span>
             <a class="archive-post-title" href="/Software/Maintenance/WinNTSetup/">WinNTSetup - 系统部署工具</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/26</span>
+            <a class="archive-post-title" href="/Software/DISM++/">[封装]DISM++ 以及一些DISM相关的东西</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>
             <a class="archive-post-title" href="/Software/Security/ESET/">ESET 问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/10</span>
+            <a class="archive-post-title" href="/Document/magnet/">[资料]特殊的磁力链(magnet)</a>
         </li>
     
         
@@ -7913,6 +8370,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/07</span>
+            <a class="archive-post-title" href="/Game/%E7%BE%8E%E5%B0%91%E5%A5%B3%E4%B8%87%E5%8D%8E%E9%95%9C/">[R18]美少女万华镜</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/05</span>
             <a class="archive-post-title" href="/Software/Maintenance/PCHunter/">[ARK工具]PC Hunter</a>
         </li>
@@ -7921,6 +8384,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">05/09</span>
             <a class="archive-post-title" href="/Software/Security/SpyShelter/">SpyShelter Firewall问题记录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/13</span>
+            <a class="archive-post-title" href="/Document/U%E7%9B%98%E9%87%8F%E4%BA%A7/">[资料]U盘量产简介</a>
         </li>
     
         
@@ -7952,8 +8421,20 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">02/15</span>
+            <a class="archive-post-title" href="/Software/FontForge/">[不再推荐][开源]字体编辑器 - FontForge</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
             <a class="archive-post-title" href="/Document/McAfee/">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/04</span>
+            <a class="archive-post-title" href="/Document/%E6%98%BE%E7%A4%BA%E5%99%A8%E6%8E%A5%E5%8F%A3/">[资料]你所不知道的显示器接口的一些信息</a>
         </li>
     
         
@@ -7967,8 +8448,20 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">12/22</span>
+            <a class="archive-post-title" href="/Document/Video/">[半转载]播放器、视频基础知识</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">12/20</span>
             <a class="archive-post-title" href="/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/">[资料]Unicode字符编码表</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/22</span>
+            <a class="archive-post-title" href="/Video/%E5%88%9D%E9%9F%B3%E6%BC%94%E5%94%B1%E4%BC%9A/">初音演唱会[Hatsune Miku Live Party]专辑</a>
         </li>
     
         
@@ -7987,6 +8480,12 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         <li class="archive-post-item">
             <span class="archive-post-date">10/11</span>
             <a class="archive-post-title" href="/Document/telecom/">电信光猫通用用户名以及密码</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/01</span>
+            <a class="archive-post-title" href="/Document/%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/">[资料]高级搜索语法</a>
         </li>
     
         
@@ -8599,11 +9098,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
                 Hardware Tool
             </span>
         
-            <span class="sidebar-tag-name" data-tags="文件工具">
-                <span class="iconfont-archer">&#xe606;</span>
-                文件工具
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="破解&激活">
                 <span class="iconfont-archer">&#xe606;</span>
                 破解&激活
@@ -8657,6 +9151,31 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
             <span class="sidebar-tag-name" data-tags="Network">
                 <span class="iconfont-archer">&#xe606;</span>
                 Network
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="不再推荐">
+                <span class="iconfont-archer">&#xe606;</span>
+                不再推荐
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows - Linux - OS X - Open Source - GPLv2 - GPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows - Linux - OS X - Open Source - GPLv2 - GPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="LGPL">
+                <span class="iconfont-archer">&#xe606;</span>
+                LGPL
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="VM">
+                <span class="iconfont-archer">&#xe606;</span>
+                VM
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL">
+                <span class="iconfont-archer">&#xe606;</span>
+                Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL
             </span>
         
     </div>
