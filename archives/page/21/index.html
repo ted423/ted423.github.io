@@ -445,111 +445,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Optimization/Windows.edb/">
-                
-                <span class="abstract-title-text">[优化]清理Windows.edb(搜索索引文件)</span>
-            </a>
-            <div class="abstract-content">
-                C:\ProgramData\Microsoft\Search\Data\Applications\Windows\Windows.edb就是索引文件了，通常来说，你索引的文件越多，这玩意会越大。并且你要知道，微软的搜索非常非常的烂。所以用Everything等软件代替吧，然后把控制面板里索引里的除了开始菜单和用户的其他都删了。(这个可以快速搜索文档以及快捷方式 -2021-08-06)
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/12/05">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/12/05</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Optimization
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/MX%20Player%20codec/">
-                
-                <span class="abstract-title-text">MX player 解码包选择</span>
-            </a>
-            <div class="abstract-content">
-                首先通过查找手机处理器的资料确定ARM的版本，例如https://zh.wikipedia.org/zh-cn/海思半導體#950/955系列这里可以看到是ARMv8的
-然后https://forum.xda-developers.com/apps/mx-player/mx-player-codec-armv8-t3149537这里有说明ARMv8可以选ARMv7+Neon的解码包
-armeabi-v7a =&gt; 2011年之後的手機都用 arm7
-arm64-v8a =&gt; support 64 位元
-ARMv5，ARMv7（从2010年起）
-x86（从2011年起）
-MIPS...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/11/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/11/27</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">
                 
                 <span class="abstract-title-text">[问题处理]RDP不允许使用已保存的账号密码登陆</span>
@@ -921,25 +816,26 @@ https://ipmsg.org/tools/fastcopy.html.en
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Software/System/Linux_old_version/">
+            <a class="abstract-title" href="/Issue/Driver/">
                 
-                <span class="abstract-title-text">一些Linux历史版本的下载位置(官方)</span>
+                <span class="abstract-title-text">[问题处理]Windows 手动安装驱动</span>
             </a>
             <div class="abstract-content">
-                Debianhttps://cdimage.debian.org/cdimage/archive/
-Ubuntuhttp://releases.ubuntu.com/http://old-releases.ubuntu.com/releases/
-fedora
-https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/
-https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应该只是域名不同，东西都一样)
+                症状有时候会遇到明明找到了驱动安装包但是Windows一直找不到驱动。
+原因分析微软会有个找驱动的默认路径，一些驱动安装包会自动改掉它，导致微软找驱动不在正确路径
+操作
+设备管理器里右键问题设备，点击更新驱动，然后选到第二项，将位置选到“C:\Windows\”并确保“包括子文件夹”已勾选。
+如仍不行，可尝试手动安装，需找到正确的驱动，更新时仍然选到第二项，并点击“从计算机的设备驱动程序列表里选择”，这时要点击从磁盘安装。
+但还有种情况就是提供的驱动程序并不匹配，有次我就强行在inf里添加设备ID安装了驱动，虽然成功了并且能使用，但其实个人并不建议这么做。
 
-
+etc微软自动查找驱动的路径...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/05/06">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/06</span>
+                <div class="abstract-date" title="Last updated: 2018/05/02">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/02</span>
                 </div>
                 <!-- tags -->
                 
@@ -950,19 +846,119 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
             
         
         
-        <span class="post-category" data-categories="Software"">
+        <span class="post-category" data-categories="Issue"">
             <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
-                Software
+                Issue
             </span>
         </span>
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/mySQL-backup/">
+                
+                <span class="abstract-title-text">[资料]Linux下备份MySql数据库</span>
+            </a>
+            <div class="abstract-content">
+                Full备份的话可以用mysqldump，这里有资料https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
+之后可以通过备份Binary Log的方式备份数据库改动。Binary Log 的运作原理很简单，它只是单纯的将所有会修改到资料库内容的操作记录在 Log 档案中
+首先需要启用Binary Log(默认没启用)
+修改 MySQL Server 的系统设定档(eg. /etc/my.cnf，最新版貌似改了，需要自己找下)，在 [mysqld] 区块中加上 log-bin=mysql-bin 选项，然后重新启动 MySQL Serv...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/30">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/30</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="System">System</a>
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/apt-source/">
+                
+                <span class="abstract-title-text">[资料]debian 更改软件源</span>
+            </a>
+            <div class="abstract-content">
+                软件源配置文件位于/etc/apt/source.list资料: https://wiki.debian.org/SourcesList
+12345678deb http://mirrors.163.com/debian/ jessie main non-free contribdeb http://mirrors.163.com/debian/ jessie-updates main non-free contribdeb http://mirrors.163.com/debian/ jessie-backports main non-free contribdeb-src http:...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/29">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/29</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
 </div>
 
@@ -2654,196 +2650,7 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -5704,7 +5511,7 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 318
+        Total : 315
         </div>
         <!-- search  -->
         
@@ -5763,24 +5570,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/03</span>
-            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">05/12</span>
             <a class="archive-post-title" href="/Document/madvr/">madVR 瞎写篇</a>
         </li>
@@ -5828,18 +5617,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         <li class="archive-post-item">
             <span class="archive-post-date">10/20</span>
             <a class="archive-post-title" href="/Document/%E6%AD%BB%E9%93%BE%E6%A3%80%E6%B5%8B/">网站死链检测</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/31</span>
-            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/22</span>
-            <a class="archive-post-title" href="/Browser/Extension/ImageAssistant/">[扩展]图片助手(ImageAssistant)</a>
         </li>
     
         
@@ -5910,24 +5687,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Browser/GM/GM/">个人原创以及修改的GM脚本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/19</span>
-            <a class="archive-post-title" href="/Browser/GM/%E6%94%B6%E8%97%8FGM/">个人收藏的GM脚本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/29</span>
-            <a class="archive-post-title" href="/Browser/Extension/ipvfoo/">[扩展]ipvfoo - 显示网页所有加载网址的解析IP</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">04/13</span>
             <a class="archive-post-title" href="/Browser/Cent/">[推荐]Cent Browser - 第三方Chromium修改版</a>
         </li>
@@ -5936,12 +5695,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         <li class="archive-post-item">
             <span class="archive-post-date">04/07</span>
             <a class="archive-post-title" href="/Document/Photobucket/">Photobucket去水印</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/06</span>
-            <a class="archive-post-title" href="/Browser/Extension/Powerful%20Pixiv%20Downloader/">[扩展]Powerful Pixiv Downloader</a>
         </li>
     
         
@@ -5973,12 +5726,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/25</span>
-            <a class="archive-post-title" href="/etc/rip/">压制组相关</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">06/11</span>
             <a class="archive-post-title" href="/Document/sysprep_unattend/">[封装]Windows 10 无人值守自动应答文件(unattend)xml相关</a>
         </li>
@@ -5987,12 +5734,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         <li class="archive-post-item">
             <span class="archive-post-date">05/22</span>
             <a class="archive-post-title" href="/Document/%E5%9B%BE%E7%A7%8D/">[资料]图种原理</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span>
-            <a class="archive-post-title" href="/Browser/Extension/chrome-extension-downloader/">Chrome 离线扩展下载网站两个</a>
         </li>
     
         
@@ -6092,12 +5833,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/02</span>
-            <a class="archive-post-title" href="/Video/%EB%B9%84%EB%B9%84%EC%95%99/">朴妮唛[비비앙]</a>
-        </li>
-    
-        
             
             
                 
@@ -6108,32 +5843,14 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">05/03</span>
-            <a class="archive-post-title" href="/etc/OS%20X/">对OS X的不满</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">03/14</span>
             <a class="archive-post-title" href="/Document/px-pt-em/">[转载]常用px,pt,em换算表</a>
         </li>
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span>
-            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
             <a class="archive-post-title" href="/Document/McAfee/">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span>
-            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
         </li>
     
         
@@ -6221,12 +5938,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         <li class="archive-post-item">
             <span class="archive-post-date">08/01</span>
             <a class="archive-post-title" href="/Issue/8.1%E9%94%81%E5%B1%8F%E5%A3%81%E7%BA%B8/">[问题处理]Windows 8.1 处理无法更换锁屏壁纸的问题</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/17</span>
-            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -7255,13 +6966,148 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
                 
                 </ul>
             
+            <div class="archive-year"> 2021 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/Fuck/">去你妈的不求甚解</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/03</span>
+            <a class="archive-post-title" href="/etc/NoQNAP/">请勿购买QNAP</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2020 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/31</span>
+            <a class="archive-post-title" href="/etc/why%20PT/">为什么我入了PT</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/22</span>
+            <a class="archive-post-title" href="/Browser/Extension/ImageAssistant/">[扩展]图片助手(ImageAssistant)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Browser/GM/GM/">个人原创以及修改的GM脚本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Browser/GM/%E6%94%B6%E8%97%8FGM/">个人收藏的GM脚本</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/29</span>
+            <a class="archive-post-title" href="/Browser/Extension/ipvfoo/">[扩展]ipvfoo - 显示网页所有加载网址的解析IP</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/06</span>
+            <a class="archive-post-title" href="/Browser/Extension/Powerful%20Pixiv%20Downloader/">[扩展]Powerful Pixiv Downloader</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/25</span>
+            <a class="archive-post-title" href="/etc/rip/">压制组相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/16</span>
+            <a class="archive-post-title" href="/Browser/Extension/chrome-extension-downloader/">Chrome 离线扩展下载网站两个</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2017 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/02</span>
+            <a class="archive-post-title" href="/Video/%EB%B9%84%EB%B9%84%EC%95%99/">朴妮唛[비비앙]</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/03</span>
+            <a class="archive-post-title" href="/etc/OS%20X/">对OS X的不满</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span>
+            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/26</span>
+            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">11/22</span>
-            <a class="archive-post-title" href="/Video/%E5%88%9D%E9%9F%B3%E6%BC%94%E5%94%B1%E4%BC%9A/">初音演唱会[Hatsune Miku Live Party]专辑</a>
+            <span class="archive-post-date">01/17</span>
+            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8302,7 +8148,7 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         
         <li class="archive-post-item">
             <span class="archive-post-date">02/24</span>
-            <a class="archive-post-title" href="/Software/System/Slax/">[不再推荐]Slax - Linux PE</a>
+            <a class="archive-post-title" href="/System/Slax/">[不再推荐]Slax - Linux PE</a>
         </li>
     
         
@@ -8379,18 +8225,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">06/01</span>
-            <a class="archive-post-title" href="/Software/System/CentOS/">CentOS踩坑实录</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/28</span>
-            <a class="archive-post-title" href="/Software/System/Windows%2010%20editions/">Windows 10 的各种版本</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">04/02</span>
             <a class="archive-post-title" href="/Software/Hardware/Crystal/">[开源]Crystal Dew World硬盘检测系列-CrystalDiskMark、CrystalDiskInfo</a>
         </li>
@@ -8414,12 +8248,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         <li class="archive-post-item">
             <span class="archive-post-date">06/28</span>
             <a class="archive-post-title" href="/Software/Maintenance/RAMMap/">RAMMap - 内存分析工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/06</span>
-            <a class="archive-post-title" href="/Software/System/Linux_old_version/">一些Linux历史版本的下载位置(官方)</a>
         </li>
     
         
@@ -8495,6 +8323,12 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         </li>
     
         
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/25</span>
+            <a class="archive-post-title" href="/Video/R18/RIO/">[R18]柚木提娜[RIO](柚木ティナ)</a>
+        </li>
+    
+        
             
             
                 
@@ -8503,6 +8337,12 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
             <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/22</span>
+            <a class="archive-post-title" href="/Video/%E5%88%9D%E9%9F%B3%E6%BC%94%E5%94%B1%E4%BC%9A/">初音演唱会[Hatsune Miku Live Party]专辑</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">11/15</span>
@@ -8549,21 +8389,6 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Video/R18/Anjelica/">[R18]Anjelica</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/25</span>
-            <a class="archive-post-title" href="/Video/R18/RIO/">[R18]柚木提娜[RIO](柚木ティナ)</a>
         </li>
     
         
