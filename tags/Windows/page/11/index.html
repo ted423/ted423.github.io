@@ -445,6 +445,63 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Lync/">
+                
+                <span class="abstract-title-text">[问题处理]Lync联系人名片显示异常</span>
+            </a>
+            <div class="abstract-content">
+                症状Lync是公司内部使用，公司有自己的Exchange服务器。联系人资料显示异常，如姓名不对(账号相同，更换其他人使用，但仍显示之前的人的姓名)，电话号码不显示，或者其他。
+原因分析由于删除Lync配置无效，但Lync跟outlook有联系，因此需要找到Outlook里相关配置进行删除。
+操作
+退出lync, 打开“%appdata%..\Local\Microsoft\Outlook”
+删除“Offline Address Books”文件夹，重新登录Lync
+如仍有问题，在Outlook里找到联系人名片以及Lync联系人名片删除
+如Outlook里删除不了，可能需要登录网页版的邮件...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/08/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Maintenance/PowerTool/">
                 
                 <span class="abstract-title-text">[ARK工具]PowerTool</span>
@@ -927,63 +984,6 @@ FBA类型文件就是FbinstTool通常...
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/KB3081444/">
-                
-                <span class="abstract-title-text">[问题处理]Windows 10 的KB3081444补丁安装失败的解决办法</span>
-            </a>
-            <div class="abstract-content">
-                打开命令提示符（管理员）运行’sfc /scannow’
-sfc /scannow用于扫描和校对当前系统文件，修复缺失/异常的系统文件。其实印象里我总觉得我的系统没弄过啥特殊的会导致系统文件出问题的操作….感觉Win10真是娇气
-我这边运行完后就可以了正常安装了
-感谢这篇文章，不然我真得烦死http://www.iznb.cn/article/17119
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/08/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
     
 </div>
 
