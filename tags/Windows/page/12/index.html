@@ -445,6 +445,115 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/Maintenance/PE/">
+                
+                <span class="abstract-title-text">【PE相关】两个PE以及FbinstTool</span>
+            </a>
+            <div class="abstract-content">
+                FbinstTool-PE相关工具由于种种复杂原因，不同BIOS对U盘CHS/LBA参数处理结果不尽相同，导致同一个U盘，在一台机器上BOOT成功，在另一台机器上就可能BOOT失败。
+wuwuzz注:早期硬盘也有类似问题，但最后通过多个工业标准，已经解决。而USB是万能接口，且有关标准未得到厂商统一遵守，问题更复杂
+开源社区的bean提出了巧妙构思，开发出fbinst，基本解决了BIOS下的CHS/LBA参数适应调整问题，使U盘BOOT成功率大大提高。(除非碰上了极度变态的主板和BIOS)。 
+FbinstTool既是Fbinst的GUI程序 
+FBA类型文件就是FbinstTool通常...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/09/10">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Maintenance">Maintenance</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="System">System</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/8.1%E9%94%81%E5%B1%8F%E5%A3%81%E7%BA%B8/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 8.1 处理无法更换锁屏壁纸的问题</span>
+            </a>
+            <div class="abstract-content">
+                原始链接：http://answers.microsoft.com/en-us/windows/forum/windows8_1-desktop/lockscreen-issues-on-windows-81/c51f570a-7a69-4e92-8348-3ebbed778592
+个人处理方法打开注册表管理器，找到HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion删除下面的lock screen，添加注册表https://mega.nz/#!ToUmES7Y!vCzx4C3Br_bg8dC1uYSeCVS2FN2mLN...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/08/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/08/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/KB3081444/">
                 
                 <span class="abstract-title-text">[问题处理]Windows 10 的KB3081444补丁安装失败的解决办法</span>
@@ -865,103 +974,10 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Git/Github%20Commit%20failed/">
-                
-                <span class="abstract-title-text">[Git]处理Github的Commit failed:Failed to create a new commit</span>
-            </a>
-            <div class="abstract-content">
-                2015.02.15确认没再出现类似错误，大概Github的Windows客户端更新了
-好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是.git文件夹里有个index.lock的问题…..只要删掉就好了。大概在创建commit的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成commit,但由于之前已经有了index.lock（但没生成commit），而git不允许index.lock的覆盖，所以就卡住了…
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/MFC%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%8C%96%E7%9A%84%E6%A1%86/">
-                
-                <span class="abstract-title-text">MFC界面定制</span>
-            </a>
-            <div class="abstract-content">
-                位于rc文件中STYLE 这一行控制WS_MAXIMIZEBOX就是最大化的按钮，删掉最大化按钮就不能点击
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/tags/Windows/page/11/">&lt; PREV</a><a class="page-number" href="/tags/Windows/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Windows/page/10/">10</a><a class="page-number" href="/tags/Windows/page/11/">11</a><span class="page-number current">12</span>
+            <a class="extend prev" rel="prev" href="/tags/Windows/page/11/">&lt; PREV</a><a class="page-number" href="/tags/Windows/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Windows/page/10/">10</a><a class="page-number" href="/tags/Windows/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/tags/Windows/page/13/">13</a><a class="extend next" rel="next" href="/tags/Windows/page/13/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2641,7 +2657,77 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5512,7 +5598,7 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 315
+        Total : 317
         </div>
         <!-- search  -->
         
@@ -5567,6 +5653,12 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
             <a class="archive-post-title" href="/Code/npm%20proxy/">npm设置代理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
         </li>
     
         
@@ -5850,8 +5942,20 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span>
+            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
             <a class="archive-post-title" href="/Document/McAfee/">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/26</span>
+            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
         </li>
     
         
@@ -6967,34 +7071,13 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
+            <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span>
-            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span>
-            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
+            <span class="archive-post-date">01/17</span>
+            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8199,6 +8282,12 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">09/07</span>
+            <a class="archive-post-title" href="/Software/Total%20Uninstall/">[大眼仔~旭]Total Uninstall</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
         </li>
@@ -8207,6 +8296,12 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/TrafficMonitor/">[开源]TrafficMonitor</a>
         </li>
     
         
@@ -8441,12 +8536,6 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">[R18]最近，妹妹的样子有点怪</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/17</span>
-            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8855,11 +8944,6 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
                 VM
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="MV">
                 <span class="iconfont-archer">&#xe606;</span>
                 MV
@@ -9015,11 +9099,6 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
                 无双系列
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Game Document">
-                <span class="iconfont-archer">&#xe606;</span>
-                Game Document
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="歌词(LRC)">
                 <span class="iconfont-archer">&#xe606;</span>
                 歌词(LRC)
@@ -9118,6 +9197,16 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
             <span class="sidebar-tag-name" data-tags="720p">
                 <span class="iconfont-archer">&#xe606;</span>
                 720p
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Anti 996 License">
+                <span class="iconfont-archer">&#xe606;</span>
+                Anti 996 License
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="跨平台">
+                <span class="iconfont-archer">&#xe606;</span>
+                跨平台
             </span>
         
     </div>

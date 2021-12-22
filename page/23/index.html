@@ -460,6 +460,119 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E4%B8%A4%E4%B8%AA%E5%9B%BE%E6%A0%87/">
+                
+                <span class="abstract-title-text">[问题处理]解决任务栏出现两个图标(火狐)的问题</span>
+            </a>
+            <div class="abstract-content">
+                找到的相关的贴:http://tieba.baidu.com/p/3923325915
+具体跟Application User Model IDs有关
+可以看到火狐有以下注册表（我才不会说我没记路径直接搜TaskBarIDs的，结果只有FF跟Thunderbird有这个），大概是为了区分不同通道的火狐。(但yysy,只有火狐出这个问题还是挺拉的 -2021-08-06)
+123HKEY_CURRENT_USER\SOFTWARE\Mozilla\Firefox\TaskBarIDsHKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/02/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Firefox">Firefox</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/McAfee/">
+                
+                <span class="abstract-title-text">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</span>
+            </a>
+            <div class="abstract-content">
+                目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50以前用，自己写规则经常不起作用，而且找不到官方文档…..但实际上来讲，McAfee的规则还是很难用的现在总算是找到了文档(原来很多地方要用“**”而不是”*“)
+分隔符‘,’用于在匹配进程以及排除进程中进行分割，支持带路径的以及进程名
+通配符最重要的就是’‘以及’**’的区别，可以这么理解，’‘只是一级目录，’**’则表示多级目录。比方说’C:*‘代表C盘根目录下能看到的所有文件夹以及文件，’C:**’则代表所有C盘下的东西McAfee 8.8 规则设...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/02/14">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/02/14</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="安全软件">安全软件</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">
                 
                 <span class="abstract-title-text">[Video]鎌田紘子</span>
@@ -867,114 +980,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Terminal/PC-wifi/">
-                
-                <span class="abstract-title-text">[Terminal]计算机建立虚拟Wifi热点</span>
-            </a>
-            <div class="abstract-content">
-                Win 10有个直接开热点的设置，所以下面可能就用不到了https://www.intel.cn/content/www/cn/zh/support/articles/000023257/network-and-i-o/wireless-networking.html
-需要注意的是，开启WIFI热点时可能会导致有线网通过DHCP获取另外网段的IP时出现问题，需要取消第3步操作后，也就是共享网络勾选，才可以通过DHCP获取到IP
-
-输入netsh wlan show driver先看是否支持承载网络
-打开CMD,输入1netsh wlan set hostednetwork mode=al...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/12/04">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Browser/Extension/Image%20Search%20Options/">
-                
-                <span class="abstract-title-text">[扩展]Image Search Options - 右键搜图</span>
-            </a>
-            <div class="abstract-content">
-                我才发现这扩展是Saucenao开发的FF里我搜图片用的可是很顺手网址:https://saucenao.com/tools/
-同时有Firefox以及Chrome的扩展，但是Firefox的不知道战斗力高了多少倍，可惜火狐自身给自己来了一刀
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/12/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/12/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Browser"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Browser
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Chromium(Chrome)">Chromium(Chrome)</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Firefox">Firefox</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Extension">Extension</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Browser">Browser</a>
     
 </div>
 
@@ -2767,7 +2772,77 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5638,7 +5713,7 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 315
+        Total : 317
         </div>
         <!-- search  -->
         
@@ -5693,6 +5768,12 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
             <a class="archive-post-title" href="/Code/npm%20proxy/">npm设置代理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
         </li>
     
         
@@ -5976,8 +6057,20 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span>
+            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
             <a class="archive-post-title" href="/Document/McAfee/">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/26</span>
+            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
         </li>
     
         
@@ -7093,34 +7186,13 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
+            <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span>
-            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span>
-            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
+            <span class="archive-post-date">01/17</span>
+            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8325,6 +8397,12 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">09/07</span>
+            <a class="archive-post-title" href="/Software/Total%20Uninstall/">[大眼仔~旭]Total Uninstall</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
         </li>
@@ -8333,6 +8411,12 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/TrafficMonitor/">[开源]TrafficMonitor</a>
         </li>
     
         
@@ -8567,12 +8651,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">[R18]最近，妹妹的样子有点怪</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/17</span>
-            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8981,11 +9059,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
                 VM
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="MV">
                 <span class="iconfont-archer">&#xe606;</span>
                 MV
@@ -9141,11 +9214,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
                 无双系列
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Game Document">
-                <span class="iconfont-archer">&#xe606;</span>
-                Game Document
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="歌词(LRC)">
                 <span class="iconfont-archer">&#xe606;</span>
                 歌词(LRC)
@@ -9244,6 +9312,16 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
             <span class="sidebar-tag-name" data-tags="720p">
                 <span class="iconfont-archer">&#xe606;</span>
                 720p
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Anti 996 License">
+                <span class="iconfont-archer">&#xe606;</span>
+                Anti 996 License
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="跨平台">
+                <span class="iconfont-archer">&#xe606;</span>
+                跨平台
             </span>
         
     </div>

@@ -445,6 +445,113 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/U%E7%9B%98%E9%87%8F%E4%BA%A7/">
+                
+                <span class="abstract-title-text">[资料]U盘量产简介</span>
+            </a>
+            <div class="abstract-content">
+                量产软件英文为USB DISK PRODUCTION TOOL，简称是PDT
+U盘是由主控板+FLASH+外壳组成的，当主控板焊接上空白FLASH后插入电脑，因为没有相应的数据，电脑只能识别到主控板，而无法识别到FLASH，所以这时候电脑上显示出U盘盘符，但是双击盘符却显示没有插入U盘，就像是插入一个空白的读卡器。事实上这时候的U盘几乎就是读卡器。所以要让电脑识别出空白FLASH这张“卡”就要向FLASH内写人对应的数据，这些数据包括U盘的容量大小，采用的芯片(芯片不同，数据保留的方式也不同)，坏块地址(和硬盘一样，FLASH也有坏块，必须屏蔽)等等，有了这些数据，电脑就能正确识别出U盘...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2017/03/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/13</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Hardware">Hardware</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/conflict/">
+                
+                <span class="abstract-title-text">[Git]conflicts 处理</span>
+            </a>
+            <div class="abstract-content">
+                rebase 可能会造成冲突多人同时编辑也会造成conflict
+需要将所有冲突的commit纳入rebase，此时rebase会提示conflict并且暂停
+其实此时你的本地文件会变成冲突时的文件，你要做的就是编辑该文件将冲突处也就是Github使用
+12345&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD(code1)=======(code2)&gt;&gt;&gt;&gt;&gt;&gt;&gt; &lt;commit_id&gt;... commit_name
+括起来的冲突内容
+中只保留你需要内容，使用 git add (文件)
+随后你只要git rebas...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2017/03/10">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Maintenance/PCMaster/">
                 
                 <span class="abstract-title-text">[小俊][2016.11.06]软媒魔方 v6.2.1.0 绿色纯净版及经典版</span>
@@ -838,104 +945,6 @@ ed2k://|file|(COMIC1☆8).[きくらげ屋.(きくらげ)].トモダチになっ
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Lync/">
-                
-                <span class="abstract-title-text">[问题处理]Lync联系人名片显示异常</span>
-            </a>
-            <div class="abstract-content">
-                症状Lync是公司内部使用，公司有自己的Exchange服务器。联系人资料显示异常，如姓名不对(账号相同，更换其他人使用，但仍显示之前的人的姓名)，电话号码不显示，或者其他。
-原因分析由于删除Lync配置无效，但Lync跟outlook有联系，因此需要找到Outlook里相关配置进行删除。
-操作
-退出lync, 打开“%appdata%..\Local\Microsoft\Outlook”
-删除“Offline Address Books”文件夹，重新登录Lync
-如仍有问题，在Outlook里找到联系人名片以及Lync联系人名片删除
-如Outlook里删除不了，可能需要登录网页版的邮件...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/08/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Comic/R18/TJ_studio/">
-                
-                <span class="abstract-title-text">[R18](同人CG集) [TJ_studio] 催眠アプリ-制服女子を淫乱雌に発情洗脳-</span>
-            </a>
-            <div class="abstract-content">
-                来源
-https://exhentai.org/g/840061/af94f016fa/
-magnet:?xt=urn:btih:55A4C96F10227E36B956AAB982325B0C1756E60B
-http://exhentai.org/g/943277/dfb171ac7b/(English)
-magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
-
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/07/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/07/23</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="R18">R18</a>
     
 </div>
 
@@ -2627,7 +2636,77 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5498,7 +5577,7 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 315
+        Total : 317
         </div>
         <!-- search  -->
         
@@ -5553,6 +5632,12 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
             <a class="archive-post-title" href="/Code/npm%20proxy/">npm设置代理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
         </li>
     
         
@@ -5836,8 +5921,20 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span>
+            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
             <a class="archive-post-title" href="/Document/McAfee/">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/26</span>
+            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
         </li>
     
         
@@ -6953,34 +7050,13 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
+            <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span>
-            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span>
-            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
+            <span class="archive-post-date">01/17</span>
+            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8185,6 +8261,12 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">09/07</span>
+            <a class="archive-post-title" href="/Software/Total%20Uninstall/">[大眼仔~旭]Total Uninstall</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
         </li>
@@ -8193,6 +8275,12 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/TrafficMonitor/">[开源]TrafficMonitor</a>
         </li>
     
         
@@ -8427,12 +8515,6 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">[R18]最近，妹妹的样子有点怪</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/17</span>
-            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8841,11 +8923,6 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
                 VM
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="MV">
                 <span class="iconfont-archer">&#xe606;</span>
                 MV
@@ -9001,11 +9078,6 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
                 无双系列
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Game Document">
-                <span class="iconfont-archer">&#xe606;</span>
-                Game Document
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="歌词(LRC)">
                 <span class="iconfont-archer">&#xe606;</span>
                 歌词(LRC)
@@ -9104,6 +9176,16 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
             <span class="sidebar-tag-name" data-tags="720p">
                 <span class="iconfont-archer">&#xe606;</span>
                 720p
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Anti 996 License">
+                <span class="iconfont-archer">&#xe606;</span>
+                Anti 996 License
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="跨平台">
+                <span class="iconfont-archer">&#xe606;</span>
+                跨平台
             </span>
         
     </div>

@@ -445,6 +445,115 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">
+                
+                <span class="abstract-title-text">[问题处理]多同步盘下Dropbox同步状态图标不见</span>
+            </a>
+            <div class="abstract-content">
+                简要地说Windows的overlayIcon(状态图标)最多不能超过15个(我这边好像是超过13个就不行),而Onedrive自己就占了一半(我同时用两个同步盘)这些信息保存在
+1HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
+个人的处理办法是Onedrive删一半，dropbox删一半，因为对我来说只要一个同步Ok的状态有了就行
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/10/27">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Dropbox">Dropbox</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/">
+                
+                <span class="abstract-title-text">Ubuntu 和Windows 7共存的GRUB启动顺序</span>
+            </a>
+            <div class="abstract-content">
+                Grub会自动在C盘加入双系统启动的配置，而且默认会启动Ubuntu，把 windows 7放在最后面。如果要启动windows的话，需要按向下的箭头4、5次，非常麻烦。现阶段还是使用windows要多一点，所以需要修改Grub让 windows第一个启动。Ubuntu 11.04使用的Grub版本是1.99，配置文件是Linux系统下的/boot/grub/grub.cfg这个文件。进入Linux找到此文件，直 接用文本编辑器修改，结果提示只读文件无权操作，在文件右键修改属性，结果还是不行，看来必须要命令行才可以。进入终端，到目录/boot/grub下执 行如下命令：/boot/gru...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/01/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Ubuntu">Ubuntu</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
                 
                 <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
@@ -898,111 +1007,10 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E6%9D%83%E9%99%90/">
-                
-                <span class="abstract-title-text">[转载]Windows权限问题处理</span>
-            </a>
-            <div class="abstract-content">
-                以注册表为例（1）右键需要操作的注册表项目－权限－高级－所有者/文件(文件夹)-属性-安全高级-所有者
-你会发现当前所有者是TrusteInstaller（windows系统安装的时候使用的账号，权限灰常高），而我们要做的是将这个所有者更改为我们的当前用户，比如这里是administators
-点击选择 将所有这更改为administrators，然后勾选替换子容器和对象的所有者（相当于应用设置到子键吧）应用确定以后返回到权限窗口，选择当前用户账号我的是administrators（xxxxx\administrators,将完全控制的选项点击设置为允许，点击应用，现在尝试编辑注册表项目...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/npm-error/">
-                
-                <span class="abstract-title-text">Windows npm error 处理办法</span>
-            </a>
-            <div class="abstract-content">
-                Windows上运行npm 报Error: ENOENT, stat ‘C:\Users\XX\AppData\Roaming\npm’ 错误解决方法报错路径为： C:\Users\“你用户名”\AppData\Roaming\   这个路径下建个npm文件(夹)即可正常使用npm 命令了！目测跟配置文件有关
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/02/02">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/tags/Windows/page/4/">&lt; PREV</a><a class="page-number" href="/tags/Windows/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Windows/page/3/">3</a><a class="page-number" href="/tags/Windows/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/tags/Windows/page/6/">6</a><a class="page-number" href="/tags/Windows/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Windows/page/12/">12</a><a class="extend next" rel="next" href="/tags/Windows/page/6/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/tags/Windows/page/4/">&lt; PREV</a><a class="page-number" href="/tags/Windows/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Windows/page/3/">3</a><a class="page-number" href="/tags/Windows/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/tags/Windows/page/6/">6</a><a class="page-number" href="/tags/Windows/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Windows/page/13/">13</a><a class="extend next" rel="next" href="/tags/Windows/page/6/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2682,7 +2690,77 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5553,7 +5631,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 315
+        Total : 317
         </div>
         <!-- search  -->
         
@@ -5608,6 +5686,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">08/05</span>
             <a class="archive-post-title" href="/Code/npm%20proxy/">npm设置代理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/05</span>
+            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
         </li>
     
         
@@ -5891,8 +5975,20 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">03/03</span>
+            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">02/14</span>
             <a class="archive-post-title" href="/Document/McAfee/">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/26</span>
+            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
         </li>
     
         
@@ -7008,34 +7104,13 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
                 
                 </ul>
             
-            <div class="archive-year"> 2021 </div>
+            <div class="archive-year"> 2015 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">08/05</span>
-            <a class="archive-post-title" href="/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/">[MV]真野恵里菜 - お願いだから</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/03</span>
-            <a class="archive-post-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">[Video]鈴木咲</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/26</span>
-            <a class="archive-post-title" href="/Video/%E9%8E%8C%E7%94%B0%E7%B4%98%E5%AD%90/">[Video]鎌田紘子</a>
+            <span class="archive-post-date">01/17</span>
+            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8240,6 +8315,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">09/07</span>
+            <a class="archive-post-title" href="/Software/Total%20Uninstall/">[大眼仔~旭]Total Uninstall</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/">网络同步盘缺陷记录</a>
         </li>
@@ -8248,6 +8329,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/19</span>
+            <a class="archive-post-title" href="/Software/TrafficMonitor/">[开源]TrafficMonitor</a>
         </li>
     
         
@@ -8482,12 +8569,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">[R18]最近，妹妹的样子有点怪</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/17</span>
-            <a class="archive-post-title" href="/Video/%E5%8D%83%E6%9C%AC%E6%A1%9C(%E5%8F%A4%E7%AD%9D)/">千本桜-古筝(1280 x 720)</a>
         </li>
     
         
@@ -8896,11 +8977,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
                 VM
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL">
-                <span class="iconfont-archer">&#xe606;</span>
-                Windows - Linux - OS X - Android - 跨平台 - 开源 - GPLv2 - LGPL
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="MV">
                 <span class="iconfont-archer">&#xe606;</span>
                 MV
@@ -9056,11 +9132,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
                 无双系列
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Game Document">
-                <span class="iconfont-archer">&#xe606;</span>
-                Game Document
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="歌词(LRC)">
                 <span class="iconfont-archer">&#xe606;</span>
                 歌词(LRC)
@@ -9159,6 +9230,16 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <span class="sidebar-tag-name" data-tags="720p">
                 <span class="iconfont-archer">&#xe606;</span>
                 720p
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Anti 996 License">
+                <span class="iconfont-archer">&#xe606;</span>
+                Anti 996 License
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="跨平台">
+                <span class="iconfont-archer">&#xe606;</span>
+                跨平台
             </span>
         
     </div>
