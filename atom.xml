@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2021-11-26T06:18:49.425Z</updated>
+  <updated>2022-01-03T14:32:27.779Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://ted423.github.io/Document/Encode/4K%20webdl%20vs%201080p%20BD%20upscale/"/>
+    <id>http://ted423.github.io/Document/Encode/4K%20webdl%20vs%201080p%20BD%20upscale/</id>
+    <published>2022-01-03T14:30:43.735Z</published>
+    <updated>2022-01-03T14:32:27.779Z</updated>
+    
+    <content type="html"><![CDATA[<p>title: cutree相关研究<br>tags:</p><ul><li>Document</li><li>encode</li><li>Compare<br>categories: Document<br>date: 2022-01-03 22:31</li></ul><p><a href="https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png">https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png</a><br><a href="https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.2160p.WEB-DL.DTS.x264-ULTRAHDCLUB.vpy---12027_1.png">https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.2160p.WEB-DL.DTS.x264-ULTRAHDCLUB.vpy---12027_1.png</a></p><p>结论是ULTRAHDCLUB Web-dl SDR的质量不太行，感觉本身也是拉伸的</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;title: cutree相关研究&lt;br&gt;tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Document&lt;/li&gt;
+&lt;li&gt;encode&lt;/li&gt;
+&lt;li&gt;Compare&lt;br&gt;categories: Document&lt;br&gt;date: 2022-01-03 22:31&lt;/li&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>[R18]ABP554</title>
+    <link href="http://ted423.github.io/Video/R18/ABP-554/"/>
+    <id>http://ted423.github.io/Video/R18/ABP-554/</id>
+    <published>2022-01-01T09:15:00.000Z</published>
+    <updated>2022-01-01T09:15:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://javdb.com/v/wKmYz">https://javdb.com/v/wKmYz</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://javdb.com/v/wKmYz&quot;&gt;https://javdb.com/v/wKmYz&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="R18" scheme="http://ted423.github.io/tags/R18/"/>
+    
+  </entry>
+  
+  <entry>
     <title>cutree相关研究</title>
-    <link href="http://ted423.github.io/Document/cutree/"/>
-    <id>http://ted423.github.io/Document/cutree/</id>
+    <link href="http://ted423.github.io/Document/Encode/cutree/"/>
+    <id>http://ted423.github.io/Document/Encode/cutree/</id>
     <published>2021-11-25T08:09:00.000Z</published>
-    <updated>2021-11-26T06:18:49.425Z</updated>
+    <updated>2021-11-25T08:09:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>source<br>no-cutree crf 21  码率 4 214 kb/s<br>cutree    crf 19  码率 4 725 kb/s<br>cutree    crf 21  码率 2 903 kb/s<br> <a href="https://s3.pterclub.com:2096/image/vPb7zF"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.vpy---11586-1.th.png" alt="Stalingrad-2013-BluRay.vpy---11586-1.th.png"></a> <a href="https://s3.pterclub.com:2096/image/vPbrbK"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.mkv_20211124_093413.685.th.png" alt="Stalingrad-2013-BluRay.mkv_20211124_093413.685.th.png"></a><a href="https://s3.pterclub.com:2096/image/vPbe3Z"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093610.586.th.png" alt="Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093610.586.th.png"></a><br><a href="https://s3.pterclub.com:2096/image/vPbE6z"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree.mkv_20211124_093511.052.th.png" alt="Stalingrad-2013-BluRay_cutree.mkv_20211124_093511.052.th.png"></a></p><hr><p><a href="https://s3.pterclub.com:2096/image/vPbu6G"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.vpy---19973-1.th.png" alt="Stalingrad-2013-BluRay.vpy---19973-1.th.png"></a><a href="https://s3.pterclub.com:2096/image/vPbn77"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.mkv_20211124_093432.459.th.png" alt="Stalingrad-2013-BluRay.mkv_20211124_093432.459.th.png"></a><a href="https://s3.pterclub.com:2096/image/vPbIND"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093623.838.th.png" alt="Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093623.838.th.png"></a><a href="https://s3.pterclub.com:2096/image/vPbOD5"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree.mkv_20211124_093525.268.th.png" alt="Stalingrad-2013-BluRay_cutree.mkv_20211124_093525.268.th.png"></a></p><hr><p>这个没放source<br><a href="https://s3.pterclub.com:2096/image/vPwPPt"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay.mkv_20211124_093354.178.th.png" alt="Stalingrad-2013-BluRay.mkv_20211124_093354.178.th.png"></a><a href="https://s3.pterclub.com:2096/image/vPwvbE"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093555.295.th.png" alt="Stalingrad-2013-BluRay_cutree_19.mkv_20211124_093555.295.th.png"></a><a href="https://s3.pterclub.com:2096/image/vPwAW4"><img src="https://img.pterclub.com/images/2021/11/24/Stalingrad-2013-BluRay_cutree.mkv_20211124_093458.739.th.png" alt="Stalingrad-2013-BluRay_cutree.mkv_20211124_093458.739.th.png"></a></p><hr><p>cutree crf 18.5 5355 kb/s<br>no-cutree crf 20.5 码率 4875 kb/s<br><a href="https://s3.pterclub.com:2096/image/vPnqYD"><img src="https://img.pterclub.com/images/2021/11/25/Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_153429.860.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_153429.860.th.png"></a> <a href="https://s3.pterclub.com:2096/image/vPnsZ5"><img src="https://img.pterclub.com/images/2021/11/25/Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_153534.319.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_153534.319.th.png"></a> <a href="https://s3.pterclub.com:2096/image/vPnMqG"><img src="https://img.pterclub.com/images/2021/11/25/Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_153449.104.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_153449.104.th.png"></a><a href="https://s3.pterclub.com:2096/image/vPn9F7"><img src="https://img.pterclub.com/images/2021/11/25/Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_153510.604.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_153510.604.th.png"></a></p><hr><p>Source</p><p>cutree crf 18.5</p><p>no-cutree crf 20.5</p><p><a href="https://s3.pterclub.com:2096/image/vap0Cp"><img src="https://img.pterclub.com/images/2021/11/26/Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_155727.380.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS-_cutree.mkv_20211125_155727.380.th.png" border="0"></a> <a href="https://s3.pterclub.com:2096/image/vap7Xb"><img src="https://img.pterclub.com/images/2021/11/26/Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_155820.790.th.png" alt="Stalingrad-2013-BluRay-1080p---FRDS.mkv_20211125_155820.790.th.png" border="0"></a> <a href="https://s3.pterclub.com:2096/image/vapJrf"><img src="https://img.pterclub.com/images/2021/11/26/Stalingrad-2013-BluRay.vpy---125988-1.th.png" alt="Stalingrad-2013-BluRay.vpy---125988-1.th.png" border="0"></a><br>这次压制，前面场景no-cutree给的码率比较大，但是后面码率被 no-cutree反超<br>目前的结论是静态场景，cutree大幅占优，动态场景，no-cutree会有些优势<br>两者压制时间差不了太多</p><style>a{display:inline-block !important;}</style>]]></content>
     
@@ -39,6 +87,8 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="encode" scheme="http://ted423.github.io/tags/encode/"/>
+    
+    <category term="Compare" scheme="http://ted423.github.io/tags/Compare/"/>
     
   </entry>
   
@@ -518,67 +568,6 @@
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[转载]WINDBG分析DMP方法（2012.8.19修改）</title>
-    <link href="http://ted423.github.io/Software/Windbg/"/>
-    <id>http://ted423.github.io/Software/Windbg/</id>
-    <published>2021-07-26T00:52:33.605Z</published>
-    <updated>2013-12-31T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Windbg下载地址:<a href="http://www.windbg.org/">http://www.windbg.org/</a><br>然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。<br>像别的什么软件可能也会要不同的组件？<br>另外这憨逼SDK不同版本还能同时装<br>原文:<a href="http://bbs.icafe8.com/thread-400104-1-1.html">http://bbs.icafe8.com/thread-400104-1-1.html</a></p><ol><li><p>点击File里的”Symbol File Path”</p></li><li><p>然后把<code>SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols</code><br> 复制进去。(<a href="http://msdl.microsoft.com/download/symbols">http://msdl.microsoft.com/download/symbols</a> 为微软符号表服务器地址)</p></li><li><p>点OK,然后保存工作空间并关闭windbg，下次需要看DUMP的时候，打开windbg.exe，直接可以把抓来的DMP文件拖到打开的界面里面就可以分析了。</p></li><li><p>自动分析命令 !analyze -v</p></li></ol><p>就个人来讲，能力有限，我所能理解的就到这里了，剩下的建议看原文</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Windbg下载地址:&lt;a href=&quot;http://www.windbg.org/&quot;&gt;http://www.windbg.org/&lt;/a&gt;&lt;br&gt;然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。&lt;br&gt;像别的什么软件可能也会要</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="转载" scheme="http://ted423.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不推荐使用Windows Defender</title>
-    <link href="http://ted423.github.io/Software/Security/No%20WD/"/>
-    <id>http://ted423.github.io/Software/Security/No%20WD/</id>
-    <published>2021-07-22T21:16:33.000Z</published>
-    <updated>2021-07-22T21:16:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。<br>Server是1809，所以很可能遇到了是一个老版本的Bug</p><p>现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。</p><p>然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了<br><del>图片挂了</del></p><p>解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。<br>而里面，都是文本文件。<br>要知道，压缩几个文件，每次生成的包可能都是不同的hash值。这种情况下的报毒，细思极恐。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。&lt;br&gt;Server是1809，所以很可能遇到了是一个老版本的Bug&lt;/p&gt;
-&lt;p&gt;现象就是Server上遇到问题文件(Windows loader.exe</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
-    
-    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Security Software" scheme="http://ted423.github.io/tags/Security-Software/"/>
     
   </entry>
   
