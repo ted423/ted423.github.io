@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-01-03T14:32:27.779Z</updated>
+  <updated>2022-01-05T07:01:05.062Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,27 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Jane Eyre gmma 调整对比</title>
+    <link href="http://ted423.github.io/Document/Encode/Jane.Eyre/"/>
+    <id>http://ted423.github.io/Document/Encode/Jane.Eyre/</id>
+    <published>2022-01-05T06:57:00.000Z</published>
+    <updated>2022-01-05T07:01:05.062Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://slow.pics/c/uI5S7CSk">https://slow.pics/c/uI5S7CSk</a><br>起因是某外站把我发的删了，说USA的细节比较好。<br>所以找人问了下调gmma的办法，感谢小火龙，下面是TVrange的，full range的话要把 min和 max删了<br>filtered = core.std.Levels(clip, gamma=0.88, min_in=16 &lt;&lt; 8, max_in=235 &lt;&lt; 8, min_out=16 &lt;&lt; 8, max_out=235 &lt;&lt; 8, planes=0)</p><p>这是调整之后的<br><img src="https://ptpimg.me/1n90o8.png" alt="gmma"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://slow.pics/c/uI5S7CSk&quot;&gt;https://slow.pics/c/uI5S7CSk&lt;/a&gt;&lt;br&gt;起因是某外站把我发的删了，说USA的细节比较好。&lt;br&gt;所以找人问了下调gmma的办法，感谢小火龙，下面是TVrange的，</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Compare" scheme="http://ted423.github.io/tags/Compare/"/>
+    
+    <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>4K Web-dl vs 1080p BD upscale</title>
     <link href="http://ted423.github.io/Document/Encode/4K%20webdl%20vs%201080p%20BD%20upscale/"/>
     <id>http://ted423.github.io/Document/Encode/4K%20webdl%20vs%201080p%20BD%20upscale/</id>
-    <published>2022-01-03T14:30:43.735Z</published>
-    <updated>2022-01-03T14:32:27.779Z</updated>
+    <published>2022-01-03T14:31:00.000Z</published>
+    <updated>2022-01-04T01:05:45.856Z</updated>
     
-    <content type="html"><![CDATA[<p>title: cutree相关研究<br>tags:</p><ul><li>Document</li><li>encode</li><li>Compare<br>categories: Document<br>date: 2022-01-03 22:31</li></ul><p><a href="https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png">https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png</a><br><a href="https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.2160p.WEB-DL.DTS.x264-ULTRAHDCLUB.vpy---12027_1.png">https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.2160p.WEB-DL.DTS.x264-ULTRAHDCLUB.vpy---12027_1.png</a></p><p>结论是ULTRAHDCLUB Web-dl SDR的质量不太行，感觉本身也是拉伸的</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png">https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png</a><br><a href="https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.2160p.WEB-DL.DTS.x264-ULTRAHDCLUB.vpy---12027_1.png">https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.2160p.WEB-DL.DTS.x264-ULTRAHDCLUB.vpy---12027_1.png</a></p><p>结论是ULTRAHDCLUB Web-dl SDR的质量不太行，感觉本身也是拉伸的</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;title: cutree相关研究&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Document&lt;/li&gt;
-&lt;li&gt;encode&lt;/li&gt;
-&lt;li&gt;Compare&lt;br&gt;categories: Document&lt;br&gt;date: 2022-01-03 22:31&lt;/li&gt;
-</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png&quot;&gt;http</summary>
       
     
     
     
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Compare" scheme="http://ted423.github.io/tags/Compare/"/>
+    
+    <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
     
   </entry>
   
@@ -86,9 +117,9 @@
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
-    <category term="encode" scheme="http://ted423.github.io/tags/encode/"/>
-    
     <category term="Compare" scheme="http://ted423.github.io/tags/Compare/"/>
+    
+    <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
     
   </entry>
   
@@ -539,33 +570,6 @@
     
     
     <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</title>
-    <link href="http://ted423.github.io/Issue/SMB/"/>
-    <id>http://ted423.github.io/Issue/SMB/</id>
-    <published>2021-07-26T00:52:34.070Z</published>
-    <updated>2021-09-24T08:33:36.633Z</updated>
-    
-    <content type="html"><![CDATA[<p>其实最简单的方法是重启。</p><p>说下原因，敲下<code>net use</code>你会看到显示了一堆共享路径的连接。<br>也就是说Win的话，你不重启他不会重新去连接。<br>这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)<br><code>net use &quot;路径&quot; /del</code>全删掉，大部分重连就正常了。<br>实在不行还有大杀器<code>net use  * /del</code>，不过需要注意这个会删掉网络映射，微软不支持带网络映射的直接重连，需要不删除映射重连的方式大概只有重启。<br>如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;其实最简单的方法是重启。&lt;/p&gt;
-&lt;p&gt;说下原因，敲下&lt;code&gt;net use&lt;/code&gt;你会看到显示了一堆共享路径的连接。&lt;br&gt;也就是说Win的话，你不重启他不会重新去连接。&lt;br&gt;这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
