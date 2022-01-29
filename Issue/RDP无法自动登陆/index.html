@@ -21,7 +21,7 @@
     <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
     <meta name="description" content="主要表现为其他电脑(可能一般是加了域的电脑)，在RDP到Windows 10的电脑并保存账号以及密码后，第二次登陆提示你的凭据不工作，不允许使用保存的凭据登陆远程计算机&#x2F;Your system administrator does not allow the use of saved credentials to log on to the remote computer。 解决方法一个是可以通过">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[问题处理]RDP不允许使用已保存的账号密码登陆">
+<meta property="og:title" content="[问题处理]RDP不允许使用已保存的凭据登陆">
 <meta property="og:url" content="http://ted423.github.io/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/index.html">
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="主要表现为其他电脑(可能一般是加了域的电脑)，在RDP到Windows 10的电脑并保存账号以及密码后，第二次登陆提示你的凭据不工作，不允许使用保存的凭据登陆远程计算机&#x2F;Your system administrator does not allow the use of saved credentials to log on to the remote computer。 解决方法一个是可以通过">
@@ -29,7 +29,6 @@
 <meta property="og:image" content="http://ted423.github.io/img/%E5%87%AD%E6%8D%AE%E4%B8%8D%E5%B7%A5%E4%BD%9C.png">
 <meta property="og:image" content="https://i.stack.imgur.com/GwDcB.jpg">
 <meta property="og:image" content="https://i.stack.imgur.com/QFjeE.jpg">
-<meta property="og:image" content="http://ted423.github.io/img/%E5%87%AD%E6%8D%AE%E4%B8%8D%E5%B7%A5%E4%BD%9C1.png">
 <meta property="article:published_time" content="2018-11-01T13:22:00.000Z">
 <meta property="article:modified_time" content="2018-11-01T13:22:00.000Z">
 <meta property="article:author" content="ted423">
@@ -42,7 +41,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon.ico">
     
-    <title>[问题处理]RDP不允许使用已保存的账号密码登陆 · ted423个人小站</title>
+    <title>[问题处理]RDP不允许使用已保存的凭据登陆 · ted423个人小站</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -281,7 +280,7 @@
                 <a href="/">个人小站</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">[问题处理]RDP不允许使用已保存的账号密码登陆</a>
+                <a href="#" class="post-name">[问题处理]RDP不允许使用已保存的凭据登陆</a>
             </div>
         </div>
     
@@ -327,7 +326,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                [问题处理]RDP不允许使用已保存的账号密码登陆
+                [问题处理]RDP不允许使用已保存的凭据登陆
             <!-- 404 -->
             
         </h1>
@@ -370,7 +369,7 @@
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">141</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">134</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -532,8 +531,7 @@
                 <main class="main post-page">
     <article class="article-entry">
         <p><img src="/img/%E5%87%AD%E6%8D%AE%E4%B8%8D%E5%B7%A5%E4%BD%9C.png" alt="RDP无法以保存的账号密码登陆"><br>主要表现为其他电脑(可能一般是加了域的电脑)，在RDP到Windows 10的电脑并保存账号以及密码后，第二次登陆提示你的凭据不工作，不允许使用保存的凭据登陆远程计算机/Your system administrator does not allow the use of saved credentials to log on to the remote computer。</p>
-<p>解决方法一个是可以通过改组策略(Windows 10那台电脑的)，<br><img src="https://i.stack.imgur.com/GwDcB.jpg" alt="RDP无法以保存的账号密码登陆"><br><img src="https://i.stack.imgur.com/QFjeE.jpg" alt="RDP无法以保存的账号密码登陆"></p>
-<p>但更推荐的是在凭据管理器增加<strong>普通凭据</strong>(一般正常保存的RDP凭据位为”TERMSRV/“开头)<br><img src="/img/%E5%87%AD%E6%8D%AE%E4%B8%8D%E5%B7%A5%E4%BD%9C1.png" alt="RDP无法以保存的账号密码登陆"></p>
+<p>解决方法一个是可以通过改组策略(发起连接的那台电脑)，<br>中文为凭据分配，其中要添加的是保存的凭据，截图有误 <code>TERMSRV/*</code><br><img src="https://i.stack.imgur.com/GwDcB.jpg" alt="RDP无法以保存的账号密码登陆"><br><img src="https://i.stack.imgur.com/QFjeE.jpg" alt="RDP无法以保存的账号密码登陆"></p>
 
     </article>
     <!-- license -->
@@ -580,7 +578,7 @@
         
         var disqus_config = function () {
         this.page.url = "http://ted423.github.io/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/";  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = "[问题处理]RDP不允许使用已保存的账号密码登陆"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.identifier = "[问题处理]RDP不允许使用已保存的凭据登陆"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         
         (function () { // DON'T EDIT BELOW THIS LINE
@@ -6280,7 +6278,7 @@
         
         <li class="archive-post-item">
             <span class="archive-post-date">11/01</span>
-            <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP不允许使用已保存的账号密码登陆</a>
+            <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP不允许使用已保存的凭据登陆</a>
         </li>
     
         
