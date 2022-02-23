@@ -460,6 +460,120 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/getSelection-in-Firefox/">
+                
+                <span class="abstract-title-text">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</span>
+            </a>
+            <div class="abstract-content">
+                attention:不仅仅是文本框内的选择会被脚本记录，在本页面内所有的选取都会被记录
+
+function GetSelectedText (){
+  var userSelection, ta;
+  if (window.getSelection && document.activeElement){
+    if (document.activeElement.nodeName == "TEXTAREA" ||
+        (document.activeElement.nodeName == "INPUT" &&
+        document.activeElement.g...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/01/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Browser/Firfox%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BC%96%E8%AF%91%E7%89%88/">
+                
+                <span class="abstract-title-text">第三方编译版火狐推荐</span>
+            </a>
+            <div class="abstract-content">
+                相比于官版火狐，第三方编译版使用了一些优化，可能有着更优异的性能和表现
+pcxFirefox(停更)主页http://sourceforge.net/projects/pcxfirefox/
+推荐原因:有x64版的火狐可以用，而且是国产哦！
+tete009下载地址：http://www1.plala.or.jp/tete009/en-US/software.html#FFDL
+tete009版Firefox 相较于官方版本的改进和不同主要有:
+根据不同的CPU指令集制作不同的版本,使Firefox能够做到根据不同的平台而优化. 这也是众多第三方编译版本共同的特征.改进了Firefox的内...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/01/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/03</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Browser"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Browser
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Firefox">Firefox</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Browser">Browser</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Code/%E5%BC%80%E6%BA%90/">
                 
                 <span class="abstract-title-text">一张经典图，开源协议比较</span>
@@ -903,118 +1017,10 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Git/Github%20Commit%20failed/">
-                
-                <span class="abstract-title-text">[Git]处理Github的Commit failed:Failed to create a new commit</span>
-            </a>
-            <div class="abstract-content">
-                2015.02.15确认没再出现类似错误，大概Github的Windows客户端更新了
-好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是.git文件夹里有个index.lock的问题…..只要删掉就好了。大概在创建commit的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成commit,但由于之前已经有了index.lock（但没生成commit），而git不允许index.lock的覆盖，所以就卡住了…
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Git/Github/">
-                
-                <span class="abstract-title-text">个人Github</span>
-            </a>
-            <div class="abstract-content">
-                https://github.com/ted423
-Lrc-parserjavascript的Lrc解析器，博客内在用的，具体见https://ted423.bitcron.com/tags/歌词(LRC)
-Wifi-analyze我的毕业设计，就是个wifi检测的软件，不过没继续弄，因为不知道具体要加些什么
-rules-GM-stylish-UC基本都是自己改的火狐相关的东西包括
-
-代理自动配置(英语:Proxy auto-config,简称PAC):https://ted423.bitcron.com/post/code/www/pac
-GM脚本:https://ted423.bit...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/page/31/">&lt; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><a class="extend next" rel="next" href="/page/33/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/page/31/">&lt; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><a class="page-number" href="/page/34/">34</a><a class="extend next" rel="next" href="/page/33/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2870,7 +2876,33 @@ GM脚本:https://ted423.bit...
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5869,7 +5901,7 @@ GM脚本:https://ted423.bit...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 330
+        Total : 332
         </div>
         <!-- search  -->
         
@@ -5883,21 +5915,6 @@ GM脚本:https://ted423.bit...
     
         
             
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Browser/Chrome%20Offline/">[转载]Chrome离线安装包获取方法</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
             
             <div class="archive-year"> 2021 </div>
             <ul class="year-list">
@@ -6004,6 +6021,12 @@ GM脚本:https://ted423.bit...
             <div class="archive-year"> 2019 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span>
+            <a class="archive-post-title" href="/Browser/Chrome%20Offline/">[转载]Chrome离线安装包获取方法</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/27</span>
@@ -8868,6 +8891,12 @@ GM脚本:https://ted423.bit...
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">09/25</span>
+            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/%E3%82%A2%E3%83%9E%E3%82%AC%E3%82%A4%E3%82%BF%E3%83%AD%E3%83%BC/">[pixiv]推荐作者 - アマガイタロー</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">03/14</span>
             <a class="archive-post-title" href="/Music/%E4%BA%B2%E5%B9%82%E5%85%B3%E7%B3%BB/">[专辑]杨幂 - 亲幂关系 Close to Me</a>
         </li>
@@ -8882,6 +8911,12 @@ GM脚本:https://ted423.bit...
         <li class="archive-post-item">
             <span class="archive-post-date">02/23</span>
             <a class="archive-post-title" href="/Game/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/SW4II%E5%85%A8%E4%BB%BB%E5%8A%A1/">战国无双4-II 全任务列表</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/21</span>
+            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/Lpip/">[pixiv]推荐作者 - Lpip</a>
         </li>
     
         
