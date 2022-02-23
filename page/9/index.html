@@ -460,6 +460,64 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/fstab/">
+                
+                <span class="abstract-title-text">[问题处理]记一次很折腾的fstab mount iso</span>
+            </a>
+            <div class="abstract-content">
+                先放结果 
+1/share/1.iso /mnt/Disc1 udf defaults,ro,loop 0 0
+
+问题症结在这破iso不是一个标准iso
+12file 1.iso1.iso: data
+
+mount直接是可以Mount，但是到了fstab，就开始emmm……….
+报错wrong fs type, bad option, bad superblock网上查就是挂载格式问题然后试了各种类型都不对，直到找到这个https://www.linuxidc.com/Linux/2013-10/91264.htm
+总之就是先挂载，然后df -T看格式
+123/dev/loop9    ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2020/08/16">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/16</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/MobaXterm/">
                 
                 <span class="abstract-title-text">MobaXterm</span>
@@ -911,83 +969,6 @@ Directory opus是比...
         <a class="post-tag" href="javascript:void(0);" data-tags="MV">MV</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="1080P">1080P</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Anime/JP/Seitokai%20Yakuindomo/">
-                
-                <span class="abstract-title-text">妄想学生会[Seitokai Yakuindomo](生徒会役員共)</span>
-            </a>
-            <div class="abstract-content">
-                
-    
-        
-            妄想学生会(第1季)妄想学生会＊(第2季)
-        
-        
-            生徒会役員共
-        
-        
-            Student Council Staff Members
-        
-        
-            日语假名
-            せいとかいやくいんども
-        
-        
-            罗马字
-            Seitokai Yakuin Domo
-        
-        
-       ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/04/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Anime
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Anime">Anime</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="JP">JP</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="BDrip">BDrip</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FHD">FHD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="1080p">1080p</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="BDMV">BDMV</a>
     
 </div>
 
@@ -2865,7 +2846,24 @@ Directory opus是比...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5768,7 +5766,7 @@ Directory opus是比...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 332
+        Total : 333
         </div>
         <!-- search  -->
         
@@ -8779,6 +8777,12 @@ Directory opus是比...
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">03/01</span>
+            <a class="archive-post-title" href="/Picture&Photo&Image/Samurai%20Warriors%203/">战国无双3 资料集(Samurai Warriors 3 - Databook scans)</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">02/25</span>
             <a class="archive-post-title" href="/Video/R18/RIO/">[R18]柚木提娜[RIO](柚木ティナ)</a>
         </li>
@@ -9572,6 +9576,11 @@ Directory opus是比...
             <span class="sidebar-tag-name" data-tags="手办">
                 <span class="iconfont-archer">&#xe606;</span>
                 手办
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Pool">
+                <span class="iconfont-archer">&#xe606;</span>
+                Pool
             </span>
         
     </div>
