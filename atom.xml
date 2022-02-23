@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-02-18T10:04:38.000Z</updated>
+  <updated>2022-02-23T08:22:38.651Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[推荐]Directory Opus - 多标签资源浏览器</title>
+    <link href="http://ted423.github.io/Software/Directory%20Opus/"/>
+    <id>http://ted423.github.io/Software/Directory%20Opus/</id>
+    <published>2022-02-23T07:12:00.000Z</published>
+    <updated>2022-02-23T08:22:38.651Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.gpsoft.com.au/index.html">https://www.gpsoft.com.au/index.html</a><br>不得不说，资源浏览器这块，Linux走在Win的前面。</p><p>我基本试了所有多标签资源浏览器， 并没能找到一个完美的资源浏览器。（有个ExTab还没试，类似Clover，我当时买DO时他刚刚出生，不过免费软件嘛……不开源的情况下等作者累了就没人维护了，特别时只有QQ群和公众号的情况下,Issue都不好管，不过我可以给别的电脑装装玩玩）<br>DO算是里面让我感觉最好的了。</p><p>所以我最终入了正</p><p>别的软件的问题有</p><ul><li>干扰到平时的正常操作，这点Clover、QTTabBar都存在问题，QTTabBar会影响复制粘贴，Clover在有文件改动的时候会频繁刷新界面，导致没法操作</li><li>Clover转手后，基本没有很好的维护</li><li>QTTabBar没办法只在一个窗口显示，有时会打开新的窗口。</li><li>Groups会卡死。</li><li>没法替代资源管理器，有时候别的软件调用资源管理器会直接打开资源管理器，印象里QTTabBar能做到</li><li>维护稳定性不可保证，一些已经长期不更新</li></ul><p>DO存在的问题有</p><ul><li>我个人喜欢Win原生的界面就好，但DO的开始界面是自己实现的，不过问题不大</li><li>一些功能仍然只有Win原生才能做到，如对快速访问的操作，固定到开始菜单，通过集成方式实现功能的能做到，但是自己写资源管理器的软件做不到（这个是Win自身的限制）</li><li>设置项过多，不够简练，有些设置项甚至是不必要的。会让人找不到东西。我个人是不喜欢那种啥都有，但啥都不精的软件。例如压缩文件的相关操作，7z操作不如7z,rar操作不如winrar。 </li></ul><p>并且DO经常更新，平时使用非常稳定,甚至有很多我懒得用的功能，所以挺好的</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.gpsoft.com.au/index.html&quot;&gt;https://www.gpsoft.com.au/index.html&lt;/a&gt;&lt;br&gt;不得不说，资源浏览器这块，Linux走在Win的前面。&lt;/p&gt;
+&lt;p&gt;我基本试了所有多标签资</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="正版" scheme="http://ted423.github.io/tags/%E6%AD%A3%E7%89%88/"/>
+    
+  </entry>
+  
+  <entry>
     <title>个人浏览器选择对比</title>
     <link href="http://ted423.github.io/Browser/Browser/"/>
     <id>http://ted423.github.io/Browser/Browser/</id>
     <published>2022-02-05T16:00:00.000Z</published>
-    <updated>2022-02-18T10:04:38.000Z</updated>
+    <updated>2022-02-18T10:04:38.699Z</updated>
     
     <content type="html"><![CDATA[<p>Chromium其实已经一统江湖</p><h1 id="Firefox-推荐"><a href="#Firefox-推荐" class="headerlink" title="Firefox(推荐)"></a>Firefox(推荐)</h1><p>我对FF基本看法就是 哀其不幸，怒其不争</p><p>在有这玩意的前提下&lt;/Browser/no allow paste/&gt; 去学Chrome的界面，然后学了一手隐藏”http://“的负优化</p><p>最早的扩展以及脚本开发都在不断叛逃，然后GM更是自己做了一波死。估计没人理解GM那波作死到底是为了什么。</p><p>我始终坚持，软件这些是作为工具，那么最终目的是为了节省别人的时间，而不是浪费别人的时间。<br>PTPP推送因为某些原因没法用，所以放弃了，Chrome永远的神</p><h1 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a>Chromium</h1><h2 id="360极速-推荐"><a href="#360极速-推荐" class="headerlink" title="360极速(推荐)"></a>360极速(推荐)</h2><p>目前在用，个人感觉有点烂，放久了会自己崩掉。但起码内核跟的比较紧，基本的一些需求功能都还有。<br>傻逼地方-&gt;下载速度单位M/S<br>大B小b不分，可想而知程序员水平有多烂</p><h2 id="Edge-推荐"><a href="#Edge-推荐" class="headerlink" title="Edge(推荐)"></a>Edge(推荐)</h2><p>Edge 主要的问题在收藏移动的操作让人蛋疼</p><h2 id="Cent"><a href="#Cent" class="headerlink" title="Cent"></a>Cent</h2><p>&lt;/Browser/Cent/&gt;<br>挺喜欢的，但是一个没有收入的闭源软件，能想到后续会如何发展。况且浏览器这块还属于国内软件厂商的兵家必争之地。可惜了</p><h2 id="Opera"><a href="#Opera" class="headerlink" title="Opera"></a>Opera</h2><p>内核跟不上，我猜以后应该也跟不上了</p><h2 id="Vivaldi"><a href="#Vivaldi" class="headerlink" title="Vivaldi"></a>Vivaldi</h2><p>内核倒是跟上了。书签以及快速拨号做的相当不错<br>缺点就是下载exe非要你确认保留<br>目前的解决办法是调整组策略，不过会影响整台电脑(试了下还是会弹)<br>另外随便弹个窗就整个浏览器不让用，这种逻辑太傻逼了</p>]]></content>
     
@@ -151,7 +178,7 @@
   </entry>
   
   <entry>
-    <title>[R18]ABP554</title>
+    <title>[R18]ABP-554</title>
     <link href="http://ted423.github.io/Video/R18/ABP-554/"/>
     <id>http://ted423.github.io/Video/R18/ABP-554/</id>
     <published>2022-01-01T09:15:00.000Z</published>
@@ -542,32 +569,6 @@
     <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
     
     <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[R18]Anjelica</title>
-    <link href="http://ted423.github.io/Video/R18/Anjelica/"/>
-    <id>http://ted423.github.io/Video/R18/Anjelica/</id>
-    <published>2021-08-05T13:46:35.898Z</published>
-    <updated>2015-08-01T12:51:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>18OnlyGirls - Anjelica (We Can Do It Everywhere) NEW 05 May 2014 1080p<br><a href="magnet:?xt=urn:btih:F42174FCEAA9D6DF03A7956426F651F5ED2C0031">magnet:?xt=urn:btih:F42174FCEAA9D6DF03A7956426F651F5ED2C0031</a></p><p>18-OnlyGirls.14.03.01.Anjelica.Cream.My.Buttocks.XXX.1080p.MP4-KTR[rarbg]<br><a href="magnet:?xt=urn:btih:69772C3A44EAA37279289E0A85B17C2AF9D2F762&amp;dn=18-OnlyGirls.14.03.01.Anjelica.Cream.My.Buttocks.XXX.1080p.MP4-KTR%5Brarbg%5D">magnet:?xt=urn:btih:69772C3A44EAA37279289E0A85B17C2AF9D2F762&amp;dn=18-OnlyGirls.14.03.01.Anjelica.Cream.My.Buttocks.XXX.1080p.MP4-KTR%5Brarbg%5D</a></p><p>58.18OnlyGirls - Anjelica Cream My Buttocks<br><a href="magnet:?xt=urn:btih:AEA54DC7B5F7D8DF3AFD47A96CCD0A7F9D1CC606">magnet:?xt=urn:btih:AEA54DC7B5F7D8DF3AFD47A96CCD0A7F9D1CC606</a></p><p>AllFineGirls 20140425 Anjelica - I’m Never Bored 1080p<br><a href="magnet:?xt=urn:btih:0185280E010701E900E82A54E4D4671E2A1C3504">magnet:?xt=urn:btih:0185280E010701E900E82A54E4D4671E2A1C3504</a></p><p>Anjelica, Momoko - Blind Pa.. @ 嬌豔雙模白絲夢幻極端性愛[HD]<br><a href="magnet:?xt=urn:btih:3289E3B146C9099062AE14CAC76432B946CDCFFE">magnet:?xt=urn:btih:3289E3B146C9099062AE14CAC76432B946CDCFFE</a></p><p>huang4123@第一会所@Anjelica合集<br><a href="magnet:?xt=urn:btih:B6625D87E34701DE23DE6E864D6BEDCB208C73C8">magnet:?xt=urn:btih:B6625D87E34701DE23DE6E864D6BEDCB208C73C8</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;18OnlyGirls - Anjelica (We Can Do It Everywhere) NEW 05 May 2014 1080p&lt;br&gt;&lt;a href=&quot;magnet:?xt=urn:btih:F42174FCEAA9D6DF03A7956426F651F5ED</summary>
-      
-    
-    
-    
-    
-    <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
-    
-    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
-    
-    <category term="R18" scheme="http://ted423.github.io/tags/R18/"/>
     
   </entry>
   
