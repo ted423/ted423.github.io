@@ -460,6 +460,60 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
+                
+                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
+            </a>
+            <div class="abstract-content">
+                带签名的UTF8：
+带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
+无签名的UTF8：
+相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
+那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
+BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/10/28">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Anime/JP/Hyouka/">
                 
                 <span class="abstract-title-text">氷菓[Hyouka]</span>
@@ -973,60 +1027,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <a class="post-tag" href="javascript:void(0);" data-tags="Game">Game</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="无双系列">无双系列</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Terminal/cmd/">
-                
-                <span class="abstract-title-text">[Terminal]常用CMD&amp;批处理命令</span>
-            </a>
-            <div class="abstract-content">
-                微软官方资料https://technet.microsoft.com/en-us/library/cc754340(v=ws.11).aspx
-大部分命令可以通过后面+” /?”来查看使用方法
-批处理中一些参数（下面代码只能以批处理的方式执行）pause用来保证批处理运行完后，终端窗口不会被关闭
-12345678910111213@echo offecho 当前盘符：%~d0echo 当前盘符和路径：%~dp0echo 当前批处理全路径：%~f0echo 当前盘符和路径的短文件名格式：%~sdp0echo 当前CMD默认目录：%cd%echo 目录中有空格也可以加入&quot;&quo...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/09/20">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/20</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
 </div>
 
@@ -2909,7 +2909,50 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5824,7 +5867,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 333
+        Total : 334
         </div>
         <!-- search  -->
         
@@ -5873,6 +5916,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Document/CPU_info/">两个CPU性能分对比的网站</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/08</span>
+            <a class="archive-post-title" href="/Code/pip/">Python pip相关</a>
         </li>
     
         
@@ -5958,6 +6007,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/16</span>
+            <a class="archive-post-title" href="/Comic/Tolove/">[完结漫画]To LOVEる</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">04/27</span>
             <a class="archive-post-title" href="/Comic/%E7%9F%AD%E7%AF%87/">[Comic]一些短篇</a>
         </li>
@@ -5999,6 +6054,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         </li>
     
         
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/Comic/Sweet%20Magic%20Syndrome/">[Comic]甜蜜魔法症候群[Sweet Magic Syndrome](スイート マジック シンドローム)</a>
+        </li>
+    
+        
             
             
                 
@@ -6021,8 +6082,44 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span>
+            <a class="archive-post-title" href="/Document/IP/">[转载]奇葩的IP地址</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">08/08</span>
             <a class="archive-post-title" href="/Browser/no%20allow%20paste/">去除"欺诈警告:粘贴您不了解的东西时请务必小心，这可能...</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/01</span>
+            <a class="archive-post-title" href="/Comic/%E5%A5%B3%E4%BB%86%E6%9D%89%E8%8F%9C%E6%8B%A8%E4%BA%91%E8%A7%81%E6%97%A5%E7%9A%84%E7%94%9F%E6%B4%BB/">[Comic]女仆杉菜拨云见日的生活(つくし日和) - 樱翼汉化组</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/27</span>
+            <a class="archive-post-title" href="/Comic/%E5%8F%B6%E6%81%AD%E5%BC%98%E7%B3%BB%E5%88%97/">[Comic]叶恭弘系列</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/25</span>
+            <a class="archive-post-title" href="/Comic/%E8%8A%B1%E4%B8%B8%E5%B9%BC%E7%A8%9A%E5%9B%AD/">[Comic]花丸幼稚园|花丸幼儿园</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/25</span>
+            <a class="archive-post-title" href="/Comic/%E6%8F%89%E8%83%B8%E9%99%A4%E7%81%B5%E5%B8%88/">[Comic]揉胸除灵师/驱魔神手(揉み払い師)[空詠大智]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/25</span>
+            <a class="archive-post-title" href="/Comic/%E6%B2%B3%E4%B8%8B%E6%B0%B4%E5%B8%8C%E7%B3%BB%E5%88%97/">[Comic]河下水希系列</a>
         </li>
     
         
@@ -6080,123 +6177,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Anime/Toradora/">[Anime]龙与虎[Toradora](とらドラ!)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2019 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">05/16</span>
-            <a class="archive-post-title" href="/Comic/Tolove/">[完结漫画]To LOVEる</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Comic/Sweet%20Magic%20Syndrome/">[Comic]甜蜜魔法症候群[Sweet Magic Syndrome](スイート マジック シンドローム)</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/01</span>
-            <a class="archive-post-title" href="/Document/IP/">[转载]奇葩的IP地址</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/01</span>
-            <a class="archive-post-title" href="/Comic/%E5%A5%B3%E4%BB%86%E6%9D%89%E8%8F%9C%E6%8B%A8%E4%BA%91%E8%A7%81%E6%97%A5%E7%9A%84%E7%94%9F%E6%B4%BB/">[Comic]女仆杉菜拨云见日的生活(つくし日和) - 樱翼汉化组</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/27</span>
-            <a class="archive-post-title" href="/Comic/%E5%8F%B6%E6%81%AD%E5%BC%98%E7%B3%BB%E5%88%97/">[Comic]叶恭弘系列</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/25</span>
-            <a class="archive-post-title" href="/Comic/%E8%8A%B1%E4%B8%B8%E5%B9%BC%E7%A8%9A%E5%9B%AD/">[Comic]花丸幼稚园|花丸幼儿园</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/25</span>
-            <a class="archive-post-title" href="/Comic/%E6%8F%89%E8%83%B8%E9%99%A4%E7%81%B5%E5%B8%88/">[Comic]揉胸除灵师/驱魔神手(揉み払い師)[空詠大智]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/25</span>
-            <a class="archive-post-title" href="/Comic/%E6%B2%B3%E4%B8%8B%E6%B0%B4%E5%B8%8C%E7%B3%BB%E5%88%97/">[Comic]河下水希系列</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/02</span>
-            <a class="archive-post-title" href="/Code/%E5%BC%80%E6%BA%90/">一张经典图，开源协议比较</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Document/2magnet/">种子转磁力链接的简单方法以及磁力链转种子的网页</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2014 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Code/MFC%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%8C%96%E7%9A%84%E6%A1%86/">MFC界面定制</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Code/pip/">Python pip相关</a>
         </li>
     
         
@@ -6474,6 +6454,18 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">01/02</span>
+            <a class="archive-post-title" href="/Code/%E5%BC%80%E6%BA%90/">一张经典图，开源协议比较</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/Document/2magnet/">种子转磁力链接的简单方法以及磁力链转种子的网页</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
             <a class="archive-post-title" href="/Issue/80070003/">[问题处理]Windows Update 错误 80070003 解决方案</a>
         </li>
@@ -6493,6 +6485,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <div class="archive-year"> 2014 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/01</span>
+            <a class="archive-post-title" href="/Code/MFC%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%8C%96%E7%9A%84%E6%A1%86/">MFC界面定制</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
@@ -8634,6 +8632,18 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">03/07</span>
+            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/alracoco/">[pixiv]推荐作者 - alracoco</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/23</span>
+            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/%E9%9B%A8%E5%82%98%E3%82%86%E3%82%93/">[pixiv]推荐作者 - 雨傘ゆん</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">02/23</span>
             <a class="archive-post-title" href="/Software/Directory%20Opus/">[推荐]Directory Opus - 多标签资源浏览器</a>
         </li>
@@ -8948,21 +8958,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <li class="archive-post-item">
             <span class="archive-post-date">02/05</span>
             <a class="archive-post-title" href="/Music/LRC/Vocaloid/%E8%A3%8F%E8%A1%A8%E3%83%A9%E3%83%90%E3%83%BC%E3%82%BA/">[LRC]裏表ラバーズ</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/%E9%9B%A8%E5%82%98%E3%82%86%E3%82%93/">[pixiv]推荐作者 - 雨傘ゆん</a>
         </li>
     
     </div>
