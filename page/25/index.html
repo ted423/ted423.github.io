@@ -460,6 +460,64 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E4%B8%A4%E4%B8%AA%E5%9B%BE%E6%A0%87/">
+                
+                <span class="abstract-title-text">[问题处理]解决任务栏出现两个图标(火狐)的问题</span>
+            </a>
+            <div class="abstract-content">
+                找到的相关的贴:http://tieba.baidu.com/p/3923325915
+具体跟Application User Model IDs有关
+可以看到火狐有以下注册表（我才不会说我没记路径直接搜TaskBarIDs的，结果只有FF跟Thunderbird有这个），大概是为了区分不同通道的火狐。(但yysy,只有火狐出这个问题还是挺拉的 -2021-08-06)
+123HKEY_CURRENT_USER\SOFTWARE\Mozilla\Firefox\TaskBarIDsHKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/02/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Firefox">Firefox</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/McAfee/">
                 
                 <span class="abstract-title-text">麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</span>
@@ -587,7 +645,7 @@ Widnows 7改AHCI找到下面的注册表子项：
             <div class="abstract-post-meta">
                 <!-- date -->
                 <div class="abstract-date" title="Last updated: 2016/01/14">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/14</span>
                 </div>
                 <!-- tags -->
                 
@@ -922,59 +980,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Terminal/PC-wifi/">
-                
-                <span class="abstract-title-text">[Terminal]计算机建立虚拟Wifi热点</span>
-            </a>
-            <div class="abstract-content">
-                Win 10有个直接开热点的设置，所以下面可能就用不到了https://www.intel.cn/content/www/cn/zh/support/articles/000023257/network-and-i-o/wireless-networking.html
-需要注意的是，开启WIFI热点时可能会导致有线网通过DHCP获取另外网段的IP时出现问题，需要取消第3步操作后，也就是共享网络勾选，才可以通过DHCP获取到IP
-
-输入netsh wlan show driver先看是否支持承载网络
-打开CMD,输入1netsh wlan set hostednetwork mode=al...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/12/04">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
 </div>
 
@@ -2867,7 +2872,26 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5832,7 +5856,7 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 335
+        Total : 336
         </div>
         <!-- search  -->
         
@@ -6900,21 +6924,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
                 
                 </ul>
             
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
             
@@ -6928,6 +6937,21 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         <li class="archive-post-item">
             <span class="archive-post-date">08/06</span>
             <a class="archive-post-title" href="/Optimization/Thumbs.db/">[优化]通过组策略使系统不会自动生成Thumbs.db</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/14</span>
+            <a class="archive-post-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</a>
         </li>
     
         
@@ -8586,6 +8610,12 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/10</span>
+            <a class="archive-post-title" href="/Issue/Win_FW/">[问题处理]记一次Windows升级后无法被ping通，无法远程连接</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/10</span>

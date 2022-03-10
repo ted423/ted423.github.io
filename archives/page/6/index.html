@@ -445,6 +445,65 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Windows%20Fast%20Shutdown/">
+                
+                <span class="abstract-title-text">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
+            </a>
+            <div class="abstract-content">
+                这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2019/07/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/15</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Code/Git/git%20proxy/">
                 
                 <span class="abstract-title-text">[Git]设置和取消代理</span>
@@ -917,65 +976,6 @@ LGPL似乎会比GPL少一些功能
         <a class="post-tag" href="javascript:void(0);" data-tags="LGPL">LGPL</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="跨平台">跨平台</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/System/Slax/">
-                
-                <span class="abstract-title-text">[不再推荐]Slax - Linux PE</span>
-            </a>
-            <div class="abstract-content">
-                不推荐的理由在于Ubuntu和Manjaro的安装盘就能做到，并且一般效果比这个还要好2年未维护，似乎没有提供源码
-
-其实要有个WinPE能看Linux的文件系统也就不用这玩意了https://www.slax.org
-但目前来讲这东西还算有用。修复了一个ESXi的文件损坏的问题
-请注意这个iso不是像别的一样拿什么东西写到移动硬盘或是U盘上，而是直接解压（NTFS文件系统都行）,移动硬盘或U盘中可以保留slax这个文件夹（直接放进去），然后跑boot里的bat。
-另外注意这个对移动硬盘可能相性不好，也可能是文件系统的锅，建议优先U盘
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/22">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/24</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="System"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                System
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="不再推荐">不再推荐</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="System">System</a>
     
 </div>
 
@@ -2767,7 +2767,26 @@ LGPL似乎会比GPL少一些功能
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5732,7 +5751,7 @@ LGPL似乎会比GPL少一些功能
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 335
+        Total : 336
         </div>
         <!-- search  -->
         
@@ -6800,21 +6819,6 @@ LGPL似乎会比GPL少一些功能
                 
                 </ul>
             
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
             
@@ -6828,6 +6832,21 @@ LGPL似乎会比GPL少一些功能
         <li class="archive-post-item">
             <span class="archive-post-date">08/06</span>
             <a class="archive-post-title" href="/Optimization/Thumbs.db/">[优化]通过组策略使系统不会自动生成Thumbs.db</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2016 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/14</span>
+            <a class="archive-post-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</a>
         </li>
     
         
@@ -8486,6 +8505,12 @@ LGPL似乎会比GPL少一些功能
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/10</span>
+            <a class="archive-post-title" href="/Issue/Win_FW/">[问题处理]记一次Windows升级后无法被ping通，无法远程连接</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/10</span>
