@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-03-10T08:06:00.000Z</updated>
+  <updated>2022-03-19T09:45:01.889Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[推荐]软件更新管理 - Sumo &amp; Chocolatey</title>
+    <link href="http://ted423.github.io/Software/Software%20Update/"/>
+    <id>http://ted423.github.io/Software/Software%20Update/</id>
+    <published>2022-03-19T08:44:00.000Z</published>
+    <updated>2022-03-19T09:45:01.889Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。<br>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</p><h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p><p>这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)</p><h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h1><p>Chocolatey 虽然是开源的，但其实际还是一款面向企业的商业产品，并且国内体验不好。<br>像什么微信QQ企业微信，里面是没有的。<br>免费产品限制了功能，并且只能装到C盘。之前还有安装失败也会计入软件列表的问题</p><p>因此这个产品的主要定位是一定程度上处理软件升级的问题。主要处理软件自带升级智障的问题，例如WinSCP(之前有用scoop，这个自己本身也智障，配置放便携版里，结果一更新配置没了)<br>注意的点</p><ul><li>这软件在Win7上要更新PowerShell。</li><li>只有想装C盘并且不需要安装包配置关联的软件才用Chocolatey直接装，否则建议自行安装，其后用Chocolatey升级</li><li>社区维护，因此很多软件安装行为都由社区维护者决定</li><li>因为上面一条，可能面临没有维护或者不再维护的情况</li><li>网络问题</li></ul><p>一些常用命令</p><ul><li>列出本地安装软件 <code>choco list --local-only</code></li><li>列出可升级的软件 <code>choco outdated</code></li><li>安装指定等级 <code>choco install virtualbox --version 4.3.26</code></li><li>不检查更新<code>choco pin add -n=googlechrome</code></li><li><code>choco search 名字</code></li><li><a href="https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey">Proxy Server</a> (不支持socks5,)</li></ul><h1 id="Why-not-360-and-etc"><a href="#Why-not-360-and-etc" class="headerlink" title="Why not 360(and etc)"></a>Why not 360(and etc)</h1><p>实际上我是最早的360以及金山清理专家使用者。<br>然后他们之间打了一架，360弹窗给用户洗脑，往傲游和金山网盾身上扔了一堆屎盆子。<br>而傅盛把清理专家砍了然后做了个界面奇丑无比的金山卫士(因为这玩意做了开机自启)<br>然后在金山卫士开始有一堆受众的时候把卫士砍了。</p><p>国内软件喜欢加驱是免不了的，那么作为一个免费加驱软件(剩下的我就不说了)。<br>重点是你愿意为了你需要的功能使用这些免费加驱软件，然后进入他们的流量入口么？</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。&lt;br&gt;如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。&lt;/p&gt;
+&lt;h1 id=&quot;Sumo&quot;&gt;&lt;a href=&quot;#Sumo&quot; class=&quot;headerlink&quot; title=&quot;Sumo&quot;&gt;&lt;/</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]记一次Windows升级后无法被ping通，无法远程连接</title>
@@ -524,31 +557,6 @@
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm设置代理</title>
-    <link href="http://ted423.github.io/Code/npm%20proxy/"/>
-    <id>http://ted423.github.io/Code/npm%20proxy/</id>
-    <published>2021-08-05T15:17:19.580Z</published>
-    <updated>2021-08-05T15:19:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>npm config set https-proxy socks5://127.0.0.1:7890</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;npm config set https-proxy socks5://127.0.0.1:7890&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
     
   </entry>
   
