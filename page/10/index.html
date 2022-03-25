@@ -460,64 +460,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Issue/fstab/">
-                
-                <span class="abstract-title-text">[问题处理]记一次很折腾的fstab mount iso</span>
-            </a>
-            <div class="abstract-content">
-                先放结果 
-1/share/1.iso /mnt/Disc1 udf defaults,ro,loop 0 0
-
-问题症结在这破iso不是一个标准iso
-12file 1.iso1.iso: data
-
-mount直接是可以Mount，但是到了fstab，就开始emmm……….
-报错wrong fs type, bad option, bad superblock网上查就是挂载格式问题然后试了各种类型都不对，直到找到这个https://www.linuxidc.com/Linux/2013-10/91264.htm
-总之就是先挂载，然后df -T看格式
-123/dev/loop9    ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/08/16">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/16</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Browser/Extension/ImageAssistant/">
                 
                 <span class="abstract-title-text">[扩展]图片助手(ImageAssistant)</span>
@@ -992,6 +934,64 @@ Directory opus是比...
         <a class="post-tag" href="javascript:void(0);" data-tags="1080p">1080p</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="BDMV">BDMV</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/git/">
+                
+                <span class="abstract-title-text">[Git]一些命令</span>
+            </a>
+            <div class="abstract-content">
+                如无特别说明，本人的所有Git操作都是以Github为主
+git 文档https://git-scm.com/docs
+本地分支删除查看项目的分支们(包括本地和远程) 
+1$ git branch -a  
+
+删除本地分支 
+1$ git branch -d &lt;BranchName&gt;
+reset 删除错误提交的commit使用这个的前提条件是没有push,一般不建议push -fgit reset --hard &lt;commit_id&gt; 回退到某一版本。git reset --hard head~1 回退一个版本(数字2自然就是两个版本啦)然后 git push -...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2020/04/21">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/21</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
     
 </div>
 
@@ -9771,9 +9771,14 @@ Directory opus是比...
                 战场的女武神[Valkyria Chronicles]
             </span>
         
-            <span class="sidebar-tag-name" data-tags="无损,专辑,K-ON,OST">
+            <span class="sidebar-tag-name" data-tags="Lossless">
                 <span class="iconfont-archer">&#xe606;</span>
-                无损,专辑,K-ON,OST
+                Lossless
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="OST">
+                <span class="iconfont-archer">&#xe606;</span>
+                OST
             </span>
         
     </div>
