@@ -460,6 +460,61 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/NtpClient/">
+                
+                <span class="abstract-title-text">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</span>
+            </a>
+            <div class="abstract-content">
+                报错信息如下“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”
+看到了这篇文章https://shiyousan.com/post/635774974180847748
+有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，https://www.azurew.com/windows/windows-server-2016/3098.html，也可以不这么设)划掉，按个...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/09/24">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/16</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows AD">Windows AD</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/SMB/">
                 
                 <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
@@ -667,6 +722,8 @@
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
     
@@ -933,64 +990,6 @@
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Proxy">Proxy</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Security/No%20WD/">
-                
-                <span class="abstract-title-text">不推荐使用Windows Defender</span>
-            </a>
-            <div class="abstract-content">
-                首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。Server是1809，所以很可能遇到了是一个老版本的Bug
-现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。
-然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了图片挂了
-解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。而里...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Security Software">Security Software</a>
     
 </div>
 
@@ -2918,7 +2917,26 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -5973,7 +5991,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 342
+        Total : 343
         </div>
         <!-- search  -->
         
@@ -8727,6 +8745,12 @@
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/25</span>
+            <a class="archive-post-title" href="/Optimization/Server-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8-%E7%A3%81%E7%9B%98/">[优化]Windows Server 打开任务管理器磁盘监控</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/19</span>

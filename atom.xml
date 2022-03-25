@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-03-21T06:41:19.589Z</updated>
+  <updated>2022-03-25T08:23:09.844Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[优化]Windows Server 打开任务管理器磁盘监控</title>
+    <link href="http://ted423.github.io/Optimization/Server-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8-%E7%A3%81%E7%9B%98/"/>
+    <id>http://ted423.github.io/Optimization/Server-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8-%E7%A3%81%E7%9B%98/</id>
+    <published>2022-03-25T08:21:00.000Z</published>
+    <updated>2022-03-25T08:23:09.844Z</updated>
+    
+    <content type="html"><![CDATA[<p>Server默认都没开不知道什么考虑<br>管理员权限下的 CMD 或者Power Shell<br><code>diskperf -Y</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Server默认都没开不知道什么考虑&lt;br&gt;管理员权限下的 CMD 或者Power Shell&lt;br&gt;&lt;code&gt;diskperf -Y&lt;/code&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Optimization" scheme="http://ted423.github.io/categories/Optimization/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
+    
+    <category term="Optimization" scheme="http://ted423.github.io/tags/Optimization/"/>
+    
+  </entry>
   
   <entry>
     <title>[推荐]软件更新管理 - Sumo &amp; Chocolatey</title>
@@ -544,31 +575,6 @@
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm设置代理</title>
-    <link href="http://ted423.github.io/Code/npm%20proxy/"/>
-    <id>http://ted423.github.io/Code/npm%20proxy/</id>
-    <published>2021-08-05T15:17:19.580Z</published>
-    <updated>2021-08-05T15:19:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>npm config set https-proxy socks5://127.0.0.1:7890</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;npm config set https-proxy socks5://127.0.0.1:7890&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
     
   </entry>
   
