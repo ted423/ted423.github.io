@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-03-25T08:23:09.844Z</updated>
+  <updated>2022-03-27T14:13:44.353Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 路由相关</title>
+    <link href="http://ted423.github.io/Document/Network/Windows-ip-route/"/>
+    <id>http://ted423.github.io/Document/Network/Windows-ip-route/</id>
+    <published>2022-03-27T14:07:00.000Z</published>
+    <updated>2022-03-27T14:13:44.353Z</updated>
+    
+    <content type="html"><![CDATA[<p>多网络环境可以进行路由优先级调整，避免类似不能访问外网的路由优先级高导致电脑不能上网<br>其实调整跃点就可以<br>对于内部的，不跨网段的，其实可以把网关删掉</p><p>希望优先级低的，在适配器处，进入ipv4设置，然后点击高级，取消自动跃点，给跃点数填个很高的值</p><p><code>route print</code><br>可以看到路由优先级</p><p>可以手动指定路由<br><code>route add 192.168.0.0 mask 255.255.255.0 192.168.68.254</code></p><p>-p 代表是永久路由</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;多网络环境可以进行路由优先级调整，避免类似不能访问外网的路由优先级高导致电脑不能上网&lt;br&gt;其实调整跃点就可以&lt;br&gt;对于内部的，不跨网段的，其实可以把网关删掉&lt;/p&gt;
+&lt;p&gt;希望优先级低的，在适配器处，进入ipv4设置，然后点击高级，取消自动跃点，给跃点数填个很高的值&lt;/</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
+    
+    <category term="Network" scheme="http://ted423.github.io/tags/Network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 Linux 下如何强制取消挂载(umount) NFS 目录</title>
+    <link href="http://ted423.github.io/Code/Terminal/umount%20-lf/"/>
+    <id>http://ted423.github.io/Code/Terminal/umount%20-lf/</id>
+    <published>2022-03-25T10:09:00.000Z</published>
+    <updated>2022-03-27T13:43:14.426Z</updated>
+    
+    <content type="html"><![CDATA[<p>这种情况下可以考虑lazy umount<br>即 <code>umount -lf 路径</code><br>lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。<br><strong>请注意，该方法并不是完全安全的</strong></p><p>另外可以参考下<a href="https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging">https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging</a><br>不过个人很久之前弄得，不记得当时有没用这个方式</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这种情况下可以考虑lazy umount&lt;br&gt;即 &lt;code&gt;umount -lf 路径&lt;/code&gt;&lt;br&gt;lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。&lt;br&gt;&lt;strong&gt;请注意，该方法并不是完全安全的&lt;/strong&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
+    
+  </entry>
   
   <entry>
     <title>[优化]Windows Server 打开任务管理器磁盘监控</title>
@@ -249,10 +311,10 @@
   
   <entry>
     <title>常用Linux命令</title>
-    <link href="http://ted423.github.io/Document/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/"/>
-    <id>http://ted423.github.io/Document/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/</id>
+    <link href="http://ted423.github.io/Code/Terminal/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/"/>
+    <id>http://ted423.github.io/Code/Terminal/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/</id>
     <published>2022-01-26T16:00:00.000Z</published>
-    <updated>2022-03-21T08:16:10.297Z</updated>
+    <updated>2022-03-25T10:09:29.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Manjaro"><a href="#Manjaro" class="headerlink" title="Manjaro"></a>Manjaro</h1><p><code>sudo pacman-mirrors -i -c China -m rank</code> 选用最快的国内源</p><p>AUR安装<br><a href="https://wiki.manjaro.org/index.php/Arch_User_Repository">https://wiki.manjaro.org/index.php/Arch_User_Repository</a></p>]]></content>
     
@@ -264,7 +326,7 @@
     
     
     
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
     
     
     <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
@@ -272,6 +334,8 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
   </entry>
   
@@ -514,67 +578,6 @@
     <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
     
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows Update:0x80072EFE</title>
-    <link href="http://ted423.github.io/Issue/0x80072EFE/"/>
-    <id>http://ted423.github.io/Issue/0x80072EFE/</id>
-    <published>2021-08-09T07:07:44.166Z</published>
-    <updated>2021-09-24T08:23:16.695Z</updated>
-    
-    <content type="html"><![CDATA[<p>2008 R2遇到<br>这个问题是由于update agent过旧导致的<br>理论Windows7早期版本也有问题，会导致后台占用很多内存</p><p>从文章得知Win8 和2012也有更新包，但是报错不明</p><p>更新包似乎是这两个系统通用的<br><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent">https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;2008 R2遇到&lt;br&gt;这个问题是由于update agent过旧导致的&lt;br&gt;理论Windows7早期版本也有问题，会导致后台占用很多内存&lt;/p&gt;
-&lt;p&gt;从文章得知Win8 和2012也有更新包，但是报错不明&lt;/p&gt;
-&lt;p&gt;更新包似乎是这两个系统通用的&lt;br&gt;&lt;a hr</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>winscppwd - Winscp Password解密</title>
-    <link href="http://ted423.github.io/Software/winscppwd/"/>
-    <id>http://ted423.github.io/Software/winscppwd/</id>
-    <published>2021-08-08T18:12:00.000Z</published>
-    <updated>2021-08-08T18:12:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>起因是忘了某机器密码，然后曾保存到了Winscp里<br>不过配置里的密码是加密的。</p><p>网上所有帖子都指向了<a href="/file/winscppwd.exe">winscppwd</a>，并且我查到以前有这么个开源项目<a href="https://bitbucket.org/knarf/winscppwd/overview">https://bitbucket.org/knarf/winscppwd/overview</a>，但现在看已经404了</p><p>似乎是2012年的软件<br>但是现在仍能正常使用</p><p>看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看<br><a href="https://github.com/winscp/winscp/blob/master/source/core/Security.cpp">https://github.com/winscp/winscp/blob/master/source/core/Security.cpp</a><br>不过我看不懂，有人看得懂的话，可以试试手工解密</p><p>另外有看到<a href="https://github.com/dzxs/winscppassword/">https://github.com/dzxs/winscppassword/</a><br>但这个我没试能不能用</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;起因是忘了某机器密码，然后曾保存到了Winscp里&lt;br&gt;不过配置里的密码是加密的。&lt;/p&gt;
-&lt;p&gt;网上所有帖子都指向了&lt;a href=&quot;/file/winscppwd.exe&quot;&gt;winscppwd&lt;/a&gt;，并且我查到以前有这么个开源项目&lt;a href=&quot;https://b</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
   </entry>
   
