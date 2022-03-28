@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-03-27T14:13:44.353Z</updated>
+  <updated>2022-03-28T06:40:22.048Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bit Byte bibyte(雾) 存储单位，速度单位的一些说明</title>
+    <link href="http://ted423.github.io/Document/Mebibyte/"/>
+    <id>http://ted423.github.io/Document/Mebibyte/</id>
+    <published>2022-03-27T14:40:00.000Z</published>
+    <updated>2022-03-28T06:40:22.048Z</updated>
+    
+    <content type="html"><![CDATA[<p>在计算机中 b=bit B=Byte<br>其中 1Byte=8bit<br>B=Byte属于习惯用法，并不表示byte在使用中必须大写。<br>但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。<br>另，MB/s=MBps=8Mbps，通常说的百兆带宽是100Mbps也就是12.5MB/s。<br>当然百兆带宽属于口语化用词，你不用纠结一个人说千兆带宽下载有100兆（100MB/s）这件事。<br>当然360浏览器下载速度是M/s的事你也不用纠结，因为说明360浏览器的下载器开发者水平太烂。</p><p>这时候冒出来个MiB(Mebibyte)就需要仔细讲讲了<br>Multiple-byte units<br>Mebibyte 记作 MiB ，由国际电工委员会（IEC）于1998年制定。这个单位被设计用来某些时候替代MB（megabyte），因为在计算机相关内容中MB有可能被用来等于2的20次方，虽然数值很相近，但MiB与国际单位制（SI）中的MB（10的6次方）还是有严格的区别。<br>这个单位不常用，不过你知道10TB在Win上只有8.92TB(实际是TiB)就是这个单位做怪了。当然，离不开本博客口头语，微软傻逼就是了。（所以说为啥微软某些地方这么像国内软件啊，不过确实比360强点）<br>Linux是对的<br><img src="https://shoot.photo/images/2022/03/28/6d8OF.jpg" alt="bibyte"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在计算机中 b=bit B=Byte&lt;br&gt;其中 1Byte=8bit&lt;br&gt;B=Byte属于习惯用法，并不表示byte在使用中必须大写。&lt;br&gt;但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。&lt;br&gt;另，MB/s=MBps=8M</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 路由相关</title>
@@ -550,34 +574,6 @@
     <category term="Anime" scheme="http://ted423.github.io/tags/Anime/"/>
     
     <category term="迪士尼[Disney]" scheme="http://ted423.github.io/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC-Disney/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</title>
-    <link href="http://ted423.github.io/Issue/python-win/"/>
-    <id>http://ted423.github.io/Issue/python-win/</id>
-    <published>2021-08-09T08:49:12.683Z</published>
-    <updated>2021-08-09T08:54:34.426Z</updated>
-    
-    <content type="html"><![CDATA[<p>简单说就是Win10在<code>C:\Users\XX\AppData\Local\Microsoft\WindowsApps</code>下放了两个0kb的python.exe以及python3.exe用于弹Windows Store，并把这个路径加到了个人的环境变量。</p><p>而且这个环境变量优先级高所以会优先运行。</p><p>傻逼微软。</p><p>资源管理器里似乎删不掉，要命令行删</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;简单说就是Win10在&lt;code&gt;C:\Users\XX\AppData\Local\Microsoft\WindowsApps&lt;/code&gt;下放了两个0kb的python.exe以及python3.exe用于弹Windows Store，并把这个路径加到了个人的环境变量。</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   

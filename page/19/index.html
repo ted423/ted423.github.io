@@ -460,6 +460,58 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/mySQL-backup/">
+                
+                <span class="abstract-title-text">[资料]Linux下备份MySql数据库</span>
+            </a>
+            <div class="abstract-content">
+                Full备份的话可以用mysqldump，这里有资料https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html
+之后可以通过备份Binary Log的方式备份数据库改动。Binary Log 的运作原理很简单，它只是单纯的将所有会修改到资料库内容的操作记录在 Log 档案中
+首先需要启用Binary Log(默认没启用)
+修改 MySQL Server 的系统设定档(eg. /etc/my.cnf，最新版貌似改了，需要自己找下)，在 [mysqld] 区块中加上 log-bin=mysql-bin 选项，然后重新启动 MySQL Serv...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/30">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/30</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/apt-source/">
                 
                 <span class="abstract-title-text">[资料]debian 更改软件源</span>
@@ -937,60 +989,6 @@ HIPS并不能阻止软件创建文件夹。
         <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Security Software">Security Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/Network/magnet/">
-                
-                <span class="abstract-title-text">[资料]特殊的磁力链(magnet)</span>
-            </a>
-            <div class="abstract-content">
-                资料相关首先需要明白磁力链接的定义https://zh.wikipedia.org/wiki/磁力链接http://bittorrent.org/beps/bep_0009.htmldmhy一般有两种磁力链格式，最早只有一种，并且他的磁力链有些软件无法识别两者的主要区别在于base16(HEX)和base32的编码base32:https://en.wikipedia.org/wiki/Base32
-HEX(base16):https://en.wikipedia.org/wiki/Hexadecimal
-还有资料http://www.ietf.org/rfc/rfc3548.txt
-H...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/04/10">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/10</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Network">Network</a>
     
 </div>
 
@@ -2933,7 +2931,26 @@ H...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6184,7 +6201,7 @@ H...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 345
+        Total : 346
         </div>
         <!-- search  -->
         
@@ -8894,6 +8911,12 @@ H...
         <li class="archive-post-item">
             <span class="archive-post-date">03/27</span>
             <a class="archive-post-title" href="/Document/Network/Windows-ip-route/">Windows 路由相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/27</span>
+            <a class="archive-post-title" href="/Document/Mebibyte/">bit Byte bibyte(雾) 存储单位，速度单位的一些说明</a>
         </li>
     
         

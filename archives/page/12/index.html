@@ -445,6 +445,62 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">
+                
+                <span class="abstract-title-text">[问题处理]多同步盘下Dropbox同步状态图标不见</span>
+            </a>
+            <div class="abstract-content">
+                简要地说Windows的overlayIcon(状态图标)最多不能超过15个(我这边好像是超过13个就不行),而Onedrive自己就占了一半(我同时用两个同步盘)这些信息保存在
+1HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
+个人的处理办法是Onedrive删一半，dropbox删一半，因为对我来说只要一个同步Ok的状态有了就行
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/10/27">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Dropbox">Dropbox</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/">
                 
                 <span class="abstract-title-text">Ubuntu 和Windows 7共存的GRUB启动顺序</span>
@@ -939,60 +995,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
-                
-                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
-            </a>
-            <div class="abstract-content">
-                带签名的UTF8：
-带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
-无签名的UTF8：
-相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
-那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
-BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/28">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
     
 </div>
 
@@ -2834,7 +2836,26 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6085,7 +6106,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 345
+        Total : 346
         </div>
         <!-- search  -->
         
@@ -8795,6 +8816,12 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         <li class="archive-post-item">
             <span class="archive-post-date">03/27</span>
             <a class="archive-post-title" href="/Document/Network/Windows-ip-route/">Windows 路由相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/27</span>
+            <a class="archive-post-title" href="/Document/Mebibyte/">bit Byte bibyte(雾) 存储单位，速度单位的一些说明</a>
         </li>
     
         
