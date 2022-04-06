@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-03-28T06:40:22.048Z</updated>
+  <updated>2022-03-28T07:32:42.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,9 +21,33 @@
     <link href="http://ted423.github.io/Document/Mebibyte/"/>
     <id>http://ted423.github.io/Document/Mebibyte/</id>
     <published>2022-03-27T14:40:00.000Z</published>
-    <updated>2022-03-28T06:40:22.048Z</updated>
+    <updated>2022-03-28T07:32:42.000Z</updated>
     
-    <content type="html"><![CDATA[<p>在计算机中 b=bit B=Byte<br>其中 1Byte=8bit<br>B=Byte属于习惯用法，并不表示byte在使用中必须大写。<br>但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。<br>另，MB/s=MBps=8Mbps，通常说的百兆带宽是100Mbps也就是12.5MB/s。<br>当然百兆带宽属于口语化用词，你不用纠结一个人说千兆带宽下载有100兆（100MB/s）这件事。<br>当然360浏览器下载速度是M/s的事你也不用纠结，因为说明360浏览器的下载器开发者水平太烂。</p><p>这时候冒出来个MiB(Mebibyte)就需要仔细讲讲了<br>Multiple-byte units<br>Mebibyte 记作 MiB ，由国际电工委员会（IEC）于1998年制定。这个单位被设计用来某些时候替代MB（megabyte），因为在计算机相关内容中MB有可能被用来等于2的20次方，虽然数值很相近，但MiB与国际单位制（SI）中的MB（10的6次方）还是有严格的区别。<br>这个单位不常用，不过你知道10TB在Win上只有8.92TB(实际是TiB)就是这个单位做怪了。当然，离不开本博客口头语，微软傻逼就是了。（所以说为啥微软某些地方这么像国内软件啊，不过确实比360强点）<br>Linux是对的<br><img src="https://shoot.photo/images/2022/03/28/6d8OF.jpg" alt="bibyte"></p>]]></content>
+    <content type="html"><![CDATA[<p>在计算机中 b=bit B=Byte<br>其中 1Byte=8bit<br>B=Byte属于习惯用法，并不表示byte在文字表述中必须大写。<br>但是在计算机使用中，KB, MB, GB 大小写必须写对，否则意味这个人技术不过关，基础太烂。<br>另，MB/s=MBps=8Mbps，通常说的百兆带宽是100Mbps，也就是12.5MB/s。<br>当然百兆带宽属于口语化用词，你不用纠结一个人说千兆带宽下载有100兆（100MB/s）这件事。<br>当然360浏览器下载速度是M/s的事你也不用纠结，因为说明360浏览器的下载器开发者水平太烂。</p><p>这时候冒出来个MiB(Mebibyte)就需要仔细讲讲了</p><p>Mebibyte 记作 MiB ，由国际电工委员会（IEC）于1998年制定。这个单位被设计用来某些时候替代MB（megabyte），因为在计算机相关内容中MB有可能被用来等于2的20次方，虽然数值很相近，但MiB与国际单位制（SI）中的MB（10的6次方）还是有严格的区别。<br>基于 10 次方的系统使用标准 SI 前缀（kilo、mega、giga、…）及其相应的符号（k、M、G、…）。 然而，基于 2 的幂的系统可能使用二进制前缀（kibi、mebi、gibi、…）及其对应的符号（Ki、Mi、Gi、…），部分混乱的使用了SI前缀。<br>1KB=1000Bytes,1KiB=1024Bytes</p><p>这个单位不常用，在许多年里，MB的混乱使用是众所周知的。不过你知道10TB在Win上只有8.92TB(实际是TiB)就是这个单位做怪。当然，离不开本博客口头语，微软傻逼就是了。（所以说为啥微软某些地方这么像国内软件啊，不过确实比360强点）<br>Linux是对的<br><img src="https://shoot.photo/images/2022/03/28/6d8OF.jpg" alt="bibyte"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在计算机中 b=bit B=Byte&lt;br&gt;其中 1Byte=8bit&lt;br&gt;B=Byte属于习惯用法，并不表示byte在文字表述中必须大写。&lt;br&gt;但是在计算机使用中，KB, MB, GB 大小写必须写对，否则意味这个人技术不过关，基础太烂。&lt;br&gt;另，MB/s=MBps</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>bit Byte bibyte(雾) 存储单位，速度单位的一些说明</title>
+    <link href="http://ted423.github.io/Document/Mebibyte%20(DESKTOP-C7D3UPB%20%E7%9A%84%E5%86%B2%E7%AA%81%E5%89%AF%E6%9C%AC%202022-03-28)/"/>
+    <id>http://ted423.github.io/Document/Mebibyte%20(DESKTOP-C7D3UPB%20%E7%9A%84%E5%86%B2%E7%AA%81%E5%89%AF%E6%9C%AC%202022-03-28)/</id>
+    <published>2022-03-27T14:40:00.000Z</published>
+    <updated>2022-03-27T15:15:05.443Z</updated>
+    
+    <content type="html"><![CDATA[<p>在计算机中 b=bit B=Byte<br>其中 1Byte=8bit<br>B=Byte属于习惯用法，并不表示byte在使用中必须大写。<br>但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。<br>另，MB/s=MBps=8Mbps，通常说的百兆带宽是100Mbps也就是12.5MB/s。<br>当然百兆带宽属于口语化用词，你不用纠结一个人说千兆带宽下载有100兆（100MB/s）这件事。<br>当然360浏览器下载速度是M/s的事你也不用纠结，因为说明360浏览器的下载器开发者水平太烂。</p><p>这时候冒出来个MiB(Mebibyte)就需要仔细讲讲了<br>Multiple-byte units<br>Mebibyte 记作 MiB ，由国际电工委员会（IEC）于1998年制定。这个单位被设计用来某些时候替代MB（megabyte），因为在计算机相关内容中MB有可能被用来等于2的20次方，虽然数值很相近，但MiB与国际单位制（SI）中的MB（10的6次方）还是有严格的区别。<br>这个单位不常用，不过你知道10TB在Win上只有8.92TB(实际是TiB)就是这个单位做怪了。当然，离不开本博客口头语，微软傻逼。（所以说为啥微软某些地方这么像国内软件啊，不过确实比360强点）</p>]]></content>
     
     
       
@@ -547,33 +571,6 @@
     <category term="汉化" scheme="http://ted423.github.io/tags/%E6%B1%89%E5%8C%96/"/>
     
     <category term="R18" scheme="http://ted423.github.io/tags/R18/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于迪士尼[Disney]</title>
-    <link href="http://ted423.github.io/Anime/Disney/"/>
-    <id>http://ted423.github.io/Anime/Disney/</id>
-    <published>2021-08-17T10:12:56.594Z</published>
-    <updated>2021-08-17T10:40:41.601Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://pic3.zhimg.com/80/v2-270d4d166fccc436272b46ca7d73a978_720w.png" alt="Disney"></p><p>这个图来自<a href="https://www.zhihu.com/question/54993822/answer/142147320">https://www.zhihu.com/question/54993822/answer/142147320</a></p><p>通常说的迪士尼的动画指的 华特迪士尼动画工作室 制作的动画</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://pic3.zhimg.com/80/v2-270d4d166fccc436272b46ca7d73a978_720w.png&quot; alt=&quot;Disney&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这个图来自&lt;a href=&quot;https://www.zhihu.co</summary>
-      
-    
-    
-    
-    <category term="Anime" scheme="http://ted423.github.io/categories/Anime/"/>
-    
-    
-    <category term="Anime" scheme="http://ted423.github.io/tags/Anime/"/>
-    
-    <category term="迪士尼[Disney]" scheme="http://ted423.github.io/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC-Disney/"/>
     
   </entry>
   
