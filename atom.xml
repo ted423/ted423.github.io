@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-03-27T15:15:05.443Z</updated>
+  <updated>2022-04-13T04:20:28.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次Raid卡固件升级(刷IT mode)</title>
+    <link href="http://ted423.github.io/Document/9211-8i/"/>
+    <id>http://ted423.github.io/Document/9211-8i/</id>
+    <published>2022-04-13T03:53:00.000Z</published>
+    <updated>2022-04-13T04:20:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p><p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p><p>Copy the following three files from your download to our bootable USB stick.</p><ul><li>sasbios_rel/mptsas2.rom</li><li>Firmware/HBA_9211_8i_IT/2118it.bin</li><li>sas2flsh_dos_rel/sas2flsh.exe</li></ul><p>这些文件都放在根目录(不保留文件夹)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">Advanced Mode Set</span><br><span class="line"></span><br><span class="line">Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Reset Successful!</span><br><span class="line"></span><br><span class="line">Finished Processing Commands Successfully.</span><br><span class="line">Exiting SAS2Flash.</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">Advanced Mode Set</span><br><span class="line"></span><br><span class="line">Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">Firmware Image has a Valid Checksum. </span><br><span class="line">Firmware Version 20.00.04.00</span><br><span class="line">Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">Valid NVDATA Image found. </span><br><span class="line">NVDATA Version 14.01.00.00 </span><br><span class="line">Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">Valid Initialization Image verified.</span><br><span class="line">Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">Mfg Page 2 Mismatch Detected.</span><br><span class="line">Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">Chip is in RESET state. Performing Host Boot...</span><br><span class="line">Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">Beginning Firmware Download...</span><br><span class="line">Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">Verifying Download...</span><br><span class="line"></span><br><span class="line">Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">Finished Processing Commands Successfully.</span><br><span class="line">Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p><p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p><p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程&lt;a href=&quot;https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mod</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
+    
+  </entry>
   
   <entry>
     <title>bit Byte bibyte(雾) 存储单位，速度单位的一些说明</title>
@@ -547,33 +573,6 @@
     <category term="汉化" scheme="http://ted423.github.io/tags/%E6%B1%89%E5%8C%96/"/>
     
     <category term="R18" scheme="http://ted423.github.io/tags/R18/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于迪士尼[Disney]</title>
-    <link href="http://ted423.github.io/Anime/Disney/"/>
-    <id>http://ted423.github.io/Anime/Disney/</id>
-    <published>2021-08-17T10:12:56.594Z</published>
-    <updated>2021-08-17T10:40:41.601Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://pic3.zhimg.com/80/v2-270d4d166fccc436272b46ca7d73a978_720w.png" alt="Disney"></p><p>这个图来自<a href="https://www.zhihu.com/question/54993822/answer/142147320">https://www.zhihu.com/question/54993822/answer/142147320</a></p><p>通常说的迪士尼的动画指的 华特迪士尼动画工作室 制作的动画</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://pic3.zhimg.com/80/v2-270d4d166fccc436272b46ca7d73a978_720w.png&quot; alt=&quot;Disney&quot;&gt;&lt;/p&gt;
-&lt;p&gt;这个图来自&lt;a href=&quot;https://www.zhihu.co</summary>
-      
-    
-    
-    
-    <category term="Anime" scheme="http://ted423.github.io/categories/Anime/"/>
-    
-    
-    <category term="Anime" scheme="http://ted423.github.io/tags/Anime/"/>
-    
-    <category term="迪士尼[Disney]" scheme="http://ted423.github.io/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC-Disney/"/>
     
   </entry>
   
