@@ -490,6 +490,35 @@
   </entry>
   
   <entry>
+    <title>TrueNAS® SCALE 使用及退坑笔记</title>
+    <link href="http://ted423.github.io/System/TrueNAS%20SCALE/"/>
+    <id>http://ted423.github.io/System/TrueNAS%20SCALE/</id>
+    <published>2021-12-31T17:42:07.639Z</published>
+    <updated>2022-04-14T07:36:05.475Z</updated>
+    
+    <content type="html"><![CDATA[<p>最初上这个就是冲着它狂拽酷帅吊炸天的WebUI去的。但每次我一<code>apt upgrade</code>重启就回滚。<br>所以我就一直没上手，直到它Release。</p><p>然后它把’apt’给ban了，理由是 TrueNAS 不是一个 Distro(发行版)。<br>故请注意，如果你不想Everthing in VM or Docker的话，不建议尝试TrueNAS® SCALE。</p><p>另外的问题在于它的S.M.A.R.T. 报错长这样</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Remaining: N/A</span><br><span class="line">Lifetime: 39531</span><br><span class="line">Error: N/A</span><br></pre></td></tr></table></figure><p>然后你在任何地方看不到log或者整体的S.M.A.R.T. (群晖和QNAP都有地方看)</p><p>还有一个问题就是用户Profile必须在Pool里，非常不自由</p><p>结合上面的情况，所以退坑。</p><p>毕竟，这台机子是可以远程GUI这么用的。</p><p>zfs在Linux上也是非常成熟的东西。</p><p>所差的，不过是一个好用的Web Panel罢了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最初上这个就是冲着它狂拽酷帅吊炸天的WebUI去的。但每次我一&lt;code&gt;apt upgrade&lt;/code&gt;重启就回滚。&lt;br&gt;所以我就一直没上手，直到它Release。&lt;/p&gt;
+&lt;p&gt;然后它把’apt’给ban了，理由是 TrueNAS 不是一个 Distro(发行版)</summary>
+      
+    
+    
+    
+    <category term="System" scheme="http://ted423.github.io/categories/System/"/>
+    
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="System" scheme="http://ted423.github.io/tags/System/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[COS]只是简言</title>
     <link href="http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E5%8F%AA%E6%98%AF%E7%AE%80%E8%A8%80/"/>
     <id>http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E5%8F%AA%E6%98%AF%E7%AE%80%E8%A8%80/</id>
@@ -543,36 +572,6 @@
     <category term="歌词(LRC)" scheme="http://ted423.github.io/tags/%E6%AD%8C%E8%AF%8D-LRC/"/>
     
     <category term="多行(Autolyric)" scheme="http://ted423.github.io/tags/%E5%A4%9A%E8%A1%8C-Autolyric/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[R18]铃村爱里[鈴村あいり]</title>
-    <link href="http://ted423.github.io/Video/R18/%E9%93%83%E6%9D%91%E7%88%B1%E9%87%8C/"/>
-    <id>http://ted423.github.io/Video/R18/%E9%93%83%E6%9D%91%E7%88%B1%E9%87%8C/</id>
-    <published>2021-12-23T05:10:00.000Z</published>
-    <updated>2021-12-23T05:10:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://javdb.com/actors/nRKm?locale=zh">https://javdb.com/actors/nRKm?locale=zh</a></p><p>推荐<br>ABW-022<br>JBS-016</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://javdb.com/actors/nRKm?locale=zh&quot;&gt;https://javdb.com/actors/nRKm?locale=zh&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;推荐&lt;br&gt;ABW-022&lt;br&gt;JBS-016&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
-    
-    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
-    
-    <category term="汉化" scheme="http://ted423.github.io/tags/%E6%B1%89%E5%8C%96/"/>
-    
-    <category term="R18" scheme="http://ted423.github.io/tags/R18/"/>
     
   </entry>
   

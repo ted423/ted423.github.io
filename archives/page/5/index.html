@@ -445,6 +445,60 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/samba/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
+            </a>
+            <div class="abstract-content">
+                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)
+理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
+说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
+123456...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/07/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Remote/vncserver%20-localhost%20no/">
                 
                 <span class="abstract-title-text">vncserver -localhost no</span>
@@ -957,68 +1011,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Remote/NoMachine/">
-                
-                <span class="abstract-title-text">[Remote]NoMachine 远程工具</span>
-            </a>
-            <div class="abstract-content">
-                https://www.nomachine.com/
-推荐理由免费(ssh协议连接收费)，支持Linux其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。最起码你不要纠结各种桌面环境之间的兼容性问题。
-不过呢，问题还是有的。默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。(后来不知道咋就好了)
-在低速率网络下要考...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/09/22">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="macOS">macOS</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Personal Free">Personal Free</a>
     
 </div>
 
@@ -2870,7 +2862,26 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6147,7 +6158,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 347
+        Total : 348
         </div>
         <!-- search  -->
         
@@ -9208,6 +9219,21 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
             <a class="archive-post-title" href="/Game/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E2/">[PSP][Game]战场的女武神2 资源+资料合集</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/System/TrueNAS%20SCALE/">TrueNAS® SCALE 使用及退坑笔记</a>
         </li>
     
     </div>
