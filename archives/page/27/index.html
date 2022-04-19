@@ -445,6 +445,113 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/U%E7%9B%98%E9%87%8F%E4%BA%A7/">
+                
+                <span class="abstract-title-text">[资料]U盘量产简介</span>
+            </a>
+            <div class="abstract-content">
+                量产软件英文为USB DISK PRODUCTION TOOL，简称是PDT
+U盘是由主控板+FLASH+外壳组成的，当主控板焊接上空白FLASH后插入电脑，因为没有相应的数据，电脑只能识别到主控板，而无法识别到FLASH，所以这时候电脑上显示出U盘盘符，但是双击盘符却显示没有插入U盘，就像是插入一个空白的读卡器。事实上这时候的U盘几乎就是读卡器。所以要让电脑识别出空白FLASH这张“卡”就要向FLASH内写人对应的数据，这些数据包括U盘的容量大小，采用的芯片(芯片不同，数据保留的方式也不同)，坏块地址(和硬盘一样，FLASH也有坏块，必须屏蔽)等等，有了这些数据，电脑就能正确识别出U盘...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2017/03/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/13</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Hardware">Hardware</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/conflict/">
+                
+                <span class="abstract-title-text">[Git]conflicts 处理</span>
+            </a>
+            <div class="abstract-content">
+                rebase 可能会造成冲突多人同时编辑也会造成conflict
+需要将所有冲突的commit纳入rebase，此时rebase会提示conflict并且暂停
+其实此时你的本地文件会变成冲突时的文件，你要做的就是编辑该文件将冲突处也就是Github使用
+12345&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD(code1)=======(code2)&gt;&gt;&gt;&gt;&gt;&gt;&gt; &lt;commit_id&gt;... commit_name
+括起来的冲突内容
+中只保留你需要内容，使用 git add (文件)
+随后你只要git rebas...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2017/03/10">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Maintenance/PCMaster/">
                 
                 <span class="abstract-title-text">[小俊][2016.11.06]软媒魔方 v6.2.1.0 绿色纯净版及经典版</span>
@@ -853,123 +960,10 @@ ed2k://|file|(COMIC1☆8).[きくらげ屋.(きくらげ)].トモダチになっ
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E5%90%8C%E6%AD%A5%E4%B8%AD%E5%BF%83/">
-                
-                <span class="abstract-title-text">[问题处理]Windows 取消同步中心的启动</span>
-            </a>
-            <div class="abstract-content">
-                问题描述在访问网络位置的时候，右键点击始终脱机可用会启用同步中心，之后会一直启动，并且无法手动取消同步
-解决方案
-在同步中心中找到脱机文件 
-进入计算机，找到对应的文件夹，右键取消始终脱机可用的勾选,并删除脱机副本
-找到注册表HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Syncmgr\Handlers
-删除&#123;750fdf10-2a26-11d1-a3ea-080036587f03&#125;这一项后同步中心会消失，并且之前设置的同步才会消失
-
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/08/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Lync/">
-                
-                <span class="abstract-title-text">[问题处理]Lync联系人名片显示异常</span>
-            </a>
-            <div class="abstract-content">
-                症状Lync是公司内部使用，公司有自己的Exchange服务器。联系人资料显示异常，如姓名不对(账号相同，更换其他人使用，但仍显示之前的人的姓名)，电话号码不显示，或者其他。
-原因分析由于删除Lync配置无效，但Lync跟outlook有联系，因此需要找到Outlook里相关配置进行删除。
-操作
-退出lync, 打开“%appdata%..\Local\Microsoft\Outlook”
-删除“Offline Address Books”文件夹，重新登录Lync
-如仍有问题，在Outlook里找到联系人名片以及Lync联系人名片删除
-如Outlook里删除不了，可能需要登录网页版的邮件...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/08/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/page/26/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/25/">25</a><a class="page-number" href="/archives/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/archives/page/28/">28</a><a class="page-number" href="/archives/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/35/">35</a><a class="extend next" rel="next" href="/archives/page/28/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/page/26/">&lt; PREV</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/25/">25</a><a class="page-number" href="/archives/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/archives/page/28/">28</a><a class="page-number" href="/archives/page/29/">29</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/36/">36</a><a class="extend next" rel="next" href="/archives/page/28/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2819,7 +2813,41 @@ ed2k://|file|(COMIC1☆8).[きくらげ屋.(きくらげ)].トモダチになっ
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6122,7 +6150,7 @@ ed2k://|file|(COMIC1☆8).[きくらげ屋.(きくらげ)].トモダチになっ
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 349
+        Total : 351
         </div>
         <!-- search  -->
         
@@ -8837,6 +8865,18 @@ ed2k://|file|(COMIC1☆8).[きくらげ屋.(きくらげ)].トモダチになっ
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span>
+            <a class="archive-post-title" href="/Document/netplan/">netplan配置网络</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span>
+            <a class="archive-post-title" href="/Software/FlashPatch/">FlashPatch</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/17</span>

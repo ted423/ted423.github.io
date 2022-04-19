@@ -460,6 +460,118 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/Maintenance/WinNTSetup/">
+                
+                <span class="abstract-title-text">WinNTSetup - 系统部署工具</span>
+            </a>
+            <div class="abstract-content">
+                使用这个工具首先要了解WIM、ImageX是什么https://zh.wikipedia.org/wiki/Windows镜像文件格式https://technet.microsoft.com/en-us/library/cc722145(v=ws.10).aspx
+其实最棒的在于这个工具支持注册表优化。这个工具适合于愿意研究的人。否则使用IT天空ImageX(不是微软官方的那个ImageX)或者系统总裁的SGI会更好
+来源http://www.msfn.org/board/topic/149612-winntsetup-v3874/
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/27">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/27</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Maintenance">Maintenance</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Optimization/Disable-MRT/">
+                
+                <span class="abstract-title-text">[优化]让微软不强制提供&#34;恶意软件删除工具&#34;</span>
+            </a>
+            <div class="abstract-content">
+                这个东西呢，偷偷安装，偷偷执行，在我做事的时候跳出来占内存、占CPU，还起不到什么作用。卸载还会自己跑回来，一个exe文件几百M。堪称微软神经病的最佳代表。处理办法如下在注册表中
+1HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft
+新建项MRT,然后在项里新建DWORD DontOfferThroughWUAU,值设为1
+然后powershell里输 
+1wusa /uninstall /kb:890830 /norestart
+看能不能卸掉，卸不掉的话就直接删MRT.exe和MRT-KB890830.exe吧
+REG
+1234Windows ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Optimization"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Optimization
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/DISM++/">
                 
                 <span class="abstract-title-text">[封装]DISM++ 以及一些DISM相关的东西</span>
@@ -849,105 +961,10 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E5%88%A0%E9%99%A4PDF%E6%B0%B4%E5%8D%B0/">
-                
-                <span class="abstract-title-text">[转载]用Acrobat pro批量删除PDF文件中各类水印、背景、文本等的办法</span>
-            </a>
-            <div class="abstract-content">
-                来源: https://www.ouryao.com/blog-3800-25902.html下载的PDF文件经常被加入许多广告性质的水印等，影响阅读。其删除办法如下：
-工具——页面——页眉和页脚——删除
-工具——页面——背景——删除
-工具——页面——水印——删除
-工具——页面——Bates编号——删除
-工具——表单——清除表单
-工具——保护——删除隐藏信息
-工具——内容——编辑对象：删除选中对象，或者有些对象在正文下层，需要先移开正文对象再删除
-对于用以上方法仍删除的文本，用以下方法(不过会在页面上残留色块)：
-（1）工具——保护——搜索并删除文本——将选定结果标记密文（2）工具——保...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/Impression%20of%20Font/">
-                
-                <span class="abstract-title-text">[Font]Impression of Font</span>
-            </a>
-            <div class="abstract-content">
-                找等宽字体时找到的来源http://bbs.themex.net/showthread.php?t=16898387
-这里有dropbox的https://ted423.bitcron.com/post/etc/fonts
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/09/10">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Font">Font</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/page/19/">&lt; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/35/">35</a><a class="extend next" rel="next" href="/page/21/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/page/19/">&lt; PREV</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="page-number" href="/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/page/21/">21</a><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/36/">36</a><a class="extend next" rel="next" href="/page/21/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2898,7 +2915,41 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6201,7 +6252,7 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 349
+        Total : 351
         </div>
         <!-- search  -->
         
@@ -8916,6 +8967,18 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span>
+            <a class="archive-post-title" href="/Document/netplan/">netplan配置网络</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/19</span>
+            <a class="archive-post-title" href="/Software/FlashPatch/">FlashPatch</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/17</span>
