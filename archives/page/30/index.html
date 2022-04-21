@@ -445,6 +445,63 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
+                
+                <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
+            </a>
+            <div class="abstract-content">
+                不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动
+Widnows 7改AHCI找到下面的注册表子项：
+1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci
+在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态
+改IDE是找到
+1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide
+...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/01/14">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/14</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Browser/about%EF%BC%9Aconfig/">
                 
                 <span class="abstract-title-text">about:config的一些配置</span>
@@ -911,58 +968,6 @@ https://nyaa.si/v...
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Document&Texteditor/Everedit/">
-                
-                <span class="abstract-title-text">[文本编辑器]Everedit - 这才是真正的国产良心</span>
-            </a>
-            <div class="abstract-content">
-                我已入正的一款软件。100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。打个比方
-123456789A720 	꜠ 	꜡ 	Ꜣ 	ꜣ 	Ꜥ 	ꜥ 	Ꜧ 	ꜧ 	Ꜩ 	ꜩ 	Ꜫ 	ꜫ 	Ꜭ 	ꜭ 	Ꜯ 	ꜯA730 	ꜰ 	ꜱ 	Ꜳ 	ꜳ 	Ꜵ 	ꜵ 	Ꜷ 	ꜷ 	Ꜹ 	ꜹ 	Ꜻ 	ꜻ 	Ꜽ 	ꜽ 	Ꜿ 	ꜿA740 	Ꝁ 	ꝁ 	Ꝃ 	ꝃ 	Ꝅ 	ꝅ 	Ꝇ 	ꝇ 	Ꝉ 	ꝉ 	Ꝋ 	ꝋ 	Ꝍ 	ꝍ 	Ꝏ 	ꝏA750 	Ꝑ 	ꝑ 	Ꝓ 	ꝓ 	Ꝕ 	ꝕ 	Ꝗ 	ꝗ 	Ꝙ 	ꝙ 	Ꝛ 	ꝛ 	Ꝝ 	ꝝ 	Ꝟ 	ꝟA760 	Ꝡ 	ꝡ 	Ꝣ 	ꝣ 	Ꝥ 	ꝥ 	Ꝧ 	...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/01/24">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/17</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="正版">正版</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
     
 </div>
 
@@ -2834,7 +2839,24 @@ https://nyaa.si/v...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6161,7 +6183,7 @@ https://nyaa.si/v...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 351
+        Total : 352
         </div>
         <!-- search  -->
         
@@ -8876,6 +8898,12 @@ https://nyaa.si/v...
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span>
+            <a class="archive-post-title" href="/Document/Compression/">压缩算法测试</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>

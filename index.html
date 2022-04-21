@@ -498,6 +498,61 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/Compression/">
+                
+                <span class="abstract-title-text">压缩算法测试</span>
+            </a>
+            <div class="abstract-content">
+                主要最近到处看到Zstd，ZFS都支持了，就想起来测一下平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了
+用了个216G的虚拟机，但是测试结果仅供参考
+
+耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟)
+LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。
+
+Zstd的CPU占用也还好。
+故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/21">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/21</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/netplan/">
                 
                 <span class="abstract-title-text">netplan配置网络</span>
@@ -921,64 +976,6 @@ sas2fl...
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/Network/Windows-ip-route/">
-                
-                <span class="abstract-title-text">Windows 路由相关</span>
-            </a>
-            <div class="abstract-content">
-                多网络环境可以进行路由优先级调整，避免类似不能访问外网的路由优先级高导致电脑不能上网其实调整跃点就可以对于内部的，不跨网段的，其实可以把网关删掉
-希望优先级低的，在适配器处，进入ipv4设置，然后点击高级，取消自动跃点，给跃点数填个很高的值
-route print可以看到路由优先级
-可以手动指定路由route add 192.168.0.0 mask 255.255.255.0 192.168.68.254
--p 代表是永久路由
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/27</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Network">Network</a>
     
 </div>
 
@@ -2951,7 +2948,24 @@ route print可以看到路由优先级
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6278,7 +6292,7 @@ route print可以看到路由优先级
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 351
+        Total : 352
         </div>
         <!-- search  -->
         
@@ -8993,6 +9007,12 @@ route print可以看到路由优先级
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span>
+            <a class="archive-post-title" href="/Document/Compression/">压缩算法测试</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>

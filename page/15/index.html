@@ -460,6 +460,65 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Windows%20Fast%20Shutdown/">
+                
+                <span class="abstract-title-text">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
+            </a>
+            <div class="abstract-content">
+                这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2019/07/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/15</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Comic/R18/%E3%81%BE%E3%81%84%E3%81%99%E3%81%86%E3%81%83%E3%83%BC%E3%81%A8%E3%81%A7%E3%81%B3%E3%82%8B/">
                 
                 <span class="abstract-title-text">[雛原えみ] まいすうぃーとでびる [中国翻訳]</span>
@@ -971,60 +1030,6 @@ CPU-Zhttp://www.cpuid.com...
         <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Hardware Tool">Hardware Tool</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/sysprep_unattend/">
-                
-                <span class="abstract-title-text">[封装]Windows 10 无人值守自动应答文件(unattend)xml相关</span>
-            </a>
-            <div class="abstract-content">
-                对于系统封装来说，特别是需要批量部署镜像的地方，无人值守自动应答文件还是蛮重要的。不然你装个系统就听小娜叨叨一次，设置半天，烦都要烦死了。无人值守最大的价值就在于跳过OOBE,其次就在于本地账户的预设置和一些设置的调整。
-#ADKADK是生成无人值守文件必备的，虽说如果你足够熟悉，也可以手动改，会方便不少，但我相信基本没人做得到。并且加入账户以及密码(主要密码会加密)，是必须使用ADK生成的。
-##ADK下载https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install
-获取离线安装包的方法https:/...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/06/11">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/11</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
     
 </div>
 
@@ -2997,7 +3002,24 @@ CPU-Zhttp://www.cpuid.com...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6324,7 +6346,7 @@ CPU-Zhttp://www.cpuid.com...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 351
+        Total : 352
         </div>
         <!-- search  -->
         
@@ -9039,6 +9061,12 @@ CPU-Zhttp://www.cpuid.com...
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span>
+            <a class="archive-post-title" href="/Document/Compression/">压缩算法测试</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>

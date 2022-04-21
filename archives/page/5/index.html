@@ -445,6 +445,48 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/svn/">
+                
+                <span class="abstract-title-text">[问题处理]SVN踩得几个坑</span>
+            </a>
+            <div class="abstract-content">
+                The server sent a truncated HTTP response bodyhttps://www.jianshu.com/p/ad53304dbdbf印象里这篇文章似乎没啥用，后面是要改apache的设置。
+备份大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果
+
+SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。
+svnadmin dump 出来的文件比服务器上的repo还要大。
+svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，所以记得一...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/11/22">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/29</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/SMB/">
                 
                 <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
@@ -993,42 +1035,6 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/Fuck/">
-                
-                <span class="abstract-title-text">去你妈的不求甚解</span>
-            </a>
-            <div class="abstract-content">
-                其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论https://www.zhihu.com/question/34935661https://www.zhihu.com/question/20840941
-更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
     
 </div>
 
@@ -2900,7 +2906,24 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6227,7 +6250,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 351
+        Total : 352
         </div>
         <!-- search  -->
         
@@ -8942,6 +8965,12 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span>
+            <a class="archive-post-title" href="/Document/Compression/">压缩算法测试</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>
