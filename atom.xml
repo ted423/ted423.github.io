@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-04-21T01:47:44.342Z</updated>
+  <updated>2022-04-21T01:54:24.418Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://ted423.github.io/Document/Compression/"/>
     <id>http://ted423.github.io/Document/Compression/</id>
     <published>2022-04-21T01:37:00.000Z</published>
-    <updated>2022-04-21T01:47:44.342Z</updated>
+    <updated>2022-04-21T01:54:24.418Z</updated>
     
-    <content type="html"><![CDATA[<p>主要最近到处看到Zstd，ZFS都支持了，就想起来测一下<br>平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了</p><p>用了个216G的虚拟机，但是测试结果仅供参考</p><p><img src="/img/Compression.png" alt="Compression"></p><p>耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟)</p><p>LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。</p><p><img src="/img/Compression2.jpg" alt="Compression"></p><p>Zstd的CPU占用也还好。</p><p>故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐</p>]]></content>
+    <content type="html"><![CDATA[<p>主要最近到处看到Zstd，ZFS都支持了，就想起来测一下<br>平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了</p><p>用了个216G的虚拟机，但是测试结果仅供参考</p><p><img src="/img/Compression.png" alt="Compression"></p><p>耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟)</p><p>LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。</p><p>Zstd的CPU占用也还好。<br><img src="/img/Compression2.jpg" alt="Compression"></p><p>故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐<br>LZ4是个速度奇快，但是压缩比一般的算法</p>]]></content>
     
     
       
