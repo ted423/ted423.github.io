@@ -460,6 +460,64 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/getSelection-in-Firefox/">
+                
+                <span class="abstract-title-text">[Javascript]处理火狐getSelection无法读取文本框及输入框里内容的问题</span>
+            </a>
+            <div class="abstract-content">
+                attention:不仅仅是文本框内的选择会被脚本记录，在本页面内所有的选取都会被记录
+
+function GetSelectedText (){
+  var userSelection, ta;
+  if (window.getSelection && document.activeElement){
+    if (document.activeElement.nodeName == "TEXTAREA" ||
+        (document.activeElement.nodeName == "INPUT" &&
+        document.activeElement.g...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/01/13">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Browser/Firfox%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BC%96%E8%AF%91%E7%89%88/">
                 
                 <span class="abstract-title-text">第三方编译版火狐推荐</span>
@@ -946,59 +1004,6 @@ https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Git/Github/">
-                
-                <span class="abstract-title-text">个人Github</span>
-            </a>
-            <div class="abstract-content">
-                https://github.com/ted423
-Lrc-parserjavascript的Lrc解析器，博客内在用的，具体见https://ted423.bitcron.com/tags/歌词(LRC)
-Wifi-analyze我的毕业设计，就是个wifi检测的软件，不过没继续弄，因为不知道具体要加些什么
-rules-GM-stylish-UC基本都是自己改的火狐相关的东西包括
-
-代理自动配置(英语:Proxy auto-config,简称PAC):https://ted423.bitcron.com/post/code/www/pac
-GM脚本:https://ted423.bit...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
     
@@ -2983,7 +2988,20 @@ GM脚本:https://ted423.bit...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6344,7 +6362,7 @@ GM脚本:https://ted423.bit...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 353
+        Total : 354
         </div>
         <!-- search  -->
         
@@ -7948,12 +7966,6 @@ GM脚本:https://ted423.bit...
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">03/07</span>
-            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/alracoco/">[pixiv]推荐作者 - alracoco</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
             <a class="archive-post-title" href="/Anime/JP/K-ON/">轻音少女[K-ON](けいおん)</a>
         </li>
@@ -8488,26 +8500,8 @@ GM脚本:https://ted423.bit...
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">04/25</span>
-            <a class="archive-post-title" href="/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/">Linux中find批量删除空文件夹</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/17</span>
-            <a class="archive-post-title" href="/Document/Network/Hexo+github/">Hexo+Github搭建博客</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/27</span>
-            <a class="archive-post-title" href="/Document/Network/Windows-ip-route/">Windows 路由相关</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">03/25</span>
-            <a class="archive-post-title" href="/Code/Terminal/umount%20-lf/">在 Linux 下如何强制取消挂载(umount) NFS 目录</a>
+            <span class="archive-post-date">03/07</span>
+            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/alracoco/">[pixiv]推荐作者 - alracoco</a>
         </li>
     
         
@@ -8518,26 +8512,8 @@ GM脚本:https://ted423.bit...
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">01/27</span>
-            <a class="archive-post-title" href="/Code/Terminal/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/">常用Linux命令</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">01/19</span>
             <a class="archive-post-title" href="/Picture&Photo&Image/COS/%E8%8F%8C%E7%83%A8tako/">[COS]菌烨tako</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/05</span>
-            <a class="archive-post-title" href="/Document/Encode/Jane.Eyre/">Jane Eyre gmma 调整对比</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/03</span>
-            <a class="archive-post-title" href="/Document/Encode/4K%20webdl%20vs%201080p%20BD%20upscale/">4K Web-dl vs 1080p BD upscale</a>
         </li>
     
         
@@ -8990,6 +8966,54 @@ GM脚本:https://ted423.bit...
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Document/CD_log100/">[转载]取得 CD-FLAC+100%LOG+CUE 教学（EAC配置教学）</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/25</span>
+            <a class="archive-post-title" href="/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/">Linux中find批量删除空文件夹</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/17</span>
+            <a class="archive-post-title" href="/Document/Network/Hexo+github/">Hexo+Github搭建博客</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/27</span>
+            <a class="archive-post-title" href="/Document/Network/Windows-ip-route/">Windows 路由相关</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/25</span>
+            <a class="archive-post-title" href="/Code/Terminal/umount%20-lf/">在 Linux 下如何强制取消挂载(umount) NFS 目录</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/27</span>
+            <a class="archive-post-title" href="/Code/Terminal/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/">常用Linux命令</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/05</span>
+            <a class="archive-post-title" href="/Document/Encode/Jane.Eyre/">Jane Eyre gmma 调整对比</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">01/03</span>
+            <a class="archive-post-title" href="/Document/Encode/4K%20webdl%20vs%201080p%20BD%20upscale/">4K Web-dl vs 1080p BD upscale</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
