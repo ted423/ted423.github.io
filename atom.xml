@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-04-21T03:00:17.808Z</updated>
+  <updated>2022-04-25T14:43:12.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux中find批量删除空文件夹</title>
+    <link href="http://ted423.github.io/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
+    <id>http://ted423.github.io/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/</id>
+    <published>2022-04-25T14:37:00.000Z</published>
+    <updated>2022-04-25T14:43:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -type d -empty | xargs -n 1 rm -rf</span><br></pre></td></tr></table></figure><p>来自<a href="https://www.cnblogs.com/jt2001/p/6081235.html">https://www.cnblogs.com/jt2001/p/6081235.html</a></p><p>不过这个删除当前的空文件夹，如果循环的空文件夹，也就是子文件夹是空文件夹的话，要反复跑这个命令<br>所以删完后最好再跑次<code>find -type d -empty</code>查询下</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
+    
+  </entry>
   
   <entry>
     <title>压缩算法测试</title>
@@ -91,11 +119,11 @@
     <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
     
     
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
     <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
     
@@ -122,11 +150,43 @@
     <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
     
     
-    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
-    
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
+    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
+    
     <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[MV]AKB48 - ハステとワステ</title>
+    <link href="http://ted423.github.io/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/"/>
+    <id>http://ted423.github.io/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/</id>
+    <published>2022-04-15T11:13:02.139Z</published>
+    <updated>2015-11-15T11:21:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><video controls width="100%"><source src="https://github.com/ted423/ted423.github.io/raw/master/videos/AKB48 - ハステとワステ.mkv" type="video/mkv"></video></p><h1 id="网盘分流"><a href="#网盘分流" class="headerlink" title="网盘分流"></a>网盘分流</h1><ul><li><a href="https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog">https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;video controls width=&quot;100%&quot;&gt;&lt;source src=&quot;https://github.com/ted423/ted423.github.io/raw/master/videos/AKB48 - ハステとワステ.mkv&quot; type=&quot;video/m</summary>
+      
+    
+    
+    
+    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
+    
+    
+    <category term="JP" scheme="http://ted423.github.io/tags/JP/"/>
+    
+    <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
+    
+    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
+    
+    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
+    
+    <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
     
   </entry>
   
@@ -135,9 +195,9 @@
     <link href="http://ted423.github.io/Document/9211-8i/"/>
     <id>http://ted423.github.io/Document/9211-8i/</id>
     <published>2022-04-13T03:53:00.000Z</published>
-    <updated>2022-04-13T04:20:28.000Z</updated>
+    <updated>2022-04-13T04:20:28.487Z</updated>
     
-    <content type="html"><![CDATA[<p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p><p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p><p>Copy the following three files from your download to our bootable USB stick.</p><ul><li>sasbios_rel/mptsas2.rom</li><li>Firmware/HBA_9211_8i_IT/2118it.bin</li><li>sas2flsh_dos_rel/sas2flsh.exe</li></ul><p>这些文件都放在根目录(不保留文件夹)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">Advanced Mode Set</span><br><span class="line"></span><br><span class="line">Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Reset Successful!</span><br><span class="line"></span><br><span class="line">Finished Processing Commands Successfully.</span><br><span class="line">Exiting SAS2Flash.</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">Advanced Mode Set</span><br><span class="line"></span><br><span class="line">Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">Firmware Image has a Valid Checksum. </span><br><span class="line">Firmware Version 20.00.04.00</span><br><span class="line">Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">Valid NVDATA Image found. </span><br><span class="line">NVDATA Version 14.01.00.00 </span><br><span class="line">Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">Valid Initialization Image verified.</span><br><span class="line">Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">Mfg Page 2 Mismatch Detected.</span><br><span class="line">Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">Chip is in RESET state. Performing Host Boot...</span><br><span class="line">Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">Beginning Firmware Download...</span><br><span class="line">Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">Verifying Download...</span><br><span class="line"></span><br><span class="line">Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">Finished Processing Commands Successfully.</span><br><span class="line">Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p><p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p><p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>]]></content>
+    <content type="html"><![CDATA[<p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p><p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p><p>Copy the following three files from your download to our bootable USB stick.</p><ul><li>sasbios_rel&#x2F;mptsas2.rom</li><li>Firmware&#x2F;HBA_9211_8i_IT&#x2F;2118it.bin</li><li>sas2flsh_dos_rel&#x2F;sas2flsh.exe</li></ul><p>这些文件都放在根目录(不保留文件夹)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">Advanced Mode Set</span><br><span class="line"></span><br><span class="line">Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Reset Successful!</span><br><span class="line"></span><br><span class="line">Finished Processing Commands Successfully.</span><br><span class="line">Exiting SAS2Flash.</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">Advanced Mode Set</span><br><span class="line"></span><br><span class="line">Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">Firmware Image has a Valid Checksum. </span><br><span class="line">Firmware Version 20.00.04.00</span><br><span class="line">Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">Valid NVDATA Image found. </span><br><span class="line">NVDATA Version 14.01.00.00 </span><br><span class="line">Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">Valid Initialization Image verified.</span><br><span class="line">Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">Mfg Page 2 Mismatch Detected.</span><br><span class="line">Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">Chip is in RESET state. Performing Host Boot...</span><br><span class="line">Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">Beginning Firmware Download...</span><br><span class="line">Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">Verifying Download...</span><br><span class="line"></span><br><span class="line">Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">Finished Processing Commands Successfully.</span><br><span class="line">Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p><p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p><p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>]]></content>
     
     
       
@@ -150,9 +210,9 @@
     <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
     
     
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
     <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
   </entry>
   
@@ -161,14 +221,14 @@
     <link href="http://ted423.github.io/Document/Mebibyte/"/>
     <id>http://ted423.github.io/Document/Mebibyte/</id>
     <published>2022-03-27T14:40:00.000Z</published>
-    <updated>2022-03-27T15:15:05.443Z</updated>
+    <updated>2022-03-27T15:15:05.000Z</updated>
     
-    <content type="html"><![CDATA[<p>在计算机中 b=bit B=Byte<br>其中 1Byte=8bit<br>B=Byte属于习惯用法，并不表示byte在使用中必须大写。<br>但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。<br>另，MB/s=MBps=8Mbps，通常说的百兆带宽是100Mbps也就是12.5MB/s。<br>当然百兆带宽属于口语化用词，你不用纠结一个人说千兆带宽下载有100兆（100MB/s）这件事。<br>当然360浏览器下载速度是M/s的事你也不用纠结，因为说明360浏览器的下载器开发者水平太烂。</p><p>这时候冒出来个MiB(Mebibyte)就需要仔细讲讲了<br>Multiple-byte units<br>Mebibyte 记作 MiB ，由国际电工委员会（IEC）于1998年制定。这个单位被设计用来某些时候替代MB（megabyte），因为在计算机相关内容中MB有可能被用来等于2的20次方，虽然数值很相近，但MiB与国际单位制（SI）中的MB（10的6次方）还是有严格的区别。<br>这个单位不常用，不过你知道10TB在Win上只有8.92TB(实际是TiB)就是这个单位做怪了。当然，离不开本博客口头语，微软傻逼。（所以说为啥微软某些地方这么像国内软件啊，不过确实比360强点）</p>]]></content>
+    <content type="html"><![CDATA[<p>在计算机中 b&#x3D;bit B&#x3D;Byte<br>其中 1Byte&#x3D;8bit<br>B&#x3D;Byte属于习惯用法，并不表示byte在使用中必须大写。<br>但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。<br>另，MB&#x2F;s&#x3D;MBps&#x3D;8Mbps，通常说的百兆带宽是100Mbps也就是12.5MB&#x2F;s。<br>当然百兆带宽属于口语化用词，你不用纠结一个人说千兆带宽下载有100兆（100MB&#x2F;s）这件事。<br>当然360浏览器下载速度是M&#x2F;s的事你也不用纠结，因为说明360浏览器的下载器开发者水平太烂。</p><p>这时候冒出来个MiB(Mebibyte)就需要仔细讲讲了<br>Multiple-byte units<br>Mebibyte 记作 MiB ，由国际电工委员会（IEC）于1998年制定。这个单位被设计用来某些时候替代MB（megabyte），因为在计算机相关内容中MB有可能被用来等于2的20次方，虽然数值很相近，但MiB与国际单位制（SI）中的MB（10的6次方）还是有严格的区别。<br>这个单位不常用，不过你知道10TB在Win上只有8.92TB(实际是TiB)就是这个单位做怪了。当然，离不开本博客口头语，微软傻逼。（所以说为啥微软某些地方这么像国内软件啊，不过确实比360强点）</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;在计算机中 b=bit B=Byte&lt;br&gt;其中 1Byte=8bit&lt;br&gt;B=Byte属于习惯用法，并不表示byte在使用中必须大写。&lt;br&gt;但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。&lt;br&gt;另，MB/s=MBps=8M</summary>
+    <summary type="html">&lt;p&gt;在计算机中 b&amp;#x3D;bit B&amp;#x3D;Byte&lt;br&gt;其中 1Byte&amp;#x3D;8bit&lt;br&gt;B&amp;#x3D;Byte属于习惯用法，并不表示byte在使用中必须大写。&lt;br&gt;但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太</summary>
       
     
     
@@ -185,7 +245,7 @@
     <link href="http://ted423.github.io/Document/Network/Windows-ip-route/"/>
     <id>http://ted423.github.io/Document/Network/Windows-ip-route/</id>
     <published>2022-03-27T14:07:00.000Z</published>
-    <updated>2022-03-27T14:13:44.353Z</updated>
+    <updated>2022-03-27T14:13:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>多网络环境可以进行路由优先级调整，避免类似不能访问外网的路由优先级高导致电脑不能上网<br>其实调整跃点就可以<br>对于内部的，不跨网段的，其实可以把网关删掉</p><p>希望优先级低的，在适配器处，进入ipv4设置，然后点击高级，取消自动跃点，给跃点数填个很高的值</p><p><code>route print</code><br>可以看到路由优先级</p><p>可以手动指定路由<br><code>route add 192.168.0.0 mask 255.255.255.0 192.168.68.254</code></p><p>-p 代表是永久路由</p>]]></content>
     
@@ -216,7 +276,7 @@
     <link href="http://ted423.github.io/Code/Terminal/umount%20-lf/"/>
     <id>http://ted423.github.io/Code/Terminal/umount%20-lf/</id>
     <published>2022-03-25T10:09:00.000Z</published>
-    <updated>2022-03-27T13:43:14.426Z</updated>
+    <updated>2022-03-27T13:43:14.000Z</updated>
     
     <content type="html"><![CDATA[<p>这种情况下可以考虑lazy umount<br>即 <code>umount -lf 路径</code><br>lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。<br><strong>请注意，该方法并不是完全安全的</strong></p><p>另外可以参考下<a href="https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging">https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging</a><br>不过个人很久之前弄得，不记得当时有没用这个方式</p>]]></content>
     
@@ -232,11 +292,11 @@
     <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
     
     
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
     <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
@@ -294,13 +354,13 @@
     <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
     <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
     
@@ -342,7 +402,7 @@
     <link href="http://ted423.github.io/etc/instagram/"/>
     <id>http://ted423.github.io/etc/instagram/</id>
     <published>2022-03-10T05:41:00.000Z</published>
-    <updated>2022-03-10T06:04:49.923Z</updated>
+    <updated>2022-03-10T06:04:49.000Z</updated>
     
     <content type="html"><![CDATA[<p>主要是一个笔记<br>首先，目前基本所有的批量下载基本都失效了<br><a href="https://github.com/arc298/instagram-scraper">https://github.com/arc298/instagram-scraper</a><br>这个做的不错<br>但是见issue<br><a href="https://github.com/arc298/instagram-scraper/issues/329">https://github.com/arc298/instagram-scraper/issues/329</a>  以及 <a href="https://github.com/arc298/instagram-scraper/issues/436">https://github.com/arc298/instagram-scraper/issues/436</a></p><p>总而言之，官方的API没有给出最佳质量的视频图片下载，估计要下只能爬<br>所以目前有效的还是各种单post解析网页<br>4k storm上次用没法用,现在似乎也不行，登陆不上，即便开了代理</p>]]></content>
     
@@ -416,7 +476,7 @@
     <published>2022-02-23T07:12:00.000Z</published>
     <updated>2022-02-28T10:14:31.636Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.gpsoft.com.au/index.html">https://www.gpsoft.com.au/index.html</a><br>不得不说，资源浏览器这块，Linux走在Win的前面。</p><p>我基本试了所有多标签资源浏览器， 并没能找到一个完美的资源浏览器。<br><del>（有个ExTab还没试，类似Clover，我当时买DO时他刚刚出生，不过免费软件嘛……不开源的情况下等作者累了就没人维护了，特别时只有QQ群和公众号的情况下,Issue都不好管，不过我可以给别的电脑装装玩玩）</del><br>DO算是里面让我感觉最好的了。</p><p>所以我最终入了正</p><p>别的软件的问题有</p><ul><li>干扰到平时的正常操作，这点Clover、QTTabBar都存在问题，QTTabBar会影响复制粘贴，Clover在有文件改动的时候会频繁刷新界面，导致没法操作</li><li>Clover转手后，基本没有很好的维护</li><li>QTTabBar没办法只在一个窗口显示，有时会打开新的窗口。</li><li>ExTab拖拽文件卡死(不算大问题，取决于作者的维护力度)</li><li>Groups会卡死。</li><li>没法替代资源管理器，有时候别的软件调用资源管理器会直接打开资源管理器，印象里QTTabBar能做到</li><li>维护稳定性不可保证，一些已经长期不更新</li></ul><p>DO存在的问题有</p><ul><li>我个人喜欢Win原生的界面就好，但DO的开始界面是自己实现的，不过问题不大</li><li>一些功能仍然只有Win原生才能做到，如对快速访问的操作，固定到开始菜单，通过集成方式实现功能的能做到，但是自己写资源管理器的软件做不到（这个是Win自身的限制）</li><li>设置项过多，不够简练，有些设置项甚至是不必要的。会让人找不到东西。我个人是不喜欢那种啥都有，但啥都不精的软件。例如压缩文件的相关操作，7z操作不如7z,rar操作不如winrar。 </li></ul><p>并且DO经常更新，平时使用非常稳定,甚至有很多我懒得用的功能，所以挺好的</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.gpsoft.com.au/index.html">https://www.gpsoft.com.au/index.html</a><br>不得不说，资源浏览器这块，Linux走在Win的前面。</p><p>我基本试了所有多标签资源浏览器， 并没能找到一个完美的资源浏览器。<br><del>（有个ExTab还没试，类似Clover，我当时买DO时他刚刚出生，不过免费软件嘛……不开源的情况下等作者累了就没人维护了，特别时只有QQ群和公众号的情况下,Issue都不好管，不过我可以给别的电脑装装玩玩）</del><br>DO算是里面让我感觉最好的了。</p><p>所以我最终入了正</p><p>别的软件的问题有</p><ul><li>干扰到平时的正常操作，这点Clover、QTTabBar都存在问题，QTTabBar会影响复制粘贴，Clover在有文件改动的时候会频繁刷新界面，导致没法操作</li><li>Clover转手后，基本没有很好的维护</li><li>QTTabBar没办法只在一个窗口显示，有时会打开新的窗口。</li><li>ExTab拖拽文件卡死(不算大问题，取决于作者的维护力度)</li><li>Groups会卡死。</li><li>没法替代资源管理器，有时候别的软件调用资源管理器会直接打开资源管理器，印象里QTTabBar能做到</li><li>维护稳定性不可保证，一些已经长期不更新</li></ul><p>DO存在的问题有</p><ul><li>我个人喜欢Win原生的界面就好，但DO的开始界面是自己实现的，不过问题不大</li><li>一些功能仍然只有Win原生才能做到，如对快速访问的操作，固定到开始菜单，通过集成方式实现功能的能做到，但是自己写资源管理器的软件做不到（这个是Win自身的限制）</li><li>设置项过多，不够简练，有些设置项甚至是不必要的。会让人找不到东西。我个人是不喜欢那种啥都有，但啥都不精的软件。例如压缩文件的相关操作，7z操作不如7z,rar操作不如winrar。</li></ul><p>并且DO经常更新，平时使用非常稳定,甚至有很多我懒得用的功能，所以挺好的</p>]]></content>
     
     
       
@@ -443,7 +503,7 @@
     <published>2022-02-05T16:00:00.000Z</published>
     <updated>2022-02-18T10:04:38.699Z</updated>
     
-    <content type="html"><![CDATA[<p>Chromium其实已经一统江湖</p><h1 id="Firefox-推荐"><a href="#Firefox-推荐" class="headerlink" title="Firefox(推荐)"></a>Firefox(推荐)</h1><p>我对FF基本看法就是 哀其不幸，怒其不争</p><p>在有这玩意的前提下&lt;/Browser/no allow paste/&gt; 去学Chrome的界面，然后学了一手隐藏”http://“的负优化</p><p>最早的扩展以及脚本开发都在不断叛逃，然后GM更是自己做了一波死。估计没人理解GM那波作死到底是为了什么。</p><p>我始终坚持，软件这些是作为工具，那么最终目的是为了节省别人的时间，而不是浪费别人的时间。<br>PTPP推送因为某些原因没法用，所以放弃了，Chrome永远的神</p><h1 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a>Chromium</h1><h2 id="360极速-推荐"><a href="#360极速-推荐" class="headerlink" title="360极速(推荐)"></a>360极速(推荐)</h2><p>目前在用，个人感觉有点烂，放久了会自己崩掉。但起码内核跟的比较紧，基本的一些需求功能都还有。<br>傻逼地方-&gt;下载速度单位M/S<br>大B小b不分，可想而知程序员水平有多烂</p><h2 id="Edge-推荐"><a href="#Edge-推荐" class="headerlink" title="Edge(推荐)"></a>Edge(推荐)</h2><p>Edge 主要的问题在收藏移动的操作让人蛋疼</p><h2 id="Cent"><a href="#Cent" class="headerlink" title="Cent"></a>Cent</h2><p>&lt;/Browser/Cent/&gt;<br>挺喜欢的，但是一个没有收入的闭源软件，能想到后续会如何发展。况且浏览器这块还属于国内软件厂商的兵家必争之地。可惜了</p><h2 id="Opera"><a href="#Opera" class="headerlink" title="Opera"></a>Opera</h2><p>内核跟不上，我猜以后应该也跟不上了</p><h2 id="Vivaldi"><a href="#Vivaldi" class="headerlink" title="Vivaldi"></a>Vivaldi</h2><p>内核倒是跟上了。书签以及快速拨号做的相当不错<br>缺点就是下载exe非要你确认保留<br>目前的解决办法是调整组策略，不过会影响整台电脑(试了下还是会弹)<br>另外随便弹个窗就整个浏览器不让用，这种逻辑太傻逼了</p>]]></content>
+    <content type="html"><![CDATA[<p>Chromium其实已经一统江湖</p><h1 id="Firefox-推荐"><a href="#Firefox-推荐" class="headerlink" title="Firefox(推荐)"></a>Firefox(推荐)</h1><p>我对FF基本看法就是 哀其不幸，怒其不争</p><p>在有这玩意的前提下&lt;&#x2F;Browser&#x2F;no allow paste&#x2F;&gt; 去学Chrome的界面，然后学了一手隐藏”http:&#x2F;&#x2F;“的负优化</p><p>最早的扩展以及脚本开发都在不断叛逃，然后GM更是自己做了一波死。估计没人理解GM那波作死到底是为了什么。</p><p>我始终坚持，软件这些是作为工具，那么最终目的是为了节省别人的时间，而不是浪费别人的时间。<br>PTPP推送因为某些原因没法用，所以放弃了，Chrome永远的神</p><h1 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a>Chromium</h1><h2 id="360极速-推荐"><a href="#360极速-推荐" class="headerlink" title="360极速(推荐)"></a>360极速(推荐)</h2><p>目前在用，个人感觉有点烂，放久了会自己崩掉。但起码内核跟的比较紧，基本的一些需求功能都还有。<br>傻逼地方-&gt;下载速度单位M&#x2F;S<br>大B小b不分，可想而知程序员水平有多烂</p><h2 id="Edge-推荐"><a href="#Edge-推荐" class="headerlink" title="Edge(推荐)"></a>Edge(推荐)</h2><p>Edge 主要的问题在收藏移动的操作让人蛋疼</p><h2 id="Cent"><a href="#Cent" class="headerlink" title="Cent"></a>Cent</h2><p>&lt;&#x2F;Browser&#x2F;Cent&#x2F;&gt;<br>挺喜欢的，但是一个没有收入的闭源软件，能想到后续会如何发展。况且浏览器这块还属于国内软件厂商的兵家必争之地。可惜了</p><h2 id="Opera"><a href="#Opera" class="headerlink" title="Opera"></a>Opera</h2><p>内核跟不上，我猜以后应该也跟不上了</p><h2 id="Vivaldi"><a href="#Vivaldi" class="headerlink" title="Vivaldi"></a>Vivaldi</h2><p>内核倒是跟上了。书签以及快速拨号做的相当不错<br>缺点就是下载exe非要你确认保留<br>目前的解决办法是调整组策略，不过会影响整台电脑(试了下还是会弹)<br>另外随便弹个窗就整个浏览器不让用，这种逻辑太傻逼了</p>]]></content>
     
     
       
@@ -457,17 +517,17 @@
     <category term="Browser" scheme="http://ted423.github.io/categories/Browser/"/>
     
     
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Chromium(Chrome)" scheme="http://ted423.github.io/tags/Chromium-Chrome/"/>
-    
-    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
     <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
     
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
+    
+    <category term="Chromium(Chrome)" scheme="http://ted423.github.io/tags/Chromium-Chrome/"/>
     
     <category term="Browser" scheme="http://ted423.github.io/tags/Browser/"/>
     
@@ -494,11 +554,11 @@
     <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
     
     
-    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
     
     <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
@@ -517,67 +577,11 @@
     <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/categories/Picture-Photo-Image/"/>
     
     
+    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
+    
     <category term="COS" scheme="http://ted423.github.io/tags/COS/"/>
     
     <category term="三次元" scheme="http://ted423.github.io/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"/>
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jane Eyre gmma 调整对比</title>
-    <link href="http://ted423.github.io/Document/Encode/Jane.Eyre/"/>
-    <id>http://ted423.github.io/Document/Encode/Jane.Eyre/</id>
-    <published>2022-01-05T06:57:00.000Z</published>
-    <updated>2022-01-05T07:01:05.062Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://slow.pics/c/uI5S7CSk">https://slow.pics/c/uI5S7CSk</a><br>起因是某外站把我发的删了，说USA的细节比较好。<br>所以找人问了下调gmma的办法，感谢小火龙，下面是TVrange的，full range的话要把 min和 max删了<br>filtered = core.std.Levels(clip, gamma=0.88, min_in=16 &lt;&lt; 8, max_in=235 &lt;&lt; 8, min_out=16 &lt;&lt; 8, max_out=235 &lt;&lt; 8, planes=0)</p><p>这是调整之后的<br><img src="https://ptpimg.me/1n90o8.png" alt="gmma"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://slow.pics/c/uI5S7CSk&quot;&gt;https://slow.pics/c/uI5S7CSk&lt;/a&gt;&lt;br&gt;起因是某外站把我发的删了，说USA的细节比较好。&lt;br&gt;所以找人问了下调gmma的办法，感谢小火龙，下面是TVrange的，</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Compare" scheme="http://ted423.github.io/tags/Compare/"/>
-    
-    <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>4K Web-dl vs 1080p BD upscale</title>
-    <link href="http://ted423.github.io/Document/Encode/4K%20webdl%20vs%201080p%20BD%20upscale/"/>
-    <id>http://ted423.github.io/Document/Encode/4K%20webdl%20vs%201080p%20BD%20upscale/</id>
-    <published>2022-01-03T14:31:00.000Z</published>
-    <updated>2022-01-04T01:05:45.856Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png">https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png</a><br><a href="https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.2160p.WEB-DL.DTS.x264-ULTRAHDCLUB.vpy---12027_1.png">https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.2160p.WEB-DL.DTS.x264-ULTRAHDCLUB.vpy---12027_1.png</a></p><p>结论是ULTRAHDCLUB Web-dl SDR的质量不太行，感觉本身也是拉伸的</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://img.pterclub.com/images/2022/01/03/The.Tourist.2010.1080p.BluRay.REMUX.AVC.DTS-HD.MA.5.1-EPSiLON.vpy---12050_1.png&quot;&gt;http</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Compare" scheme="http://ted423.github.io/tags/Compare/"/>
-    
-    <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
     
   </entry>
   
