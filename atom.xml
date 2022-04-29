@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-04-29T08:43:50.043Z</updated>
+  <updated>2022-04-29T09:08:43.676Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What is Qualcomm Voice Assist 是什么</title>
+    <link href="http://ted423.github.io/Document/Qualcomm%20Voice%20Assist/"/>
+    <id>http://ted423.github.io/Document/Qualcomm%20Voice%20Assist/</id>
+    <published>2022-04-29T09:08:00.000Z</published>
+    <updated>2022-04-29T09:08:43.676Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.qualcomm.com/products/features/voice-assist">https://www.qualcomm.com/products/features/voice-assist</a></p><p>更智能的语音助手体验。<br>现在，您无需点击或滑动即可查看天气或打开灯。 Qualcomm® Voice Assist 支持下一代语音交互功能，包括几乎即时的语音唤醒、先进的基于 AI 的语音识别和专用音频硬件——帮助数字个人助理比以往更快、更智能地做出反应。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.qualcomm.com/products/features/voice-assist&quot;&gt;https://www.qualcomm.com/products/features/voice-assist&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;更智能的</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
   
   <entry>
     <title>[转载]取得 CD-FLAC+100%LOG+CUE 教学（EAC配置教学）</title>
@@ -556,37 +581,6 @@
     <category term="Chromium(Chrome)" scheme="http://ted423.github.io/tags/Chromium-Chrome/"/>
     
     <category term="Browser" scheme="http://ted423.github.io/tags/Browser/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常用Linux命令</title>
-    <link href="http://ted423.github.io/Code/Terminal/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/"/>
-    <id>http://ted423.github.io/Code/Terminal/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-01-26T16:00:00.000Z</published>
-    <updated>2022-04-19T06:42:52.119Z</updated>
-    
-    <content type="html"><![CDATA[<p>sudo lshw -class network<br>查看网卡以及对应的网卡名<br>ubuntu不能用GUI配置网卡，点击连接后会自动断开已连接的网络(逻辑是只有一个有线连接，感觉有点憨憨)</p><h1 id="Manjaro"><a href="#Manjaro" class="headerlink" title="Manjaro"></a>Manjaro</h1><p><code>sudo pacman-mirrors -i -c China -m rank</code> 选用最快的国内源</p><p>AUR安装<br><a href="https://wiki.manjaro.org/index.php/Arch_User_Repository">https://wiki.manjaro.org/index.php/Arch_User_Repository</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;sudo lshw -class network&lt;br&gt;查看网卡以及对应的网卡名&lt;br&gt;ubuntu不能用GUI配置网卡，点击连接后会自动断开已连接的网络(逻辑是只有一个有线连接，感觉有点憨憨)&lt;/p&gt;
-&lt;h1 id=&quot;Manjaro&quot;&gt;&lt;a href=&quot;#Manjaro&quot;</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
   </entry>
   

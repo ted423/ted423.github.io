@@ -445,6 +445,60 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/samba/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
+            </a>
+            <div class="abstract-content">
+                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)
+理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
+说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
+123456...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/07/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/python-win/">
                 
                 <span class="abstract-title-text">[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</span>
@@ -916,48 +970,10 @@ https://pan.baidu.com/s/1dDvhFSP
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/Write-box/">
-                
-                <span class="abstract-title-text">Write-box</span>
-            </a>
-            <div class="abstract-content">
-                不得不说…..farbox的在线编辑器有点让人蛋碎。
-于是找到了Writebox完美解决了在线编辑的问题。
-https://write-box.appspot.com
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/07/06">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/archives/2022/page/7/">&lt; PREV</a><a class="page-number" href="/archives/2022/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/page/6/">6</a><a class="page-number" href="/archives/2022/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/archives/2022/page/9/">9</a><a class="page-number" href="/archives/2022/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/page/13/">13</a><a class="extend next" rel="next" href="/archives/2022/page/9/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/archives/2022/page/7/">&lt; PREV</a><a class="page-number" href="/archives/2022/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/page/6/">6</a><a class="page-number" href="/archives/2022/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/archives/2022/page/9/">9</a><a class="page-number" href="/archives/2022/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/page/14/">14</a><a class="extend next" rel="next" href="/archives/2022/page/9/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2832,7 +2848,26 @@ https://write-box.appspot.com
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6201,7 +6236,7 @@ https://write-box.appspot.com
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 354
+        Total : 355
         </div>
         <!-- search  -->
         
@@ -8805,6 +8840,12 @@ https://write-box.appspot.com
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/29</span>
+            <a class="archive-post-title" href="/Document/Qualcomm%20Voice%20Assist/">What is Qualcomm Voice Assist 是什么</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/29</span>
