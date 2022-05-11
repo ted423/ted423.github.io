@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-04-29T09:11:48.219Z</updated>
+  <updated>2022-05-11T10:11:33.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Encode相关文档</title>
+    <link href="http://ted423.github.io/Document/Encode/encode/"/>
+    <id>http://ted423.github.io/Document/Encode/encode/</id>
+    <published>2022-05-11T10:10:38.498Z</published>
+    <updated>2022-05-11T10:11:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/ted423/FXXS-Encode-Guide">https://github.com/ted423/FXXS-Encode-Guide</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ted423/FXXS-Encode-Guide&quot;&gt;https://github.com/ted423/FXXS-Encode-Guide&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
+    
+  </entry>
   
   <entry>
     <title>What is Qualcomm Voice Assist 是什么</title>
@@ -544,43 +571,6 @@
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="正版" scheme="http://ted423.github.io/tags/%E6%AD%A3%E7%89%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人浏览器选择对比</title>
-    <link href="http://ted423.github.io/Browser/Browser/"/>
-    <id>http://ted423.github.io/Browser/Browser/</id>
-    <published>2022-02-05T16:00:00.000Z</published>
-    <updated>2022-02-18T10:04:38.699Z</updated>
-    
-    <content type="html"><![CDATA[<p>Chromium其实已经一统江湖</p><h1 id="Firefox-推荐"><a href="#Firefox-推荐" class="headerlink" title="Firefox(推荐)"></a>Firefox(推荐)</h1><p>我对FF基本看法就是 哀其不幸，怒其不争</p><p>在有这玩意的前提下&lt;&#x2F;Browser&#x2F;no allow paste&#x2F;&gt; 去学Chrome的界面，然后学了一手隐藏”http:&#x2F;&#x2F;“的负优化</p><p>最早的扩展以及脚本开发都在不断叛逃，然后GM更是自己做了一波死。估计没人理解GM那波作死到底是为了什么。</p><p>我始终坚持，软件这些是作为工具，那么最终目的是为了节省别人的时间，而不是浪费别人的时间。<br>PTPP推送因为某些原因没法用，所以放弃了，Chrome永远的神</p><h1 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a>Chromium</h1><h2 id="360极速-推荐"><a href="#360极速-推荐" class="headerlink" title="360极速(推荐)"></a>360极速(推荐)</h2><p>目前在用，个人感觉有点烂，放久了会自己崩掉。但起码内核跟的比较紧，基本的一些需求功能都还有。<br>傻逼地方-&gt;下载速度单位M&#x2F;S<br>大B小b不分，可想而知程序员水平有多烂</p><h2 id="Edge-推荐"><a href="#Edge-推荐" class="headerlink" title="Edge(推荐)"></a>Edge(推荐)</h2><p>Edge 主要的问题在收藏移动的操作让人蛋疼</p><h2 id="Cent"><a href="#Cent" class="headerlink" title="Cent"></a>Cent</h2><p>&lt;&#x2F;Browser&#x2F;Cent&#x2F;&gt;<br>挺喜欢的，但是一个没有收入的闭源软件，能想到后续会如何发展。况且浏览器这块还属于国内软件厂商的兵家必争之地。可惜了</p><h2 id="Opera"><a href="#Opera" class="headerlink" title="Opera"></a>Opera</h2><p>内核跟不上，我猜以后应该也跟不上了</p><h2 id="Vivaldi"><a href="#Vivaldi" class="headerlink" title="Vivaldi"></a>Vivaldi</h2><p>内核倒是跟上了。书签以及快速拨号做的相当不错<br>缺点就是下载exe非要你确认保留<br>目前的解决办法是调整组策略，不过会影响整台电脑(试了下还是会弹)<br>另外随便弹个窗就整个浏览器不让用，这种逻辑太傻逼了</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Chromium其实已经一统江湖&lt;/p&gt;
-&lt;h1 id=&quot;Firefox-推荐&quot;&gt;&lt;a href=&quot;#Firefox-推荐&quot; class=&quot;headerlink&quot; title=&quot;Firefox(推荐)&quot;&gt;&lt;/a&gt;Firefox(推荐)&lt;/h1&gt;&lt;p&gt;我对FF基本看法就是 哀</summary>
-      
-    
-    
-    
-    <category term="Browser" scheme="http://ted423.github.io/categories/Browser/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
-    
-    <category term="Chromium(Chrome)" scheme="http://ted423.github.io/tags/Chromium-Chrome/"/>
-    
-    <category term="Browser" scheme="http://ted423.github.io/tags/Browser/"/>
     
   </entry>
   
