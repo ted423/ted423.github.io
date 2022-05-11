@@ -42,7 +42,7 @@
 <meta property="og:image" content="http://img.2222.moe/images/2015/12/08/output012c78.png">
 <meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2015/12/20154.png">
 <meta property="article:published_time" content="2015-12-22T12:54:00.000Z">
-<meta property="article:modified_time" content="2022-05-11T10:25:26.184Z">
+<meta property="article:modified_time" content="2022-05-11T10:41:11.142Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="转载">
 <meta property="article:tag" content="过时">
@@ -550,7 +550,7 @@
 <h1 id="封装格式-MP4-x2F-MKV…-、编码格式-H-264-x2F-H-265-x2F-AC3-x2F-AAC…-、编码器-x265-x2F-x264-x2F-SVT-AV1"><a href="#封装格式-MP4-x2F-MKV…-、编码格式-H-264-x2F-H-265-x2F-AC3-x2F-AAC…-、编码器-x265-x2F-x264-x2F-SVT-AV1" class="headerlink" title="封装格式(MP4&#x2F;MKV…)、编码格式(H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC…)、编码器(x265&#x2F;x264&#x2F;SVT-AV1)"></a>封装格式(MP4&#x2F;MKV…)、编码格式(H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC…)、编码器(x265&#x2F;x264&#x2F;SVT-AV1)</h1><p>容器(Container)又名封装格式，常见的封装格式(MP4&#x2F;MKV…)、而 H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC 属于编码方式，也就是MP4以及MKV上可以使用相同的编码方式</p>
 <h2 id="一些需要注意的"><a href="#一些需要注意的" class="headerlink" title="一些需要注意的"></a>一些需要注意的</h2><p>flac-Free Lossless Audio Codec-自由无损音频压缩编码，flac也是常见的无损音频文件格式(flac用同样的名字做了容器名(即同时是封装格式的名字),<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/Media/Formats/Containers">https://developer.mozilla.org/zh-TW/docs/Web/Media/Formats/Containers</a>)</p>
 <p>而ape属于无损音频文件格式，但其并不代表编码方式。</p>
-<p>又比如m4a(封装格式,仅有音频的MPEG-4文件会使用.m4a扩展名)可以使用ALAC(Apple Lossless Audio Codec)编码也可以使用AAC(Advanced Audio Coding)编码。</p>
+<p>又比如m4a(封装格式,仅有音频的MPEG-4&#x2F;mp4文件会使用.m4a扩展名)可以使用ALAC(Apple Lossless Audio Codec)编码也可以使用AAC(Advanced Audio Coding)编码。</p>
 <p>另外MP3(formally MPEG-1 Audio Layer III or MPEG-2 Audio Layer III) 是由MPEG-1封装容器与一个以MPEG-1Audio Layer III encoding编码过的音轨所组成。</p>
 <p>WAV属于封装格式，封装的PCM属于原始音频数据，完全未经压缩的编码方式，脉冲编码调制（Pulse Code Modulation, PCM）是一种模拟信号的数字化方法。它是最常用、最简单的波形编码方式。</p>
 <p>BWF（广播声波格式）</p>
@@ -568,15 +568,16 @@
 <li>MP4作为工业标准，在视频编辑软件和播放设备上的兼容性一般好于MKV。这也是vcb-s那些为移动设备优化的视频基本上选择MP4封装的原因。</li>
 </ol>
 <p>还有一些过时的封装格式，比如RM、AVI等等。</p>
-<h2 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h2><p>通常，mediainfo需要封装格式才能显示比较完整的信息，如.pcm .aac .hevc不能显示时长等信息。.hevc在播放器中是无法使用进度条的。</p>
+<h2 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h2><p>通常mediainfo需要封装格式才能显示比较完整的信息，如.pcm .aac .hevc不能显示时长等信息。.hevc在播放器中是无法使用进度条的。</p>
 <p>LPCM(Linear pulse-code modulation) 一般也会叫PCM，但是一种特定类型的 PCM，其跟PCM(Pulse Code Modulation)有区别，其量化级别是线性均匀的。</p>
 <h2 id="无损压缩以及有损压缩"><a href="#无损压缩以及有损压缩" class="headerlink" title="无损压缩以及有损压缩"></a>无损压缩以及有损压缩</h2><p>首先PCM和LPCM属于未经压缩的格式，不称为无损压缩。<del>(但叫无损应该也没啥错)</del></p>
 <p>日常中的无损较为口语化，需要理解其意思。通常说的无损格式指的算法无损，并不意味着生成的文件必定无损，一些音轨降位深或降频会造成损失。也会有一些有损转无损的非常规操作。</p>
 <p>通常说原盘以及Remux无损，原盘一般是能找到的最优质的源，但其编码格式都属于有损，从母带(口语化)出来进行有损压缩再发布。而Remux主要为视频轨道以及主要音频轨道的无损提取或转换。(不过会有Hybird)</p>
 <h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>DTS的压缩率非常差，并且他们以此作为宣传，认为这样能提高解码效率，音质会更好。</p>
 <p>DTS-HD MA 是无损</p>
+<p>DTS-HD HRA 是有损</p>
+<p>两者同样带核心。</p>
 <p>其编码器同时包含了DTS Digital（DTS的有损音频格式）的编码核心以便在播放器不兼容DTS-HD MA或DTS-HD HRA（DTS-HD High Resolution Audio）时切换成DTS Digital（DTS Digital一般会以255Kbps的恒定码率进行编码，与DTS-HD MA&#x2F;HRA音频放置在同一流中，格式名称为DTS-HD Core）</p>
-<p>DTS-HD HRA 是有损<br>同样带核心。</p>
 <h3 id="有损音频"><a href="#有损音频" class="headerlink" title="有损音频"></a>有损音频</h3><p>AC3是作为影视业的工业标准。但其发布时间非常早。（略早于MP3）</p>
 <h4 id="DTS"><a href="#DTS" class="headerlink" title="DTS"></a>DTS</h4><p>DTS core 768被认为是不如AC3 640的。</p>
 <h4 id="AC3"><a href="#AC3" class="headerlink" title="AC3"></a>AC3</h4><p>杜比实验室采用了 MDCT 算法以及感知编码原理来开发 AC-3 音频格式以满足影院需求。 AC-3 格式于 1991 年作为杜比数字标准发布。</p>
@@ -746,7 +747,7 @@
             <p>原文作者：<a href="http://ted423.github.io">ted423</a>
             <p>原文链接：<a href="http://ted423.github.io/Document/Encode/Video/">http://ted423.github.io/Document/Encode/Video/</a>
             <p>发表日期：<a href="http://ted423.github.io/Document/Encode/Video/">December 22nd 2015, 8:54:00 pm</a>
-            <p>更新日期：<a href="http://ted423.github.io/Document/Encode/Video/">May 11th 2022, 6:25:26 pm</a>
+            <p>更新日期：<a href="http://ted423.github.io/Document/Encode/Video/">May 11th 2022, 6:41:11 pm</a>
             <p>版权声明：本站原创内容(一般是语句不通顺的那种)采用<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可，转载内容以及不带个人观点的分享不在此例，摘抄有Wiki的内容的文章统一根据Wiki采用 CC BY-SA 3.0</p>
         </div>
     
