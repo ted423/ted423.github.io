@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-05-11T10:11:33.000Z</updated>
+  <updated>2022-05-13T08:50:27.295Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[Terminal] PowerShell版本更新</title>
+    <link href="http://ted423.github.io/Code/Terminal/PowerShell_Upgrade/"/>
+    <id>http://ted423.github.io/Code/Terminal/PowerShell_Upgrade/</id>
+    <published>2022-05-13T07:12:20.709Z</published>
+    <updated>2022-05-13T08:50:27.295Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>Win7 只有升级 PowerShell 之后才能使用[Chocolatey](&#x2F;Software&#x2F;Software Update)</li><li>WinRM(PowerShell Remoute)的参数不兼容</li></ol><p>总之就是我看 PowerShell Remoute 命令发现 Win10 自带的版本只有5,然后跟默认的文档不匹配的问题。最新的是7.2LTS。<br>目测 Win 10&#x2F;Server 2019 都需要升级</p><p><a href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows">https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;Win7 只有升级 PowerShell 之后才能使用[Chocolatey](&amp;#x2F;Software&amp;#x2F;Software Update)&lt;/li&gt;
+&lt;li&gt;WinRM(PowerShell Remoute)的参数不兼容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
+    
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
+    
+    <category term="PowerShell" scheme="http://ted423.github.io/tags/PowerShell/"/>
+    
+  </entry>
   
   <entry>
     <title>Encode相关文档</title>
@@ -416,9 +450,9 @@
     <link href="http://ted423.github.io/Software/Software%20Update/"/>
     <id>http://ted423.github.io/Software/Software%20Update/</id>
     <published>2022-03-19T08:44:00.000Z</published>
-    <updated>2022-03-21T06:41:19.589Z</updated>
+    <updated>2022-05-13T08:26:53.835Z</updated>
     
-    <content type="html"><![CDATA[<p>首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。<br>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</p><h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p><p>这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)</p><h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h1><p>Chocolatey 虽然是开源的，但其实际还是一款面向企业的商业产品，并且国内体验不好。<br>像什么微信QQ企业微信，里面是没有的。<br>免费产品限制了功能，并且只能装到C盘。之前还有安装失败也会计入软件列表的问题</p><p>因此这个产品的主要定位是一定程度上处理软件升级的问题。主要处理软件自带升级智障的问题，例如WinSCP(之前有用scoop，这个自己本身也智障，配置放便携版里，结果一更新配置没了)</p><h2 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h2><p><code>choco install chocolateygui</code></p><p>注意的点</p><ul><li>这软件在Win7上要更新PowerShell。</li><li>只有想装C盘并且不需要安装包配置关联的软件才用Chocolatey直接装，否则建议自行安装，其后用Chocolatey升级</li><li>社区维护，因此很多软件安装行为都由社区维护者决定</li><li>因为上面一条，可能面临没有维护或者不再维护的情况</li><li>网络问题</li><li>还可能有升级报错的情况，如<a href="https://community.chocolatey.org/packages/obs-studio">OBS-Studio</a></li><li>部分时候需要重装.install <a href="https://github.com/chocolatey/choco/issues/1027">https://github.com/chocolatey/choco/issues/1027</a></li></ul><p>一些常用命令</p><ul><li>列出本地安装软件 <code>choco list --local-only</code></li><li>列出可升级的软件 <code>choco outdated</code></li><li>安装指定等级 <code>choco install virtualbox --version 4.3.26</code></li><li>不检查更新<code>choco pin add -n=googlechrome</code></li><li><code>choco search 名字</code></li><li><a href="https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey">Proxy Server</a> (不支持socks5,)</li></ul><h1 id="Why-not-360-and-etc"><a href="#Why-not-360-and-etc" class="headerlink" title="Why not 360(and etc)"></a>Why not 360(and etc)</h1><p>实际上我是最早的360以及金山清理专家使用者。<br>然后他们之间打了一架，360弹窗给用户洗脑，往傲游和金山网盾身上扔了一堆屎盆子。<br>而傅盛把清理专家砍了然后做了个界面奇丑无比的金山卫士(因为这玩意做了开机自启)<br>然后在金山卫士开始有一堆受众的时候把卫士砍了。</p><p>国内软件喜欢加驱是免不了的，那么作为一个免费加驱软件(剩下的我就不说了)。<br>重点是你愿意为了你需要的功能使用这些免费加驱软件，然后进入他们的流量入口么？</p>]]></content>
+    <content type="html"><![CDATA[<p>首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。<br>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</p><h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p><p>这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)</p><h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h1><p>Chocolatey 虽然是开源的，但其实际还是一款面向企业的商业产品，并且国内体验不好。<br>像什么微信QQ企业微信，里面是没有的。<br>免费产品限制了功能，并且只能装到C盘。之前还有安装失败也会计入软件列表的问题</p><p>因此这个产品的主要定位是一定程度上处理软件升级的问题。主要处理软件自带升级智障的问题，例如WinSCP(之前有用scoop，这个自己本身也智障，配置放便携版里，结果一更新配置没了)</p><h2 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h2><p><code>choco install chocolateygui</code></p><p>注意的点</p><ul><li>这软件在Win7上要更新PowerShell。</li><li>只有想装C盘并且不需要安装包配置关联的软件才用Chocolatey直接装，否则建议自行安装，其后用Chocolatey升级</li><li>社区维护，因此很多软件安装行为都由社区维护者决定</li><li>因为上面一条，可能面临没有维护或者不再维护的情况</li><li>网络问题</li><li>还可能有升级报错的情况，如<a href="https://community.chocolatey.org/packages/obs-studio">OBS-Studio</a></li><li>部分时候需要重装.install <a href="https://github.com/chocolatey/choco/issues/1027">https://github.com/chocolatey/choco/issues/1027</a></li><li>他的软件列表和计算机的列表是相互独立的，并且不能单纯只删记录(只能pin)</li></ul><p>一些常用命令</p><ul><li>列出本地安装软件 <code>choco list --local-only</code></li><li>列出可升级的软件 <code>choco outdated</code></li><li>安装指定等级 <code>choco install virtualbox --version 4.3.26</code></li><li>不检查更新<code>choco pin add -n=googlechrome</code></li><li><code>choco search 名字</code></li><li><a href="https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey">Proxy Server</a> (不支持socks5,)</li></ul><h1 id="Why-not-360-and-etc"><a href="#Why-not-360-and-etc" class="headerlink" title="Why not 360(and etc)"></a>Why not 360(and etc)</h1><p>实际上我是最早的360以及金山清理专家使用者。<br>然后他们之间打了一架，360弹窗给用户洗脑，往傲游和金山网盾身上扔了一堆屎盆子。<br>而傅盛把清理专家砍了然后做了个界面奇丑无比的金山卫士(因为这玩意做了开机自启)<br>然后在金山卫士开始有一堆受众的时候把卫士砍了。</p><p>国内软件喜欢加驱是免不了的，那么作为一个免费加驱软件(剩下的我就不说了)。<br>重点是你愿意为了你需要的功能使用这些免费加驱软件，然后进入他们的流量入口么？</p>]]></content>
     
     
       
@@ -544,33 +578,6 @@
     <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
     
     <category term="pixiv" scheme="http://ted423.github.io/tags/pixiv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[推荐]Directory Opus - 多标签资源浏览器</title>
-    <link href="http://ted423.github.io/Software/Directory%20Opus/"/>
-    <id>http://ted423.github.io/Software/Directory%20Opus/</id>
-    <published>2022-02-23T07:12:00.000Z</published>
-    <updated>2022-02-28T10:14:31.636Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.gpsoft.com.au/index.html">https://www.gpsoft.com.au/index.html</a><br>不得不说，资源浏览器这块，Linux走在Win的前面。</p><p>我基本试了所有多标签资源浏览器， 并没能找到一个完美的资源浏览器。<br><del>（有个ExTab还没试，类似Clover，我当时买DO时他刚刚出生，不过免费软件嘛……不开源的情况下等作者累了就没人维护了，特别时只有QQ群和公众号的情况下,Issue都不好管，不过我可以给别的电脑装装玩玩）</del><br>DO算是里面让我感觉最好的了。</p><p>所以我最终入了正</p><p>别的软件的问题有</p><ul><li>干扰到平时的正常操作，这点Clover、QTTabBar都存在问题，QTTabBar会影响复制粘贴，Clover在有文件改动的时候会频繁刷新界面，导致没法操作</li><li>Clover转手后，基本没有很好的维护</li><li>QTTabBar没办法只在一个窗口显示，有时会打开新的窗口。</li><li>ExTab拖拽文件卡死(不算大问题，取决于作者的维护力度)</li><li>Groups会卡死。</li><li>没法替代资源管理器，有时候别的软件调用资源管理器会直接打开资源管理器，印象里QTTabBar能做到</li><li>维护稳定性不可保证，一些已经长期不更新</li></ul><p>DO存在的问题有</p><ul><li>我个人喜欢Win原生的界面就好，但DO的开始界面是自己实现的，不过问题不大</li><li>一些功能仍然只有Win原生才能做到，如对快速访问的操作，固定到开始菜单，通过集成方式实现功能的能做到，但是自己写资源管理器的软件做不到（这个是Win自身的限制）</li><li>设置项过多，不够简练，有些设置项甚至是不必要的。会让人找不到东西。我个人是不喜欢那种啥都有，但啥都不精的软件。例如压缩文件的相关操作，7z操作不如7z,rar操作不如winrar。</li></ul><p>并且DO经常更新，平时使用非常稳定,甚至有很多我懒得用的功能，所以挺好的</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.gpsoft.com.au/index.html&quot;&gt;https://www.gpsoft.com.au/index.html&lt;/a&gt;&lt;br&gt;不得不说，资源浏览器这块，Linux走在Win的前面。&lt;/p&gt;
-&lt;p&gt;我基本试了所有多标签资</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="正版" scheme="http://ted423.github.io/tags/%E6%AD%A3%E7%89%88/"/>
     
   </entry>
   

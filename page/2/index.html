@@ -460,6 +460,172 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/">
+                
+                <span class="abstract-title-text">Linux中find批量删除空文件夹</span>
+            </a>
+            <div class="abstract-content">
+                1find -type d -empty | xargs -n 1 rm -rf
+
+来自https://www.cnblogs.com/jt2001/p/6081235.html
+不过这个删除当前的空文件夹，如果循环的空文件夹，也就是子文件夹是空文件夹的话，要反复跑这个命令所以删完后最好再跑次find -type d -empty查询下
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/25">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/Network/SSL/">
+                
+                <span class="abstract-title-text">证书相关</span>
+            </a>
+            <div class="abstract-content">
+                还没完全弄懂，写点是点，捋捋思路。本文同样采用 CC 4.0 BY-SA
+X.509https://zh.wikipedia.org/wiki/X.509
+
+CA(Certificate Authority)被称为证书授权中心，是数字证书发放和管理的机构。
+根证书(root certificate)是CA认证中心给自己颁发的证书,是信任链的起始点。安装根证书意味着对这个CA认证中心的信任。
+数字证书颁发过程一般为：
+用户首先产生自己的密钥对，
+将公共密钥（公钥）及部分个人身份信息传送给认证中心
+认证中心在核实身份后，将执行一些必要的步骤，以确信请求确实由用户发送而来，然后，认证中心将发给...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/21">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/22</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="建设中">建设中</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/Compression/">
+                
+                <span class="abstract-title-text">压缩算法测试</span>
+            </a>
+            <div class="abstract-content">
+                主要最近到处看到Zstd，ZFS都支持了，就想起来测一下平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了
+用了个216G的虚拟机，但是测试结果仅供参考
+
+耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟，Zstd L5就很快了)
+LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。
+Zstd的CPU占用也还好。
+故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐LZ4是个速度奇快，但是压缩比一般的算法
+这是...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/21">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/21</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/netplan/">
                 
                 <span class="abstract-title-text">netplan配置网络</span>
@@ -834,166 +1000,6 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
         <a class="post-tag" href="javascript:void(0);" data-tags="Hardware">Hardware</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/Mebibyte/">
-                
-                <span class="abstract-title-text">bit Byte bibyte(雾) 存储单位，速度单位的一些说明</span>
-            </a>
-            <div class="abstract-content">
-                在计算机中 b&#x3D;bit B&#x3D;Byte其中 1Byte&#x3D;8bitB&#x3D;Byte属于习惯用法，并不表示byte在使用中必须大写。但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。另，MB&#x2F;s&#x3D;MBps&#x3D;8Mbps，通常说的百兆带宽是100Mbps也就是12.5MB&#x2F;s。当然百兆带宽属于口语化用词，你不用纠结一个人说千兆带宽下载有100兆（100MB&#x2F;s）这件事。当然360浏览器下载速度是M&#x2F;s的事你也不用纠结，因为说明360浏览器的下载器开发者水平太烂。...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/27</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/Network/Windows-ip-route/">
-                
-                <span class="abstract-title-text">Windows 路由相关</span>
-            </a>
-            <div class="abstract-content">
-                多网络环境可以进行路由优先级调整，避免类似不能访问外网的路由优先级高导致电脑不能上网其实调整跃点就可以对于内部的，不跨网段的，其实可以把网关删掉
-希望优先级低的，在适配器处，进入ipv4设置，然后点击高级，取消自动跃点，给跃点数填个很高的值
-route print可以看到路由优先级
-可以手动指定路由route add 192.168.0.0 mask 255.255.255.0 192.168.68.254
--p 代表是永久路由
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/27</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Network">Network</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Terminal/umount%20-lf/">
-                
-                <span class="abstract-title-text">在 Linux 下如何强制取消挂载(umount) NFS 目录</span>
-            </a>
-            <div class="abstract-content">
-                这种情况下可以考虑lazy umount即 umount -lf 路径lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。请注意，该方法并不是完全安全的
-另外可以参考下https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging不过个人很久之前弄得，不记得当时有没用这个方式
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
 </div>
 
@@ -2991,29 +2997,12 @@ route print可以看到路由优先级
         
         
         
+        
+        
+        
+        
+        
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -6592,7 +6581,7 @@ route print可以看到路由优先级
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 356
+        Total : 357
         </div>
         <!-- search  -->
         
@@ -8778,12 +8767,6 @@ route print可以看到路由优先级
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">04/18</span>
-            <a class="archive-post-title" href="/Comic/R18/%E8%9D%B6%E3%82%88%E8%8F%AF%E3%82%88/">[Hcomic] (C95) [いちごぱんつ (カグユヅ)] 蝶よ華よ (Fate Grand Order) [黑锅汉化组]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">03/20</span>
             <a class="archive-post-title" href="/Comic/R18/%E6%84%9F%E9%9B%BB%E5%B0%91%E5%A5%B3%E6%B3%A8%E6%84%8F%E5%A0%B1%20(%E7%9C%9F%E5%86%AC)/">[Hcomic]感電少女注意報 (真冬)</a>
         </li>
@@ -8817,14 +8800,14 @@ route print可以看到路由优先级
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/23</span>
-            <a class="archive-post-title" href="/Software/Android/Moon+/">[Android]最好的epub阅读器 静读天下专业版(Moon+ Reader Pro)</a>
+            <span class="archive-post-date">06/12</span>
+            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/ASK/">[pixiv]推荐作者 - ASK</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/12</span>
-            <a class="archive-post-title" href="/Picture&Photo&Image/pixiv/ASK/">[pixiv]推荐作者 - ASK</a>
+            <a class="archive-post-title" href="/Software/Hardware/%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E6%A3%80%E6%B5%8B/">硬件信息检测软件</a>
         </li>
     
         
@@ -8840,6 +8823,12 @@ route print可以看到路由优先级
         </li>
     
         
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/02</span>
+            <a class="archive-post-title" href="/Software/Hardware/Crystal/">[开源]Crystal Dew World硬盘检测系列-CrystalDiskMark、CrystalDiskInfo</a>
+        </li>
+    
+        
             
             
                 
@@ -8850,8 +8839,8 @@ route print可以看到路由优先级
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">07/13</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">[不再推荐]youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
+            <span class="archive-post-date">04/28</span>
+            <a class="archive-post-title" href="/Software/Hardware/Disk%20manager/">硬盘管理工具</a>
         </li>
     
         
@@ -8896,13 +8885,28 @@ route print可以看到路由优先级
                 
                 </ul>
             
+            <div class="archive-year"> 2019 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/23</span>
+            <a class="archive-post-title" href="/Software/Android/Moon+/">[Android]最好的epub阅读器 静读天下专业版(Moon+ Reader Pro)</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
             <div class="archive-year"> 2018 </div>
             <ul class="year-list">
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">04/28</span>
-            <a class="archive-post-title" href="/Software/Hardware/Disk%20manager/">硬盘管理工具</a>
+            <span class="archive-post-date">07/13</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/4K/">[不再推荐]youtube专用下载器 - 4K Video Downloader & Instagram专用下载器 - 4K Stogram</a>
         </li>
     
         
@@ -8929,6 +8933,12 @@ route print可以看到路由优先级
             <div class="archive-year"> 2016 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">12/10</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">09/25</span>
@@ -8999,21 +9009,6 @@ route print可以看到路由优先级
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/download-defect/">下载、资源类软件缺陷记录</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2016 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">12/10</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/dropbox/">下载DropBox离线安装包的方法(可能失效)</a>
         </li>
     
         
@@ -9336,6 +9331,12 @@ route print可以看到路由优先级
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">04/18</span>
+            <a class="archive-post-title" href="/Comic/R18/%E8%9D%B6%E3%82%88%E8%8F%AF%E3%82%88/">[Hcomic] (C95) [いちごぱんつ (カグユヅ)] 蝶よ華よ (Fate Grand Order) [黑锅汉化组]</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">03/12</span>
             <a class="archive-post-title" href="/Comic/R18/Michiking/">あんみつよもぎ亭 (みちきんぐ)_Michiking 系列</a>
         </li>
@@ -9376,7 +9377,7 @@ route print可以看到路由优先级
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/22</span>
-            <a class="archive-post-title" href="/Code/Terminal/Powershell%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6/">[Terminal]Powershell执行策略限制相关</a>
+            <a class="archive-post-title" href="/Code/Terminal/PowerShell%E6%89%A7%E8%A1%8C%E7%AD%96%E7%95%A5%E9%99%90%E5%88%B6/">[Terminal]PowerShell执行策略限制相关</a>
         </li>
     
         
@@ -9407,12 +9408,6 @@ route print可以看到路由优先级
         <li class="archive-post-item">
             <span class="archive-post-date">06/19</span>
             <a class="archive-post-title" href="/Video/R18/%E6%A1%83%E8%B0%B7%E3%82%A8%E3%83%AA%E3%82%AB/">[R18]桃谷绘里香[桃谷エリカ]</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">06/12</span>
-            <a class="archive-post-title" href="/Software/Hardware/%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E6%A3%80%E6%B5%8B/">硬件信息检测软件</a>
         </li>
     
         
@@ -9455,12 +9450,6 @@ route print可以看到路由优先级
         <li class="archive-post-item">
             <span class="archive-post-date">04/24</span>
             <a class="archive-post-title" href="/Comic/R18/PROJECT%E3%83%8F%E3%83%A9%E3%82%AD%E3%83%AA%20(%E4%BB%8B%E9%8C%AF)/">[Hcomic] PROJECTハラキリ (介錯)</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/02</span>
-            <a class="archive-post-title" href="/Software/Hardware/Crystal/">[开源]Crystal Dew World硬盘检测系列-CrystalDiskMark、CrystalDiskInfo</a>
         </li>
     
         
@@ -9770,6 +9759,21 @@ route print可以看到路由优先级
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
             <a class="archive-post-title" href="/Game/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E2/">[PSP][Game]战场的女武神2 资源+资料合集</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Code/Terminal/PowerShell_Upgrade/">[Terminal] PowerShell版本更新</a>
         </li>
     
     </div>
@@ -10328,11 +10332,6 @@ route print可以看到路由优先级
                 iOS
             </span>
         
-            <span class="sidebar-tag-name" data-tags="Powershell">
-                <span class="iconfont-archer">&#xe606;</span>
-                Powershell
-            </span>
-        
             <span class="sidebar-tag-name" data-tags="PSP">
                 <span class="iconfont-archer">&#xe606;</span>
                 PSP
@@ -10476,6 +10475,11 @@ route print可以看到路由优先级
             <span class="sidebar-tag-name" data-tags="720p">
                 <span class="iconfont-archer">&#xe606;</span>
                 720p
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="PowerShell">
+                <span class="iconfont-archer">&#xe606;</span>
+                PowerShell
             </span>
         
     </div>
