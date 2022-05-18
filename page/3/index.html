@@ -460,6 +460,120 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/Network/Hexo+github/">
+                
+                <span class="abstract-title-text">Hexo+Github搭建博客</span>
+            </a>
+            <div class="abstract-content">
+                Hexo可以作为一个Server使用(hexo server 运行), hexo-deployer-git是官方开发的插件用于 Github 上搭建博客。
+需要的环境Hexo基于node.js,故需要先装nodejs以及npm。推荐装LTS的。确保git版本是最新的
+最好了解下nodejs项目
+安装12npm install hexo-cli -gnpm install hexo-deployer-git --save
+其中-g是--global的简写，使用后是安装到系统中，你可以在任何地方使用Hexo命令，而下面则是将hexo-deployer-git直接安装到文件夹(项目中)
+初始化...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/18">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/17</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="建设中">建设中</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/System/TrueNAS%20SCALE/">
+                
+                <span class="abstract-title-text">TrueNAS® SCALE 使用及退坑笔记</span>
+            </a>
+            <div class="abstract-content">
+                最初上这个就是冲着它狂拽酷帅吊炸天的WebUI去的。但每次我一apt upgrade重启就回滚。所以我就一直没上手，直到它Release。
+然后它把’apt’给ban了，理由是 TrueNAS 不是一个 Distro(发行版)。故请注意，如果你不想Everthing in VM or Docker的话，不建议尝试TrueNAS® SCALE。
+还有一个问题就是用户Profile必须在Pool里，非常不自由
+结合上面的情况，所以退坑。
+毕竟，这台机子是可以远程GUI这么用的。
+zfs在Linux上也是非常成熟的东西。
+所差的，不过是一个好用的Web Panel罢了。
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/14">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="System"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                System
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="System">System</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/9211-8i/">
                 
                 <span class="abstract-title-text">记一次Raid卡固件升级(刷IT mode)</span>
@@ -878,121 +992,6 @@ Steam版https://store.steampowered.com/app/3590/Plants_vs_Zombies_GOTY_Edition/
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Steam">Steam</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/MobaXterm/">
-                
-                <span class="abstract-title-text">MobaXterm</span>
-            </a>
-            <div class="abstract-content">
-                一直想找一个SecureCRT的开源替代品，Tera Term做的不错。但是其断开自动关闭的傻逼特性实在让人受不了。虽然我试图用自动记录log来弥补这个问题，但替代手段终究是替代手段。想想看，你正在跑的脚本因为一时连接不畅断了，你还要翻log找他跑到哪了。然后保存telnet密码和SSH密码还得用不同的步骤折腾。所以MobaXterm成了最终解。
-另一方面，不要过度迷信开源，毕竟在处理需求上面，商业软件做的更好。
-https://mobaxterm.mobatek.net/
-缺点SFTP问题比较大，经常上传下载文件夹会没法保存文件夹结构，所以建议带文件夹结构的还是用Filezilla或者...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/20">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/13</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Picture/">
-                
-                <span class="abstract-title-text">[软件推荐]图片类相关软件</span>
-            </a>
-            <div class="abstract-content">
-                看图我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，速度相当快，相对来讲XnViewMP搜索类别更细，功能性更强，但是Xnview里的结果是一次性的，一旦点开一张图片结果就会消失。就个人感觉，XnView的规划很乱，设计也是乱七八糟，唯有功能比较多而已。况且XnView和XnViewMP的使用界面和方式还有很多不一样，感觉怪怪的。MassiGra的各种按键自定义简直可怕，而且支持读取压缩包里的图片，其实SumatraPDF也支持读取压缩包里的图片强力推荐下Honeyview，给我一种“就是他了”感...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/19">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="MIT">MIT</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv3">GPLv3</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="SVG">SVG</a>
     
 </div>
 
@@ -2996,10 +2995,6 @@ https://mobaxterm.mobatek.net/
         
         
     
-        
-        
-        
-        
         
         
         
@@ -8744,12 +8739,6 @@ https://mobaxterm.mobatek.net/
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
-        </li>
-    
-        
             
             
                 
@@ -8851,6 +8840,12 @@ https://mobaxterm.mobatek.net/
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/10</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/04</span>

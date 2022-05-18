@@ -460,6 +460,119 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/System/Fuck%20Windows/">
+                
+                <span class="abstract-title-text">傻逼微软 记一次关键日志 Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。</span>
+            </a>
+            <div class="abstract-content">
+                突然看到关键日志其实把我吓了一跳。Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。想必是电脑快爆炸了。这可把我吓得不行。然后呢，我的注意力就转移到了这“安全和维护”上。这破玩意到底在哪呢？我宇宙无敌人间第一人性化操作系统Windows才不会告诉你我把他放哪了，少年啊，去寻找吧。
+我找了半天终于在计算机右键属性里找到了这玩意(其实找了两次，第一次找到后气的不行然后关了。结果忘了这东西在哪又找了一次。)然后发现一点都不”关键”，因为我关了UAC。电脑是否需要启用UAC我在这里不再做讨论。毕竟Win10系...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/12/22">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="System"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                System
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="System">System</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/System/Slax/">
+                
+                <span class="abstract-title-text">[不再推荐]Slax - Linux PE</span>
+            </a>
+            <div class="abstract-content">
+                不推荐的理由在于Ubuntu和Manjaro的安装盘就能做到，并且一般效果比这个还要好2年未维护，似乎没有提供源码
+
+其实要有个WinPE能看Linux的文件系统也就不用这玩意了https://www.slax.org
+但目前来讲这东西还算有用。修复了一个ESXi的文件损坏的问题
+请注意这个iso不是像别的一样拿什么东西写到移动硬盘或是U盘上，而是直接解压（NTFS文件系统都行）,移动硬盘或U盘中可以保留slax这个文件夹（直接放进去），然后跑boot里的bat。
+另外注意这个对移动硬盘可能相性不好，也可能是文件系统的锅，建议优先U盘
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/12/22">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/24</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="System"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                System
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="不再推荐">不再推荐</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="System">System</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/ShareX/">
                 
                 <span class="abstract-title-text">[截图]ShareX</span>
@@ -848,112 +961,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/25</span>
                 </div>
                 <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/NtpClient/">
-                
-                <span class="abstract-title-text">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</span>
-            </a>
-            <div class="abstract-content">
-                报错信息如下“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”
-看到了这篇文章https://shiyousan.com/post/635774974180847748
-有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，https://www.azurew.com/windows/windows-server-2016/3098.html，也可以不这么设)划掉，按个...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/09/24">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows AD">Windows AD</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/SMB/">
-                
-                <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
-            </a>
-            <div class="abstract-content">
-                其实最简单的方法是重启。
-说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。实在不行还有大杀器net use  * /del，不过需要注意这个会删掉网络映射，微软不支持带网络映射的直接重连，需要不删除映射重连的方式大概只有重启。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/09/24">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
                 
             </div>
         </article>
@@ -2954,10 +2961,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
     
-        
-        
-        
-        
         
         
         
@@ -8702,12 +8705,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
-        </li>
-    
-        
             
             
                 
@@ -8809,6 +8806,12 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
             <div class="archive-year"> 2017 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/10</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/%E7%BD%91%E7%9B%98%E5%88%86%E4%BA%AB/">网盘分享类平台评价</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/04</span>
