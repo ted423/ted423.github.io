@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-05-23T06:19:58.923Z</updated>
+  <updated>2022-05-23T07:25:50.793Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>update-initramfs failed</title>
+    <title>[问题处理]update-initramfs failed</title>
     <link href="http://ted423.github.io/Issue/update-initramfs/"/>
     <id>http://ted423.github.io/Issue/update-initramfs/</id>
     <published>2022-05-23T06:11:58.912Z</published>
-    <updated>2022-05-23T06:19:58.923Z</updated>
+    <updated>2022-05-23T07:25:50.793Z</updated>
     
     <content type="html"><![CDATA[<p>Ubuntu apt upgrade 时报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">update-initramfs: Generating /boot/initrd.img-5.4.0-110-generic</span><br><span class="line">Error 24 : Write error : cannot write compressed block</span><br><span class="line">E: mkinitramfs failure cpio 141 lz4 -9 -l 24</span><br><span class="line">update-initramfs: failed for /boot/initrd.img-5.4.0-110-generic with 1.</span><br><span class="line">dpkg: error processing package linux-firmware (--configure):</span><br><span class="line"> installed linux-firmware package post-installation script subprocess returned error exit status 1</span><br><span class="line">Processing triggers for initramfs-tools (0.136ubuntu6.7) ...</span><br><span class="line">update-initramfs: Generating /boot/initrd.img-5.4.0-110-generic</span><br><span class="line">Error 24 : Write error : cannot write compressed block</span><br><span class="line">E: mkinitramfs failure cpio 141 lz4 -9 -l 24</span><br><span class="line">update-initramfs: failed for /boot/initrd.img-5.4.0-110-generic with 1.</span><br><span class="line">dpkg: error processing package initramfs-tools (--configure):</span><br><span class="line"> installed initramfs-tools package post-installation script subprocess returned error exit status 1</span><br><span class="line">Errors were encountered while processing:</span><br><span class="line"> linux-firmware</span><br><span class="line"> initramfs-tools</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure><p>其实是个老问题了，每次 apt upgrade 都会报错，实际就是 &#x2F;boot 分区分的太小，然后塞不进了就报错</p><p>当时参考<a href="https://superuser.com/questions/1601194/update-initramfs-error-24-write-error-cannot-write-compressed-block">https://superuser.com/questions/1601194/update-initramfs-error-24-write-error-cannot-write-compressed-block</a>解决</p><p>先去 &#x2F;boot 分区里看下老版本是啥</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt list --installed | grep &quot;5.4.0-109&quot; (这个版本是老的版本，不要照抄)</span><br></pre></td></tr></table></figure><p>理论卸掉一个 <code>sudo apt remove linux-image-5.4.0-109-generic</code> 就能一切继续了</p><p>你也可以一口气把老的都卸掉</p>]]></content>
     
