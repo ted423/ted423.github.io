@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-05-13T08:50:27.295Z</updated>
+  <updated>2022-05-23T06:19:58.923Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>update-initramfs failed</title>
+    <link href="http://ted423.github.io/Issue/update-initramfs/"/>
+    <id>http://ted423.github.io/Issue/update-initramfs/</id>
+    <published>2022-05-23T06:11:58.912Z</published>
+    <updated>2022-05-23T06:19:58.923Z</updated>
+    
+    <content type="html"><![CDATA[<p>Ubuntu apt upgrade 时报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">update-initramfs: Generating /boot/initrd.img-5.4.0-110-generic</span><br><span class="line">Error 24 : Write error : cannot write compressed block</span><br><span class="line">E: mkinitramfs failure cpio 141 lz4 -9 -l 24</span><br><span class="line">update-initramfs: failed for /boot/initrd.img-5.4.0-110-generic with 1.</span><br><span class="line">dpkg: error processing package linux-firmware (--configure):</span><br><span class="line"> installed linux-firmware package post-installation script subprocess returned error exit status 1</span><br><span class="line">Processing triggers for initramfs-tools (0.136ubuntu6.7) ...</span><br><span class="line">update-initramfs: Generating /boot/initrd.img-5.4.0-110-generic</span><br><span class="line">Error 24 : Write error : cannot write compressed block</span><br><span class="line">E: mkinitramfs failure cpio 141 lz4 -9 -l 24</span><br><span class="line">update-initramfs: failed for /boot/initrd.img-5.4.0-110-generic with 1.</span><br><span class="line">dpkg: error processing package initramfs-tools (--configure):</span><br><span class="line"> installed initramfs-tools package post-installation script subprocess returned error exit status 1</span><br><span class="line">Errors were encountered while processing:</span><br><span class="line"> linux-firmware</span><br><span class="line"> initramfs-tools</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure><p>其实是个老问题了，每次 apt upgrade 都会报错，实际就是 &#x2F;boot 分区分的太小，然后塞不进了就报错</p><p>当时参考<a href="https://superuser.com/questions/1601194/update-initramfs-error-24-write-error-cannot-write-compressed-block">https://superuser.com/questions/1601194/update-initramfs-error-24-write-error-cannot-write-compressed-block</a>解决</p><p>先去 &#x2F;boot 分区里看下老版本是啥</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt list --installed | grep &quot;5.4.0-109&quot; (这个版本是老的版本，不要照抄)</span><br></pre></td></tr></table></figure><p>理论卸掉一个 <code>sudo apt remove linux-image-5.4.0-109-generic</code> 就能一切继续了</p><p>你也可以一口气把老的都卸掉</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Ubuntu apt upgrade 时报错&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cl</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>What&#39;s the difference between an image, photo, and a picture 的区别</title>
+    <link href="http://ted423.github.io/Document/Picture/"/>
+    <id>http://ted423.github.io/Document/Picture/</id>
+    <published>2022-05-19T11:23:30.177Z</published>
+    <updated>2022-05-19T11:23:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>来源: <a href="https://www.computerhope.com/issues/ch000169.htm">https://www.computerhope.com/issues/ch000169.htm</a></p><p>Digital images, photographs, and pictures<br>Image - Any visual object that’s modified or altered by a computer or an imaginary object created using a computer.<br>Photo or photograph - Anything taken by a camera, digital camera, or photocopier.<br>Picture - A drawing, painting, or artwork created on a computer. A picture is also used to describe anything created using a camera or scanner.</p><p>Digital images, photographs, and pictures<br>Image - 由计算机修改或创建的视觉对象或虚构对象。<br>Photo or photograph - 由照相机、数码相机或复印机拍摄的图像西。<br>Picture - 在计算机上创建的绘图、绘画或艺术品。 Picture还用于描述使用相机或扫描仪创建的图像。理论上Picture包含Image以及Photo</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;来源: &lt;a href=&quot;https://www.computerhope.com/issues/ch000169.htm&quot;&gt;https://www.computerhope.com/issues/ch000169.htm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Digital images</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
+    
+  </entry>
   
   <entry>
     <title>[Terminal] PowerShell版本更新</title>
@@ -527,58 +581,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>[pixiv]推荐作者 - alracoco</title>
-    <link href="http://ted423.github.io/Picture&amp;Photo&amp;Image/pixiv/alracoco/"/>
-    <id>http://ted423.github.io/Picture&amp;Photo&amp;Image/pixiv/alracoco/</id>
-    <published>2022-03-07T02:10:00.000Z</published>
-    <updated>2022-03-07T04:08:26.612Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="pixiv"><a href="#pixiv" class="headerlink" title="pixiv"></a>pixiv</h1><p><a href="https://www.pixiv.net/users/5383046">https://www.pixiv.net/users/5383046</a></p><h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h1><p><img src="https://www.z4a.net/images/2022/03/07/80371937_p0_--.png" alt="alracoco"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;pixiv&quot;&gt;&lt;a href=&quot;#pixiv&quot; class=&quot;headerlink&quot; title=&quot;pixiv&quot;&gt;&lt;/a&gt;pixiv&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.pixiv.net/users/5383046&quot;&gt;https://www.</summary>
-      
-    
-    
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/categories/Picture-Photo-Image/"/>
-    
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
-    
-    <category term="pixiv" scheme="http://ted423.github.io/tags/pixiv/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[pixiv]推荐作者 - 雨傘ゆん</title>
-    <link href="http://ted423.github.io/Picture&amp;Photo&amp;Image/pixiv/%E9%9B%A8%E5%82%98%E3%82%86%E3%82%93/"/>
-    <id>http://ted423.github.io/Picture&amp;Photo&amp;Image/pixiv/%E9%9B%A8%E5%82%98%E3%82%86%E3%82%93/</id>
-    <published>2022-02-23T12:20:00.000Z</published>
-    <updated>2022-03-07T02:10:46.897Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="pixiv"><a href="#pixiv" class="headerlink" title="pixiv"></a>pixiv</h1><p><a href="https://www.pixiv.net/users/3172636">https://www.pixiv.net/users/3172636</a></p><h1 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h1><p><a href="https://shoot.photo/image/qysUr"><img src="https://shoot.photo/images/2022/02/23/qysUr.md.jpg" alt="qysUr.md.jpg"></a><br><a href="https://shoot.photo/image/qyCop"><img src="https://shoot.photo/images/2022/02/23/qyCop.md.jpg" alt="qyCop.md.jpg"></a><br><a href="https://shoot.photo/image/qyqNR"><img src="https://shoot.photo/images/2022/02/23/qyqNR.md.jpg" alt="qyqNR.md.jpg"></a><br><a href="https://shoot.photo/image/qy9cd"><img src="https://shoot.photo/images/2022/02/23/qy9cd.md.jpg" alt="qy9cd.md.jpg"></a><br><a href="https://shoot.photo/image/qyNE0"><img src="https://shoot.photo/images/2022/02/23/qyNE0.md.jpg" alt="qyNE0.md.jpg"></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;pixiv&quot;&gt;&lt;a href=&quot;#pixiv&quot; class=&quot;headerlink&quot; title=&quot;pixiv&quot;&gt;&lt;/a&gt;pixiv&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://www.pixiv.net/users/3172636&quot;&gt;https://www.</summary>
-      
-    
-    
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/categories/Picture-Photo-Image/"/>
-    
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
-    
-    <category term="pixiv" scheme="http://ted423.github.io/tags/pixiv/"/>
     
   </entry>
   

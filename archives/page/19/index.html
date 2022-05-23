@@ -445,6 +445,114 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/Symlink/">
+                
+                <span class="abstract-title-text">[Terminal]符号链接</span>
+            </a>
+            <div class="abstract-content">
+                http://zh.wikipedia.org/wiki/NTFS符号链接
+Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
+1New-Item -Path &quot;target&quot; -ItemType SymbolicLink -Value &quot;Source&quot;
+当然，New-Item这个命令还能用来创建文件或文件夹啥的硬链接就写HardLink，具体见文档
+官方文档https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.manage...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2020/01/04">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/04</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E5%85%B3%E9%97%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A/">
+                
+                <span class="abstract-title-text">关闭打开文件的安全警告 不提示 这些文件可能对你的计算机有害</span>
+            </a>
+            <div class="abstract-content">
+                在组策略中用户配置 –&gt; 管理模板 –&gt; Windows组件 –&gt; 附件管理器打开 “低风险文件类型的包含列表”启用后把相关扩展名添加进去。例如.exe;.js
+另外一个是访问SMB遇到的处理方式打开“INTERNET 选项”，“安全”选项卡；在“本地Intranet”的“站点”中；把你本地的网络段加上，如“192.168..”，“10...*”
+
+2019-12-19 增加网络映射里放执行文件的问题
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2019/12/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/12/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="组策略(gpedit.msc)">组策略(gpedit.msc)</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Document&Texteditor/Pdfsam/">
                 
                 <span class="abstract-title-text">[开源]PDFsam Basic - PDF合并分割工具</span>
@@ -902,101 +1010,6 @@ Githubhttps://github.com/Sigil-Ebook/Sigil既然可以编辑，当然可以拿�
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E4%B8%8B%E8%BD%BD%E5%8F%98Downloads/">
-                
-                <span class="abstract-title-text">[问题处理]Windows 10 1903处理 下载 变成 Downloads 的问题</span>
-            </a>
-            <div class="abstract-content">
-                首先网上查了教程，基本都说是desktop.ini丢失的问题,但我遇到的问题不完全是这个问题。
-起因原因大致是我把Downloads文件夹挪到了另一个盘又挪回去，然后一堆中文里就夹了一个英文的Downloads，像我这种强迫症根本受不了。
-推测1HKEY_CURRENT_USER\Software\Classes\Local Settings\MuiCache\224\AAF68885
-这个注册表下正常的应该有
-1&quot;@windows.storage.dll,-21798&quot;=&quot;下载&quot;
-但现在已经消失了(实际上我处理完后，甚至包括下载另一个语言包，在本...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/07/10">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/10</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Comic/R18/%E3%81%BE%E3%81%84%E3%81%99%E3%81%86%E3%81%83%E3%83%BC%E3%81%A8%E3%81%A7%E3%81%B3%E3%82%8B/">
-                
-                <span class="abstract-title-text">[雛原えみ] まいすうぃーとでびる [中国翻訳]</span>
-            </a>
-            <div class="abstract-content">
-                
-https://e-hentai.org/g/1261464/127933d76f/
-magnet:?xt=urn:btih:0845ee0ee5a92b0192c55f9fa7b9c3d412cc919a&amp;tr=http://ehtracker.org/1261464/announce&amp;tr=http://ehtracker.org/1261464/800633xo3H78nP5qf/announce&amp;tr=http://t.nyaatracker.com/announce&amp;tr=http://tracker1.itzmx.com:8080/annou...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/06/28">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/28</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="R18">R18</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="汉化">汉化</a>
     
 </div>
 
@@ -2898,7 +2911,43 @@ magnet:?xt=urn:btih:0845ee0ee5a92b0192c55f9fa7b9c3d412cc919a&amp;tr=http://ehtra
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6473,7 +6522,7 @@ magnet:?xt=urn:btih:0845ee0ee5a92b0192c55f9fa7b9c3d412cc919a&amp;tr=http://ehtra
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 357
+        Total : 359
         </div>
         <!-- search  -->
         
@@ -9049,6 +9098,12 @@ magnet:?xt=urn:btih:0845ee0ee5a92b0192c55f9fa7b9c3d412cc919a&amp;tr=http://ehtra
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">05/19</span>
+            <a class="archive-post-title" href="/Document/Picture/">What's the difference between an image, photo, and a picture 的区别</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">05/11</span>
             <a class="archive-post-title" href="/Document/Encode/encode/">Encode相关文档</a>
         </li>
@@ -9666,6 +9721,21 @@ magnet:?xt=urn:btih:0845ee0ee5a92b0192c55f9fa7b9c3d412cc919a&amp;tr=http://ehtra
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Code/Terminal/PowerShell_Upgrade/">[Terminal] PowerShell版本更新</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Issue/update-initramfs/">update-initramfs failed</a>
         </li>
     
     </div>
