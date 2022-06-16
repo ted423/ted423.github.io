@@ -445,6 +445,61 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/Windbg/">
+                
+                <span class="abstract-title-text">[转载]WINDBG分析DMP方法（2012.8.19修改）</span>
+            </a>
+            <div class="abstract-content">
+                Windbg下载地址:http://www.windbg.org/然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。像别的什么软件可能也会要不同的组件？另外这憨逼SDK不同版本还能同时装原文:http://bbs.icafe8.com/thread-400104-1-1.html
+
+点击File里的”Symbol File Path”
+
+然后把SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols 复制进去。(http://msdl.microsoft.com/download/s...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2014/01/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/TrafficMonitor/">
                 
                 <span class="abstract-title-text">[开源]TrafficMonitor</span>
@@ -1042,65 +1097,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Windows%20Fast%20Shutdown/">
-                
-                <span class="abstract-title-text">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
-            </a>
-            <div class="abstract-content">
-                这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
-个人处理方法
-打开注册表管理器，找到
-1HKEY_CURRENT_USER\Control Panel\Desktop\
-新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
-找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
-不过笔记本的这个值没改过，我想大概...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/07/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
     
 </div>
 
@@ -3012,7 +3008,26 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6613,7 +6628,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 359
+        Total : 360
         </div>
         <!-- search  -->
         
@@ -9187,6 +9202,12 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/">Linux 内存释放命令</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">05/19</span>

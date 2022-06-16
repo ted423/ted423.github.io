@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-05-23T09:02:00.198Z</updated>
+  <updated>2022-06-16T10:41:30.785Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 内存释放命令</title>
+    <link href="http://ted423.github.io/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/"/>
+    <id>http://ted423.github.io/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-06-16T10:37:00.000Z</published>
+    <updated>2022-06-16T10:41:30.785Z</updated>
+    
+    <content type="html"><![CDATA[<p>一般来说，够用的话不要清理，清理的情况仅限于内存占用满了，没法开启新进程的情况(主要是老系统)</p><p>Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers</p><p>清理前内存使用情况</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure><p>开始清理 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/vm/drop_caches</span><br></pre></td></tr></table></figure><p>清理后内存使用情况</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一般来说，够用的话不要清理，清理的情况仅限于内存占用满了，没法开启新进程的情况(主要是老系统)&lt;/p&gt;
+&lt;p&gt;Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers&lt;/p&gt;
+&lt;p&gt;清理前内存使用情况&lt;/p&gt;
+&lt;figure class=&quot;high</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]update-initramfs failed</title>
@@ -561,26 +592,6 @@
     <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
     
     <category term="System" scheme="http://ted423.github.io/tags/System/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于instagram批量下载</title>
-    <link href="http://ted423.github.io/etc/instagram/"/>
-    <id>http://ted423.github.io/etc/instagram/</id>
-    <published>2022-03-10T05:41:00.000Z</published>
-    <updated>2022-03-10T06:04:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>主要是一个笔记<br>首先，目前基本所有的批量下载基本都失效了<br><a href="https://github.com/arc298/instagram-scraper">https://github.com/arc298/instagram-scraper</a><br>这个做的不错<br>但是见issue<br><a href="https://github.com/arc298/instagram-scraper/issues/329">https://github.com/arc298/instagram-scraper/issues/329</a>  以及 <a href="https://github.com/arc298/instagram-scraper/issues/436">https://github.com/arc298/instagram-scraper/issues/436</a></p><p>总而言之，官方的API没有给出最佳质量的视频图片下载，估计要下只能爬<br>所以目前有效的还是各种单post解析网页<br>4k storm上次用没法用,现在似乎也不行，登陆不上，即便开了代理</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;主要是一个笔记&lt;br&gt;首先，目前基本所有的批量下载基本都失效了&lt;br&gt;&lt;a href=&quot;https://github.com/arc298/instagram-scraper&quot;&gt;https://github.com/arc298/instagram-scraper&lt;/a&gt;&lt;</summary>
-      
-    
-    
-    
     
   </entry>
   
