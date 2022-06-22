@@ -506,14 +506,14 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
                 <span class="abstract-title-text">[Terminal]rsync</span>
             </a>
             <div class="abstract-content">
-                不正常的使用rsync可能会造成灾难性的后果请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avzP   source root@ip:/目录 --log-file=$HOME/.rsync.log
-常用参数123456789 其中z为压缩，在网络性能足够的情况下，不开会快-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案...
+                不正常的使用rsync可能会造成灾难性的后果请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avP source destination --log-file=$HOME/.rsync.log其中  source destination 都可以使用sshroot@ip:&#x2F;目录
+常用参数123456789 其中z为压缩，在网络性能足够的情况下，不开会快(公网才建议开，另外在内容本身为有损压缩或者压缩包的情况下可以不开，文本 或者 code 多的话，开会比较好)-a 参数表示存档模式，保存所有...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/18">
+                <div class="abstract-date" title="Last updated: 2022/06/20">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
                 </div>
                 <!-- tags -->
@@ -6265,6 +6265,12 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/01</span>
+            <a class="archive-post-title" href="/Issue/NtpClient/">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/11</span>
             <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
         </li>
@@ -6723,21 +6729,6 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/Kerberos/">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/NtpClient/">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</a>
         </li>
     
         

@@ -498,6 +498,113 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/NtpClient/">
+                
+                <span class="abstract-title-text">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</span>
+            </a>
+            <div class="abstract-content">
+                报错信息如下“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”
+看到了这篇文章https://shiyousan.com/post/635774974180847748
+有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，https://www.azurew.com/windows/windows-server-2016/3098.html，也可以不这么设)划掉，按个...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/06/22">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows AD">Windows AD</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/rsync/">
+                
+                <span class="abstract-title-text">[Terminal]rsync</span>
+            </a>
+            <div class="abstract-content">
+                不正常的使用rsync可能会造成灾难性的后果请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avP source destination --log-file=$HOME/.rsync.log其中  source destination 都可以使用sshroot@ip:&#x2F;目录
+常用参数123456789 其中z为压缩，在网络性能足够的情况下，不开会快(公网才建议开，另外在内容本身为有损压缩或者压缩包的情况下可以不开，文本 或者 code 多的话，开会比较好)-a 参数表示存档模式，保存所有...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/06/20">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/">
                 
                 <span class="abstract-title-text">Linux 内存释放命令</span>
@@ -860,124 +967,6 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="PowerShell">PowerShell</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Software%20Update/">
-                
-                <span class="abstract-title-text">[推荐]软件更新管理 - Sumo &amp; Chocolatey</span>
-            </a>
-            <div class="abstract-content">
-                首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。
-Sumohttp://www.kcsoftwares.com/?home夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。
-这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)
-ChocolateyChocolatey 虽然是开源的，但其实际还是一款面向企业的商业...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/13">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/19</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Apache License 2.0">Apache License 2.0</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/tools/">
-                
-                <span class="abstract-title-text">[软件推荐]有用的小工具们</span>
-            </a>
-            <div class="abstract-content">
-                批量重命名软件类https://ted423.github.io/Software/%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E8%BD%AF%E4%BB%B6/
-Attribute Changer同File Property Edit一样可以进行文件属性修改，但主要是通过右键菜单，http://www.petges.lu/home/download/
-File Property Edit文件属性修改,你可以将普通文件改成系统文件，十分适合用来藏东西http://www.foryoursoft.com/download.htm
-搜索类Do...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/12">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/16</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="建设中">建设中</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv3">GPLv3</a>
     
 </div>
 
@@ -6810,6 +6799,12 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/01</span>
+            <a class="archive-post-title" href="/Issue/NtpClient/">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/11</span>
             <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
         </li>
@@ -7268,21 +7263,6 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/Kerberos/">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/NtpClient/">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</a>
         </li>
     
         

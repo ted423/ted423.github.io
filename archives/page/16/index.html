@@ -445,56 +445,6 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Document/HDR/">
-                
-                <span class="abstract-title-text">x265 HDR 参数计算方法</span>
-            </a>
-            <div class="abstract-content">
-                HDR 压制参数为 --master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&quot; --max-cll=1000,400
-首先，不同的色彩空间有不同的G B R WP 数据通常，不同的片会有不同的L 数据 以及 max-cll
-Mediainfo范例BT.2020  Olympus Has Fallen 2013
-123456789Color range : LimitedColor primaries : BT.2020Transfer character...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/01/13">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/23</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
             <a class="abstract-title" href="/Document/Network/twitter/">
                 
                 <span class="abstract-title-text">[转载]推特(twitter)怎么看全部的（或特定时间段的）推文？</span>
@@ -971,6 +921,64 @@ Autolyric: http://www.autolyric.com/ （唯一支持多行输出歌词的配合�
         <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="GPLv3">GPLv3</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/fstab/">
+                
+                <span class="abstract-title-text">[问题处理]记一次很折腾的fstab mount iso</span>
+            </a>
+            <div class="abstract-content">
+                先放结果 
+1/share/1.iso /mnt/Disc1 udf defaults,ro,loop 0 0
+
+问题症结在这破iso不是一个标准iso
+12file 1.iso1.iso: data
+
+mount直接是可以Mount，但是到了fstab，就开始emmm……….
+报错wrong fs type, bad option, bad superblock网上查就是挂载格式问题然后试了各种类型都不对，直到找到这个https://www.linuxidc.com/Linux/2013-10/91264.htm
+总之就是先挂载，然后df -T看格式
+123/dev/loop9    ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2020/08/16">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/16</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -6702,6 +6710,12 @@ Autolyric: http://www.autolyric.com/ （唯一支持多行输出歌词的配合�
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">08/01</span>
+            <a class="archive-post-title" href="/Issue/NtpClient/">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">07/11</span>
             <a class="archive-post-title" href="/Document/%E5%A3%B0%E9%81%93/">DTS 与 Dolby 声道相关</a>
         </li>
@@ -7160,21 +7174,6 @@ Autolyric: http://www.autolyric.com/ （唯一支持多行输出歌词的配合�
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/Kerberos/">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Issue/NtpClient/">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</a>
         </li>
     
         
