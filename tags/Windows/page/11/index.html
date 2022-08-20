@@ -445,6 +445,56 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/bcdboot/">
+                
+                <span class="abstract-title-text">[Terminal]bcdboot创建以及修复Windows引导</span>
+            </a>
+            <div class="abstract-content">
+                在使用这个命令之前，首先需要了解Windows的活动分区的意思。并了解硬盘GPT格式下esp分区的作用，避免因其他原因导致引导失败。
+1234567891011121314151617181920212223242526272829303132333435363738394041bcdboot &lt;source&gt; [/l &lt;locale&gt;] [/s &lt;volume-letter&gt; [/f &lt;firmware&gt;]] [/v] [/m [&#123;OS Loader ID&#125;]] [/addlast] [/p] [/c]  source...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2017/08/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Optimization/Thumbs.db/">
                 
                 <span class="abstract-title-text">[优化]通过组策略使系统不会自动生成Thumbs.db</span>
@@ -481,9 +531,9 @@
     
         <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="组策略(gpedit.msc)">组策略(gpedit.msc)</a>
-    
         <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="组策略(Group Policy)">组策略(Group Policy)</a>
     
 </div>
 
@@ -824,7 +874,7 @@ Windows 10下在安装过程中勾上安装keystrokes encryption(击键加密)�
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="组策略(gpedit.msc)">组策略(gpedit.msc)</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="组策略(Group Policy)">组策略(Group Policy)</a>
     
 </div>
 
@@ -936,63 +986,6 @@ Windows 10下在安装过程中勾上安装keystrokes encryption(击键加密)�
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Lync/">
-                
-                <span class="abstract-title-text">[问题处理]Lync联系人名片显示异常</span>
-            </a>
-            <div class="abstract-content">
-                症状Lync是公司内部使用，公司有自己的Exchange服务器。联系人资料显示异常，如姓名不对(账号相同，更换其他人使用，但仍显示之前的人的姓名)，电话号码不显示，或者其他。
-原因分析由于删除Lync配置无效，但Lync跟outlook有联系，因此需要找到Outlook里相关配置进行删除。
-操作
-退出lync, 打开“%appdata%..\Local\Microsoft\Outlook”
-删除“Offline Address Books”文件夹，重新登录Lync
-如仍有问题，在Outlook里找到联系人名片以及Lync联系人名片删除
-如Outlook里删除不了，可能需要登录网页版的邮件...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/08/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
@@ -2916,7 +2909,22 @@ Windows 10下在安装过程中勾上安装keystrokes encryption(击键加密)�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6409,7 +6417,7 @@ Windows 10下在安装过程中勾上安装keystrokes encryption(击键加密)�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 361
+        Total : 362
         </div>
         <!-- search  -->
         
@@ -9718,6 +9726,21 @@ Windows 10下在安装过程中勾上安装keystrokes encryption(击键加密)�
             <a class="archive-post-title" href="/Issue/update-initramfs/">[问题处理]update-initramfs failed</a>
         </li>
     
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Document/Group%20Policy/">[文档]Group Policy(组策略)查询</a>
+        </li>
+    
     </div>
 </div>
 
@@ -10022,11 +10045,6 @@ Windows 10下在安装过程中勾上安装keystrokes encryption(击键加密)�
             <span class="sidebar-tag-name" data-tags="System">
                 <span class="iconfont-archer">&#xe606;</span>
                 System
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="组策略(gpedit.msc)">
-                <span class="iconfont-archer">&#xe606;</span>
-                组策略(gpedit.msc)
             </span>
         
             <span class="sidebar-tag-name" data-tags="CMD">
@@ -10422,6 +10440,11 @@ Windows 10下在安装过程中勾上安装keystrokes encryption(击键加密)�
             <span class="sidebar-tag-name" data-tags="PowerShell">
                 <span class="iconfont-archer">&#xe606;</span>
                 PowerShell
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="组策略(Group Policy)">
+                <span class="iconfont-archer">&#xe606;</span>
+                组策略(Group Policy)
             </span>
         
     </div>

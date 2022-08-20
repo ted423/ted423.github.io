@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-08-20T07:19:54.631Z</updated>
+  <updated>2022-08-20T08:02:48.171Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[文档]Group Policy(组策略)查询</title>
+    <link href="http://ted423.github.io/Document/Group%20Policy/"/>
+    <id>http://ted423.github.io/Document/Group%20Policy/</id>
+    <published>2022-08-20T07:58:57.917Z</published>
+    <updated>2022-08-20T08:02:48.171Z</updated>
+    
+    <content type="html"><![CDATA[<p>不错的网站<br><a href="https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn">https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;不错的网站&lt;br&gt;&lt;a href=&quot;https://admx.help/?Category=Windows_10_2016&amp;amp;Language=zh-cn&quot;&gt;https://admx.help/?Category=Windows_10_2016&amp;amp;Languag</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="组策略(Group Policy)" scheme="http://ted423.github.io/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy/"/>
+    
+  </entry>
   
   <entry>
     <title>[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</title>
@@ -551,37 +579,6 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[优化]Windows Server 打开任务管理器磁盘监控</title>
-    <link href="http://ted423.github.io/Optimization/Server-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8-%E7%A3%81%E7%9B%98/"/>
-    <id>http://ted423.github.io/Optimization/Server-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8-%E7%A3%81%E7%9B%98/</id>
-    <published>2022-03-25T08:21:00.000Z</published>
-    <updated>2022-03-25T08:23:09.844Z</updated>
-    
-    <content type="html"><![CDATA[<p>Server默认都没开不知道什么考虑<br>管理员权限下的 CMD 或者Power Shell<br><code>diskperf -Y</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Server默认都没开不知道什么考虑&lt;br&gt;管理员权限下的 CMD 或者Power Shell&lt;br&gt;&lt;code&gt;diskperf -Y&lt;/code&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Optimization" scheme="http://ted423.github.io/categories/Optimization/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
-    
-    <category term="Optimization" scheme="http://ted423.github.io/tags/Optimization/"/>
     
   </entry>
   

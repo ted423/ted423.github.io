@@ -445,6 +445,59 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E6%9D%83%E9%99%90/">
+                
+                <span class="abstract-title-text">[转载]Windows权限问题处理</span>
+            </a>
+            <div class="abstract-content">
+                以注册表为例（1）右键需要操作的注册表项目－权限－高级－所有者&#x2F;文件(文件夹)-属性-安全高级-所有者
+你会发现当前所有者是TrusteInstaller（windows系统安装的时候使用的账号，权限灰常高），而我们要做的是将这个所有者更改为我们的当前用户，比如这里是administators
+点击选择 将所有这更改为administrators，然后勾选替换子容器和对象的所有者（相当于应用设置到子键吧）应用确定以后返回到权限窗口，选择当前用户账号我的是administrators（xxxxx\administrators,将完全控制的选项点击设置为允许，点击应用，现在尝试编辑...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/08/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/%E6%90%9C%E4%B8%8D%E5%88%B0%E5%BA%94%E7%94%A8/">
                 
                 <span class="abstract-title-text">[问题处理]Win 10 搜索不到本地应用，显示 “这些结果可能不完整”</span>
@@ -942,60 +995,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Kerberos/">
-                
-                <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
-            </a>
-            <div class="abstract-content">
-                参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
-原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
-可以使用如下注册表
-1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/04/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
     
 </div>
 
@@ -2917,7 +2916,22 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6410,7 +6424,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 361
+        Total : 362
         </div>
         <!-- search  -->
         
@@ -9719,6 +9733,21 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <a class="archive-post-title" href="/Issue/update-initramfs/">[问题处理]update-initramfs failed</a>
         </li>
     
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Document/Group%20Policy/">[文档]Group Policy(组策略)查询</a>
+        </li>
+    
     </div>
 </div>
 
@@ -10023,11 +10052,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <span class="sidebar-tag-name" data-tags="System">
                 <span class="iconfont-archer">&#xe606;</span>
                 System
-            </span>
-        
-            <span class="sidebar-tag-name" data-tags="组策略(gpedit.msc)">
-                <span class="iconfont-archer">&#xe606;</span>
-                组策略(gpedit.msc)
             </span>
         
             <span class="sidebar-tag-name" data-tags="CMD">
@@ -10423,6 +10447,11 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
             <span class="sidebar-tag-name" data-tags="PowerShell">
                 <span class="iconfont-archer">&#xe606;</span>
                 PowerShell
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="组策略(Group Policy)">
+                <span class="iconfont-archer">&#xe606;</span>
+                组策略(Group Policy)
             </span>
         
     </div>
