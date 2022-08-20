@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-06-16T10:41:30.785Z</updated>
+  <updated>2022-08-20T07:19:54.631Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</title>
+    <link href="http://ted423.github.io/Issue/0x0000011b/"/>
+    <id>http://ted423.github.io/Issue/0x0000011b/</id>
+    <published>2022-08-20T07:08:20.112Z</published>
+    <updated>2022-08-20T07:19:54.631Z</updated>
+    
+    <content type="html"><![CDATA[<p>原因见这里讨论<br><a href="https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html">https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html</a></p><p>最早 Win 10 等都有问题，后续通过更新补丁，已经可以正常添加。<br>但 Win7 大概是被放弃了,更新到最新也没用，包括 Extended Security Updates 也都不行，只有在服务器上取消补丁或者验证才有用。<br>所以…</p><p>另外可以看下这里<br><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver">https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;原因见这里讨论&lt;br&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html&quot;&gt;https://docs.m</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Android]Solid Explorer File Manager - 文件管理软件</title>
+    <link href="http://ted423.github.io/Software/Android/Solid%20Explorer%20File%20Manager/"/>
+    <id>http://ted423.github.io/Software/Android/Solid%20Explorer%20File%20Manager/</id>
+    <published>2022-08-16T01:02:42.657Z</published>
+    <updated>2020-11-08T07:39:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这玩意我入了正<br>国内系统自带的明显功能不全，小米的或许可以，但是自带广告。<br>华为的有SMB功能，但逻辑堪称傻逼。<br>一加就不说了，网络上的评价是对的。<br>开源那个Amaze就挺无语，支持SMB，但是锁屏会断<br><a href="https://play.google.com/store/apps/details?id=pl.solidexplorer2">https://play.google.com/store/apps/details?id=pl.solidexplorer2</a></p><p>这个还有内置的浏览器，不过感觉关联有点问题<br>有批量重命名功能，可以压缩解压</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这玩意我入了正&lt;br&gt;国内系统自带的明显功能不全，小米的或许可以，但是自带广告。&lt;br&gt;华为的有SMB功能，但逻辑堪称傻逼。&lt;br&gt;一加就不说了，网络上的评价是对的。&lt;br&gt;开源那个Amaze就挺无语，支持SMB，但是锁屏会断&lt;br&gt;&lt;a href=&quot;https://pla</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
+    
+    <category term="正版" scheme="http://ted423.github.io/tags/%E6%AD%A3%E7%89%88/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux 内存释放命令</title>
@@ -526,70 +582,6 @@
     <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
     <category term="Optimization" scheme="http://ted423.github.io/tags/Optimization/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[推荐]软件更新管理 - Sumo &amp; Chocolatey</title>
-    <link href="http://ted423.github.io/Software/Software%20Update/"/>
-    <id>http://ted423.github.io/Software/Software%20Update/</id>
-    <published>2022-03-19T08:44:00.000Z</published>
-    <updated>2022-05-13T08:26:53.835Z</updated>
-    
-    <content type="html"><![CDATA[<p>首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。<br>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</p><h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p><p>这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)</p><h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h1><p>Chocolatey 虽然是开源的，但其实际还是一款面向企业的商业产品，并且国内体验不好。<br>像什么微信QQ企业微信，里面是没有的。<br>免费产品限制了功能，并且只能装到C盘。之前还有安装失败也会计入软件列表的问题</p><p>因此这个产品的主要定位是一定程度上处理软件升级的问题。主要处理软件自带升级智障的问题，例如WinSCP(之前有用scoop，这个自己本身也智障，配置放便携版里，结果一更新配置没了)</p><h2 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h2><p><code>choco install chocolateygui</code></p><p>注意的点</p><ul><li>这软件在Win7上要更新PowerShell。</li><li>只有想装C盘并且不需要安装包配置关联的软件才用Chocolatey直接装，否则建议自行安装，其后用Chocolatey升级</li><li>社区维护，因此很多软件安装行为都由社区维护者决定</li><li>因为上面一条，可能面临没有维护或者不再维护的情况</li><li>网络问题</li><li>还可能有升级报错的情况，如<a href="https://community.chocolatey.org/packages/obs-studio">OBS-Studio</a></li><li>部分时候需要重装.install <a href="https://github.com/chocolatey/choco/issues/1027">https://github.com/chocolatey/choco/issues/1027</a></li><li>他的软件列表和计算机的列表是相互独立的，并且不能单纯只删记录(只能pin)</li></ul><p>一些常用命令</p><ul><li>列出本地安装软件 <code>choco list --local-only</code></li><li>列出可升级的软件 <code>choco outdated</code></li><li>安装指定等级 <code>choco install virtualbox --version 4.3.26</code></li><li>不检查更新<code>choco pin add -n=googlechrome</code></li><li><code>choco search 名字</code></li><li><a href="https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey">Proxy Server</a> (不支持socks5,)</li></ul><h1 id="Why-not-360-and-etc"><a href="#Why-not-360-and-etc" class="headerlink" title="Why not 360(and etc)"></a>Why not 360(and etc)</h1><p>实际上我是最早的360以及金山清理专家使用者。<br>然后他们之间打了一架，360弹窗给用户洗脑，往傲游和金山网盾身上扔了一堆屎盆子。<br>而傅盛把清理专家砍了然后做了个界面奇丑无比的金山卫士(因为这玩意做了开机自启)<br>然后在金山卫士开始有一堆受众的时候把卫士砍了。</p><p>国内软件喜欢加驱是免不了的，那么作为一个免费加驱软件(剩下的我就不说了)。<br>重点是你愿意为了你需要的功能使用这些免费加驱软件，然后进入他们的流量入口么？</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。&lt;br&gt;如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。&lt;/p&gt;
-&lt;h1 id=&quot;Sumo&quot;&gt;&lt;a href=&quot;#Sumo&quot; class=&quot;headerlink&quot; title=&quot;Sumo&quot;&gt;&lt;/</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]记一次Windows升级后无法被ping通，无法远程连接</title>
-    <link href="http://ted423.github.io/Issue/Win_FW/"/>
-    <id>http://ted423.github.io/Issue/Win_FW/</id>
-    <published>2022-03-10T08:06:00.000Z</published>
-    <updated>2022-03-10T08:06:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>有事没事，先骂骂微软。<br>虽然已经发生差不多一年多了，但我现在归纳一下骂骂也是可以的。<br>升级直接更新现有防火墙策略这种操作我是没想到的，甚至桌面端和服务器端一锅端。</p><p>桌面端你这么搞也就算了，服务器端你防火墙乱动不是脑子进屎就是被门夹了。难不成你跟用户说，我们的产品做出来就是为了请你们默认关闭的？（默认还带个自动更新自动重启，果然微软现在脑袋里只剩下屎了。）</p><p>试着想一下，你装台服务器，看着能远程，放那休息会不管了，准备以后慢慢配，然后过几天既ping不通又没法远程，你心里一惊，莫不是机子炸了？然后大老远的跑到那接个显示器一看，机子重启更新，远程被拦了。你会不会想把微软工程师的脑袋拧下来当球踢？</p><p>更搞的是，微软还喜欢没事给你弹个一键重置，写好的策略一不小心全给你清了。简单的说你开了远程的情况下，很可能一不小心一键失联。然后如果不是本地你大概没啥办法，要么找人，要么你买个票到现场去开防火墙。<br>所以别骂360了，连微软都喜欢这种操作。甚至这种操作还不给你弹UAC，连个确认都没，什么傻逼玩意。</p><p>微软把防火墙分了几个网络类型，公共，专用和域(Win7还有工作和家庭，后面的系统把这俩合成了专用)。每个区域的防火墙策略是不同的。（默认后两者的防火墙策略会更宽松）<br>而这个网络配置会根据你每次接入的网口、IP变动，你找台别人的机子，很可能就在公用里面。</p><p>而这次更新，默认拦了专用的ICMP和远程桌面，简单就是更新后失联（既不能ping也不能远程）。所以你也搞不清楚这机子是不是炸了。<br>总之是很人才的操作（后面似乎取消了默认拦远程桌面的操作，但是ping包目前默认都拦）<br>所以公司默认都是关Win的防火墙?</p><p>处理方法就是打开防火墙的高级设置，然后入站里开（ICMP in，之前叫虚拟机？现在似乎又变成了文件和打印机共享？？回显？）</p><p>另外提醒一下，Win10的网络配置公用和专用现在挪到了UWP的设置里，要点网络的属性<br>当然这里又有一个很坑的操作，就是有很多以外情况导致网络属性消失或变更。</p><p>这就导致了机子重启后意外失联或者啥玩意被防火墙挡了。</p><p>BTW，域里的机子你网络到底该是域呢还是专用呢？坑比微软？</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;有事没事，先骂骂微软。&lt;br&gt;虽然已经发生差不多一年多了，但我现在归纳一下骂骂也是可以的。&lt;br&gt;升级直接更新现有防火墙策略这种操作我是没想到的，甚至桌面端和服务器端一锅端。&lt;/p&gt;
-&lt;p&gt;桌面端你这么搞也就算了，服务器端你防火墙乱动不是脑子进屎就是被门夹了。难不成你跟用户</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
-    
-    <category term="System" scheme="http://ted423.github.io/tags/System/"/>
     
   </entry>
   
