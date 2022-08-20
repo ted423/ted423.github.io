@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-08-20T08:02:48.171Z</updated>
+  <updated>2022-08-20T08:13:28.739Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bypass Windows 7 Extended Security Updates Eligibility|Windows 7 付费补丁</title>
+    <link href="http://ted423.github.io/Software/Bypass%20Windows%207%20Extended%20Security%20Updates%20Eligibility/"/>
+    <id>http://ted423.github.io/Software/Bypass%20Windows%207%20Extended%20Security%20Updates%20Eligibility/</id>
+    <published>2022-08-20T08:04:40.022Z</published>
+    <updated>2022-08-20T08:13:28.739Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://forums.mydigitallife.net/threads/bypass-windows-7-extended-security-updates-eligibility.80606/">https://forums.mydigitallife.net/threads/bypass-windows-7-extended-security-updates-eligibility.80606/</a><br>请登录才能查看</p><p>ESU介绍<br><a href="https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq">https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://forums.mydigitallife.net/threads/bypass-windows-7-extended-security-updates-eligibility.80606/&quot;&gt;https://forums.mydigital</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="破解&amp;激活" scheme="http://ted423.github.io/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>[文档]Group Policy(组策略)查询</title>
@@ -548,37 +576,6 @@
     <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
     <category term="Network" scheme="http://ted423.github.io/tags/Network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 Linux 下如何强制取消挂载(umount) NFS 目录</title>
-    <link href="http://ted423.github.io/Code/Terminal/umount%20-lf/"/>
-    <id>http://ted423.github.io/Code/Terminal/umount%20-lf/</id>
-    <published>2022-03-25T10:09:00.000Z</published>
-    <updated>2022-03-27T13:43:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这种情况下可以考虑lazy umount<br>即 <code>umount -lf 路径</code><br>lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。<br><strong>请注意，该方法并不是完全安全的</strong></p><p>另外可以参考下<a href="https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging">https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging</a><br>不过个人很久之前弄得，不记得当时有没用这个方式</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这种情况下可以考虑lazy umount&lt;br&gt;即 &lt;code&gt;umount -lf 路径&lt;/code&gt;&lt;br&gt;lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。&lt;br&gt;&lt;strong&gt;请注意，该方法并不是完全安全的&lt;/strong&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
   </entry>
   
