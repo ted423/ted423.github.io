@@ -460,6 +460,63 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/Maintenance/PE/">
+                
+                <span class="abstract-title-text">【PE相关】两个PE以及FbinstTool</span>
+            </a>
+            <div class="abstract-content">
+                FbinstTool-PE相关工具由于种种复杂原因，不同BIOS对U盘CHS&#x2F;LBA参数处理结果不尽相同，导致同一个U盘，在一台机器上BOOT成功，在另一台机器上就可能BOOT失败。
+wuwuzz注:早期硬盘也有类似问题，但最后通过多个工业标准，已经解决。而USB是万能接口，且有关标准未得到厂商统一遵守，问题更复杂
+开源社区的bean提出了巧妙构思，开发出fbinst，基本解决了BIOS下的CHS&#x2F;LBA参数适应调整问题，使U盘BOOT成功率大大提高。(除非碰上了极度变态的主板和BIOS)。 
+FbinstTool既是Fbinst的GUI程序 
+FBA类型文件就是Fb...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/09/10">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="System">System</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Maintenance">Maintenance</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Anime/JP/B%20gata%20H%20kei/">
                 
                 <span class="abstract-title-text">[JP]B型H系[B gata H kei]</span>
@@ -957,59 +1014,6 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E6%9D%83%E9%99%90/">
-                
-                <span class="abstract-title-text">[转载]Windows权限问题处理</span>
-            </a>
-            <div class="abstract-content">
-                以注册表为例（1）右键需要操作的注册表项目－权限－高级－所有者&#x2F;文件(文件夹)-属性-安全高级-所有者
-你会发现当前所有者是TrusteInstaller（windows系统安装的时候使用的账号，权限灰常高），而我们要做的是将这个所有者更改为我们的当前用户，比如这里是administators
-点击选择 将所有这更改为administrators，然后勾选替换子容器和对象的所有者（相当于应用设置到子键吧）应用确定以后返回到权限窗口，选择当前用户账号我的是administrators（xxxxx\administrators,将完全控制的选项点击设置为允许，点击应用，现在尝试编辑...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -3042,7 +3046,30 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6559,7 +6586,7 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 363
+        Total : 364
         </div>
         <!-- search  -->
         
@@ -9771,12 +9798,6 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
     
         
         <li class="archive-post-item">
-            <span class="archive-post-date">09/10</span>
-            <a class="archive-post-title" href="/Software/Maintenance/PE/">【PE相关】两个PE以及FbinstTool</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
             <span class="archive-post-date">07/05</span>
             <a class="archive-post-title" href="/Software/Maintenance/%E5%BE%AE%E8%BD%AF%E5%B0%8F%E5%B7%A5%E5%85%B7%E9%9B%86%E5%90%88/">微软小工具集合</a>
         </li>
@@ -9815,6 +9836,12 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">[R18]最近，妹妹的样子有点怪</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/10</span>
+            <a class="archive-post-title" href="/Software/Maintenance/PE/">【PE相关】两个PE以及FbinstTool</a>
         </li>
     
         
@@ -9887,6 +9914,21 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Document/Group%20Policy/">[文档]Group Policy(组策略)查询</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Document/Encode/HDR/">x265 HDR 参数计算方法</a>
         </li>
     
     </div>

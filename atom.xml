@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-08-20T08:13:28.739Z</updated>
+  <updated>2022-09-06T07:52:54.781Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>x265 HDR 参数计算方法</title>
+    <link href="http://ted423.github.io/Document/Encode/HDR/"/>
+    <id>http://ted423.github.io/Document/Encode/HDR/</id>
+    <published>2022-09-06T07:51:25.803Z</published>
+    <updated>2022-09-06T07:52:54.781Z</updated>
+    
+    <content type="html"><![CDATA[<p>HDR 压制参数为 <code>--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&quot; --max-cll=1000,400</code></p><p>首先，不同的色彩空间有不同的G B R WP 数据</p><p>通常，不同的片会有不同的L 数据 以及 max-cll</p><p>Mediainfo范例</p><p>BT.2020  Olympus Has Fallen 2013</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Color range : Limited</span><br><span class="line">Color primaries : BT.2020</span><br><span class="line">Transfer characteristics : PQ</span><br><span class="line">Matrix coefficients : BT.2020 non-constant</span><br><span class="line">Mastering display color primaries : BT.2020</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 891 cd/m2</span><br><span class="line">Maximum Frame-Average Light Level : 428 cd/m2</span><br><span class="line">Original source medium : Blu-ray</span><br></pre></td></tr></table></figure><p>Display P3 会比较多</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Color range                 : Limited</span><br><span class="line">Color primaries             : BT.2020</span><br><span class="line">Transfer characteristics    : PQ</span><br><span class="line">Matrix coefficients         : BT.2020 non-constant</span><br><span class="line">Mastering display color pri : Display P3</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 479 cd/m2</span><br><span class="line">Maximum Frame-Average Light : 464 cd/m2</span><br></pre></td></tr></table></figure><p>G B R WP 数据看Mediainfo里的Mastering display color pri</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Display P3</span><br><span class="line">--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)&quot;</span><br><span class="line">BT.2020</span><br><span class="line">--master-display &quot;G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)&quot;</span><br></pre></td></tr></table></figure><p>Venom 2018 movie mediainfo :</p><pre><code>Mastering display luminance : min: <b>0.0050</b> cd/m2, max: <b>4000</b> cd/m2Maximum Content Light Level : <b>3903</b> cd/m2Maximum Frame-Average Light Level : <b>1076</b> cd/m2</code></pre><p>In this case master-display&#x3D;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)<strong>L(40000000,50)</strong> and max-cll&#x3D;<strong>3903,1076</strong></p><p>About Maximum Content Light Level and Maximum Frame-Average Light Level … If those not present -&gt; max-cll&#x3D;0,0</p><p>测试用临时Code</p><textarea style="width: 80%; height: 200px" onkeyup="refresh();" placeholder="仅支持输入JSON版mediainfo" id="HDR"></textarea><pre><code id="result" name="result"></code></pre><script>  var refresh = function () {    document.getElementById("result").textContent = "";    var mediainfo = document.getElementById("HDR").value.replaceAll("\\", "|");    if (mediainfo) {      var whole = JSON.parse(mediainfo);      var track = whole.media.track;      var hevc = track.filter(function (video) {        return video["@type"] === "Video";      })[0];      if (hevc.MasteringDisplay_ColorPrimaries == "Display P3")        document.getElementById("result").textContent += '--master-display "G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)"';      else if (hevc.MasteringDisplay_ColorPrimaries == "BT.2020")        document.getElementById("result").textContent += '--master-display "G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)"';      var Luminance = hevc.MasteringDisplay_Luminance.replaceAll(        " cd/m2",        ""      ).match(/\d\.?\d*/g);      var max = Luminance[1] * 10000,        min = Luminance[0] * 10000;      document.getElementById("result").textContent += "L(" + max + "," + min + ")";      if (hevc.MaxCLL)        document.getElementById("result").textContent += " max-cll=" + hevc.MaxCLL.replace(" cd/m2", "") + "," + hevc.MaxFALL.replace(" cd/m2", "");    }  };  refresh();</script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;HDR 压制参数为 &lt;code&gt;--master-display &amp;quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&amp;quot; --max-cll=1000,400&lt;/cod</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Javascript" scheme="http://ted423.github.io/tags/Javascript/"/>
+    
+    <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
+    
+  </entry>
   
   <entry>
     <title>Bypass Windows 7 Extended Security Updates Eligibility|Windows 7 付费补丁</title>
@@ -545,37 +577,6 @@
     
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 路由相关</title>
-    <link href="http://ted423.github.io/Document/Network/Windows-ip-route/"/>
-    <id>http://ted423.github.io/Document/Network/Windows-ip-route/</id>
-    <published>2022-03-27T14:07:00.000Z</published>
-    <updated>2022-03-27T14:13:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>多网络环境可以进行路由优先级调整，避免类似不能访问外网的路由优先级高导致电脑不能上网<br>其实调整跃点就可以<br>对于内部的，不跨网段的，其实可以把网关删掉</p><p>希望优先级低的，在适配器处，进入ipv4设置，然后点击高级，取消自动跃点，给跃点数填个很高的值</p><p><code>route print</code><br>可以看到路由优先级</p><p>可以手动指定路由<br><code>route add 192.168.0.0 mask 255.255.255.0 192.168.68.254</code></p><p>-p 代表是永久路由</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;多网络环境可以进行路由优先级调整，避免类似不能访问外网的路由优先级高导致电脑不能上网&lt;br&gt;其实调整跃点就可以&lt;br&gt;对于内部的，不跨网段的，其实可以把网关删掉&lt;/p&gt;
-&lt;p&gt;希望优先级低的，在适配器处，进入ipv4设置，然后点击高级，取消自动跃点，给跃点数填个很高的值&lt;/</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
-    
-    <category term="Network" scheme="http://ted423.github.io/tags/Network/"/>
     
   </entry>
   
