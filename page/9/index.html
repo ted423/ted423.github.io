@@ -460,6 +460,111 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/Remote/vncserver%20-localhost%20no/">
+                
+                <span class="abstract-title-text">vncserver -localhost no</span>
+            </a>
+            <div class="abstract-content">
+                记住这条命令，这是我被坑过最惨的一次。(理论上算是我找了个不错的教程？)第一次能用就没管了，结果重启手动启动连不上。跑vncserver连不上，看了有端口，也没开防火墙，最后仔细查，结果绑在了127.0.0.1上，本机IP带5901连不通。默认localhost yes -&gt; [-localhost yes|no]    Only accept VNC connections from localhost这是脑子多大坑才会有这种设置项。没事弄个vnc然后本机连本机玩？目测是最近出来的？ 不然咋啥教程都不说明
+适用于tigervnc
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/11/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/Document&Texteditor/notepad/">
+                
+                <span class="abstract-title-text">文本编辑器类的个人选择</span>
+            </a>
+            <div class="abstract-content">
+                本博有俩文本编辑器，其实我用过很多，所以就写写最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。
+之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/11/12">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/etc/rip/">
                 
                 <span class="abstract-title-text">压制组相关</span>
@@ -860,119 +965,6 @@
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/winscppwd/">
-                
-                <span class="abstract-title-text">winscppwd - Winscp Password解密</span>
-            </a>
-            <div class="abstract-content">
-                起因是忘了某机器密码，然后曾保存到了Winscp里不过配置里的密码是加密的。
-网上所有帖子都指向了winscppwd，并且我查到以前有这么个开源项目https://bitbucket.org/knarf/winscppwd/overview，但现在看已经404了
-似乎是2012年的软件但是现在仍能正常使用
-看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看https://github.com/winscp/winscp/blob/master/source/core/Security.cpp不过我看不懂，有人看得懂的话，可以试试手工解密
-另外有看到https://g...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/09">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Security/No%20WD/">
-                
-                <span class="abstract-title-text">不推荐使用Windows Defender</span>
-            </a>
-            <div class="abstract-content">
-                首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。Server是1809，所以很可能遇到了是一个老版本的Bug
-现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。
-然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了图片挂了
-解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。而里...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Security Software">Security Software</a>
     
 </div>
 
@@ -3020,7 +3012,37 @@
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6629,7 +6651,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 366
+        Total : 368
         </div>
         <!-- search  -->
         
@@ -10047,6 +10069,36 @@
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/Windows%20Update/KB3093266/">[问题处理]KB3093266 错误码:0x80004005</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Document/samba%20symbolic%20link/">Samba中支持符号链接</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Webmin/">[开源]Webmin - WebUI for Linux</a>
         </li>
     
     </div>

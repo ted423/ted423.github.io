@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-09-25T05:48:56.974Z</updated>
+  <updated>2022-09-25T06:25:44.622Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[开源]Webmin - WebUI for Linux</title>
+    <link href="http://ted423.github.io/Software/Webmin/"/>
+    <id>http://ted423.github.io/Software/Webmin/</id>
+    <published>2022-09-25T06:17:17.628Z</published>
+    <updated>2022-09-25T06:25:44.622Z</updated>
+    
+    <content type="html"><![CDATA[<p>WebUI 是个好文明，其配置项也能方便初学者尽快了解 Linux。<br>里面的配置项相当丰富，很多甚至我不开配置都不知道还能这么做<br>前提是不能因此抛弃命令行，否则会成为一个只会点点点的人。如果只想点点点，建议还是Win就好。<br><a href="https://www.webmin.com/">https://www.webmin.com/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;WebUI 是个好文明，其配置项也能方便初学者尽快了解 Linux。&lt;br&gt;里面的配置项相当丰富，很多甚至我不开配置都不知道还能这么做&lt;br&gt;前提是不能因此抛弃命令行，否则会成为一个只会点点点的人。如果只想点点点，建议还是Win就好。&lt;br&gt;&lt;a href=&quot;https:/</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="3-clause BSD license" scheme="http://ted423.github.io/tags/3-clause-BSD-license/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Samba中支持符号链接</title>
+    <link href="http://ted423.github.io/Document/samba%20symbolic%20link/"/>
+    <id>http://ted423.github.io/Document/samba%20symbolic%20link/</id>
+    <published>2022-09-25T05:50:25.790Z</published>
+    <updated>2022-09-25T06:25:09.029Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">follow symlinks = yes</span><br></pre></td></tr></table></figure><p><a href="https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path">https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path</a></p><p>吐槽下官方文档被标为陈旧<br><a href="https://www.samba.org/samba/docs/using_samba/ch08.html">https://www.samba.org/samba/docs/using_samba/ch08.html</a></p><p>不过这个可以在 <a href="/Software/Webmin/">Webmin</a> 里点点点开启</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]AD 中帐户经常被锁定的处理办法</title>
@@ -523,68 +579,6 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="Network" scheme="http://ted423.github.io/tags/Network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>netplan配置网络</title>
-    <link href="http://ted423.github.io/Document/netplan/"/>
-    <id>http://ted423.github.io/Document/netplan/</id>
-    <published>2022-04-19T06:52:00.000Z</published>
-    <updated>2022-04-19T07:08:17.458Z</updated>
-    
-    <content type="html"><![CDATA[<p>Ubuntu 17 开始使用netplan配置网络，因此很多其它系统的教程都不再适用(&#x2F;etc&#x2F;network&#x2F;interfaces 下的配置已经不再起作用)</p><p><a href="https://netplan.io/">https://netplan.io/</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> cat /etc/netplan/01-network-manager-all.yaml</span><br><span class="line"># Let NetworkManager manage all devices on this system</span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: NetworkManager</span><br><span class="line">  ethernets:</span><br><span class="line">    enp5s0f0:</span><br><span class="line">      dhcp4: no</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.0.4/24</span><br><span class="line">    enp6s0f0:</span><br><span class="line">      dhcp4: yes</span><br><span class="line">      dhcp4-overrides:</span><br><span class="line">          route-metric: 1</span><br><span class="line">    enp6s0f1:</span><br><span class="line">      dhcp4: no</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.1.80/24</span><br><span class="line">      gateway4: 192.168.1.254</span><br></pre></td></tr></table></figure><p>The top-level node in a netplan configuration file is a network: mapping<br>that contains version: 2 (the YAML currently being used by curtin, MaaS,<br>etc. is version 1), and then device definitions grouped by their type, such as<br>ethernets:, modems:, wifis:, or bridges:. These are the types that our<br>renderer can understand and are supported by our backends.</p><p>Each type block contains device definitions as a map where the keys (called<br>“configuration IDs”) are defined as below.</p><p>老实说，version干嘛的我没看懂，反正都写version: 2就完事了</p><p>测试</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan try</span><br></pre></td></tr></table></figure><p>应用(其实上面那个命令用完之后按Enter也就应用了)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Ubuntu 17 开始使用netplan配置网络，因此很多其它系统的教程都不再适用(&amp;#x2F;etc&amp;#x2F;network&amp;#x2F;interfaces 下的配置已经不再起作用)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://netplan.io/&quot;&gt;https</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo+Github搭建博客</title>
-    <link href="http://ted423.github.io/Document/Network/Hexo+github/"/>
-    <id>http://ted423.github.io/Document/Network/Hexo+github/</id>
-    <published>2022-04-17T12:39:00.000Z</published>
-    <updated>2022-09-25T02:52:13.074Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hexo可以作为一个Server使用(hexo server 运行), <code>hexo-deployer-git</code>是官方开发的插件用于 Github 上搭建博客。</p><h1 id="需要的环境"><a href="#需要的环境" class="headerlink" title="需要的环境"></a>需要的环境</h1><p>Hexo基于node.js,故需要先装nodejs以及npm。推荐装LTS的。<br>确保git版本是最新的</p><p>最好了解下<a href="https://docs.npmjs.com/cli/v8/commands/npm-init">nodejs项目</a></p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>其中<code>-g</code>是<code>--global</code>的简写，使用后是安装到系统中，你可以在任何地方使用Hexo命令，而下面则是将<code>hexo-deployer-git</code>直接安装到文件夹(项目中)</p><p>初始化blog(下面命令blog的name可以改为你想要的名字)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure><p>需要注意的是这个blog文件夹是一个独立的项目，你可以挪出来放到你想要的地方，或者改名都行</p><h1 id="命令文档"><a href="#命令文档" class="headerlink" title="命令文档"></a>命令文档</h1><p><a href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a></p><h1 id="Github上的操作"><a href="#Github上的操作" class="headerlink" title="Github上的操作"></a>Github上的操作</h1><p>新增一个仓库（Repositories）,仓库名为yourname.github.io</p><h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>找到”blog”文件夹里的<code>_config.yml</code><br>改最下面</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: http://github.com/yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><p><code>.\source\_posts</code><br>这里放的博客文本，<code> hexo new [layout] &lt;title&gt;</code><br>用于生成一个新博客。<br>不过一般我会手动建</p><h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure><p>意思可以看上面的命令文档，基本等同于<code>hexo g -d</code></p><h1 id="安装一个主题"><a href="#安装一个主题" class="headerlink" title="安装一个主题"></a>安装一个主题</h1><p>这个就自己折腾吧,很多主题还要装依赖<br>还有很多的坑</p><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>网页有缓存</p><h1 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>(我这好像没成功，因为cli版本其实没有升级，Hexo版本倒是到了6)</p><p>最终是看了这个成功的 –2022-06-29<br><a href="https://novnan.github.io/Hexo/update_hexo/">https://novnan.github.io/Hexo/update_hexo/</a></p><p>而且是试了下就好了，完全没搞懂之前啥毛病。<br>可能跟<code>npm update --save</code>这个有关<br>只有用了这个才会更新项目的npm包</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Hexo可以作为一个Server使用(hexo server 运行), &lt;code&gt;hexo-deployer-git&lt;/code&gt;是官方开发的插件用于 Github 上搭建博客。&lt;/p&gt;
-&lt;h1 id=&quot;需要的环境&quot;&gt;&lt;a href=&quot;#需要的环境&quot; class=&quot;hea</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
-    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
     
   </entry>
   

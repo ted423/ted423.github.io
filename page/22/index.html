@@ -460,6 +460,114 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Optimization/Disable-MRT/">
+                
+                <span class="abstract-title-text">[优化]让微软不强制提供&#34;恶意软件删除工具&#34;</span>
+            </a>
+            <div class="abstract-content">
+                这个东西呢，偷偷安装，偷偷执行，在我做事的时候跳出来占内存、占CPU，还起不到什么作用。卸载还会自己跑回来，一个exe文件几百M。堪称微软神经病的最佳代表。处理办法如下在注册表中
+1HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft
+新建项MRT,然后在项里新建DWORD DontOfferThroughWUAU,值设为1
+然后powershell里输 
+1wusa /uninstall /kb:890830 /norestart
+看能不能卸掉，卸不掉的话就直接删MRT.exe和MRT-KB890830.exe吧
+REG
+1234Windows ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Optimization"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Optimization
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Software/DISM++/">
+                
+                <span class="abstract-title-text">[封装]DISM++ 以及一些DISM相关的东西</span>
+            </a>
+            <div class="abstract-content">
+                http://www.chuyu.me/zh-Hans/
+DISM是微软本身提供的关于WIM的调整工具，可以用来封装系统镜像。据软件介绍，DISM++是基于CBS(Component Based Servicing Reference)实现的，可以当作DISM的GUI，但不是DISM 的 GUI版。就我个人的使用习惯，我是会用这个解封装，但实际操作时会把这软件关掉，用原生DISM命令行做操作，包括开机软件管理我也是用autoruns加载离线系统操作。最后再用这个软件重新封装。虽然这个软件看起来功能很多，但还是不能涵盖所有的命令其实我一直以为这软件是开源的，看网上也这么说，今天仔细观察了一...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/Kerberos/">
                 
                 <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
@@ -847,95 +955,6 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/Impression%20of%20Font/">
-                
-                <span class="abstract-title-text">[Font]Impression of Font</span>
-            </a>
-            <div class="abstract-content">
-                找等宽字体时找到的来源http://bbs.themex.net/showthread.php?t=16898387
-这里有dropbox的https://ted423.bitcron.com/post/etc/fonts
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/09/10">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Font">Font</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/CAservice/">
-                
-                <span class="abstract-title-text">关于华为EMUI系统自动禁止google相关应用联网问题</span>
-            </a>
-            <div class="abstract-content">
-                原因在于华为CAservice会去检测是否能联通谷歌的东西，否则就会自己禁止连接也只有在VPN一直开的情况下才会OK。其实还是很蛋疼理论Clash能比较好的解决问题 -2021-09-23
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/09/04">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/09/04</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
@@ -2985,7 +3004,37 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6594,7 +6643,7 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 366
+        Total : 368
         </div>
         <!-- search  -->
         
@@ -10012,6 +10061,36 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/Windows%20Update/KB3093266/">[问题处理]KB3093266 错误码:0x80004005</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Document/samba%20symbolic%20link/">Samba中支持符号链接</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Webmin/">[开源]Webmin - WebUI for Linux</a>
         </li>
     
     </div>
