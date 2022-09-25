@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-09-15T09:16:18.712Z</updated>
+  <updated>2022-09-25T02:04:21.083Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]Windows Update 错误 80092004 解决方案</title>
+    <link href="http://ted423.github.io/Issue/Windows%20Update/80092004/"/>
+    <id>http://ted423.github.io/Issue/Windows%20Update/80092004/</id>
+    <published>2022-09-24T16:00:00.000Z</published>
+    <updated>2022-09-25T02:04:21.083Z</updated>
+    
+    <content type="html"><![CDATA[<p>来源:<a href="https://it-help.tips/zh/windows-7-update-80092004-error/">https://it-help.tips/zh/windows-7-update-80092004-error/</a></p><p>80092004 的错误是跟更新档的验证有关， Windows 7 (2008 R2) 2019年出的问题（解决之后收藏夹放了很久）,手动打下 KB4474419 和 KB4490628 这两个更新即可<br><a href="https://support.microsoft.com/zh-cn/topic/%E9%92%88%E5%AF%B9-windows-%E5%92%8C-wsus-%E7%9A%84-2019-sha-2-%E4%BB%A3%E7%A0%81%E7%AD%BE%E5%90%8D%E6%94%AF%E6%8C%81%E8%A6%81%E6%B1%82-64d1c82d-31ee-c273-3930-69a4cde8e64f">https://support.microsoft.com/zh-cn/topic/针对-windows-和-wsus-的-2019-sha-2-代码签名支持要求-64d1c82d-31ee-c273-3930-69a4cde8e64f</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;来源:&lt;a href=&quot;https://it-help.tips/zh/windows-7-update-80092004-error/&quot;&gt;https://it-help.tips/zh/windows-7-update-80092004-error/&lt;/a&gt;&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
+    
+  </entry>
   
   <entry>
     <title>x265 HDR 参数计算方法</title>
@@ -53,7 +82,7 @@
     <link href="http://ted423.github.io/Software/Bypass%20Windows%207%20Extended%20Security%20Updates%20Eligibility/"/>
     <id>http://ted423.github.io/Software/Bypass%20Windows%207%20Extended%20Security%20Updates%20Eligibility/</id>
     <published>2022-08-20T08:04:40.022Z</published>
-    <updated>2022-08-20T08:13:28.739Z</updated>
+    <updated>2022-09-25T01:56:56.323Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://forums.mydigitallife.net/threads/bypass-windows-7-extended-security-updates-eligibility.80606/">https://forums.mydigitallife.net/threads/bypass-windows-7-extended-security-updates-eligibility.80606/</a><br>请登录才能查看</p><p>ESU介绍<br><a href="https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq">https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq</a></p>]]></content>
     
@@ -69,6 +98,8 @@
     
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
     
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
@@ -106,8 +137,8 @@
   
   <entry>
     <title>[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</title>
-    <link href="http://ted423.github.io/Issue/0x0000011b/"/>
-    <id>http://ted423.github.io/Issue/0x0000011b/</id>
+    <link href="http://ted423.github.io/Issue/Windows%20Update/0x0000011b/"/>
+    <id>http://ted423.github.io/Issue/Windows%20Update/0x0000011b/</id>
     <published>2022-08-20T07:08:20.112Z</published>
     <updated>2022-08-20T07:19:54.631Z</updated>
     
@@ -551,30 +582,6 @@
     
     
     <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>bit Byte bibyte(雾) 存储单位，速度单位的一些说明</title>
-    <link href="http://ted423.github.io/Document/Mebibyte/"/>
-    <id>http://ted423.github.io/Document/Mebibyte/</id>
-    <published>2022-03-27T14:40:00.000Z</published>
-    <updated>2022-03-27T15:15:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>在计算机中 b&#x3D;bit B&#x3D;Byte<br>其中 1Byte&#x3D;8bit<br>B&#x3D;Byte属于习惯用法，并不表示byte在使用中必须大写。<br>但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太烂。<br>另，MB&#x2F;s&#x3D;MBps&#x3D;8Mbps，通常说的百兆带宽是100Mbps也就是12.5MB&#x2F;s。<br>当然百兆带宽属于口语化用词，你不用纠结一个人说千兆带宽下载有100兆（100MB&#x2F;s）这件事。<br>当然360浏览器下载速度是M&#x2F;s的事你也不用纠结，因为说明360浏览器的下载器开发者水平太烂。</p><p>这时候冒出来个MiB(Mebibyte)就需要仔细讲讲了<br>Multiple-byte units<br>Mebibyte 记作 MiB ，由国际电工委员会（IEC）于1998年制定。这个单位被设计用来某些时候替代MB（megabyte），因为在计算机相关内容中MB有可能被用来等于2的20次方，虽然数值很相近，但MiB与国际单位制（SI）中的MB（10的6次方）还是有严格的区别。<br>这个单位不常用，不过你知道10TB在Win上只有8.92TB(实际是TiB)就是这个单位做怪了。当然，离不开本博客口头语，微软傻逼。（所以说为啥微软某些地方这么像国内软件啊，不过确实比360强点）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在计算机中 b&amp;#x3D;bit B&amp;#x3D;Byte&lt;br&gt;其中 1Byte&amp;#x3D;8bit&lt;br&gt;B&amp;#x3D;Byte属于习惯用法，并不表示byte在使用中必须大写。&lt;br&gt;但是在计算机使用中，KB, MB，GB，大小写必须写对，否则意味这个人技术不过关，基础太</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
