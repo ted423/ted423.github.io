@@ -445,6 +445,57 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/SMB/">
+                
+                <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</span>
+            </a>
+            <div class="abstract-content">
+                其实最简单的方法是重启。
+说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。实在不行还有大杀器net use  * /del，不过需要注意这个会删掉网络映射，微软不支持带网络映射的直接重连，需要不删除映射重连的方式大概只有重启。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/09/24">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/samba/">
                 
                 <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
@@ -915,61 +966,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/winscppwd/">
-                
-                <span class="abstract-title-text">winscppwd - Winscp Password解密</span>
-            </a>
-            <div class="abstract-content">
-                起因是忘了某机器密码，然后曾保存到了Winscp里不过配置里的密码是加密的。
-网上所有帖子都指向了winscppwd，并且我查到以前有这么个开源项目https://bitbucket.org/knarf/winscppwd/overview，但现在看已经404了
-似乎是2012年的软件但是现在仍能正常使用
-看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看https://github.com/winscp/winscp/blob/master/source/core/Security.cpp不过我看不懂，有人看得懂的话，可以试试手工解密
-另外有看到https://g...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/09">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
     
 </div>
 
@@ -2911,7 +2907,26 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6506,7 +6521,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 365
+        Total : 366
         </div>
         <!-- search  -->
         
@@ -9014,7 +9029,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.11 简体中文版</a>
         </li>
     
         
@@ -9485,6 +9500,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">09/25</span>
+            <a class="archive-post-title" href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/">[问题处理]AD 中帐户经常被锁定的处理办法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/25</span>
             <a class="archive-post-title" href="/Software/Editor/">[开源]Editor.md - 开源在线 Markdown 编辑器</a>
         </li>
     
@@ -9704,7 +9725,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/11</span>
-            <a class="archive-post-title" href="/Issue/Windows%20Update/windows%2010%20update/">Windows 10 自动update自动重启的解决办法</a>
+            <a class="archive-post-title" href="/Issue/Windows%20Update/windows%2010%20update/">[问题处理]Windows 10 自动update自动重启的解决办法</a>
         </li>
     
         

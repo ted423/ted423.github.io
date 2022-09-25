@@ -445,6 +445,65 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Windows%20Fast%20Shutdown/">
+                
+                <span class="abstract-title-text">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
+            </a>
+            <div class="abstract-content">
+                这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2019/07/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/TLS1.2/">
                 
                 <span class="abstract-title-text">[问题处理]农业银行证书导致Internet Explorer的TLS 1.2自动取消勾选从而导致Windows Store无法打开</span>
@@ -917,63 +976,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Git/Failed%20to%20sync%20this%20branch/">
-                
-                <span class="abstract-title-text">[Git]处理 GitHub - Failed to sync this branch 的问题</span>
-            </a>
-            <div class="abstract-content">
-                其实估计跟前段时间乱玩rebase有关,用 git push正常，但是sync就会提示”GitHub - Failed to sync this branch”
-打开git shell输入git status
-它会提示你原因我这里提示是 “Could not open file .git&#x2F;rebase-merge&#x2F;done for reading: No such file or directory”
-把rebase-merge整个删掉后就正常了
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/03/13">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Code">Code</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
     
 </div>
 
@@ -2915,7 +2917,26 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6510,7 +6531,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 365
+        Total : 366
         </div>
         <!-- search  -->
         
@@ -9018,7 +9039,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.02 简体中文版</a>
+            <a class="archive-post-title" href="/Software/Compression/winrar/">[烈火]WinRAR v6.11 简体中文版</a>
         </li>
     
         
@@ -9489,6 +9510,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">09/25</span>
+            <a class="archive-post-title" href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/">[问题处理]AD 中帐户经常被锁定的处理办法</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/25</span>
             <a class="archive-post-title" href="/Software/Editor/">[开源]Editor.md - 开源在线 Markdown 编辑器</a>
         </li>
     
@@ -9708,7 +9735,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/11</span>
-            <a class="archive-post-title" href="/Issue/Windows%20Update/windows%2010%20update/">Windows 10 自动update自动重启的解决办法</a>
+            <a class="archive-post-title" href="/Issue/Windows%20Update/windows%2010%20update/">[问题处理]Windows 10 自动update自动重启的解决办法</a>
         </li>
     
         

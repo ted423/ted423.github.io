@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-09-25T02:59:36.657Z</updated>
+  <updated>2022-09-25T05:48:56.974Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]AD 中帐户经常被锁定的处理办法</title>
+    <link href="http://ted423.github.io/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/"/>
+    <id>http://ted423.github.io/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/</id>
+    <published>2022-09-25T05:45:02.321Z</published>
+    <updated>2022-09-25T05:48:56.974Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个软件可以用来排查<br><a href="https://www.microsoft.com/en-us/download/details.aspx?id=15201">https://www.microsoft.com/en-us/download/details.aspx?id=15201</a></p><p>我遇到的情况是有个同仁的电脑中毒，然后一直在那登字典登陆别人帐户的。</p><p>看下是哪个 AD 锁定的，然后 AD 上看哪个IP导致的异常，然后检查那个IP是谁在用</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这个软件可以用来排查&lt;br&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/download/details.aspx?id=15201&quot;&gt;https://www.microsoft.com/en-us/download/details.a</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
   
   <entry>
     <title>[开源]Editor.md - 开源在线 Markdown 编辑器</title>
@@ -559,39 +585,6 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[MV]AKB48 - ハステとワステ</title>
-    <link href="http://ted423.github.io/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/"/>
-    <id>http://ted423.github.io/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/</id>
-    <published>2022-04-15T11:13:02.139Z</published>
-    <updated>2015-11-15T11:21:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="网盘分流"><a href="#网盘分流" class="headerlink" title="网盘分流"></a>网盘分流</h1><ul><li><a href="https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog">https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;网盘分流&quot;&gt;&lt;a href=&quot;#网盘分流&quot; class=&quot;headerlink&quot; title=&quot;网盘分流&quot;&gt;&lt;/a&gt;网盘分流&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW9</summary>
-      
-    
-    
-    
-    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
-    
-    
-    <category term="JP" scheme="http://ted423.github.io/tags/JP/"/>
-    
-    <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
-    
-    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
-    
-    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
-    
-    <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
     
   </entry>
   
