@@ -460,13 +460,68 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/Software/FlashPatch/">
+            <a class="abstract-title" href="/Document/Compression/">
                 
-                <span class="abstract-title-text">FlashPatch</span>
+                <span class="abstract-title-text">压缩算法测试</span>
             </a>
             <div class="abstract-content">
-                一个你懂的软件https://github.com/darktohka/FlashPatch并且实际我不想介绍它。如果不是某些傻逼还在用，我都不想搞这个
+                主要最近到处看到Zstd，ZFS都支持了，就想起来测一下平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了
+用了个216G的虚拟机，但是测试结果仅供参考
 
+耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟，Zstd L5就很快了)
+LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。
+Zstd的CPU占用也还好。
+故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐LZ4是个速度奇快，但是压缩比一般的算法
+这是...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/21">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/21</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/netplan/">
+                
+                <span class="abstract-title-text">netplan配置网络</span>
+            </a>
+            <div class="abstract-content">
+                Ubuntu 17 开始使用netplan配置网络，因此很多其它系统的教程都不再适用(&#x2F;etc&#x2F;network&#x2F;interfaces 下的配置已经不再起作用)
+https://netplan.io/
+12345678910111213141516171819 cat /etc/netplan/01-network-manager-all.yaml# Let NetworkManager manage all devices on this systemnetwork:  version: 2  renderer: NetworkManager  ethern...
             </div>
             <!-- read more -->
             
@@ -484,19 +539,21 @@
             
         
         
-        <span class="post-category" data-categories="Software"">
+        <span class="post-category" data-categories="Document"">
             <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
-                Software
+                Document
             </span>
         </span>
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="Network">Network</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Ubuntu">Ubuntu</a>
     
 </div>
 
@@ -937,66 +994,6 @@ route print可以看到路由优先级
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/4K/">
-                
-                <span class="abstract-title-text">[不再推荐]youtube专用下载器 - 4K Video Downloader &amp; Instagram专用下载器 - 4K Stogram</span>
-            </a>
-            <div class="abstract-content">
-                目前遇到了Stogram不激活没法全下下来的问题
-4K Video Downloader
-https://www.4kdownload.com/zh-cn/
-
-4K Stogram
-https://www.4kdownload.com/zh-tw/products/product-stogram
-
-
-2022-03-25由于 4K Stogram 没法正常使用，4K Video Downloader 可以被替代，故这俩软件都不再推荐，前者可能跟代理问题有关
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/13</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="不再推荐">不再推荐</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
     
 </div>
 
@@ -3034,7 +3031,26 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6615,7 +6631,7 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 364
+        Total : 365
         </div>
         <!-- search  -->
         
@@ -7377,7 +7393,7 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>
-            <a class="archive-post-title" href="/Software/FlashPatch/">FlashPatch</a>
+            <a class="archive-post-title" href="/Software/FlashPatch/">[开源]FlashPatch</a>
         </li>
     
         
@@ -9591,6 +9607,12 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/25</span>
+            <a class="archive-post-title" href="/Software/Editor/">[开源]Editor.md - 开源在线 Markdown 编辑器</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">09/25</span>

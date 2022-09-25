@@ -460,6 +460,69 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/itemscope/">
+                
+                <span class="abstract-title-text">HTML5 数据结构(structured-data) 之 微数据(microdata)</span>
+            </a>
+            <div class="abstract-content">
+                知道微数据是因为谷歌告诉我https://ted423.bitcron.com/post/anime/tangled这个页面的数据结构有问题(最后发现class里有个vevent，所以谷歌认为这是一个活动)
+经过搜索，终于了解了微数据这么一个东西，微数据是为了方便机器(搜索引擎)识别而产生的东西。其有特定的规范，有特定的格式。可以丰富搜索引擎的网页摘要。
+本人按自己的理解乱说了一通，不保证本篇文章具备学术严谨性。
+还是以此为例说下
+
+    
+        
+            魔发奇缘Tangled
+            
+        
+        
+        
+...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/03/08">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="SEO">SEO</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="HTML5">HTML5</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Video/%E9%88%B4%E6%9C%A8%E5%92%B2/">
                 
                 <span class="abstract-title-text">[Video]鈴木咲</span>
@@ -923,63 +986,6 @@ magnet:?xt=urn:btih:E...
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="480P">480P</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
-                
-                <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
-            </a>
-            <div class="abstract-content">
-                不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动
-Widnows 7改AHCI找到下面的注册表子项：
-1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci
-在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态
-改IDE是找到
-1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide
-...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/01/14">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/14</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
     
 </div>
 
@@ -3017,7 +3023,26 @@ Widnows 7改AHCI找到下面的注册表子项：
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6598,7 +6623,7 @@ Widnows 7改AHCI找到下面的注册表子项：
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 364
+        Total : 365
         </div>
         <!-- search  -->
         
@@ -7360,7 +7385,7 @@ Widnows 7改AHCI找到下面的注册表子项：
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/19</span>
-            <a class="archive-post-title" href="/Software/FlashPatch/">FlashPatch</a>
+            <a class="archive-post-title" href="/Software/FlashPatch/">[开源]FlashPatch</a>
         </li>
     
         
@@ -9574,6 +9599,12 @@ Widnows 7改AHCI找到下面的注册表子项：
             <div class="archive-year"> 2022 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/25</span>
+            <a class="archive-post-title" href="/Software/Editor/">[开源]Editor.md - 开源在线 Markdown 编辑器</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">09/25</span>

@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-09-25T02:04:21.083Z</updated>
+  <updated>2022-09-25T02:59:36.657Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[开源]Editor.md - 开源在线 Markdown 编辑器</title>
+    <link href="http://ted423.github.io/Software/Editor/"/>
+    <id>http://ted423.github.io/Software/Editor/</id>
+    <published>2022-09-25T02:41:09.293Z</published>
+    <updated>2022-09-25T02:59:36.657Z</updated>
+    
+    <content type="html"><![CDATA[<p>在线: <a href="https://pandao.github.io/editor.md/">https://pandao.github.io/editor.md/</a><br>项目: <a href="https://github.com/pandao/editor.md">https://github.com/pandao/editor.md</a></p><p>对于 Hexo 这种需要上传显示的还是很好用的，不过理论上 Hexo 本地起 Server 调试更好。</p><p>缺点就是各种 Markdown 不兼容问题或者说是独特的显示问题</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在线: &lt;a href=&quot;https://pandao.github.io/editor.md/&quot;&gt;https://pandao.github.io/editor.md/&lt;/a&gt;&lt;br&gt;项目: &lt;a href=&quot;https://github.com/pandao/edito</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]Windows Update 错误 80092004 解决方案</title>
@@ -443,11 +471,11 @@
   </entry>
   
   <entry>
-    <title>FlashPatch</title>
+    <title>[开源]FlashPatch</title>
     <link href="http://ted423.github.io/Software/FlashPatch/"/>
     <id>http://ted423.github.io/Software/FlashPatch/</id>
     <published>2022-04-19T06:54:00.000Z</published>
-    <updated>2022-04-19T06:55:48.070Z</updated>
+    <updated>2022-09-25T02:53:03.828Z</updated>
     
     <content type="html"><![CDATA[<p>一个你懂的软件<br><a href="https://github.com/darktohka/FlashPatch">https://github.com/darktohka/FlashPatch</a><br>并且实际我不想介绍它。<br>如果不是某些傻逼还在用，我都不想搞这个</p>]]></content>
     
@@ -463,6 +491,8 @@
     
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
     
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
@@ -506,7 +536,7 @@
     <link href="http://ted423.github.io/Document/Network/Hexo+github/"/>
     <id>http://ted423.github.io/Document/Network/Hexo+github/</id>
     <published>2022-04-17T12:39:00.000Z</published>
-    <updated>2022-06-29T09:04:23.019Z</updated>
+    <updated>2022-09-25T02:52:13.074Z</updated>
     
     <content type="html"><![CDATA[<p>Hexo可以作为一个Server使用(hexo server 运行), <code>hexo-deployer-git</code>是官方开发的插件用于 Github 上搭建博客。</p><h1 id="需要的环境"><a href="#需要的环境" class="headerlink" title="需要的环境"></a>需要的环境</h1><p>Hexo基于node.js,故需要先装nodejs以及npm。推荐装LTS的。<br>确保git版本是最新的</p><p>最好了解下<a href="https://docs.npmjs.com/cli/v8/commands/npm-init">nodejs项目</a></p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure><p>其中<code>-g</code>是<code>--global</code>的简写，使用后是安装到系统中，你可以在任何地方使用Hexo命令，而下面则是将<code>hexo-deployer-git</code>直接安装到文件夹(项目中)</p><p>初始化blog(下面命令blog的name可以改为你想要的名字)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure><p>需要注意的是这个blog文件夹是一个独立的项目，你可以挪出来放到你想要的地方，或者改名都行</p><h1 id="命令文档"><a href="#命令文档" class="headerlink" title="命令文档"></a>命令文档</h1><p><a href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a></p><h1 id="Github上的操作"><a href="#Github上的操作" class="headerlink" title="Github上的操作"></a>Github上的操作</h1><p>新增一个仓库（Repositories）,仓库名为yourname.github.io</p><h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>找到”blog”文件夹里的<code>_config.yml</code><br>改最下面</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: http://github.com/yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><p><code>.\source\_posts</code><br>这里放的博客文本，<code> hexo new [layout] &lt;title&gt;</code><br>用于生成一个新博客。<br>不过一般我会手动建</p><h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure><p>意思可以看上面的命令文档，基本等同于<code>hexo g -d</code></p><h1 id="安装一个主题"><a href="#安装一个主题" class="headerlink" title="安装一个主题"></a>安装一个主题</h1><p>这个就自己折腾吧,很多主题还要装依赖<br>还有很多的坑</p><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>网页有缓存</p><h1 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>(我这好像没成功，因为cli版本其实没有升级，Hexo版本倒是到了6)</p><p>最终是看了这个成功的 –2022-06-29<br><a href="https://novnan.github.io/Hexo/update_hexo/">https://novnan.github.io/Hexo/update_hexo/</a></p><p>而且是试了下就好了，完全没搞懂之前啥毛病。<br>可能跟<code>npm update --save</code>这个有关<br>只有用了这个才会更新项目的npm包</p>]]></content>
     
@@ -521,6 +551,10 @@
     
     <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
     
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
@@ -558,32 +592,6 @@
     <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
     
     <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记一次Raid卡固件升级(刷IT mode)</title>
-    <link href="http://ted423.github.io/Document/9211-8i/"/>
-    <id>http://ted423.github.io/Document/9211-8i/</id>
-    <published>2022-04-13T03:53:00.000Z</published>
-    <updated>2022-04-13T04:20:28.487Z</updated>
-    
-    <content type="html"><![CDATA[<p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p><p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p><p>Copy the following three files from your download to our bootable USB stick.</p><ul><li>sasbios_rel&#x2F;mptsas2.rom</li><li>Firmware&#x2F;HBA_9211_8i_IT&#x2F;2118it.bin</li><li>sas2flsh_dos_rel&#x2F;sas2flsh.exe</li></ul><p>这些文件都放在根目录(不保留文件夹)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">Advanced Mode Set</span><br><span class="line"></span><br><span class="line">Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Reset Successful!</span><br><span class="line"></span><br><span class="line">Finished Processing Commands Successfully.</span><br><span class="line">Exiting SAS2Flash.</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">Advanced Mode Set</span><br><span class="line"></span><br><span class="line">Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">Firmware Image has a Valid Checksum. </span><br><span class="line">Firmware Version 20.00.04.00</span><br><span class="line">Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">Valid NVDATA Image found. </span><br><span class="line">NVDATA Version 14.01.00.00 </span><br><span class="line">Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">Valid Initialization Image verified.</span><br><span class="line">Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">Mfg Page 2 Mismatch Detected.</span><br><span class="line">Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">Chip is in RESET state. Performing Host Boot...</span><br><span class="line">Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">Beginning Firmware Download...</span><br><span class="line">Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">Resetting Adapter...</span><br><span class="line">Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">Verifying Download...</span><br><span class="line"></span><br><span class="line">Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">Finished Processing Commands Successfully.</span><br><span class="line">Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p><p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p><p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程&lt;a href=&quot;https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mod</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
   </entry>
   
