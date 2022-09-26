@@ -553,10 +553,9 @@
                 <span class="abstract-title-text">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</span>
             </a>
             <div class="abstract-content">
-                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)
+                其实是个小问题，我很快就解决了。但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯,结论是跟匿名访问被默认阻止有关，只是 Win 给了个错误的报错。Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)
 理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
-说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)samba systemctl status log有这个
-123456...
+说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)sam...
             </div>
             <!-- read more -->
             
@@ -9578,7 +9577,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">08/20</span>
-            <a class="archive-post-title" href="/Software/Bypass%20Windows%207%20Extended%20Security%20Updates%20Eligibility/">Bypass Windows 7 Extended Security Updates Eligibility|Windows 7 付费补丁</a>
+            <a class="archive-post-title" href="/Software/Bypass%20Windows%207%20Extended%20Security%20Updates%20Eligibility/">Bypass Windows 7(Server 2008) Extended Security Updates Eligibility|Windows 7 付费补丁</a>
         </li>
     
         
