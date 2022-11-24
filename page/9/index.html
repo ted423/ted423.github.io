@@ -460,6 +460,48 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/svn/">
+                
+                <span class="abstract-title-text">[问题处理]SVN踩得几个坑</span>
+            </a>
+            <div class="abstract-content">
+                The server sent a truncated HTTP response bodyhttps://www.jianshu.com/p/ad53304dbdbf印象里这篇文章似乎没啥用，后面是要改apache的设置。
+备份大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果
+
+SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。
+svnadmin dump 出来的文件比服务器上的repo还要大。
+svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，所以记得一...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/11/22">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Remote/vncserver%20-localhost%20no/">
                 
                 <span class="abstract-title-text">vncserver -localhost no</span>
@@ -910,61 +952,6 @@
         <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/python-win/">
-                
-                <span class="abstract-title-text">[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</span>
-            </a>
-            <div class="abstract-content">
-                简单说就是Win10在C:\Users\XX\AppData\Local\Microsoft\WindowsApps下放了两个0kb的python.exe以及python3.exe用于弹Windows Store，并把这个路径加到了个人的环境变量。
-而且这个环境变量优先级高所以会优先运行。
-傻逼微软。
-资源管理器里似乎删不掉，要命令行删
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/09">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
