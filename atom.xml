@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-09-25T06:25:44.622Z</updated>
+  <updated>2022-12-28T08:40:28.807Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,152 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>[开源]Webmin - WebUI for Linux</title>
-    <link href="http://ted423.github.io/Software/Webmin/"/>
-    <id>http://ted423.github.io/Software/Webmin/</id>
-    <published>2022-09-25T06:17:17.628Z</published>
-    <updated>2022-09-25T06:25:44.622Z</updated>
-    
-    <content type="html"><![CDATA[<p>WebUI 是个好文明，其配置项也能方便初学者尽快了解 Linux。<br>里面的配置项相当丰富，很多甚至我不开配置都不知道还能这么做<br>前提是不能因此抛弃命令行，否则会成为一个只会点点点的人。如果只想点点点，建议还是Win就好。<br><a href="https://www.webmin.com/">https://www.webmin.com/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;WebUI 是个好文明，其配置项也能方便初学者尽快了解 Linux。&lt;br&gt;里面的配置项相当丰富，很多甚至我不开配置都不知道还能这么做&lt;br&gt;前提是不能因此抛弃命令行，否则会成为一个只会点点点的人。如果只想点点点，建议还是Win就好。&lt;br&gt;&lt;a href=&quot;https:/</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="3-clause BSD license" scheme="http://ted423.github.io/tags/3-clause-BSD-license/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Samba中支持符号链接</title>
-    <link href="http://ted423.github.io/Document/samba%20symbolic%20link/"/>
-    <id>http://ted423.github.io/Document/samba%20symbolic%20link/</id>
-    <published>2022-09-25T05:50:25.790Z</published>
-    <updated>2022-09-25T06:25:09.029Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">follow symlinks = yes</span><br></pre></td></tr></table></figure><p><a href="https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path">https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path</a></p><p>吐槽下官方文档被标为陈旧<br><a href="https://www.samba.org/samba/docs/using_samba/ch08.html">https://www.samba.org/samba/docs/using_samba/ch08.html</a></p><p>不过这个可以在 <a href="/Software/Webmin/">Webmin</a> 里点点点开启</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]AD 中帐户经常被锁定的处理办法</title>
-    <link href="http://ted423.github.io/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/"/>
-    <id>http://ted423.github.io/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/</id>
-    <published>2022-09-25T05:45:02.321Z</published>
-    <updated>2022-09-25T05:48:56.974Z</updated>
-    
-    <content type="html"><![CDATA[<p>这个软件可以用来排查<br><a href="https://www.microsoft.com/en-us/download/details.aspx?id=15201">https://www.microsoft.com/en-us/download/details.aspx?id=15201</a></p><p>我遇到的情况是有个同仁的电脑中毒，然后一直在那登字典登陆别人帐户的。</p><p>看下是哪个 AD 锁定的，然后 AD 上看哪个IP导致的异常，然后检查那个IP是谁在用</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;这个软件可以用来排查&lt;br&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/download/details.aspx?id=15201&quot;&gt;https://www.microsoft.com/en-us/download/details.a</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]Editor.md - 开源在线 Markdown 编辑器</title>
-    <link href="http://ted423.github.io/Software/Editor/"/>
-    <id>http://ted423.github.io/Software/Editor/</id>
-    <published>2022-09-25T02:41:09.293Z</published>
-    <updated>2022-09-25T02:59:36.657Z</updated>
-    
-    <content type="html"><![CDATA[<p>在线: <a href="https://pandao.github.io/editor.md/">https://pandao.github.io/editor.md/</a><br>项目: <a href="https://github.com/pandao/editor.md">https://github.com/pandao/editor.md</a></p><p>对于 Hexo 这种需要上传显示的还是很好用的，不过理论上 Hexo 本地起 Server 调试更好。</p><p>缺点就是各种 Markdown 不兼容问题或者说是独特的显示问题</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在线: &lt;a href=&quot;https://pandao.github.io/editor.md/&quot;&gt;https://pandao.github.io/editor.md/&lt;/a&gt;&lt;br&gt;项目: &lt;a href=&quot;https://github.com/pandao/edito</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
-    
-    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows Update 错误 80092004 解决方案</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/80092004/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/80092004/</id>
-    <published>2022-09-24T16:00:00.000Z</published>
-    <updated>2022-09-25T02:04:21.083Z</updated>
-    
-    <content type="html"><![CDATA[<p>来源:<a href="https://it-help.tips/zh/windows-7-update-80092004-error/">https://it-help.tips/zh/windows-7-update-80092004-error/</a></p><p>80092004 的错误是跟更新档的验证有关， Windows 7 (2008 R2) 2019年出的问题（解决之后收藏夹放了很久）,手动打下 KB4474419 和 KB4490628 这两个更新即可<br><a href="https://support.microsoft.com/zh-cn/topic/%E9%92%88%E5%AF%B9-windows-%E5%92%8C-wsus-%E7%9A%84-2019-sha-2-%E4%BB%A3%E7%A0%81%E7%AD%BE%E5%90%8D%E6%94%AF%E6%8C%81%E8%A6%81%E6%B1%82-64d1c82d-31ee-c273-3930-69a4cde8e64f">https://support.microsoft.com/zh-cn/topic/针对-windows-和-wsus-的-2019-sha-2-代码签名支持要求-64d1c82d-31ee-c273-3930-69a4cde8e64f</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;来源:&lt;a href=&quot;https://it-help.tips/zh/windows-7-update-80092004-error/&quot;&gt;https://it-help.tips/zh/windows-7-update-80092004-error/&lt;/a&gt;&lt;/p&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
-  </entry>
-  
-  <entry>
     <title>x265 HDR 参数计算方法</title>
     <link href="http://ted423.github.io/Document/Encode/HDR/"/>
     <id>http://ted423.github.io/Document/Encode/HDR/</id>
-    <published>2022-09-06T07:51:25.803Z</published>
-    <updated>2022-12-28T02:38:45.999Z</updated>
+    <published>2022-12-28T03:30:21.269Z</published>
+    <updated>2022-12-28T08:40:28.807Z</updated>
     
-    <content type="html"><![CDATA[<p>HDR 压制参数为 <code>--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&quot; --max-cll=1000,400</code></p><p>首先，不同的色彩空间有不同的G B R WP 数据</p><p>通常，不同的片会有不同的L 数据 以及 max-cll</p><p>Mediainfo范例</p><p>BT.2020  Olympus Has Fallen 2013</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Color range : Limited</span><br><span class="line">Color primaries : BT.2020</span><br><span class="line">Transfer characteristics : PQ</span><br><span class="line">Matrix coefficients : BT.2020 non-constant</span><br><span class="line">Mastering display color primaries : BT.2020</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 891 cd/m2</span><br><span class="line">Maximum Frame-Average Light Level : 428 cd/m2</span><br><span class="line">Original source medium : Blu-ray</span><br></pre></td></tr></table></figure><p>Display P3 会比较多</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Color range                 : Limited</span><br><span class="line">Color primaries             : BT.2020</span><br><span class="line">Transfer characteristics    : PQ</span><br><span class="line">Matrix coefficients         : BT.2020 non-constant</span><br><span class="line">Mastering display color pri : Display P3</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 479 cd/m2</span><br><span class="line">Maximum Frame-Average Light : 464 cd/m2</span><br></pre></td></tr></table></figure><p>G B R WP 数据看Mediainfo里的Mastering display color pri</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Display P3</span><br><span class="line">--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)&quot;</span><br><span class="line">BT.2020</span><br><span class="line">--master-display &quot;G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)&quot;</span><br></pre></td></tr></table></figure><p>Venom 2018 movie mediainfo :</p><pre><code>Mastering display luminance : min: <b>0.0050</b> cd/m2, max: <b>4000</b> cd/m2Maximum Content Light Level : <b>3903</b> cd/m2Maximum Frame-Average Light Level : <b>1076</b> cd/m2</code></pre><p>In this case master-display&#x3D;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)<strong>L(40000000,50)</strong> and max-cll&#x3D;<strong>3903,1076</strong></p><p>About Maximum Content Light Level and Maximum Frame-Average Light Level … If those not present -&gt; max-cll&#x3D;0,0</p><p>测试用临时Code</p><p>前置参数</p><textarea style="width: 80%; height: 200px" id="x265" onkeyup="refresh();">--level-idc 5.1 --bframes 8 --rd 4 --me 3 --subme 7 --ref 5 --merange 57 --ipratio 1.3 --pbratio 1.2 --aq-mode 2 --aq-strength 1.00 --qcomp 0.60 --psy-rd 1.5 --psy-rdoq 1.00 --ctu 64 --rc-lookahead 100 --deblock -3:-3 --no-strong-intra-smoothing --cbqpoffs 0 --crqpoffs 0 --qg-size 8 --range limited --no-frame-dup --selective-sao 0 --no-cutree --tu-intra-depth 4 --no-open-gop --tu-inter-depth 4 --rskip 0 --no-tskip --no-early-skip --min-keyint=1 --no-rect --no-amp --no-sao --aud --vbv-bufsize 160000 --vbv-maxrate 160000 --repeat-headers --hrd --hdr-opt --colorprim bt2020 --colormatrix bt2020nc --transfer smpte2084 --chromaloc 2 --pmode </textarea><textarea style="width: 80%; height: 200px" onkeyup="refresh();" placeholder="仅支持输入JSON版mediainfo" id="HDR"></textarea><input type="checkbox" id="DoVi" name="DoVi" value="DoVi" onkeyup="refresh();">请注意你可能需要自己修改RPU的路径<pre><code id="result" name="result"></code></pre><script>  var refresh = function () {    document.getElementById("result").textContent = $('#x265').text();    var mediainfo = document.getElementById("HDR").value.replaceAll("\\\"", "|").replaceAll("\\", "|");    if (mediainfo) {      var whole = JSON.parse(mediainfo);      var track = whole.media.track;      var hevc = track.filter(function (video) {        return video["@type"] === "Video";      })[0];      if (hevc.MasteringDisplay_ColorPrimaries == "Display P3")        document.getElementById("result").textContent += '--master-display "G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)';      else if (hevc.MasteringDisplay_ColorPrimaries == "BT.2020")        document.getElementById("result").textContent += '--master-display "G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)';      var Luminance = hevc.MasteringDisplay_Luminance.replaceAll(        " cd/m2",        ""      ).match(/\d\.?\d*/g);      var max = Luminance[1] * 10000,        min = Luminance[0] * 10000;      document.getElementById("result").textContent += "L(" + max + "," + min + ')"';      if (hevc.MaxCLL)        document.getElementById("result").textContent += " --max-cll=" + hevc.MaxCLL.replace(" cd/m2", "") + "," + hevc.MaxFALL.replace(" cd/m2", "");      if (document.getElementById('DoVi').checked) document.getElementById("result").textContent += " --dolby-vision-profile 8.1 --dolby-vision-rpu \"RPU.bin\"";    }  };  refresh();</script>]]></content>
+    <content type="html"><![CDATA[<p>HDR 压制参数为 <code>--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&quot; --max-cll=1000,400</code></p><p>首先，不同的色彩空间有不同的G B R WP 数据</p><p>通常，不同的片会有不同的L 数据 以及 max-cll</p><p>Mediainfo范例</p><p>BT.2020  Olympus Has Fallen 2013</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Color range : Limited</span><br><span class="line">Color primaries : BT.2020</span><br><span class="line">Transfer characteristics : PQ</span><br><span class="line">Matrix coefficients : BT.2020 non-constant</span><br><span class="line">Mastering display color primaries : BT.2020</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 891 cd/m2</span><br><span class="line">Maximum Frame-Average Light Level : 428 cd/m2</span><br><span class="line">Original source medium : Blu-ray</span><br></pre></td></tr></table></figure><p>Display P3 会比较多</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Color range                 : Limited</span><br><span class="line">Color primaries             : BT.2020</span><br><span class="line">Transfer characteristics    : PQ</span><br><span class="line">Matrix coefficients         : BT.2020 non-constant</span><br><span class="line">Mastering display color pri : Display P3</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 479 cd/m2</span><br><span class="line">Maximum Frame-Average Light : 464 cd/m2</span><br></pre></td></tr></table></figure><p>G B R WP 数据看Mediainfo里的Mastering display color pri</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Display P3</span><br><span class="line">--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)&quot;</span><br><span class="line">BT.2020</span><br><span class="line">--master-display &quot;G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)&quot;</span><br></pre></td></tr></table></figure><p>Venom 2018 movie mediainfo :</p><pre><code>Mastering display luminance : min: <b>0.0050</b> cd/m2, max: <b>4000</b> cd/m2Maximum Content Light Level : <b>3903</b> cd/m2Maximum Frame-Average Light Level : <b>1076</b> cd/m2</code></pre><p>In this case master-display&#x3D;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)<strong>L(40000000,50)</strong> and max-cll&#x3D;<strong>3903,1076</strong></p><p>About Maximum Content Light Level and Maximum Frame-Average Light Level … If those not present -&gt; max-cll&#x3D;0,0</p><p>测试用临时Code</p><p>前置参数</p><textarea style="width: 80%; height: 200px" id="x265" onkeyup="refresh();">--level-idc 5.1 --bframes 8 --rd 4 --me 3 --subme 7 --ref 5 --merange 57 --ipratio 1.3 --pbratio 1.2 --aq-mode 2 --aq-strength 1.00 --qcomp 0.60 --psy-rd 1.5 --psy-rdoq 1.00 --ctu 64 --rc-lookahead 100 --deblock -3:-3 --no-strong-intra-smoothing --cbqpoffs 0 --crqpoffs 0 --qg-size 8 --range limited --no-frame-dup --selective-sao 0 --no-cutree --tu-intra-depth 4 --no-open-gop --tu-inter-depth 4 --rskip 0 --no-tskip --no-early-skip --min-keyint=1 --no-rect --no-amp --no-sao --aud --vbv-bufsize 160000 --vbv-maxrate 160000 --repeat-headers --hrd --hdr-opt --colorprim bt2020 --colormatrix bt2020nc --transfer smpte2084 --chromaloc 2 --pmode </textarea><textarea style="width: 80%; height: 200px" onkeyup="refresh();" placeholder="仅支持输入JSON版mediainfo" id="HDR"></textarea><br><div><input type="checkbox" id="DoVi" name="DoVi" value="DoVi" onclick="refresh();"><label for="DoVi">DoVi P8压制</label></div><p> 请注意你可能需要自己修改RPU的路径</p><pre><code id="result" name="result"></code></pre><script>  var refresh = function () {    document.getElementById("result").textContent = $('#x265').text();    var mediainfo = document.getElementById("HDR").value.replaceAll("\\\"", "|").replaceAll("\\", "|");    if (mediainfo) {      var whole = JSON.parse(mediainfo);      var track = whole.media.track;      var hevc = track.filter(function (video) {        return video["@type"] === "Video";      })[0];      if (hevc.MasteringDisplay_ColorPrimaries == "Display P3")        document.getElementById("result").textContent += '--master-display "G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)';      else if (hevc.MasteringDisplay_ColorPrimaries == "BT.2020")        document.getElementById("result").textContent += '--master-display "G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)';      var Luminance = hevc.MasteringDisplay_Luminance.replaceAll(        " cd/m2",        ""      ).match(/\d\.?\d*/g);      var max = Luminance[1] * 10000,        min = Luminance[0] * 10000;      document.getElementById("result").textContent += "L(" + max + "," + min + ')"';      if (hevc.MaxCLL)        document.getElementById("result").textContent += " --max-cll=" + hevc.MaxCLL.replace(" cd/m2", "") + "," + hevc.MaxFALL.replace(" cd/m2", "");      if (document.getElementById('DoVi').checked) document.getElementById("result").textContent += " --dolby-vision-profile 8.1 --dolby-vision-rpu \"RPU.bin\"";    }  };  refresh();</script>]]></content>
     
     
       
@@ -191,8 +52,8 @@
     <title>Bypass Windows 7(Server 2008) Extended Security Updates Eligibility|Windows 7 付费补丁</title>
     <link href="http://ted423.github.io/Software/Bypass%20Windows%207%20Extended%20Security%20Updates%20Eligibility/"/>
     <id>http://ted423.github.io/Software/Bypass%20Windows%207%20Extended%20Security%20Updates%20Eligibility/</id>
-    <published>2022-08-20T08:04:40.022Z</published>
-    <updated>2022-09-26T08:41:23.588Z</updated>
+    <published>2022-09-26T10:15:09.941Z</published>
+    <updated>2022-09-26T08:41:23.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://forums.mydigitallife.net/threads/bypass-windows-7-extended-security-updates-eligibility.80606/">https://forums.mydigitallife.net/threads/bypass-windows-7-extended-security-updates-eligibility.80606/</a><br>请登录才能查看</p><p>ESU介绍<br><a href="https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq">https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq</a></p>]]></content>
     
@@ -209,27 +70,57 @@
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
     
     <category term="破解&amp;激活" scheme="http://ted423.github.io/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
-    <title>[文档]Group Policy(组策略)查询</title>
-    <link href="http://ted423.github.io/Document/Group%20Policy/"/>
-    <id>http://ted423.github.io/Document/Group%20Policy/</id>
-    <published>2022-08-20T07:58:57.917Z</published>
-    <updated>2022-08-20T08:02:48.171Z</updated>
+    <title>[开源]Ventoy - iso启动器</title>
+    <link href="http://ted423.github.io/Software/Ventoy/"/>
+    <id>http://ted423.github.io/Software/Ventoy/</id>
+    <published>2022-09-25T13:35:16.123Z</published>
+    <updated>2020-06-26T11:06:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>不错的网站<br><a href="https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn">https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn</a></p>]]></content>
+    <content type="html"><![CDATA[<p>Ventoy是一个专用于启动iso安装盘的启动盘，其本身不会将系统启动盘刻录到U盘&#x2F;移动硬盘中，而是可以去选择运行指定的ISO。</p><p>个人感觉这个软件有些类PE</p><p><a href="https://www.ventoy.net/cn/index.html">https://www.ventoy.net/cn/index.html</a></p><p>优势是可以不用反复格式化U盘&#x2F;移动硬盘，将ISO放入U盘&#x2F;移动硬盘中即可，也可以支持本地硬盘中的ISO文件，可以一定程度上规避一些Linux启动盘刻录到移动硬盘后无法mount cdrom的问题。可以说兼容性可能比刻录安装盘效果更好些。</p><p>不过定位还是有点尴尬，毕竟普通用户很少天天装系统，专业人士，PE，弄安装盘的时间也不会缺</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;不错的网站&lt;br&gt;&lt;a href=&quot;https://admx.help/?Category=Windows_10_2016&amp;amp;Language=zh-cn&quot;&gt;https://admx.help/?Category=Windows_10_2016&amp;amp;Languag</summary>
+    <summary type="html">&lt;p&gt;Ventoy是一个专用于启动iso安装盘的启动盘，其本身不会将系统启动盘刻录到U盘&amp;#x2F;移动硬盘中，而是可以去选择运行指定的ISO。&lt;/p&gt;
+&lt;p&gt;个人感觉这个软件有些类PE&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.ventoy.net/cn/inde</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="GPLv3+" scheme="http://ted423.github.io/tags/GPLv3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Samba中支持符号链接</title>
+    <link href="http://ted423.github.io/Document/samba%20symbolic%20link/"/>
+    <id>http://ted423.github.io/Document/samba%20symbolic%20link/</id>
+    <published>2022-09-25T13:35:14.839Z</published>
+    <updated>2022-09-25T06:25:09.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">follow symlinks = yes</span><br></pre></td></tr></table></figure><p><a href="https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path">https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path</a></p><p>吐槽下官方文档被标为陈旧<br><a href="https://www.samba.org/samba/docs/using_samba/ch08.html">https://www.samba.org/samba/docs/using_samba/ch08.html</a></p><p>不过这个可以在 <a href="/Software/Webmin/">Webmin</a> 里点点点开启</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
       
     
     
@@ -237,11 +128,182 @@
     <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
     
     
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
-    <category term="组策略(Group Policy)" scheme="http://ted423.github.io/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy/"/>
+  </entry>
+  
+  <entry>
+    <title>[开源]Editor.md - 开源在线 Markdown 编辑器</title>
+    <link href="http://ted423.github.io/Software/Editor/"/>
+    <id>http://ted423.github.io/Software/Editor/</id>
+    <published>2022-09-25T13:35:14.837Z</published>
+    <updated>2022-09-25T02:59:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在线: <a href="https://pandao.github.io/editor.md/">https://pandao.github.io/editor.md/</a><br>项目: <a href="https://github.com/pandao/editor.md">https://github.com/pandao/editor.md</a></p><p>对于 Hexo 这种需要上传显示的还是很好用的，不过理论上 Hexo 本地起 Server 调试更好。</p><p>缺点就是各种 Markdown 不兼容问题或者说是独特的显示问题</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在线: &lt;a href=&quot;https://pandao.github.io/editor.md/&quot;&gt;https://pandao.github.io/editor.md/&lt;/a&gt;&lt;br&gt;项目: &lt;a href=&quot;https://github.com/pandao/edito</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]Webmin - WebUI for Linux</title>
+    <link href="http://ted423.github.io/Software/Webmin/"/>
+    <id>http://ted423.github.io/Software/Webmin/</id>
+    <published>2022-09-25T13:35:14.836Z</published>
+    <updated>2022-09-25T06:25:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>WebUI 是个好文明，其配置项也能方便初学者尽快了解 Linux。<br>里面的配置项相当丰富，很多甚至我不开配置都不知道还能这么做<br>前提是不能因此抛弃命令行，否则会成为一个只会点点点的人。如果只想点点点，建议还是Win就好。<br><a href="https://www.webmin.com/">https://www.webmin.com/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;WebUI 是个好文明，其配置项也能方便初学者尽快了解 Linux。&lt;br&gt;里面的配置项相当丰富，很多甚至我不开配置都不知道还能这么做&lt;br&gt;前提是不能因此抛弃命令行，否则会成为一个只会点点点的人。如果只想点点点，建议还是Win就好。&lt;br&gt;&lt;a href=&quot;https:/</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="3-clause BSD license" scheme="http://ted423.github.io/tags/3-clause-BSD-license/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]AD 中帐户经常被锁定的处理办法</title>
+    <link href="http://ted423.github.io/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/"/>
+    <id>http://ted423.github.io/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/</id>
+    <published>2022-09-25T13:35:14.831Z</published>
+    <updated>2022-09-25T05:48:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个软件可以用来排查<br><a href="https://www.microsoft.com/en-us/download/details.aspx?id=15201">https://www.microsoft.com/en-us/download/details.aspx?id=15201</a></p><p>我遇到的情况是有个同仁的电脑中毒，然后一直在那登字典登陆别人帐户的。</p><p>看下是哪个 AD 锁定的，然后 AD 上看哪个IP导致的异常，然后检查那个IP是谁在用</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这个软件可以用来排查&lt;br&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/download/details.aspx?id=15201&quot;&gt;https://www.microsoft.com/en-us/download/details.a</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</title>
+    <link href="http://ted423.github.io/Issue/samba/"/>
+    <id>http://ted423.github.io/Issue/samba/</id>
+    <published>2022-09-25T13:31:31.894Z</published>
+    <updated>2021-07-18T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实是个小问题，我很快就解决了。<del>但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯</del>,结论是跟匿名访问被默认阻止有关，只是 Win 给了个错误的报错。<br>Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)<br><img src="https://files.catbox.moe/xmdnnq.png" alt="Windows 客户端无法正常登录 Linux samba服务器"></p><p>理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。</p><p>说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)<br>samba systemctl status log有这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Jul 19 14:16:07 pve smbd[14765]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14766]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14767]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14768]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14769]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:09 pve smbd[14803]: pam_unix(samba:session): session opened for user XX(uid=1000) by (uid=0)</span><br><span class="line">Jul 19 14:16:24 pve smbd[14803]: pam_unix(samba:session): session closed for user XX</span><br><span class="line">Jul 19 14:16:52 pve smbd[15315]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:53 pve smbd[15322]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:54 pve smbd[15329]: pam_unix(samba:session): session closed for user nobody</span><br></pre></td></tr></table></figure><p>现象就是Windows Client访问不会弹框要你填用户名密码，直接报错，必须去凭据管理器里添加了账号密码才能访问。<br>相反Linux Client会正常弹框.不过Linux弹框还会问你是否匿名访问。<br>很可能Windows就直接匿名访问但是被拒。但其实有些问题，大多数时候Win访问SMB是直接使用当前账号密码作为凭证，如不成功会提示你再输入用户密码。<br>或者可能跟SMBv2 v3有关？<br>不得而知</p><p>BTW，samba+NFS 无身份验证可能需要在samba里设777，不然会发生很蛋疼的问题。<br>例如其他NFS客户端无法访问修改samba里创建的文件。</p><hr><p>似乎破案了，Windows 7以及Server 2016会正常弹出验证框，其他有几台Win 10是提示不安全的匿名被阻止(这个是组策略可以解决)。<br><del>所以很可能是出问题的机子装有或曾经装有NFS Client(一台曾装有访问过但是后面停了NFS Client出问题，但因为是NFS，不曾保留账号密码才是，一台现装但从没访问过有问题)</del><br>另Samba也支持同名帐户同密码可以直接访问(如上面所说，Win访问SMB是直接使用当前账号密码作为凭证)</p><hr><p>行吧，我傻逼了，提示不安全的匿名被阻止的机子，explorer直接访问就是直接报错。<br>所以这个应该被归类为 Windows 10 Bug 系列。以后运行东西请优先通过”运行”否则你可能无法收到正确的报错提示。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;其实是个小问题，我很快就解决了。&lt;del&gt;但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯&lt;/del&gt;,结论是跟匿名访问被默认阻止有关，只是 Win 给了个错误的报错。&lt;br&gt;Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[烈火]WinRAR v6.11 简体中文版</title>
+    <link href="http://ted423.github.io/Software/Compression/winrar/"/>
+    <id>http://ted423.github.io/Software/Compression/winrar/</id>
+    <published>2022-09-25T13:31:23.451Z</published>
+    <updated>2022-09-25T05:40:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>烈火呢，似乎还在搞，不过原网站该是卖了，现在是个新网站<br><a href="https://apphot.cc/121.html">https://apphot.cc/121.html</a><br>应该是真的吧？(斜眼笑，从网盘发布者来看应该是的，不过他开始恰饭了，总感觉有点…)</p><p>WinRAR是一款强大的压缩文件管理器，它提供了RAR和ZIP文件的完整支持，能解压ARJ、CAB、LZH、ACE、TAR、GZ、UUE、BZ2、JAR、ISO格式文件。</p><p>WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快压缩速度增加了内存占用。另外，RAR常规解压算法的速度稍有提高，恢复卷的创建和处理可以使用多个CPU核心来获得更高的处理速度。</p><h1 id="更新日志"><a href="#更新日志" class="headerlink" title="更新日志"></a>更新日志</h1><p><a href="https://www.rarlab.com/rarnew.htm">https://www.rarlab.com/rarnew.htm</a></p><h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="http://www.rarlab.com/">http://www.rarlab.com/</a></p><h1 id="为什么不用7-zip"><a href="#为什么不用7-zip" class="headerlink" title="为什么不用7-zip"></a>为什么不用7-zip</h1><p><del>1. 还在用VC6编译(现在可以选择7-Zip-zstd)</del><br>2. 设置项由于没有UAC权限会直接报错，但MPC-HC对待这种问题已经有解决方案<br>3. 相较于Winrar,在压缩包中无法运行非单文件的程序(由于只会解压单个文件)<br>4. 不能批量把文件夹压成单个压缩包</p><h1 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h1><p>7-zip支持打开的压缩格式更多,支持的压缩方式更多</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;烈火呢，似乎还在搞，不过原网站该是卖了，现在是个新网站&lt;br&gt;&lt;a href=&quot;https://apphot.cc/121.html&quot;&gt;https://apphot.cc/121.html&lt;/a&gt;&lt;br&gt;应该是真的吧？(斜眼笑，从网盘发布者来看应该是的，不过他开始恰饭了，总</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="破解&amp;激活" scheme="http://ted423.github.io/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"/>
+    
+    <category term="第三方修改|绿化" scheme="http://ted423.github.io/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"/>
+    
+    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
+    
+    <category term="烈火" scheme="http://ted423.github.io/tags/%E7%83%88%E7%81%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]Windows Update 错误 80092004 解决方案</title>
+    <link href="http://ted423.github.io/Issue/Windows%20Update/80092004/"/>
+    <id>http://ted423.github.io/Issue/Windows%20Update/80092004/</id>
+    <published>2022-09-24T16:00:00.000Z</published>
+    <updated>2022-09-25T02:04:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>来源:<a href="https://it-help.tips/zh/windows-7-update-80092004-error/">https://it-help.tips/zh/windows-7-update-80092004-error/</a></p><p>80092004 的错误是跟更新档的验证有关， Windows 7 (2008 R2) 2019年出的问题（解决之后收藏夹放了很久）,手动打下 KB4474419 和 KB4490628 这两个更新即可<br><a href="https://support.microsoft.com/zh-cn/topic/%E9%92%88%E5%AF%B9-windows-%E5%92%8C-wsus-%E7%9A%84-2019-sha-2-%E4%BB%A3%E7%A0%81%E7%AD%BE%E5%90%8D%E6%94%AF%E6%8C%81%E8%A6%81%E6%B1%82-64d1c82d-31ee-c273-3930-69a4cde8e64f">https://support.microsoft.com/zh-cn/topic/针对-windows-和-wsus-的-2019-sha-2-代码签名支持要求-64d1c82d-31ee-c273-3930-69a4cde8e64f</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;来源:&lt;a href=&quot;https://it-help.tips/zh/windows-7-update-80092004-error/&quot;&gt;https://it-help.tips/zh/windows-7-update-80092004-error/&lt;/a&gt;&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
     
   </entry>
   
@@ -249,8 +311,8 @@
     <title>[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</title>
     <link href="http://ted423.github.io/Issue/Windows%20Update/0x0000011b/"/>
     <id>http://ted423.github.io/Issue/Windows%20Update/0x0000011b/</id>
-    <published>2022-08-20T07:08:20.112Z</published>
-    <updated>2022-08-20T07:19:54.631Z</updated>
+    <published>2022-08-23T10:54:07.985Z</published>
+    <updated>2022-08-20T07:19:54.000Z</updated>
     
     <content type="html"><![CDATA[<p>原因见这里讨论<br><a href="https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html">https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html</a></p><p>最早 Win 10 等都有问题，后续通过更新补丁，已经可以正常添加。<br>但 Win7 大概是被放弃了,更新到最新也没用，包括 Extended Security Updates 也都不行，只有在服务器上取消补丁或者验证才有用。<br>所以…</p><p>另外可以看下这里<br><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver">https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver</a></p>]]></content>
     
@@ -274,10 +336,38 @@
   </entry>
   
   <entry>
+    <title>[文档]Group Policy(组策略)查询</title>
+    <link href="http://ted423.github.io/Document/Group%20Policy/"/>
+    <id>http://ted423.github.io/Document/Group%20Policy/</id>
+    <published>2022-08-23T10:54:04.721Z</published>
+    <updated>2022-08-20T08:02:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>不错的网站<br><a href="https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn">https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;不错的网站&lt;br&gt;&lt;a href=&quot;https://admx.help/?Category=Windows_10_2016&amp;amp;Language=zh-cn&quot;&gt;https://admx.help/?Category=Windows_10_2016&amp;amp;Languag</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="组策略(Group Policy)" scheme="http://ted423.github.io/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[Android]Solid Explorer File Manager - 文件管理软件</title>
     <link href="http://ted423.github.io/Software/Android/Solid%20Explorer%20File%20Manager/"/>
     <id>http://ted423.github.io/Software/Android/Solid%20Explorer%20File%20Manager/</id>
-    <published>2022-08-16T01:02:42.657Z</published>
+    <published>2022-08-15T14:12:51.185Z</published>
     <updated>2020-11-08T07:39:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>这玩意我入了正<br>国内系统自带的明显功能不全，小米的或许可以，但是自带广告。<br>华为的有SMB功能，但逻辑堪称傻逼。<br>一加就不说了，网络上的评价是对的。<br>开源那个Amaze就挺无语，支持SMB，但是锁屏会断<br><a href="https://play.google.com/store/apps/details?id=pl.solidexplorer2">https://play.google.com/store/apps/details?id=pl.solidexplorer2</a></p><p>这个还有内置的浏览器，不过感觉关联有点问题<br>有批量重命名功能，可以压缩解压</p>]]></content>
@@ -302,11 +392,40 @@
   </entry>
   
   <entry>
+    <title>[COS]菌烨tako</title>
+    <link href="http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E8%8F%8C%E7%83%A8tako/"/>
+    <id>http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E8%8F%8C%E7%83%A8tako/</id>
+    <published>2022-07-03T11:58:16.261Z</published>
+    <updated>2022-07-01T02:49:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>傻逼Bitcron似乎把之前的搞没了</p><p><a href="https://shoot.photo/image/PdSqk"><img src="https://shoot.photo/images/2022/07/01/PdSqk.md.jpg" alt="PdSqk.md.jpg"></a><br><a href="https://shoot.photo/image/PdrVH"><img src="https://shoot.photo/images/2022/07/01/PdrVH.md.jpg" alt="PdrVH.md.jpg"></a><br><a href="https://shoot.photo/image/PdjJD"><img src="https://shoot.photo/images/2022/07/01/PdjJD.md.jpg" alt="PdjJD.md.jpg"></a><br><a href="https://shoot.photo/image/Pdcyo"><img src="https://shoot.photo/images/2022/07/01/Pdcyo.md.jpg" alt="Pdcyo.md.jpg"></a><br><a href="https://shoot.photo/image/PdbhO"><img src="https://shoot.photo/images/2022/07/01/PdbhO.md.jpg" alt="PdbhO.md.jpg"></a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;傻逼Bitcron似乎把之前的搞没了&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://shoot.photo/image/PdSqk&quot;&gt;&lt;img src=&quot;https://shoot.photo/images/2022/07/01/PdSqk.md.jpg&quot; alt=&quot;Pd</summary>
+      
+    
+    
+    
+    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/categories/Picture-Photo-Image/"/>
+    
+    
+    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
+    
+    <category term="COS" scheme="http://ted423.github.io/tags/COS/"/>
+    
+    <category term="三次元" scheme="http://ted423.github.io/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux 内存释放命令</title>
     <link href="http://ted423.github.io/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/"/>
     <id>http://ted423.github.io/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/</id>
     <published>2022-06-16T10:37:00.000Z</published>
-    <updated>2022-06-16T10:41:30.000Z</updated>
+    <updated>2022-06-16T10:41:30.785Z</updated>
     
     <content type="html"><![CDATA[<p>一般来说，够用的话不要清理，清理的情况仅限于内存占用满了，没法开启新进程的情况(主要是老系统)</p><p>Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers</p><p>清理前内存使用情况</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure><p>开始清理 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/vm/drop_caches</span><br></pre></td></tr></table></figure><p>清理后内存使用情况</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -324,9 +443,9 @@
     <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
     
     
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
@@ -336,8 +455,8 @@
     <title>[问题处理]update-initramfs failed</title>
     <link href="http://ted423.github.io/Issue/update-initramfs/"/>
     <id>http://ted423.github.io/Issue/update-initramfs/</id>
-    <published>2022-05-23T06:11:58.912Z</published>
-    <updated>2022-05-23T09:02:00.198Z</updated>
+    <published>2022-05-23T10:56:00.929Z</published>
+    <updated>2022-05-23T09:02:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>Ubuntu apt upgrade 时报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">update-initramfs: Generating /boot/initrd.img-5.4.0-110-generic</span><br><span class="line">Error 24 : Write error : cannot write compressed block</span><br><span class="line">E: mkinitramfs failure cpio 141 lz4 -9 -l 24</span><br><span class="line">update-initramfs: failed for /boot/initrd.img-5.4.0-110-generic with 1.</span><br><span class="line">dpkg: error processing package linux-firmware (--configure):</span><br><span class="line"> installed linux-firmware package post-installation script subprocess returned error exit status 1</span><br><span class="line">Processing triggers for initramfs-tools (0.136ubuntu6.7) ...</span><br><span class="line">update-initramfs: Generating /boot/initrd.img-5.4.0-110-generic</span><br><span class="line">Error 24 : Write error : cannot write compressed block</span><br><span class="line">E: mkinitramfs failure cpio 141 lz4 -9 -l 24</span><br><span class="line">update-initramfs: failed for /boot/initrd.img-5.4.0-110-generic with 1.</span><br><span class="line">dpkg: error processing package initramfs-tools (--configure):</span><br><span class="line"> installed initramfs-tools package post-installation script subprocess returned error exit status 1</span><br><span class="line">Errors were encountered while processing:</span><br><span class="line"> linux-firmware</span><br><span class="line"> initramfs-tools</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure><p>其实是个老问题了，每次 apt upgrade 都会报错，实际就是 &#x2F;boot 分区分的太小，然后塞不进了就报错</p><p>当时参考<a href="https://superuser.com/questions/1601194/update-initramfs-error-24-write-error-cannot-write-compressed-block">https://superuser.com/questions/1601194/update-initramfs-error-24-write-error-cannot-write-compressed-block</a>解决</p><p>先去 &#x2F;boot 分区里看下老版本是啥<br>然后搜下”linux-image” 或者</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt list --installed | grep &quot;5.4.0-109&quot; (这个版本不固定，不要照抄)</span><br></pre></td></tr></table></figure><p>理论卸掉一个 <code>sudo apt remove linux-image-5.4.0-109-generic</code> 就能一切继续了</p><p>你也可以一口气把老的都卸掉</p>]]></content>
     
@@ -363,8 +482,8 @@
     <title>What&#39;s the difference between an image, photo, and a picture 的区别</title>
     <link href="http://ted423.github.io/Document/Picture/"/>
     <id>http://ted423.github.io/Document/Picture/</id>
-    <published>2022-05-19T11:23:30.177Z</published>
-    <updated>2022-05-19T11:23:26.000Z</updated>
+    <published>2022-05-19T11:16:50.257Z</published>
+    <updated>2022-05-19T11:23:26.196Z</updated>
     
     <content type="html"><![CDATA[<p>来源: <a href="https://www.computerhope.com/issues/ch000169.htm">https://www.computerhope.com/issues/ch000169.htm</a></p><p>Digital images, photographs, and pictures<br>Image - Any visual object that’s modified or altered by a computer or an imaginary object created using a computer.<br>Photo or photograph - Anything taken by a camera, digital camera, or photocopier.<br>Picture - A drawing, painting, or artwork created on a computer. A picture is also used to describe anything created using a camera or scanner.</p><p>Digital images, photographs, and pictures<br>Image - 由计算机修改或创建的视觉对象或虚构对象。<br>Photo or photograph - 由照相机、数码相机或复印机拍摄的图像西。<br>Picture - 在计算机上创建的绘图、绘画或艺术品。 Picture还用于描述使用相机或扫描仪创建的图像。理论上Picture包含Image以及Photo</p>]]></content>
     
@@ -387,33 +506,11 @@
   </entry>
   
   <entry>
-    <title>去你妈的不求甚解</title>
-    <link href="http://ted423.github.io/etc/Fuck/"/>
-    <id>http://ted423.github.io/etc/Fuck/</id>
-    <published>2022-05-13T11:17:34.996Z</published>
-    <updated>2022-05-13T11:17:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论<br><a href="https://www.zhihu.com/question/34935661">https://www.zhihu.com/question/34935661</a><br><a href="https://www.zhihu.com/question/20840941">https://www.zhihu.com/question/20840941</a></p><p>更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)<br><a href="https://www.google.com/search?q=qbittorrent+x86+%E7%BE%A4%E6%99%96&amp;oq=qbittorrent+x86+%E7%BE%A4%E6%99%96&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie=UTF-8">https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie=UTF-8</a></p><p>结果放眼望去，全是x64的。甚至包括一堆码农的博客(<br>造成的结果就是，如果你真想找x86的软件包，那大概是真找不到的(因为实际也没有，没人编译，不过你大概短期内也无法确认，实际上没这么个东西。不过docker还是有一个的)</p><p>当遇到类似问题的时候，总会有这么一种观点，不求甚解。<br>只要大家都能理解就好了。<br>甚至还有人意志坚定的指责那些纠正的人。</p><p>结果呢？<br>就是大家都活成了傻逼的样子</p><p>就如同这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">请听题：“铁骑”的正确读音是什么？</span><br><span class="line">A. tiě jì</span><br><span class="line">B. tiě qí</span><br><span class="line"></span><br><span class="line">再听题：“空穴来风”的正确释义是什么？</span><br><span class="line"></span><br><span class="line">A. 出现的传言都有一定的根源和依据。</span><br><span class="line">B. 传言没有依据。</span><br><span class="line"></span><br><span class="line">最后一题：一斤等于多少两？</span><br><span class="line">A. 16两</span><br><span class="line">B. 10两</span><br><span class="line"></span><br><span class="line">你以为A是正确答案，其实《现代汉语词典》里的答案都是B。语言这东西嘛，就是约定俗成，互相理解即可，强行纠正没什么意义。说不定哪天，这两个字就增加了释义了呢。</span><br><span class="line"></span><br><span class="line">作者：yuantj</span><br><span class="line">链接：https://www.zhihu.com/question/20840941/answer/1890453633</span><br><span class="line">来源：知乎</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure><p><a href="https://zhuanlan.zhihu.com/p/161624772">https://zhuanlan.zhihu.com/p/161624772</a></p><p>网上查了下汉典(<br>没这奇怪的意思<br>《现代汉语词典》你还在看么？我不看(</p><p>当我发现搜中文很难搜到我需要的东西的时候，我很悲伤。<br>当现在开始不断地嘲讽自主研发浏览器，自主研发系统的时候，其实我很高兴。</p><p>目前我遇到的情况是，搞软件，搞开发的分不清内外网。做硬件开发的，一堆板子用相同的MAC地址问我为什么上不了网。</p><p>什么样的土壤，结出什么样的果实。<br>我并不指望在这种风气下，学术以及科技发展能有啥好结果。</p><p>跟能讨论的人讨论。跟不能讨论的人…，(这就是我为什么注销了知乎。</p><hr><p>今天又遇到一个问题，有人问这个插件怎么 import。（VapourSynth）_2022-05-13<br>我想说这个很好理解啊，这个插件是dll形式的。等我去更新下文档…<br>然后我才发现原文写的 主要分为 Script(.py)脚本 和 Plugins(.dll)插件 两个部分。<br>平时所有人都把 .py 叫插件。（教程中本身也是写着写着全变插件了）</p><p>而英文原文写的也很清楚</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">VapourSynth’s installation is simple. There’s an installer for Windows, Homebrew for Mac, and</span><br><span class="line">every distro’s repository should have VapourSynth.</span><br><span class="line">The VapourSynth documentation lists paths for where to place your plugins. The recommended</span><br><span class="line">path for Windows is &lt;AppData&gt;\VapourSynth\plugins32 or</span><br><span class="line">&lt;AppData&gt;\VapourSynth\plugins64. Unix users can create a configuration file to specify</span><br><span class="line">paths.</span><br><span class="line">Python scripts for VapourSynth should be placed in your Python site-packages folder. On</span><br><span class="line">Arch Linux, this is /usr/lib64/Python3.*/sitepackages/. Windows users will find this</span><br><span class="line">in their local AppData folder.</span><br></pre></td></tr></table></figure><p>其实这个现象可以跟扩展跟插件之争一起看。</p><p>原本如果正确区分的话，根本不需要解释。不用跟人说，.py形式的插件是import，.dll形式的插件是…</p><p>实际上来说，Win下的plugin(插件)应该只有.dll这个形式，这个是系统层面实现的插件。</p><p><del>不过毕竟 wikipedia 不这么认为</del><br>所以躺平吧，爱咋样咋样</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论&lt;br&gt;&lt;a href=&quot;https://www.zhihu.com/question/34935661&quot;&gt;https://www.zhihu.com/question/34935661&lt;/a&gt;&lt;br</summary>
-      
-    
-    
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[Terminal] PowerShell版本更新</title>
     <link href="http://ted423.github.io/Code/Terminal/PowerShell_Upgrade/"/>
     <id>http://ted423.github.io/Code/Terminal/PowerShell_Upgrade/</id>
-    <published>2022-05-13T07:12:20.709Z</published>
-    <updated>2022-05-13T08:50:27.295Z</updated>
+    <published>2022-05-13T10:30:42.840Z</published>
+    <updated>2022-05-13T08:50:27.000Z</updated>
     
     <content type="html"><![CDATA[<ol><li>Win7 只有升级 PowerShell 之后才能使用[Chocolatey](&#x2F;Software&#x2F;Software Update)</li><li>WinRM(PowerShell Remoute)的参数不兼容</li></ol><p>总之就是我看 PowerShell Remoute 命令发现 Win10 自带的版本只有5,然后跟默认的文档不匹配的问题。最新的是7.2LTS。<br>目测 Win 10&#x2F;Server 2019 都需要升级</p><p><a href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows">https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows</a></p>]]></content>
     
@@ -443,10 +540,43 @@
   </entry>
   
   <entry>
+    <title>[MV]AKB48 - ハステとワステ</title>
+    <link href="http://ted423.github.io/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/"/>
+    <id>http://ted423.github.io/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/</id>
+    <published>2022-05-13T10:29:06.644Z</published>
+    <updated>2015-11-15T11:21:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网盘分流"><a href="#网盘分流" class="headerlink" title="网盘分流"></a>网盘分流</h1><ul><li><a href="https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog">https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;网盘分流&quot;&gt;&lt;a href=&quot;#网盘分流&quot; class=&quot;headerlink&quot; title=&quot;网盘分流&quot;&gt;&lt;/a&gt;网盘分流&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW9</summary>
+      
+    
+    
+    
+    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
+    
+    
+    <category term="JP" scheme="http://ted423.github.io/tags/JP/"/>
+    
+    <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
+    
+    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
+    
+    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
+    
+    <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Encode相关文档</title>
     <link href="http://ted423.github.io/Document/Encode/encode/"/>
     <id>http://ted423.github.io/Document/Encode/encode/</id>
-    <published>2022-05-11T10:10:38.498Z</published>
+    <published>2022-05-11T13:06:13.039Z</published>
     <updated>2022-05-11T10:11:33.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/ted423/FXXS-Encode-Guide">https://github.com/ted423/FXXS-Encode-Guide</a></p>]]></content>
@@ -466,111 +596,6 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>What is Qualcomm Voice Assist 是什么</title>
-    <link href="http://ted423.github.io/Document/Qualcomm%20Voice%20Assist/"/>
-    <id>http://ted423.github.io/Document/Qualcomm%20Voice%20Assist/</id>
-    <published>2022-04-29T09:08:00.000Z</published>
-    <updated>2022-04-29T09:11:48.219Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.qualcomm.com/products/features/voice-assist">https://www.qualcomm.com/products/features/voice-assist</a></p><p>更智能的语音助手体验。<br>现在，您无需点击或滑动即可查看天气或打开灯。 Qualcomm® Voice Assist 支持下一代语音交互功能，包括几乎即时的语音唤醒、先进的基于 AI 的语音识别和专用音频硬件——帮助数字个人助理比以往更快、更智能地做出反应。</p><p>主要似乎是辅助语音助手，全天不断从周围环境中拾取声音，并帮助GOOGLE助手等语音助手学习您不同的语音音调和模式，以便即使有一些背景噪音，他们也可以理解您的语音命令。‎</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.qualcomm.com/products/features/voice-assist&quot;&gt;https://www.qualcomm.com/products/features/voice-assist&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;更智能的</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[转载]取得 CD-FLAC+100%LOG+CUE 教学（EAC配置教学）</title>
-    <link href="http://ted423.github.io/Document/CD_log100/"/>
-    <id>http://ted423.github.io/Document/CD_log100/</id>
-    <published>2022-04-29T06:16:00.000Z</published>
-    <updated>2022-04-29T08:43:50.043Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h1><p><a href="https://home.gamer.com.tw/creationDetail.php?sn=4710402">https://home.gamer.com.tw/creationDetail.php?sn=4710402</a><br>在能看原文的情况下尽量去看原文<br>我没抓过CD，所以并没测试过</p><p>原作者:宁空的淡薄·望月幽兰 翻译自:Sharky</p><p>原作者申请授权截图<br><img src="/img/CD01.jpg" alt="CD"></p><h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><p>Windows &amp; Linux - EAC - Exact Audio Copy<br>MAC - XLD - X Lossless Decoder (<a href="https://tmkk.undo.jp/xld/index_e.html">https://tmkk.undo.jp/xld/index_e.html</a>)<br>Linux - Whipper<br>(注意：如果可以，请将WINE与EAC一起使用，Whippers翻录的档案在音轨通常不被接受。 )</p><p>检查你的.log档分数 - 翻录CD后，使用它来查看它是否为100%。<br>(<a href="https://github.com/ligh7s/hey-bro-check-log">https://github.com/ligh7s/hey-bro-check-log</a>)</p><h2 id="EAC-配置指南"><a href="#EAC-配置指南" class="headerlink" title="EAC - 配置指南"></a>EAC - 配置指南</h2><ul><li>这是一次性的设置，之后你不用再重新配置EAC。</li><li>绿色框框 表示必需的设置</li><li>橙色框框 是必需的，但取决于你的装置</li><li>空白&#x2F;无框框 是完全可选的，不会影响翻录出来的质量</li></ul><p>下载并安装EAC</p><p>DL：<a href="http://www.exactaudiocopy.de/en/index.php/resources/download/">http://www.exactaudiocopy.de/en/index.php/resources/download/</a></p><p>打开EAC后，会出现下面的画面。<br>选择“Freedb， CDRDAO， FLAC， AccurateRip CTDB Plugin and CueTools Database Plugin”<br>这些是让翻录文件最完美所必需的选项，也使编辑TAG和翻录更容易。</p><p>EAC选项<br><img src="/img/CD02.jpg" alt="CD"></p><p>从EAC Options开始。<br>（任何未显示的标记都是完全可选的，或者与翻录无关）</p><p>“Tools”中的前两个设置取决于你的光驱。<br>那些以绿色突出显示的是必需的。<br>如果你的光驱能够读取UPC &#x2F; ISRC代码和CD文本，则可以启用前两个选项。<br>如果没有，请取消勾选它们。<br>这只能通过反复试验才能确定，如果你很懒，可以不勾选它们。</p><p><img src="/img/CD03.jpg" alt="CD"><br>所有其他图片设置都是理想的。<br>请注意，<br>“m3u”文件在技术上是可选的，但某些用户会使用这些文件来管理他们的数据库，<br>因此，如果你打算共享你的记录，请保持启用状态。</p><p>此外，<br>启用“compressors”功能<br>由于有时会导致EAC出现故障，因而关闭了启动在后台排队的compressors的设置，<br>但是，如果你的设备在启用此功能后可以正常工作，则可以这样做。<br>如果你不知道，请取消勾选它。</p><p>接下来，<br>在“extraction” 页面，确保你的设置与绿色完全相同。<br>其余的是可选的。<br>如果需要，你也可以选择 “lock the drive tray during extraction”，但这不是必需的。</p><p><img src="/img/CD04.jpg" alt="CD"></p><p>在“General”页面，这些设置大多数都是可选的。<br>建议开启“use alternative CD play routines &amp; disable CD autostart”。<br><img src="/img/CD05.jpg" alt="CD"></p><p>“show status dialog after extraction”将在提取后显示log文件并选择保存它。<br>但是，遵循本指南，EAC会自动保存log文件。<br>除非你知道自己在做什么，否则不要打开它，这对于某些用户来说是个麻烦。</p><p>确保在“normalize”页面中关闭了“normalize”<br>如果点开，则该翻录将不再是100%精确完美的。</p><p>如图所示，这是命名曲目的正确方法。<br>命名方案：<code>%tracknr2%-%title%</code><br>勾选“Use Various Artists Naming Scheme”<br>并使用：<code>%tracknr2%-%artist%-%title%</code><br>如果你比较喜欢句点，则可以使用以下内容：<code>%tracknr2%。 ％artist％-％title％</code><br>不要用下划线代替空格。 这看起来真的很荒谬。<br><img src="/img/CD06.jpg" alt="CD"></p><p>注意 ：<br>不在EAC文档名选项中使用目录结构，除非你想稍后再编辑. Cue。<br>将目录添加到命名方案时，会将目录路径放入文件中。<br>当你以后可能要移动文件时，想要使用. Cue在EAC中刻录文件时，将无法这样做。<br>如果你确实坚持在此使用目录结构，<br>则需要返回，在记事本中编辑. Cue，然后从每一行中删除文件夹名称。</p><p>如果坚持要这样做，该方案可能看起来像这样：<br><code>％artist％-％albumtitle％（％year％）[FLAC] \％tracknr2％-％title％</code></p><p>如果你希望使用其他方案，请遵循“Filename”页面上列出的项目。</p><p>光盘机选项</p><p>首先点击“Detect Read Features…”。<br>这实际上需要几分钟。<br>完成后，如果你的光驱可以使用“Accurate Stream”，请启用它<br>（大多数现代光驱都具有“Accurate Stream”）。<br>如果不能，那就不要。</p><p><img src="/img/CD07.jpg" alt="CD"></p><p>无论你的光驱是否可以缓存音频或使用你所使用的C2头<br>如图所示，启用“caches audio data”并禁用“retrieving C2 error information”。<br>这样做不会损害翻录，并且可以确保在音轨中获得100%的.log分数。</p><p>点击“Autodetect read command now”。<br>完成后，可以将其余部分保留为未选中状态。<br>如果遇到了问题，可以通过检查其中的一些问题来解决它<br><img src="/img/CD08.jpg" alt="CD"></p><p>如果成功启用了AccurateRip，则在“Offset&#x2F;Speed”中，选项的上半部将显示为灰色<br>如果你的选项未显示为灰色，则说明没有成功，请向上滚动至该部分并启用它<br>或是前往下面的网站，查询光驱在“Usw read sample offset correction”所需要填入数值<br><a href="http://www.accuraterip.com/driveoffsets.htm">http://www.accuraterip.com/driveoffsets.htm</a></p><p><img src="/img/CD09.jpg" alt="CD"></p><p>如图所示，应启用后半部分。<br>“Over-read into Lead-in and Lead-Out”是一个可选设置，具体取决于你的光驱。</p><p>几乎每个光驱都应使用图片示范的设置。<br>如果停滞不前，检测差距或发现明显错误的差距，可以尝试检测方法B或C，<br>如果仍然失败，请将检测准确度切换为“Accurate”，而不是“Secure”，然后重试。</p><p><img src="/img/CD10.jpg" alt="CD"></p><p>Metadata选项</p><p>这里是选择元数据提供者的地方。<br>建议使用CueTools Database，因为它在元数据查询中使用了多个数据库。<br><img src="/img/CD11.jpg" alt="CD"></p><p>如果决定改用“ freedb”，则设置应类似于下图所示。<br>确保将电子信箱放在顶部，信箱不一定要真的。<br>点击“get active freedb server list”。<br>然后选中最后一个选项。<br><img src="/img/CD12.jpg" alt="CD"></p><p>压缩选项</p><p>完全按照所示设置此页面。<br>你必须浏览到flac.exe所在的路径，<br>如果使用EAC进行安装，则位于C：\ Program Files（x86）\ Exact Audio Copy \ FLAC \ flac.exe中。<br>如果单独安装，则你安装在哪里就到哪里。<br>bit rate and high&#x2F;low quality对翻录没有影响。</p><p><img src="/img/CD13.jpg" alt="CD"></p><p>下面的字符串复制并粘贴到“additional command-line parameters”中</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-8 -V -T &quot;ARTIST=%artist%&quot; -T &quot;TITLE=%title%&quot; -T &quot;ALBUM=%albumtitle%&quot; -T &quot;DATE=%year%&quot; -T &quot;TRACKNUMBER=%tracknr%&quot; -T &quot;GENRE=%genre%&quot; -T &quot;PERFORMER=%albuminterpret%&quot; -T &quot;COMPOSER=% composer%&quot; %haslyrics%--tag-from-file=LYRICS=&quot;%lyricsfile%&quot;%haslyrics% -T &quot;ALBUMARTIST=%albumartist%&quot; -T &quot;DISCNUMBER=%cdnumber%&quot; -T &quot;TOTALDISCS=%totalcds%&quot; -T &quot;TOTALTRACKS=% numtracks%&quot; -T &quot;COMMENT=%comment%&quot; %source% -o %dest%</span><br></pre></td></tr></table></figure><p>接下来，ID3 Tag settings。<br>除最后一个选项外，将整个选项卡留空。<br>根据最初在“filename”页面中选择的内容，命名方案将有所不同。</p><p><img src="/img/CD14.jpg" alt="CD"></p><p>恭喜，已经完成设置EAC！</p><p>现在可以通过点击EAC右下角的“new”来保存所有设置的“profile”。<br>你的当前设置将保存，以备将来使用。<br>无需重新设置。</p><h2 id="EAC-翻录指南"><a href="#EAC-翻录指南" class="headerlink" title="EAC - 翻录指南"></a>EAC - 翻录指南</h2><p>第1步-标签</p><p>不幸的是，很常出现专辑没有出现在任何数据库中的情况，<br>因此这些以绿色框框起来的字段通常不会自动填写。<br>必须在此处手动输入标签。<br>信息请查阅购买的CD的小册子&#x2F;封底或官方网站&#x2F; xfd。</p><p><img src="/img/CD15.jpg" alt="CD"><br>如果需要，还可以填写其他任何未突出显示的标签。<br>单击“Lyrics”按钮将允许添加歌词。<br>单击“new”按钮将保存设置。<br>这样就不需要每次翻录CD时都这样做。<br>如果你不使用标签，不必太担心。</p><p>要在“CD cover”框中获取专辑封面，请将其拖到EAC中。<br>有时这行不通，很多人对此觉得麻烦，<br>因此我建议将其保留为空白。<br>之后添加封面图像在翻录后的文件夹<br>再命名为“ cover.jpg”</p><p>第2步- 间隙检测和. Cue</p><p>确保已经勾选“Append Gaps to Previous Track （default）”。<br>接下来，按显示的顺序点击选项。 这些是获得100%日志所必需的。</p><p><img src="/img/CD16.jpg" alt="CD"></p><p>#1 - 点击“Detect Gaps”，<br>如果第一首曲目有红色显示，代表有音轨被隐藏。<br>这就需要阅读以下内容：<br><a href="https://web.archive.org/web/20121112011036/http://www.blowfish.be/eac/Rip/rip11-hidden.html">https://web.archive.org/web/20121112011036/http://www.blowfish.be/eac/Rip/rip11-hidden.html</a></p><p>#2 - 点击“Create CueSheet”，<br>然后选择“Multiple WAV files with Gaps..”<br>创建要翻录成功后的存档文件夹。</p><p>请确保你在上面的存档文件夹路径不包含您的姓名或是任何可识别信息<br>如果感到疑惑，<br>请直接使用E：\ Rips就可以了。</p><p>我通常将文件夹标记为<br><code>[Event] Circle (Artist) - Album &#123;cat#&#125; [Format]</code><br>或使用<code> Artist - Album &#123;Label - cat#&#125; （Year） [Format]</code></p><p>总之就是创建文件夹，<br>然后将.cue文件保存到其中。</p><p>第3步 - 翻录</p><p>确保已选择所有要翻录的曲目。<br>然后，转到“Actions”&gt;“ Test &amp; Copy Selected Tracks”<br>然后，选择“Compressed”，确保在翻录CD时执行此操作，否则.log将不是100%。</p><p><img src="/img/CD17.jpg" alt="CD"></p><p>就这样！<br>现在只需要等待翻录完成即可。</p><p>[5] 标签和优化</p><p>软件和工具</p><p>Itunes Scrubber：在共享iTunes文件之前，从iTunes文件中删除所有可识别的信息。<br>MP3Tag：批量处理标签，自动标记&#x2F;重命名文件，从FLAC文件中删除ID3标签<br>Unicue：允许将损坏的.cue重新编码为UTF-8（用于修复中日文.cue）。<br>CueTools：创建，编辑，修复，重新编码提示文件以及拆分文件。<br>Foobar2000 + 免费编码器包：下采样，压缩，转换，自动重命名，去嵌入专辑封面并优化文件。</p><p>标签和优化快速指南</p><p>●必需的标签：曲目编号，歌曲标题，艺术家，专辑 | <a href="https://i.imgur.com/0V2Unbw.png">范例</a><br>●有时需要的标签：年（指定不同版本）和光盘编号（如果有多张光盘） | <a href="https://i.imgur.com/NodXKwx.png">范例</a><br>●可选标签：专辑艺术家，类型，歌词，作曲家，制作人 | <a href="https://i.imgur.com/HFoDcz9.png">范例</a><br>●文件名：曲目编号艺术家-歌曲名称或光盘编号-曲目编号艺术家-歌曲名称 | <a href="https://i.imgur.com/NodXKwx.png">范例</a><br>●封面：请勿嵌入艺术作品，在相册文件夹中添加一个“ cover.png &#x2F; jpg”。 | <a href="https://i.imgur.com/qRr9QfA.png">范例</a><br>●BK：位于名为“扫描”的嵌套文件夹内。 文件名应反映每次扫描的含义。 | <a href="https://i.imgur.com/Qlr2xOx.png">范例</a><br>●格式：无损&#x3D; FLAC和有损&#x3D; MP3 V0 &#x2F; 320或M4A AAC | <a href="https://i.imgur.com/xrlx7LY.png">范例</a><br>●压缩：始终将未压缩的无损格式转换为FLAC并将其压缩为8级。 | <a href="https://i.imgur.com/66lWReG.png">范例</a><br>●转换：转换无损（FLAC）-&gt;有损（MP3 V0 &#x2F; 320）。 不要将任何有损转换为有损 | <a href="https://i.imgur.com/v2NPMDa.png">范例</a><br>●Track Padding：你的文件应具有1MB以下的Track Padding。 | <a href="https://i.imgur.com/PWY8NKn.gif">范例</a><br>●. Cue：采用UTF-8编码，应将完整的曲目列表导入任何音乐播放器 | <a href="https://i.imgur.com/ZK8lvWK.gif">范例</a><br>●.log：永远不要编辑日志文件的内容。 校验和以及CRC码应与档案匹配。 | <a href="https://i.imgur.com/bnQf5Ks.gif">范例</a></p><p>原文由加拿大人Sharky撰写<br>望月幽兰 整理</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;原文&quot;&gt;&lt;a href=&quot;#原文&quot; class=&quot;headerlink&quot; title=&quot;原文&quot;&gt;&lt;/a&gt;原文&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://home.gamer.com.tw/creationDetail.php?sn=4710402&quot;&gt;http</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="转载" scheme="http://ted423.github.io/tags/%E8%BD%AC%E8%BD%BD/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux中find批量删除空文件夹</title>
-    <link href="http://ted423.github.io/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/"/>
-    <id>http://ted423.github.io/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/</id>
-    <published>2022-04-25T14:37:00.000Z</published>
-    <updated>2022-04-25T14:43:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find -type d -empty | xargs -n 1 rm -rf</span><br></pre></td></tr></table></figure><p>来自<a href="https://www.cnblogs.com/jt2001/p/6081235.html">https://www.cnblogs.com/jt2001/p/6081235.html</a></p><p>不过这个删除当前的空文件夹，如果循环的空文件夹，也就是子文件夹是空文件夹的话，要反复跑这个命令<br>所以删完后最好再跑次<code>find -type d -empty</code>查询下</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>压缩算法测试</title>
-    <link href="http://ted423.github.io/Document/Compression/"/>
-    <id>http://ted423.github.io/Document/Compression/</id>
-    <published>2022-04-21T01:37:00.000Z</published>
-    <updated>2022-04-21T03:00:17.808Z</updated>
-    
-    <content type="html"><![CDATA[<p>主要最近到处看到Zstd，ZFS都支持了，就想起来测一下<br>平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了</p><p>用了个216G的虚拟机，但是测试结果仅供参考</p><p><img src="/img/Compression.png" alt="Compression"></p><p>耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟，Zstd L5就很快了)</p><p>LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。</p><p>Zstd的CPU占用也还好。<br><img src="/img/Compression2.jpg" alt="Compression"></p><p>故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐<br>LZ4是个速度奇快，但是压缩比一般的算法</p><p><img src="/img/Compression3.jpg" alt="Compression"><br>这是一个原体积360GB的虚拟机，里面充满了易压缩的资料</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;主要最近到处看到Zstd，ZFS都支持了，就想起来测一下&lt;br&gt;平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了&lt;/p&gt;
-&lt;p&gt;用了个216G的虚拟机，但是测试结果仅供参考&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/img/Compression.p</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
   </entry>
   
