@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2022-12-28T08:40:28.807Z</updated>
+  <updated>2023-03-15T13:28:11.292Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]python便携版关联py文件相关问题，同样适用于其他程序</title>
+    <link href="http://ted423.github.io/Issue/python%20protable/"/>
+    <id>http://ted423.github.io/Issue/python%20protable/</id>
+    <published>2023-03-15T13:16:04.048Z</published>
+    <updated>2023-03-15T13:28:11.292Z</updated>
+    
+    <content type="html"><![CDATA[<p>查看了这里解决的 <a href="https://www.jianshu.com/p/63a826b63635">https://www.jianshu.com/p/63a826b63635</a></p><p>其实这是一个命令行参数的问题，默认添加的关联是不带其他参数的，如果熟悉bat等，就不会有相应的疑问。</p><p>修改为(首先关联，产生一个错误的注册表项之后)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;路径\python.exe &quot; &quot;%1&quot; %*</span><br></pre></td></tr></table></figure><p>即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;查看了这里解决的 &lt;a href=&quot;https://www.jianshu.com/p/63a826b63635&quot;&gt;https://www.jianshu.com/p/63a826b63635&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其实这是一个命令行参数的问题，默认添加的关联是不带其他参数</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
   
   <entry>
     <title>x265 HDR 参数计算方法</title>
@@ -569,33 +598,6 @@
     <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
     
     <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Encode相关文档</title>
-    <link href="http://ted423.github.io/Document/Encode/encode/"/>
-    <id>http://ted423.github.io/Document/Encode/encode/</id>
-    <published>2022-05-11T13:06:13.039Z</published>
-    <updated>2022-05-11T10:11:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/ted423/FXXS-Encode-Guide">https://github.com/ted423/FXXS-Encode-Guide</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ted423/FXXS-Encode-Guide&quot;&gt;https://github.com/ted423/FXXS-Encode-Guide&lt;/a&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Encode" scheme="http://ted423.github.io/tags/Encode/"/>
     
   </entry>
   
