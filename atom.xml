@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2023-03-15T13:28:11.292Z</updated>
+  <updated>2023-03-15T13:48:14.022Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://ted423.github.io/Software/Network/NETworkManager/"/>
+    <id>http://ted423.github.io/Software/Network/NETworkManager/</id>
+    <published>2023-03-15T13:48:14.022Z</published>
+    <updated>2023-03-15T13:48:14.022Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>[问题处理]python便携版关联py文件相关问题，同样适用于其他程序</title>
@@ -565,39 +578,6 @@
     <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
     <category term="PowerShell" scheme="http://ted423.github.io/tags/PowerShell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[MV]AKB48 - ハステとワステ</title>
-    <link href="http://ted423.github.io/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/"/>
-    <id>http://ted423.github.io/Video/AKB48%20-%20%E3%83%8F%E3%82%B9%E3%83%86%E3%81%A8%E3%83%AF%E3%82%B9%E3%83%86/</id>
-    <published>2022-05-13T10:29:06.644Z</published>
-    <updated>2015-11-15T11:21:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="网盘分流"><a href="#网盘分流" class="headerlink" title="网盘分流"></a>网盘分流</h1><ul><li><a href="https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog">https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW90yPazk8n2DqQ6P07trBaQog</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;网盘分流&quot;&gt;&lt;a href=&quot;#网盘分流&quot; class=&quot;headerlink&quot; title=&quot;网盘分流&quot;&gt;&lt;/a&gt;网盘分流&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mega.nz/#!mlEiVTJZ!gPIVTVCOM66xNwBORTW9</summary>
-      
-    
-    
-    
-    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
-    
-    
-    <category term="JP" scheme="http://ted423.github.io/tags/JP/"/>
-    
-    <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
-    
-    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
-    
-    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
-    
-    <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
     
   </entry>
   
