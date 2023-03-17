@@ -445,6 +445,63 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
+                
+                <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
+            </a>
+            <div class="abstract-content">
+                不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动
+Widnows 7改AHCI找到下面的注册表子项：
+1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci
+在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态
+改IDE是找到
+1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide
+...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/01/14">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/14</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Game/Locale-Emulator/">
                 
                 <span class="abstract-title-text">[开源]Locale-Emulator 游戏乱码的解决方案</span>
@@ -932,63 +989,10 @@ FBA类型文件就是Fb...
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Optimization/%E5%B8%A6%E5%AF%86%E7%A0%81%E7%99%BB%E9%99%86/">
-                
-                <span class="abstract-title-text">[优化]带有密码的 Windows 系统自动登录</span>
-            </a>
-            <div class="abstract-content">
-                这是一篇充满了安全隐患的文章，不过一切都由需求衡量 -2021-08-06一个可以用优化软件。。不过密码在注册表里明文保存“Windows + R”快捷键调出运行命令窗口（注意:必须调出运行窗口输入下列命令,直接点击开始菜单在搜索框中输入无效）.
-在窗口中输入“control userpasswords2”后回车（注意：control后面有一个空格）。
-这时Windows 7中的用户帐户(UserAccounts)窗口会自动弹出。
-去掉“要使用本机，用户必须输入用户名和密码(E)”前的勾选！点击应用按钮就会立即弹出一个自动登录窗口(AutomaticallyLogOn)。
-现在将您的帐户...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/08/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Optimization
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/tags/Windows/page/12/">&lt; PREV</a><a class="page-number" href="/tags/Windows/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Windows/page/11/">11</a><a class="page-number" href="/tags/Windows/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/tags/Windows/page/14/">14</a><a class="extend next" rel="next" href="/tags/Windows/page/14/">NEXT &gt;</a>
+            <a class="extend prev" rel="prev" href="/tags/Windows/page/12/">&lt; PREV</a><a class="page-number" href="/tags/Windows/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Windows/page/11/">11</a><a class="page-number" href="/tags/Windows/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/tags/Windows/page/14/">14</a><a class="page-number" href="/tags/Windows/page/15/">15</a><a class="extend next" rel="next" href="/tags/Windows/page/14/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -9259,7 +9263,7 @@ FBA类型文件就是Fb...
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/15</span>
-            <a class="archive-post-title" href="/Software/Network/NETworkManager/">[Untitled Post]</a>
+            <a class="archive-post-title" href="/Software/Network/NETworkManager/">NETworkManager</a>
         </li>
     
         

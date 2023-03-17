@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2023-03-15T13:48:14.022Z</updated>
+  <updated>2023-03-17T16:25:15.808Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,15 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>NETworkManager</title>
     <link href="http://ted423.github.io/Software/Network/NETworkManager/"/>
     <id>http://ted423.github.io/Software/Network/NETworkManager/</id>
     <published>2023-03-15T13:48:14.022Z</published>
-    <updated>2023-03-15T13:48:14.022Z</updated>
+    <updated>2023-03-17T16:25:15.808Z</updated>
+    
+    <content type="html"><![CDATA[<p>一款不错的图形化工具，虽然我装了很少用，但感觉还是很牛逼的<br>比较坑的是跟 Linux 软件同名</p><p><a href="https://github.com/BornToBeRoot/NETworkManager">https://github.com/BornToBeRoot/NETworkManager</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一款不错的图形化工具，虽然我装了很少用，但感觉还是很牛逼的&lt;br&gt;比较坑的是跟 Linux 软件同名&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/BornToBeRoot/NETworkManager&quot;&gt;https://github.com/Bor</summary>
+      
     
     
     
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Network" scheme="http://ted423.github.io/tags/Network/"/>
+    
+    <category term="GPLv3" scheme="http://ted423.github.io/tags/GPLv3/"/>
     
   </entry>
   
