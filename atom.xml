@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2023-03-17T16:25:15.808Z</updated>
+  <updated>2023-03-17T16:29:43.456Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://ted423.github.io/Software/Network/NETworkManager/"/>
     <id>http://ted423.github.io/Software/Network/NETworkManager/</id>
     <published>2023-03-15T13:48:14.022Z</published>
-    <updated>2023-03-17T16:25:15.808Z</updated>
+    <updated>2023-03-17T16:29:43.456Z</updated>
     
-    <content type="html"><![CDATA[<p>一款不错的图形化工具，虽然我装了很少用，但感觉还是很牛逼的<br>比较坑的是跟 Linux 软件同名</p><p><a href="https://github.com/BornToBeRoot/NETworkManager">https://github.com/BornToBeRoot/NETworkManager</a></p>]]></content>
+    <content type="html"><![CDATA[<p>一款不错的图形化工具，虽然我装了很少用，但感觉还是很牛逼的<br>比较坑的是跟 Linux 软件同名</p><p><a href="https://github.com/BornToBeRoot/NETworkManager">https://github.com/BornToBeRoot/NETworkManager</a></p><p><a href="https://winget.run/pkg/BornToBeRoot/NETworkManager">https://winget.run/pkg/BornToBeRoot/NETworkManager</a></p>]]></content>
     
     
       
