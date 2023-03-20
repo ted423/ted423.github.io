@@ -445,6 +445,63 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
+                
+                <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
+            </a>
+            <div class="abstract-content">
+                不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动
+Widnows 7改AHCI找到下面的注册表子项：
+1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci
+在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态
+改IDE是找到
+1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide
+...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/01/14">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/14</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Browser/about%EF%BC%9Aconfig/">
                 
                 <span class="abstract-title-text">about:config的一些配置</span>
@@ -915,58 +972,6 @@ https://nyaa.si/v...
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Document&Texteditor/Everedit/">
-                
-                <span class="abstract-title-text">[文本编辑器]Everedit - 这才是真正的国产良心</span>
-            </a>
-            <div class="abstract-content">
-                我已入正的一款软件。100多块钱，买个终身使用的软件还是相当划算的，不说这款软件其实也挺用心的。打个比方
-123456789A720 	꜠ 	꜡ 	Ꜣ 	ꜣ 	Ꜥ 	ꜥ 	Ꜧ 	ꜧ 	Ꜩ 	ꜩ 	Ꜫ 	ꜫ 	Ꜭ 	ꜭ 	Ꜯ 	ꜯA730 	ꜰ 	ꜱ 	Ꜳ 	ꜳ 	Ꜵ 	ꜵ 	Ꜷ 	ꜷ 	Ꜹ 	ꜹ 	Ꜻ 	ꜻ 	Ꜽ 	ꜽ 	Ꜿ 	ꜿA740 	Ꝁ 	ꝁ 	Ꝃ 	ꝃ 	Ꝅ 	ꝅ 	Ꝇ 	ꝇ 	Ꝉ 	ꝉ 	Ꝋ 	ꝋ 	Ꝍ 	ꝍ 	Ꝏ 	ꝏA750 	Ꝑ 	ꝑ 	Ꝓ 	ꝓ 	Ꝕ 	ꝕ 	Ꝗ 	ꝗ 	Ꝙ 	ꝙ 	Ꝛ 	ꝛ 	Ꝝ 	ꝝ 	Ꝟ 	ꝟA760 	Ꝡ 	ꝡ 	Ꝣ 	ꝣ 	Ꝥ 	ꝥ 	Ꝧ 	...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/01/24">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/17</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="正版">正版</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document&Texteditor">Document&Texteditor</a>
     
 </div>
 
@@ -2938,11 +2943,12 @@ https://nyaa.si/v...
         
         
         
+        
+        
+        
+        
+        
     
-        
-        
-        
-        
         
         
         
@@ -6213,7 +6219,7 @@ https://nyaa.si/v...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 371
+        Total : 372
         </div>
         <!-- search  -->
         
@@ -9242,14 +9248,14 @@ https://nyaa.si/v...
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">03/15</span>
-            <a class="archive-post-title" href="/Issue/python%20protable/">[问题处理]python便携版关联py文件相关问题，同样适用于其他程序</a>
+            <span class="archive-post-date">03/20</span>
+            <a class="archive-post-title" href="/Issue/rdpclip/">[问题处理]RDP下无法正常复制粘贴问题的处理</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/15</span>
-            <a class="archive-post-title" href="/Software/Network/NETworkManager/">NETworkManager</a>
+            <a class="archive-post-title" href="/Issue/python%20protable/">[问题处理]python便携版关联py文件相关问题，同样适用于其他程序</a>
         </li>
     
         
@@ -9584,6 +9590,12 @@ https://nyaa.si/v...
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span>
+            <a class="archive-post-title" href="/Document/Network/IP/">[转载]奇葩的IP地址</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">[R18]最近，妹妹的样子有点怪</a>
         </li>
@@ -9592,63 +9604,6 @@ https://nyaa.si/v...
         <li class="archive-post-item">
             <span class="archive-post-date">10/18</span>
             <a class="archive-post-title" href="/Software/Network/Microsoft%20Network%20Monitor/">Microsoft Network Monitor - 微软官方开发的抓包工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span>
-            <a class="archive-post-title" href="/Music/LRC/Vocaloid/%E8%A3%8F%E8%A1%A8%E3%83%A9%E3%83%90%E3%83%BC%E3%82%BA/">[LRC]裏表ラバーズ</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2014 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/03</span>
-            <a class="archive-post-title" href="/Video/R18/NNP-017/">[R18]NNP-017 素人連れ込みナンパSEX隠し撮り 9</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Video/R18/Anjelica/">[R18]Anjelica</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span>
-            <a class="archive-post-title" href="/Video/R18/Czech%20Beauties/">[R18]X-Art - Czech Beauties - Caprice, Lisa</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/01</span>
-            <a class="archive-post-title" href="/Document/Network/IP/">[转载]奇葩的IP地址</a>
         </li>
     
         
@@ -9683,6 +9638,12 @@ https://nyaa.si/v...
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">02/05</span>
+            <a class="archive-post-title" href="/Music/LRC/Vocaloid/%E8%A3%8F%E8%A1%A8%E3%83%A9%E3%83%90%E3%83%BC%E3%82%BA/">[LRC]裏表ラバーズ</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
             <a class="archive-post-title" href="/Document/Network/2magnet/">种子转磁力链接的简单方法以及磁力链转种子的网页</a>
         </li>
@@ -9696,6 +9657,12 @@ https://nyaa.si/v...
             <div class="archive-year"> 2014 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span>
+            <a class="archive-post-title" href="/Video/R18/NNP-017/">[R18]NNP-017 素人連れ込みナンパSEX隠し撮り 9</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
@@ -9714,7 +9681,52 @@ https://nyaa.si/v...
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Video/R18/Anjelica/">[R18]Anjelica</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2015 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span>
+            <a class="archive-post-title" href="/Video/R18/Czech%20Beauties/">[R18]X-Art - Czech Beauties - Caprice, Lisa</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Video/R18/SY-118/">[R18]SY-118</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Network/NETworkManager/">[开源]NETworkManager - Win 下图形化网络工具</a>
         </li>
     
     </div>

@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2023-03-17T16:29:43.456Z</updated>
+  <updated>2023-03-20T11:51:33.540Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>NETworkManager</title>
+    <title>[问题处理]RDP下无法正常复制粘贴问题的处理</title>
+    <link href="http://ted423.github.io/Issue/rdpclip/"/>
+    <id>http://ted423.github.io/Issue/rdpclip/</id>
+    <published>2023-03-20T11:43:13.489Z</published>
+    <updated>2023-03-20T11:51:33.540Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先不是被组策略阻止的。</p><p>因为有时候是嵌套RDP使用，之前可以用，用着用着就不行了。</p><p>这种时候在远程服务器端结束进程 rdpclip.exe，然后手动再执行一下。基本就可以了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先不是被组策略阻止的。&lt;/p&gt;
+&lt;p&gt;因为有时候是嵌套RDP使用，之前可以用，用着用着就不行了。&lt;/p&gt;
+&lt;p&gt;这种时候在远程服务器端结束进程 rdpclip.exe，然后手动再执行一下。基本就可以了。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]NETworkManager - Win 下图形化网络工具</title>
     <link href="http://ted423.github.io/Software/Network/NETworkManager/"/>
     <id>http://ted423.github.io/Software/Network/NETworkManager/</id>
-    <published>2023-03-15T13:48:14.022Z</published>
-    <updated>2023-03-17T16:29:43.456Z</updated>
+    <published>2023-03-19T11:43:46.788Z</published>
+    <updated>2023-03-20T11:34:03.852Z</updated>
     
     <content type="html"><![CDATA[<p>一款不错的图形化工具，虽然我装了很少用，但感觉还是很牛逼的<br>比较坑的是跟 Linux 软件同名</p><p><a href="https://github.com/BornToBeRoot/NETworkManager">https://github.com/BornToBeRoot/NETworkManager</a></p><p><a href="https://winget.run/pkg/BornToBeRoot/NETworkManager">https://winget.run/pkg/BornToBeRoot/NETworkManager</a></p>]]></content>
     
@@ -38,6 +67,8 @@
     
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
@@ -562,40 +593,6 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Terminal] PowerShell版本更新</title>
-    <link href="http://ted423.github.io/Code/Terminal/PowerShell_Upgrade/"/>
-    <id>http://ted423.github.io/Code/Terminal/PowerShell_Upgrade/</id>
-    <published>2022-05-13T10:30:42.840Z</published>
-    <updated>2022-05-13T08:50:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>Win7 只有升级 PowerShell 之后才能使用[Chocolatey](&#x2F;Software&#x2F;Software Update)</li><li>WinRM(PowerShell Remoute)的参数不兼容</li></ol><p>总之就是我看 PowerShell Remoute 命令发现 Win10 自带的版本只有5,然后跟默认的文档不匹配的问题。最新的是7.2LTS。<br>目测 Win 10&#x2F;Server 2019 都需要升级</p><p><a href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows">https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;Win7 只有升级 PowerShell 之后才能使用[Chocolatey](&amp;#x2F;Software&amp;#x2F;Software Update)&lt;/li&gt;
-&lt;li&gt;WinRM(PowerShell Remoute)的参数不兼容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
-    
-    <category term="PowerShell" scheme="http://ted423.github.io/tags/PowerShell/"/>
     
   </entry>
   

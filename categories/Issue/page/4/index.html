@@ -445,6 +445,62 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Driver/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 手动安装驱动</span>
+            </a>
+            <div class="abstract-content">
+                症状有时候会遇到明明找到了驱动安装包但是Windows一直找不到驱动。
+原因分析微软会有个找驱动的默认路径，一些驱动安装包会自动改掉它，导致微软找驱动不在正确路径
+操作
+设备管理器里右键问题设备，点击更新驱动，然后选到第二项，将位置选到“C:\Windows\”并确保“包括子文件夹”已勾选。
+如仍不行，可尝试手动安装，需找到正确的驱动，更新时仍然选到第二项，并点击“从计算机的设备驱动程序列表里选择”，这时要点击从磁盘安装。
+但还有种情况就是提供的驱动程序并不匹配，有次我就强行在inf里添加设备ID安装了驱动，虽然成功了并且能使用，但其实个人并不建议这么做。
+
+etc微软自动查找驱动的路径...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/05/02">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/02</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/Apache/">
                 
                 <span class="abstract-title-text">[问题处理]Linux下Apache2无法启动的原因排查</span>
@@ -923,57 +979,6 @@ Widnows 7改AHCI找到下面的注册表子项：
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/CUE/">
-                
-                <span class="abstract-title-text">CUE无法使用以及乱码处理笔记</span>
-            </a>
-            <div class="abstract-content">
-                有时候CUE会无法使用，有的是因为FILE不匹配，用记事本打开后更改FILE后面的那一串为同文件夹下的那个歌曲文件即可。另一个就是乱码的现象，多为日文或韩文歌曲。主要是编码的问题。我是这么处理的，后缀改为txt，然后用火狐打开。调整编码直到不乱码(也可以用everedit等能选择编码打开的编辑器)。如上文所说，也可以使用unicue有一个奇葩的用繁体中文(BIG5)编码保存的日文cue，在sublime、everedit里会有些字符无法显示。(是这个造成的Unicode补完计画，台湾人对…的开发真是热衷)火狐大法好！！！全选后复制回记事本。
-请注意，之后请保存为UTF-8编码
-需要详细了...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/03</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -2945,11 +2950,12 @@ Widnows 7改AHCI找到下面的注册表子项：
         
         
         
+        
+        
+        
+        
+        
     
-        
-        
-        
-        
         
         
         
@@ -6220,7 +6226,7 @@ Widnows 7改AHCI找到下面的注册表子项：
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 371
+        Total : 372
         </div>
         <!-- search  -->
         
@@ -9249,14 +9255,14 @@ Widnows 7改AHCI找到下面的注册表子项：
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">03/15</span>
-            <a class="archive-post-title" href="/Issue/python%20protable/">[问题处理]python便携版关联py文件相关问题，同样适用于其他程序</a>
+            <span class="archive-post-date">03/20</span>
+            <a class="archive-post-title" href="/Issue/rdpclip/">[问题处理]RDP下无法正常复制粘贴问题的处理</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/15</span>
-            <a class="archive-post-title" href="/Software/Network/NETworkManager/">NETworkManager</a>
+            <a class="archive-post-title" href="/Issue/python%20protable/">[问题处理]python便携版关联py文件相关问题，同样适用于其他程序</a>
         </li>
     
         
@@ -9591,6 +9597,12 @@ Widnows 7改AHCI找到下面的注册表子项：
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span>
+            <a class="archive-post-title" href="/Document/Network/IP/">[转载]奇葩的IP地址</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">[R18]最近，妹妹的样子有点怪</a>
         </li>
@@ -9599,63 +9611,6 @@ Widnows 7改AHCI找到下面的注册表子项：
         <li class="archive-post-item">
             <span class="archive-post-date">10/18</span>
             <a class="archive-post-title" href="/Software/Network/Microsoft%20Network%20Monitor/">Microsoft Network Monitor - 微软官方开发的抓包工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span>
-            <a class="archive-post-title" href="/Music/LRC/Vocaloid/%E8%A3%8F%E8%A1%A8%E3%83%A9%E3%83%90%E3%83%BC%E3%82%BA/">[LRC]裏表ラバーズ</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2014 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/03</span>
-            <a class="archive-post-title" href="/Video/R18/NNP-017/">[R18]NNP-017 素人連れ込みナンパSEX隠し撮り 9</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Video/R18/Anjelica/">[R18]Anjelica</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span>
-            <a class="archive-post-title" href="/Video/R18/Czech%20Beauties/">[R18]X-Art - Czech Beauties - Caprice, Lisa</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/01</span>
-            <a class="archive-post-title" href="/Document/Network/IP/">[转载]奇葩的IP地址</a>
         </li>
     
         
@@ -9690,6 +9645,12 @@ Widnows 7改AHCI找到下面的注册表子项：
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">02/05</span>
+            <a class="archive-post-title" href="/Music/LRC/Vocaloid/%E8%A3%8F%E8%A1%A8%E3%83%A9%E3%83%90%E3%83%BC%E3%82%BA/">[LRC]裏表ラバーズ</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
             <a class="archive-post-title" href="/Document/Network/2magnet/">种子转磁力链接的简单方法以及磁力链转种子的网页</a>
         </li>
@@ -9703,6 +9664,12 @@ Widnows 7改AHCI找到下面的注册表子项：
             <div class="archive-year"> 2014 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span>
+            <a class="archive-post-title" href="/Video/R18/NNP-017/">[R18]NNP-017 素人連れ込みナンパSEX隠し撮り 9</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
@@ -9721,7 +9688,52 @@ Widnows 7改AHCI找到下面的注册表子项：
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Video/R18/Anjelica/">[R18]Anjelica</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2015 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span>
+            <a class="archive-post-title" href="/Video/R18/Czech%20Beauties/">[R18]X-Art - Czech Beauties - Caprice, Lisa</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Video/R18/SY-118/">[R18]SY-118</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Network/NETworkManager/">[开源]NETworkManager - Win 下图形化网络工具</a>
         </li>
     
     </div>

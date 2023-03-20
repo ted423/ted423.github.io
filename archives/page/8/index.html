@@ -445,6 +445,60 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Kerberos/">
+                
+                <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
+            </a>
+            <div class="abstract-content">
+                参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
+原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
+可以使用如下注册表
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/Windows%20Update/0x80072EFE/">
                 
                 <span class="abstract-title-text">[问题处理]Windows Update:0x80072EFE</span>
@@ -1115,85 +1169,6 @@ Wreck-It Ralph                                                                  
         <a class="post-tag" href="javascript:void(0);" data-tags="UHD">UHD</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="BDMV">BDMV</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Anime/JP/Yosuga%20no%20Sora/">
-                
-                <span class="abstract-title-text">缘之空[Yosuga no Sora](ヨスガノソラ)</span>
-            </a>
-            <div class="abstract-content">
-                
-    
-        
-            缘之空
-        
-        
-            
-        
-        
-            ヨスガノソラ（縁の空）
-        
-        
-            日语假名
-            よすがのそら
-        
-        
-            罗马字
-            Yosuga no Sora
-        
-        
-            类型
-            恋爱、美少女
-        
-        
-        ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/07/10">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Anime
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Anime">Anime</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="JP">JP</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="BDrip">BDrip</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="FHD">FHD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="1080p">1080p</a>
     
 </div>
 
@@ -3165,11 +3140,12 @@ Wreck-It Ralph                                                                  
         
         
         
+        
+        
+        
+        
+        
     
-        
-        
-        
-        
         
         
         
@@ -6440,7 +6416,7 @@ Wreck-It Ralph                                                                  
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 371
+        Total : 372
         </div>
         <!-- search  -->
         
@@ -9469,14 +9445,14 @@ Wreck-It Ralph                                                                  
             
         
         <li class="archive-post-item">
-            <span class="archive-post-date">03/15</span>
-            <a class="archive-post-title" href="/Issue/python%20protable/">[问题处理]python便携版关联py文件相关问题，同样适用于其他程序</a>
+            <span class="archive-post-date">03/20</span>
+            <a class="archive-post-title" href="/Issue/rdpclip/">[问题处理]RDP下无法正常复制粘贴问题的处理</a>
         </li>
     
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/15</span>
-            <a class="archive-post-title" href="/Software/Network/NETworkManager/">NETworkManager</a>
+            <a class="archive-post-title" href="/Issue/python%20protable/">[问题处理]python便携版关联py文件相关问题，同样适用于其他程序</a>
         </li>
     
         
@@ -9811,6 +9787,12 @@ Wreck-It Ralph                                                                  
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">11/01</span>
+            <a class="archive-post-title" href="/Document/Network/IP/">[转载]奇葩的IP地址</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">10/25</span>
             <a class="archive-post-title" href="/Video/R18/%E5%A6%B9%E5%A6%B9%E7%9A%84%E6%A0%B7%E5%AD%90%E6%9C%89%E7%82%B9%E6%80%AA/">[R18]最近，妹妹的样子有点怪</a>
         </li>
@@ -9819,63 +9801,6 @@ Wreck-It Ralph                                                                  
         <li class="archive-post-item">
             <span class="archive-post-date">10/18</span>
             <a class="archive-post-title" href="/Software/Network/Microsoft%20Network%20Monitor/">Microsoft Network Monitor - 微软官方开发的抓包工具</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">02/05</span>
-            <a class="archive-post-title" href="/Music/LRC/Vocaloid/%E8%A3%8F%E8%A1%A8%E3%83%A9%E3%83%90%E3%83%BC%E3%82%BA/">[LRC]裏表ラバーズ</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2014 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">04/03</span>
-            <a class="archive-post-title" href="/Video/R18/NNP-017/">[R18]NNP-017 素人連れ込みナンパSEX隠し撮り 9</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> Invalid date </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span>
-            <a class="archive-post-title" href="/Video/R18/Anjelica/">[R18]Anjelica</a>
-        </li>
-    
-        
-            
-            
-                
-                </ul>
-            
-            <div class="archive-year"> 2015 </div>
-            <ul class="year-list">
-            
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/15</span>
-            <a class="archive-post-title" href="/Video/R18/Czech%20Beauties/">[R18]X-Art - Czech Beauties - Caprice, Lisa</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">11/01</span>
-            <a class="archive-post-title" href="/Document/Network/IP/">[转载]奇葩的IP地址</a>
         </li>
     
         
@@ -9910,6 +9835,12 @@ Wreck-It Ralph                                                                  
     
         
         <li class="archive-post-item">
+            <span class="archive-post-date">02/05</span>
+            <a class="archive-post-title" href="/Music/LRC/Vocaloid/%E8%A3%8F%E8%A1%A8%E3%83%A9%E3%83%90%E3%83%BC%E3%82%BA/">[LRC]裏表ラバーズ</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
             <a class="archive-post-title" href="/Document/Network/2magnet/">种子转磁力链接的简单方法以及磁力链转种子的网页</a>
         </li>
@@ -9923,6 +9854,12 @@ Wreck-It Ralph                                                                  
             <div class="archive-year"> 2014 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/03</span>
+            <a class="archive-post-title" href="/Video/R18/NNP-017/">[R18]NNP-017 素人連れ込みナンパSEX隠し撮り 9</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
@@ -9941,7 +9878,52 @@ Wreck-It Ralph                                                                  
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Video/R18/Anjelica/">[R18]Anjelica</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2015 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">11/15</span>
+            <a class="archive-post-title" href="/Video/R18/Czech%20Beauties/">[R18]X-Art - Czech Beauties - Caprice, Lisa</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Video/R18/SY-118/">[R18]SY-118</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Network/NETworkManager/">[开源]NETworkManager - Win 下图形化网络工具</a>
         </li>
     
     </div>
