@@ -460,6 +460,60 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/Compression/">
+                
+                <span class="abstract-title-text">压缩算法测试</span>
+            </a>
+            <div class="abstract-content">
+                主要最近到处看到Zstd，ZFS都支持了，就想起来测一下平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了
+用了个216G的虚拟机，但是测试结果仅供参考
+
+耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟，Zstd L5就很快了)
+LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。
+Zstd的CPU占用也还好。
+故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐LZ4是个速度奇快，但是压缩比一般的算法
+这是...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/21">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/21</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/netplan/">
                 
                 <span class="abstract-title-text">netplan配置网络</span>
@@ -940,66 +994,6 @@ route print可以看到路由优先级
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Download&File%20hosting%20service/4K/">
-                
-                <span class="abstract-title-text">[不再推荐]youtube专用下载器 - 4K Video Downloader &amp; Instagram专用下载器 - 4K Stogram</span>
-            </a>
-            <div class="abstract-content">
-                目前遇到了Stogram不激活没法全下下来的问题
-4K Video Downloader
-https://www.4kdownload.com/zh-cn/
-
-4K Stogram
-https://www.4kdownload.com/zh-tw/products/product-stogram
-
-
-2022-03-25由于 4K Stogram 没法正常使用，4K Video Downloader 可以被替代，故这俩软件都不再推荐，前者可能跟代理问题有关
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/13</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="不再推荐">不再推荐</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
     
 </div>
 
@@ -6369,6 +6363,8 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         
         
+        
+        
     
     
     
@@ -6861,12 +6857,6 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         <li class="archive-post-item">
             <span class="archive-post-date">09/24</span>
-            <a class="archive-post-title" href="/Issue/SMB/">[问题处理]Windows明明分配了共享权限却无法正常访问共享路径</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/24</span>
             <a class="archive-post-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">[问题处理]多同步盘下Dropbox同步状态图标不见</a>
         </li>
     
@@ -7204,6 +7194,21 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Issue/TLS1.2/">[问题处理]农业银行证书导致Internet Explorer的TLS 1.2自动取消勾选从而导致Windows Store无法打开</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Issue/SMB/">[问题处理]Windows明明分配了共享权限却无法正常访问网络共享路径</a>
         </li>
     
         
