@@ -450,14 +450,14 @@
                 <span class="abstract-title-text">[Terminal]rsync</span>
             </a>
             <div class="abstract-content">
-                不正常的使用rsync可能会造成灾难性的后果请务必注意Linux命令的路径问题带不带’&#x2F;‘是不一样的。请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avP source destination --log-file=$HOME/.rsync.log其中  source destination 都可以使用sshroot@ip:&#x2F;目录
-常用参数1234567891011 其中z为压缩，在网络性能足够的情况下，不开会快(公网才建议开，另外在内容本身为有损压缩或者压缩包的情况下可以不开...
+                不正常的使用rsync可能会造成灾难性的后果，因此建议先带-n跑一次试试请务必注意Linux命令的路径问题带不带’&#x2F;‘是不一样的。请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avP source destination --log-file=$HOME/.rsync.log其中  source destination 都可以使用sshroot@ip:&#x2F;目录
+常用参数1234567891011 其中z为压缩，在网络性能足够的情况下，不开会快(公网才建议开，另外在内容本身为有损压...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/10/28">
+                <div class="abstract-date" title="Last updated: 2023/04/05">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
                 </div>
                 <!-- tags -->
@@ -6834,7 +6834,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         <li class="archive-post-item">
             <span class="archive-post-date">11/01</span>
-            <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP不允许使用已保存的凭据登陆</a>
+            <a class="archive-post-title" href="/Issue/RDP%E6%97%A0%E6%B3%95%E8%87%AA%E5%8A%A8%E7%99%BB%E9%99%86/">[问题处理]RDP(远程连接)不允许使用已保存的凭据登陆</a>
         </li>
     
         
