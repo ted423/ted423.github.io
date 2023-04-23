@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
     <!-- title -->
 
 
@@ -25,7 +25,7 @@
 <meta property="og:url" content="http://ted423.github.io/archives/page/7/index.html">
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423">
 <meta name="twitter:card" content="summary">
@@ -437,6 +437,88 @@
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/etc/NoQNAP/">
+                
+                <span class="abstract-title-text">请勿购买QNAP</span>
+            </a>
+            <div class="abstract-content">
+                本文属于用啥黑啥系列。在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。然后就会了解到群晖的贵。
+因此留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。
+那么问题来了，硬件性能好就一定好用么？我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的(网上一堆喊着x86的实际是x86_64)，在其他人的帮助下，我最终在这台破群晖上成功的跑起来了QB的docker，虽然还有点小问题，但是QNAP呢？跑起来了，登不进去。
+目前我用QNAP遇到的问题有
+
+...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/29">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/11/24</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/svn/">
+                
+                <span class="abstract-title-text">[问题处理]SVN踩得几个坑</span>
+            </a>
+            <div class="abstract-content">
+                The server sent a truncated HTTP response bodyhttps://www.jianshu.com/p/ad53304dbdbf印象里这篇文章似乎没啥用，后面是要改apache的设置。
+备份大部分文章都强调不能cp和rsync。但结果来说，rsync可能会成为最终结果
+
+SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。
+svnadmin dump 出来的文件比服务器上的repo还要大。
+svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，所以记得一...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2021/11/22">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/11/22</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
     
         
         
@@ -896,118 +978,6 @@ Impression o...
         <a class="post-tag" href="javascript:void(0);" data-tags="Font">Font</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="SIL Open Font">SIL Open Font</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Windows%20Update/KB3093266/">
-                
-                <span class="abstract-title-text">[问题处理]KB3093266 错误码:0x80004005</span>
-            </a>
-            <div class="abstract-content">
-                这个错误应该跟下载相关，我手动下载手动安装的这个安装包x64:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x64_9b2f96010adf1b547157c79c8ad52bdb26815e0b.cab
-x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x86_63c92652dc153...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/21">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/">
-                
-                <span class="abstract-title-text">[问题处理]多同步盘下Dropbox同步状态图标不见</span>
-            </a>
-            <div class="abstract-content">
-                简要地说Windows的overlayIcon(状态图标)最多不能超过15个(我这边好像是超过13个就不行),而Onedrive自己就占了一半(我同时用两个同步盘)这些信息保存在
-1HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ShellIconOverlayIdentifiers
-个人的处理办法是Onedrive删一半，dropbox删一半，因为对我来说只要一个同步Ok的状态有了就行
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/27">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Dropbox">Dropbox</a>
     
 </div>
 
@@ -2979,7 +2949,24 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6284,7 +6271,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 371
+        Total : 372
         </div>
         <!-- search  -->
         
@@ -6563,7 +6550,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Game/Locale-Emulator/">[开源]Locale-Emulator 游戏乱码的解决方案</a>
+            <a class="archive-post-title" href="/Game/Locale-Emulator/">[Archived][开源]Locale-Emulator 游戏乱码的解决方案</a>
         </li>
     
         
@@ -9060,12 +9047,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/08</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
-        </li>
-    
-        
             
             
                 
@@ -9290,6 +9271,21 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
         </li>
     
@@ -9302,6 +9298,12 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/23</span>
+            <a class="archive-post-title" href="/etc/hexo-next/">为什么试了下 Hexo NexT 然后不用了</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/20</span>
@@ -10488,6 +10490,16 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             <span class="sidebar-tag-name" data-tags="720p">
                 <span class="iconfont-archer">&#xe606;</span>
                 720p
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="LGPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                LGPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Archived">
+                <span class="iconfont-archer">&#xe606;</span>
+                Archived
             </span>
         
     </div>

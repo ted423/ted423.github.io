@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="zh-CN">
     <!-- title -->
 
 
@@ -25,7 +25,7 @@
 <meta property="og:url" content="http://ted423.github.io/archives/page/11/index.html">
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-<meta property="og:locale">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423">
 <meta name="twitter:card" content="summary">
@@ -437,6 +437,119 @@
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/cookie/">
+                
+                <span class="abstract-title-text">[Javascript]Cookie操作测试</span>
+            </a>
+            <div class="abstract-content">
+                测试页面尝试设置cookies里加入test cookie
+
+document.writeln("")
+function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
+{
+   cookieValue = escape(cookieValue);
+   if (cookieExpires == "")
+   {
+      var nowDate = new Date();
+      nowDate.setMonth(nowDate.getMonth() + 6);
+      cookieExpires ...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/02/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
+                
+                <span class="abstract-title-text">[资料]无签名UTF8和带签名UTF8格式</span>
+            </a>
+            <div class="abstract-content">
+                带签名的UTF8：
+带签名的UTF8，是在生成的文件中，在文件的开头使用UTF8标志，这样在下次使用编辑器编辑的时候，编辑器能准确的识别当前文件的编码格式，并做正确的解码。(UTF-16一般都有BOM头)
+无签名的UTF8：
+相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。
+那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
+BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/10/28">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
     
         
         
@@ -883,116 +996,6 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/winscppwd/">
-                
-                <span class="abstract-title-text">winscppwd - Winscp Password解密</span>
-            </a>
-            <div class="abstract-content">
-                起因是忘了某机器密码，然后曾保存到了Winscp里不过配置里的密码是加密的。
-网上所有帖子都指向了winscppwd，并且我查到以前有这么个开源项目https://bitbucket.org/knarf/winscppwd/overview，但现在看已经404了
-似乎是2012年的软件但是现在仍能正常使用
-看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看https://github.com/winscp/winscp/blob/master/source/core/Security.cpp不过我看不懂，有人看得懂的话，可以试试手工解密
-另外有看到https://g...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/09">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/%E5%88%A0%E9%99%A4%E5%90%AF%E5%8A%A8%E7%B3%BB%E7%BB%9F%E9%80%89%E6%8B%A9%E9%A1%B9/">
-                
-                <span class="abstract-title-text">[Terminal]Windiows系统下删除启动选择系统项</span>
-            </a>
-            <div class="abstract-content">
-                感觉这个文章有点过时了  –2019-06-11首先vista 及以后系统是不用boot.ini的，而msconfig无法删除。(老实说很早以前的事了，具体记不清也懒得再现环境)
-当时是别人的电脑，我在XP卸载360，结果系统进不去了。我直接把XP装了个win7，结果会有个旧版本的windows给你选择，一直处理不掉
-1、以管理员身份启动cmd窗口【一定要以管理员身份启动，否者提示无法打开启动配置文件，拒绝访问。启动方法可以按照C:&#x2F;windows&#x2F;system32&#x2F;cmd.exe路径找到cmd.exe 然后鼠标右键选择 以管理员身份运行或者在任务管理器里用...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="CMD">CMD</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
     
 </div>
 
@@ -2964,7 +2967,24 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6269,7 +6289,7 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 371
+        Total : 372
         </div>
         <!-- search  -->
         
@@ -6548,7 +6568,7 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         
         <li class="archive-post-item">
             <span class="archive-post-date">01/01</span>
-            <a class="archive-post-title" href="/Game/Locale-Emulator/">[开源]Locale-Emulator 游戏乱码的解决方案</a>
+            <a class="archive-post-title" href="/Game/Locale-Emulator/">[Archived][开源]Locale-Emulator 游戏乱码的解决方案</a>
         </li>
     
         
@@ -9045,12 +9065,6 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         </li>
     
         
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/08</span>
-            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
-        </li>
-    
-        
             
             
                 
@@ -9275,6 +9289,21 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span>
+            <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/thunder/">[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> Invalid date </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span>
             <a class="archive-post-title" href="/Software/Download&File%20hosting%20service/torrent%20file%20editor/">[开源]Torrent File Editor</a>
         </li>
     
@@ -9287,6 +9316,12 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/23</span>
+            <a class="archive-post-title" href="/etc/hexo-next/">为什么试了下 Hexo NexT 然后不用了</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/20</span>
@@ -10473,6 +10508,16 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
             <span class="sidebar-tag-name" data-tags="720p">
                 <span class="iconfont-archer">&#xe606;</span>
                 720p
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="LGPLv3">
+                <span class="iconfont-archer">&#xe606;</span>
+                LGPLv3
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Archived">
+                <span class="iconfont-archer">&#xe606;</span>
+                Archived
             </span>
         
     </div>

@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2023-03-20T11:51:33.540Z</updated>
+  <updated>2023-04-23T09:12:40.939Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么试了下 Hexo NexT 然后不用了</title>
+    <link href="http://ted423.github.io/etc/hexo-next/"/>
+    <id>http://ted423.github.io/etc/hexo-next/</id>
+    <published>2023-04-23T08:27:16.479Z</published>
+    <updated>2023-04-23T09:12:40.939Z</updated>
+    
+    <content type="html"><![CDATA[<p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p><p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p><p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。&lt;/p&gt;
+&lt;p&gt;前者比较重要，后者的话，会增加很大的维护量，使用&lt;code&gt;hexo-excerpt&lt;/code&gt;的话，会对所有文章产生一个阅读全文按钮。&lt;/p&gt;
+&lt;p&gt;本意是想 </summary>
+      
+    
+    
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]RDP下无法正常复制粘贴问题的处理</title>
@@ -565,40 +589,6 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Terminal] PowerShell版本更新</title>
-    <link href="http://ted423.github.io/Code/Terminal/PowerShell_Upgrade/"/>
-    <id>http://ted423.github.io/Code/Terminal/PowerShell_Upgrade/</id>
-    <published>2022-05-13T10:30:42.840Z</published>
-    <updated>2022-05-13T08:50:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li>Win7 只有升级 PowerShell 之后才能使用[Chocolatey](&#x2F;Software&#x2F;Software Update)</li><li>WinRM(PowerShell Remoute)的参数不兼容</li></ol><p>总之就是我看 PowerShell Remoute 命令发现 Win10 自带的版本只有5,然后跟默认的文档不匹配的问题。最新的是7.2LTS。<br>目测 Win 10&#x2F;Server 2019 都需要升级</p><p><a href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows">https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;Win7 只有升级 PowerShell 之后才能使用[Chocolatey](&amp;#x2F;Software&amp;#x2F;Software Update)&lt;/li&gt;
-&lt;li&gt;WinRM(PowerShell Remoute)的参数不兼容&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
-    
-    <category term="PowerShell" scheme="http://ted423.github.io/tags/PowerShell/"/>
     
   </entry>
   
