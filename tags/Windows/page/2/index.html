@@ -673,11 +673,16 @@ route print可以看到路由优先级
             </a>
             <div class="abstract-content">
                 Winget开源，MIT，开源地址 https://github.com/microsoft/winget-cliWinget 永远的神，Win 10 开始自带目前除了批量升级有点使用上的问题以外，其他做的都挺强
-https://winstall.app/apps
-可以自己选软件然后生成批量安装的代码
+目前可以通过以下方式批量升级(也可以用来备份恢复软件列表)
 
-首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。
-Sumohttp://www.kcsoftwares.com/?home夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已...
+winget export -o 文件
+删除列表里不需要的文件
+winget import 文件
+
+https://winstall.app/apps
+这里可以自己选软件然后生成批量安装的代码
+
+首先，这两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。如果你想寻找一种更好的体验，那大概是可以放弃看这篇...
             </div>
             <!-- read more -->
             
