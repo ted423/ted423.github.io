@@ -460,6 +460,66 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/">
+                
+                <span class="abstract-title-text">Linux中find批量删除空文件夹</span>
+            </a>
+            <div class="abstract-content">
+                1find -type d -empty | xargs -n 1 rm -rf
+
+来自https://www.cnblogs.com/jt2001/p/6081235.html
+不过这个删除当前的空文件夹，如果循环的空文件夹，也就是子文件夹是空文件夹的话，要反复跑这个命令所以删完后最好再跑次find -type d -empty查询下
+1-d &#x27;\n&#x27;
+
+有空格的话加这个
+
+2023-03-18 增加带空格造成的问题的说明
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/03/18">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/proxifier/">
                 
                 <span class="abstract-title-text">[不再推荐]Proxifier 及其 注册码</span>
@@ -948,59 +1008,6 @@ ESU介绍https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-
         <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="3-clause BSD license">3-clause BSD license</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/samba%20symbolic%20link/">
-                
-                <span class="abstract-title-text">Samba中支持符号链接</span>
-            </a>
-            <div class="abstract-content">
-                1follow symlinks = yes
-https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path
-吐槽下官方文档被标为陈旧https://www.samba.org/samba/docs/using_samba/ch08.html
-不过这个可以在 Webmin 里点点点开启
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
 </div>
 
