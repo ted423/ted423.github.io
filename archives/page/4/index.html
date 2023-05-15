@@ -445,6 +445,61 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Document/netplan/">
+                
+                <span class="abstract-title-text">netplan配置网络</span>
+            </a>
+            <div class="abstract-content">
+                Ubuntu 17 开始使用netplan配置网络，因此很多其它系统的教程都不再适用(&#x2F;etc&#x2F;network&#x2F;interfaces 下的配置已经不再起作用)
+https://netplan.io/
+12345678910111213141516171819 cat /etc/netplan/01-network-manager-all.yaml# Let NetworkManager manage all devices on this systemnetwork:  version: 2  renderer: NetworkManager  ethern...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/04/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/19</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Document"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Document
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Ubuntu">Ubuntu</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/Network/Hexo+github/">
                 
                 <span class="abstract-title-text">Hexo+Github搭建博客</span>
@@ -831,7 +886,7 @@ route print可以看到路由优先级
         <article class="index-post">
             <a class="abstract-title" href="/Software/Software%20Update/">
                 
-                <span class="abstract-title-text">[推荐]软件更新管理 - Winget</span>
+                <span class="abstract-title-text">[开源]软件更新管理 - Winget</span>
             </a>
             <div class="abstract-content">
                 Winget开源，MIT，开源地址 https://github.com/microsoft/winget-cliWinget 永远的神，Win 10 开始自带目前除了批量升级有点使用上的问题以外，其他做的都挺强
@@ -850,7 +905,7 @@ https://winstall.app/apps
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/04/24">
+                <div class="abstract-date" title="Last updated: 2023/05/15">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/19</span>
                 </div>
                 <!-- tags -->
@@ -881,6 +936,8 @@ https://winstall.app/apps
         <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Apache License 2.0">Apache License 2.0</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="LGPLv2.1">LGPLv2.1</a>
     
 </div>
 
@@ -942,35 +999,6 @@ https://winstall.app/apps
     
 </div>
 
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/instagram/">
-                
-                <span class="abstract-title-text">关于instagram批量下载</span>
-            </a>
-            <div class="abstract-content">
-                主要是一个笔记首先，目前基本所有的批量下载基本都失效了https://github.com/arc298/instagram-scraper这个做的不错但是见issuehttps://github.com/arc298/instagram-scraper/issues/329  以及 https://github.com/arc298/instagram-scraper/issues/436
-总而言之，官方的API没有给出最佳质量的视频图片下载，估计要下只能爬所以目前有效的还是各种单post解析网页4k storm上次用没法用,现在似乎也不行，登陆不上，即便开了代理
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/10">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/10</span>
-                </div>
-                <!-- tags -->
                 
             </div>
         </article>
@@ -2944,7 +2972,24 @@ https://winstall.app/apps
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6261,7 +6306,7 @@ https://winstall.app/apps
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 372
+        Total : 373
         </div>
         <!-- search  -->
         
@@ -7185,7 +7230,7 @@ https://winstall.app/apps
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/19</span>
-            <a class="archive-post-title" href="/Software/Software%20Update/">[推荐]软件更新管理 - Winget</a>
+            <a class="archive-post-title" href="/Software/Software%20Update/">[开源]软件更新管理 - Winget</a>
         </li>
     
         
@@ -9288,6 +9333,12 @@ https://winstall.app/apps
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span>
+            <a class="archive-post-title" href="/Software/Remote/rdpwrap/">[开源]rdpwrap</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/23</span>

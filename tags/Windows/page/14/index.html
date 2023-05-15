@@ -445,6 +445,63 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/Maintenance/PE/">
+                
+                <span class="abstract-title-text">【PE相关】两个PE以及FbinstTool</span>
+            </a>
+            <div class="abstract-content">
+                FbinstTool-PE相关工具由于种种复杂原因，不同BIOS对U盘CHS&#x2F;LBA参数处理结果不尽相同，导致同一个U盘，在一台机器上BOOT成功，在另一台机器上就可能BOOT失败。
+wuwuzz注:早期硬盘也有类似问题，但最后通过多个工业标准，已经解决。而USB是万能接口，且有关标准未得到厂商统一遵守，问题更复杂
+开源社区的bean提出了巧妙构思，开发出fbinst，基本解决了BIOS下的CHS&#x2F;LBA参数适应调整问题，使U盘BOOT成功率大大提高。(除非碰上了极度变态的主板和BIOS)。 
+FbinstTool既是Fbinst的GUI程序 
+FBA类型文件就是Fb...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/09/10">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/10</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="System">System</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Maintenance">Maintenance</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/8.1%E9%94%81%E5%B1%8F%E5%A3%81%E7%BA%B8/">
                 
                 <span class="abstract-title-text">[问题处理]Windows 8.1 处理无法更换锁屏壁纸的问题</span>
@@ -914,61 +971,6 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         <a class="post-tag" href="javascript:void(0);" data-tags="GPLv3">GPLv3</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="SVG">SVG</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/Git/Github%20Commit%20failed/">
-                
-                <span class="abstract-title-text">[Git]处理Github的Commit failed:Failed to create a new commit</span>
-            </a>
-            <div class="abstract-content">
-                2015.02.15确认没再出现类似错误，大概Github的Windows客户端更新了
-好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是.git文件夹里有个index.lock的问题…..只要删掉就好了。大概在创建commit的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成commit,但由于之前已经有了index.lock（但没生成commit），而git不允许index.lock的覆盖，所以就卡住了…
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
     
 </div>
 
@@ -2945,7 +2947,24 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6262,7 +6281,7 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 372
+        Total : 373
         </div>
         <!-- search  -->
         
@@ -7186,7 +7205,7 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         
         <li class="archive-post-item">
             <span class="archive-post-date">03/19</span>
-            <a class="archive-post-title" href="/Software/Software%20Update/">[推荐]软件更新管理 - Winget</a>
+            <a class="archive-post-title" href="/Software/Software%20Update/">[开源]软件更新管理 - Winget</a>
         </li>
     
         
@@ -9289,6 +9308,12 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/15</span>
+            <a class="archive-post-title" href="/Software/Remote/rdpwrap/">[开源]rdpwrap</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/23</span>

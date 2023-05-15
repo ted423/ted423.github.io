@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2023-04-23T09:12:40.939Z</updated>
+  <updated>2023-05-15T06:18:36.405Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[开源]rdpwrap</title>
+    <link href="http://ted423.github.io/Software/Remote/rdpwrap/"/>
+    <id>http://ted423.github.io/Software/Remote/rdpwrap/</id>
+    <published>2023-05-15T05:54:36.404Z</published>
+    <updated>2023-05-15T06:18:36.405Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/sebaxakerhtc/rdpwrap">https://github.com/sebaxakerhtc/rdpwrap</a></p><p>微软的rdp只允许少数人同时使用，多人的话需要用服务器版本，并且再购买多人远程的服务器授权。<br>这个是第三方实现的类似破解性质的软件。可以在Win10&#x2F;Server 2019上使用，低版本的Windows也可以。<br>会被微软报毒，并且Win10经常升级，一升级就要重新设。建议在LTSC上用。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/sebaxakerhtc/rdpwrap&quot;&gt;https://github.com/sebaxakerhtc/rdpwrap&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;微软的rdp只允许少数人同时使用，多人的话需要用服务器版本，并且再购买多</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么试了下 Hexo NexT 然后不用了</title>
@@ -562,33 +595,6 @@
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>What&#39;s the difference between an image, photo, and a picture 的区别</title>
-    <link href="http://ted423.github.io/Document/Picture/"/>
-    <id>http://ted423.github.io/Document/Picture/</id>
-    <published>2022-05-19T11:16:50.257Z</published>
-    <updated>2022-05-19T11:23:26.196Z</updated>
-    
-    <content type="html"><![CDATA[<p>来源: <a href="https://www.computerhope.com/issues/ch000169.htm">https://www.computerhope.com/issues/ch000169.htm</a></p><p>Digital images, photographs, and pictures<br>Image - Any visual object that’s modified or altered by a computer or an imaginary object created using a computer.<br>Photo or photograph - Anything taken by a camera, digital camera, or photocopier.<br>Picture - A drawing, painting, or artwork created on a computer. A picture is also used to describe anything created using a camera or scanner.</p><p>Digital images, photographs, and pictures<br>Image - 由计算机修改或创建的视觉对象或虚构对象。<br>Photo or photograph - 由照相机、数码相机或复印机拍摄的图像西。<br>Picture - 在计算机上创建的绘图、绘画或艺术品。 Picture还用于描述使用相机或扫描仪创建的图像。理论上Picture包含Image以及Photo</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;来源: &lt;a href=&quot;https://www.computerhope.com/issues/ch000169.htm&quot;&gt;https://www.computerhope.com/issues/ch000169.htm&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Digital images</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
     
   </entry>
   
