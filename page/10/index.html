@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,6 +269,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -448,12 +452,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -468,11 +471,9 @@
                 本博有俩文本编辑器，其实我用过很多，所以就写写最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。
 之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/11/12">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/11/12</span>
                 </div>
                 <!-- tags -->
@@ -485,7 +486,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -510,7 +511,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -522,11 +522,9 @@
                 现在跑去压制，所以稍微多了点了解在压制正常处理的情况下（同一编码器），码率基本决定画质，剩下的区别在于画面的瑕疵修复，这种属于主观观感。一部影片所需的码率跟画面大小是正相关的。如果你要挑个3000kbps视频码率的电影放35寸电脑显示器(或者70寸电视)上看然后嫌别人画面差的话，那主要应该是你的脑子的问题。
 一般来说压制也有分流派例如iNT组主要都是尽量靠近原生影片，但是码率最高要求是源片的75%以内就好。他们一般不降噪，所以一部片如果噪点太多的话，可能只会有720p的压制。通常会使用兼容性最好的音轨。最新的标准是DDP(EAC3)5.1 1024kbps,但是以前的要么是DTS 150...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/10/09">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/25</span>
                 </div>
                 <!-- tags -->
@@ -535,7 +533,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -552,11 +549,9 @@
 更新包似乎是这两个系统通用的https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/09/24">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -569,7 +564,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -594,7 +589,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -608,11 +602,9 @@
 不过呢，问题还是有的。默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。(后来不知道咋就好了)
 在低速率网络下要考...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/09/22">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
                 </div>
                 <!-- tags -->
@@ -625,7 +617,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -656,7 +648,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -668,11 +659,9 @@
                 hiberfil.sys在C盘下占了3G多(这个文件大小跟内存大小有关)，其实这玩意是休眠产生的，我平常不用，所以决定关闭它。通常来说，笔记本会非常需要休眠来省电，不过关机会更好就是了
 以管理员权限运行命令提示符(cmd)，执行以下命令：1powercfg -h off如需启用，则执行：1powercfg -h on2021-08-06本来想放个文章说明下休眠跟睡眠的，但看最开头是知乎，对这种社区似的知识分享，有些人又是冲着流量去的，质量可能还行，但是远不如Stack Overflow这种。比较开心的是看见了微软提供了MVP写的东西，但是……..开篇一堆废话就让我心头一凉，再然后我看到了...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/18">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/06/19</span>
                 </div>
                 <!-- tags -->
@@ -685,7 +674,7 @@
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -708,7 +697,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -722,11 +710,9 @@
 通常说的迪士尼的动画指的 华特迪士尼动画工作室 制作的动画
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/17</span>
                 </div>
                 <!-- tags -->
@@ -739,7 +725,7 @@
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -760,7 +746,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -776,11 +761,9 @@
 其实如果最早不去搜什么文本节点，直接搜Sibling就好了
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
                 </div>
                 <!-- tags -->
@@ -793,7 +776,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -814,7 +797,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -829,11 +811,9 @@
 资源管理器里似乎删不掉，要命令行删
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/09">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -846,7 +826,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -869,7 +849,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -884,11 +863,9 @@
 看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看https://github.com/winscp/winscp/blob/master/source/core/Security.cpp不过我看不懂，有人看得懂的话，可以试试手工解密
 另外有看到https://g...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/09">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -901,7 +878,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -924,7 +901,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -936,11 +912,9 @@
                 今天检查博客没同步到最新状态才看到Farbox 2.0。变动很大，思虑良久，我开始考虑彻底的离开。
 我使用Farbox最早是2014年，毕业没多久。被Farbox的展现出来的世界所触动。这几年，分享、笔记、边写边思考，算我在Bitcron&amp;Farbox的主要工作。曾试过Wordpress，不过白嫖的服务器几下就炸的不成样子。选择Farbox的原因之一便是我真的很喜欢Dropbox -&gt;https://ted423.bitcron.com/post/software/zi-yuan-lei/tong-bu-pan-ping-jie所以无论是Farbox的”『简单』才持久”，”...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/05">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/17</span>
                 </div>
                 <!-- tags -->
@@ -968,7 +942,7 @@
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1041,29 +1015,9 @@
     
     
     
-        <div class="profile-link-item">
-            <a href="/about" class="about-me">
-                
-                    <i class="fas fa-id-card profile-item-icon"></i>
-                
-                ABOUT ME
-            </a>
+        <div class="about-me">
+            <a href="/about">ABOUT ME</a>
         </div>
-    
-    
-        
-        
-                
-                
-        <div class="profile-link-item">
-            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
-                
-                    <i class="fas fa-search profile-item-icon"></i>
-                
-                SEARCH
-            </a>
-        </div>
-    
     
 </div>
 
@@ -10648,9 +10602,9 @@
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10683,25 +10637,14 @@
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10726,7 +10669,7 @@
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

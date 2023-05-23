@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -454,11 +457,9 @@
 当时是别人的电脑，我在XP卸载360，结果系统进不去了。我直接把XP装了个win7，结果会有个旧版本的windows给你选择，一直处理不掉
 1、以管理员身份启动cmd窗口【一定要以管理员身份启动，否者提示无法打开启动配置文件，拒绝访问。启动方法可以按照C:&#x2F;windows&#x2F;system32&#x2F;cmd.exe路径找到cmd.exe 然后鼠标右键选择 以管理员身份运行或者在任务管理器里用...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
                 </div>
                 <!-- tags -->
@@ -471,7 +472,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -496,7 +497,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -511,11 +511,9 @@
 在Cortana搜索栏输入PowerShell后，在第一项点击右键，选择“以管理员身份运行”；
 在PowerShell中输入以下命...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/02/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
                 </div>
                 <!-- tags -->
@@ -528,7 +526,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -553,7 +551,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -570,11 +567,9 @@
 找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
 不过笔记本的这个值没改过，我想大概...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/07/03">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
                 </div>
                 <!-- tags -->
@@ -587,7 +582,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -612,7 +607,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -624,11 +618,9 @@
                 Windows上运行npm 报Error: ENOENT, stat ‘C:\Users\XX\AppData\Roaming\npm’ 错误解决方法报错路径为： C:\Users\“你用户名”\AppData\Roaming\   这个路径下建个npm文件(夹)即可正常使用npm 命令了！目测跟配置文件有关
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/02/02">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
                 </div>
                 <!-- tags -->
@@ -641,7 +633,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -660,7 +652,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -674,11 +665,9 @@
 下载时需要提供文件名，由于程序本身不具备GUI，又不支持自己生成文件名，对于很多要连接会跳转后通过特定post来提供文件名(例如百度网盘)。下载工具在使用上就会有很多限制，比较好的解决方式就是在浏览器上通过特定的工具来发送下载时的文件名，诸如chrome+aria2c integration之类。
 但这些aria2c的补充通常不会有太强的完善性，因为那样无异于完全开发出一个下载工具，所以大部分GUI或者...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/02/28">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/26</span>
                 </div>
                 <!-- tags -->
@@ -691,7 +680,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -711,7 +700,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -738,11 +726,9 @@ qbittorrent
 制作的种子dmhy无法读取中文文件名(但应该是网站问题)
 制作的种子tracker中必须隔开一行，否则traker其他软...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/04/24">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/26</span>
                 </div>
                 <!-- tags -->
@@ -755,7 +741,7 @@ qbittorrent
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -780,7 +766,6 @@ qbittorrent
         
         
         
-        
             
         
         <article class="index-post">
@@ -794,11 +779,9 @@ qbittorrent
 缺点是每次更新版本设置都会还原，然后每次都会提示装扩展，下载文件夹里给你生成一堆文件夹。(当然这个问题可能跟这是修改的人弄的安装包有关)
 烈火的IDM要购买才能看了roustar31的可能会有exe损坏的提醒https://www.repaik.com/forum.php?...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/05/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
                 </div>
                 <!-- tags -->
@@ -811,7 +794,7 @@ qbittorrent
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -838,7 +821,6 @@ qbittorrent
         
         
         
-        
             
         
         <article class="index-post">
@@ -852,11 +834,9 @@ qbittorrent
 2020-06-26 19:06 没注意projeect转到github了，果然都在逃离sourceforge
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/06/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
                 </div>
                 <!-- tags -->
@@ -869,7 +849,7 @@ qbittorrent
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -894,7 +874,6 @@ qbittorrent
         
         
         
-        
             
         
         <article class="index-post">
@@ -908,11 +887,9 @@ qbittorrent
 然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了图片挂了
 解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。而里...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
                 </div>
                 <!-- tags -->
@@ -925,7 +902,7 @@ qbittorrent
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -952,7 +929,6 @@ qbittorrent
         
         
         
-        
             
         
         <article class="index-post">
@@ -965,11 +941,9 @@ qbittorrent
 官网https://www.sumatrapdfreader.org/free-pdf-reader.html
 githubhttps://github.com/sumatrapdfr...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -982,7 +956,7 @@ githubhttps://github.com/sumatrapdfr...
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -10594,9 +10568,9 @@ githubhttps://github.com/sumatrapdfr...
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10629,25 +10603,14 @@ githubhttps://github.com/sumatrapdfr...
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10672,7 +10635,7 @@ githubhttps://github.com/sumatrapdfr...
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

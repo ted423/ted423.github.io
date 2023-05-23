@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -465,11 +468,9 @@ var refresh = function()
         var s=document.getElementById("toutf-8").value;
         var a=s.split(/%(?![A-Fa-f...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -482,7 +483,7 @@ var refresh = function()
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -502,7 +503,6 @@ var refresh = function()
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -536,11 +536,9 @@ var refresh = function()
         
        ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/04/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -553,7 +551,7 @@ var refresh = function()
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -582,7 +580,6 @@ var refresh = function()
         
         
         
-        
             
         
         <article class="index-post">
@@ -593,11 +590,9 @@ var refresh = function()
             <div class="abstract-content">
                 ◎译　　名　愤怒的小鸟&#x2F;愤怒鸟大电影(港)&#x2F;愤怒鸟玩电影(台)&#x2F;愤怒的小鸟大电影◎片　　名　Angry Birds◎年　　代　2016◎产　　地　芬兰&#x2F;美国◎类　　别　喜剧&#x2F;动作&#x2F;动画◎语　　言　英语◎上映日期　2016-05-13(芬兰)&#x2F;2016-05-20(中国大陆)&#x2F;2016-05-20(美国)◎IMDb评分  6.3&#x2F;10 from 60,917 users◎IMDb链接  http://www.imdb.com/title/tt1985949/◎豆瓣评分　7.0&#x2F;10 from...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/12/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -610,7 +605,7 @@ var refresh = function()
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -635,7 +630,6 @@ var refresh = function()
         
         
         
-        
             
         
         <article class="index-post">
@@ -648,11 +642,9 @@ var refresh = function()
 E-Hentai Downloader打包下载用的，不知道E-Hentai的不要搜索，当没看到就好https://greasyfork.org/zh-CN/scripts/10379-e-hentai-downloader
 My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说站会很有用，可以屏蔽或者替换网站特色的阅读干扰，自定义性挺不错的https://greasyfork.org/zh-CN...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/07/24">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -665,7 +657,7 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -690,7 +682,6 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         
         
         
-        
             
         
         <article class="index-post">
@@ -702,11 +693,9 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
                 转贴啊转载啥的挺方便的http://www.seabreezecomputers.com/html2bbcode/
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/04/18">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -719,7 +708,7 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -737,7 +726,6 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -766,11 +754,9 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
                 //upload.wikimedia.org/wikipedia/zh/d/d6/Zootopia-poster1-600x889.jpg
                 电影海报...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/07/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -783,7 +769,7 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -816,7 +802,6 @@ My Novel Reader - ywzhaiqi看小说用的，在某些页面样式难看的小说
         
         
         
-        
             
         
         <article class="index-post">
@@ -837,11 +822,9 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
       nowDate.setMonth(nowDate.getMonth() + 6);
       cookieExpires ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/02/19">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -854,7 +837,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -875,7 +858,6 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         
-        
             
         
         <article class="index-post">
@@ -891,11 +873,9 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
 那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
 BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/28">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
                 </div>
                 <!-- tags -->
@@ -908,7 +888,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -929,7 +909,6 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
-        
             
         
         <article class="index-post">
@@ -945,11 +924,9 @@ document.writeln("浏览器代码名="+window.navigator.appCodeName+"");
 document.writeln("浏览器平台及版本信息="+window.navigator.appVersion+"");
 document.writeln("浏览器语言="+window.navigator.language+"...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
                 </div>
                 <!-- tags -->
@@ -962,7 +939,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -985,7 +962,6 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         
-        
             
         
         <article class="index-post">
@@ -1001,11 +977,9 @@ document.writeln("浏览器语言="+window.navigator.language+"...
 其实如果最早不去搜什么文本节点，直接搜Sibling就好了
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
                 </div>
                 <!-- tags -->
@@ -1018,7 +992,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -10626,9 +10600,9 @@ document.writeln("浏览器语言="+window.navigator.language+"...
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10661,25 +10635,14 @@ document.writeln("浏览器语言="+window.navigator.language+"...
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10704,7 +10667,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

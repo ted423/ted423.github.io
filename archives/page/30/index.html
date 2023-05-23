@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -454,11 +457,9 @@
 
 现在由于有clash应该...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/12/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/12/10</span>
                 </div>
                 <!-- tags -->
@@ -471,7 +472,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -498,7 +499,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -511,11 +511,9 @@
 预览
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/09/25">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/09/25</span>
                 </div>
                 <!-- tags -->
@@ -528,7 +526,7 @@
         
         
         <span class="post-category" data-categories="Picture&Photo&Image"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Picture&Photo&Image
             </span>
@@ -549,7 +547,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -567,11 +564,9 @@
 
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/08/03">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
                 </div>
                 <!-- tags -->
@@ -584,7 +579,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -605,7 +600,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -622,11 +616,9 @@
 如仍有问题，在Outlook里找到联系人名片以及Lync联系人名片删除
 如Outlook里删除不了，可能需要登录网页版的邮件...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/08/03">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/08/03</span>
                 </div>
                 <!-- tags -->
@@ -639,7 +631,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -662,7 +654,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -679,11 +670,9 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
 
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/07/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/07/23</span>
                 </div>
                 <!-- tags -->
@@ -703,7 +692,6 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         
         
         
-        
             
         
         <article class="index-post">
@@ -719,11 +707,9 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
 
 改善：修改了进程排序后全蓝色的BUG。Download :   http://vdisk.we...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/06/30">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/06/30</span>
                 </div>
                 <!-- tags -->
@@ -736,7 +722,7 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -763,7 +749,6 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         
         
         
-        
             
         
         <article class="index-post">
@@ -775,11 +760,9 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
                 火狐的autoproxy和Foxyproxy都开始出现这样那样的问题，于是我想到了.pac,没想到的是，这方法简单、有效，不但省了个扩展，还比扩展用起来舒服多了
 一个PAC文件包含一个JavaScript形式的函数“FindProxyForURL(url, host)”。这个函数返回一个包含一个或多个访问规则的字符串。用户代理根据这些规则适用一个特定的代理其或者直接访问。当一个代理服务器无法响应的时候，多个访问规则提供了其他的后备访问方法。浏览器在访问其他页面以前，首先访问这个PAC文件。PAC文件中的URL可能是手工配置的，也可能是是通过网页的网络代理自发现协议（Web Proxy A...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/06/22">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/06/22</span>
                 </div>
                 <!-- tags -->
@@ -792,7 +775,7 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -808,7 +791,6 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -829,11 +811,9 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
 
 开启AllowOv...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/05/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/05/04</span>
                 </div>
                 <!-- tags -->
@@ -846,7 +826,7 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -862,7 +842,6 @@ magnet:?xt=urn:btih:657FA69A323E5B65B1DC505EEBC1161FA5463B2F
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -882,11 +861,9 @@ Finder相当难用，你只能看到一些常用路径，但如果你想看一�
 
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/05/03">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/05/03</span>
                 </div>
                 <!-- tags -->
@@ -908,7 +885,6 @@ Finder相当难用，你只能看到一些常用路径，但如果你想看一�
         
         
         
-        
             
         
         <article class="index-post">
@@ -924,11 +900,9 @@ https://sukebei.nyaa.net/view/557858
 https://sukebei.nyaa.si/view/557858
 ed2k://|file|[NEKO.WOR...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/03/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/03/23</span>
                 </div>
                 <!-- tags -->
@@ -10543,9 +10517,9 @@ ed2k://|file|[NEKO.WOR...
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10578,25 +10552,14 @@ ed2k://|file|[NEKO.WOR...
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10621,7 +10584,7 @@ ed2k://|file|[NEKO.WOR...
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

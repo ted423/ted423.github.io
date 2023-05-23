@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -457,11 +460,9 @@ Mediainfo范例
 BT.2020  Olympus Has Fallen 2013
 123456789Color range : LimitedColor primaries : BT.2020Transfer charact...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/28">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/28</span>
                 </div>
                 <!-- tags -->
@@ -474,7 +475,7 @@ BT.2020  Olympus Has Fallen 2013
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -501,7 +502,6 @@ BT.2020  Olympus Has Fallen 2013
         
         
         
-        
             
         
         <article class="index-post">
@@ -513,11 +513,9 @@ BT.2020  Olympus Has Fallen 2013
                 https://github.com/ted423/FXXS-Encode-Guide
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/11">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/11</span>
                 </div>
                 <!-- tags -->
@@ -530,7 +528,7 @@ BT.2020  Olympus Has Fallen 2013
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -551,7 +549,6 @@ BT.2020  Olympus Has Fallen 2013
         
         
         
-        
             
         
         <article class="index-post">
@@ -563,11 +560,9 @@ BT.2020  Olympus Has Fallen 2013
                 https://slow.pics/c/uI5S7CSk起因是某外站把我发的删了，说USA的细节比较好。所以找人问了下调gmma的办法，感谢小火龙，下面是TVrange的，full range的话要把 min和 max删了filtered &#x3D; core.std.Levels(clip, gamma&#x3D;0.88, min_in&#x3D;16 &lt;&lt; 8, max_in&#x3D;235 &lt;&lt; 8, min_out&#x3D;16 &lt;&lt; 8, max_out&#x3D;235 &lt;&lt; 8, planes&#x3D;0)
 这是调整...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/01/05">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/05</span>
                 </div>
                 <!-- tags -->
@@ -580,7 +575,7 @@ BT.2020  Olympus Has Fallen 2013
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -600,7 +595,6 @@ BT.2020  Olympus Has Fallen 2013
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -616,11 +610,9 @@ BT.2020  Olympus Has Fallen 2013
 结论是ULTRAHDCLUB Web-dl SDR的质量不太行，感觉本身也是拉伸的
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/01/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/03</span>
                 </div>
                 <!-- tags -->
@@ -633,7 +625,7 @@ BT.2020  Olympus Has Fallen 2013
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -653,7 +645,6 @@ BT.2020  Olympus Has Fallen 2013
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -674,11 +665,9 @@ https://vcb-s.nmm-hd.org/Dark%20Shrine/[VCB-Studio][教程10]x265%202.9参数设
 crf,qpqp 电脑认为的恒定画质(但一般不进行设置)crf 人眼认为的恒定画质，但是运动时候画质会降低来节省码率数值越低画质越好。一般低于等于18可以认为和原画差不多(主观观点)
 ctu &lt;...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/28</span>
                 </div>
                 <!-- tags -->
@@ -691,7 +680,7 @@ ctu &lt;...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -712,7 +701,6 @@ ctu &lt;...
         
         
         
-        
             
         
         <article class="index-post">
@@ -725,11 +713,9 @@ ctu &lt;...
 增加了这里的一些东西(也是我写的)https://github.com/ted423/FXXS-Encode-Guide/blob/main/1.%20基础知识/1.%20编码、编码器与封装格式.md
 封装格式(MP4&#x2F;MKV…)、编码格式(H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC…)、编码器(x265&#x2F;x264&#x2F;SVT-AV1)容器(Container)又名封装格式，常见的封装格式(MP4&#x2F;MKV…)、而 H.264&#x2F;H.265&#x2F;AC...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/11">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/12/22</span>
                 </div>
                 <!-- tags -->
@@ -742,7 +728,7 @@ ctu &lt;...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -10350,9 +10336,9 @@ ctu &lt;...
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10385,25 +10371,14 @@ ctu &lt;...
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10428,7 +10403,7 @@ ctu &lt;...
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

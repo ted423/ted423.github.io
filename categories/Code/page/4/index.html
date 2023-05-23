@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -458,11 +461,9 @@
 中只保留你需要内容，使用 git add (文件)
 随后你只要git rebas...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/03/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/10</span>
                 </div>
                 <!-- tags -->
@@ -475,7 +476,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -498,7 +499,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -510,11 +510,9 @@
                 火狐的autoproxy和Foxyproxy都开始出现这样那样的问题，于是我想到了.pac,没想到的是，这方法简单、有效，不但省了个扩展，还比扩展用起来舒服多了
 一个PAC文件包含一个JavaScript形式的函数“FindProxyForURL(url, host)”。这个函数返回一个包含一个或多个访问规则的字符串。用户代理根据这些规则适用一个特定的代理其或者直接访问。当一个代理服务器无法响应的时候，多个访问规则提供了其他的后备访问方法。浏览器在访问其他页面以前，首先访问这个PAC文件。PAC文件中的URL可能是手工配置的，也可能是是通过网页的网络代理自发现协议（Web Proxy A...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/06/22">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/06/22</span>
                 </div>
                 <!-- tags -->
@@ -527,7 +525,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -543,7 +541,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -564,11 +561,9 @@
 
 开启AllowOv...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/05/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/05/04</span>
                 </div>
                 <!-- tags -->
@@ -581,7 +576,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -597,7 +592,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -622,11 +616,9 @@ example
 个人对代码有调整
 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354ol&#123;	counter-reset: li; /* 初始化计数器 */	list-style: none; /* 移除浏览器默认编号 */	text-shadow: 0 1px 0 rgba(255,25...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/01</span>
                 </div>
                 <!-- tags -->
@@ -639,7 +631,7 @@ example
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -666,7 +658,6 @@ example
         
         
         
-        
             
         
         <article class="index-post">
@@ -681,11 +672,9 @@ https://www.zhihu.com/question/501676440
 批处理中一些参数（下面代码只能以批处理的方式执行）pause用来保证批处理运行完后，终端窗口不会被关闭请注意保存成ANSI(GBK)
 1234567891011121314151617181920212223@echo offecho 当前盘符：%~d0echo 当前盘符和路径：%~dp0echo 当前批...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/11/29">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/20</span>
                 </div>
                 <!-- tags -->
@@ -698,7 +687,7 @@ https://www.zhihu.com/question/501676440
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -723,7 +712,6 @@ https://www.zhihu.com/question/501676440
         
         
         
-        
             
         
         <article class="index-post">
@@ -738,11 +726,9 @@ https://www.zhihu.com/question/501676440
 用完后记得
 1sc delete SuperCMD
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/02/14">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/02/14</span>
                 </div>
                 <!-- tags -->
@@ -755,7 +741,7 @@ https://www.zhihu.com/question/501676440
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -773,7 +759,6 @@ https://www.zhihu.com/question/501676440
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -808,11 +793,9 @@ CopyleftMPLhttps://www.mozilla.org/MPL/2.0/
         
   ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/02">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/02</span>
                 </div>
                 <!-- tags -->
@@ -825,7 +808,7 @@ CopyleftMPLhttps://www.mozilla.org/MPL/2.0/
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -841,7 +824,6 @@ CopyleftMPLhttps://www.mozilla.org/MPL/2.0/
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -861,11 +843,9 @@ rules-GM-stylish-UC基本都是自己改的火狐相关的东西包括
 代理自动配置(英语:Proxy auto-config,简称PAC):https://ted423.bitcron.com/post/code/www/pac
 GM脚本:https://ted423.bit...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -878,7 +858,7 @@ GM脚本:https://ted423.bit...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -897,7 +877,6 @@ GM脚本:https://ted423.bit...
         
         
         
-        
             
         
         <article class="index-post">
@@ -910,11 +889,9 @@ GM脚本:https://ted423.bit...
 好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是.git文件夹里有个index.lock的问题…..只要删掉就好了。大概在创建commit的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成commit,但由于之前已经有了index.lock（但没生成commit），而git不允许index.lock的覆盖，所以就卡住了…
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -927,7 +904,7 @@ GM脚本:https://ted423.bit...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -952,7 +929,6 @@ GM脚本:https://ted423.bit...
         
         
         
-        
             
         
         <article class="index-post">
@@ -968,11 +944,9 @@ GM脚本:https://ted423.bit...
 this.Change是图片切换的宽度，但由于原生的计算有些问题，this.Change&#x3D;224是我手动加上去的。（84行）因为我个人在图片上给的样式宽度是224
 123456789101112131415161718192021222324252627...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/01/01</span>
                 </div>
                 <!-- tags -->
@@ -985,7 +959,7 @@ this.Change是图片切换的宽度，但由于原生的计算有些问题，thi
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -10597,9 +10571,9 @@ this.Change是图片切换的宽度，但由于原生的计算有些问题，thi
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10632,25 +10606,14 @@ this.Change是图片切换的宽度，但由于原生的计算有些问题，thi
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10675,7 +10638,7 @@ this.Change是图片切换的宽度，但由于原生的计算有些问题，thi
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

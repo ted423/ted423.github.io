@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,6 +269,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -448,12 +452,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -469,11 +472,9 @@
 看到了这篇文章https://shiyousan.com/post/635774974180847748
 有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。(但实际不是，https://www.azurew.com/windows/windows-server-2016/3098.html，也可以不这么设)划掉，按个...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/06/22">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/01</span>
                 </div>
                 <!-- tags -->
@@ -486,7 +487,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -511,7 +512,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -531,11 +531,9 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
 清理后内存使用情况
 1free -m
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/06/16">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/06/16</span>
                 </div>
                 <!-- tags -->
@@ -548,7 +546,7 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -571,7 +569,6 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
         
         
         
-        
             
         
         <article class="index-post">
@@ -583,11 +580,9 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
                 Ubuntu apt upgrade 时报错
 1234567891011121314151617update-initramfs: Generating /boot/initrd.img-5.4.0-110-genericError 24 : Write error : cannot write compressed blockE: mkinitramfs failure cpio 141 lz4 -9 -l 24update-initramfs: failed for /boot/initrd.img-5.4.0-110-generic with 1.dpkg: error proce...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/23">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/23</span>
                 </div>
                 <!-- tags -->
@@ -600,7 +595,7 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -621,7 +616,6 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
         
         
         
-        
             
         
         <article class="index-post">
@@ -633,11 +627,9 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
                 来源: https://www.computerhope.com/issues/ch000169.htm
 Digital images, photographs, and picturesImage - Any visual object that’s modified or altered by a computer or an imaginary object created using a computer.Photo or photograph - Anything taken by a camera, digital camera, or photocopier.Picture...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/19">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/19</span>
                 </div>
                 <!-- tags -->
@@ -650,7 +642,7 @@ Digital images, photographs, and picturesImage - Any visual object that’s modi
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -671,7 +663,6 @@ Digital images, photographs, and picturesImage - Any visual object that’s modi
         
         
         
-        
             
         
         <article class="index-post">
@@ -686,11 +677,9 @@ Aimp: http://www.aimp.ru/index.php?do=download
 foobar2000: http://blog.sina.com.cn/go2spa|官网
 Autolyric: http://www.autolyric.com/ （唯一支持多行输出歌词的配合专门的 &lt;&#x2F;ta...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/18">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/21</span>
                 </div>
                 <!-- tags -->
@@ -703,7 +692,7 @@ Autolyric: http://www.autolyric.com/ （唯一支持多行输出歌词的配合�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -736,7 +725,6 @@ Autolyric: http://www.autolyric.com/ （唯一支持多行输出歌词的配合�
         
         
         
-        
             
         
         <article class="index-post">
@@ -754,11 +742,9 @@ yandex目前可以用，但是鬼知道GFW怎么想下载速度	☆☆☆☆☆�
 
 阿里云我现在较少用网盘了，不...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/16">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/05/10</span>
                 </div>
                 <!-- tags -->
@@ -771,7 +757,7 @@ yandex目前可以用，但是鬼知道GFW怎么想下载速度	☆☆☆☆☆�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -794,7 +780,6 @@ yandex目前可以用，但是鬼知道GFW怎么想下载速度	☆☆☆☆☆�
         
         
         
-        
             
         
         <article class="index-post">
@@ -806,11 +791,9 @@ yandex目前可以用，但是鬼知道GFW怎么想下载速度	☆☆☆☆☆�
                 其实早就有这种想法了，无论是把动漫当动画用，还是关于”车速100码”的争论https://www.zhihu.com/question/34935661https://www.zhihu.com/question/20840941
 更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/13">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -830,7 +813,6 @@ yandex目前可以用，但是鬼知道GFW怎么想下载速度	☆☆☆☆☆�
         
         
         
-        
             
         
         <article class="index-post">
@@ -846,11 +828,9 @@ WinRM(PowerShell Remoute)的参数不兼容
 总之就是我看 PowerShell Remoute 命令发现 Win10 自带的版本只有5,然后跟默认的文档不匹配的问题。最新的是7.2LTS。目测 Win 10&#x2F;Server 2019 都需要升级
 https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershe...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/13">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/13</span>
                 </div>
                 <!-- tags -->
@@ -863,7 +843,7 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -888,7 +868,6 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         
         
         
-        
             
         
         <article class="index-post">
@@ -902,11 +881,9 @@ Attribute Changer同File Property Edit一样可以进行文件属性修改，但
 File Property Edit文件属性修改,你可以将普通文件改成系统文件，十分适合用来藏东西http://www.foryoursoft.com/download.htm
 搜索类Do...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/12">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/16</span>
                 </div>
                 <!-- tags -->
@@ -919,7 +896,7 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -948,7 +925,6 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
         
         
         
-        
             
         
         <article class="index-post">
@@ -961,11 +937,9 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
 增加了这里的一些东西(也是我写的)https://github.com/ted423/FXXS-Encode-Guide/blob/main/1.%20基础知识/1.%20编码、编码器与封装格式.md
 封装格式(MP4&#x2F;MKV…)、编码格式(H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC…)、编码器(x265&#x2F;x264&#x2F;SVT-AV1)容器(Container)又名封装格式，常见的封装格式(MP4&#x2F;MKV…)、而 H.264&#x2F;H.265&#x2F;AC...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/11">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/12/22</span>
                 </div>
                 <!-- tags -->
@@ -978,7 +952,7 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -1011,7 +985,7 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1084,29 +1058,9 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
     
     
     
-        <div class="profile-link-item">
-            <a href="/about" class="about-me">
-                
-                    <i class="fas fa-id-card profile-item-icon"></i>
-                
-                ABOUT ME
-            </a>
+        <div class="about-me">
+            <a href="/about">ABOUT ME</a>
         </div>
-    
-    
-        
-        
-                
-                
-        <div class="profile-link-item">
-            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
-                
-                    <i class="fas fa-search profile-item-icon"></i>
-                
-                SEARCH
-            </a>
-        </div>
-    
     
 </div>
 
@@ -10691,9 +10645,9 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10726,25 +10680,14 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10769,7 +10712,7 @@ File Property Edit文件属性修改,你可以将普通文件改成系统文件�
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

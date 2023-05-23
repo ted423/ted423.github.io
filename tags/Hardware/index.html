@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -457,11 +460,9 @@ Copy the following three files from your download to our bootable USB stick.
 sasbios_rel&#x2F;mptsas2.rom
 Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/04/13">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/13</span>
                 </div>
                 <!-- tags -->
@@ -474,7 +475,7 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -492,7 +493,6 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -508,11 +508,9 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
 前者信息比较充足一些这样就不用看啥天梯图了
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/10/25">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/25</span>
                 </div>
                 <!-- tags -->
@@ -525,7 +523,7 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -546,7 +544,6 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
         
         
         
-        
             
         
         <article class="index-post">
@@ -559,11 +556,9 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
 本身Intel没有提供Windows 7下的核显驱动，一个方法就是下载Windows的驱动，然后通过改igdlh.inf的方式来强行安装。替换打星号的部分(也就是内容)其他部分不要动到
 1234567891011121314151617181920212223;================================================...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/03/02">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/03/02</span>
                 </div>
                 <!-- tags -->
@@ -576,7 +571,7 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -599,7 +594,6 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
         
         
         
-        
             
         
         <article class="index-post">
@@ -611,11 +605,9 @@ Firmware&#x2F;HBA_9211_8i_IT&#x2F;21...
                 量产软件英文为USB DISK PRODUCTION TOOL，简称是PDT
 U盘是由主控板+FLASH+外壳组成的，当主控板焊接上空白FLASH后插入电脑，因为没有相应的数据，电脑只能识别到主控板，而无法识别到FLASH，所以这时候电脑上显示出U盘盘符，但是双击盘符却显示没有插入U盘，就像是插入一个空白的读卡器。事实上这时候的U盘几乎就是读卡器。所以要让电脑识别出空白FLASH这张“卡”就要向FLASH内写人对应的数据，这些数据包括U盘的容量大小，采用的芯片(芯片不同，数据保留的方式也不同)，坏块地址(和硬盘一样，FLASH也有坏块，必须屏蔽)等等，有了这些数据，电脑就能正确识别出U盘...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/03/13">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/03/13</span>
                 </div>
                 <!-- tags -->
@@ -628,7 +620,7 @@ U盘是由主控板+FLASH+外壳组成的，当主控板焊接上空白FLASH后�
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -10232,9 +10224,9 @@ U盘是由主控板+FLASH+外壳组成的，当主控板焊接上空白FLASH后�
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10267,25 +10259,14 @@ U盘是由主控板+FLASH+外壳组成的，当主控板焊接上空白FLASH后�
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10310,7 +10291,7 @@ U盘是由主控板+FLASH+外壳组成的，当主控板焊接上空白FLASH后�
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

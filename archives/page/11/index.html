@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -467,11 +470,9 @@
                 //upload.wikimedia.org/wikipedia/zh/d/d6/Zootopia-poster1-600x889.jpg
                 电影海报...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/07/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -484,7 +485,7 @@
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -517,7 +518,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -538,11 +538,9 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
       nowDate.setMonth(nowDate.getMonth() + 6);
       cookieExpires ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/02/19">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/16</span>
                 </div>
                 <!-- tags -->
@@ -555,7 +553,7 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -576,7 +574,6 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
         
         
         
-        
             
         
         <article class="index-post">
@@ -592,11 +589,9 @@ function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
 那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。
 BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。请注意，PHP...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/28">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
                 </div>
                 <!-- tags -->
@@ -609,7 +604,7 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -630,7 +625,6 @@ BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在
         
         
         
-        
             
         
         <article class="index-post">
@@ -646,11 +640,9 @@ document.writeln("浏览器代码名="+window.navigator.appCodeName+"");
 document.writeln("浏览器平台及版本信息="+window.navigator.appVersion+"");
 document.writeln("浏览器语言="+window.navigator.language+"...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
                 </div>
                 <!-- tags -->
@@ -663,7 +655,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -686,7 +678,6 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         
-        
             
         
         <article class="index-post">
@@ -702,11 +693,9 @@ document.writeln("浏览器语言="+window.navigator.language+"...
 其实如果最早不去搜什么文本节点，直接搜Sibling就好了
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
                 </div>
                 <!-- tags -->
@@ -719,7 +708,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -737,7 +726,6 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -773,11 +761,9 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
 应用程序并行配置不正确，使用命令行sxstrace.exe工具
 安装VC++ 2005(or 2008) SP1 Redistributa...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -790,7 +776,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -811,7 +797,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         
-        
             
         
         <article class="index-post">
@@ -823,11 +808,9 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
                 (国产哈皮软件 -2021-08-06)言而总之，卸载就好了。看网上有说网银相关导致的TLS 1.2自动取消勾选(http://tieba.baidu.com/p/5991999977)也有说用友的(我不是财务所以没装过)我是卸载农业银行证书就可以了，不过之前很久没更新了，不太确定最新版是不是还有问题。并且最早没遇到这种问题，怀疑可能在某次Windows Update之后出现了不兼容现象。
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/03/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -840,7 +823,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -860,7 +843,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -878,11 +860,9 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
 资源管理器里似乎删不掉，要命令行删
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/09">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -895,7 +875,7 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -918,7 +898,6 @@ mfc110u.dll、MSVCP110.dll、MSVCR110.dll
         
         
         
-        
             
         
         <article class="index-post">
@@ -932,11 +911,9 @@ Github地址：https://github.com/ted423/rules-GM-stylish-UC/tree/master/GM
 原创tsdm no Popups(原创)天使动漫论坛签到防弹窗##脚本地址:https://greasyfork.org/scripts/2393-tsdm-no-popups老实说，我觉得天使的签到弹窗让人有些蛋疼…
 Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的”(ED2000.COM)”去除而已https://greasyfork.org/zh-CN/scr...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/02/27">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -949,7 +926,7 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -972,7 +949,6 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         
         
         
-        
             
         
         <article class="index-post">
@@ -985,11 +961,9 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
 你会发现当前所有者是TrusteInstaller（windows系统安装的时候使用的账号，权限灰常高），而我们要做的是将这个所有者更改为我们的当前用户，比如这里是administators
 点击选择 将所有这更改为administrators，然后勾选替换子容器和对象的所有者（相当于应用设置到子键吧）应用确定以后返回到权限窗口，选择当前用户账号我的是administrators（xxxxx\administrators,将完全控制的选项点击设置为允许，点击应用，现在尝试编辑...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -1002,7 +976,7 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -10612,9 +10586,9 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10647,25 +10621,14 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10690,7 +10653,7 @@ Remove”(ED2000.COM)”强迫症脚本，就是把ed2000.com里ed2k链接里的
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

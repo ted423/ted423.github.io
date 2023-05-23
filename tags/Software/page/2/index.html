@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -456,11 +459,9 @@
 
 然后把SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols 复制进去。(http://msdl.microsoft.com/download/s...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -473,7 +474,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -496,7 +497,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -511,11 +511,9 @@
 看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看https://github.com/winscp/winscp/blob/master/source/core/Security.cpp不过我看不懂，有人看得懂的话，可以试试手工解密
 另外有看到https://g...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/08/09">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -528,7 +526,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -551,7 +549,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -564,11 +561,9 @@
 最早接触的Win,所以一切自然都会跟Win比。最初被xrdp气的够呛，xrdp实现的是Windows能通过rdp访问Linux，但核心还是vnc。vnc给我最初的印象就是同步显示，因为遇到对端看不到的，我就会想到RDP。(当然以对Windows和Linux的桌面理解来说，可能有所偏颇) 以下的Linux桌面英文应该叫session，也就是会话譬如，如果结束掉一个Linux桌面，里面跑的进程都会结束。
 Linux在Server机型和家用机型的表现是不一样的。例如长期不接显示器，Server没太大问题，家用机画面会卡死，接显示器没反应，远程画面挂掉，但是...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/01/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/14</span>
                 </div>
                 <!-- tags -->
@@ -581,7 +576,7 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -604,7 +599,6 @@ Linux在Server机型和家用机型的表现是不一样的。例如长期不接
         
         
         
-        
             
         
         <article class="index-post">
@@ -619,11 +613,9 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
 不过感觉比用一个智障强。
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -636,7 +628,7 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -654,7 +646,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -669,11 +660,9 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
                 https://play.google.com/store/apps/details?id=org.connectbot&amp;hl=zh_TW一个SSH客户端选择local就是连到本机的terminal可以用来看IP，看DNS什么的。getprop 可以在安卓下看配置项然后可以通过grep来筛选你要的信息
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -686,7 +675,7 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -704,7 +693,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -721,11 +709,9 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
 不过呢，问题还是有的。默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。(后来不知道咋就好了)
 在低速率网络下要考...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/09/22">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/01</span>
                 </div>
                 <!-- tags -->
@@ -738,7 +724,7 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -769,7 +755,6 @@ https://play.google.com/store/apps/details?id=com.google.ar.lens&amp;hl=en_US
         
         
         
-        
             
         
         <article class="index-post">
@@ -787,11 +772,9 @@ root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在/etc/group�
 NIS Server
 Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见https://docs.microsoft.com/en-us/windows-server/security/...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/06/19">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/19</span>
                 </div>
                 <!-- tags -->
@@ -804,7 +787,7 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -825,7 +808,6 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         
         
         
-        
             
         
         <article class="index-post">
@@ -839,11 +821,9 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
 当然，使用的理解上可能也有翻译带来的问题，例如截图后里面可以设置是否上传。
 总之因为开源软件是可以所有人参...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/21">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/02</span>
                 </div>
                 <!-- tags -->
@@ -856,7 +836,7 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -883,7 +863,6 @@ Kerberos (Attention，我知道这个是AD域主要的验证方式，具体见ht
         
         
         
-        
             
         
         <article class="index-post">
@@ -898,11 +877,9 @@ KMS38比以前位装KMS服务器激活的方式的激活时间要长。会到203
 步骤
 Copy files to a work folder, ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/04/14">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/04/14</span>
                 </div>
                 <!-- tags -->
@@ -915,7 +892,7 @@ Copy files to a work folder, ...
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -938,7 +915,6 @@ Copy files to a work folder, ...
         
         
         
-        
             
         
         <article class="index-post">
@@ -951,11 +927,9 @@ Copy files to a work folder, ...
 LGPL似乎会比GPL少一些功能
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/03/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/03/20</span>
                 </div>
                 <!-- tags -->
@@ -968,7 +942,7 @@ LGPL似乎会比GPL少一些功能
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -10590,9 +10564,9 @@ LGPL似乎会比GPL少一些功能
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10625,25 +10599,14 @@ LGPL似乎会比GPL少一些功能
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10668,7 +10631,7 @@ LGPL似乎会比GPL少一些功能
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,6 +269,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -448,12 +452,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -470,11 +473,9 @@
 这种时候在远程服务器端结束进程 rdpclip.exe，然后手动再执行一下。基本就可以了。
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/03/20</span>
                 </div>
                 <!-- tags -->
@@ -487,7 +488,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -508,7 +509,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -522,11 +522,9 @@ https://github.com/BornToBeRoot/NETworkManager
 https://winget.run/pkg/BornToBeRoot/NETworkManager
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/03/19</span>
                 </div>
                 <!-- tags -->
@@ -539,7 +537,7 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -566,7 +564,6 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         
-        
             
         
         <article class="index-post">
@@ -586,11 +583,9 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
 2023-03-18 增加带空格造成的问题的说明
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/18">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/25</span>
                 </div>
                 <!-- tags -->
@@ -603,7 +598,7 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -626,7 +621,6 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         
-        
             
         
         <article class="index-post">
@@ -637,11 +631,9 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
             <div class="abstract-content">
                 http://www.proxifier.com/但是感觉有时候效果不是太好（现在发现是dns解析的问题）菜单栏Profile(配置文件)-&gt;Name Resolution(名称解析)；如果你的DNS没有被污染(比如在下使用的DNS)，可以保持默认配置，即选中Detect DNS settings automatically；而如果你的DNS已经被污染，无法解析某些网站的地址，则取消选中Detect DNS settings automatically并选中Resolve hostnames through proxy。在下的网络环境下进行测试两者效果相同，各位可以根据自己网络情况...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/18">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/03</span>
                 </div>
                 <!-- tags -->
@@ -654,7 +646,7 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -681,7 +673,6 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         
-        
             
         
         <article class="index-post">
@@ -697,11 +688,9 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
 其中-g是--global的简写，使用后是安装到系统中，你可以在任何地方使用Hexo命令，而下面则是将hexo-deployer-git直接安装到文件夹(项目中)
 初始化...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/17</span>
                 </div>
                 <!-- tags -->
@@ -714,7 +703,7 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -739,7 +728,6 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         
-        
             
         
         <article class="index-post">
@@ -751,11 +739,9 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
                 一个你懂的软件https://github.com/darktohka/FlashPatch并且实际我不想介绍它。如果不是某些傻逼还在用，我都不想搞这个
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/19</span>
                 </div>
                 <!-- tags -->
@@ -768,7 +754,7 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -791,7 +777,6 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         
-        
             
         
         <article class="index-post">
@@ -807,11 +792,9 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
 即可
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/03/15</span>
                 </div>
                 <!-- tags -->
@@ -824,7 +807,7 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -847,7 +830,6 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         
-        
             
         
         <article class="index-post">
@@ -863,11 +845,9 @@ Mediainfo范例
 BT.2020  Olympus Has Fallen 2013
 123456789Color range : LimitedColor primaries : BT.2020Transfer charact...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/12/28">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/28</span>
                 </div>
                 <!-- tags -->
@@ -880,7 +860,7 @@ BT.2020  Olympus Has Fallen 2013
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -907,7 +887,6 @@ BT.2020  Olympus Has Fallen 2013
         
         
         
-        
             
         
         <article class="index-post">
@@ -922,11 +901,9 @@ https://www.zhihu.com/question/501676440
 批处理中一些参数（下面代码只能以批处理的方式执行）pause用来保证批处理运行完后，终端窗口不会被关闭请注意保存成ANSI(GBK)
 1234567891011121314151617181920212223@echo offecho 当前盘符：%~d0echo 当前盘符和路径：%~dp0echo 当前批...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/11/29">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/20</span>
                 </div>
                 <!-- tags -->
@@ -939,7 +916,7 @@ https://www.zhihu.com/question/501676440
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -964,7 +941,6 @@ https://www.zhihu.com/question/501676440
         
         
         
-        
             
         
         <article class="index-post">
@@ -982,11 +958,9 @@ https://vcb-s.nmm-hd.org/Dark%20Shrine/[VCB-Studio][教程10]x265%202.9参数设
 crf,qpqp 电脑认为的恒定画质(但一般不进行设置)crf 人眼认为的恒定画质，但是运动时候画质会降低来节省码率数值越低画质越好。一般低于等于18可以认为和原画差不多(主观观点)
 ctu &lt;...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/28</span>
                 </div>
                 <!-- tags -->
@@ -999,7 +973,7 @@ ctu &lt;...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -1028,7 +1002,7 @@ ctu &lt;...
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1101,29 +1075,9 @@ ctu &lt;...
     
     
     
-        <div class="profile-link-item">
-            <a href="/about" class="about-me">
-                
-                    <i class="fas fa-id-card profile-item-icon"></i>
-                
-                ABOUT ME
-            </a>
+        <div class="about-me">
+            <a href="/about">ABOUT ME</a>
         </div>
-    
-    
-        
-        
-                
-                
-        <div class="profile-link-item">
-            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
-                
-                    <i class="fas fa-search profile-item-icon"></i>
-                
-                SEARCH
-            </a>
-        </div>
-    
     
 </div>
 
@@ -10708,9 +10662,9 @@ ctu &lt;...
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10743,25 +10697,14 @@ ctu &lt;...
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10786,7 +10729,7 @@ ctu &lt;...
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -452,11 +455,9 @@
             <div class="abstract-content">
                 看图我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，速度相当快，相对来讲XnViewMP搜索类别更细，功能性更强，但是Xnview里的结果是一次性的，一旦点开一张图片结果就会消失。就个人感觉，XnView的规划很乱，设计也是乱七八糟，唯有功能比较多而已。况且XnView和XnViewMP的使用界面和方式还有很多不一样，感觉怪怪的。MassiGra的各种按键自定义简直可怕，而且支持读取压缩包里的图片，其实SumatraPDF也支持读取压缩包里的图片强力推荐下Honeyview，给我一种“就是他了”感...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/19">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -469,7 +470,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -502,7 +503,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -519,11 +519,9 @@ rules-GM-stylish-UC基本都是自己改的火狐相关的东西包括
 代理自动配置(英语:Proxy auto-config,简称PAC):https://ted423.bitcron.com/post/code/www/pac
 GM脚本:https://ted423.bit...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -536,7 +534,7 @@ GM脚本:https://ted423.bit...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -555,7 +553,6 @@ GM脚本:https://ted423.bit...
         
         
         
-        
             
         
         <article class="index-post">
@@ -568,11 +565,9 @@ GM脚本:https://ted423.bit...
 好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是.git文件夹里有个index.lock的问题…..只要删掉就好了。大概在创建commit的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成commit,但由于之前已经有了index.lock（但没生成commit），而git不允许index.lock的覆盖，所以就卡住了…
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -585,7 +580,7 @@ GM脚本:https://ted423.bit...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -610,7 +605,6 @@ GM脚本:https://ted423.bit...
         
         
         
-        
             
         
         <article class="index-post">
@@ -632,11 +626,9 @@ GM脚本:https://ted423.bit...
 http://www.torrent.org.cn/
 https...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -649,7 +641,7 @@ https...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -670,7 +662,6 @@ https...
         
         
         
-        
             
         
         <article class="index-post">
@@ -686,11 +677,9 @@ https...
 单击打开“管理工具”。
 双击“服务”。 如果系...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -703,7 +692,7 @@ https...
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -726,7 +715,6 @@ https...
         
         
         
-        
             
         
         <article class="index-post">
@@ -743,11 +731,9 @@ https://kat.cr/nnp-017-amateur-tsurekomi-and-nampa-sex-hidden-camera-9-t10190775
 
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/04/03">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/04/03</span>
                 </div>
                 <!-- tags -->
@@ -771,7 +757,6 @@ https://kat.cr/nnp-017-amateur-tsurekomi-and-nampa-sex-hidden-camera-9-t10190775
         
         
         
-        
             
         
         <article class="index-post">
@@ -790,11 +775,9 @@ http://share.dmhy.org/topics/view/375669_K-ON!_SE1_SE2_MOVIE_LIVE_CD_1080p_10bit
 片头曲 “Cagayake!GIRLS”
 作词：大森祥子，作曲...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/02/08">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/02/08</span>
                 </div>
                 <!-- tags -->
@@ -807,7 +790,7 @@ http://share.dmhy.org/topics/view/375669_K-ON!_SE1_SE2_MOVIE_LIVE_CD_1080p_10bit
         
         
         <span class="post-category" data-categories="Music"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Music
             </span>
@@ -832,7 +815,6 @@ http://share.dmhy.org/topics/view/375669_K-ON!_SE1_SE2_MOVIE_LIVE_CD_1080p_10bit
         
         
         
-        
             
         
         <article class="index-post">
@@ -853,11 +835,9 @@ magnet:?xt=urn:btih:PJH3ZLMGSXD3NYA2QXEQQIL5XVUQE7GZ
 日文(附带恶魔岛汉化版)
 http://share.dmhy.org/topics/view/3002...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/01/01</span>
                 </div>
                 <!-- tags -->
@@ -870,7 +850,7 @@ http://share.dmhy.org/topics/view/3002...
         
         
         <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Comic
             </span>
@@ -893,7 +873,6 @@ http://share.dmhy.org/topics/view/3002...
         
         
         
-        
             
         
         <article class="index-post">
@@ -907,11 +886,9 @@ http://share.dmhy.org/topics/view/3002...
 P2P
 magnet:?xt=urn:btih:b1b122c4d6ff1902c59fee821127a5eec21b31d7&amp;dn=现在就想告诉哥哥！我是妹妹&amp;tr=http://t.nyaatracker.com/announce&amp;tr=http://tracker1.itzmx.com:8080/announce&amp;tr=http://t...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/01/01</span>
                 </div>
                 <!-- tags -->
@@ -924,7 +901,7 @@ magnet:?xt=urn:btih:b1b122c4d6ff1902c59fee821127a5eec21b31d7&amp;dn=现在就想
         
         
         <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Comic
             </span>
@@ -945,7 +922,6 @@ magnet:?xt=urn:btih:b1b122c4d6ff1902c59fee821127a5eec21b31d7&amp;dn=现在就想
         
         
         
-        
             
         
         <article class="index-post">
@@ -957,11 +933,9 @@ magnet:?xt=urn:btih:b1b122c4d6ff1902c59fee821127a5eec21b31d7&amp;dn=现在就想
                 位于rc文件中STYLE 这一行控制WS_MAXIMIZEBOX就是最大化的按钮，删掉最大化按钮就不能点击
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2014/01/01</span>
                 </div>
                 <!-- tags -->
@@ -10570,9 +10544,9 @@ magnet:?xt=urn:btih:b1b122c4d6ff1902c59fee821127a5eec21b31d7&amp;dn=现在就想
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10605,25 +10579,14 @@ magnet:?xt=urn:btih:b1b122c4d6ff1902c59fee821127a5eec21b31d7&amp;dn=现在就想
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10648,7 +10611,7 @@ magnet:?xt=urn:btih:b1b122c4d6ff1902c59fee821127a5eec21b31d7&amp;dn=现在就想
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

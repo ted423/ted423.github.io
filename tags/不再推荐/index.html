@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -456,11 +459,9 @@
 另外注意这个对移动硬盘可能相性不好，也可能是文件系统的锅，建议优先U盘
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/22">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/24</span>
                 </div>
                 <!-- tags -->
@@ -473,7 +474,7 @@
         
         
         <span class="post-category" data-categories="System"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 System
             </span>
@@ -498,7 +499,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -514,11 +514,9 @@
 QTTabbar会影响复制粘贴，没办法只在一个窗口显示，有时会打开新的窗口。Groups会卡死。其他的不少都没法直接替代资源管理，使用替代方案又有这样那样的问题，譬如迅雷会觉得自己没法开文件夹，又重新开个Explorer。
 Directory opus是比...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/05/27">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/05/27</span>
                 </div>
                 <!-- tags -->
@@ -531,7 +529,7 @@ Directory opus是比...
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -560,7 +558,6 @@ Directory opus是比...
         
         
         
-        
             
         
         <article class="index-post">
@@ -574,11 +571,9 @@ Directory opus是比...
 一些国产浏览器（如果不流氓的话还能接受
 360极速，有了Chrome没有的Bug，明明完整的复现了，结果论坛上人家懒得看，...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/04/13">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/13</span>
                 </div>
                 <!-- tags -->
@@ -591,7 +586,7 @@ Directory opus是比...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -616,7 +611,6 @@ Directory opus是比...
         
         
         
-        
             
         
         <article class="index-post">
@@ -635,11 +629,9 @@ teramenu的配置是保存在注册表里HKEY_CURRENT_USER\Software\ShinpeiTools
 
 #自动登录##telnet另一方面就在于它可以通过TTL脚本实现自动反应以及记住密码自动登录(telnet...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/06/05">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/05</span>
                 </div>
                 <!-- tags -->
@@ -652,7 +644,7 @@ teramenu的配置是保存在注册表里HKEY_CURRENT_USER\Software\ShinpeiTools
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -681,7 +673,6 @@ teramenu的配置是保存在注册表里HKEY_CURRENT_USER\Software\ShinpeiTools
         
         
         
-        
             
         
         <article class="index-post">
@@ -694,11 +685,9 @@ teramenu的配置是保存在注册表里HKEY_CURRENT_USER\Software\ShinpeiTools
 
 https://ultracopier.first-world.info/这是我主动寻找的工具，平时在拷贝文件夹的时候，总觉得慢的难以忍受。究其原因，主要是因为小文件太多。当时就想找一款多线程的复制工具，这样就可以尽量保证跑满硬盘的读写速度。最初是找到了robocopy,微软自带的工具。它也成功的在...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/05/27">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/27</span>
                 </div>
                 <!-- tags -->
@@ -711,7 +700,7 @@ https://ultracopier.first-world.info/这是我主动寻找的工具，平时在�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -734,7 +723,6 @@ https://ultracopier.first-world.info/这是我主动寻找的工具，平时在�
         
         
         
-        
             
         
         <article class="index-post">
@@ -754,11 +742,9 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
 2022-03-25由于 4K Stogram 没法正常使用，4K Video Downloader 可以被替代，故这俩软件都不再推荐，前者可能跟代理问题有关
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/25">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/13</span>
                 </div>
                 <!-- tags -->
@@ -771,7 +757,7 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -794,7 +780,6 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         
         
-        
             
         
         <article class="index-post">
@@ -809,11 +794,9 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
 还需要配合woff2woff2，才能生成woff2
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/12/22">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/02/15</span>
                 </div>
                 <!-- tags -->
@@ -826,7 +809,7 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -10442,9 +10425,9 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10477,25 +10460,14 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10520,7 +10492,7 @@ https://www.4kdownload.com/zh-tw/products/product-stogram
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

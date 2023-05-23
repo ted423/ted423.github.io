@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,6 +269,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -448,12 +452,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -471,11 +474,9 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
 感谢这篇文章，不然我真得烦死http://www.iznb.cn/article/17119
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/08/01</span>
                 </div>
                 <!-- tags -->
@@ -488,7 +489,7 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -510,7 +511,6 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -548,11 +548,9 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         
         ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/07/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -565,7 +563,7 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -592,7 +590,6 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
         
         
         
-        
             
         
         <article class="index-post">
@@ -606,11 +603,9 @@ sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异
 https://write-box.appspot.com
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/07/06">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -630,7 +625,6 @@ https://write-box.appspot.com
         
         
         
-        
             
         
         <article class="index-post">
@@ -642,11 +636,9 @@ https://write-box.appspot.com
                 Sysinternals Suitehttp://technet.microsoft.com/en-us/sysinternals/bb842062.aspxIntroduction
 The Sysinternals Troubleshooting Utilities have been rolled up into a single Suite of tools. This file contains the individual troubleshooting tools and help files. It does not contain non-troubleshooting ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/07/05">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/07/05</span>
                 </div>
                 <!-- tags -->
@@ -659,7 +651,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -684,7 +676,6 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         
-        
             
         
         <article class="index-post">
@@ -699,11 +690,9 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
 对于任何一个还算过得去的网站，性能毫无疑问是要注意的一个非常重要的方面，无论这是一个个人作品站，或者是一个偏向手机的web app，亦或是一个巨大的电子商务站点。各种各样的研究、文章和个人经历告诉我们“越快越好”。
 性能问题不仅仅是非常重要，也十分有趣，是我在工作中（我一直都缠着我们的首席性能工程师）、一...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/03/21">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
                 </div>
                 <!-- tags -->
@@ -716,7 +705,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -734,7 +723,6 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -768,11 +756,9 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
             日语假名
             ばかとてすと...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/03/11">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -785,7 +771,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -814,7 +800,6 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         
-        
             
         
         <article class="index-post">
@@ -831,11 +816,9 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
 2022-08-13取消网盘以及在线
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/03/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/03/01</span>
                 </div>
                 <!-- tags -->
@@ -848,7 +831,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Comic
             </span>
@@ -871,7 +854,6 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         
-        
             
         
         <article class="index-post">
@@ -886,11 +868,9 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
 用完后记得
 1sc delete SuperCMD
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/02/14">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/02/14</span>
                 </div>
                 <!-- tags -->
@@ -903,7 +883,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -921,7 +901,6 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -957,11 +936,9 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
 ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/02/11">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -974,7 +951,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -1007,7 +984,6 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         
-        
             
         
         <article class="index-post">
@@ -1019,11 +995,9 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
                 Windows上运行npm 报Error: ENOENT, stat ‘C:\Users\XX\AppData\Roaming\npm’ 错误解决方法报错路径为： C:\Users\“你用户名”\AppData\Roaming\   这个路径下建个npm文件(夹)即可正常使用npm 命令了！目测跟配置文件有关
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/02/02">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
                 </div>
                 <!-- tags -->
@@ -1036,7 +1010,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -1063,7 +1037,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1136,29 +1110,9 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
     
     
     
-        <div class="profile-link-item">
-            <a href="/about" class="about-me">
-                
-                    <i class="fas fa-id-card profile-item-icon"></i>
-                
-                ABOUT ME
-            </a>
+        <div class="about-me">
+            <a href="/about">ABOUT ME</a>
         </div>
-    
-    
-        
-        
-                
-                
-        <div class="profile-link-item">
-            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
-                
-                    <i class="fas fa-search profile-item-icon"></i>
-                
-                SEARCH
-            </a>
-        </div>
-    
     
 </div>
 
@@ -10743,9 +10697,9 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10778,25 +10732,14 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10821,7 +10764,7 @@ The Sysinternals Troubleshooting Utilities have been rolled up into a single Sui
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

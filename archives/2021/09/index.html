@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -474,11 +477,9 @@
         
       ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/07/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/30</span>
                 </div>
                 <!-- tags -->
@@ -491,7 +492,7 @@
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -523,7 +524,6 @@
         </article>
         <div class="index-post-divider"></div>
     
-        
         
         
         
@@ -562,11 +562,9 @@
         
        ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/09/09">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/30</span>
                 </div>
                 <!-- tags -->
@@ -579,7 +577,7 @@
         
         
         <span class="post-category" data-categories="Anime"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Anime
             </span>
@@ -606,7 +604,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -620,11 +617,9 @@
 Dropbox(个人筛选)https://www.dropbox.com/sh/yms2tgldjvfoy61/AABEj1sppeQxHoAiATCywhFAa?dl=0
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2019/05/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/26</span>
                 </div>
                 <!-- tags -->
@@ -637,7 +632,7 @@ Dropbox(个人筛选)https://www.dropbox.com/sh/yms2tgldjvfoy61/AABEj1sppeQxHoAi
         
         
         <span class="post-category" data-categories="Picture&Photo&Image"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Picture&Photo&Image
             </span>
@@ -660,7 +655,6 @@ Dropbox(个人筛选)https://www.dropbox.com/sh/yms2tgldjvfoy61/AABEj1sppeQxHoAi
         
         
         
-        
             
         
         <article class="index-post">
@@ -671,11 +665,9 @@ Dropbox(个人筛选)https://www.dropbox.com/sh/yms2tgldjvfoy61/AABEj1sppeQxHoAi
             <div class="abstract-content">
                 Grub会自动在C盘加入双系统启动的配置，而且默认会启动Ubuntu，把 windows 7放在最后面。如果要启动windows的话，需要按向下的箭头4、5次，非常麻烦。现阶段还是使用windows要多一点，所以需要修改Grub让 windows第一个启动。Ubuntu 11.04使用的Grub版本是1.99，配置文件是Linux系统下的&#x2F;boot&#x2F;grub&#x2F;grub.cfg这个文件。进入Linux找到此文件，直 接用文本编辑器修改，结果提示只读文件无权操作，在文件右键修改属性，结果还是不行，看来必须要命令行才可以。进入终端，到目录&#x2F;boot&#x...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/17">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -688,7 +680,7 @@ Dropbox(个人筛选)https://www.dropbox.com/sh/yms2tgldjvfoy61/AABEj1sppeQxHoAi
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -713,7 +705,6 @@ Dropbox(个人筛选)https://www.dropbox.com/sh/yms2tgldjvfoy61/AABEj1sppeQxHoAi
         
         
         
-        
             
         
         <article class="index-post">
@@ -730,11 +721,9 @@ Onedrive不支持局域网内同步,同步逻辑有缺陷，偶尔会干删一�
 可用
 mega支持创建同名文件(夹)，不利于同步，同步依据文件修改时间，在修改时...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/28">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -747,7 +736,7 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -774,7 +763,6 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
         
         
         
-        
             
         
         <article class="index-post">
@@ -787,11 +775,9 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
 这里有dropbox的https://ted423.bitcron.com/post/etc/fonts
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/09/10">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -811,7 +797,6 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
         
         
         
-        
             
         
         <article class="index-post">
@@ -827,11 +812,9 @@ OpenType fonts
 来源:https://www.oschina.net/news/40762/10-great-free-monospaced-fonts-for-programming其他的我都没试，毕竟等宽字体这种，好看不到哪去，差不多就行了。
 Impression o...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/02/21">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -853,7 +836,6 @@ Impression o...
         
         
         
-        
             
         
         <article class="index-post">
@@ -865,11 +847,9 @@ Impression o...
                 这个错误应该跟下载相关，我手动下载手动安装的这个安装包x64:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x64_9b2f96010adf1b547157c79c8ad52bdb26815e0b.cab
 x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x86_63c92652dc153...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/21">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -882,7 +862,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -909,7 +889,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         
-        
             
         
         <article class="index-post">
@@ -923,11 +902,9 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
 个人的处理办法是Onedrive删一半，dropbox删一半，因为对我来说只要一个同步Ok的状态有了就行
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/10/27">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -940,7 +917,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -965,7 +942,6 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         
-        
             
         
         <article class="index-post">
@@ -979,11 +955,9 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
 可以使用如下注册表
 1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2018/04/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -996,7 +970,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -10606,9 +10580,9 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10641,25 +10615,14 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10684,7 +10647,7 @@ x86:http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

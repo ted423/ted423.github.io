@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -454,11 +457,9 @@
 微软的rdp只允许少数人同时使用，多人的话需要用服务器版本，并且再购买多人远程的服务器授权。这个是第三方实现的类似破解性质的软件。可以在Win10&#x2F;Server 2019上使用，低版本的Windows也可以。会被微软报毒，并且Win10经常升级，一升级就要重新设。建议在LTSC上用。
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/05/15</span>
                 </div>
                 <!-- tags -->
@@ -471,7 +472,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -498,7 +499,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -512,11 +512,9 @@
 这种时候在远程服务器端结束进程 rdpclip.exe，然后手动再执行一下。基本就可以了。
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/03/20</span>
                 </div>
                 <!-- tags -->
@@ -529,7 +527,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -550,7 +548,6 @@
         
         
         
-        
             
         
         <article class="index-post">
@@ -564,11 +561,9 @@ https://github.com/BornToBeRoot/NETworkManager
 https://winget.run/pkg/BornToBeRoot/NETworkManager
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/03/19</span>
                 </div>
                 <!-- tags -->
@@ -581,7 +576,7 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -608,7 +603,6 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         
-        
             
         
         <article class="index-post">
@@ -624,11 +618,9 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
 即可
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/15">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/03/15</span>
                 </div>
                 <!-- tags -->
@@ -641,7 +633,7 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -664,7 +656,6 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
         
         
         
-        
             
         
         <article class="index-post">
@@ -677,11 +668,9 @@ https://winget.run/pkg/BornToBeRoot/NETworkManager
 ESU介绍https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-eos-faq/windows-7-extended-security-updates-faq
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/26</span>
                 </div>
                 <!-- tags -->
@@ -694,7 +683,7 @@ ESU介绍https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -719,7 +708,6 @@ ESU介绍https://docs.microsoft.com/en-US/troubleshoot/windows-client/windows-7-
         
         
         
-        
             
         
         <article class="index-post">
@@ -735,11 +723,9 @@ https://www.ventoy.net/cn/index.html
 不过定位还是有点尴尬，毕竟普通用户很少天天装系统，专业人士，PE，弄安装盘的时间也不会缺
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2020/06/26">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/25</span>
                 </div>
                 <!-- tags -->
@@ -752,7 +738,7 @@ https://www.ventoy.net/cn/index.html
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -775,7 +761,6 @@ https://www.ventoy.net/cn/index.html
         
         
         
-        
             
         
         <article class="index-post">
@@ -789,11 +774,9 @@ https://www.ventoy.net/cn/index.html
 看下是哪个 AD 锁定的，然后 AD 上看哪个IP导致的异常，然后检查那个IP是谁在用
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/25">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/25</span>
                 </div>
                 <!-- tags -->
@@ -806,7 +789,7 @@ https://www.ventoy.net/cn/index.html
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -827,7 +810,6 @@ https://www.ventoy.net/cn/index.html
         
         
         
-        
             
         
         <article class="index-post">
@@ -841,11 +823,9 @@ WinRAR是一款强大的压缩文件管理器，它提供了RAR和ZIP文件的�
 WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快压缩速度增加了内存占用。另外，RAR常规解压算法的速度稍有提高，恢复卷的创建和处理可以使用多个CPU核心来获得更高的处理速度。
 更新日志https://www.ra...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/25">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/25</span>
                 </div>
                 <!-- tags -->
@@ -858,7 +838,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -885,7 +865,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         
-        
             
         
         <article class="index-post">
@@ -898,11 +877,9 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
 80092004 的错误是跟更新档的验证有关， Windows 7 (2008 R2) 2019年出的问题（解决之后收藏夹放了很久）,手动打下 KB4474419 和 KB4490628 这两个更新即可https://support.microsoft.com/zh-cn/topic/针对-windows-和-wsus-的-2019-sha-2-代码签名支持要求-64d1c82d-31ee-c273-3930-69a4cde8e64f
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/25">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/25</span>
                 </div>
                 <!-- tags -->
@@ -915,7 +892,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -938,7 +915,6 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         
-        
             
         
         <article class="index-post">
@@ -951,11 +927,9 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
 最早 Win 10 等都有问题，后续通过更新补丁，已经可以正常添加。但 Win7 大概是被放弃了,更新到最新也没用，包括 Extended Security Updates 也都不行，只有在服务器上取消补丁或者验证才有用。所以…
 另外可以看下这里https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/08/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/08/23</span>
                 </div>
                 <!-- tags -->
@@ -968,7 +942,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -10578,9 +10552,9 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10613,25 +10587,14 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10656,7 +10619,7 @@ WinRAR 从 4.20开始更好地利用了多处理器核心，不过为了加快�
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

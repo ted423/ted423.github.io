@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -265,6 +267,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -433,12 +437,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -457,11 +460,9 @@ WinRM(PowerShell Remoute)的参数不兼容
 总之就是我看 PowerShell Remoute 命令发现 Win10 自带的版本只有5,然后跟默认的文档不匹配的问题。最新的是7.2LTS。目测 Win 10&#x2F;Server 2019 都需要升级
 https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershe...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/05/13">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/13</span>
                 </div>
                 <!-- tags -->
@@ -474,7 +475,7 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -499,7 +500,6 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         
         
         
-        
             
         
         <article class="index-post">
@@ -519,11 +519,9 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
 2023-03-18 增加带空格造成的问题的说明
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/18">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/25</span>
                 </div>
                 <!-- tags -->
@@ -536,7 +534,7 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -559,7 +557,6 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         
         
         
-        
             
         
         <article class="index-post">
@@ -575,11 +572,9 @@ route print可以看到路由优先级
 -p 代表是永久路由
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/27">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/27</span>
                 </div>
                 <!-- tags -->
@@ -592,7 +587,7 @@ route print可以看到路由优先级
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -617,7 +612,6 @@ route print可以看到路由优先级
         
         
         
-        
             
         
         <article class="index-post">
@@ -630,11 +624,9 @@ route print可以看到路由优先级
 另外可以参考下https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging不过个人很久之前弄得，不记得当时有没用这个方式
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/27">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/25</span>
                 </div>
                 <!-- tags -->
@@ -647,7 +639,7 @@ route print可以看到路由优先级
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -672,7 +664,6 @@ route print可以看到路由优先级
         
         
         
-        
             
         
         <article class="index-post">
@@ -684,11 +675,9 @@ route print可以看到路由优先级
                 Server默认都没开不知道什么考虑管理员权限下的 CMD 或者Power Shelldiskperf -Y
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/25">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/25</span>
                 </div>
                 <!-- tags -->
@@ -701,7 +690,7 @@ route print可以看到路由优先级
         
         
         <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Optimization
             </span>
@@ -726,7 +715,6 @@ route print可以看到路由优先级
         
         
         
-        
             
         
         <article class="index-post">
@@ -740,11 +728,9 @@ Manjarosudo pacman-mirrors -i -c China -m rank 选用最快的国内源
 AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/04/19">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/27</span>
                 </div>
                 <!-- tags -->
@@ -757,7 +743,7 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -782,7 +768,6 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
         
         
         
-        
             
         
         <article class="index-post">
@@ -795,11 +780,9 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
 当时是别人的电脑，我在XP卸载360，结果系统进不去了。我直接把XP装了个win7，结果会有个旧版本的windows给你选择，一直处理不掉
 1、以管理员身份启动cmd窗口【一定要以管理员身份启动，否者提示无法打开启动配置文件，拒绝访问。启动方法可以按照C:&#x2F;windows&#x2F;system32&#x2F;cmd.exe路径找到cmd.exe 然后鼠标右键选择 以管理员身份运行或者在任务管理器里用...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
                 </div>
                 <!-- tags -->
@@ -812,7 +795,7 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -837,7 +820,6 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
         
         
         
-        
             
         
         <article class="index-post">
@@ -849,11 +831,9 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
                 不正常的使用rsync可能会造成灾难性的后果，因此建议先带-n跑一次试试请务必注意Linux命令的路径问题带不带’&#x2F;‘是不一样的。请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avP source destination --log-file=$HOME/.rsync.log其中  source destination 都可以使用sshroot@ip:&#x2F;目录
 常用参数1234567891011 其中z为压缩，在网络性能足够的情况下，不开会快(公网才建议开，另外在内容本身为有损压...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/04/05">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
                 </div>
                 <!-- tags -->
@@ -866,7 +846,7 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -889,7 +869,6 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
         
         
         
-        
             
         
         <article class="index-post">
@@ -906,11 +885,9 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
 打开CMD,输入
  1netsh wlan set hostednetwork mode...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/12/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/02</span>
                 </div>
                 <!-- tags -->
@@ -923,7 +900,7 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -944,7 +921,6 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
         
         
         
-        
             
         
         <article class="index-post">
@@ -958,11 +934,9 @@ AUR安装https://wiki.manjaro.org/index.php/Arch_User_Repository
 https://mobaxterm.mobatek.net/
 缺点SFTP问题比较大，经常上传下载文件夹会没法保存文件夹结构，所以建议带文件夹结构的还是用 Filezilla ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/08/13</span>
                 </div>
                 <!-- tags -->
@@ -975,7 +949,7 @@ https://mobaxterm.mobatek.net/
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -10587,9 +10561,9 @@ https://mobaxterm.mobatek.net/
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10622,25 +10596,14 @@ https://mobaxterm.mobatek.net/
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10665,7 +10628,7 @@ https://mobaxterm.mobatek.net/
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         

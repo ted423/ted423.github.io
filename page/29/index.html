@@ -9,6 +9,7 @@
 
 
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -194,16 +195,17 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=" as="style">
-    <link rel="stylesheet" href="/css/dark.css">
-    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
+    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=202107" as="style">
+    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=" as="script">
+    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,6 +269,8 @@
     
 </header>
 
+        <!-- dark mode -->
+        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -448,12 +452,11 @@
     asyncErr
   )
 </script>
-
+        
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
-        
         
         
         
@@ -473,11 +476,9 @@ Widnows 7改AHCI找到下面的注册表子项：
 1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide
 ...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/01/14">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/14</span>
                 </div>
                 <!-- tags -->
@@ -490,7 +491,7 @@ Widnows 7改AHCI找到下面的注册表子项：
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -513,7 +514,6 @@ Widnows 7改AHCI找到下面的注册表子项：
         
         
         
-        
             
         
         <article class="index-post">
@@ -529,11 +529,9 @@ extensions.blocklist.enabled		将设置是否检测阻止的插件，例如旧�
 gfx.color_management.enablev4		改为true后支援ICCV4    （International Color Consortium）  
 permissions.defaul...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/01/06">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/06</span>
                 </div>
                 <!-- tags -->
@@ -546,7 +544,7 @@ permissions.defaul...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -567,7 +565,6 @@ permissions.defaul...
         
         
         
-        
             
         
         <article class="index-post">
@@ -580,11 +577,9 @@ permissions.defaul...
 VGA是为了以显像管（阴极射线管）为基础的显示设备而设计，发送的单位是水平扫描线，因此并未使用数字化的离散信号。模拟发送的视频信号是以变更输出电压来控制扫描中的电子流束的密度，并借此来表现亮度以及彩度。
 The same VGA cable can be used with a variety of supported VGA resolutions, ranging from 640×350px @70 Hz (24 MHz of signal bandwidth) to 1280×1024px (SXGA) @8...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/01/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/04</span>
                 </div>
                 <!-- tags -->
@@ -597,7 +592,7 @@ The same VGA cable can be used with a variety of supported VGA resolutions, rang
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -616,7 +611,6 @@ The same VGA cable can be used with a variety of supported VGA resolutions, rang
         
         
         
-        
             
         
         <article class="index-post">
@@ -631,11 +625,9 @@ BT这是一次比较失败的做种，没考虑到nyaa对tracker的要求，所�
 magnet:?xt=urn:btih:0d22dd3c4a6775c2dfe9df80de84d1b93e672183&amp;tr=http://open.acgtracker.com:1096/announce
 magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2016/01/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/01</span>
                 </div>
                 <!-- tags -->
@@ -648,7 +640,7 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Comic
             </span>
@@ -669,7 +661,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         
-        
             
         
         <article class="index-post">
@@ -682,11 +673,9 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
 网盘分流https://mega.nz/#!fxMG2SbL!MmSnfOPg6HcO6P-bxAjLiQuYbgBjSIsjBo7rZLxwNVg
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/12/27">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -699,7 +688,7 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         <span class="post-category" data-categories="Video"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Video
             </span>
@@ -724,7 +713,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         
-        
             
         
         <article class="index-post">
@@ -735,11 +723,9 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
             <div class="abstract-content">
                 起始-十进制|终止-十进制|起始-16进制|终止-16进制|字符数|	编码分类（中文）|编码分类（英文）    —    |    —    |   —     |    —    | —  |     —         |      —0|127|0000|007F|128|C0控制符及基本拉丁文|C0 Control and Basic Latin128|255|0080|00FF|128|C1控制符及拉丁文补充-1|C1 Control and Latin 1 Supplement256|383|0100|017F|128|拉丁文扩展-A|Latin Extended-A384|...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/12/20">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/12/20</span>
                 </div>
                 <!-- tags -->
@@ -752,7 +738,7 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -773,7 +759,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         
-        
             
         
         <article class="index-post">
@@ -790,11 +775,9 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
 打开CMD,输入
  1netsh wlan set hostednetwork mode...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/12/04">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/02</span>
                 </div>
                 <!-- tags -->
@@ -807,7 +790,7 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -828,7 +811,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         
-        
             
         
         <article class="index-post">
@@ -841,11 +823,9 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
 同时有Firefox以及Chrome的扩展，但是Firefox的不知道战斗力高了多少倍，可惜火狐自身给自己来了一刀
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/12/01">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/12/01</span>
                 </div>
                 <!-- tags -->
@@ -858,7 +838,7 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -883,7 +863,6 @@ magnet:?xt=urn:btih:17EF09435D25558DDEBD6E89EE35B2...
         
         
         
-        
             
         
         <article class="index-post">
@@ -900,11 +879,9 @@ Onedrive不支持局域网内同步,同步逻辑有缺陷，偶尔会干删一�
 可用
 mega支持创建同名文件(夹)，不利于同步，同步依据文件修改时间，在修改时...
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/28">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
                 </div>
                 <!-- tags -->
@@ -917,7 +894,7 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
+            <i class="far fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -944,7 +921,6 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
         
         
         
-        
             
         
         <article class="index-post">
@@ -957,11 +933,9 @@ mega支持创建同名文件(夹)，不利于同步，同步依据文件修改�
 magnet:?xt&#x3D;urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
 
             </div>
-            <!-- read more -->
-            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/11/24">
+                <div class="abstract-date">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
                 </div>
                 <!-- tags -->
@@ -989,7 +963,7 @@ magnet:?xt&#x3D;urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1062,29 +1036,9 @@ magnet:?xt&#x3D;urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
     
     
     
-        <div class="profile-link-item">
-            <a href="/about" class="about-me">
-                
-                    <i class="fas fa-id-card profile-item-icon"></i>
-                
-                ABOUT ME
-            </a>
+        <div class="about-me">
+            <a href="/about">ABOUT ME</a>
         </div>
-    
-    
-        
-        
-                
-                
-        <div class="profile-link-item">
-            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
-                
-                    <i class="fas fa-search profile-item-icon"></i>
-                
-                SEARCH
-            </a>
-        </div>
-    
     
 </div>
 
@@ -10669,9 +10623,9 @@ magnet:?xt&#x3D;urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
+        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture&Photo&Image
+            Picture-Photo-Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10704,25 +10658,14 @@ magnet:?xt&#x3D;urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
 
         <!-- site-meta -->
         <script>
-    var siteMetaRoot = "/"
-    if (siteMetaRoot === "undefined") {
-        siteMetaRoot = '/'
-    }
     var siteMeta = {
-        url: "http://ted423.github.io",
-        root: siteMetaRoot,
+        root: "/",
         author: "ted423"
     }
 </script>
 
-        <!-- import experimental options here -->
-        <!-- Custom Font -->
-
-
         <!-- main func -->
-        <script src="/scripts/main.js?v="></script>
-        <!-- dark mode -->
-        <script src="/scripts/dark.js?v="></script>
+        <script src="/scripts/main.js"></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10747,7 +10690,7 @@ magnet:?xt&#x3D;urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC
     </div>
 </div>
 
-            <script src="/scripts/search.js?v=" defer></script>
+            <script src="/scripts/search.js" defer></script>
         
         <!-- busuanzi -->
         
