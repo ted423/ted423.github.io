@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,8 +265,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -437,11 +433,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -460,9 +457,11 @@
 即可
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2023/03/15">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/03/15</span>
                 </div>
                 <!-- tags -->
@@ -475,7 +474,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -498,6 +497,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -513,9 +513,11 @@ Mediainfo范例
 BT.2020  Olympus Has Fallen 2013
 123456789Color range : LimitedColor primaries : BT.2020Transfer charact...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2022/12/28">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/12/28</span>
                 </div>
                 <!-- tags -->
@@ -528,7 +530,7 @@ BT.2020  Olympus Has Fallen 2013
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -555,6 +557,7 @@ BT.2020  Olympus Has Fallen 2013
         
         
         
+        
             
         
         <article class="index-post">
@@ -570,9 +573,11 @@ WinRM(PowerShell Remoute)的参数不兼容
 总之就是我看 PowerShell Remoute 命令发现 Win10 自带的版本只有5,然后跟默认的文档不匹配的问题。最新的是7.2LTS。目测 Win 10&#x2F;Server 2019 都需要升级
 https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershe...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2022/05/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/13</span>
                 </div>
                 <!-- tags -->
@@ -585,7 +590,7 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -610,6 +615,7 @@ https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powersh
         
         
         
+        
             
         
         <article class="index-post">
@@ -623,9 +629,11 @@ https-proxy、proxy可以互换，目前没感到差别。
 还可以设置镜像源，不过改了之后包的地址也会变，如果涉及到跨区域多人开发的话，最好不要乱动。
 1234567npm config get registry  // 查看npm当前镜像源npm config set registry https://registry.npm.taobao.org/  // 设置npm镜像源为淘宝镜像ya...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2022/05/11">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/05/11</span>
                 </div>
                 <!-- tags -->
@@ -638,7 +646,7 @@ https-proxy、proxy可以互换，目前没感到差别。
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -659,6 +667,7 @@ https-proxy、proxy可以互换，目前没感到差别。
         
         
         
+        
             
         
         <article class="index-post">
@@ -671,9 +680,11 @@ https-proxy、proxy可以互换，目前没感到差别。
 另外可以参考下https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging不过个人很久之前弄得，不记得当时有没用这个方式
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2022/03/27">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/25</span>
                 </div>
                 <!-- tags -->
@@ -686,7 +697,7 @@ https-proxy、proxy可以互换，目前没感到差别。
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -711,6 +722,7 @@ https-proxy、proxy可以互换，目前没感到差别。
         
         
         
+        
             
         
         <article class="index-post">
@@ -725,9 +737,11 @@ https-proxy、proxy可以互换，目前没感到差别。
 把rebase-merge整个删掉后就正常了
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2017/03/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -740,7 +754,7 @@ https-proxy、proxy可以互换，目前没感到差别。
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -765,6 +779,7 @@ https-proxy、proxy可以互换，目前没感到差别。
         
         
         
+        
             
         
         <article class="index-post">
@@ -780,9 +795,11 @@ https-proxy、proxy可以互换，目前没感到差别。
 似乎可能Win下cmd里用就是会解析成IP丢到代理里(
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/06/10">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/18</span>
                 </div>
                 <!-- tags -->
@@ -795,7 +812,7 @@ https-proxy、proxy可以互换，目前没感到差别。
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -818,6 +835,7 @@ https-proxy、proxy可以互换，目前没感到差别。
         
         
         
+        
             
         
         <article class="index-post">
@@ -833,9 +851,11 @@ document.writeln("浏览器代码名="+window.navigator.appCodeName+"");
 document.writeln("浏览器平台及版本信息="+window.navigator.appVersion+"");
 document.writeln("浏览器语言="+window.navigator.language+"...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/10</span>
                 </div>
                 <!-- tags -->
@@ -848,7 +868,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -868,6 +888,7 @@ document.writeln("浏览器语言="+window.navigator.language+"...
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -888,9 +909,11 @@ function GetSelectedText (){
         (document.activeElement.nodeName == "INPUT" &&
         document.activeElement.g...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
                 </div>
                 <!-- tags -->
@@ -903,7 +926,7 @@ function GetSelectedText (){
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -926,6 +949,7 @@ function GetSelectedText (){
         
         
         
+        
             
         
         <article class="index-post">
@@ -937,9 +961,11 @@ function GetSelectedText (){
                 不正常的使用rsync可能会造成灾难性的后果，因此建议先带-n跑一次试试请务必注意Linux命令的路径问题带不带’&#x2F;‘是不一样的。请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avP source destination --log-file=$HOME/.rsync.log其中  source destination 都可以使用sshroot@ip:&#x2F;目录
 常用参数1234567891011 其中z为压缩，在网络性能足够的情况下，不开会快(公网才建议开，另外在内容本身为有损压...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2023/04/05">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
                 </div>
                 <!-- tags -->
@@ -952,7 +978,7 @@ function GetSelectedText (){
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -10562,9 +10588,9 @@ function GetSelectedText (){
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture-Photo-Image
+            Picture&Photo&Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10603,8 +10629,14 @@ function GetSelectedText (){
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10629,7 +10661,7 @@ function GetSelectedText (){
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         

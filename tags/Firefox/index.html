@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,8 +265,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -437,11 +433,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -458,9 +455,11 @@
 可以看到火狐有以下注册表（我才不会说我没记路径直接搜TaskBarIDs的，结果只有FF跟Thunderbird有这个），大概是为了区分不同通道的火狐。(但yysy,只有火狐出这个问题还是挺拉的 -2021-08-06)
 123HKEY_CURRENT_USER\SOFTWARE\Mozilla\Firefox\TaskBarIDsHKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2016/02/17">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
                 </div>
                 <!-- tags -->
@@ -473,7 +472,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -500,6 +499,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -511,9 +511,11 @@
                 很久没用火狐了，我印象里这个最新版的能用，但我记忆力毕竟像🐟 -2021-08-06其实还是推荐用stylish的
 123456789101112131415161718192021222324252627282930/*标签最小宽度*/ .tabbrowser-tab&#123;min-width:50px !important;&#125;/*书签下拉菜单的最大宽度*/   menu.bookmark-item, menuitem.bookmark-item &#123; max-width: 20em !important; &#125;/*书签栏下拉列表中去除&quot;打开所...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/09/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
                 </div>
                 <!-- tags -->
@@ -526,7 +528,7 @@
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -547,6 +549,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -560,9 +563,11 @@ chrome应用商店(推荐): https://chrome.google.com/webstore/detail/dbjbempljh
 Edge应用商店(推荐): https://microsoftedge.microsoft.com/addons/detail/odphnbhiddhdpoccbialllejaajemdio
 Firefox应用商店(推荐): https://addons.mozilla.org...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/07/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/07/22</span>
                 </div>
                 <!-- tags -->
@@ -575,7 +580,7 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -597,6 +602,7 @@ Firefox应用商店(推荐): https://addons.mozilla.org...
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -615,9 +621,11 @@ extensions.blocklist.enabled		将设置是否检测阻止的插件，例如旧�
 gfx.color_management.enablev4		改为true后支援ICCV4    （International Color Consortium）  
 permissions.defaul...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2016/01/06">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/06</span>
                 </div>
                 <!-- tags -->
@@ -630,7 +638,7 @@ permissions.defaul...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -651,6 +659,7 @@ permissions.defaul...
         
         
         
+        
             
         
         <article class="index-post">
@@ -663,9 +672,11 @@ permissions.defaul...
 同时有Firefox以及Chrome的扩展，但是Firefox的不知道战斗力高了多少倍，可惜火狐自身给自己来了一刀
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/12/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/12/01</span>
                 </div>
                 <!-- tags -->
@@ -678,7 +689,7 @@ permissions.defaul...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -703,6 +714,7 @@ permissions.defaul...
         
         
         
+        
             
         
         <article class="index-post">
@@ -716,9 +728,11 @@ permissions.defaul...
 具体进到about:config里将devtools.selfxss.count调到100就可以了
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/08/08">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/08/08</span>
                 </div>
                 <!-- tags -->
@@ -731,7 +745,7 @@ permissions.defaul...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -752,6 +766,7 @@ permissions.defaul...
         
         
         
+        
             
         
         <article class="index-post">
@@ -765,9 +780,11 @@ permissions.defaul...
 来源http://tieba.baidu.com/p/2828150548
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/13">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/13</span>
                 </div>
                 <!-- tags -->
@@ -780,7 +797,7 @@ permissions.defaul...
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -801,6 +818,7 @@ permissions.defaul...
         
         
         
+        
             
         
         <article class="index-post">
@@ -816,9 +834,11 @@ tete009下载地址：http://www1.plala.or.jp/tete009/en-US/software.html#FFDL
 tete009版Firefox 相较于官方版本的改进和不同主要有:
 根据不同的CPU指令集制作不同的版本,使Firefox能够做到根据不同的平台而优化. 这也是众多第三方编译版本共同的特征.改进了Firefox的内...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/03">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/03</span>
                 </div>
                 <!-- tags -->
@@ -831,7 +851,7 @@ tete009版Firefox 相较于官方版本的改进和不同主要有:
         
         
         <span class="post-category" data-categories="Browser"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Browser
             </span>
@@ -10437,9 +10457,9 @@ tete009版Firefox 相较于官方版本的改进和不同主要有:
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture-Photo-Image
+            Picture&Photo&Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10478,8 +10498,14 @@ tete009版Firefox 相较于官方版本的改进和不同主要有:
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10504,7 +10530,7 @@ tete009版Firefox 相较于官方版本的改进和不同主要有:
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         

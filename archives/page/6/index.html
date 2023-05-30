@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,8 +265,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -437,11 +433,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -458,9 +455,11 @@
 Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！
 我给的不是最新的，可以去他博客翻下最新的https://www.luochenzhimu.com/?s=thund...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2023/04/23">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
                 </div>
                 <!-- tags -->
@@ -473,7 +472,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -496,6 +495,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
             
         
         <article class="index-post">
@@ -508,9 +508,11 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
 说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。实在不行还有大杀器net use  * /del，不过需要注意这个会删掉网络映射，微软不支持带网络映射的直接重连，需要不删除映射重连的方式大概只有重启。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2023/03/23">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
                 </div>
                 <!-- tags -->
@@ -523,7 +525,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -544,6 +546,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
             
         
         <article class="index-post">
@@ -556,9 +559,11 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
 理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
 说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)sam...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/19">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
                 </div>
                 <!-- tags -->
@@ -571,7 +576,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -594,6 +599,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
             
         
         <article class="index-post">
@@ -606,9 +612,11 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
 推荐ABW-022JBS-016
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/23">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/23</span>
                 </div>
                 <!-- tags -->
@@ -634,6 +642,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
             
         
         <article class="index-post">
@@ -648,9 +657,11 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
 别的暂时想不起来咋说，挺好用的一个东西
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -663,7 +674,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -690,6 +701,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
             
         
         <article class="index-post">
@@ -703,9 +715,11 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
 企业方向的就别说了，最重要的一个SMB Direct(RDMA)中文版干脆就弄没了。
 然后...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2019/05/28">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -718,7 +732,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         <span class="post-category" data-categories="System"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 System
             </span>
@@ -738,6 +752,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -832,9 +847,11 @@ NTFS
 
 稀疏 V...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -847,7 +864,7 @@ NTFS
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -868,6 +885,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -879,9 +897,11 @@ NTFS
                 突然看到关键日志其实把我吓了一跳。Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。想必是电脑快爆炸了。这可把我吓得不行。然后呢，我的注意力就转移到了这“安全和维护”上。这破玩意到底在哪呢？我宇宙无敌人间第一人性化操作系统Windows才不会告诉你我把他放哪了，少年啊，去寻找吧。
 我找了半天终于在计算机右键属性里找到了这玩意(其实找了两次，第一次找到后气的不行然后关了。结果忘了这东西在哪又找了一次。)然后发现一点都不”关键”，因为我关了UAC。电脑是否需要启用UAC我在这里不再做讨论。毕竟Win10系...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -894,7 +914,7 @@ NTFS
         
         
         <span class="post-category" data-categories="System"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 System
             </span>
@@ -919,6 +939,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -933,9 +954,11 @@ NTFS
 
 然后把SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols 复制进去。(http://msdl.microsoft.com/download/s...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2014/01/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -948,7 +971,7 @@ NTFS
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -971,6 +994,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -987,9 +1011,11 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
 
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2018/05/06">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -1002,7 +1028,7 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
         
         
         <span class="post-category" data-categories="System"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 System
             </span>
@@ -10610,9 +10636,9 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture-Photo-Image
+            Picture&Photo&Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10651,8 +10677,14 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10677,7 +10709,7 @@ https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/(两者应�
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         

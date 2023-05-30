@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,8 +265,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -437,11 +433,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -456,9 +453,11 @@
                 不正常的使用rsync可能会造成灾难性的后果，因此建议先带-n跑一次试试请务必注意Linux命令的路径问题带不带’&#x2F;‘是不一样的。请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功rsync -avP source destination --log-file=$HOME/.rsync.log其中  source destination 都可以使用sshroot@ip:&#x2F;目录
 常用参数1234567891011 其中z为压缩，在网络性能足够的情况下，不开会快(公网才建议开，另外在内容本身为有损压...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2023/04/05">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/06/18</span>
                 </div>
                 <!-- tags -->
@@ -471,7 +470,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -494,6 +493,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -510,9 +510,11 @@
 打开CMD,输入
  1netsh wlan set hostednetwork mode...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/12/04">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/02</span>
                 </div>
                 <!-- tags -->
@@ -525,7 +527,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -543,6 +545,7 @@
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -564,9 +567,11 @@
 
 便携版pip相关操作都需要使用python -m pip，否则在同时具有系统python环境跟便携版的情况下，即便直接在便携版pip所在目录执行pip都不会操作便携版的环境...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2022/03/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/08</span>
                 </div>
                 <!-- tags -->
@@ -579,7 +584,7 @@
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -600,6 +605,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -617,9 +623,11 @@ git 文档https://git-scm.com/docs
 1$ git branch -d &lt;BranchName&gt;
 reset 删除错误提交的commit使用这个的前提条件是没有push,一般不建议push -fgit reset --hard &lt;commit_id&gt; 回退到某一版本。git reset --hard head~1 回退一个版本(数字2自然就是两个版本啦)然后 git push -...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/04/21">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/04/21</span>
                 </div>
                 <!-- tags -->
@@ -632,7 +640,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -655,6 +663,7 @@ reset 删除错误提交的commit使用这个的前提条件是没有push,一般
         
         
         
+        
             
         
         <article class="index-post">
@@ -669,9 +678,11 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
 当然，New-Item这个命令还能用来创建文件或文件夹啥的硬链接就写HardLink，具体见文档
 官方文档https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.manage...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2020/01/04">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/01/04</span>
                 </div>
                 <!-- tags -->
@@ -684,7 +695,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -705,6 +716,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         
+        
             
         
         <article class="index-post">
@@ -719,9 +731,11 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
 然后可以通过下面代码解除限制(需要管理员权限)
 123456PS C:\Windows\system32&gt;  Set-ExecutionPolicy UnRestricted执行策略更改执行策略可帮助你防止执行不信任的脚本。更改执行策略可能会产生安全风险，如 https:/go.microsoft.com/fwlink/?LinkID=135170中的 about_Execution_Policies 帮助主题所述。是否要更改...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2019/07/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/22</span>
                 </div>
                 <!-- tags -->
@@ -734,7 +748,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -759,6 +773,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         
+        
             
         
         <article class="index-post">
@@ -769,9 +784,11 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
             <div class="abstract-content">
                 1netsh wlan show profiles name=&quot;XX&quot; key=clear
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2019/06/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/06/01</span>
                 </div>
                 <!-- tags -->
@@ -784,7 +801,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -805,6 +822,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         
+        
             
         
         <article class="index-post">
@@ -818,9 +836,11 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
 几个命令一通乱跑似乎就好了
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2019/05/24">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/05/24</span>
                 </div>
                 <!-- tags -->
@@ -833,7 +853,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -858,6 +878,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         
+        
             
         
         <article class="index-post">
@@ -869,9 +890,11 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
                 在使用这个命令之前，首先需要了解Windows的活动分区的意思。并了解硬盘GPT格式下esp分区的作用，避免因其他原因导致引导失败。
 1234567891011121314151617181920212223242526272829303132333435363738394041bcdboot &lt;source&gt; [/l &lt;locale&gt;] [/s &lt;volume-letter&gt; [/f &lt;firmware&gt;]] [/v] [/m [&#123;OS Loader ID&#125;]] [/addlast] [/p] [/c]  source...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2017/08/19">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/08/19</span>
                 </div>
                 <!-- tags -->
@@ -884,7 +907,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -905,6 +928,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         
+        
             
         
         <article class="index-post">
@@ -918,9 +942,11 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
 源代码:https://github.com/jakearchibald/svgomg https://github.com/svg/svgo
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2017/07/29">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/07/29</span>
                 </div>
                 <!-- tags -->
@@ -933,7 +959,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
         
         
         <span class="post-category" data-categories="Code"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Code
             </span>
@@ -10539,9 +10565,9 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture-Photo-Image
+            Picture&Photo&Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10580,8 +10606,14 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10606,7 +10638,7 @@ Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         

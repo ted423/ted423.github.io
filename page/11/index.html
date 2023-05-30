@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -269,8 +267,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -452,11 +448,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -473,9 +470,11 @@
 然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了图片挂了
 解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。而里...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/23">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
                 </div>
                 <!-- tags -->
@@ -488,7 +487,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -515,6 +514,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -527,9 +527,11 @@
 理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。
 说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)sam...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/19">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
                 </div>
                 <!-- tags -->
@@ -542,7 +544,7 @@
         
         
         <span class="post-category" data-categories="Issue"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Issue
             </span>
@@ -565,6 +567,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -578,9 +581,11 @@
 x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。使用桌面登录会跟你显示器登录是不一样。当然还能用X11这里引入一个小故事
 当我看到x2go在x11可以选...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/15">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/15</span>
                 </div>
                 <!-- tags -->
@@ -593,7 +598,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -618,6 +623,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         
+        
             
         
         <article class="index-post">
@@ -632,9 +638,11 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
 杨蕙如赚钱的套路：办一张台湾某银行信用卡，获得刷卡消费红利点数（相当于“消费积分”）8倍的优惠，然后在购物台用信用卡购买了600万元（台币）的礼券，转卖给亲友后让亲友在网上拍卖，自己再从网上刷卡买回。这样她的红利点数（消费积分）迅速累积到800余万点，她用这些点数兑换航空公司的头等舱机票，以半价在网上出售，短短两个月内获利上百万元新台币。
 杨蕙如几年...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/03">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -654,6 +662,7 @@ x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用
         
         
         
+        
             
         
         <article class="index-post">
@@ -670,9 +679,11 @@ https://github.com/rizonesoft/Notepad3
 曾经有个notepad2，最大的作用是完全替换微软的notepad，使用的是映像劫持的方式。所以即便装了别的文本编辑器，我也还是喜欢再装一个notepad2以便彻底干死微软的。可惜弃更了。
 所以这个notepad3也能做到，并且开源。就是不知道会不会有Notep...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/02">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -685,7 +696,7 @@ https://github.com/rizonesoft/Notepad3
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -710,6 +721,7 @@ https://github.com/rizonesoft/Notepad3
         
         
         
+        
             
         
         <article class="index-post">
@@ -721,9 +733,11 @@ https://github.com/rizonesoft/Notepad3
                 https://github.com/mcmilk/7-Zip-zstd之前某个群吐槽问7z是不是还是VC6编译，别人给的不会覆盖掉原版的7z总之不错。虽然还没详细用到我能推翻之前的结论另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/02">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -736,7 +750,7 @@ https://github.com/rizonesoft/Notepad3
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -761,6 +775,7 @@ https://github.com/rizonesoft/Notepad3
         
         
         
+        
             
         
         <article class="index-post">
@@ -778,9 +793,11 @@ https://github.com/rizonesoft/Notepad3
 
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -793,7 +810,7 @@ https://github.com/rizonesoft/Notepad3
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -816,6 +833,7 @@ https://github.com/rizonesoft/Notepad3
         
         
         
+        
             
         
         <article class="index-post">
@@ -828,9 +846,11 @@ https://github.com/rizonesoft/Notepad3
 官网https://www.sumatrapdfreader.org/free-pdf-reader.html
 githubhttps://github.com/sumatrapdfr...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -843,7 +863,7 @@ githubhttps://github.com/sumatrapdfr...
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -868,6 +888,7 @@ githubhttps://github.com/sumatrapdfr...
         
         
         
+        
             
         
         <article class="index-post">
@@ -879,9 +900,11 @@ githubhttps://github.com/sumatrapdfr...
                 第三方Office部署工具 神器不过清理的话，并不会完全干净(不过微软官方工具也一样)https://otp.landian.vip/zh-cn/
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -894,7 +917,7 @@ githubhttps://github.com/sumatrapdfr...
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -917,6 +940,7 @@ githubhttps://github.com/sumatrapdfr...
         
         
         
+        
             
         
         <article class="index-post">
@@ -929,9 +953,11 @@ githubhttps://github.com/sumatrapdfr...
 Office 2013 32位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_W32_ChnSimp_MLF_X19-35809.ISO|902180864|BBE5CFB869A057C75DC996C14548FAD0|/
 Office 2013 64位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_2013w_SP1_64Bit_ChnSimp_MLF_...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/07/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/08</span>
                 </div>
                 <!-- tags -->
@@ -944,7 +970,7 @@ Office 2013 64位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_20
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -975,7 +1001,7 @@ Office 2013 64位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_20
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1048,9 +1074,29 @@ Office 2013 64位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_20
     
     
     
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
+        <div class="profile-link-item">
+            <a href="/about" class="about-me">
+                
+                    <i class="fas fa-id-card profile-item-icon"></i>
+                
+                ABOUT ME
+            </a>
         </div>
+    
+    
+        
+        
+                
+                
+        <div class="profile-link-item">
+            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
+                
+                    <i class="fas fa-search profile-item-icon"></i>
+                
+                SEARCH
+            </a>
+        </div>
+    
     
 </div>
 
@@ -10635,9 +10681,9 @@ Office 2013 64位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_20
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture-Photo-Image
+            Picture&Photo&Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10676,8 +10722,14 @@ Office 2013 64位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_20
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10702,7 +10754,7 @@ Office 2013 64位专业增强版ed2k://|file|SW_DVD5_Office_Professional_Plus_20
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         

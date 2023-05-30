@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -267,8 +265,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed">
     <!-- back to top button -->
@@ -437,11 +433,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -456,9 +453,11 @@
                 我想大多都知道1080p的意思，但是我想说只是了解个大概不行。字母p意为逐行扫描（progressive scan），但是需注意的是只要水平扫描线超过1080条就能称之为1080p，比方说分辨率1000×1080同样能称为1080p.有了逐行扫描，就有隔行扫描（interlaced scan），1080I以及1080p的就在这里，当然，1080I只有540条线。另外1080I和540P是两个概念，具体就在逐行和隔行上,虽然都是540条线(笑)。还有个需要了解的概念是D端子,就因为这个，往往有人把1080I和540P划上等号。关于隔行扫描，还有个需要了解的概念就是去交错
 然后就到了High...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/11/18">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/18</span>
                 </div>
                 <!-- tags -->
@@ -471,7 +470,7 @@
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -490,6 +489,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -501,9 +501,11 @@
                 原文:http://blog.caoyue.me/post/ip-address-as-octal作者:且听疯吟一个奇怪的地址，形如 23.244.200.000000000354，而且这个地址居然还是可以访问的。很显然这不是域名，ping 一下，返回地址来自于 23.244.200.236，可以看出 000000000354 是 236 的八进制表示形式。
 混合进制原来 IP 地址居然可以混合进制来显示……前导的 0 的数字会被当作八进制来处理。而且可以同时使用不同进制：包括十六进制、八进制和十进制。比如 http://0x17.244.0xc8.00000354 这样奇葩的地址也是可...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/11/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/11/01</span>
                 </div>
                 <!-- tags -->
@@ -516,7 +518,7 @@
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -541,6 +543,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -552,9 +555,11 @@
                 用户名: telecomadmin密码: nE7jA%5m（区分大小写）
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/10/11">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/10/11</span>
                 </div>
                 <!-- tags -->
@@ -567,7 +572,7 @@
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -588,6 +593,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -601,9 +607,11 @@
 把搜索范围限定在网页标题中——intitle网页标题通常是对网页内容提纲挈领式的归纳。把查询内容范围限定在网页标题中，有时能获得良好的效果。使用的方式，是把查询内容中，特别关键的部分，用“intitle:”领起来。例如，找林青霞的写真，就可以这样查询：写真 intitle:林青霞注意，intitle:和后面的关键词之间，不要有空格。
 把搜索范围限定在特定站点中——site有时候，您如果知道某个站点中有自己需要找的东西，就可以把搜索范围限定在这个站点中，提高查询效率。使用的方式，是在查询内容的后面，加上“site:站...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/10/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/10/01</span>
                 </div>
                 <!-- tags -->
@@ -616,7 +624,7 @@
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -637,6 +645,7 @@
         
         
         
+        
             
         
         <article class="index-post">
@@ -651,9 +660,11 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
 新接触ubuntu（base on debian）的人，大多会因为安装中没有提示root密码而不太清楚为什么会这样。Ubuntu的默认root密码是随机的，即每次开机都有一个新的root密码。
 如何设定...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/09/16">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/09/16</span>
                 </div>
                 <!-- tags -->
@@ -666,7 +677,7 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -691,6 +702,7 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         
         
         
+        
             
         
         <article class="index-post">
@@ -702,9 +714,11 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
                 https://cpb-us-e1.wpmucdn.com/blogs.ntu.edu.sg/dist/7/881/files/2015/05/Chinese-Linguistics_Citation-Styles.pdf
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/17">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/17</span>
                 </div>
                 <!-- tags -->
@@ -717,7 +731,7 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -733,6 +747,7 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -757,9 +772,11 @@ Debian默认创建的用户不在sudoers中，因此大部分用户可能会比�
 http://www.torrent.org.cn/
 https...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2015/01/01">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
                 </div>
                 <!-- tags -->
@@ -772,7 +789,7 @@ https...
         
         
         <span class="post-category" data-categories="Document"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Document
             </span>
@@ -10380,9 +10397,9 @@ https...
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture-Photo-Image
+            Picture&Photo&Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10421,8 +10438,14 @@ https...
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10447,7 +10470,7 @@ https...
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         

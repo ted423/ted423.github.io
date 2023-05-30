@@ -9,7 +9,6 @@
 
 
 
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -195,17 +194,16 @@
     }
 </style>
 
-    <link rel="preload" href="/css/style.css?v=202107" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="/css/dark.css?v=202107" as="style">
-    <link rel="stylesheet" href="/css/mobile.css?v=202107" media="(max-width: 980px)">
+    <link rel="preload" href="/css/style.css?v=" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=" as="style">
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="/css/mobile.css?v=" media="(max-width: 960px)">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" as="script">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
-    <link rel="preload" href="/scripts/main.js?v=202107" as="script">
-    <link rel="preload" href="/scripts/dark.js?v=202107" as="script">
+    <link rel="preload" href="/scripts/main.js?v=" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=" as="script">
     <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
     <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
-    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/js/all.min.js" data-auto-replace-svg="nest"></script>
     <!-- algolia -->
     
         <script>
@@ -269,8 +267,6 @@
     
 </header>
 
-        <!-- dark mode -->
-        <script src="/scripts/dark.js"></script>
         <!-- fixed footer -->
         <footer class="footer-fixed index-footer-fixed">
     <!-- back to top button -->
@@ -452,11 +448,12 @@
     asyncErr
   )
 </script>
-        
+
             <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
             <div class="container container-unloaded">
                 <main class="main index-page">
     
+        
         
         
         
@@ -474,9 +471,11 @@
 别的暂时想不起来咋说，挺好用的一个东西
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -489,7 +488,7 @@
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -513,6 +512,7 @@
         </article>
         <div class="index-post-divider"></div>
     
+        
         
         
         
@@ -607,9 +607,11 @@ NTFS
 
 稀疏 V...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -622,7 +624,7 @@ NTFS
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -643,6 +645,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -657,9 +660,11 @@ NTFS
 还需要配合woff2woff2，才能生成woff2
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/02/15</span>
                 </div>
                 <!-- tags -->
@@ -672,7 +677,7 @@ NTFS
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -705,6 +710,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -716,9 +722,11 @@ NTFS
                 突然看到关键日志其实把我吓了一跳。Microsoft-Windows-Diagnosis-Scheduled 系统维护检测到需要你注意的问题。已将通知发送到“安全和维护”。想必是电脑快爆炸了。这可把我吓得不行。然后呢，我的注意力就转移到了这“安全和维护”上。这破玩意到底在哪呢？我宇宙无敌人间第一人性化操作系统Windows才不会告诉你我把他放哪了，少年啊，去寻找吧。
 我找了半天终于在计算机右键属性里找到了这玩意(其实找了两次，第一次找到后气的不行然后关了。结果忘了这东西在哪又找了一次。)然后发现一点都不”关键”，因为我关了UAC。电脑是否需要启用UAC我在这里不再做讨论。毕竟Win10系...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
                 </div>
                 <!-- tags -->
@@ -731,7 +739,7 @@ NTFS
         
         
         <span class="post-category" data-categories="System"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 System
             </span>
@@ -756,6 +764,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -770,9 +779,11 @@ NTFS
 另外注意这个对移动硬盘可能相性不好，也可能是文件系统的锅，建议优先U盘
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/02/24</span>
                 </div>
                 <!-- tags -->
@@ -785,7 +796,7 @@ NTFS
         
         
         <span class="post-category" data-categories="System"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 System
             </span>
@@ -810,6 +821,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -823,9 +835,11 @@ NTFS
 当然，使用的理解上可能也有翻译带来的问题，例如截图后里面可以设置是否上传。
 总之因为开源软件是可以所有人参...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/21">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/05/02</span>
                 </div>
                 <!-- tags -->
@@ -838,7 +852,7 @@ NTFS
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -865,6 +879,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -878,9 +893,11 @@ NTFS
 而且我是网上找的修改版本，不是上面得Github,不确定能不能正常用实际测试Linux上的脚本没法完成下载，不过可以用Windows上下的文件直接替换即可2015第一次发布
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/10">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/10/08</span>
                 </div>
                 <!-- tags -->
@@ -893,7 +910,7 @@ NTFS
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -920,6 +937,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -930,9 +948,11 @@ NTFS
             <div class="abstract-content">
                 还可以用来查壳什么的，像我这种普通人可以查看下人家软件用的什么编译工具ExEinfo PE Win32 bit identifier by A.S.L. - exe pe checker for packers ,exeprotectors ,packer detector with solve hint for unpack .Internal zip ripper exe pe ripper …VBasicfake sign added.MD5 and SHA1 file calculator..NET detector , analyze executable.Non execut...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/12/10">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/04/09</span>
                 </div>
                 <!-- tags -->
@@ -945,7 +965,7 @@ NTFS
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -966,6 +986,7 @@ NTFS
         
         
         
+        
             
         
         <article class="index-post">
@@ -981,9 +1002,11 @@ SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基
 svnadmin dump 出来的文件比服务器上的repo还要大。
 svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，所以记得一...
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/11/22">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/11/22</span>
                 </div>
                 <!-- tags -->
@@ -1005,6 +1028,7 @@ svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常�
         
         
         
+        
             
         
         <article class="index-post">
@@ -1017,9 +1041,11 @@ svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常�
 适用于tigervnc
 
             </div>
+            <!-- read more -->
+            
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date">
+                <div class="abstract-date" title="Last updated: 2021/11/17">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/19</span>
                 </div>
                 <!-- tags -->
@@ -1032,7 +1058,7 @@ svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常�
         
         
         <span class="post-category" data-categories="Software"">
-            <i class="far fa-folder post-category-icon"></i>
+            <i class="fas fa-folder post-category-icon"></i>
             <span class="post-category-text">
                 Software
             </span>
@@ -1061,7 +1087,7 @@ svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常�
                 <!-- profile -->
                 
                     <div class="profile">
-    <img class="profile-avatar" alt="avatar" src= /avatar/avatar.jpg />
+    <img class="profile-avatar hide-border" alt="avatar" src= /avatar/avatar.jpg />
     <div class="profile-name">ted423</div>
     
         <div class="profile-signature">
@@ -1134,9 +1160,29 @@ svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常�
     
     
     
-        <div class="about-me">
-            <a href="/about">ABOUT ME</a>
+        <div class="profile-link-item">
+            <a href="/about" class="about-me">
+                
+                    <i class="fas fa-id-card profile-item-icon"></i>
+                
+                ABOUT ME
+            </a>
         </div>
+    
+    
+        
+        
+                
+                
+        <div class="profile-link-item">
+            <a target="_blank" rel="noopener" href="https://www.google.com/search?q=site%3Ated423.github.io" class="search-me">
+                
+                    <i class="fas fa-search profile-item-icon"></i>
+                
+                SEARCH
+            </a>
+        </div>
+    
     
 </div>
 
@@ -10721,9 +10767,9 @@ svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常�
             Issue
         </span>
     
-        <span class="sidebar-category-name" data-categories="Picture-Photo-Image">
+        <span class="sidebar-category-name" data-categories="Picture&Photo&Image">
             <span class="iconfont-archer">&#xe60a;</span>
-            Picture-Photo-Image
+            Picture&Photo&Image
         </span>
     
         <span class="sidebar-category-name" data-categories="Optimization">
@@ -10762,8 +10808,14 @@ svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常�
     }
 </script>
 
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
         <!-- main func -->
-        <script src="/scripts/main.js"></script>
+        <script src="/scripts/main.js?v="></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v="></script>
         <!-- fancybox -->
         <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
         <!-- algolia -->
@@ -10788,7 +10840,7 @@ svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常�
     </div>
 </div>
 
-            <script src="/scripts/search.js" defer></script>
+            <script src="/scripts/search.js?v=" defer></script>
         
         <!-- busuanzi -->
         
