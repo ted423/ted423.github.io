@@ -460,6 +460,57 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/SMB/">
+                
+                <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问网络共享路径</span>
+            </a>
+            <div class="abstract-content">
+                其实最简单的方法是重启。
+说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。实在不行还有大杀器net use  * /del，不过需要注意这个会删掉网络映射，微软不支持带网络映射的直接重连，需要不删除映射重连的方式大概只有重启。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/03/23">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/rdpclip/">
                 
                 <span class="abstract-title-text">[问题处理]RDP下无法正常复制粘贴问题的处理</span>
@@ -953,62 +1004,6 @@ https://www.zhihu.com/question/501676440
         <a class="post-tag" href="javascript:void(0);" data-tags="CMD">CMD</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Document/Encode/x265/">
-                
-                <span class="abstract-title-text">x265参数解析</span>
-            </a>
-            <div class="abstract-content">
-                参考资料
-
-https://tieba.baidu.com/p/6627144750
-https://x265.readthedocs.io/en/3.1/cli.html
-https://vcb-s.nmm-hd.org/Dark%20Shrine/[VCB-Studio][教程10]x265%202.9参数设置/[VCB-Studio][教程10]x265%202.9参数设置.pdf
-
-crf,qpqp 电脑认为的恒定画质(但一般不进行设置)crf 人眼认为的恒定画质，但是运动时候画质会降低来节省码率数值越低画质越好。一般低于等于18可以认为和原画差不多(主观观点)
-ctu &lt;...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/26">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2020/11/28</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Document"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Document
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Encode">Encode</a>
     
 </div>
 
