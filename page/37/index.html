@@ -460,6 +460,113 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Git/Github%20Commit%20failed/">
+                
+                <span class="abstract-title-text">[Git]处理Github的Commit failed:Failed to create a new commit</span>
+            </a>
+            <div class="abstract-content">
+                2015.02.15确认没再出现类似错误，大概Github的Windows客户端更新了
+好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是.git文件夹里有个index.lock的问题…..只要删掉就好了。大概在创建commit的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成commit,但由于之前已经有了index.lock（但没生成commit），而git不允许index.lock的覆盖，所以就卡住了…
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/01/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Github">Github</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Git">Git</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/WWW/2unicode/">
+                
+                <span class="abstract-title-text">[Javascript]中文等字符转化为unicode(UTF-16 LE)</span>
+            </a>
+            <div class="abstract-content">
+                嘛，挺不错的。原文:http://blog.csdn.net/geovindu/article/details/9119725
+利用的javascript的 charCodeAthttp://www.w3school.com.cn/jsref/jsref_charCodeAt.asp相关函数还有unescape() 以及escape()网页上的unicode码常见的形式除了”\uXXXX”还有”&amp;#xXXXX;”,其中“&amp;#xXXXX;”是16进制，“&amp;#XXXX”为10进制Java String EncoderJavaScript String EncoderD...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2015/01/01">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="字符编码">字符编码</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Javascript">Javascript</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Code/WWW/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%97%85%E6%8E%A2/">
                 
                 <span class="abstract-title-text">[Javascript]浏览器嗅探</span>
@@ -874,115 +981,6 @@ magnet:?xt=urn:btih:b1b122c4d6ff1902c59fee821127a5eec21b31d7&amp;dn=现在就想
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Windbg/">
-                
-                <span class="abstract-title-text">[转载]WINDBG分析DMP方法（2012.8.19修改）</span>
-            </a>
-            <div class="abstract-content">
-                Windbg下载地址:http://www.windbg.org/然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。像别的什么软件可能也会要不同的组件？另外这憨逼SDK不同版本还能同时装原文:http://bbs.icafe8.com/thread-400104-1-1.html
-
-点击File里的”Symbol File Path”
-
-然后把SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols 复制进去。(http://msdl.microsoft.com/download/s...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/12/22</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="转载">转载</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/">
-                
-                <span class="abstract-title-text">推荐一些完本的轻小说</span>
-            </a>
-            <div class="abstract-content">
-                原来推荐的，现在可能不推荐了，但没重新看( — 2021-07-03
-小说全部是在轻之国度收的
-个人进行了一些除错以及修改。
-https://www.dropbox.com/sh/648x89gqo5lmqd7/AABFE4tGc_vpoSrEk53z3yvga?dl=0(这里是最新的)
-https://pan.baidu.com/s/1dDvhFSP
-大小姐×执事!
-    
-        
-            大小姐×执事！
-        
-        
-            
-        
-        
-            れでぃ×ばと！
-        ...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2014/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/20</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="完结">完结</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="小说">小说</a>
     
 </div>
 
@@ -3065,7 +3063,41 @@ https://pan.baidu.com/s/1dDvhFSP
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6394,7 +6426,7 @@ https://pan.baidu.com/s/1dDvhFSP
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 373
+        Total : 375
         </div>
         <!-- search  -->
         
@@ -9423,6 +9455,12 @@ https://pan.baidu.com/s/1dDvhFSP
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/etc/%E5%AE%BD%E5%AE%B9%E6%82%96%E8%AE%BA/">[转载]苏了了：宽容的悖论———当代西方宽容理论困境的批判性反思</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span>
             <a class="archive-post-title" href="/Software/Remote/rdpwrap/">[开源]rdpwrap</a>
         </li>
@@ -9838,6 +9876,12 @@ https://pan.baidu.com/s/1dDvhFSP
             <div class="archive-year"> 2014 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span>
+            <a class="archive-post-title" href="/Game/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E/%E6%88%983%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">PSP游戏-战场的女武神3 尘封的硝烟 资源索引</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/03</span>
@@ -10629,6 +10673,11 @@ https://pan.baidu.com/s/1dDvhFSP
             <span class="sidebar-tag-name" data-tags="Archived">
                 <span class="iconfont-archer">&#xe606;</span>
                 Archived
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="PSP,战场的女武神[Valkyria Chronicles],☆,汉化">
+                <span class="iconfont-archer">&#xe606;</span>
+                PSP,战场的女武神[Valkyria Chronicles],☆,汉化
             </span>
         
     </div>

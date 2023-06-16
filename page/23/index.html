@@ -460,6 +460,110 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Software/DISM++/">
+                
+                <span class="abstract-title-text">[封装]DISM++ 以及一些DISM相关的东西</span>
+            </a>
+            <div class="abstract-content">
+                http://www.chuyu.me/zh-Hans/
+DISM是微软本身提供的关于WIM的调整工具，可以用来封装系统镜像。据软件介绍，DISM++是基于CBS(Component Based Servicing Reference)实现的，可以当作DISM的GUI，但不是DISM 的 GUI版。就我个人的使用习惯，我是会用这个解封装，但实际操作时会把这软件关掉，用原生DISM命令行做操作，包括开机软件管理我也是用autoruns加载离线系统操作。最后再用这个软件重新封装。虽然这个软件看起来功能很多，但还是不能涵盖所有的命令其实我一直以为这软件是开源的，看网上也这么说，今天仔细观察了一...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/04/26</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Software"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Software
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Issue/Kerberos/">
+                
+                <span class="abstract-title-text">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span>
+            </a>
+            <div class="abstract-content">
+                参考资料https://support.microsoft.com/zh-hk/help/327825/problems-with-kerberos-authentication-when-a-user-belongs-to-many-grou
+原因在于用户属于多个群组，而共享文件夹给的权限也给的是用户所在的群组，但由于而Kerberos 的 MaxTokenSize 默认没有设置，长度不够造成验证失败，具体的还是看资料
+可以使用如下注册表
+1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SYSTEM\Current...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2018/04/26">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/09/24</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/Security/ESET/">
                 
                 <span class="abstract-title-text">ESET 问题记录</span>
@@ -832,111 +936,6 @@ magnet:?xt=urn:btih:6C6WABOUAV4NZVZIRCJB4QWKM5NWA3ZM&amp;dn=(C92)+[兔子老大+
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Font">Font</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/CAservice/">
-                
-                <span class="abstract-title-text">关于华为EMUI系统自动禁止google相关应用联网问题</span>
-            </a>
-            <div class="abstract-content">
-                原因在于华为CAservice会去检测是否能联通谷歌的东西，否则就会自己禁止连接也只有在VPN一直开的情况下才会OK。其实还是很蛋疼理论Clash能比较好的解决问题 -2021-09-23
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/09/04">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/09/04</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="过时">过时</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Comic/%E5%A4%A9%E9%99%8D%E5%A6%96%E7%8B%90/">
-                
-                <span class="abstract-title-text">[Comic]天降妖狐(おきつね日和)</span>
-            </a>
-            <div class="abstract-content">
-                在线地址http://manhua.dmzj.com/tianjiangyaohu/作为一个日文维基都没有记录的作品来讲真是杯具啊，不过呢，虽然结局仓促了些，也仍然算是一步剧情不错的作品。
-官网:http://www.fujimishobo.co.jp/sp/201306okitsune/日文介绍:バカでスケベな龍太郎[って俺のことかーっ!?］の前に狐の少女・柊が現れたんだ。願いを叶えてくれると言うから、当然「モッテモテになりたい！」と叫んだね。ところがその対価に俺自身を欲しいってマジすか〜!?作者：泽野明
-来源链接http://pan.baidu.com/s/1kTHp5AZ
-BT
-m...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2017/09/02">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2017/09/02</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Comic"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Comic
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Comic">Comic</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="完结">完结</a>
     
 </div>
 
@@ -3019,7 +3018,41 @@ m...
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6348,7 +6381,7 @@ m...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 373
+        Total : 375
         </div>
         <!-- search  -->
         
@@ -9377,6 +9410,12 @@ m...
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">06/16</span>
+            <a class="archive-post-title" href="/etc/%E5%AE%BD%E5%AE%B9%E6%82%96%E8%AE%BA/">[转载]苏了了：宽容的悖论———当代西方宽容理论困境的批判性反思</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">05/15</span>
             <a class="archive-post-title" href="/Software/Remote/rdpwrap/">[开源]rdpwrap</a>
         </li>
@@ -9792,6 +9831,12 @@ m...
             <div class="archive-year"> 2014 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">04/21</span>
+            <a class="archive-post-title" href="/Game/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E/%E6%88%983%E8%B5%84%E6%BA%90%E7%B4%A2%E5%BC%95/">PSP游戏-战场的女武神3 尘封的硝烟 资源索引</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">04/03</span>
@@ -10583,6 +10628,11 @@ m...
             <span class="sidebar-tag-name" data-tags="Archived">
                 <span class="iconfont-archer">&#xe606;</span>
                 Archived
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="PSP,战场的女武神[Valkyria Chronicles],☆,汉化">
+                <span class="iconfont-archer">&#xe606;</span>
+                PSP,战场的女武神[Valkyria Chronicles],☆,汉化
             </span>
         
     </div>
