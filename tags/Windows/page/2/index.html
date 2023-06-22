@@ -445,6 +445,59 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Windows%20Update/0x0000011b/">
+                
+                <span class="abstract-title-text">[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</span>
+            </a>
+            <div class="abstract-content">
+                原因见这里讨论https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html
+最早 Win 10 等都有问题，后续通过更新补丁，已经可以正常添加。但 Win7 大概是被放弃了,更新到最新也没用，包括 Extended Security Updates 也都不行，只有在服务器上取消补丁或者验证才有用。所以…
+另外可以看下这里https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/08/20">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/08/23</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/Group%20Policy/">
                 
                 <span class="abstract-title-text">[文档]Group Policy(组策略)查询</span>
@@ -945,57 +998,6 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         <a class="post-tag" href="javascript:void(0);" data-tags="第三方修改|绿化">第三方修改|绿化</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/SMB/">
-                
-                <span class="abstract-title-text">[问题处理]Windows明明分配了共享权限却无法正常访问网络共享路径</span>
-            </a>
-            <div class="abstract-content">
-                其实最简单的方法是重启。
-说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输用户密码的框，毕竟微软。)net use &quot;路径&quot; /del全删掉，大部分重连就正常了。实在不行还有大杀器net use  * /del，不过需要注意这个会删掉网络映射，微软不支持带网络映射的直接重连，需要不删除映射重连的方式大概只有重启。如果还不行，去凭据管理器里创建相应服务器的用户名密码再重复上述步骤
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
     
 </div>
 
@@ -2987,7 +2989,24 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6340,7 +6359,7 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 375
+        Total : 376
         </div>
         <!-- search  -->
         
@@ -9367,6 +9386,12 @@ Thunder 11 支持迅雷云盘取回迅雷11.1.4版本的开发周期长达一个
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/22</span>
+            <a class="archive-post-title" href="/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/">Adobe Acrobat Reader DC Offline / 离线安装包</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>

@@ -445,6 +445,65 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Windows%20Fast%20Shutdown/">
+                
+                <span class="abstract-title-text">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</span>
+            </a>
+            <div class="abstract-content">
+                这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师)
+个人处理方法
+打开注册表管理器，找到
+1HKEY_CURRENT_USER\Control Panel\Desktop\
+新建一个AutoEndTasks，值改为1注意新建的时候选字符串值，也就是类型那里是REG_SZ
+找到WaitToKillAppTimeout(找不到就新建，类型应该是同上)数值改小即可
+不过笔记本的这个值没改过，我想大概...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2019/07/03">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/07</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Video/R18/SY-118/">
                 
                 <span class="abstract-title-text">[R18]SY-118</span>
@@ -936,60 +995,6 @@ Flashget://W0...
     
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Code/WWW/%E6%89%8B%E6%9C%BA%E7%89%88%E7%BD%91%E9%A1%B5%E7%9A%84meta/">
-                
-                <span class="abstract-title-text">手机版网页的meta</span>
-            </a>
-            <div class="abstract-content">
-                1&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0&quot; /&gt;
-
-具体参考这里，我还没完全看懂http://stackoverflow.com/questions/11345896/full-webpage-and-disabled-zoom-viewport-meta-tag-for-all-mobile-browsers
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/08/03">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/05</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Code"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Code
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Android">Android</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="WWW">WWW</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="iOS">iOS</a>
     
 </div>
 
@@ -2981,7 +2986,24 @@ Flashget://W0...
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6334,7 +6356,7 @@ Flashget://W0...
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 375
+        Total : 376
         </div>
         <!-- search  -->
         
@@ -9361,6 +9383,12 @@ Flashget://W0...
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">06/22</span>
+            <a class="archive-post-title" href="/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/">Adobe Acrobat Reader DC Offline / 离线安装包</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/16</span>

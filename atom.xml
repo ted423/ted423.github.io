@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2023-06-16T08:33:05.135Z</updated>
+  <updated>2023-06-22T09:46:11.582Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Adobe Acrobat Reader DC Offline / 离线安装包</title>
+    <link href="http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/"/>
+    <id>http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/</id>
+    <published>2023-06-22T09:43:41.439Z</published>
+    <updated>2023-06-22T09:46:11.582Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://get.adobe.com/cn/reader/enterprise/">https://get.adobe.com/cn/reader/enterprise/</a><br>刚好今年有更新</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://get.adobe.com/cn/reader/enterprise/&quot;&gt;https://get.adobe.com/cn/reader/enterprise/&lt;/a&gt;&lt;br&gt;刚好今年有更新&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Offline Install" scheme="http://ted423.github.io/tags/Offline-Install/"/>
+    
+  </entry>
   
   <entry>
     <title>[转载]苏了了：宽容的悖论———当代西方宽容理论困境的批判性反思</title>
@@ -559,37 +586,6 @@
     <category term="COS" scheme="http://ted423.github.io/tags/COS/"/>
     
     <category term="三次元" scheme="http://ted423.github.io/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 内存释放命令</title>
-    <link href="http://ted423.github.io/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/"/>
-    <id>http://ted423.github.io/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/</id>
-    <published>2022-06-16T10:37:00.000Z</published>
-    <updated>2022-06-16T10:41:30.785Z</updated>
-    
-    <content type="html"><![CDATA[<p>一般来说，够用的话不要清理，清理的情况仅限于内存占用满了，没法开启新进程的情况(主要是老系统)</p><p>Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers</p><p>清理前内存使用情况</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure><p>开始清理 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/vm/drop_caches</span><br></pre></td></tr></table></figure><p>清理后内存使用情况</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;一般来说，够用的话不要清理，清理的情况仅限于内存占用满了，没法开启新进程的情况(主要是老系统)&lt;/p&gt;
-&lt;p&gt;Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers&lt;/p&gt;
-&lt;p&gt;清理前内存使用情况&lt;/p&gt;
-&lt;figure class=&quot;high</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
   </entry>
   
