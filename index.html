@@ -460,6 +460,119 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/Windows%20Update/80072EE2/">
+                
+                <span class="abstract-title-text">[问题处理]Windows 7 update 报 80072EE2</span>
+            </a>
+            <div class="abstract-content">
+                Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题
+123net stop wuauservreg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdatenet start wuauserv
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/08/07">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2023/08/07</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/">
+                
+                <span class="abstract-title-text">Linux中find批量删除空文件夹</span>
+            </a>
+            <div class="abstract-content">
+                1find -type d -empty | xargs -n 1 rm -rf
+
+来自https://www.cnblogs.com/jt2001/p/6081235.html
+为避免意外，可以考虑使用rm -r而不是rm -rf
+不过这个删除当前的空文件夹，如果循环的空文件夹，也就是子文件夹是空文件夹的话，要反复跑这个命令所以删完后最好再跑次find -type d -empty查询下
+1-d &#x27;\n&#x27;
+
+有空格|中文的话加这个，xargs参数
+
+2023-03-18 增加带空格造成的问题的说明2023-07-19 补足说明
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/07/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/Network/Hexo+github/">
                 
                 <span class="abstract-title-text">Hexo+Github搭建博客</span>
@@ -877,131 +990,6 @@ Beyond Compare混入了一个奇怪的东西相比上面那个更完善，除了
         <a class="post-tag" href="javascript:void(0);" data-tags="Remote">Remote</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Personal Free">Personal Free</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Picture/">
-                
-                <span class="abstract-title-text">[软件推荐]图片类相关软件</span>
-            </a>
-            <div class="abstract-content">
-                看图最近没怎么看漫画就比较尴尬，目前还是Honeyview，能用就行，不过感觉他的缩放算法问题很大我一度是想抛弃ACDsee的，比如文件名长度问题导致的崩溃，又比如某些gif会花。但偏偏他的数据库让人无法舍弃，比方说按宽高搜索图片之类的，速度相当快，相对来讲XnViewMP搜索类别更细，功能性更强，但是Xnview里的结果是一次性的，一旦点开一张图片结果就会消失。就个人感觉，XnView的规划很乱，设计也是乱七八糟，唯有功能比较多而已。况且XnView和XnViewMP的使用界面和方式还有很多不一样，感觉怪怪的。MassiGra的各种按键自定义简直可怕，而且支持读取压缩包里的图片，其实S...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/06/04">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Open Source">Open Source</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="MIT">MIT</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv3">GPLv3</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="SVG">SVG</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/File-recovery/">
-                
-                <span class="abstract-title-text">文件恢复类软件</span>
-            </a>
-            <div class="abstract-content">
-                之前用过Recuva(不好用，Piriform公司的东西界面不错，但实际都不咋滴，点名批评CCleaner)、Diskgenius(需破解，大部分破解不完全，有些还会崩溃)、Wise的基本都是帮别人恢复，由于案例不够，除了EaseUS，和上面几个以外，其他的还有待验证。
-写在前面，随着SSD的越来越流行，这部分软件大概会逐渐退出历史舞台。
-EaseUS Data Recovery Wizard界面设计相当合理，功能确实非常不错，将别人出问题的SD卡里整个文件夹的东西都还原出来了。傻瓜化，易操作，效果非常好
-官网https://www.easeus.com/(有国内官网，但我现在不敢信任经...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/05/19">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2019/07/24</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="分类汇总">分类汇总</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Software">Software</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="第三方修改|绿化">第三方修改|绿化</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="破解">破解</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="开源">开源</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv2">GPLv2</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="GPLv3">GPLv3</a>
     
 </div>
 
@@ -3114,7 +3102,24 @@ EaseUS Data Recovery Wizard界面设计相当合理，功能确实非常不错�
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6487,7 +6492,7 @@ EaseUS Data Recovery Wizard界面设计相当合理，功能确实非常不错�
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 379
+        Total : 380
         </div>
         <!-- search  -->
         
@@ -9682,6 +9687,12 @@ EaseUS Data Recovery Wizard界面设计相当合理，功能确实非常不错�
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span>
+            <a class="archive-post-title" href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/22</span>

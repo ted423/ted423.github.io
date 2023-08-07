@@ -445,6 +445,63 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
+                
+                <span class="abstract-title-text">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</span>
+            </a>
+            <div class="abstract-content">
+                不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动
+Widnows 7改AHCI找到下面的注册表子项：
+1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci
+在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态
+改IDE是找到
+1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide
+...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/01/14">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2016/01/14</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Issue/reg/">
                 
                 <span class="abstract-title-text">[问题处理].reg文件无法使用</span>
@@ -913,66 +970,10 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         </article>
         <div class="index-post-divider"></div>
     
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Issue/Windows%20Update/80070003/">
-                
-                <span class="abstract-title-text">[问题处理]Windows Update 错误 80070003 解决方案</span>
-            </a>
-            <div class="abstract-content">
-                来源:http://windows.microsoft.com/zh-cn/windows/windows-update-error-80070003
-如果在检查更新时收到 Windows Update 错误 80070003，则需要删除 Windows 用于标识计算机更新的临时文件。若要删除临时文件，请停止 Windows Update 服务，删除临时更新文件，重新启动 Windows Update 服务，然后再次尝试检查 Windows 更新。
-停止 Windows Update 服务的步骤
-必须以管理员身份进行登录，才能执行这些步骤。
-单击打开“管理工具”。
-双击“服务”。 如果系...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2015/01/01">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2015/01/01</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Issue"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Issue
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Update">Windows Update</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
     <!-- paginator  -->
     
         <nav class="page-nav">
-            <a class="extend prev" rel="prev" href="/tags/Issue/page/4/">&lt; PREV</a><a class="page-number" href="/tags/Issue/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Issue/page/3/">3</a><a class="page-number" href="/tags/Issue/page/4/">4</a><span class="page-number current">5</span>
+            <a class="extend prev" rel="prev" href="/tags/Issue/page/4/">&lt; PREV</a><a class="page-number" href="/tags/Issue/">1</a><span class="space">&hellip;</span><a class="page-number" href="/tags/Issue/page/3/">3</a><a class="page-number" href="/tags/Issue/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/tags/Issue/page/6/">6</a><a class="extend next" rel="next" href="/tags/Issue/page/6/">NEXT &gt;</a>
         </nav>
     
 </main>
@@ -2972,7 +2973,24 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6345,7 +6363,7 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 379
+        Total : 380
         </div>
         <!-- search  -->
         
@@ -9540,6 +9558,12 @@ Error-1723. —-&gt;“There is a problem with this windows installer package. A
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span>
+            <a class="archive-post-title" href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/22</span>

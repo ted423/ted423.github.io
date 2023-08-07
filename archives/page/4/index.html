@@ -445,6 +445,67 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Code/Terminal/Linux%E6%89%B9%E9%87%8F%E5%88%A0%E9%99%A4%E7%A9%BA%E6%96%87%E4%BB%B6%E5%A4%B9/">
+                
+                <span class="abstract-title-text">Linux中find批量删除空文件夹</span>
+            </a>
+            <div class="abstract-content">
+                1find -type d -empty | xargs -n 1 rm -rf
+
+来自https://www.cnblogs.com/jt2001/p/6081235.html
+为避免意外，可以考虑使用rm -r而不是rm -rf
+不过这个删除当前的空文件夹，如果循环的空文件夹，也就是子文件夹是空文件夹的话，要反复跑这个命令所以删完后最好再跑次find -type d -empty查询下
+1-d &#x27;\n&#x27;
+
+有空格|中文的话加这个，xargs参数
+
+2023-03-18 增加带空格造成的问题的说明2023-07-19 补足说明
+
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2023/07/19">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/25</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Code"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Code
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Linux">Linux</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Document/Compression/">
                 
                 <span class="abstract-title-text">压缩算法测试</span>
@@ -920,60 +981,6 @@ route print可以看到路由优先级
         <a class="post-tag" href="javascript:void(0);" data-tags="Document">Document</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Optimization/Server-%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8-%E7%A3%81%E7%9B%98/">
-                
-                <span class="abstract-title-text">[优化]Windows Server 打开任务管理器磁盘监控</span>
-            </a>
-            <div class="abstract-content">
-                Server默认都没开不知道什么考虑管理员权限下的 CMD 或者Power Shelldiskperf -Y
-
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/03/25">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/03/25</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Optimization"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Optimization
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Terminal">Terminal</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Optimization">Optimization</a>
     
 </div>
 
@@ -2985,7 +2992,24 @@ route print可以看到路由优先级
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6358,7 +6382,7 @@ route print可以看到路由优先级
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 379
+        Total : 380
         </div>
         <!-- search  -->
         
@@ -9553,6 +9577,12 @@ route print可以看到路由优先级
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span>
+            <a class="archive-post-title" href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/22</span>

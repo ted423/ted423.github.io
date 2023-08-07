@@ -445,6 +445,64 @@
             
         
         <article class="index-post">
+            <a class="abstract-title" href="/Issue/%E4%B8%A4%E4%B8%AA%E5%9B%BE%E6%A0%87/">
+                
+                <span class="abstract-title-text">[问题处理]解决任务栏出现两个图标(火狐)的问题</span>
+            </a>
+            <div class="abstract-content">
+                找到的相关的贴:http://tieba.baidu.com/p/3923325915
+具体跟Application User Model IDs有关
+可以看到火狐有以下注册表（我才不会说我没记路径直接搜TaskBarIDs的，结果只有FF跟Thunderbird有这个），大概是为了区分不同通道的火狐。(但yysy,只有火狐出这个问题还是挺拉的 -2021-08-06)
+123HKEY_CURRENT_USER\SOFTWARE\Mozilla\Firefox\TaskBarIDsHKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2016/02/17">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/08/09</span>
+                </div>
+                <!-- tags -->
+                
+                    <div class= abstract-tags >
+    
+        
+        
+            
+        
+        
+        <span class="post-category" data-categories="Issue"">
+            <i class="fas fa-folder post-category-icon"></i>
+            <span class="post-category-text">
+                Issue
+            </span>
+        </span>
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Firefox">Firefox</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Issue">Issue</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Regedit">Regedit</a>
+    
+</div>
+
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
             <a class="abstract-title" href="/Software/winscppwd/">
                 
                 <span class="abstract-title-text">winscppwd - Winscp Password解密</span>
@@ -938,64 +996,6 @@ qbittorrent
         <a class="post-tag" href="javascript:void(0);" data-tags="macOS">macOS</a>
     
         <a class="post-tag" href="javascript:void(0);" data-tags="Download&File hosting service">Download&File hosting service</a>
-    
-</div>
-
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/Software/Security/No%20WD/">
-                
-                <span class="abstract-title-text">不推荐使用Windows Defender</span>
-            </a>
-            <div class="abstract-content">
-                首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。Server是1809，所以很可能遇到了是一个老版本的Bug
-现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。
-然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了图片挂了
-解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。而里...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2021/07/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2021/07/23</span>
-                </div>
-                <!-- tags -->
-                
-                    <div class= abstract-tags >
-    
-        
-        
-            
-        
-        
-        <span class="post-category" data-categories="Software"">
-            <i class="fas fa-folder post-category-icon"></i>
-            <span class="post-category-text">
-                Software
-            </span>
-        </span>
-    
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows">Windows</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="个人观点">个人观点</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows 10">Windows 10</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Windows Server">Windows Server</a>
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags="Security Software">Security Software</a>
     
 </div>
 
@@ -3007,7 +3007,24 @@ qbittorrent
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6380,7 +6397,7 @@ qbittorrent
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 379
+        Total : 380
         </div>
         <!-- search  -->
         
@@ -9575,6 +9592,12 @@ qbittorrent
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span>
+            <a class="archive-post-title" href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/22</span>

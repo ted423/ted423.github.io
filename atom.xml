@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2023-06-22T09:46:11.582Z</updated>
+  <updated>2023-08-07T13:28:20.344Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]Windows 7 update 报 80072EE2</title>
+    <link href="http://ted423.github.io/Issue/Windows%20Update/80072EE2/"/>
+    <id>http://ted423.github.io/Issue/Windows%20Update/80072EE2/</id>
+    <published>2023-08-07T13:26:37.417Z</published>
+    <updated>2023-08-07T13:28:20.344Z</updated>
+    
+    <content type="html"><![CDATA[<p>Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net stop wuauserv</span><br><span class="line">reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate</span><br><span class="line">net start wuauserv</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
+    
+  </entry>
   
   <entry>
     <title>Adobe Acrobat Reader DC Offline / 离线安装包</title>
@@ -557,35 +586,6 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="正版" scheme="http://ted423.github.io/tags/%E6%AD%A3%E7%89%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[COS]菌烨tako</title>
-    <link href="http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E8%8F%8C%E7%83%A8tako/"/>
-    <id>http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E8%8F%8C%E7%83%A8tako/</id>
-    <published>2022-07-03T11:58:16.261Z</published>
-    <updated>2022-07-01T02:49:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>傻逼Bitcron似乎把之前的搞没了</p><p><a href="https://shoot.photo/image/PdSqk"><img src="https://shoot.photo/images/2022/07/01/PdSqk.md.jpg" alt="PdSqk.md.jpg"></a><br><a href="https://shoot.photo/image/PdrVH"><img src="https://shoot.photo/images/2022/07/01/PdrVH.md.jpg" alt="PdrVH.md.jpg"></a><br><a href="https://shoot.photo/image/PdjJD"><img src="https://shoot.photo/images/2022/07/01/PdjJD.md.jpg" alt="PdjJD.md.jpg"></a><br><a href="https://shoot.photo/image/Pdcyo"><img src="https://shoot.photo/images/2022/07/01/Pdcyo.md.jpg" alt="Pdcyo.md.jpg"></a><br><a href="https://shoot.photo/image/PdbhO"><img src="https://shoot.photo/images/2022/07/01/PdbhO.md.jpg" alt="PdbhO.md.jpg"></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;傻逼Bitcron似乎把之前的搞没了&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://shoot.photo/image/PdSqk&quot;&gt;&lt;img src=&quot;https://shoot.photo/images/2022/07/01/PdSqk.md.jpg&quot; alt=&quot;Pd</summary>
-      
-    
-    
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/categories/Picture-Photo-Image/"/>
-    
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
-    
-    <category term="COS" scheme="http://ted423.github.io/tags/COS/"/>
-    
-    <category term="三次元" scheme="http://ted423.github.io/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"/>
     
   </entry>
   

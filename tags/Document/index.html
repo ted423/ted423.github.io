@@ -880,19 +880,20 @@ Digital images, photographs, and picturesImage - Any visual object that’s modi
                 1find -type d -empty | xargs -n 1 rm -rf
 
 来自https://www.cnblogs.com/jt2001/p/6081235.html
+为避免意外，可以考虑使用rm -r而不是rm -rf
 不过这个删除当前的空文件夹，如果循环的空文件夹，也就是子文件夹是空文件夹的话，要反复跑这个命令所以删完后最好再跑次find -type d -empty查询下
 1-d &#x27;\n&#x27;
 
-有空格的话加这个
+有空格|中文的话加这个，xargs参数
 
-2023-03-18 增加带空格造成的问题的说明
+2023-03-18 增加带空格造成的问题的说明2023-07-19 补足说明
 
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2023/03/18">
+                <div class="abstract-date" title="Last updated: 2023/07/19">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/04/25</span>
                 </div>
                 <!-- tags -->
@@ -2982,7 +2983,24 @@ Zstd的CPU占用也还好。
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -6355,7 +6373,7 @@ Zstd的CPU占用也还好。
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 379
+        Total : 380
         </div>
         <!-- search  -->
         
@@ -9550,6 +9568,12 @@ Zstd的CPU占用也还好。
             <div class="archive-year"> 2023 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/07</span>
+            <a class="archive-post-title" href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">06/22</span>
