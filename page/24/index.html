@@ -30,17 +30,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="个人小站" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-12-31T16:00:00.000Z" title="2018/1/1 00:00:00">2018-01-01</time>发表</span><span class="level-item"><time dateTime="2017-12-31T16:00:00.000Z" title="2018/1/1 00:00:00">2018-01-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Issue/">Issue</a></span><span class="level-item">3 分钟读完 (大约472个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Issue/%E5%85%89%E9%A9%B1%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">由于其配置信息不完整或已损坏，Windows 无法启动该设备</a></p><div class="content"><p>总而言之，这类都属于卸载残留问题。会导致类似问题的还有各类安全软件 - 2021-09-22<br>光驱没法用了，初步怀疑是daemon tools 安装时选了第2项那个SPd还是啥导致的,有个gear software<br>当时用的笔记本，自带了光驱，嘛，不过已经是很久以前的事了。<br>一些其他的设备也可能会出现这个问题，例如一些安全软件，在非常规卸载后会导致一些设备出现这个问题</p>
-<p>由于其配置信息(注册表中的)不完整或已损坏，Windows 无法启动这个硬件设备。 (代码19）</p>
-<ol>
-<li><strong>原因分析</strong><br>有的时候，由于配置信息(注册表中的)不完整或系统已损坏</li>
-<li><strong>表现症状</strong><br>Windows不能启动这个硬件设备，卸载后重新扫描还是显示叹号。<br>设备管理器光驱驱动右键属性，提示不正确信息：由于其配置信息(注册表中的)不完整或已损坏，Windows 不能启动这个硬件设备。 (代码 19)</li>
-<li><strong>解决办法</strong></li>
-<li>点开“开始”-运行regedit.exe，进入注册表编辑器,到左边的项目栏里找到<br><code>HKEY_LOCAL_MACHINE\SYSTEM \CurrentControlSet\Control\Class\&#123;4D36E965-E325-11C E-BFC1-08002BE10318&#125;</code><br>选定，在右面窗口找到<code>upperfilter</code>项和<code>loweverfilter</code>项。点右键删除 <code>upperfilter</code>项和<code>loweverfilter</code>项。<br>如其他设备则在<br></li>
-</ol>
-<p><code>HKEY_LOCAL_MACHINE\SYSTEM \CurrentControlSet\Control\Class</code>下搜索<code>upperfilters</code>,但不是所有的<code>upperfilters</code>都可以删除，注意自己分辨。<br> 2. 在设备管理器中卸载有疑问的光驱，卸载之后在点击扫描硬件改动，会找到光驱。这时候光驱就恢复正常了，如果还不可以就重新启动计算机。</p>
-<p>参考资料:<a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/installing-a-filter-driver">https://msdn.microsoft.com/en-us/windows/hardware/drivers/install/installing-a-filter-driver</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-12-31T16:00:00.000Z" title="2018/1/1 00:00:00">2018-01-01</time>发表</span><span class="level-item"><time dateTime="2017-12-31T16:00:00.000Z" title="2018/1/1 00:00:00">2018-01-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Issue/">Issue</a></span><span class="level-item">2 分钟读完 (大约306个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Issue/%E5%88%A0%E9%99%A4PDF%E6%B0%B4%E5%8D%B0/">[转载]用Acrobat pro批量删除PDF文件中各类水印、背景、文本等的办法</a></p><div class="content"><p>来源: <a target="_blank" rel="noopener" href="https://www.ouryao.com/blog-3800-25902.html">https://www.ouryao.com/blog-3800-25902.html</a><br>下载的PDF文件经常被加入许多广告性质的水印等，影响阅读。其删除办法如下：</p>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="个人小站" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-12-31T16:00:00.000Z" title="2018/1/1 00:00:00">2018-01-01</time>发表</span><span class="level-item"><time dateTime="2017-12-31T16:00:00.000Z" title="2018/1/1 00:00:00">2018-01-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Issue/">Issue</a></span><span class="level-item">2 分钟读完 (大约306个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Issue/%E5%88%A0%E9%99%A4PDF%E6%B0%B4%E5%8D%B0/">[转载]用Acrobat pro批量删除PDF文件中各类水印、背景、文本等的办法</a></p><div class="content"><p>来源: <a target="_blank" rel="noopener" href="https://www.ouryao.com/blog-3800-25902.html">https://www.ouryao.com/blog-3800-25902.html</a><br>下载的PDF文件经常被加入许多广告性质的水印等，影响阅读。其删除办法如下：</p>
 <p>工具——页面——页眉和页脚——删除</p>
 <p>工具——页面——背景——删除</p>
 <p>工具——页面——水印——删除</p>
@@ -68,6 +58,282 @@
 </ul>
 <hr>
 <p><time>2016-03-09</time>增加BT下载链接，也增加了台版角川，不过由于图片分辨率比较低<br><time>2017-09-02</time>之前onedrive连接弄错了，现在修复</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-08-30T14:14:00.000Z" title="2017/8/30 22:14:00">2017-08-30</time>发表</span><span class="level-item"><time dateTime="2017-08-30T14:14:00.000Z" title="2017/8/30 22:14:00">2017-08-30</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Anime/">Anime</a></span><span class="level-item">5 分钟读完 (大约796个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Anime/JP/Mayo%20Chiki!/">[JP]迷茫管家与懦弱的我[Mayo Chiki!]</a></p><div class="content"><table class="infobox bordered" style="width: 22em; font-size: small; float:right; text-align: left;" cellpadding="2">
+    <tbody>
+        <tr>
+            <th colspan="2" style="font-size: 110%; background: #ccf; text-align: center;" nowrap="nowrap">迷茫管家与懦弱的我</th>
+        </tr>
+        <tr>
+            <td colspan="2" style="background: #fff; text-align: center;">
+                <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/File:Mayo_Chiki!_Logo.png" class="image">
+                    <img alt="Mayo Chiki! Logo.png" src="//upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mayo_Chiki!_Logo.png/200px-Mayo_Chiki!_Logo.png" width="200" height="199">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>原作</b>
+            </th>
+            <td>朝野始</td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>导演</b>
+            </th>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/川口敬一郎" title="川口敬一郎">川口敬一郎</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/剧本统筹" title="剧本统筹">剧本统筹</a></b>
+            </th>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/吉田玲子" title="吉田玲子">吉田玲子</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/人物設計" title="人物设计">人物设定</a></b>
+            </th>
+            <td>川村幸祐</td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>音乐</b>
+            </th>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/橋本由香利" title="桥本由香利">桥本由香利</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>音乐制作</b>
+            </th>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/STARCHILD" class="mw-redirect" title="STARCHILD">STARCHILD</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>动画制作</b>
+            </th>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Feel." title="Feel.">feel.</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>制作</b>
+            </th>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/製作委員會" class="mw-redirect" title="制作委员会">迷茫管家与懦弱的我制作委员会</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>代理发行</b>
+            </th>
+            <td><span class="flagicon"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" width="22" height="15" class="thumbborder"></a></span> 
+                <a
+                target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/STARCHILD" class="mw-redirect" title="STARCHILD">STARCHILD</a>
+                    <br>
+<span class="flagicon"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/中華民國" title="中华民国"><img alt="中华民国" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" width="22" height="15" class="thumbborder"></a></span> 
+                    <a
+                    target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/普威爾國際" title="普威尔国际">普威尔国际</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>播放期间</b>
+            </th>
+            <td style="white-space: nowrap;">2011年7月7日－9月29日</td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>网络播放</b>
+            </th>
+            <td><span class="flagicon"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/中華民國" title="中华民国"><img alt="中华民国" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" width="22" height="15" class="thumbborder"></a></span> 
+                <a
+                target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/巴哈姆特動畫瘋" title="巴哈姆特动画疯">巴哈姆特动画疯</a>
+            </td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>话数</b>
+            </th>
+            <td>全13话</td>
+        </tr>
+        <tr>
+            <th style="background: #e6e9ff; white-space: nowrap;" align="left"><b>版权信息</b>
+            </th>
+            <td><strong>©</strong>HAJIME ASANO, MEDIA FACTORY /"Mayo Chiki!" Production Committee</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1 id="剧情简介"><a href="#剧情简介" class="headerlink" title="剧情简介"></a>剧情简介</h1><p>就读私立浪岚学园的坂町近次郎，意外发现同年级大小姐“凉月奏”的美少年管家“近卫昴”实际上是女生？！因为种种因素所以必须以男性身份在奏家工作的昴，奏也希望近次郎能替她们守住秘密，而交换条件则是帮助他克服女性恐惧症……。</p>
+<h1 id="各话列表"><a href="#各话列表" class="headerlink" title="各话列表"></a>各话列表</h1><table>
+    <tbody>
+        <tr>
+            <th>话数</th>
+            <th>日文标题</th>
+            <th>中文标题</th>
+            <th>剧本</th>
+            <th>分镜</th>
+            <th>演出</th>
+            <th>作画监督</th>
+            <th>总作画监督</th>
+        </tr>
+        <tr>
+            <td>第1话</td>
+            <td><span lang="ja">エンド・オブ・アース</span>
+            </td>
+            <td>地球末日</td>
+            <td rowspan="2"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/吉田玲子" title="吉田玲子">吉田玲子</a>
+            </td>
+            <td colspan="2"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/川口敬一郎" title="川口敬一郎">川口敬一郎</a>
+            </td>
+            <td>枡田邦彰
+                <br>杉山了藏</td>
+            <td rowspan="13">川村幸祐</td>
+        </tr>
+        <tr>
+            <td>第2话</td>
+            <td><span lang="ja">大好きになっちゃった！</span>
+            </td>
+            <td>变得超喜欢的！</td>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/高橋丈夫" title="高桥丈夫">高桥丈夫</a>
+            </td>
+            <td>桥口洋介</td>
+            <td>佐野英敏</td>
+        </tr>
+        <tr>
+            <td>第3话</td>
+            <td><span lang="ja">もちろん、ベッドの上で</span>
+            </td>
+            <td>当然，是在床上</td>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/山田由香" title="山田由香">山田由香</a>
+            </td>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/後藤圭二" title="后藤圭二">后藤圭二</a>
+            </td>
+            <td><span lang="ja">ふじいたかふみ</span>
+            </td>
+            <td>立田真一
+                <br>藤井结</td>
+        </tr>
+        <tr>
+            <td>第4话</td>
+            <td><span lang="ja">あんまりジロジロみるな…</span>
+            </td>
+            <td>别一直盯着我看…</td>
+            <td>大知庆一郎</td>
+            <td rowspan="3"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/佐山聖子" title="佐山圣子">佐山圣子</a>
+            </td>
+            <td>徐惠真</td>
+            <td>小松原圣
+                <br>山崎克之</td>
+        </tr>
+        <tr>
+            <td>第5话</td>
+            <td><span lang="ja">アタシと付き合いなさい</span>
+            </td>
+            <td>请和我交往</td>
+            <td>山田由香</td>
+            <td>菜香ゆき</td>
+            <td>吉田伊久雄、佐藤元昭<br>枡田邦彰、金井裕子<br>铃木豪</td>
+        </tr>
+        <tr>
+            <td>第6话</td>
+            <td><span lang="ja">戦争を始めましょう</span>
+            </td>
+            <td>战争开始了</td>
+            <td rowspan="2">大知庆一郎</td>
+            <td>小林公二</td>
+            <td>广尾佳奈子、山本笃史</td>
+        </tr>
+        <tr>
+            <td>第7话</td>
+            <td><span lang="ja">駆け落ちしよう</span>
+            </td>
+            <td>私奔吧</td>
+            <td>及川启</td>
+            <td><span lang="ja">ふじいたかふみ</span>
+            </td>
+            <td>川岛尚</td>
+        </tr>
+        <tr>
+            <td>第8话</td>
+            <td><span lang="ja">初めてなんだ</span>
+            </td>
+            <td>第一次是什么</td>
+            <td>山田由香</td>
+            <td>渡边哲哉</td>
+            <td>尚美谷荣树</td>
+            <td>立田真一、藤井结</td>
+        </tr>
+        <tr>
+            <td>第9话</td>
+            <td><span lang="ja">しばらく旅に出ます</span>
+            </td>
+            <td>暂时出游</td>
+            <td>吉田玲子</td>
+            <td><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/川崎逸朗" title="川崎逸朗">川崎逸朗</a>
+            </td>
+            <td>桥口洋介</td>
+            <td>西尾公伯、岩冈优子</td>
+        </tr>
+        <tr>
+            <td>第10话</td>
+            <td><span lang="ja">いっただっきまーす</span>
+            </td>
+            <td>我开动了</td>
+            <td>山田由香</td>
+            <td colspan="2"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/池端隆史" title="池端隆史">池端隆史</a>
+            </td>
+            <td>立田真一、铃木豪
+                <br>佐藤元昭、早川加寿子</td>
+        </tr>
+        <tr>
+            <td>第11话</td>
+            <td><span lang="ja">にゅ！</span>
+            </td>
+            <td>扭！</td>
+            <td rowspan="3">吉田玲子</td>
+            <td>川崎逸朗</td>
+            <td>小松信</td>
+            <td>大河原晴男、尾崎绫子</td>
+        </tr>
+        <tr>
+            <td>第12话</td>
+            <td><span lang="ja">迷える執事とチキンな俺と</span>
+            </td>
+            <td>迷茫管家与懦弱的我</td>
+            <td>川口敬一郎</td>
+            <td rowspan="2"><span lang="ja">ふじいたかふみ</span>
+            </td>
+            <td>立田真一、藤井结
+                <br>川岛尚、金井裕子
+                <br>铃木豪</td>
+        </tr>
+        <tr>
+            <td>第13话</td>
+            <td><span lang="ja">揉んでください！</span>
+            </td>
+            <td>请揉吧！</td>
+            <td>及川启</td>
+            <td>川岛尚、氏家嘉宏
+                <br>吉田雄一</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><h2 id="ANK-Raws-Mayo-Chiki-BDrip-1920x1080-x264-FLAC-AC3-Hi10P"><a href="#ANK-Raws-Mayo-Chiki-BDrip-1920x1080-x264-FLAC-AC3-Hi10P" class="headerlink" title="[ANK-Raws] Mayo Chiki! (BDrip 1920x1080 x264 FLAC AC3 Hi10P)##"></a>[ANK-Raws] Mayo Chiki! (BDrip 1920x1080 x264 FLAC AC3 Hi10P)##</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://share.dmhy.org/topics/view/244223_ANK-Raws_!_Mayo_Chiki!_BDrip_1920x1080_x264_FLAC_AC3_Hi10P.html">https://share.dmhy.org/topics/view/244223_ANK-Raws_!_Mayo_Chiki!_BDrip_1920x1080_x264_FLAC_AC3_Hi10P.html</a></li>
+<li><a href="magnet:?xt=urn:btih:3LMPQNUQRSHAZWNON53PLYI3LUXZJVVX&amp;dn=[ANK-Raws]+Mayo+Chiki!+(BDrip+1920x1080+x264+FLAC+AC3+Hi10P)&amp;tr=http://61.154.116.205:8000/announce&amp;tr=udp://61.154.116.205:8000/announce&amp;tr=http://tracker.openbittorrent.com:80/announce&amp;tr=http://tracker.publicbt.com:80/announce&amp;tr=http://tracker.prq.to/announce&amp;tr=http://t2.popgo.org:7456/annonce&amp;tr=http://bt.sc-ol.com:2710/announce&amp;tr=http://share.camoe.cn:8080/announce&amp;tr=http://open.nyaatorrents.info:6544/announce">magnet:?xt=urn:btih:3LMPQNUQRSHAZWNON53PLYI3LUXZJVVX&amp;dn=[ANK-Raws]+Mayo+Chiki!+(BDrip+1920x1080+x264+FLAC+AC3+Hi10P)&amp;tr=http://61.154.116.205:8000/announce&amp;tr=udp://61.154.116.205:8000/announce&amp;tr=http://tracker.openbittorrent.com:80/announce&amp;tr=http://tracker.publicbt.com:80/announce&amp;tr=http://tracker.prq.to/announce&amp;tr=http://t2.popgo.org:7456/annonce&amp;tr=http://bt.sc-ol.com:2710/announce&amp;tr=http://share.camoe.cn:8080/announce&amp;tr=http://open.nyaatorrents.info:6544/announce</a></li>
+<li><a target="_blank" rel="noopener" href="https://nyaa.si/view/290607">https://nyaa.si/view/290607</a></li>
+<li><a target="_blank" rel="noopener" href="http://ank-raws.blogspot.com/2011/09/bdrip_23.html">http://ank-raws.blogspot.com/2011/09/bdrip_23.html</a></li>
+</ul>
+<h2 id="Salender-Raws-Mayo-Chiki-BD-1920x1080-x264-FLAC"><a href="#Salender-Raws-Mayo-Chiki-BD-1920x1080-x264-FLAC" class="headerlink" title="[Salender-Raws] Mayo Chiki! (BD 1920x1080 x264 FLAC)##"></a>[Salender-Raws] Mayo Chiki! (BD 1920x1080 x264 FLAC)##</h2><ul>
+<li><a href="magnet:?xt=urn:btih:AIOJVV6UF2Z2ZZXIFNDPAIXHZWYVW32G&amp;dn=&amp;tr=http://208.67.16.113:8000/announce&amp;tr=udp://208.67.16.113:8000/announce&amp;tr=http://tracker.openbittorrent.com:80/announce&amp;tr=http://tracker.publicbt.com:80/announce&amp;tr=http://tracker.prq.to/announce&amp;tr=http://announce.torrentsmd.com:8080/announce&amp;tr=http://exodus.desync.com/announce">magnet:?xt=urn:btih:AIOJVV6UF2Z2ZZXIFNDPAIXHZWYVW32G&amp;dn=&amp;tr=http://208.67.16.113:8000/announce&amp;tr=udp://208.67.16.113:8000/announce&amp;tr=http://tracker.openbittorrent.com:80/announce&amp;tr=http://tracker.publicbt.com:80/announce&amp;tr=http://tracker.prq.to/announce&amp;tr=http://announce.torrentsmd.com:8080/announce&amp;tr=http://exodus.desync.com/announce</a></li>
+<li><a target="_blank" rel="noopener" href="https://share.dmhy.org/topics/view/386964_Salender-Raws_Mayo_Chiki!_BD_1920x1080_x264_FLAC.html">https://share.dmhy.org/topics/view/386964_Salender-Raws_Mayo_Chiki!_BD_1920x1080_x264_FLAC.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://nyaa.si/view/299815">https://nyaa.si/view/299815</a></li>
+<li><a target="_blank" rel="noopener" href="http://salender-raws.blogspot.com/2012/02/mayo-chiki-bd.html">http://salender-raws.blogspot.com/2012/02/mayo-chiki-bd.html</a></li>
+</ul>
+<h2 id="Moozzi2-Mayo-Chiki-TV-SP"><a href="#Moozzi2-Mayo-Chiki-TV-SP" class="headerlink" title="[Moozzi2] Mayo Chiki! - TV + SP"></a>[Moozzi2] Mayo Chiki! - TV + SP</h2><p>这个压制组有画面做过特殊处理，看起来会鲜艳些</p>
+<ul>
+<li><a href="magnet:?xt=urn:btih:C74Q4GVRFHHPFXCBJNFMA4ICVHELSWVX&amp;dn=[Moozzi2]+Mayo+Chiki!+-+TV+++SP&amp;tr=http://nyaa.tracker.wf:7777/announce&amp;tr=udp://open.stealth.si:80/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.leechers-paradise.org:6969/announce">magnet:?xt=urn:btih:C74Q4GVRFHHPFXCBJNFMA4ICVHELSWVX&amp;dn=[Moozzi2]+Mayo+Chiki!+-+TV+++SP&amp;tr=http://nyaa.tracker.wf:7777/announce&amp;tr=udp://open.stealth.si:80/announce&amp;tr=udp://tracker.opentrackr.org:1337/announce&amp;tr=udp://tracker.coppersurfer.tk:6969/announce&amp;tr=udp://tracker.leechers-paradise.org:6969/announce</a></li>
+<li><a target="_blank" rel="noopener" href="https://nyaa.si/view/924756">https://nyaa.si/view/924756</a></li>
+<li><a target="_blank" rel="noopener" href="https://share.dmhy.org/topics/view/482109_Moozzi2_Mayo_Chiki%21_-_TV_SP.html">https://share.dmhy.org/topics/view/482109_Moozzi2_Mayo_Chiki%21_-_TV_SP.html</a></li>
+</ul>
+<h2 id="字幕"><a href="#字幕" class="headerlink" title="字幕"></a>字幕</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://secure.assrt.net/xml/sub/209/209549.xml">https://secure.assrt.net/xml/sub/209/209549.xml</a></li>
+<li><a target="_blank" rel="noopener" href="https://subhd.tv/ar0/308507">https://subhd.tv/ar0/308507</a></li>
+</ul>
+<hr>
+<p><time>2017-08-30</time>完善信息</p>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2017-08-20T04:42:00.000Z" title="2017/8/20 12:42:00">2017-08-20</time>发表</span><span class="level-item"><time dateTime="2017-08-20T04:42:00.000Z" title="2017/8/20 12:42:00">2017-08-20</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">1 分钟读完 (大约139个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/KMSpico/">KMSpico - Windows\Office激活软件</a></p><div class="content"><p>10.1.8才能激活Office2016<br>该软件已停止更新<br>#来源</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="http://forums.mydigitallife.info/threads/65739-KMSpico-Official-Thread">http://forums.mydigitallife.info/threads/65739-KMSpico-Official-Thread</a></li>
