@@ -1,0 +1,1106 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>个人小站</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="个人小站"><meta name="msapplication-TileImage" content="/avatar/avatar.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="个人小站"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"><meta property="og:type" content="blog"><meta property="og:title" content="个人小站"><meta property="og:url" content="http://ted423.github.io/"><meta property="og:site_name" content="个人小站"><meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://ted423.github.io/img/og_image.png"><meta property="article:author" content="ted423"><meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://ted423.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io"},"headline":"个人小站","image":["http://ted423.github.io/img/og_image.png"],"author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/avatar/avatar.jpg"}},"description":"这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"}</script><link rel="icon" href="/avatar/avatar.jpg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/avatar/avatar.jpg" alt="个人小站" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-06-21T13:53:00.000Z" title="2018/6/21 21:53:00">2018-06-21</time>发表</span><span class="level-item"><time dateTime="2018-06-21T13:53:00.000Z" title="2018/6/21 21:53:00">2018-06-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">21 分钟读完 (大约3178个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</a></p><div class="content"><p>突然间想搞清楚unicode以及utf-8之间的关系，虽说之前有点印象，但还是云里雾里的，于是查了下。简单说就是太混乱，没弄清楚也跑出来写文章的很多，很难有文章能真正全说清楚的。当然我也是按我的理解来写的，不一定都对。</p>
+<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p><strong>字符集 - Character Set</strong><br><strong>编码 - encoding</strong><br><strong>代码页 - CodePage</strong><br>代码页是一个选定字符代码的列表，与字符集其实是差不多的概念，只不过代码页是计算机用来切换编码的概念(从Page来理解)。最早来自IBM，后来被微软，oracle ,SAP等广泛采用。由于最开始每个国家都在搞自己的locale编码(也就是ANSI，随后会有详细解释)，导致每个国家都不统一，不兼容，可能导致冲突，所以一个系统在处理文字的时候，必须要告诉计算机你的编码是哪个国家和地区的标准，这种国家和标准的代号（其实就是字符编码格式的代号），微软称为Codepage(代码页)，其实这个代码页和字符集编码的意思是一样的。告诉你代码页，本质就是告诉了你编码格式。<br>但是不同厂家的代码页可能完全不同(这个全看厂家怎么放，没有标准，当然一个公司一般也不会随便改自己的代码页)，比如， UTF-8字符编码 在IBM对应的代码页是1208，在微软对应的是65001,在德国的SAP公司对应的是 4110<br>GBK的在微软的代码页是936，告诉你代码页是936其实和告诉你我编码格式是GBK效果完全相同。那么处理文本的时候就不会有问题，不会去考虑某个代码是显示的韩文还是中文，同样，日文和韩文的代码页就和中文不同，这样就可以避免编码冲突导致计算机不知如何处理的问题。当然用这个也可以很容易的切换语言版本。<br><strong>内码</strong><br>指操作系统内部的字符编码，中国人的原创词，可以理解为没有任何组织定义过这个词。<br><strong>区位码</strong><br>汉字GB2312编码里的概念，不需要特别理解</p>
+<h1 id="ASCII-SBCS"><a href="#ASCII-SBCS" class="headerlink" title="ASCII-SBCS"></a>ASCII-SBCS</h1><p>ASCII又称SBCS(单字节字符集)<br>ASCII(American Standard Code for Information Interchange)美国信息交换标准代码，这是计算机上最早使用的通用的编码方案。<br>上个世纪60年代，美国制定了一套字符编码，对英语字符与二进制位之间的关系，做了统一规定。这被称为ASCII码，一直沿用至今。</p>
+<p>ASCII码一共规定了128个字符的编码，比如空格”SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。</p>
+<p><strong>ASCII 这部标准本身就直接规定了字符和字符编码的方式，所以既是字符集又是编码方案。</strong><br><strong>无论是ANSI标准编码还是Unicode都包含ASCII，通常的乱码都是由非ASCII字符造成的</strong></p>
+<h2 id="ASCII码表"><a href="#ASCII码表" class="headerlink" title="ASCII码表"></a>ASCII码表</h2><h3 id="ASCII控制字符"><a href="#ASCII控制字符" class="headerlink" title="ASCII控制字符"></a>ASCII控制字符</h3><table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>十进制</th>
+<th>十六进制</th>
+<th>缩写</th>
+<th>可以显示的表示法</th>
+<th>名称&#x2F;意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0000 0000</td>
+<td>0</td>
+<td>00</td>
+<td>NUL</td>
+<td>␀</td>
+<td>空字符（Null）</td>
+</tr>
+<tr>
+<td>0000 0001</td>
+<td>1</td>
+<td>01</td>
+<td>SOH</td>
+<td>␁</td>
+<td>标题开始</td>
+</tr>
+<tr>
+<td>0000 0010</td>
+<td>2</td>
+<td>02</td>
+<td>STX</td>
+<td>␂</td>
+<td>本文开始</td>
+</tr>
+<tr>
+<td>0000 0011</td>
+<td>3</td>
+<td>03</td>
+<td>ETX</td>
+<td>␃</td>
+<td>本文结束</td>
+</tr>
+<tr>
+<td>0000 0100</td>
+<td>4</td>
+<td>04</td>
+<td>EOT</td>
+<td>␄</td>
+<td>传输结束</td>
+</tr>
+<tr>
+<td>0000 0101</td>
+<td>5</td>
+<td>05</td>
+<td>ENQ</td>
+<td>␅</td>
+<td>请求</td>
+</tr>
+<tr>
+<td>0000 0110</td>
+<td>6</td>
+<td>06</td>
+<td>ACK</td>
+<td>␆</td>
+<td>确认回应</td>
+</tr>
+<tr>
+<td>0000 0111</td>
+<td>7</td>
+<td>07</td>
+<td>BEL</td>
+<td>␇</td>
+<td>响铃</td>
+</tr>
+<tr>
+<td>0000 1000</td>
+<td>8</td>
+<td>08</td>
+<td>BS</td>
+<td>␈</td>
+<td>退格</td>
+</tr>
+<tr>
+<td>0000 1001</td>
+<td>9</td>
+<td>09</td>
+<td>HT</td>
+<td>␉</td>
+<td>水平定位符号</td>
+</tr>
+<tr>
+<td>0000 1010</td>
+<td>10</td>
+<td>0A</td>
+<td>LF</td>
+<td>␊</td>
+<td>换行键</td>
+</tr>
+<tr>
+<td>0000 1011</td>
+<td>11</td>
+<td>0B</td>
+<td>VT</td>
+<td>␋</td>
+<td>垂直定位符号</td>
+</tr>
+<tr>
+<td>0000 1100</td>
+<td>12</td>
+<td>0C</td>
+<td>FF</td>
+<td>␌</td>
+<td>换页键</td>
+</tr>
+<tr>
+<td>0000 1101</td>
+<td>13</td>
+<td>0D</td>
+<td>CR</td>
+<td>␍</td>
+<td>归位键</td>
+</tr>
+<tr>
+<td>0000 1110</td>
+<td>14</td>
+<td>0E</td>
+<td>SO</td>
+<td>␎</td>
+<td>取消变换（Shift out）</td>
+</tr>
+<tr>
+<td>0000 1111</td>
+<td>15</td>
+<td>0F</td>
+<td>SI</td>
+<td>␏</td>
+<td>启用变换（Shift in）</td>
+</tr>
+<tr>
+<td>0001 0000</td>
+<td>16</td>
+<td>10</td>
+<td>DLE</td>
+<td>␐</td>
+<td>跳出数据通讯</td>
+</tr>
+<tr>
+<td>0001 0001</td>
+<td>17</td>
+<td>11</td>
+<td>DC1</td>
+<td>␑</td>
+<td>设备控制一（XON 启用软件速度控制）</td>
+</tr>
+<tr>
+<td>0001 0010</td>
+<td>18</td>
+<td>12</td>
+<td>DC2</td>
+<td>␒</td>
+<td>设备控制二</td>
+</tr>
+<tr>
+<td>0001 0011</td>
+<td>19</td>
+<td>13</td>
+<td>DC3</td>
+<td>␓</td>
+<td>设备控制三（XOFF 停用软件速度控制）</td>
+</tr>
+<tr>
+<td>0001 0100</td>
+<td>20</td>
+<td>14</td>
+<td>DC4</td>
+<td>␔</td>
+<td>设备控制四</td>
+</tr>
+<tr>
+<td>0001 0101</td>
+<td>21</td>
+<td>15</td>
+<td>NAK</td>
+<td>␕</td>
+<td>确认失败回应</td>
+</tr>
+<tr>
+<td>0001 0110</td>
+<td>22</td>
+<td>16</td>
+<td>SYN</td>
+<td>␖</td>
+<td>同步用暂停</td>
+</tr>
+<tr>
+<td>0001 0111</td>
+<td>23</td>
+<td>17</td>
+<td>ETB</td>
+<td>␗</td>
+<td>区块传输结束</td>
+</tr>
+<tr>
+<td>0001 1000</td>
+<td>24</td>
+<td>18</td>
+<td>CAN</td>
+<td>␘</td>
+<td>取消</td>
+</tr>
+<tr>
+<td>0001 1001</td>
+<td>25</td>
+<td>19</td>
+<td>EM</td>
+<td>␙</td>
+<td>连接介质中断</td>
+</tr>
+<tr>
+<td>0001 1010</td>
+<td>26</td>
+<td>1A</td>
+<td>SUB</td>
+<td>␚</td>
+<td>替换</td>
+</tr>
+<tr>
+<td>0001 1011</td>
+<td>27</td>
+<td>1B</td>
+<td>ESC</td>
+<td>␛</td>
+<td>跳出</td>
+</tr>
+<tr>
+<td>0001 1100</td>
+<td>28</td>
+<td>1C</td>
+<td>FS</td>
+<td>␜</td>
+<td>文件分割符</td>
+</tr>
+<tr>
+<td>0001 1101</td>
+<td>29</td>
+<td>1D</td>
+<td>GS</td>
+<td>␝</td>
+<td>组群分隔符</td>
+</tr>
+<tr>
+<td>0001 1110</td>
+<td>30</td>
+<td>1E</td>
+<td>RS</td>
+<td>␞</td>
+<td>记录分隔符</td>
+</tr>
+<tr>
+<td>0001 1111</td>
+<td>31</td>
+<td>1F</td>
+<td>US</td>
+<td>␟</td>
+<td>单元分隔符</td>
+</tr>
+<tr>
+<td>0111 1111</td>
+<td>127</td>
+<td>7F</td>
+<td>DEL</td>
+<td>␡</td>
+<td>删除</td>
+</tr>
+</tbody></table>
+<h3 id="ASCII可显示字符"><a href="#ASCII可显示字符" class="headerlink" title="ASCII可显示字符"></a>ASCII可显示字符</h3><table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>十进制</th>
+<th>十六进制</th>
+<th>图形</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0010 0000</td>
+<td>32</td>
+<td>20</td>
+<td>（空格）(␠)</td>
+</tr>
+<tr>
+<td>0010 0001</td>
+<td>33</td>
+<td>21</td>
+<td>!</td>
+</tr>
+<tr>
+<td>0010 0010</td>
+<td>34</td>
+<td>22</td>
+<td>“</td>
+</tr>
+<tr>
+<td>0010 0011</td>
+<td>35</td>
+<td>23</td>
+<td>#</td>
+</tr>
+<tr>
+<td>0010 0100</td>
+<td>36</td>
+<td>24</td>
+<td>$</td>
+</tr>
+<tr>
+<td>0010 0101</td>
+<td>37</td>
+<td>25</td>
+<td>%</td>
+</tr>
+<tr>
+<td>0010 0110</td>
+<td>38</td>
+<td>26</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>0010 0111</td>
+<td>39</td>
+<td>27</td>
+<td>‘</td>
+</tr>
+<tr>
+<td>0010 1000</td>
+<td>40</td>
+<td>28</td>
+<td>(</td>
+</tr>
+<tr>
+<td>0010 1001</td>
+<td>41</td>
+<td>29</td>
+<td>)</td>
+</tr>
+<tr>
+<td>0010 1010</td>
+<td>42</td>
+<td>2A</td>
+<td>*</td>
+</tr>
+<tr>
+<td>0010 1011</td>
+<td>43</td>
+<td>2B</td>
+<td>+</td>
+</tr>
+<tr>
+<td>0010 1100</td>
+<td>44</td>
+<td>2C</td>
+<td>,</td>
+</tr>
+<tr>
+<td>0010 1101</td>
+<td>45</td>
+<td>2D</td>
+<td>-</td>
+</tr>
+<tr>
+<td>0010 1110</td>
+<td>46</td>
+<td>2E</td>
+<td>.</td>
+</tr>
+<tr>
+<td>0010 1111</td>
+<td>47</td>
+<td>2F</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>0011 0000</td>
+<td>48</td>
+<td>30</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0011 0001</td>
+<td>49</td>
+<td>31</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0011 0010</td>
+<td>50</td>
+<td>32</td>
+<td>2</td>
+</tr>
+<tr>
+<td>0011 0011</td>
+<td>51</td>
+<td>33</td>
+<td>3</td>
+</tr>
+<tr>
+<td>0011 0100</td>
+<td>52</td>
+<td>34</td>
+<td>4</td>
+</tr>
+<tr>
+<td>0011 0101</td>
+<td>53</td>
+<td>35</td>
+<td>5</td>
+</tr>
+<tr>
+<td>0011 0110</td>
+<td>54</td>
+<td>36</td>
+<td>6</td>
+</tr>
+<tr>
+<td>0011 0111</td>
+<td>55</td>
+<td>37</td>
+<td>7</td>
+</tr>
+<tr>
+<td>0011 1000</td>
+<td>56</td>
+<td>38</td>
+<td>8</td>
+</tr>
+<tr>
+<td>0011 1001</td>
+<td>57</td>
+<td>39</td>
+<td>9</td>
+</tr>
+<tr>
+<td>0011 1010</td>
+<td>58</td>
+<td>3A</td>
+<td>:</td>
+</tr>
+<tr>
+<td>0011 1011</td>
+<td>59</td>
+<td>3B</td>
+<td>;</td>
+</tr>
+<tr>
+<td>0011 1100</td>
+<td>60</td>
+<td>3C</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>0011 1101</td>
+<td>61</td>
+<td>3D</td>
+<td>&#x3D;</td>
+</tr>
+<tr>
+<td>0011 1110</td>
+<td>62</td>
+<td>3E</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>0011 1111</td>
+<td>63</td>
+<td>3F</td>
+<td>?</td>
+</tr>
+<tr>
+<td>0100 0000</td>
+<td>64</td>
+<td>40</td>
+<td>@</td>
+</tr>
+<tr>
+<td>0100 0001</td>
+<td>65</td>
+<td>41</td>
+<td>A</td>
+</tr>
+<tr>
+<td>0100 0010</td>
+<td>66</td>
+<td>42</td>
+<td>B</td>
+</tr>
+<tr>
+<td>0100 0011</td>
+<td>67</td>
+<td>43</td>
+<td>C</td>
+</tr>
+<tr>
+<td>0100 0100</td>
+<td>68</td>
+<td>44</td>
+<td>D</td>
+</tr>
+<tr>
+<td>0100 0101</td>
+<td>69</td>
+<td>45</td>
+<td>E</td>
+</tr>
+<tr>
+<td>0100 0110</td>
+<td>70</td>
+<td>46</td>
+<td>F</td>
+</tr>
+<tr>
+<td>0100 0111</td>
+<td>71</td>
+<td>47</td>
+<td>G</td>
+</tr>
+<tr>
+<td>0100 1000</td>
+<td>72</td>
+<td>48</td>
+<td>H</td>
+</tr>
+<tr>
+<td>0100 1001</td>
+<td>73</td>
+<td>49</td>
+<td>I</td>
+</tr>
+<tr>
+<td>0100 1010</td>
+<td>74</td>
+<td>4A</td>
+<td>J</td>
+</tr>
+<tr>
+<td>0100 1011</td>
+<td>75</td>
+<td>4B</td>
+<td>K</td>
+</tr>
+<tr>
+<td>0100 1100</td>
+<td>76</td>
+<td>4C</td>
+<td>L</td>
+</tr>
+<tr>
+<td>0100 1101</td>
+<td>77</td>
+<td>4D</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0100 1110</td>
+<td>78</td>
+<td>4E</td>
+<td>N</td>
+</tr>
+<tr>
+<td>0100 1111</td>
+<td>79</td>
+<td>4F</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0101 0000</td>
+<td>80</td>
+<td>50</td>
+<td>P</td>
+</tr>
+<tr>
+<td>0101 0001</td>
+<td>81</td>
+<td>51</td>
+<td>Q</td>
+</tr>
+<tr>
+<td>0101 0010</td>
+<td>82</td>
+<td>52</td>
+<td>R</td>
+</tr>
+<tr>
+<td>0101 0011</td>
+<td>83</td>
+<td>53</td>
+<td>S</td>
+</tr>
+<tr>
+<td>0101 0100</td>
+<td>84</td>
+<td>54</td>
+<td>T</td>
+</tr>
+<tr>
+<td>0101 0101</td>
+<td>85</td>
+<td>55</td>
+<td>U</td>
+</tr>
+<tr>
+<td>0101 0110</td>
+<td>86</td>
+<td>56</td>
+<td>V</td>
+</tr>
+<tr>
+<td>0101 0111</td>
+<td>87</td>
+<td>57</td>
+<td>W</td>
+</tr>
+<tr>
+<td>0101 1000</td>
+<td>88</td>
+<td>58</td>
+<td>X</td>
+</tr>
+<tr>
+<td>0101 1001</td>
+<td>89</td>
+<td>59</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>0101 1010</td>
+<td>90</td>
+<td>5A</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>0101 1011</td>
+<td>91</td>
+<td>5B</td>
+<td>[</td>
+</tr>
+<tr>
+<td>0101 1100</td>
+<td>92</td>
+<td>5C</td>
+<td>\</td>
+</tr>
+<tr>
+<td>0101 1101</td>
+<td>93</td>
+<td>5D</td>
+<td>]</td>
+</tr>
+<tr>
+<td>0101 1110</td>
+<td>94</td>
+<td>5E</td>
+<td>^</td>
+</tr>
+<tr>
+<td>0101 1111</td>
+<td>95</td>
+<td>5F</td>
+<td>_</td>
+</tr>
+<tr>
+<td>0110 0000</td>
+<td>96</td>
+<td>60</td>
+<td>&#96;</td>
+</tr>
+<tr>
+<td>0110 0001</td>
+<td>97</td>
+<td>61</td>
+<td>a</td>
+</tr>
+<tr>
+<td>0110 0010</td>
+<td>98</td>
+<td>62</td>
+<td>b</td>
+</tr>
+<tr>
+<td>0110 0011</td>
+<td>99</td>
+<td>63</td>
+<td>c</td>
+</tr>
+<tr>
+<td>0110 0100</td>
+<td>100</td>
+<td>64</td>
+<td>d</td>
+</tr>
+<tr>
+<td>0110 0101</td>
+<td>101</td>
+<td>65</td>
+<td>e</td>
+</tr>
+<tr>
+<td>0110 0110</td>
+<td>102</td>
+<td>66</td>
+<td>f</td>
+</tr>
+<tr>
+<td>0110 0111</td>
+<td>103</td>
+<td>67</td>
+<td>g</td>
+</tr>
+<tr>
+<td>0110 1000</td>
+<td>104</td>
+<td>68</td>
+<td>h</td>
+</tr>
+<tr>
+<td>0110 1001</td>
+<td>105</td>
+<td>69</td>
+<td>i</td>
+</tr>
+<tr>
+<td>0110 1010</td>
+<td>106</td>
+<td>6A</td>
+<td>j</td>
+</tr>
+<tr>
+<td>0110 1011</td>
+<td>107</td>
+<td>6B</td>
+<td>k</td>
+</tr>
+<tr>
+<td>0110 1100</td>
+<td>108</td>
+<td>6C</td>
+<td>l</td>
+</tr>
+<tr>
+<td>0110 1101</td>
+<td>109</td>
+<td>6D</td>
+<td>m</td>
+</tr>
+<tr>
+<td>0110 1110</td>
+<td>110</td>
+<td>6E</td>
+<td>n</td>
+</tr>
+<tr>
+<td>0110 1111</td>
+<td>111</td>
+<td>6F</td>
+<td>o</td>
+</tr>
+<tr>
+<td>0111 0000</td>
+<td>112</td>
+<td>70</td>
+<td>p</td>
+</tr>
+<tr>
+<td>0111 0001</td>
+<td>113</td>
+<td>71</td>
+<td>q</td>
+</tr>
+<tr>
+<td>0111 0010</td>
+<td>114</td>
+<td>72</td>
+<td>r</td>
+</tr>
+<tr>
+<td>0111 0011</td>
+<td>115</td>
+<td>73</td>
+<td>s</td>
+</tr>
+<tr>
+<td>0111 0100</td>
+<td>116</td>
+<td>74</td>
+<td>t</td>
+</tr>
+<tr>
+<td>0111 0101</td>
+<td>117</td>
+<td>75</td>
+<td>u</td>
+</tr>
+<tr>
+<td>0111 0110</td>
+<td>118</td>
+<td>76</td>
+<td>v</td>
+</tr>
+<tr>
+<td>0111 0111</td>
+<td>119</td>
+<td>77</td>
+<td>w</td>
+</tr>
+<tr>
+<td>0111 1000</td>
+<td>120</td>
+<td>78</td>
+<td>x</td>
+</tr>
+<tr>
+<td>0111 1001</td>
+<td>121</td>
+<td>79</td>
+<td>y</td>
+</tr>
+<tr>
+<td>0111 1010</td>
+<td>122</td>
+<td>7A</td>
+<td>z</td>
+</tr>
+<tr>
+<td>0111 1011</td>
+<td>123</td>
+<td>7B</td>
+<td>{</td>
+</tr>
+<tr>
+<td>0111 1100</td>
+<td>124</td>
+<td>7C</td>
+<td></td>
+</tr>
+<tr>
+<td>0111 1101</td>
+<td>125</td>
+<td>7D</td>
+<td>}</td>
+</tr>
+<tr>
+<td>0111 1110</td>
+<td>126</td>
+<td>7E</td>
+<td>~</td>
+</tr>
+</tbody></table>
+<h1 id="ANSI-DBCS"><a href="#ANSI-DBCS" class="headerlink" title="ANSI-DBCS"></a>ANSI-DBCS</h1><p>ANSI，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/American_National_Standards_Institute">American National Standards Institute</a><br>个人感觉理论上来讲其实ANSI不算是一种编码，从缩写可以看出，这是一个标准制定协会。应该是它把各地的locale编码都给记录为相应的标准(遗憾的是搜索不到相应的文章，网上都会非常欣喜的告诉你，有好多种ANSI编码。)wiki上有句话”ANSI is a bit of a misnomer as the behavior does not exactly match the ANSI standards and other codepages can be selected, most recently UTF-8 Unicode.”来源于<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Windows_code_page">https://en.wikipedia.org/wiki/Windows_code_page</a>,可惜我英文不是很好。从微软的<a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-tw/library/windows/desktop/dd317756(v=vs.85).aspx">Code Page Identifiers</a>可以看到如下</p>
+<ul>
+<li>ANSI&#x2F;OEM Thai (ISO 8859-11); Thai (Windows)</li>
+<li>ANSI&#x2F;OEM Japanese; Japanese (Shift-JIS)</li>
+<li>ANSI&#x2F;OEM Simplified Chinese (PRC, Singapore); Chinese Simplified (GB2312)</li>
+<li>ANSI&#x2F;OEM Korean (Unified Hangul Code)</li>
+<li>ANSI&#x2F;OEM Traditional Chinese (Taiwan; Hong Kong SAR, PRC); Chinese Traditional (Big5)</li>
+</ul>
+<p>Windows 里说的「ANSI」其实是根据当前 locale 选定具体的编码，比如简中 locale 下是 GBK。把自己这些 code page 称作「ANSI」是 Windows 的臭毛病。通常来讲，GB、BIG5、 Shift-JIS都属于ANSI编码。<br>DBCS(Double-byte Character Sets)的意思是双字节字符集<br>also known as an “expanded 8-bit character set”, is an extended single-byte character set (SBCS), implemented as a code page. （DBCS是SBCS的扩展）<br>在这一方案下，字符的宽度可以是一个字节，也可是两个字节。如果字符的宽度是两个字节，那么它的第一个字节就是一个特殊的“前导字节”，该字节是根据所使用的代码页从某个特定范围选定的。前导字节和“尾字节”合起来指定一个唯一的字符编码。<br>各个ANSI码(GB、BIG5、 Shift-JIS)是由于早期各个国家搞自己的字符编码造成的，这些国家的编码区间都是重叠的。举个例子，一个ANSI的文本文档从中文环境放到日文环境下就会乱码。</p>
+<h1 id="Unicode-UCS-万国码"><a href="#Unicode-UCS-万国码" class="headerlink" title="Unicode - UCS - 万国码"></a>Unicode - UCS - 万国码</h1><p>通用字符集 - UCS(Universal Character Set)<br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86#Unicode.E5.92.8CISO_10646.E7.9A.84.E5.BC.82.E5.90.8C">首先要说明的是Unicode和UCS并不是完全相同的概念</a></p>
+<p>Unicode的实现方式不同于编码方式。一个字符的Unicode编码是确定的。它只规定了符号的二进制代码，却没有规定这个二进制代码应该如何存储。Unicode符号需要字节数不等，从1个字节到4个字节，甚至更多。这里就有个严重的问题，计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢？第二个问题是，我们已经知道，英文字母只用一个字节表示就够了，如果Unicode统一规定，每个符号用三个或四个字节表示，那么每个英文字母前都必然有二到三个字节是0，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍，这是无法接受的。出于节省空间的目的，对Unicode编码的实现方式有所不同。</p>
+<p>Unicode的<strong>实现方式</strong>称为Unicode转换格式（Unicode Transformation Format，简称为UTF）<br>把带有 BOM 的小端序 UTF-16 称作「Unicode」也是 Windows 的臭毛病。<br>简单说Windows记事本里的Unicode会误导别人。Unicode本身是没有大端序以及小端序的区别的。</p>
+<h2 id="UTF-Unicode-x2F-UCS-Transformation-Format"><a href="#UTF-Unicode-x2F-UCS-Transformation-Format" class="headerlink" title="UTF - Unicode&#x2F;UCS Transformation Format"></a>UTF - Unicode&#x2F;UCS Transformation Format</h2><p>UTF-8编码字节含义</p>
+<ul>
+<li>UTF-8编码中的任意字节B，如果B的第一位为0，则B为ASCII码且B独立的表示一个字符；</li>
+<li>如果B的第一位为1，第二位为0，则B为一个多字节字符中的后续字节；</li>
+<li>如果B的前两位为1，第三位为0，则B为两个字节的字符中的第一个字节；</li>
+<li>如果B的前三位为1，第四位为0，则B为三个字节的字符中的第一个字节；</li>
+<li>如果B的前四位为1，第五位为0，则B为四个字节的字符中的第一个字节；</li>
+</ul>
+<p>因此，对UTF-8编码中的任意字节，根据第一位，可判断是否为ASCII字符；根据前二位，可判断该字节是否为一个字符编码的第一个字节；根据前四位（如果前两位均为1），可确定该字节为字符编码的第一个字节，并且可判断对应的字符由几个字节表示；根据前五位（如果前四位为1），可判断编码是否有错误或数据传输过程中是否有错误。<br>在ASCII字符较多的情况下，UTF-8比UTF-16更节省空间，而在中文字符较多的情况下(UTF-8一个中文字符3字节，UTF-16仍然是两个)UTF-16占用空间更少，<strong>UTF-16、UTF-32不是UTF-8的升级。</strong></p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>UTF-8</th>
+<th>UTF-16(LE)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>！</td>
+<td>21(00100001)</td>
+<td>00 21(00000000 00100001)</td>
+</tr>
+<tr>
+<td>☺</td>
+<td>E2(11100010) 98(1001100) BA(10111010)</td>
+<td>26 3A(0010,0110 00,111010)</td>
+</tr>
+<tr>
+<td>我</td>
+<td>E6(11100110) 88(10001000) 91(10010001)</td>
+<td>62 11(0110,0010 00,010001)</td>
+</tr>
+</tbody></table>
+<p>注：LE为小端序，上表中UTF-16(LE)里的”,”用于标出和UTF-8里对应关系。</p>
+<p>可以在这里<a href="https://ted423.github.io/Code/WWW/UTF-8/">UTF-8</a>以及这里<a href="https://ted423.github.io/Code/WWW/2unicode/">UTF-16 LE</a>验证</p>
+<h1 id="UCS-2、UCS-4与UTF-16、UTF-32"><a href="#UCS-2、UCS-4与UTF-16、UTF-32" class="headerlink" title="UCS-2、UCS-4与UTF-16、UTF-32"></a>UCS-2、UCS-4与UTF-16、UTF-32</h1><p>UCS-2对每一个Unicode码位使用2bytes字集(16位bit);<br>UCS-4对每一个Unicode码位使用4bytes字集(32位bit);<br>UTF-16可看成是UCS-2的父集。在没有辅助平面字符（surrogate code points）前，UTF-16与UCS-2所指的是同一的意思。但当引入辅助平面字符后，就称为UTF-16了。现在若有软件声称自己支持UCS-2编码，那其实是暗指它不能支持在UTF-16中超过2bytes的字集。对于小于0x10000的UCS码，UTF-16编码就等于UCS码。<br>UTF-32 原本是 UCS-4 的子集，但JTC1&#x2F;SC2&#x2F;WG2声明，所有未来对字符的指定都将会限制在BMP及其14个补充平面。<br>于是就现状而言，除了 UTF-32 标准包含额外的 Unicode 意涵，UCS-4 和 UTF-32 大体是相同的。</p>
+<h2 id="字节顺序标记-BOM"><a href="#字节顺序标记-BOM" class="headerlink" title="字节顺序标记-BOM"></a>字节顺序标记-BOM</h2><table>
+<thead>
+<tr>
+<th>编码</th>
+<th>表示（十六进制）</th>
+<th>表示（十进制）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>UTF-8</td>
+<td>EF BB BF</td>
+<td>239 187 191</td>
+</tr>
+<tr>
+<td>UTF-16（大端序）</td>
+<td>FE FF</td>
+<td>254 255</td>
+</tr>
+<tr>
+<td>UTF-16（小端序）</td>
+<td>FF FE</td>
+<td>255 254</td>
+</tr>
+<tr>
+<td>UTF-32（大端序）</td>
+<td>00 00 FE FF</td>
+<td>0 0 254 255</td>
+</tr>
+<tr>
+<td>UTF-32（小端序）</td>
+<td>FF FE 00 00</td>
+<td>255 254 0 0</td>
+</tr>
+<tr>
+<td>UTF-7</td>
+<td>2B 2F 76和以下的一个字节：[ 38 、 39、 2B、2F ]</td>
+<td>43 47 118和以下的一个字节：[ 56、57 、43、47 ]</td>
+</tr>
+<tr>
+<td>en:UTF-1</td>
+<td>F7 64 4C</td>
+<td>247 100 76</td>
+</tr>
+<tr>
+<td>en:UTF-EBCDIC</td>
+<td>DD 73 66 73</td>
+<td>221 115 102 115</td>
+</tr>
+<tr>
+<td>en:Standard Compression Scheme for Unicode</td>
+<td>0E FE FF</td>
+<td>14 254 255</td>
+</tr>
+<tr>
+<td>en:BOCU-1</td>
+<td>FB EE 28 及可能跟随着FF</td>
+<td>251 238 40 及可能跟随着255</td>
+</tr>
+<tr>
+<td>GB-18030</td>
+<td>84 31 95 33</td>
+<td>132 49 149 51</td>
+</tr>
+<tr>
+<td>由于UTF-8没有大端序以及小端序的区别，在Linux等系统中，是不带BOM头的，而微软在记事本的保存中都会默认带上BOM头用于区别ANSI文本文档。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h1><ul>
+<li>MBCS(multibyte character set):在微软中，一般都是指DBCS，而Wiki认为微软<strong>用词不当</strong><br><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable-width_encoding#CJK_multibyte_encodings">https://en.wikipedia.org/wiki/Variable-width_encoding#CJK_multibyte_encodings</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81#.E7.8E.B0.E4.BB.A3.E7.BC.96.E7.A0.81.E6.A8.A1.E5.9E.8B">Unicode字符编码五层次模型</a></li>
+</ul>
+<hr>
+<p><time>2018-06-21</time>试着用自己的语句把自己的理解表达出来，但还是有点乱哈</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-22T13:32:45.048Z" title="2021/12/22 21:32:45">2021-12-22</time>发表</span><span class="level-item"><time dateTime="2018-05-15T03:24:00.000Z" title="2018/5/15 11:24:00">2018-05-15</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">几秒读完 (大约34个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Document&amp;Texteditor/Advanced%20Office%20Password%20Recovery/">Advanced Office Password Recovery - Office文档暴力密码破解(可能过时了)</a></p><div class="content"><p>很早以前用的，现在就不清楚了<br>就是暴力破解工具哈。<br>软件也是大眼仔破解的<br><a target="_blank" rel="noopener" href="http://www.dayanzai.me/officeps.html">http://www.dayanzai.me/officeps.html</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-05-10T01:04:00.000Z" title="2018/5/10 09:04:00">2018-05-10</time>发表</span><span class="level-item"><time dateTime="2018-05-10T01:04:00.000Z" title="2018/5/10 09:04:00">2018-05-10</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">几秒读完 (大约46个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Fastcopy/">Fastcopy</a></p><div class="content"><p>总觉的这个不用再介绍了…..知名稳定的取代系统自带的copy工具(不过Windows 10+固态+内存放文件的copy方式还是蛮牛逼的)</p>
+<p><a target="_blank" rel="noopener" href="https://ipmsg.org/tools/fastcopy.html.en">https://ipmsg.org/tools/fastcopy.html.en</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-05-09T01:26:00.000Z" title="2018/5/9 09:26:00">2018-05-09</time>发表</span><span class="level-item"><time dateTime="2018-05-09T01:26:00.000Z" title="2018/5/9 09:26:00">2018-05-09</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Issue/">Issue</a></span><span class="level-item">几秒读完 (大约24个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Issue/wufuc/">wufuc - 禁掉Unsupported Hardware的弹窗</a></p><div class="content"><p><a target="_blank" rel="noopener" href="https://github.com/zeffy/wufuc/releases">https://github.com/zeffy/wufuc/releases</a><br>如果是普通用户，考虑到安全风险还是尽快升级为好。</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-12-22T13:32:45.151Z" title="2021/12/22 21:32:45">2021-12-22</time>发表</span><span class="level-item"><time dateTime="2018-05-06T03:18:00.000Z" title="2018/5/6 11:18:00">2018-05-06</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/System/">System</a></span><span class="level-item">几秒读完 (大约19个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/System/Linux%20old%20version/">一些Linux历史版本的下载位置(官方)</a></p><div class="content"><h1 id="Debian"><a href="#Debian" class="headerlink" title="Debian"></a>Debian</h1><p><a target="_blank" rel="noopener" href="https://cdimage.debian.org/cdimage/archive/">https://cdimage.debian.org/cdimage/archive/</a></p>
+<h1 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h1><p><a target="_blank" rel="noopener" href="http://releases.ubuntu.com/">http://releases.ubuntu.com/</a><br><a target="_blank" rel="noopener" href="http://old-releases.ubuntu.com/releases/">http://old-releases.ubuntu.com/releases/</a></p>
+<h1 id="fedora"><a href="#fedora" class="headerlink" title="fedora"></a>fedora</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/">https://dl.fedoraproject.org/pub/archive/fedora/linux/releases/</a></li>
+<li><a target="_blank" rel="noopener" href="https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/">https://archive.fedoraproject.org/pub/archive/fedora/linux/releases/</a><br>(两者应该只是域名不同，东西都一样)</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-05-02T02:49:00.000Z" title="2018/5/2 10:49:00">2018-05-02</time>发表</span><span class="level-item"><time dateTime="2018-05-02T02:49:00.000Z" title="2018/5/2 10:49:00">2018-05-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Issue/">Issue</a></span><span class="level-item">2 分钟读完 (大约289个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Issue/Driver/">[问题处理]Windows 手动安装驱动</a></p><div class="content"><h1 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h1><p>有时候会遇到明明找到了驱动安装包但是Windows一直找不到驱动。</p>
+<h1 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h1><p>微软会有个找驱动的默认路径，一些驱动安装包会自动改掉它，导致微软找驱动不在正确路径</p>
+<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><ol>
+<li>设备管理器里右键问题设备，点击更新驱动，然后选到第二项，将位置选到“C:\Windows\”并确保“包括子文件夹”已勾选。</li>
+<li>如仍不行，可尝试手动安装，需找到正确的驱动，更新时仍然选到第二项，并点击“从计算机的设备驱动程序列表里选择”，这时要点击从磁盘安装。</li>
+<li>但还有种情况就是提供的驱动程序并不匹配，有次我就强行在inf里添加设备ID安装了驱动，虽然成功了并且能使用，但其实个人并不建议这么做。</li>
+</ol>
+<h1 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h1><p>微软自动查找驱动的路径保存在<code>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion</code>下的<code>DevicePath</code>键值里</p>
+<hr>
+<p><time>2018-05-02</time>增加etc</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-04-30T08:51:00.000Z" title="2018/4/30 16:51:00">2018-04-30</time>发表</span><span class="level-item"><time dateTime="2018-04-30T08:51:00.000Z" title="2018/4/30 16:51:00">2018-04-30</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">1 分钟读完 (大约159个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/mySQL-backup/">[资料]Linux下备份MySql数据库</a></p><div class="content"><p>Full备份的话可以用mysqldump，这里有资料<br><a target="_blank" rel="noopener" href="https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html">https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html</a></p>
+<p>之后可以通过备份Binary Log的方式备份数据库改动。<br>Binary Log 的运作原理很简单，它只是单纯的将所有会修改到资料库内容的操作记录在 Log 档案中</p>
+<p>首先需要启用Binary Log(默认没启用)</p>
+<p>修改 MySQL Server 的系统设定档(eg. &#x2F;etc&#x2F;my.cnf，最新版貌似改了，需要自己找下)，在 [mysqld] 区块中加上 log-bin&#x3D;mysql-bin 选项，然后重新启动 MySQL Server。<br>例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[mysqld] </span><br><span class="line">log-bin=mysql-bin</span><br></pre></td></tr></table></figure>
+
+<p>然后Binary Log会放在<code>/var/lib/mysql</code></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-04-29T10:37:00.000Z" title="2018/4/29 18:37:00">2018-04-29</time>发表</span><span class="level-item"><time dateTime="2018-04-29T10:37:00.000Z" title="2018/4/29 18:37:00">2018-04-29</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">1 分钟读完 (大约203个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/apt-source/">[资料]debian 更改软件源</a></p><div class="content"><p>软件源配置文件位于&#x2F;etc&#x2F;apt&#x2F;source.list<br>资料: <a target="_blank" rel="noopener" href="https://wiki.debian.org/SourcesList">https://wiki.debian.org/SourcesList</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.163.com/debian/ jessie main non-free contrib</span><br><span class="line">deb http://mirrors.163.com/debian/ jessie-updates main non-free contrib</span><br><span class="line">deb http://mirrors.163.com/debian/ jessie-backports main non-free contrib</span><br><span class="line">deb-src http://mirrors.163.com/debian/ jessie main non-free contrib</span><br><span class="line">deb-src http://mirrors.163.com/debian/ jessie-updates main non-free contrib</span><br><span class="line">deb-src http://mirrors.163.com/debian/ jessie-backports main non-free contrib</span><br><span class="line">deb http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib</span><br><span class="line">deb-src http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib</span><br></pre></td></tr></table></figure>
+<p>其中jessie 为系统版本代号(可用lsb_release -a进行确认)，须与当前系统保持一致<br>在例如Debian 9就是 stretch</p>
+<p>main consists of DFSG-compliant packages, which do not rely on software outside this area to operate. These are the only packages considered part of the Debian distribution.</p>
+<p>contrib packages contain DFSG-compliant software, but have dependencies not in main (possibly packaged for Debian in non-free).</p>
+<p>non-free contains software that does not comply with the DFSG.</p>
+<p>DFSG: <a target="_blank" rel="noopener" href="https://www.debian.org/social_contract#guidelines">https://www.debian.org/social_contract#guidelines</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-04-29T01:55:00.000Z" title="2018/4/29 09:55:00">2018-04-29</time>发表</span><span class="level-item"><time dateTime="2018-04-29T01:55:00.000Z" title="2018/4/29 09:55:00">2018-04-29</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Issue/">Issue</a></span><span class="level-item">几秒读完 (大约40个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Issue/Apache/">[问题处理]Linux下Apache2无法启动的原因排查</a></p><div class="content"><p>先用<code>journalctl | tail</code></p>
+<p>看看系统日志，一般来讲都是配置不对导致的<br><code>apache2ctl configtest</code>则是具体看配置哪里有问题的</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-04-28T14:45:00.000Z" title="2018/4/28 22:45:00">2018-04-28</time>发表</span><span class="level-item"><time dateTime="2018-04-28T14:45:00.000Z" title="2018/4/28 22:45:00">2018-04-28</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">6 分钟读完 (大约864个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Hardware/Disk%20manager/">硬盘管理工具</a></p><div class="content"><h1 id="DiskGenius"><a href="#DiskGenius" class="headerlink" title="DiskGenius"></a>DiskGenius</h1><p>其实建议用官方免费版的，数据恢复其实有其他软件能做到<br>这个软件的搜索已丢失分区是非常有用的(不过傲梅分区助手也有这个功能，藏得比较隐蔽，之前没找到)<br>这个软件严格意义上来讲，我不是很喜欢，分区格式的支持还不如分区助手。有其他分区工具是支持ext4的。<br>官网: <a target="_blank" rel="noopener" href="http://www.diskgenius.cn/">http://www.diskgenius.cn/</a><br>roustar31:  <a target="_blank" rel="noopener" href="https://www.repaik.com/forum.php?mod=viewthread&tid=66789">https://www.repaik.com/forum.php?mod=viewthread&amp;tid=66789</a><br>(repaik网站停止运营)</p>
+<p>破解的，4.9.2版本看起来是可用来恢复的</p>
+<h1 id="Victoria"><a href="#Victoria" class="headerlink" title="Victoria"></a>Victoria</h1><p>Victoria 是一款继MHDD无法适应新机器后得最佳硬盘坏道检测工具。<br>当然，这里必须提下物理坏道和逻辑坏道。<br>由于以上坏道相关信息来源于英文翻译，并且经常有弄不懂的也发文章，所以概念非常混乱。<br>通常来说，我的区分方式就是是否能被MHDD用eraser修复，能被修复得就是逻辑坏道，否则就是物理坏道。</p>
+<p>但是这个工具有写  [Hint] Recommend 32-bit Windows XP for a best work!<br>Warning! Windows x64 detected! PIO mode supported on Windows x86 only.</p>
+<p>官网:<a target="_blank" rel="noopener" href="http://hdd.by/victoria/">http://hdd.by/victoria/</a>(俄文，建议google翻译英文看…)<br>下载站:<a target="_blank" rel="noopener" href="https://download-software.ru/victoria-hdd-download.html">https://download-software.ru/victoria-hdd-download.html</a></p>
+<h1 id="傲梅分区助手"><a href="#傲梅分区助手" class="headerlink" title="傲梅分区助手"></a><del>傲梅分区助手</del></h1><p>不推荐使用，简单说就是虽然功能看起来非常多，但是很多功能的实现都有问题，样子货<br>英文官网: <a target="_blank" rel="noopener" href="https://www.disk-partition.com/">https://www.disk-partition.com/</a><br>中文官网: <a target="_blank" rel="noopener" href="http://disktool.cn/">http://disktool.cn/</a><br><del>英文版更新更完善，估计国外比较容易赚到钱</del>(现在都一样了)<br>大眼仔破解: <a target="_blank" rel="noopener" href="http://www.dayanzai.me/partition-assistant.html">http://www.dayanzai.me/partition-assistant.html</a></p>
+<p>之前一直在用DiskGenius进行磁盘分区调整的相关操作,但是当我因为工作需要将一个XP系统的NTFS无损转FAT32分区的时候，遇见了傲梅分区助手。随后当我发现公司电脑硬盘本身不大，却还分了3个区的时候，又是分区助手的合并分区功能帮了我。后来试图将动态磁盘转为基本磁盘，还是找到了分区助手(虽然我选择了用DiskGenius恢复分区表来还原之前的磁盘，不过DiskGenius中间出了各种问题，吓得我一身冷汗之后才解决倒是)</p>
+<p>一方面，这款软件没什么广告而且免费，功能也很全，界面也很干净。老实说，我倒不是特别喜欢界面漂亮的软件，因为很少有软件界面漂亮还在功能上符合我胃口。虽然像什么迁移系统到固态硬盘、启动光盘制作之类的功能让我觉得这款软件还是有点中国软件的风格以外，但还是得说分区助手做的不错。<br>相对DiskGenius来说，傲梅分区助手不具备恢复文件的功能(不过相对来讲DiskGenius这个功能也是要钱的)。</p>
+<h2 id="不过个人感觉这个软件基本是参照着MiniTool-Partition-Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4-英文版支持-。小问题有点多，对于一个操作硬盘的软件来说这点不大好"><a href="#不过个人感觉这个软件基本是参照着MiniTool-Partition-Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4-英文版支持-。小问题有点多，对于一个操作硬盘的软件来说这点不大好" class="headerlink" title="不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4(英文版支持)。小问题有点多，对于一个操作硬盘的软件来说这点不大好"></a>不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，<del>还有不支持格式化成ext4</del>(英文版支持)。<br>小问题有点多，对于一个操作硬盘的软件来说这点不大好</h2><p><time>2018-04-28 22:45</time>分区助手增加国外破解版，增加DiskGenius破解版</p>
+</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/21/">上一页</a></div><div class="pagination-next"><a href="/page/23/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/21/">21</a></li><li><a class="pagination-link is-current" href="/page/22/">22</a></li><li><a class="pagination-link" href="/page/23/">23</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/39/">39</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://www.gravatar.com/avatar/3581fa7535eb1989959533f1d264012c?s=128" alt="ted423"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">ted423</p><p class="is-size-6 is-block">到处乱跑</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">381</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">145</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ted423" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ted423"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Anime/"><span class="level-start"><span class="level-item">Anime</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Browser/"><span class="level-start"><span class="level-item">Browser</span></span><span class="level-end"><span class="level-item tag">15</span></span></a></li><li><a class="level is-mobile" href="/categories/Code/"><span class="level-start"><span class="level-item">Code</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/categories/Comic/"><span class="level-start"><span class="level-item">Comic</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Document/"><span class="level-start"><span class="level-item">Document</span></span><span class="level-end"><span class="level-item tag">47</span></span></a></li><li><a class="level is-mobile" href="/categories/Game/"><span class="level-start"><span class="level-item">Game</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Issue/"><span class="level-start"><span class="level-item">Issue</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/categories/Music/"><span class="level-start"><span class="level-item">Music</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Optimization/"><span class="level-start"><span class="level-item">Optimization</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/Picture-Photo-Image/"><span class="level-start"><span class="level-item">Picture&amp;Photo&amp;Image</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">88</span></span></a></li><li><a class="level is-mobile" href="/categories/System/"><span class="level-start"><span class="level-item">System</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Video/"><span class="level-start"><span class="level-item">Video</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/1080i/"><span class="tag">1080i</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/1080p/"><span class="tag">1080p</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/3-clause-BSD-license/"><span class="tag">3-clause BSD license</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/480P/"><span class="tag">480P</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/720P/"><span class="tag">720P</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/720p/"><span class="tag">720p</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AGPLv3/"><span class="tag">AGPLv3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AKB48/"><span class="tag">AKB48</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ARK/"><span class="tag">ARK</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anime/"><span class="tag">Anime</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anti-996-License/"><span class="tag">Anti 996 License</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Apache-License-2-0/"><span class="tag">Apache License 2.0</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Archived/"><span class="tag">Archived</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDMV/"><span class="tag">BDMV</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDrip/"><span class="tag">BDrip</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Browser/"><span class="tag">Browser</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CMD/"><span class="tag">CMD</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/COS/"><span class="tag">COS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chrome/"><span class="tag">Chrome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chromium-Chrome/"><span class="tag">Chromium(Chrome)</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Code/"><span class="tag">Code</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Comic/"><span class="tag">Comic</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compare/"><span class="tag">Compare</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compression/"><span class="tag">Compression</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Disney/"><span class="tag">Disney</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Document/"><span class="tag">Document</span><span class="tag">54</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Document-Texteditor/"><span class="tag">Document&amp;Texteditor</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Download-File-hosting-service/"><span class="tag">Download&amp;File hosting service</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dropbox/"><span class="tag">Dropbox</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Encode/"><span class="tag">Encode</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Extension/"><span class="tag">Extension</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FHD/"><span class="tag">FHD</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Firefox/"><span class="tag">Firefox</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Font/"><span class="tag">Font</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GM%E8%84%9A%E6%9C%AC/"><span class="tag">GM脚本</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv2/"><span class="tag">GPLv2</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv3/"><span class="tag">GPLv3</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv3/"><span class="tag">GPLv3+</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game/"><span class="tag">Game</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game-Tool/"><span class="tag">Game Tool</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github/"><span class="tag">Github</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HD/"><span class="tag">HD</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HDR/"><span class="tag">HDR</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hardware/"><span class="tag">Hardware</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hardware-Tool/"><span class="tag">Hardware Tool</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo-Theme/"><span class="tag">Hexo Theme</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Issue/"><span class="tag">Issue</span><span class="tag">51</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JP/"><span class="tag">JP</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Javascript/"><span class="tag">Javascript</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/K-ON/"><span class="tag">K-ON</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPL/"><span class="tag">LGPL</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPLv2-1/"><span class="tag">LGPLv2.1</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPLv3/"><span class="tag">LGPLv3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">34</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lossless/"><span class="tag">Lossless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MIT/"><span class="tag">MIT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MPL/"><span class="tag">MPL</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MV/"><span class="tag">MV</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Maintenance/"><span class="tag">Maintenance</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Movie/"><span class="tag">Movie</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NEKO-WORKs-Sayori/"><span class="tag">NEKO WORKs(Sayori)</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Network/"><span class="tag">Network</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS-X/"><span class="tag">OS X</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OST/"><span class="tag">OST</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Office/"><span class="tag">Office</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Offline-Install/"><span class="tag">Offline Install</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Open-Source/"><span class="tag">Open Source</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Optimization/"><span class="tag">Optimization</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PIXAR/"><span class="tag">PIXAR</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PSP/"><span class="tag">PSP</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Personal-Free/"><span class="tag">Personal Free</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Picture-Photo-Image/"><span class="tag">Picture&amp;Photo&amp;Image</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pool/"><span class="tag">Pool</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PowerShell/"><span class="tag">PowerShell</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Proxy/"><span class="tag">Proxy</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R18/"><span class="tag">R18</span><span class="tag">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Regedit/"><span class="tag">Regedit</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Remote/"><span class="tag">Remote</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SEO/"><span class="tag">SEO</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SIL-Open-Font/"><span class="tag">SIL Open Font</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SVG/"><span class="tag">SVG</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Security-Software/"><span class="tag">Security Software</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Software/"><span class="tag">Software</span><span class="tag">58</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Steam/"><span class="tag">Steam</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/System/"><span class="tag">System</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Terminal/"><span class="tag">Terminal</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/To-LOVE%E3%82%8B/"><span class="tag">To LOVEる</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UHD/"><span class="tag">UHD</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/US/"><span class="tag">US</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VM/"><span class="tag">VM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vocaloid/"><span class="tag">Vocaloid</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WWW/"><span class="tag">WWW</span><span class="tag">32</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">145</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-10/"><span class="tag">Windows 10</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-AD/"><span class="tag">Windows AD</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-Server/"><span class="tag">Windows Server</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-Update/"><span class="tag">Windows Update</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Youtube/"><span class="tag">Youtube</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iOS/"><span class="tag">iOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/macOS/"><span class="tag">macOS</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pixiv/"><span class="tag">pixiv</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E2%98%86/"><span class="tag">☆</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"><span class="tag">三次元</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/"><span class="tag">不再推荐</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%93%E8%BE%91/"><span class="tag">专辑</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"><span class="tag">个人观点</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E8%AF%84%E4%BB%B7/"><span class="tag">个人评价</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%81%B6%E5%83%8F%E5%A4%A7%E5%B8%88-The-iDOLM-STER/"><span class="tag">偶像大师(The iDOLM@STER)</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"><span class="tag">分类汇总</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AF-Hatsune-Miku/"><span class="tag">初音ミク(Hatsune Miku)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%9A%E8%A1%8C-Autolyric/"><span class="tag">多行(Autolyric)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A7%E7%9C%BC%E4%BB%94-%E6%97%AD/"><span class="tag">大眼仔~旭</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/"><span class="tag">字符编码</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%89%E5%85%A8%E8%BD%AF%E4%BB%B6/"><span class="tag">安全软件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%8C%E7%BB%93/"><span class="tag">完结</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E4%BF%8A/"><span class="tag">小俊</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E8%AF%B4/"><span class="tag">小说</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A7%E5%85%8B%E5%8A%9B%E4%B8%8E%E9%A6%99%E5%AD%90%E5%85%B0/"><span class="tag">巧克力与香子兰</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"><span class="tag">建设中</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E6%BA%90/"><span class="tag">开源</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%85%E7%BB%B4%E6%8A%A4/"><span class="tag">待维护</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%81%B6%E4%B9%8B%E5%8D%8E/"><span class="tag">恶之华</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E-Valkyria-Chronicles/"><span class="tag">战场的女武神[Valkyria Chronicles]</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%89%8B%E5%8A%9E/"><span class="tag">手办</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/"><span class="tag">无双系列</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A0%E6%8D%9F/"><span class="tag">无损</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%8C%E8%AF%8D-LRC/"><span class="tag">歌词(LRC)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%A3%E7%89%88/"><span class="tag">正版</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B1%89%E5%8C%96/"><span class="tag">汉化</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%83%88%E7%81%AB/"><span class="tag">烈火</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A0%B4%E8%A7%A3/"><span class="tag">破解</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"><span class="tag">破解&amp;激活</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"><span class="tag">第三方修改|绿化</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy/"><span class="tag">组策略(Group Policy)</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%89%A6%E9%9A%8A%E3%81%93%E3%82%8C%E3%81%8F%E3%81%97%E3%82%87%E3%82%93-%E8%89%A6%E3%81%93%E3%82%8C/"><span class="tag">艦隊これくしょん -艦これ-</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"><span class="tag">跨平台</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E8%BD%BD/"><span class="tag">转载</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%87%E6%97%B6/"><span class="tag">过时</span><span class="tag">23</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC-Disney/"><span class="tag">迪士尼[Disney]</span><span class="tag">2</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T13:26:37.417Z">2023-08-07</time></p><p class="title"><a href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a></p><p class="categories"><a href="/categories/Issue/">Issue</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-15T15:46:25.499Z">2023-07-15</time></p><p class="title"><a href="/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/">Adobe Acrobat Reader DC Offline / 离线安装包</a></p><p class="categories"><a href="/categories/Software/">Software</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-15T15:43:07.968Z">2023-07-15</time></p><p class="title"><a href="/Software/Webmin/">[开源]Webmin - WebUI for Linux</a></p><p class="categories"><a href="/categories/Software/">Software</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-16T07:57:00.000Z">2023-06-16</time></p><p class="title"><a href="/etc/%E5%AE%BD%E5%AE%B9%E6%82%96%E8%AE%BA/">[转载]苏了了：宽容的悖论———当代西方宽容理论困境的批判性反思</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-06T15:52:53.269Z">2023-06-06</time></p><p class="title"><a href="/etc/hexo-next/">为什么试了下 Hexo NexT 然后不用了 - 个人观点 - &quot;Hexo Theme&quot;</a></p></div></article></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/avatar/avatar.jpg" alt="个人小站" height="28"></a><p class="is-size-7"><span>&copy; 2024 ted423</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

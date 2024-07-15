@@ -125,6 +125,53 @@
   </entry>
   
   <entry>
+    <title>为什么试了下 Hexo NexT 然后不用了 - 个人观点 - &quot;Hexo Theme&quot;</title>
+    <link href="http://ted423.github.io/etc/hexo-next/"/>
+    <id>http://ted423.github.io/etc/hexo-next/</id>
+    <published>2023-06-06T15:52:53.269Z</published>
+    <updated>2023-04-23T09:12:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p><p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p><p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。&lt;/p&gt;
+&lt;p&gt;前者比较重要，后者的话，会增加很大的维护量，使用&lt;code&gt;hexo-excerpt&lt;/code&gt;的话，会对所有文章产生一个阅读全文按钮。&lt;/p&gt;
+&lt;p&gt;本意是想 </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>博客换主题，不再用hexo-theme-archer</title>
+    <link href="http://ted423.github.io/etc/hexo-theme-icarus/"/>
+    <id>http://ted423.github.io/etc/hexo-theme-icarus/</id>
+    <published>2023-06-06T15:52:53.269Z</published>
+    <updated>2024-07-15T07:28:53.931Z</updated>
+    
+    <content type="html"><![CDATA[<p>原来的主题是 <a href="https://github.com/fi3ework/hexo-theme-archer">https://github.com/fi3ework/hexo-theme-archer</a></p><p>但不幸的是，维护者有自己的事要做，老的版本有老的 bug，最新的版本有新的 bug，修复时间未知，PR里另一个维护者有不同意见却长期没有获得回应。整个主题的版本不可控制，并且它推荐的安装方式是用整个 Github 项目，配置什么的都在里面，已经开始影响我写博客了。</p><p>因为提交的时候是主题和文章一起提交。而原项目的所有配置都写死在了项目里，如果我需要使用，最好的方式是我自己去维护一个个人版本。这有几个问题。</p><ul><li>这个项目的使用方式需要使用者自行在 themes 里做一个单独的代码版本控制（项目本身并没有明确要求，但实际使用中肯定是需要的）。如果不做，等哪天你需要更新了，你会发现不知道哪些文件是不必要的，哪些文件需要更新，哪些文件被还原了导致奇怪的问题，甚至你大概需要自己重新编译一下。这是一个正常的 Hexo Theme 不会有的要求，我的主要目的是写博客，虽然个人愿意维护一个自己的版本，甚至已经这么做过了。</li><li>这个自己维护的代码应该是私密的，因为配置都在里面，我不希望别人围观配置，但个人配置这种东西，它就应该在本地。</li><li>调试主题以及配置会影响我更新文章。如果调试需要花几天时间甚至更长，我没法把一个有 bug 的博客更新出去，况且我本身不希望花太多时间在这上面。</li><li>整个项目的设计存在明显问题，大部分其他项目提供配置示例都是加了 .sample，这样不会有配置覆盖修改之类的问题，参考上面第二点，原始 code 应该和编译后的 release 文件分开。而在这个项目中，你需要把 .git 文件夹还有一大堆应该用不上的文件都放到你的 themes 文件夹中，另外我估摸编译的 node_modules 和主题中需要使用的 node_modules 混在了一起。</li><li>主要维护者删 package-lock.json</li></ul><p>新的主题是 <a href="https://github.com/ppoffice/hexo-theme-icarus">https://github.com/ppoffice/hexo-theme-icarus</a></p><p>就本身来说我还是比较喜欢原来的主题样式，新的主题还有好多我不太喜欢的变化，例如页面宽度（原来的我自己调宽了），预览的长度。不过好歹支持了 toc，虽然解析似乎还有问题</p><p>不过这块应该可以克服和改进，毕竟很多还没来得及研究</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;原来的主题是 &lt;a href=&quot;https://github.com/fi3ework/hexo-theme-archer&quot;&gt;https://github.com/fi3ework/hexo-theme-archer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但不幸的是，维护者有自己的事要做，</summary>
+      
+    
+    
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Hexo Theme" scheme="http://ted423.github.io/tags/Hexo-Theme/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[开源]rdpwrap</title>
     <link href="http://ted423.github.io/Software/Remote/rdpwrap/"/>
     <id>http://ted423.github.io/Software/Remote/rdpwrap/</id>
@@ -154,30 +201,6 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么试了下 Hexo NexT 然后不用了</title>
-    <link href="http://ted423.github.io/etc/hexo-next/"/>
-    <id>http://ted423.github.io/etc/hexo-next/</id>
-    <published>2023-04-23T12:12:17.309Z</published>
-    <updated>2023-04-23T09:12:40.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p><p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p><p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。&lt;/p&gt;
-&lt;p&gt;前者比较重要，后者的话，会增加很大的维护量，使用&lt;code&gt;hexo-excerpt&lt;/code&gt;的话，会对所有文章产生一个阅读全文按钮。&lt;/p&gt;
-&lt;p&gt;本意是想 </summary>
-      
-    
-    
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
   </entry>
   
@@ -556,35 +579,6 @@
     <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
     
     <category term="烈火" scheme="http://ted423.github.io/tags/%E7%83%88%E7%81%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows Update 错误 80092004 解决方案</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/80092004/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/80092004/</id>
-    <published>2022-09-24T16:00:00.000Z</published>
-    <updated>2022-09-25T02:04:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>来源:<a href="https://it-help.tips/zh/windows-7-update-80092004-error/">https://it-help.tips/zh/windows-7-update-80092004-error/</a></p><p>80092004 的错误是跟更新档的验证有关， Windows 7 (2008 R2) 2019年出的问题（解决之后收藏夹放了很久）,手动打下 KB4474419 和 KB4490628 这两个更新即可<br><a href="https://support.microsoft.com/zh-cn/topic/%E9%92%88%E5%AF%B9-windows-%E5%92%8C-wsus-%E7%9A%84-2019-sha-2-%E4%BB%A3%E7%A0%81%E7%AD%BE%E5%90%8D%E6%94%AF%E6%8C%81%E8%A6%81%E6%B1%82-64d1c82d-31ee-c273-3930-69a4cde8e64f">https://support.microsoft.com/zh-cn/topic/针对-windows-和-wsus-的-2019-sha-2-代码签名支持要求-64d1c82d-31ee-c273-3930-69a4cde8e64f</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;来源:&lt;a href=&quot;https://it-help.tips/zh/windows-7-update-80092004-error/&quot;&gt;https://it-help.tips/zh/windows-7-update-80092004-error/&lt;/a&gt;&lt;/p&gt;
-&lt;p</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
     
   </entry>
   
