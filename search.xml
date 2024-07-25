@@ -8717,12 +8717,18 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       </tags>
   </entry>
   <entry>
-    <title>为什么试了下 Hexo NexT 然后不用了 - 个人观点 - &quot;Hexo Theme&quot;</title>
+    <title>Hexo NexT</title>
     <url>/etc/hexo-next/</url>
-    <content><![CDATA[<p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p>
+    <content><![CDATA[<h2 id="原标题-为什么试了下-Hexo-NexT-然后不用了"><a href="#原标题-为什么试了下-Hexo-NexT-然后不用了" class="headerlink" title="原标题 为什么试了下 Hexo NexT 然后不用了"></a>原标题 为什么试了下 Hexo NexT 然后不用了</h2><p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p>
 <p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p>
 <p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p>
+<hr>
+<p>跑回来用这个了，一些原因见 <a href="/etc/hexo-theme-icarus">icarus</a></p>
 ]]></content>
+      <tags>
+        <tag>个人观点</tag>
+        <tag>Hexo Theme</tag>
+      </tags>
   </entry>
   <entry>
     <title>关于instagram批量下载</title>
@@ -27699,6 +27705,7 @@ $(function () {
 <li>调试主题以及配置会影响我更新文章。如果调试需要花几天时间甚至更长，我没法把一个有 bug 的博客更新出去，况且我本身不希望花太多时间在这上面。</li>
 <li>整个项目的设计存在明显问题，大部分其他项目提供配置示例都是加了 .sample，这样不会有配置覆盖修改之类的问题，参考上面第二点，原始 code 应该和编译后的 release 文件分开。而在这个项目中，你需要把 .git 文件夹还有一大堆应该用不上的文件都放到你的 themes 文件夹中，另外我估摸编译的 node_modules 和主题中需要使用的 node_modules 混在了一起。</li>
 <li>主要维护者删 package-lock.json</li>
+<li>其他主题都带 local search</li>
 </ul>
 <p>新的主题是 <a href="https://github.com/ppoffice/hexo-theme-icarus">https://github.com/ppoffice/hexo-theme-icarus</a></p>
 <p>就本身来说我还是比较喜欢原来的主题样式，新的主题还有好多我不太喜欢的变化，例如页面宽度（原来的我自己调宽了），预览的长度。不过好歹支持了 toc，虽然解析似乎还有问题</p>

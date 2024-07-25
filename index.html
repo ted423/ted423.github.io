@@ -185,6 +185,86 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/etc/hexo-next/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/etc/hexo-next/" class="post-title-link" itemprop="url">Hexo NexT</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-04-23 17:12:00" itemprop="dateCreated datePublished" datetime="2023-04-23T17:12:00+08:00">2023-04-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-07-25 17:41:34" itemprop="dateModified" datetime="2024-07-25T17:41:34+08:00">2024-07-25</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="原标题-为什么试了下-Hexo-NexT-然后不用了"><a href="#原标题-为什么试了下-Hexo-NexT-然后不用了" class="headerlink" title="原标题 为什么试了下 Hexo NexT 然后不用了"></a>原标题 为什么试了下 Hexo NexT 然后不用了</h2><p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p>
+<p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p>
+<p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p>
+<hr>
+<p>跑回来用这个了，一些原因见 <a href="/etc/hexo-theme-icarus">icarus</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ted423.github.io/etc/hexo-theme-icarus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -221,7 +301,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-07-25 17:24:49" itemprop="dateModified" datetime="2024-07-25T17:24:49+08:00">2024-07-25</time>
+      <time title="修改时间：2024-07-25 17:38:37" itemprop="dateModified" datetime="2024-07-25T17:38:37+08:00">2024-07-25</time>
     </span>
 
   
@@ -243,6 +323,7 @@
 <li>调试主题以及配置会影响我更新文章。如果调试需要花几天时间甚至更长，我没法把一个有 bug 的博客更新出去，况且我本身不希望花太多时间在这上面。</li>
 <li>整个项目的设计存在明显问题，大部分其他项目提供配置示例都是加了 .sample，这样不会有配置覆盖修改之类的问题，参考上面第二点，原始 code 应该和编译后的 release 文件分开。而在这个项目中，你需要把 .git 文件夹还有一大堆应该用不上的文件都放到你的 themes 文件夹中，另外我估摸编译的 node_modules 和主题中需要使用的 node_modules 混在了一起。</li>
 <li>主要维护者删 package-lock.json</li>
+<li>其他主题都带 local search</li>
 </ul>
 <p>新的主题是 <a target="_blank" rel="noopener" href="https://github.com/ppoffice/hexo-theme-icarus">https://github.com/ppoffice/hexo-theme-icarus</a></p>
 <p>就本身来说我还是比较喜欢原来的主题样式，新的主题还有好多我不太喜欢的变化，例如页面宽度（原来的我自己调宽了），预览的长度。不过好歹支持了 toc，虽然解析似乎还有问题</p>
@@ -1047,85 +1128,6 @@
 <p>解决方法一个是可以通过改组策略(发起连接的那台电脑)，<br>中文为凭据分配，其中要添加的是保存的凭据，有可能需要仅NTLM那项也设置（应该是有域环境的需要），截图有误 <code>TERMSRV/*</code><br><img src="https://i.stack.imgur.com/GwDcB.jpg" alt="RDP无法以保存的账号密码登陆"><br><img src="https://i.stack.imgur.com/QFjeE.jpg" alt="RDP无法以保存的账号密码登陆"></p>
 <h2 id="域环境下可能还要跑-gpupdate-force"><a href="#域环境下可能还要跑-gpupdate-force" class="headerlink" title="域环境下可能还要跑 gpupdate /force"></a>域环境下可能还要跑 <code>gpupdate /force</code></h2><p><time>2023-04-23</time>增加NTLM的说明<br><time>2023-09-28</time>增加<code>gpupdate /force</code></p>
 
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/Windows%20Update/80072EE2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Issue/Windows%20Update/80072EE2/" class="post-title-link" itemprop="url">[问题处理]Windows 7 update 报 80072EE2</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2023-08-07 21:26:37 / 修改时间：21:28:20" itemprop="dateCreated datePublished" datetime="2023-08-07T21:26:37+08:00">2023-08-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Issue/" itemprop="url" rel="index"><span itemprop="name">Issue</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net stop wuauserv</span><br><span class="line">reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate</span><br><span class="line">net start wuauserv</span><br></pre></td></tr></table></figure>
       
     </div>
 
