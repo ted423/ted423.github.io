@@ -281,14 +281,17 @@
     <link href="http://ted423.github.io/etc/hexo-next/"/>
     <id>http://ted423.github.io/etc/hexo-next/</id>
     <published>2023-04-23T09:12:00.000Z</published>
-    <updated>2024-07-25T09:41:34.525Z</updated>
+    <updated>2024-07-25T10:06:07.322Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="原标题-为什么试了下-Hexo-NexT-然后不用了"><a href="#原标题-为什么试了下-Hexo-NexT-然后不用了" class="headerlink" title="原标题 为什么试了下 Hexo NexT 然后不用了"></a>原标题 为什么试了下 Hexo NexT 然后不用了</h2><p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p><p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p><p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p><hr><p>跑回来用这个了，一些原因见 <a href="/etc/hexo-theme-icarus">icarus</a></p>]]></content>
+    <content type="html"><![CDATA[<p>原标题 为什么试了下 Hexo NexT 然后不用了</p><hr><p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p><p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p><p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p><hr><p>跑回来用这个了，一些原因见 <a href="/etc/hexo-theme-icarus">icarus</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h2 id=&quot;原标题-为什么试了下-Hexo-NexT-然后不用了&quot;&gt;&lt;a href=&quot;#原标题-为什么试了下-Hexo-NexT-然后不用了&quot; class=&quot;headerlink&quot; title=&quot;原标题 为什么试了下 Hexo NexT 然后不用了&quot;&gt;&lt;/a&gt;原标题 为什么试</summary>
+    <summary type="html">&lt;p&gt;原标题 为什么试了下 Hexo NexT 然后不用了&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。&lt;/p&gt;
+&lt;p&gt;前者比较重要，后者的话，会增加很大的维护量，使用&lt;code&gt;hexo-excerpt&lt;</summary>
       
     
     
