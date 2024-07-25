@@ -1,250 +1,463 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>分类: Document - 个人小站</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="个人小站"><meta name="msapplication-TileImage" content="/avatar/avatar.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="个人小站"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"><meta property="og:type" content="blog"><meta property="og:title" content="个人小站"><meta property="og:url" content="http://ted423.github.io/"><meta property="og:site_name" content="个人小站"><meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://ted423.github.io/img/og_image.png"><meta property="article:author" content="ted423"><meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://ted423.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io"},"headline":"个人小站","image":["http://ted423.github.io/img/og_image.png"],"author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/avatar/avatar.jpg"}},"description":"这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"}</script><link rel="icon" href="/avatar/avatar.jpg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
-
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/avatar/avatar.jpg" alt="个人小站" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">Document</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-12-28T03:30:21.269Z" title="2022/12/28 11:30:21">2022-12-28</time>发表</span><span class="level-item"><time dateTime="2022-12-28T08:40:28.807Z" title="2022/12/28 16:40:28">2022-12-28</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">3 分钟读完 (大约482个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/Encode/HDR/">x265 HDR 参数计算方法</a></p><div class="content"><p>HDR 压制参数为 <code>--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&quot; --max-cll=1000,400</code></p>
-<p>首先，不同的色彩空间有不同的G B R WP 数据</p>
-<p>通常，不同的片会有不同的L 数据 以及 max-cll</p>
-<p>Mediainfo范例</p>
-<p>BT.2020  Olympus Has Fallen 2013</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Color range : Limited</span><br><span class="line">Color primaries : BT.2020</span><br><span class="line">Transfer characteristics : PQ</span><br><span class="line">Matrix coefficients : BT.2020 non-constant</span><br><span class="line">Mastering display color primaries : BT.2020</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 891 cd/m2</span><br><span class="line">Maximum Frame-Average Light Level : 428 cd/m2</span><br><span class="line">Original source medium : Blu-ray</span><br></pre></td></tr></table></figure>
-
-<p>Display P3 会比较多</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Color range                 : Limited</span><br><span class="line">Color primaries             : BT.2020</span><br><span class="line">Transfer characteristics    : PQ</span><br><span class="line">Matrix coefficients         : BT.2020 non-constant</span><br><span class="line">Mastering display color pri : Display P3</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 479 cd/m2</span><br><span class="line">Maximum Frame-Average Light : 464 cd/m2</span><br></pre></td></tr></table></figure>
+<link rel="stylesheet" href="/css/main.css">
 
 
-<p>G B R WP 数据看Mediainfo里的Mastering display color pri</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Display P3</span><br><span class="line">--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)&quot;</span><br><span class="line">BT.2020</span><br><span class="line">--master-display &quot;G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)&quot;</span><br></pre></td></tr></table></figure>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ted423.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+<meta property="og:type" content="website">
+<meta property="og:title" content="个人小站">
+<meta property="og:url" content="http://ted423.github.io/categories/Document/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423">
+<meta name="twitter:card" content="summary">
 
 
-<p>Venom 2018 movie mediainfo :</p>
-<pre><code>Mastering display luminance : min: <b>0.0050</b> cd/m2, max: <b>4000</b> cd/m2
-Maximum Content Light Level : <b>3903</b> cd/m2
-Maximum Frame-Average Light Level : <b>1076</b> cd/m2
-</code></pre>
-<p>In this case master-display&#x3D;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)<strong>L(40000000,50)</strong> and max-cll&#x3D;<strong>3903,1076</strong></p>
-<p>About Maximum Content Light Level and Maximum Frame-Average Light Level … If those not present -&gt; max-cll&#x3D;0,0</p>
-<p>测试用临时Code</p>
-<p>前置参数</p>
-<textarea style="width: 80%; height: 200px" id="x265" onkeyup="refresh();">--level-idc 5.1 --bframes 8 --rd 4 --me 3 --subme 7 --ref 5 --merange 57 --ipratio 1.3 --pbratio 1.2 --aq-mode 2 --aq-strength 1.00 --qcomp 0.60 --psy-rd 1.5 --psy-rdoq 1.00 --ctu 64 --rc-lookahead 100 --deblock -3:-3 --no-strong-intra-smoothing --cbqpoffs 0 --crqpoffs 0 --qg-size 8 --range limited --no-frame-dup --selective-sao 0 --no-cutree --tu-intra-depth 4 --no-open-gop --tu-inter-depth 4 --rskip 0 --no-tskip --no-early-skip --min-keyint=1 --no-rect --no-amp --no-sao --aud --vbv-bufsize 160000 --vbv-maxrate 160000 --repeat-headers --hrd --hdr-opt --colorprim bt2020 --colormatrix bt2020nc --transfer smpte2084 --chromaloc 2 --pmode </textarea>
+<link rel="canonical" href="http://ted423.github.io/categories/Document/">
 
-<textarea style="width: 80%; height: 200px" onkeyup="refresh();" placeholder="仅支持输入JSON版mediainfo" id="HDR"></textarea>
-<br>
-<div><input type="checkbox" id="DoVi" name="DoVi" value="DoVi" onclick="refresh();"><label for="DoVi">DoVi P8压制</label></div>
 
-<p> 请注意你可能需要自己修改RPU的路径</p>
-<pre><code id="result" name="result"></code></pre>
-<script>
-  var refresh = function () {
-    document.getElementById("result").textContent = $('#x265').text();
-    var mediainfo = document.getElementById("HDR").value.replaceAll("\\\"", "|").replaceAll("\\", "|");
-    if (mediainfo) {
-      var whole = JSON.parse(mediainfo);
-      var track = whole.media.track;
-      var hevc = track.filter(function (video) {
-        return video["@type"] === "Video";
-      })[0];
-      if (hevc.MasteringDisplay_ColorPrimaries == "Display P3")
-        document.getElementById("result").textContent += '--master-display "G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)';
-      else if (hevc.MasteringDisplay_ColorPrimaries == "BT.2020")
-        document.getElementById("result").textContent += '--master-display "G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)';
-      var Luminance = hevc.MasteringDisplay_Luminance.replaceAll(
-        " cd/m2",
-        ""
-      ).match(/\d\.?\d*/g);
-      var max = Luminance[1] * 10000,
-        min = Luminance[0] * 10000;
-      document.getElementById("result").textContent += "L(" + max + "," + min + ')"';
-      if (hevc.MaxCLL)
-        document.getElementById("result").textContent += " --max-cll=" + hevc.MaxCLL.replace(" cd/m2", "") + "," + hevc.MaxFALL.replace(" cd/m2", "");
-      if (document.getElementById('DoVi').checked) document.getElementById("result").textContent += " --dolby-vision-profile 8.1 --dolby-vision-rpu \"RPU.bin\"";
-    }
-  };
-  refresh();
-</script>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-09-25T13:35:14.839Z" title="2022/9/25 21:35:14">2022-09-25</time>发表</span><span class="level-item"><time dateTime="2022-09-25T06:25:09.000Z" title="2022/9/25 14:25:09">2022-09-25</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">几秒读完 (大约31个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/samba%20symbolic%20link/">Samba中支持符号链接</a></p><div class="content"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">follow symlinks = yes</span><br></pre></td></tr></table></figure>
-<p><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path">https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path</a></p>
-<p>吐槽下官方文档被标为陈旧<br><a target="_blank" rel="noopener" href="https://www.samba.org/samba/docs/using_samba/ch08.html">https://www.samba.org/samba/docs/using_samba/ch08.html</a></p>
-<p>不过这个可以在 <a href="/Software/Webmin/">Webmin</a> 里点点点开启</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-08-23T10:54:04.721Z" title="2022/8/23 18:54:04">2022-08-23</time>发表</span><span class="level-item"><time dateTime="2022-08-20T08:02:48.000Z" title="2022/8/20 16:02:48">2022-08-20</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">几秒读完 (大约5个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/Group%20Policy/">[文档]Group Policy(组策略)查询</a></p><div class="content"><p>不错的网站<br><a target="_blank" rel="noopener" href="https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn">https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-06-16T10:37:00.000Z" title="2022/6/16 18:37:00">2022-06-16</time>发表</span><span class="level-item"><time dateTime="2022-06-16T10:41:30.785Z" title="2022/6/16 18:41:30">2022-06-16</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">几秒读完 (大约95个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/">Linux 内存释放命令</a></p><div class="content"><p>一般来说，够用的话不要清理，清理的情况仅限于内存占用满了，没法开启新进程的情况(主要是老系统)</p>
-<p>Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers</p>
-<p>清理前内存使用情况</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
 
-<p>开始清理 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 1 &gt; /proc/sys/vm/drop_caches</span><br></pre></td></tr></table></figure>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"categories/Document/index.html","title":""}</script>
 
-<p>清理后内存使用情况</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-05-19T11:16:50.257Z" title="2022/5/19 19:16:50">2022-05-19</time>发表</span><span class="level-item"><time dateTime="2022-05-19T11:23:26.196Z" title="2022/5/19 19:23:26">2022-05-19</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">1 分钟读完 (大约161个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/Picture/">What&#039;s the difference between an image, photo, and a picture 的区别</a></p><div class="content"><p>来源: <a target="_blank" rel="noopener" href="https://www.computerhope.com/issues/ch000169.htm">https://www.computerhope.com/issues/ch000169.htm</a></p>
-<p>Digital images, photographs, and pictures<br>Image - Any visual object that’s modified or altered by a computer or an imaginary object created using a computer.<br>Photo or photograph - Anything taken by a camera, digital camera, or photocopier.<br>Picture - A drawing, painting, or artwork created on a computer. A picture is also used to describe anything created using a camera or scanner.</p>
-<p>Digital images, photographs, and pictures<br>Image - 由计算机修改或创建的视觉对象或虚构对象。<br>Photo or photograph - 由照相机、数码相机或复印机拍摄的图像西。<br>Picture - 在计算机上创建的绘图、绘画或艺术品。 Picture还用于描述使用相机或扫描仪创建的图像。理论上Picture包含Image以及Photo</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-05-11T13:06:13.039Z" title="2022/5/11 21:06:13">2022-05-11</time>发表</span><span class="level-item"><time dateTime="2022-05-11T10:11:33.000Z" title="2022/5/11 18:11:33">2022-05-11</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">几秒读完 (大约0个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/Encode/encode/">Encode相关文档</a></p><div class="content"><p><a target="_blank" rel="noopener" href="https://github.com/ted423/FXXS-Encode-Guide">https://github.com/ted423/FXXS-Encode-Guide</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-29T09:08:00.000Z" title="2022/4/29 17:08:00">2022-04-29</time>发表</span><span class="level-item"><time dateTime="2022-04-29T09:11:48.000Z" title="2022/4/29 17:11:48">2022-04-29</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">1 分钟读完 (大约182个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/Qualcomm%20Voice%20Assist/">What is Qualcomm Voice Assist 是什么</a></p><div class="content"><p><a target="_blank" rel="noopener" href="https://www.qualcomm.com/products/features/voice-assist">https://www.qualcomm.com/products/features/voice-assist</a></p>
-<p>更智能的语音助手体验。<br>现在，您无需点击或滑动即可查看天气或打开灯。 Qualcomm® Voice Assist 支持下一代语音交互功能，包括几乎即时的语音唤醒、先进的基于 AI 的语音识别和专用音频硬件——帮助数字个人助理比以往更快、更智能地做出反应。</p>
-<p>主要似乎是辅助语音助手，全天不断从周围环境中拾取声音，并帮助GOOGLE助手等语音助手学习您不同的语音音调和模式，以便即使有一些背景噪音，他们也可以理解您的语音命令。‎</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-29T06:16:00.000Z" title="2022/4/29 14:16:00">2022-04-29</time>发表</span><span class="level-item"><time dateTime="2022-04-29T08:43:50.000Z" title="2022/4/29 16:43:50">2022-04-29</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">21 分钟读完 (大约3155个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/CD_log100/">[转载]取得 CD-FLAC+100%LOG+CUE 教学（EAC配置教学）</a></p><div class="content"><h1 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h1><p><a target="_blank" rel="noopener" href="https://home.gamer.com.tw/creationDetail.php?sn=4710402">https://home.gamer.com.tw/creationDetail.php?sn=4710402</a><br>在能看原文的情况下尽量去看原文<br>我没抓过CD，所以并没测试过</p>
-<p>原作者:宁空的淡薄·望月幽兰 翻译自:Sharky</p>
-<p>原作者申请授权截图<br><img src="/img/CD01.jpg" alt="CD"></p>
-<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><p>Windows &amp; Linux - EAC - Exact Audio Copy<br>MAC - XLD - X Lossless Decoder (<a target="_blank" rel="noopener" href="https://tmkk.undo.jp/xld/index_e.html">https://tmkk.undo.jp/xld/index_e.html</a>)<br>Linux - Whipper<br>(注意：如果可以，请将WINE与EAC一起使用，Whippers翻录的档案在音轨通常不被接受。 )</p>
-<p>检查你的.log档分数 - 翻录CD后，使用它来查看它是否为100%。<br>(<a target="_blank" rel="noopener" href="https://github.com/ligh7s/hey-bro-check-log">https://github.com/ligh7s/hey-bro-check-log</a>)</p>
-<h2 id="EAC-配置指南"><a href="#EAC-配置指南" class="headerlink" title="EAC - 配置指南"></a>EAC - 配置指南</h2><ul>
-<li>这是一次性的设置，之后你不用再重新配置EAC。</li>
-<li>绿色框框 表示必需的设置</li>
-<li>橙色框框 是必需的，但取决于你的装置</li>
-<li>空白&#x2F;无框框 是完全可选的，不会影响翻录出来的质量</li>
-</ul>
-<p>下载并安装EAC</p>
-<p>DL：<a target="_blank" rel="noopener" href="http://www.exactaudiocopy.de/en/index.php/resources/download/">http://www.exactaudiocopy.de/en/index.php/resources/download/</a></p>
-<p>打开EAC后，会出现下面的画面。<br>选择“Freedb， CDRDAO， FLAC， AccurateRip CTDB Plugin and CueTools Database Plugin”<br>这些是让翻录文件最完美所必需的选项，也使编辑TAG和翻录更容易。</p>
-<p>EAC选项<br><img src="/img/CD02.jpg" alt="CD"></p>
-<p>从EAC Options开始。<br>（任何未显示的标记都是完全可选的，或者与翻录无关）</p>
-<p>“Tools”中的前两个设置取决于你的光驱。<br>那些以绿色突出显示的是必需的。<br>如果你的光驱能够读取UPC &#x2F; ISRC代码和CD文本，则可以启用前两个选项。<br>如果没有，请取消勾选它们。<br>这只能通过反复试验才能确定，如果你很懒，可以不勾选它们。</p>
-<p><img src="/img/CD03.jpg" alt="CD"><br>所有其他图片设置都是理想的。<br>请注意，<br>“m3u”文件在技术上是可选的，但某些用户会使用这些文件来管理他们的数据库，<br>因此，如果你打算共享你的记录，请保持启用状态。</p>
-<p>此外，<br>启用“compressors”功能<br>由于有时会导致EAC出现故障，因而关闭了启动在后台排队的compressors的设置，<br>但是，如果你的设备在启用此功能后可以正常工作，则可以这样做。<br>如果你不知道，请取消勾选它。</p>
-<p>接下来，<br>在“extraction” 页面，确保你的设置与绿色完全相同。<br>其余的是可选的。<br>如果需要，你也可以选择 “lock the drive tray during extraction”，但这不是必需的。</p>
-<p><img src="/img/CD04.jpg" alt="CD"></p>
-<p>在“General”页面，这些设置大多数都是可选的。<br>建议开启“use alternative CD play routines &amp; disable CD autostart”。<br><img src="/img/CD05.jpg" alt="CD"></p>
-<p>“show status dialog after extraction”将在提取后显示log文件并选择保存它。<br>但是，遵循本指南，EAC会自动保存log文件。<br>除非你知道自己在做什么，否则不要打开它，这对于某些用户来说是个麻烦。</p>
-<p>确保在“normalize”页面中关闭了“normalize”<br>如果点开，则该翻录将不再是100%精确完美的。</p>
-<p>如图所示，这是命名曲目的正确方法。<br>命名方案：<code>%tracknr2%-%title%</code><br>勾选“Use Various Artists Naming Scheme”<br>并使用：<code>%tracknr2%-%artist%-%title%</code><br>如果你比较喜欢句点，则可以使用以下内容：<code>%tracknr2%。 ％artist％-％title％</code><br>不要用下划线代替空格。 这看起来真的很荒谬。<br><img src="/img/CD06.jpg" alt="CD"></p>
-<p>注意 ：<br>不在EAC文档名选项中使用目录结构，除非你想稍后再编辑. Cue。<br>将目录添加到命名方案时，会将目录路径放入文件中。<br>当你以后可能要移动文件时，想要使用. Cue在EAC中刻录文件时，将无法这样做。<br>如果你确实坚持在此使用目录结构，<br>则需要返回，在记事本中编辑. Cue，然后从每一行中删除文件夹名称。</p>
-<p>如果坚持要这样做，该方案可能看起来像这样：<br><code>％artist％-％albumtitle％（％year％）[FLAC] \％tracknr2％-％title％</code></p>
-<p>如果你希望使用其他方案，请遵循“Filename”页面上列出的项目。</p>
-<p>光盘机选项</p>
-<p>首先点击“Detect Read Features…”。<br>这实际上需要几分钟。<br>完成后，如果你的光驱可以使用“Accurate Stream”，请启用它<br>（大多数现代光驱都具有“Accurate Stream”）。<br>如果不能，那就不要。</p>
-<p><img src="/img/CD07.jpg" alt="CD"></p>
-<p>无论你的光驱是否可以缓存音频或使用你所使用的C2头<br>如图所示，启用“caches audio data”并禁用“retrieving C2 error information”。<br>这样做不会损害翻录，并且可以确保在音轨中获得100%的.log分数。</p>
-<p>点击“Autodetect read command now”。<br>完成后，可以将其余部分保留为未选中状态。<br>如果遇到了问题，可以通过检查其中的一些问题来解决它<br><img src="/img/CD08.jpg" alt="CD"></p>
-<p>如果成功启用了AccurateRip，则在“Offset&#x2F;Speed”中，选项的上半部将显示为灰色<br>如果你的选项未显示为灰色，则说明没有成功，请向上滚动至该部分并启用它<br>或是前往下面的网站，查询光驱在“Usw read sample offset correction”所需要填入数值<br><a target="_blank" rel="noopener" href="http://www.accuraterip.com/driveoffsets.htm">http://www.accuraterip.com/driveoffsets.htm</a></p>
-<p><img src="/img/CD09.jpg" alt="CD"></p>
-<p>如图所示，应启用后半部分。<br>“Over-read into Lead-in and Lead-Out”是一个可选设置，具体取决于你的光驱。</p>
-<p>几乎每个光驱都应使用图片示范的设置。<br>如果停滞不前，检测差距或发现明显错误的差距，可以尝试检测方法B或C，<br>如果仍然失败，请将检测准确度切换为“Accurate”，而不是“Secure”，然后重试。</p>
-<p><img src="/img/CD10.jpg" alt="CD"></p>
-<p>Metadata选项</p>
-<p>这里是选择元数据提供者的地方。<br>建议使用CueTools Database，因为它在元数据查询中使用了多个数据库。<br><img src="/img/CD11.jpg" alt="CD"></p>
-<p>如果决定改用“ freedb”，则设置应类似于下图所示。<br>确保将电子信箱放在顶部，信箱不一定要真的。<br>点击“get active freedb server list”。<br>然后选中最后一个选项。<br><img src="/img/CD12.jpg" alt="CD"></p>
-<p>压缩选项</p>
-<p>完全按照所示设置此页面。<br>你必须浏览到flac.exe所在的路径，<br>如果使用EAC进行安装，则位于C：\ Program Files（x86）\ Exact Audio Copy \ FLAC \ flac.exe中。<br>如果单独安装，则你安装在哪里就到哪里。<br>bit rate and high&#x2F;low quality对翻录没有影响。</p>
-<p><img src="/img/CD13.jpg" alt="CD"></p>
-<p>下面的字符串复制并粘贴到“additional command-line parameters”中</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-8 -V -T &quot;ARTIST=%artist%&quot; -T &quot;TITLE=%title%&quot; -T &quot;ALBUM=%albumtitle%&quot; -T &quot;DATE=%year%&quot; -T &quot;TRACKNUMBER=%tracknr%&quot; -T &quot;GENRE=%genre%&quot; -T &quot;PERFORMER=%albuminterpret%&quot; -T &quot;COMPOSER=% composer%&quot; %haslyrics%--tag-from-file=LYRICS=&quot;%lyricsfile%&quot;%haslyrics% -T &quot;ALBUMARTIST=%albumartist%&quot; -T &quot;DISCNUMBER=%cdnumber%&quot; -T &quot;TOTALDISCS=%totalcds%&quot; -T &quot;TOTALTRACKS=% numtracks%&quot; -T &quot;COMMENT=%comment%&quot; %source% -o %dest%</span><br></pre></td></tr></table></figure>
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>分类: Document | 个人小站</title>
+  
 
-<p>接下来，ID3 Tag settings。<br>除最后一个选项外，将整个选项卡留空。<br>根据最初在“filename”页面中选择的内容，命名方案将有所不同。</p>
-<p><img src="/img/CD14.jpg" alt="CD"></p>
-<p>恭喜，已经完成设置EAC！</p>
-<p>现在可以通过点击EAC右下角的“new”来保存所有设置的“profile”。<br>你的当前设置将保存，以备将来使用。<br>无需重新设置。</p>
-<h2 id="EAC-翻录指南"><a href="#EAC-翻录指南" class="headerlink" title="EAC - 翻录指南"></a>EAC - 翻录指南</h2><p>第1步-标签</p>
-<p>不幸的是，很常出现专辑没有出现在任何数据库中的情况，<br>因此这些以绿色框框起来的字段通常不会自动填写。<br>必须在此处手动输入标签。<br>信息请查阅购买的CD的小册子&#x2F;封底或官方网站&#x2F; xfd。</p>
-<p><img src="/img/CD15.jpg" alt="CD"><br>如果需要，还可以填写其他任何未突出显示的标签。<br>单击“Lyrics”按钮将允许添加歌词。<br>单击“new”按钮将保存设置。<br>这样就不需要每次翻录CD时都这样做。<br>如果你不使用标签，不必太担心。</p>
-<p>要在“CD cover”框中获取专辑封面，请将其拖到EAC中。<br>有时这行不通，很多人对此觉得麻烦，<br>因此我建议将其保留为空白。<br>之后添加封面图像在翻录后的文件夹<br>再命名为“ cover.jpg”</p>
-<p>第2步- 间隙检测和. Cue</p>
-<p>确保已经勾选“Append Gaps to Previous Track （default）”。<br>接下来，按显示的顺序点击选项。 这些是获得100%日志所必需的。</p>
-<p><img src="/img/CD16.jpg" alt="CD"></p>
-<p>#1 - 点击“Detect Gaps”，<br>如果第一首曲目有红色显示，代表有音轨被隐藏。<br>这就需要阅读以下内容：<br><a target="_blank" rel="noopener" href="https://web.archive.org/web/20121112011036/http://www.blowfish.be/eac/Rip/rip11-hidden.html">https://web.archive.org/web/20121112011036/http://www.blowfish.be/eac/Rip/rip11-hidden.html</a></p>
-<p>#2 - 点击“Create CueSheet”，<br>然后选择“Multiple WAV files with Gaps..”<br>创建要翻录成功后的存档文件夹。</p>
-<p>请确保你在上面的存档文件夹路径不包含您的姓名或是任何可识别信息<br>如果感到疑惑，<br>请直接使用E：\ Rips就可以了。</p>
-<p>我通常将文件夹标记为<br><code>[Event] Circle (Artist) - Album &#123;cat#&#125; [Format]</code><br>或使用<code> Artist - Album &#123;Label - cat#&#125; （Year） [Format]</code></p>
-<p>总之就是创建文件夹，<br>然后将.cue文件保存到其中。</p>
-<p>第3步 - 翻录</p>
-<p>确保已选择所有要翻录的曲目。<br>然后，转到“Actions”&gt;“ Test &amp; Copy Selected Tracks”<br>然后，选择“Compressed”，确保在翻录CD时执行此操作，否则.log将不是100%。</p>
-<p><img src="/img/CD17.jpg" alt="CD"></p>
-<p>就这样！<br>现在只需要等待翻录完成即可。</p>
-<p>[5] 标签和优化</p>
-<p>软件和工具</p>
-<p>Itunes Scrubber：在共享iTunes文件之前，从iTunes文件中删除所有可识别的信息。<br>MP3Tag：批量处理标签，自动标记&#x2F;重命名文件，从FLAC文件中删除ID3标签<br>Unicue：允许将损坏的.cue重新编码为UTF-8（用于修复中日文.cue）。<br>CueTools：创建，编辑，修复，重新编码提示文件以及拆分文件。<br>Foobar2000 + 免费编码器包：下采样，压缩，转换，自动重命名，去嵌入专辑封面并优化文件。</p>
-<p>标签和优化快速指南</p>
-<p>●必需的标签：曲目编号，歌曲标题，艺术家，专辑 | <a target="_blank" rel="noopener" href="https://i.imgur.com/0V2Unbw.png">范例</a><br>●有时需要的标签：年（指定不同版本）和光盘编号（如果有多张光盘） | <a target="_blank" rel="noopener" href="https://i.imgur.com/NodXKwx.png">范例</a><br>●可选标签：专辑艺术家，类型，歌词，作曲家，制作人 | <a target="_blank" rel="noopener" href="https://i.imgur.com/HFoDcz9.png">范例</a><br>●文件名：曲目编号艺术家-歌曲名称或光盘编号-曲目编号艺术家-歌曲名称 | <a target="_blank" rel="noopener" href="https://i.imgur.com/NodXKwx.png">范例</a><br>●封面：请勿嵌入艺术作品，在相册文件夹中添加一个“ cover.png &#x2F; jpg”。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/qRr9QfA.png">范例</a><br>●BK：位于名为“扫描”的嵌套文件夹内。 文件名应反映每次扫描的含义。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/Qlr2xOx.png">范例</a><br>●格式：无损&#x3D; FLAC和有损&#x3D; MP3 V0 &#x2F; 320或M4A AAC | <a target="_blank" rel="noopener" href="https://i.imgur.com/xrlx7LY.png">范例</a><br>●压缩：始终将未压缩的无损格式转换为FLAC并将其压缩为8级。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/66lWReG.png">范例</a><br>●转换：转换无损（FLAC）-&gt;有损（MP3 V0 &#x2F; 320）。 不要将任何有损转换为有损 | <a target="_blank" rel="noopener" href="https://i.imgur.com/v2NPMDa.png">范例</a><br>●Track Padding：你的文件应具有1MB以下的Track Padding。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/PWY8NKn.gif">范例</a><br>●. Cue：采用UTF-8编码，应将完整的曲目列表导入任何音乐播放器 | <a target="_blank" rel="noopener" href="https://i.imgur.com/ZK8lvWK.gif">范例</a><br>●.log：永远不要编辑日志文件的内容。 校验和以及CRC码应与档案匹配。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/bnQf5Ks.gif">范例</a></p>
-<p>原文由加拿大人Sharky撰写<br>望月幽兰 整理</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-21T01:37:00.000Z" title="2022/4/21 09:37:00">2022-04-21</time>发表</span><span class="level-item"><time dateTime="2022-04-21T03:00:17.000Z" title="2022/4/21 11:00:17">2022-04-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">2 分钟读完 (大约256个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/Compression/">压缩算法测试</a></p><div class="content"><p>主要最近到处看到Zstd，ZFS都支持了，就想起来测一下<br>平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了</p>
-<p>用了个216G的虚拟机，但是测试结果仅供参考</p>
-<p><img src="/img/Compression.png" alt="Compression"></p>
-<p>耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟，Zstd L5就很快了)</p>
-<p>LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。</p>
-<p>Zstd的CPU占用也还好。<br><img src="/img/Compression2.jpg" alt="Compression"></p>
-<p>故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐<br>LZ4是个速度奇快，但是压缩比一般的算法</p>
-<p><img src="/img/Compression3.jpg" alt="Compression"><br>这是一个原体积360GB的虚拟机，里面充满了易压缩的资料</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-04-19T06:52:00.000Z" title="2022/4/19 14:52:00">2022-04-19</time>发表</span><span class="level-item"><time dateTime="2022-04-19T07:08:17.000Z" title="2022/4/19 15:08:17">2022-04-19</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Document/">Document</a></span><span class="level-item">1 分钟读完 (大约212个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Document/netplan/">netplan配置网络</a></p><div class="content"><p>Ubuntu 17 开始使用netplan配置网络，因此很多其它系统的教程都不再适用(&#x2F;etc&#x2F;network&#x2F;interfaces 下的配置已经不再起作用)</p>
-<p><a target="_blank" rel="noopener" href="https://netplan.io/">https://netplan.io/</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> cat /etc/netplan/01-network-manager-all.yaml</span><br><span class="line"># Let NetworkManager manage all devices on this system</span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: NetworkManager</span><br><span class="line">  ethernets:</span><br><span class="line">    enp5s0f0:</span><br><span class="line">      dhcp4: no</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.0.4/24</span><br><span class="line">    enp6s0f0:</span><br><span class="line">      dhcp4: yes</span><br><span class="line">      dhcp4-overrides:</span><br><span class="line">          route-metric: 1</span><br><span class="line">    enp6s0f1:</span><br><span class="line">      dhcp4: no</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.1.80/24</span><br><span class="line">      gateway4: 192.168.1.254</span><br></pre></td></tr></table></figure>
 
-<p>The top-level node in a netplan configuration file is a network: mapping<br>that contains version: 2 (the YAML currently being used by curtin, MaaS,<br>etc. is version 1), and then device definitions grouped by their type, such as<br>ethernets:, modems:, wifis:, or bridges:. These are the types that our<br>renderer can understand and are supported by our backends.</p>
-<p>Each type block contains device definitions as a map where the keys (called<br>“configuration IDs”) are defined as below.</p>
-<p>老实说，version干嘛的我没看懂，反正都写version: 2就完事了</p>
-<p>测试</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan try</span><br></pre></td></tr></table></figure>
 
-<p>应用(其实上面那个命令用完之后按Enter也就应用了)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure></div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous is-invisible is-hidden-mobile"><a href="/categories/Document/page/0/">上一页</a></div><div class="pagination-next"><a href="/categories/Document/page/2/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link is-current" href="/categories/Document/">1</a></li><li><a class="pagination-link" href="/categories/Document/page/2/">2</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/categories/Document/page/5/">5</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://www.gravatar.com/avatar/3581fa7535eb1989959533f1d264012c?s=128" alt="ted423"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">ted423</p><p class="is-size-6 is-block">到处乱跑</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">380</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">145</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ted423" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ted423"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Anime/"><span class="level-start"><span class="level-item">Anime</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Browser/"><span class="level-start"><span class="level-item">Browser</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Code/"><span class="level-start"><span class="level-item">Code</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/categories/Comic/"><span class="level-start"><span class="level-item">Comic</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Document/"><span class="level-start"><span class="level-item">Document</span></span><span class="level-end"><span class="level-item tag">47</span></span></a></li><li><a class="level is-mobile" href="/categories/Game/"><span class="level-start"><span class="level-item">Game</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Issue/"><span class="level-start"><span class="level-item">Issue</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/categories/Music/"><span class="level-start"><span class="level-item">Music</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Optimization/"><span class="level-start"><span class="level-item">Optimization</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/Picture-Photo-Image/"><span class="level-start"><span class="level-item">Picture&amp;Photo&amp;Image</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">88</span></span></a></li><li><a class="level is-mobile" href="/categories/System/"><span class="level-start"><span class="level-item">System</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Video/"><span class="level-start"><span class="level-item">Video</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/1080i/"><span class="tag">1080i</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/1080p/"><span class="tag">1080p</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/3-clause-BSD-license/"><span class="tag">3-clause BSD license</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/480P/"><span class="tag">480P</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/720P/"><span class="tag">720P</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/720p/"><span class="tag">720p</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AGPLv3/"><span class="tag">AGPLv3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AKB48/"><span class="tag">AKB48</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ARK/"><span class="tag">ARK</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anime/"><span class="tag">Anime</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anti-996-License/"><span class="tag">Anti 996 License</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Apache-License-2-0/"><span class="tag">Apache License 2.0</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Archived/"><span class="tag">Archived</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDMV/"><span class="tag">BDMV</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDrip/"><span class="tag">BDrip</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Browser/"><span class="tag">Browser</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CMD/"><span class="tag">CMD</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/COS/"><span class="tag">COS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chrome/"><span class="tag">Chrome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chromium-Chrome/"><span class="tag">Chromium(Chrome)</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Code/"><span class="tag">Code</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Comic/"><span class="tag">Comic</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compare/"><span class="tag">Compare</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compression/"><span class="tag">Compression</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Disney/"><span class="tag">Disney</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Document/"><span class="tag">Document</span><span class="tag">54</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Document-Texteditor/"><span class="tag">Document&amp;Texteditor</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Download-File-hosting-service/"><span class="tag">Download&amp;File hosting service</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dropbox/"><span class="tag">Dropbox</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Encode/"><span class="tag">Encode</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Extension/"><span class="tag">Extension</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FHD/"><span class="tag">FHD</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Firefox/"><span class="tag">Firefox</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Font/"><span class="tag">Font</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GM%E8%84%9A%E6%9C%AC/"><span class="tag">GM脚本</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv2/"><span class="tag">GPLv2</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv3/"><span class="tag">GPLv3</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv3/"><span class="tag">GPLv3+</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game/"><span class="tag">Game</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game-Tool/"><span class="tag">Game Tool</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github/"><span class="tag">Github</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HD/"><span class="tag">HD</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HDR/"><span class="tag">HDR</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hardware/"><span class="tag">Hardware</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hardware-Tool/"><span class="tag">Hardware Tool</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo-Theme/"><span class="tag">Hexo Theme</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Issue/"><span class="tag">Issue</span><span class="tag">51</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JP/"><span class="tag">JP</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Javascript/"><span class="tag">Javascript</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/K-ON/"><span class="tag">K-ON</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPL/"><span class="tag">LGPL</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPLv2-1/"><span class="tag">LGPLv2.1</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPLv3/"><span class="tag">LGPLv3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">34</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lossless/"><span class="tag">Lossless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MIT/"><span class="tag">MIT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MPL/"><span class="tag">MPL</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MV/"><span class="tag">MV</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Maintenance/"><span class="tag">Maintenance</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Movie/"><span class="tag">Movie</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NEKO-WORKs-Sayori/"><span class="tag">NEKO WORKs(Sayori)</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Network/"><span class="tag">Network</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS-X/"><span class="tag">OS X</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OST/"><span class="tag">OST</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Office/"><span class="tag">Office</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Offline-Install/"><span class="tag">Offline Install</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Open-Source/"><span class="tag">Open Source</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Optimization/"><span class="tag">Optimization</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PIXAR/"><span class="tag">PIXAR</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PSP/"><span class="tag">PSP</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Personal-Free/"><span class="tag">Personal Free</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Picture-Photo-Image/"><span class="tag">Picture&amp;Photo&amp;Image</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pool/"><span class="tag">Pool</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PowerShell/"><span class="tag">PowerShell</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Proxy/"><span class="tag">Proxy</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R18/"><span class="tag">R18</span><span class="tag">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Regedit/"><span class="tag">Regedit</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Remote/"><span class="tag">Remote</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SEO/"><span class="tag">SEO</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SIL-Open-Font/"><span class="tag">SIL Open Font</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SVG/"><span class="tag">SVG</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Security-Software/"><span class="tag">Security Software</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Software/"><span class="tag">Software</span><span class="tag">58</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Steam/"><span class="tag">Steam</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/System/"><span class="tag">System</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Terminal/"><span class="tag">Terminal</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/To-LOVE%E3%82%8B/"><span class="tag">To LOVEる</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UHD/"><span class="tag">UHD</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/US/"><span class="tag">US</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VM/"><span class="tag">VM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vocaloid/"><span class="tag">Vocaloid</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WWW/"><span class="tag">WWW</span><span class="tag">32</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">144</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-10/"><span class="tag">Windows 10</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-AD/"><span class="tag">Windows AD</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-Server/"><span class="tag">Windows Server</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-Update/"><span class="tag">Windows Update</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Youtube/"><span class="tag">Youtube</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iOS/"><span class="tag">iOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/macOS/"><span class="tag">macOS</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pixiv/"><span class="tag">pixiv</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E2%98%86/"><span class="tag">☆</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"><span class="tag">三次元</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/"><span class="tag">不再推荐</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%93%E8%BE%91/"><span class="tag">专辑</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"><span class="tag">个人观点</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E8%AF%84%E4%BB%B7/"><span class="tag">个人评价</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%81%B6%E5%83%8F%E5%A4%A7%E5%B8%88-The-iDOLM-STER/"><span class="tag">偶像大师(The iDOLM@STER)</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"><span class="tag">分类汇总</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AF-Hatsune-Miku/"><span class="tag">初音ミク(Hatsune Miku)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%9A%E8%A1%8C-Autolyric/"><span class="tag">多行(Autolyric)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A7%E7%9C%BC%E4%BB%94-%E6%97%AD/"><span class="tag">大眼仔~旭</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/"><span class="tag">字符编码</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%89%E5%85%A8%E8%BD%AF%E4%BB%B6/"><span class="tag">安全软件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%8C%E7%BB%93/"><span class="tag">完结</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E4%BF%8A/"><span class="tag">小俊</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E8%AF%B4/"><span class="tag">小说</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A7%E5%85%8B%E5%8A%9B%E4%B8%8E%E9%A6%99%E5%AD%90%E5%85%B0/"><span class="tag">巧克力与香子兰</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"><span class="tag">建设中</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E6%BA%90/"><span class="tag">开源</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%85%E7%BB%B4%E6%8A%A4/"><span class="tag">待维护</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%81%B6%E4%B9%8B%E5%8D%8E/"><span class="tag">恶之华</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E-Valkyria-Chronicles/"><span class="tag">战场的女武神[Valkyria Chronicles]</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%89%8B%E5%8A%9E/"><span class="tag">手办</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/"><span class="tag">无双系列</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A0%E6%8D%9F/"><span class="tag">无损</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%8C%E8%AF%8D-LRC/"><span class="tag">歌词(LRC)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%A3%E7%89%88/"><span class="tag">正版</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B1%89%E5%8C%96/"><span class="tag">汉化</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%83%88%E7%81%AB/"><span class="tag">烈火</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A0%B4%E8%A7%A3/"><span class="tag">破解</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"><span class="tag">破解&amp;激活</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"><span class="tag">第三方修改|绿化</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy/"><span class="tag">组策略(Group Policy)</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%89%A6%E9%9A%8A%E3%81%93%E3%82%8C%E3%81%8F%E3%81%97%E3%82%87%E3%82%93-%E8%89%A6%E3%81%93%E3%82%8C/"><span class="tag">艦隊これくしょん -艦これ-</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"><span class="tag">跨平台</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E8%BD%BD/"><span class="tag">转载</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%87%E6%97%B6/"><span class="tag">过时</span><span class="tag">23</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC-Disney/"><span class="tag">迪士尼[Disney]</span><span class="tag">2</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T13:26:37.417Z">2023-08-07</time></p><p class="title"><a href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a></p><p class="categories"><a href="/categories/Issue/">Issue</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-15T15:46:25.499Z">2023-07-15</time></p><p class="title"><a href="/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/">Adobe Acrobat Reader DC Offline / 离线安装包</a></p><p class="categories"><a href="/categories/Software/">Software</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-15T15:43:07.968Z">2023-07-15</time></p><p class="title"><a href="/Software/Webmin/">[开源]Webmin - WebUI for Linux</a></p><p class="categories"><a href="/categories/Software/">Software</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-16T07:57:00.000Z">2023-06-16</time></p><p class="title"><a href="/etc/%E5%AE%BD%E5%AE%B9%E6%82%96%E8%AE%BA/">[转载]苏了了：宽容的悖论———当代西方宽容理论困境的批判性反思</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-06T16:12:13.159Z">2023-06-07</time></p><p class="title"><a href="/Anime/JP/Angel%20Beats!/">Angel Beats!(エンジェル ビーツ)</a></p><p class="categories"><a href="/categories/Anime/">Anime</a></p></div></article></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/avatar/avatar.jpg" alt="个人小站" height="28"></a><p class="is-size-7"><span>&copy; 2024 ted423</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">个人小站</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Take&Give</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ted423</p>
+  <div class="site-description" itemprop="description">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">145</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner category posts-collapse">
+
+
+  
+  
+  
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h1 class="collection-header">Document
+          <small>分类</small>
+        </h1>
+      </div>
+
+      
+    <div class="collection-year">
+      <span class="collection-header">2022</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-12-28T11:30:21+08:00"
+              content="2022-12-28">
+          12-28
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/Encode/HDR/" itemprop="url">
+            <span itemprop="name">x265 HDR 参数计算方法</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-09-25T21:35:14+08:00"
+              content="2022-09-25">
+          09-25
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/samba%20symbolic%20link/" itemprop="url">
+            <span itemprop="name">Samba中支持符号链接</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-08-23T18:54:04+08:00"
+              content="2022-08-23">
+          08-23
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/Group%20Policy/" itemprop="url">
+            <span itemprop="name">[文档]Group Policy(组策略)查询</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-06-16T18:37:00+08:00"
+              content="2022-06-16">
+          06-16
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/Linux%20%E5%86%85%E5%AD%98%E9%87%8A%E6%94%BE%E5%91%BD%E4%BB%A4/" itemprop="url">
+            <span itemprop="name">Linux 内存释放命令</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-05-19T19:16:50+08:00"
+              content="2022-05-19">
+          05-19
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/Picture/" itemprop="url">
+            <span itemprop="name">What's the difference between an image, photo, and a picture 的区别</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-05-11T21:06:13+08:00"
+              content="2022-05-11">
+          05-11
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/Encode/encode/" itemprop="url">
+            <span itemprop="name">Encode相关文档</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-04-29T17:08:00+08:00"
+              content="2022-04-29">
+          04-29
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/Qualcomm%20Voice%20Assist/" itemprop="url">
+            <span itemprop="name">What is Qualcomm Voice Assist 是什么</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-04-29T14:16:00+08:00"
+              content="2022-04-29">
+          04-29
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/CD_log100/" itemprop="url">
+            <span itemprop="name">[转载]取得 CD-FLAC+100%LOG+CUE 教学（EAC配置教学）</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-04-21T09:37:00+08:00"
+              content="2022-04-21">
+          04-21
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/Compression/" itemprop="url">
+            <span itemprop="name">压缩算法测试</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2022-04-19T14:52:00+08:00"
+              content="2022-04-19">
+          04-19
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Document/netplan/" itemprop="url">
+            <span itemprop="name">netplan配置网络</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+    </div>
+  </div>
+  
+  
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/categories/Document/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/categories/Document/page/5/">5</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/categories/Document/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ted423</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,202 +1,466 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><meta><title>标签: Open Source - 个人小站</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="个人小站"><meta name="msapplication-TileImage" content="/avatar/avatar.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="个人小站"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"><meta property="og:type" content="blog"><meta property="og:title" content="个人小站"><meta property="og:url" content="http://ted423.github.io/"><meta property="og:site_name" content="个人小站"><meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://ted423.github.io/img/og_image.png"><meta property="article:author" content="ted423"><meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://ted423.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io"},"headline":"个人小站","image":["http://ted423.github.io/img/og_image.png"],"author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/avatar/avatar.jpg"}},"description":"这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"}</script><link rel="icon" href="/avatar/avatar.jpg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<link rel="stylesheet" href="/css/main.css">
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/avatar/avatar.jpg" alt="个人小站" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">标签</a></li><li class="is-active"><a href="#" aria-current="page">Open Source</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-07T16:06:53.207Z" title="2021/7/8 00:06:53">2021-07-08</time>发表</span><span class="level-item"><time dateTime="2021-07-01T08:20:03.000Z" title="2021/7/1 16:20:03">2021-07-01</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">3 分钟读完 (大约426个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Document&amp;Texteditor/SumatraPDF/">[开源]SumatraPDF</a></p><div class="content"><p>由于adobe reader免费，这个软件还是有些尴尬的。不过在epub和其他格式的文件方面很有优势，甚至可以拿来看压缩包形式的漫画。<br>只不过由于他的名字，不是很显眼。<br>不过2016到现在都没出新的release,似乎在忙着重构？看epub和cbz使用中都遇到了一些小问题<a target="_blank" rel="noopener" href="https://forum.sumatrapdfreader.org/t/something-about-epub-and-cbz/2244">https://forum.sumatrapdfreader.org/t/something-about-epub-and-cbz/2244</a></p>
-<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a target="_blank" rel="noopener" href="https://www.sumatrapdfreader.org/free-pdf-reader.html">https://www.sumatrapdfreader.org/free-pdf-reader.html</a></p>
-<h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><p><a target="_blank" rel="noopener" href="https://github.com/sumatrapdfreader/sumatrapdf">https://github.com/sumatrapdfreader/sumatrapdf</a></p>
-<p>Sumatra PDF是由Krzysztof Kowalczyk所开发的轻量级PDF查看器，属于自由软件。使用GPLv3协议</p>
-<p>Sumatra PDF 由下列两个函式库组成：</p>
-<pre><code>MuPDF - PDF函式库
-Poppler - PDF函式库
-</code></pre>
-<p>Sumatra PDF的设计风格极简。软件的安装档案体积小，只有大约1MB，比起Adobe Reader的安装档案27.5MB小很多，启动也较快速，并且拥有多20多种语言接口。由于只有一个档案，可以视为是可携式软件。</p>
-<p>Sumatra PDF有一个实用的功能，就是它可以记住每一个PDF档案上使用者最后浏览的页面，这使得浏览电子书非常方便。</p>
-<p>SumatraPDF, also known as Sumatra, is a PDF reader for Microsoft Windows only. The program also opens Open XML Paper Specification, DjVu, EPUB, XPS, CHM, CBZ and CBR, and MOBI files. It is written primarily by two contributors: zeniko and Krzysztof Kowalczyk</p>
-<p>Sumatra includes free software code under version three of the GNU General Public License, while the included Unrar utility is under a commercial “all rights reserved” freeware licence, making Sumatra overall freeware.<br>#Prerelease<br>重构中<br><a target="_blank" rel="noopener" href="https://www.sumatrapdfreader.org/prerelease.html">https://www.sumatrapdfreader.org/prerelease.html</a></p>
-<hr>
-<p>囧了，我发现 <a target="_blank" rel="noopener" href="http://www.gxxd.net.cn:1001/date/T/A2095750.pdf(%E5%A4%B1%E6%95%88%E8%BF%9E%E6%8E%A5)">http://www.gxxd.net.cn:1001/date/T/A2095750.pdf(失效连接)</a> 只有火狐能正常显示，其他所有pdf软件都因为没有字体显示不出来，CSS大法好</p>
-<hr>
-<p><time>2020-06-03</time>增加Prerelease网页</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-07T16:06:53.161Z" title="2021/7/8 00:06:53">2021-07-08</time>发表</span><span class="level-item"><time dateTime="2021-07-02T02:10:51.000Z" title="2021/7/2 10:10:51">2021-07-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">1 分钟读完 (大约181个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Document&amp;Texteditor/notepad3/">[文本编辑器]Notepad3</a></p><div class="content"><ul>
-<li><a target="_blank" rel="noopener" href="https://www.rizonesoft.com/downloads/notepad3/">https://www.rizonesoft.com/downloads/notepad3/</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/rizonesoft/Notepad3">https://github.com/rizonesoft/Notepad3</a></li>
-</ul>
-<p>先说开源协议我没看懂，并没写开源协议的名字，感觉有点像MIT？没细看规则。反正是Copyright类的。<br>对了下，是3-clause BSD的License</p>
-<p>曾经有个notepad2，最大的作用是完全替换微软的notepad，使用的是映像劫持的方式。所以即便装了别的文本编辑器，我也还是喜欢再装一个notepad2以便彻底干死微软的。<br>可惜弃更了。</p>
-<p>所以这个notepad3也能做到，并且开源。就是不知道会不会有Notepad4。</p>
-<p>缺点应该就是扩展性方面了，比如简繁转换，格式化代码啥的就没。</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-07T16:06:53.105Z" title="2021/7/8 00:06:53">2021-07-08</time>发表</span><span class="level-item"><time dateTime="2021-07-02T01:32:03.000Z" title="2021/7/2 09:32:03">2021-07-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">1 分钟读完 (大约116个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Compression/7-Zip-zstd/">[开源]7-Zip-zstd 7z增强版</a></p><div class="content"><p><a target="_blank" rel="noopener" href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-05-02T05:22:00.000Z" title="2021/5/2 13:22:00">2021-05-02</time>发表</span><span class="level-item"><time dateTime="2024-07-15T07:50:46.106Z" title="2024/7/15 15:50:46">2024-07-15</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">3 分钟读完 (大约521个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/ShareX/">[不再推荐][截图]ShareX</a></p><div class="content"><p>第二次不再推荐 - 2024-07-15</p>
-<p>跑去用 fastone capture 了</p>
-<ul>
-<li>设置项过于复杂，设置分到了各个地方，却没有一个明确的分类的方法。找起来十分的累，没什么用的选项过多</li>
-<li>滚动截屏印象里存在问题</li>
-<li>文件名命名规则虽然设置了但部分情况下不起作用，估计是被他那过于复杂的设置系统拖累了</li>
-</ul>
-<p>最后一点是最后的稻草</p>
-<hr>
-<p>不再推荐的原因如下<br>新装(已经是第二次装了)之后各种按键魔幻的要死，然后自动给你上传，然后自动报错。<br>虽然之前的机子设置过，但第二次找设置来回翻了两三遍<br>个人感觉这个软件设计其实不太合理，一个软件的设置项过多其实是开源软件的老毛病了。就个人想法，软件是作为工具存在的，那么应该是节省时间而不是让人花费一大堆不必要的精力去适应。</p>
-<p>目前新装第一次截图已经有提醒是否进行上传了，取消后正常，说明有人反馈并被接受。<br>目前仍有设置项复杂的情况，一级带单里就有任务设置，应用程序设置，和快捷键设置。</p>
-<p>当然，使用的理解上可能也有翻译带来的问题，例如截图后里面可以设置是否上传。</p>
-<p><del>总之因为开源软件是可以所有人参与贡献的项目，姑且我认为这个软件是未来可期的，故收回之前的不推荐(虽然不推荐那些观点都没发布就已经被收回了，不过曾经确实曾经想过)</del></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://getsharex.com/">https://getsharex.com/</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/ShareX/ShareX">https://github.com/ShareX/ShareX</a></li>
-</ul>
-<p>Greenshot长期不更新，这个开源带长截图，装FFmpeg后支持录屏以及录gif。<br>虽然1.3.4之后一直没版本，但是一直有新得commit</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-02-24T12:28:00.000Z" title="2021/2/24 20:28:00">2021-02-24</time>发表</span><span class="level-item"><time dateTime="2021-12-22T08:55:00.000Z" title="2021/12/22 16:55:00">2021-12-22</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/System/">System</a></span><span class="level-item">1 分钟读完 (大约208个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/System/Slax/">[不再推荐]Slax - Linux PE</a></p><div class="content"><h2 id="不推荐的理由在于Ubuntu和Manjaro的安装盘就能做到，并且一般效果比这个还要好2年未维护，似乎没有提供源码"><a href="#不推荐的理由在于Ubuntu和Manjaro的安装盘就能做到，并且一般效果比这个还要好2年未维护，似乎没有提供源码" class="headerlink" title="不推荐的理由在于Ubuntu和Manjaro的安装盘就能做到，并且一般效果比这个还要好2年未维护，似乎没有提供源码"></a>不推荐的理由在于Ubuntu和Manjaro的安装盘就能做到，并且一般效果比这个还要好<br>2年未维护，似乎没有提供源码</h2><p>其实要有个WinPE能看Linux的文件系统也就不用这玩意了<br><a target="_blank" rel="noopener" href="https://www.slax.org/">https://www.slax.org</a></p>
-<p>但目前来讲这东西还算有用。<br>修复了一个ESXi的文件损坏的问题</p>
-<p>请注意这个iso不是像别的一样拿什么东西写到移动硬盘或是U盘上，而是直接解压（NTFS文件系统都行）,移动硬盘或U盘中可以保留slax这个文件夹（直接放进去），然后跑boot里的bat。</p>
-<p>另外注意这个对移动硬盘可能相性不好，也可能是文件系统的锅，建议优先U盘</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-11-06T03:01:00.000Z" title="2019/11/6 11:01:00">2019-11-06</time>发表</span><span class="level-item"><time dateTime="2019-11-06T03:01:00.000Z" title="2019/11/6 11:01:00">2019-11-06</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">几秒读完 (大约45个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Document&amp;Texteditor/Pdfsam/">[开源]PDFsam Basic - PDF合并分割工具</a></p><div class="content"><h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a target="_blank" rel="noopener" href="https://pdfsam.org/zh/">https://pdfsam.org/zh/</a></p>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>基础版本开源免费，进阶版本提供更多功能，不开源且收费。<br>比较喜欢这种模式，所以推荐</p>
-<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><p><a target="_blank" rel="noopener" href="https://github.com/torakiki/pdfsam">https://github.com/torakiki/pdfsam</a></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-07-23T09:22:00.000Z" title="2019/7/23 17:22:00">2019-07-23</time>发表</span><span class="level-item"><time dateTime="2019-07-23T09:22:00.000Z" title="2019/7/23 17:22:00">2019-07-23</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">几秒读完 (大约47个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Document&amp;Texteditor/Sigil/">[开源]Sigil - epub编辑器</a></p><div class="content"><h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a target="_blank" rel="noopener" href="https://sigil-ebook.com/">https://sigil-ebook.com/</a></p>
-<h1 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h1><p><a target="_blank" rel="noopener" href="https://github.com/Sigil-Ebook/Sigil">https://github.com/Sigil-Ebook/Sigil</a><br>既然可以编辑，当然可以拿来阅读，但是没有类似翻页、书签这种阅读功能，所以还是拿来编辑吧。</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-06-20T02:42:00.000Z" title="2019/6/20 10:42:00">2019-06-20</time>发表</span><span class="level-item"><time dateTime="2022-03-16T07:34:31.000Z" title="2022/3/16 15:34:31">2022-03-16</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">3 分钟读完 (大约462个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E8%BD%AF%E4%BB%B6/">批量重命名软件</a></p><div class="content"><p>最早找到的是Total commander让我用的越来越难受，在我看来，这款软件完全没有美感，设计上的，界面上的，虽然功能很强大，设置项也很多，但就像把一大堆东西杂七杂八的融合在一起。</p>
-<p>后面找到了</p>
-<h1 id="Advanced-Renamer"><a href="#Advanced-Renamer" class="headerlink" title="Advanced Renamer"></a>Advanced Renamer</h1><p>相当不错的工具，但是现在转为了收费软件(个人使用仍然免费)。</p>
-<p><a target="_blank" rel="noopener" href="http://www.advancedrenamer.com/download">http://www.advancedrenamer.com/download</a></p>
-<p>在后面就是寻找替代的开源软件</p>
-<h1 id="Ant-Renamer"><a href="#Ant-Renamer" class="headerlink" title="Ant Renamer"></a>Ant Renamer</h1><p><a target="_blank" rel="noopener" href="http://antp.be/software/renamer">http://antp.be/software/renamer</a><br><a target="_blank" rel="noopener" href="https://github.com/carry0987/Ant-Renamer">https://github.com/carry0987/Ant-Renamer</a><br>GPLv2<br>相对来说Ant Renamer的界面以及操作不如Advanced Renamer那么合适可能，但由于其开源，是个相当不错的替代选择。</p>
-<p>还有一个小问题就是这个软件大概15年是最后一个版本，是一个很长时间没维护的软件了。</p>
-<p>不过目前不影响使用以及功能。</p>
-<p>以及</p>
-<h1 id="Inviska-Rename"><a href="#Inviska-Rename" class="headerlink" title="Inviska Rename"></a>Inviska Rename</h1><p><a target="_blank" rel="noopener" href="https://www.inviska.com/rename/">https://www.inviska.com/rename/</a><br>(2020-05-06打不开，故取消外链)</p>
-<p>这个软件的批量方法设计上我觉得不如上面两个，不过他对于音乐的支持相当不错。具体可以看他的文档</p>
-<h1 id="SubRenamer"><a href="#SubRenamer" class="headerlink" title="SubRenamer"></a>SubRenamer</h1><p><a target="_blank" rel="noopener" href="https://github.com/arition/SubRenamer">https://github.com/arition/SubRenamer</a><br>GPLv3<br>这个软件可以做到对应命名，在命名不是很规则的时候很好用，比如带hash的文件名。<br>可以无视文件后缀应该对非字幕也有用。(只试了字幕那块可以加载一堆txt批量重命名，视频那块加载其他后缀没试，虽然感觉没啥问题)</p>
-<h1 id="PowerRename"><a href="#PowerRename" class="headerlink" title="PowerRename"></a>PowerRename</h1><p>MIT<br>PowerToys 的一个组件，啥都很强，看起来也很好<br>就是枚举的实现有些智障。<br>严格来说不是很推荐</p>
-<h1 id="Bulk-Rename-Utility"><a href="#Bulk-Rename-Utility" class="headerlink" title="Bulk Rename Utility"></a>Bulk Rename Utility</h1><p><a target="_blank" rel="noopener" href="https://www.bulkrenameutility.co.uk/">https://www.bulkrenameutility.co.uk/</a><br>个人免费<br>看起来界面很丰富，但感觉不太好用，也没法枚举,不推荐</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-06-17T09:02:00.000Z" title="2019/6/17 17:02:00">2019-06-17</time>发表</span><span class="level-item"><time dateTime="2019-06-17T09:02:00.000Z" title="2019/6/17 17:02:00">2019-06-17</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">6 分钟读完 (大约949个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/KeePassXC/">[开源]KeePassXC - 强大的密码管理软件以及密码自动填写工具</a></p><div class="content"><p>我在寻找一个在自动填写密码上能超过Firefox自带的扩展，Lastpass算一个，但是他折腾的我连为什么不想用他都忘了，直到我找到了KeePass。</p>
-<p>而KeePassXC是KeePass(Windows only)的跨平台版本KeePassX的升级版(瞧这复杂的关系)</p>
-<h1 id="KeePassXC"><a href="#KeePassXC" class="headerlink" title="KeePassXC"></a>KeePassXC</h1><p>它的优势在官方开发扩展上面，虽说没有KeePass的KeeFox那么强，但绝对够用了，并且FF自宫一刀，KeeFox没得用的现在。基本没有做的更好的。<br>图标获取功能也是自带的。<br>KeePassXC的缺点在于其自动输入的标题必须是全字匹配，并且必须单独条目单独设置，不过也因此避免了一些误操作，并且匹配程度更高。<br>它的License说是 “This program is free software: you can redistribute it and&#x2F;or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 or (at your option) version 3 of the License.”</p>
-<h2 id="KeePassXC自身的自动登录"><a href="#KeePassXC自身的自动登录" class="headerlink" title="KeePassXC自身的自动登录"></a>KeePassXC自身的自动登录</h2><p><img src="https://res.cloudinary.com/ted423/image/upload/v1560764694/KeePassXC_svg1eb.png" alt="KeePassXC command Line"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;*\KeePassXC.exe&quot; \*\k.kdbx&quot; --keyfile *\k.key&quot;</span><br></pre></td></tr></table></figure>
-<p>不过注意自动登录有安全风险就是了</p>
-<h1 id="KeePass"><a href="#KeePass" class="headerlink" title="KeePass"></a><del>KeePass</del></h1><p><a target="_blank" rel="noopener" href="http://keepass.info/">KeePass</a>是开源软件,采用本地数据库的方式对密码进行管理，软件对密码数据库采用256位AES算法加密，理论上破解难度极大。这样，即使电脑丢失或黑客入侵导致密码数据库被窃取，黑客也很难从中解密出明文帐号密码信息。</p>
-<p>KeePass仅凭<strong>ctrl+alt+A</strong>就能打遍天下无敌手，ctrl+alt+A可以实现“用户名”+tab键+“密码”+enter的输出(甚至你可以自定义)，也就是说无论网页还是游戏窗口亦或是QQ的窗口，你都可以通过ctrl+alt+A自动登录，而且KeePass可以通过识别窗口标题(当前活动)来进行精确匹配。</p>
-<h1 id="浏览器扩展以及KeePass插件"><a href="#浏览器扩展以及KeePass插件" class="headerlink" title="浏览器扩展以及KeePass插件"></a><del>浏览器扩展以及KeePass插件</del></h1><p>其实<br>通过ChromeIPass(已停止维护)扩展和<a target="_blank" rel="noopener" href="https://github.com/pfn/keepasshttp">KeePassHttp</a>插件，可以实现Chrome浏览器填入KeePass数据库密码的功能。</p>
-<p><a target="_blank" rel="noopener" href="https://addons.mozilla.org/zh-CN/firefox/addon/keefox/">KeeFox</a>则是火狐的扩展，虽然还有<a target="_blank" rel="noopener" href="https://github.com/pfn/passifox/">passifox</a>,但Keefox更强，passifox连设置项都没有，只负责和KeePass交互。KeeFox则不然，我目前还没见过有页面没法KeeFox填写密码的，甚至在不会提示你保存密码的页面，你也可以在KeePass里手动建立然后用KeeFox填写。并且，KeeFox能记住其他的表单项，不单单只是用户名跟密码，下拉选单例如“登入有效期”之类的都能记住。</p>
-<p>相比LastPass简直弱爆了，别说那屁玩意登录都不让我登了，感情我保存在里面的密码我要看还得去求他？不下他那扩展还不让我看？</p>
-<p><a target="_blank" rel="noopener" href="http://sourceforge.net/projects/keepass-favicon/files/">KeePass Favicon Downloader</a>是专门用来自动下载网站图标，解决强迫症患者手动建立KeePass记录没有图标的问题</p>
-<h1 id="PuTTY自动登录"><a href="#PuTTY自动登录" class="headerlink" title="PuTTY自动登录"></a>PuTTY自动登录</h1><p>我一直想找一个软件来取代SecureCRT这个收费软件，但无论我怎么折腾PuTTY都没用，同样也是KeePass带给我了新大陆。<br>你只需要对着putty按<code>ctrl+alt+A</code>就可以了</p>
-<h1 id="KeePass自身的自动登录"><a href="#KeePass自身的自动登录" class="headerlink" title="KeePass自身的自动登录"></a><del>KeePass自身的自动登录</del></h1><p>你可以使用这么一个命令，也可以更改开机启动的参数实现自动登录(当然，这不大安全)<br><code>&quot;C:\Program Files (x86)\KeePass Password Safe 2\KeePass.exe&quot; &quot;..\k.kdbx&quot; -keyfile:..\k.key  -minimize</code><br><a target="_blank" rel="noopener" href="http://keepass.info/help/base/cmdline.html">http://keepass.info/help/base/cmdline.html</a></p>
-<hr>
-<p><time>2016-02-20</time> 更新KeePass Favicon Downloader<br><time>2019-06-17</time>KeePassXC万岁</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-06-05T09:54:00.000Z" title="2019/6/5 17:54:00">2019-06-05</time>发表</span><span class="level-item"><time dateTime="2019-06-05T09:54:00.000Z" title="2019/6/5 17:54:00">2019-06-05</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">4 分钟读完 (大约634个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/Tera%20Term/">[不再推荐][开源]Tera Term - 远程连接工具 - SecureCRT替代者</a></p><div class="content"><p><a target="_blank" rel="noopener" href="https://ttssh2.osdn.jp/index.html.en">https://ttssh2.osdn.jp/index.html.en</a><br>主体是BSD的License，部分组件是其他协议，还有不开源的组件。<br>但主要免费。</p>
-<p>#写在前面<br><strong>开源软件你就需要习惯他奇怪的设计</strong></p>
-<ul>
-<li><strong>配置不会自动保存，你必须手动保存替换他目录下的ini。</strong></li>
-<li><strong>ssh断连进程会自动关闭，建议设置自动记录日志。</strong></li>
-<li>自行查文档，自行熟悉那一堆组件是干嘛用的</li>
-<li>teramenu的配置是保存在注册表里<code>HKEY_CURRENT_USER\Software\ShinpeiTools\TTermMenu</code></li>
-</ul>
-<p>#自动登录<br>##telnet<br>另一方面就在于它可以通过TTL脚本实现自动反应以及记住密码自动登录(telnet)，密码有加密。</p>
-<p>TTL脚本例子</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">getpassword &#x27;password.dat&#x27; &#x27;adminpassword&#x27; password</span><br><span class="line">connect &#x27;172.30.0.1:23 /nossh /T=1&#x27;</span><br><span class="line">wait &#x27;ame:&#x27;</span><br><span class="line">sendln &#x27;admin&#x27;</span><br><span class="line">wait &#x27;Password:&#x27;</span><br><span class="line">sendln password</span><br><span class="line">wait &#x27;#&#x27;</span><br><span class="line">sendln &#x27;ter mo&#x27;</span><br><span class="line">wait &#x27;#&#x27;</span><br><span class="line">sendln &#x27;con t&#x27;</span><br></pre></td></tr></table></figure>
-<p>其中第一次要手动输入密码，然后密码保存在password.dat中。</p>
-<p>##SSH<br>SSH就比较奇葩了，中文翻译是记住密码，但实际英文是remember in memory.<br>菜单栏的SSH里就翻译成了保存在内存中的密码，不知道什么意思，也不起作用。<br>但是Tera Term Menu 可以实现自动登陆<br><strong>Tera Term Menu的ssh自动登录是自动使用命令行来实现的，甭管怎么加密密码，任务管理器里查看命令行能看到明文的密码。</strong><br>(TTL脚本不知道怎么把password.dat转换并塞到字符串里去，以后慢慢研究吧)</p>
-<p>##自动记录日志<br>相关文档<br><a target="_blank" rel="noopener" href="https://ttssh2.osdn.jp/manual/en/menu/setup-additional.html">https://ttssh2.osdn.jp/manual/en/menu/setup-additional.html</a></p>
-<p>Specify default log file name. It can include a format of strftime.</p>
-<pre><code>&amp;h      Host name(or empty when not connecting)
-&amp;p      TCP port number(or empty when not connecting, not TCP connection)
-&amp;u      Logon user name
-%a      Abbreviated weekday name
-%A      Full weekday name
-%b      Abbreviated month name
-%B      Full month name
-%c      Date and time representation appropriate for locale
-%d      Day of month as decimal number (01 - 31)
-%H      Hour in 24-hour format (00 - 23)
-%I      Hour in 12-hour format (01 - 12)
-%j      Day of year as decimal number (001 - 366)
-%m      Month as decimal number (01 - 12)
-%M      Minute as decimal number (00 -  59)
-%p      Current locale&#39;s A.M./P.M. indicator for 12-hour clock
-%S      Second as decimal number (00 - 59)
-%U      Week of year as decimal number, with Sunday as first day of week (00 - 53)
-%w      Weekday as decimal number (0 - 6; Sunday is 0)
-%W      Week of year as decimal number, with Monday as first day of week (00 - 53)
-%x      Date representation for current locale
-%X      Time representation for current locale
-%y      Year without century, as decimal number (00 - 99)
-%Y      Year with century, as decimal number
-%z, %Z  Either the time-zone name or time zone abbreviation, depending on registry settings;
-    no characters if time zone is unknown
-%%      Percent sign
-</code></pre>
-<h2 id="example"><a href="#example" class="headerlink" title="example"></a>example<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">teraterm-%Y%m%d_%H_%M_%S-&amp;h.log</span><br></pre></td></tr></table></figure></h2><p><time>2019-04-26</time>增加SSH自动登陆相关<br><time>2019-06-05</time>加深对配置的理解，增加自动记录日志相关</p>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/tags/Open-Source/">上一页</a></div><div class="pagination-next"><a href="/tags/Open-Source/page/3/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/tags/Open-Source/">1</a></li><li><a class="pagination-link is-current" href="/tags/Open-Source/page/2/">2</a></li><li><a class="pagination-link" href="/tags/Open-Source/page/3/">3</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://www.gravatar.com/avatar/3581fa7535eb1989959533f1d264012c?s=128" alt="ted423"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">ted423</p><p class="is-size-6 is-block">到处乱跑</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">380</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">145</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ted423" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ted423"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Anime/"><span class="level-start"><span class="level-item">Anime</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Browser/"><span class="level-start"><span class="level-item">Browser</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Code/"><span class="level-start"><span class="level-item">Code</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/categories/Comic/"><span class="level-start"><span class="level-item">Comic</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Document/"><span class="level-start"><span class="level-item">Document</span></span><span class="level-end"><span class="level-item tag">47</span></span></a></li><li><a class="level is-mobile" href="/categories/Game/"><span class="level-start"><span class="level-item">Game</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Issue/"><span class="level-start"><span class="level-item">Issue</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/categories/Music/"><span class="level-start"><span class="level-item">Music</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Optimization/"><span class="level-start"><span class="level-item">Optimization</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/Picture-Photo-Image/"><span class="level-start"><span class="level-item">Picture&amp;Photo&amp;Image</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">88</span></span></a></li><li><a class="level is-mobile" href="/categories/System/"><span class="level-start"><span class="level-item">System</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Video/"><span class="level-start"><span class="level-item">Video</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/1080i/"><span class="tag">1080i</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/1080p/"><span class="tag">1080p</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/3-clause-BSD-license/"><span class="tag">3-clause BSD license</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/480P/"><span class="tag">480P</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/720P/"><span class="tag">720P</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/720p/"><span class="tag">720p</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AGPLv3/"><span class="tag">AGPLv3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AKB48/"><span class="tag">AKB48</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ARK/"><span class="tag">ARK</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anime/"><span class="tag">Anime</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anti-996-License/"><span class="tag">Anti 996 License</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Apache-License-2-0/"><span class="tag">Apache License 2.0</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Archived/"><span class="tag">Archived</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDMV/"><span class="tag">BDMV</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDrip/"><span class="tag">BDrip</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Browser/"><span class="tag">Browser</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CMD/"><span class="tag">CMD</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/COS/"><span class="tag">COS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chrome/"><span class="tag">Chrome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chromium-Chrome/"><span class="tag">Chromium(Chrome)</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Code/"><span class="tag">Code</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Comic/"><span class="tag">Comic</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compare/"><span class="tag">Compare</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compression/"><span class="tag">Compression</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Disney/"><span class="tag">Disney</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Document/"><span class="tag">Document</span><span class="tag">54</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Document-Texteditor/"><span class="tag">Document&amp;Texteditor</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Download-File-hosting-service/"><span class="tag">Download&amp;File hosting service</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dropbox/"><span class="tag">Dropbox</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Encode/"><span class="tag">Encode</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Extension/"><span class="tag">Extension</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FHD/"><span class="tag">FHD</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Firefox/"><span class="tag">Firefox</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Font/"><span class="tag">Font</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GM%E8%84%9A%E6%9C%AC/"><span class="tag">GM脚本</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv2/"><span class="tag">GPLv2</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv3/"><span class="tag">GPLv3</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv3/"><span class="tag">GPLv3+</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game/"><span class="tag">Game</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game-Tool/"><span class="tag">Game Tool</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github/"><span class="tag">Github</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HD/"><span class="tag">HD</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HDR/"><span class="tag">HDR</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hardware/"><span class="tag">Hardware</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hardware-Tool/"><span class="tag">Hardware Tool</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo-Theme/"><span class="tag">Hexo Theme</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Issue/"><span class="tag">Issue</span><span class="tag">51</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JP/"><span class="tag">JP</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Javascript/"><span class="tag">Javascript</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/K-ON/"><span class="tag">K-ON</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPL/"><span class="tag">LGPL</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPLv2-1/"><span class="tag">LGPLv2.1</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPLv3/"><span class="tag">LGPLv3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">34</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lossless/"><span class="tag">Lossless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MIT/"><span class="tag">MIT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MPL/"><span class="tag">MPL</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MV/"><span class="tag">MV</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Maintenance/"><span class="tag">Maintenance</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Movie/"><span class="tag">Movie</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NEKO-WORKs-Sayori/"><span class="tag">NEKO WORKs(Sayori)</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Network/"><span class="tag">Network</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS-X/"><span class="tag">OS X</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OST/"><span class="tag">OST</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Office/"><span class="tag">Office</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Offline-Install/"><span class="tag">Offline Install</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Open-Source/"><span class="tag">Open Source</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Optimization/"><span class="tag">Optimization</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PIXAR/"><span class="tag">PIXAR</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PSP/"><span class="tag">PSP</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Personal-Free/"><span class="tag">Personal Free</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Picture-Photo-Image/"><span class="tag">Picture&amp;Photo&amp;Image</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pool/"><span class="tag">Pool</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PowerShell/"><span class="tag">PowerShell</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Proxy/"><span class="tag">Proxy</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R18/"><span class="tag">R18</span><span class="tag">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Regedit/"><span class="tag">Regedit</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Remote/"><span class="tag">Remote</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SEO/"><span class="tag">SEO</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SIL-Open-Font/"><span class="tag">SIL Open Font</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SVG/"><span class="tag">SVG</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Security-Software/"><span class="tag">Security Software</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Software/"><span class="tag">Software</span><span class="tag">58</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Steam/"><span class="tag">Steam</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/System/"><span class="tag">System</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Terminal/"><span class="tag">Terminal</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/To-LOVE%E3%82%8B/"><span class="tag">To LOVEる</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UHD/"><span class="tag">UHD</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/US/"><span class="tag">US</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VM/"><span class="tag">VM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vocaloid/"><span class="tag">Vocaloid</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WWW/"><span class="tag">WWW</span><span class="tag">32</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">144</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-10/"><span class="tag">Windows 10</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-AD/"><span class="tag">Windows AD</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-Server/"><span class="tag">Windows Server</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-Update/"><span class="tag">Windows Update</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Youtube/"><span class="tag">Youtube</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iOS/"><span class="tag">iOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/macOS/"><span class="tag">macOS</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pixiv/"><span class="tag">pixiv</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E2%98%86/"><span class="tag">☆</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"><span class="tag">三次元</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/"><span class="tag">不再推荐</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%93%E8%BE%91/"><span class="tag">专辑</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"><span class="tag">个人观点</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E8%AF%84%E4%BB%B7/"><span class="tag">个人评价</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%81%B6%E5%83%8F%E5%A4%A7%E5%B8%88-The-iDOLM-STER/"><span class="tag">偶像大师(The iDOLM@STER)</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"><span class="tag">分类汇总</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AF-Hatsune-Miku/"><span class="tag">初音ミク(Hatsune Miku)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%9A%E8%A1%8C-Autolyric/"><span class="tag">多行(Autolyric)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A7%E7%9C%BC%E4%BB%94-%E6%97%AD/"><span class="tag">大眼仔~旭</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/"><span class="tag">字符编码</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%89%E5%85%A8%E8%BD%AF%E4%BB%B6/"><span class="tag">安全软件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%8C%E7%BB%93/"><span class="tag">完结</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E4%BF%8A/"><span class="tag">小俊</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E8%AF%B4/"><span class="tag">小说</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A7%E5%85%8B%E5%8A%9B%E4%B8%8E%E9%A6%99%E5%AD%90%E5%85%B0/"><span class="tag">巧克力与香子兰</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"><span class="tag">建设中</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E6%BA%90/"><span class="tag">开源</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%85%E7%BB%B4%E6%8A%A4/"><span class="tag">待维护</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%81%B6%E4%B9%8B%E5%8D%8E/"><span class="tag">恶之华</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E-Valkyria-Chronicles/"><span class="tag">战场的女武神[Valkyria Chronicles]</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%89%8B%E5%8A%9E/"><span class="tag">手办</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/"><span class="tag">无双系列</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A0%E6%8D%9F/"><span class="tag">无损</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%8C%E8%AF%8D-LRC/"><span class="tag">歌词(LRC)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%A3%E7%89%88/"><span class="tag">正版</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B1%89%E5%8C%96/"><span class="tag">汉化</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%83%88%E7%81%AB/"><span class="tag">烈火</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A0%B4%E8%A7%A3/"><span class="tag">破解</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"><span class="tag">破解&amp;激活</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"><span class="tag">第三方修改|绿化</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy/"><span class="tag">组策略(Group Policy)</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%89%A6%E9%9A%8A%E3%81%93%E3%82%8C%E3%81%8F%E3%81%97%E3%82%87%E3%82%93-%E8%89%A6%E3%81%93%E3%82%8C/"><span class="tag">艦隊これくしょん -艦これ-</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"><span class="tag">跨平台</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E8%BD%BD/"><span class="tag">转载</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%87%E6%97%B6/"><span class="tag">过时</span><span class="tag">23</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC-Disney/"><span class="tag">迪士尼[Disney]</span><span class="tag">2</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T13:26:37.417Z">2023-08-07</time></p><p class="title"><a href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a></p><p class="categories"><a href="/categories/Issue/">Issue</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-15T15:46:25.499Z">2023-07-15</time></p><p class="title"><a href="/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/">Adobe Acrobat Reader DC Offline / 离线安装包</a></p><p class="categories"><a href="/categories/Software/">Software</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-15T15:43:07.968Z">2023-07-15</time></p><p class="title"><a href="/Software/Webmin/">[开源]Webmin - WebUI for Linux</a></p><p class="categories"><a href="/categories/Software/">Software</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-16T07:57:00.000Z">2023-06-16</time></p><p class="title"><a href="/etc/%E5%AE%BD%E5%AE%B9%E6%82%96%E8%AE%BA/">[转载]苏了了：宽容的悖论———当代西方宽容理论困境的批判性反思</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-06T16:12:13.159Z">2023-06-07</time></p><p class="title"><a href="/Anime/JP/Angel%20Beats!/">Angel Beats!(エンジェル ビーツ)</a></p><p class="categories"><a href="/categories/Anime/">Anime</a></p></div></article></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/avatar/avatar.jpg" alt="个人小站" height="28"></a><p class="is-size-7"><span>&copy; 2024 ted423</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ted423.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+<meta property="og:type" content="website">
+<meta property="og:title" content="个人小站">
+<meta property="og:url" content="http://ted423.github.io/tags/Open-Source/page/2/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://ted423.github.io/tags/Open-Source/page/2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/Open-Source/page/2/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>标签: Open Source | 个人小站</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">个人小站</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Take&Give</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ted423</p>
+  <div class="site-description" itemprop="description">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">145</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner tag posts-collapse">
+
+
+  
+  
+  
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <h1 class="collection-header">Open Source
+          <small>标签</small>
+        </h1>
+      </div>
+
+      
+    <div class="collection-year">
+      <span class="collection-header">2021</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-07-08T00:06:53+08:00"
+              content="2021-07-08">
+          07-08
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/Document&Texteditor/SumatraPDF/" itemprop="url">
+            <span itemprop="name">[开源]SumatraPDF</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-07-08T00:06:53+08:00"
+              content="2021-07-08">
+          07-08
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/Document&Texteditor/notepad3/" itemprop="url">
+            <span itemprop="name">[文本编辑器]Notepad3</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-07-08T00:06:53+08:00"
+              content="2021-07-08">
+          07-08
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/Compression/7-Zip-zstd/" itemprop="url">
+            <span itemprop="name">[开源]7-Zip-zstd 7z增强版</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-05-02T13:22:00+08:00"
+              content="2021-05-02">
+          05-02
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/ShareX/" itemprop="url">
+            <span itemprop="name">[不再推荐][截图]ShareX</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-02-24T20:28:00+08:00"
+              content="2021-02-24">
+          02-24
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/System/Slax/" itemprop="url">
+            <span itemprop="name">[不再推荐]Slax - Linux PE</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+    <div class="collection-year">
+      <span class="collection-header">2019</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-11-06T11:01:00+08:00"
+              content="2019-11-06">
+          11-06
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/Document&Texteditor/Pdfsam/" itemprop="url">
+            <span itemprop="name">[开源]PDFsam Basic - PDF合并分割工具</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-07-23T17:22:00+08:00"
+              content="2019-07-23">
+          07-23
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/Document&Texteditor/Sigil/" itemprop="url">
+            <span itemprop="name">[开源]Sigil - epub编辑器</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-06-20T10:42:00+08:00"
+              content="2019-06-20">
+          06-20
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E8%BD%AF%E4%BB%B6/" itemprop="url">
+            <span itemprop="name">批量重命名软件</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-06-17T17:02:00+08:00"
+              content="2019-06-17">
+          06-17
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/KeePassXC/" itemprop="url">
+            <span itemprop="name">[开源]KeePassXC - 强大的密码管理软件以及密码自动填写工具</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-06-05T17:54:00+08:00"
+              content="2019-06-05">
+          06-05
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/Tera%20Term/" itemprop="url">
+            <span itemprop="name">[不再推荐][开源]Tera Term - 远程连接工具 - SecureCRT替代者</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
+
+    </div>
+  </div>
+  
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/tags/Open-Source/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/tags/Open-Source/">1</a><span class="page-number current">2</span><a class="page-number" href="/tags/Open-Source/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/tags/Open-Source/page/3/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ted423</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

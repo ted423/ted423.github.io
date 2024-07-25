@@ -1,53 +1,574 @@
-<!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>个人小站</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="个人小站"><meta name="msapplication-TileImage" content="/avatar/avatar.jpg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="个人小站"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"><meta property="og:type" content="blog"><meta property="og:title" content="个人小站"><meta property="og:url" content="http://ted423.github.io/"><meta property="og:site_name" content="个人小站"><meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://ted423.github.io/img/og_image.png"><meta property="article:author" content="ted423"><meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://ted423.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io"},"headline":"个人小站","image":["http://ted423.github.io/img/og_image.png"],"author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/avatar/avatar.jpg"}},"description":"这个网站将记录我的成果，我的收集，我觉得有价值的一切事物"}</script><link rel="icon" href="/avatar/avatar.jpg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link data-pjax rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link data-pjax rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
-  (function () {
-      function switchTab() {
-          if (!location.hash) {
-            return;
-          }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
 
-          const id = '#' + CSS.escape(location.hash.substring(1));
-          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
-          if (!$tabMenu) {
-            return;
-          }
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
-          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
-          Array.from($tabMenuContainer.querySelectorAll('a'))
-              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
-              .forEach($content => $content.classList.add('is-hidden'));
+<link rel="stylesheet" href="/css/main.css">
 
-          if ($tabMenu) {
-              $tabMenu.parentElement.classList.add('is-active');
-          }
-          const $activeTab = document.querySelector(id);
-          if ($activeTab) {
-              $activeTab.classList.remove('is-hidden');
-          }
-      }
-      switchTab();
-      window.addEventListener('hashchange', switchTab, false);
-  })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/avatar/avatar.jpg" alt="个人小站" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-08-17T12:09:45.189Z" title="2021/8/17 20:09:45">2021-08-17</time>发表</span><span class="level-item"><time dateTime="2021-08-17T10:40:41.000Z" title="2021/8/17 18:40:41">2021-08-17</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Anime/">Anime</a></span><span class="level-item">几秒读完 (大约47个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Anime/Disney/">关于迪士尼[Disney]</a></p><div class="content"><p><img src="https://pic3.zhimg.com/80/v2-270d4d166fccc436272b46ca7d73a978_720w.png" alt="Disney"></p>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha256-XOqroi11tY4EFQMR9ZYwZWKj5ZXiftSx36RRuC3anlA=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ted423.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.20.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+<meta property="og:type" content="website">
+<meta property="og:title" content="个人小站">
+<meta property="og:url" content="http://ted423.github.io/page/11/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://ted423.github.io/page/11/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"page/11/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>个人小站</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">个人小站</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Take&Give</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ted423</p>
+  <div class="site-description" itemprop="description">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">145</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Anime/Disney/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Anime/Disney/" class="post-title-link" itemprop="url">关于迪士尼[Disney]</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-17 20:09:45 / 修改时间：18:40:41" itemprop="dateCreated datePublished" datetime="2021-08-17T20:09:45+08:00">2021-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Anime/" itemprop="url" rel="index"><span itemprop="name">Anime</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img src="https://pic3.zhimg.com/80/v2-270d4d166fccc436272b46ca7d73a978_720w.png" alt="Disney"></p>
 <p>这个图来自<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/54993822/answer/142147320">https://www.zhihu.com/question/54993822/answer/142147320</a></p>
 <p>通常说的迪士尼的动画指的 华特迪士尼动画工作室 制作的动画</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-08-10T12:31:48.811Z" title="2021/8/10 20:31:48">2021-08-10</time>发表</span><span class="level-item"><time dateTime="2021-08-14T16:00:00.000Z" title="2021/8/15 00:00:00">2021-08-15</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Code/">Code</a></span><span class="level-item">几秒读完 (大约108个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/">[Javascript]获取文本节点</a></p><div class="content"><p>主要经常遇见某元素下面是元素加文本节点的模式，需要对文本节点操作就很痛苦，因为Selector没法直接选到文本节点上，而前面的元素可能又包含干扰项<br>总之如下</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Code/WWW/%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9/" class="post-title-link" itemprop="url">[Javascript]获取文本节点</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-10 20:31:48" itemprop="dateCreated datePublished" datetime="2021-08-10T20:31:48+08:00">2021-08-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-08-15 00:00:00" itemprop="dateModified" datetime="2021-08-15T00:00:00+08:00">2021-08-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>主要经常遇见某元素下面是元素加文本节点的模式，需要对文本节点操作就很痛苦，因为Selector没法直接选到文本节点上，而前面的元素可能又包含干扰项<br>总之如下</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;Selector&quot;)[0].nextSibling</span><br></pre></td></tr></table></figure>
 
 <p>跑个题<br><a target="_blank" rel="noopener" href="https://webdesigncss.pixnet.net/blog/post/223197231-%E5%A6%82%E4%BD%95%E7%94%A8%E5%8E%9F%E7%94%9Fjs%E5%8F%96%E5%BE%97siblings">https://webdesigncss.pixnet.net/blog/post/223197231-如何用原生js取得siblings</a><br>这篇文章似乎也很有用</p>
 <p>其实如果最早不去搜什么文本节点，直接搜Sibling就好了</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-08-09T11:42:31.791Z" title="2021/8/9 19:42:31">2021-08-09</time>发表</span><span class="level-item"><time dateTime="2021-08-09T08:54:34.000Z" title="2021/8/9 16:54:34">2021-08-09</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Issue/">Issue</a></span><span class="level-item">几秒读完 (大约92个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Issue/python-win/">[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</a></p><div class="content"><p>简单说就是Win10在<code>C:\Users\XX\AppData\Local\Microsoft\WindowsApps</code>下放了两个0kb的python.exe以及python3.exe用于弹Windows Store，并把这个路径加到了个人的环境变量。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/python-win/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Issue/python-win/" class="post-title-link" itemprop="url">[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-09 19:42:31 / 修改时间：16:54:34" itemprop="dateCreated datePublished" datetime="2021-08-09T19:42:31+08:00">2021-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Issue/" itemprop="url" rel="index"><span itemprop="name">Issue</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>简单说就是Win10在<code>C:\Users\XX\AppData\Local\Microsoft\WindowsApps</code>下放了两个0kb的python.exe以及python3.exe用于弹Windows Store，并把这个路径加到了个人的环境变量。</p>
 <p>而且这个环境变量优先级高所以会优先运行。</p>
 <p>傻逼微软。</p>
 <p>资源管理器里似乎删不掉，要命令行删</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-08-08T18:12:00.000Z" title="2021/8/9 02:12:00">2021-08-09</time>发表</span><span class="level-item"><time dateTime="2021-08-08T18:12:00.000Z" title="2021/8/9 02:12:00">2021-08-09</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">1 分钟读完 (大约157个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/winscppwd/">winscppwd - Winscp Password解密</a></p><div class="content"><p>起因是忘了某机器密码，然后曾保存到了Winscp里<br>不过配置里的密码是加密的。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/winscppwd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Software/winscppwd/" class="post-title-link" itemprop="url">winscppwd - Winscp Password解密</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-08-09 02:12:00" itemprop="dateCreated datePublished" datetime="2021-08-09T02:12:00+08:00">2021-08-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>起因是忘了某机器密码，然后曾保存到了Winscp里<br>不过配置里的密码是加密的。</p>
 <p>网上所有帖子都指向了<a href="/file/winscppwd.exe">winscppwd</a>，并且我查到以前有这么个开源项目<a target="_blank" rel="noopener" href="https://bitbucket.org/knarf/winscppwd/overview">https://bitbucket.org/knarf/winscppwd/overview</a>，但现在看已经404了</p>
 <p>似乎是2012年的软件<br>但是现在仍能正常使用</p>
 <p>看到官网上有人问Winscp的加密方式，然后程序员耐心的丢出了源码让他看<br><a target="_blank" rel="noopener" href="https://github.com/winscp/winscp/blob/master/source/core/Security.cpp">https://github.com/winscp/winscp/blob/master/source/core/Security.cpp</a><br>不过我看不懂，有人看得懂的话，可以试试手工解密</p>
 <p>另外有看到<a target="_blank" rel="noopener" href="https://github.com/dzxs/winscppassword/">https://github.com/dzxs/winscppassword/</a><br>但这个我没试能不能用</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-16T16:00:00.000Z" title="2021/6/17 00:00:00">2021-06-17</time>发表</span><span class="level-item"><time dateTime="2021-08-04T16:00:00.000Z" title="2021/8/5 00:00:00">2021-08-05</time>更新</span><span class="level-item">10 分钟读完 (大约1556个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/etc/Bye/">也许要再见了，Bitcron&amp;Farbox</a></p><div class="content"><p>今天检查博客没同步到最新状态才看到Farbox 2.0。<br>变动很大，思虑良久，我开始考虑彻底的离开。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/etc/Bye/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/etc/Bye/" class="post-title-link" itemprop="url">也许要再见了，Bitcron&Farbox</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-17 00:00:00" itemprop="dateCreated datePublished" datetime="2021-06-17T00:00:00+08:00">2021-06-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-08-05 00:00:00" itemprop="dateModified" datetime="2021-08-05T00:00:00+08:00">2021-08-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>今天检查博客没同步到最新状态才看到Farbox 2.0。<br>变动很大，思虑良久，我开始考虑彻底的离开。</p>
 <p>我使用Farbox最早是2014年，毕业没多久。被Farbox的展现出来的世界所触动。<br>这几年，分享、笔记、边写边思考，算我在Bitcron&amp;Farbox的主要工作。<br>曾试过Wordpress，不过白嫖的服务器几下就炸的不成样子。<br>选择Farbox的原因之一便是我真的很喜欢Dropbox -&gt;<a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/software/zi-yuan-lei/tong-bu-pan-ping-jie">https://ted423.bitcron.com/post/software/zi-yuan-lei/tong-bu-pan-ping-jie</a><br>所以无论是Farbox的”『简单』才持久”，”使用者自己拥有数据”，都让我非常认同。(Dropbox后端的版本控制，曾让我解决了单机游戏误操作的问题，也解决过自己弄乱的环境)。</p>
 <p>看Farbox的博客也是我的一大爱好，在我的认知中，Farbox团队一直是一个有理念、有思维的团队。<br>我一直很反感完全的程序员思维，这种思维在开源软件里展现的非常多。<br>所以”为什么用户不知道自己需要什么”，”写代码的产品经理们”，”设计的容量”让我非常认同。</p>
 <p>但现在Dropbox没了，很奇妙的一件事，却让我感到一切都不一样了。</p>
@@ -66,11 +587,172 @@
 <li>2021-08-05 Site Suspended了，我想到上面的情况，然后我还在咕着没把文章搬完就菊花一紧，也还好后台的文件管理器数据还在，然后我又一个误操作差点干掉一篇文章，回头一看farbox文件夹里的那篇文章还在。吓出一身冷汗。</li>
 </ul>
 <p>我习惯从根源上解决问题，所以，大概再见了。<br>寻找下一个符合我喜好的博客或干脆彻底的解放自己。</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-22T21:16:33.000Z" title="2021/7/23 05:16:33">2021-07-23</time>发表</span><span class="level-item"><time dateTime="2021-07-22T21:16:33.000Z" title="2021/7/23 05:16:33">2021-07-23</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">2 分钟读完 (大约253个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Security/No%20WD/">不推荐使用Windows Defender</a></p><div class="content"><p>首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。<br>Server是1809，所以很可能遇到了是一个老版本的Bug</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Security/No%20WD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Software/Security/No%20WD/" class="post-title-link" itemprop="url">不推荐使用Windows Defender</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-23 05:16:33" itemprop="dateCreated datePublished" datetime="2021-07-23T05:16:33+08:00">2021-07-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>首先有发现Win 10和Win Server 2019的 Windows Defender 操作界面以及逻辑不太一样。<br>Server是1809，所以很可能遇到了是一个老版本的Bug</p>
 <p>现象就是Server上遇到问题文件(Windows loader.exe)自动删除，并且网络路径里删的无法还原(隔离区能看到)。就是东西彻底没了，Windows似乎还对其做了加密，所以改名挪出来没用。</p>
 <p>然后测试中发生了一个神奇的现象。我的Windows loader压缩档很早就被个杀毒删了exe，里面只剩下几个文本文件，居然报毒了<br><del>图片挂了</del></p>
 <p>解压后不报毒，重新压缩不报毒，就只报我电脑上呆了好几年的那个zip。<br>而里面，都是文本文件。<br>要知道，压缩几个文件，每次生成的包可能都是不同的hash值。这种情况下的报毒，细思极恐。</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-23T11:10:42.701Z" title="2023/3/23 19:10:42">2023-03-23</time>发表</span><span class="level-item"><time dateTime="2021-07-18T16:00:00.000Z" title="2021/7/19 00:00:00">2021-07-19</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Issue/">Issue</a></span><span class="level-item">5 分钟读完 (大约813个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Issue/samba/">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a></p><div class="content"><p>其实是个小问题，我很快就解决了。<del>但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯</del>,结论是跟匿名访问被默认阻止有关，只是 Win 给了个错误的报错。<br>Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)<br><img src="https://files.catbox.moe/xmdnnq.png" alt="Windows 客户端无法正常登录 Linux samba服务器"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/samba/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Issue/samba/" class="post-title-link" itemprop="url">[问题处理]Windows 客户端无法正常访问 Linux samba 服务器提供的共享</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-23 19:10:42" itemprop="dateCreated datePublished" datetime="2023-03-23T19:10:42+08:00">2023-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-07-19 00:00:00" itemprop="dateModified" datetime="2021-07-19T00:00:00+08:00">2021-07-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Issue/" itemprop="url" rel="index"><span itemprop="name">Issue</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>其实是个小问题，我很快就解决了。<del>但没确认真正的原因，所以还是记录下，以便于以后进一步分析验证以及回溯</del>,结论是跟匿名访问被默认阻止有关，只是 Win 给了个错误的报错。<br>Windows Server可以架设NFS基于身份和基于IP的验证(不过暂时不建议使用，毕竟Windows UTF-8和nfs client的问题由来已久)<br><img src="https://files.catbox.moe/xmdnnq.png" alt="Windows 客户端无法正常登录 Linux samba服务器"></p>
 <p>理论Linux也可以做基于Kerberos的验证(但我还没试过，不发表看法)。</p>
 <p>说这个是因为，我猜测这个现象可能源自我在Linux上同时启用了NFS和samba，并分享了相同的文件夹，(Windows 也开启了，但是没设置NFS，不过两者是不同系统，所以也不好说)<br>samba systemctl status log有这个</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Jul 19 14:16:07 pve smbd[14765]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14766]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14767]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14768]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:07 pve smbd[14769]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:09 pve smbd[14803]: pam_unix(samba:session): session opened for user XX(uid=1000) by (uid=0)</span><br><span class="line">Jul 19 14:16:24 pve smbd[14803]: pam_unix(samba:session): session closed for user XX</span><br><span class="line">Jul 19 14:16:52 pve smbd[15315]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:53 pve smbd[15322]: pam_unix(samba:session): session closed for user nobody</span><br><span class="line">Jul 19 14:16:54 pve smbd[15329]: pam_unix(samba:session): session closed for user nobody</span><br></pre></td></tr></table></figure>
@@ -81,7 +763,85 @@
 <p>似乎破案了，Windows 7以及Server 2016会正常弹出验证框，其他有几台Win 10是提示不安全的匿名被阻止(这个是组策略可以解决)。<br><del>所以很可能是出问题的机子装有或曾经装有NFS Client(一台曾装有访问过但是后面停了NFS Client出问题，但因为是NFS，不曾保留账号密码才是，一台现装但从没访问过有问题)</del><br>另Samba也支持同名帐户同密码可以直接访问(如上面所说，Win访问SMB是直接使用当前账号密码作为凭证)</p>
 <hr>
 <p>行吧，我傻逼了，提示不安全的匿名被阻止的机子，explorer直接访问就是直接报错。<br>所以这个应该被归类为 Windows 10 Bug 系列。以后运行东西请优先通过”运行”否则你可能无法收到正确的报错提示。</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-15T11:46:48.310Z" title="2021/7/15 19:46:48">2021-07-15</time>发表</span><span class="level-item"><time dateTime="2021-07-15T09:15:42.000Z" title="2021/7/15 17:15:42">2021-07-15</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">3 分钟读完 (大约461个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Remote/x2go/">[开源]x2go - 远程连接</a></p><div class="content"><p><del>不推荐使用，最后又滚回去使用NoMachine了</del><br><del>然后发现NoMachine有别的问题</del></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Remote/x2go/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Software/Remote/x2go/" class="post-title-link" itemprop="url">[开源]x2go - 远程连接</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-07-15 19:46:48 / 修改时间：17:15:42" itemprop="dateCreated datePublished" datetime="2021-07-15T19:46:48+08:00">2021-07-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><del>不推荐使用，最后又滚回去使用NoMachine了</del><br><del>然后发现NoMachine有别的问题</del></p>
 <h1 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h1><p><a target="_blank" rel="noopener" href="https://wiki.x2go.org/doku.php/start">https://wiki.x2go.org/doku.php/start</a><br>本来想吐槽x2go的，后面发现是自己的问题。<br>闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。<br>看到x2go用NX协议就也想试试，毕竟开源。<br>首先是跟nomachine不兼容。<br>当然这是小事。</p>
 <p>x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。<br>使用桌面登录会跟你显示器登录是不一样。<br>当然还能用X11<br>这里引入一个小故事</p>
 <p>当我看到x2go在x11可以选择桌面的时候我是很激动的(x11)(<br>毕竟这意味着我可以弄一个别人看不到的桌面。<br>然后我闲着无聊重启了下我就傻逼了。<br>我连不进去了，因为Debian同学没登陆么的桌面，于是我跑到电脑前，登录进了系统，然后再跑回位置上连。(直接使用xfce这些桌面没这个问题。)</p>
@@ -89,7 +849,82 @@
 <li>与显示器同步的画面必须要到电脑前登录，否则x2go的x11 foward不工作。(这点NoMachine默认只支持同步显示，并且无需现场登录)</li>
 <li>利用x2go创建的远程画面会卡死。只能强关，关了之后原画面显示内容丢失，甚至我重启开那一会不动，桌面就死了。<del>当然这可能是Mint的锅，不过谁知道呢</del>(我又仔细看了下，我装的是xubuntu,那没事了)</li>
 </ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-07T16:06:52.984Z" title="2021/7/8 00:06:52">2021-07-08</time>发表</span><span class="level-item"><time dateTime="2021-07-03T05:55:52.000Z" title="2021/7/3 13:55:52">2021-07-03</time>更新</span><span class="level-item">24 分钟读完 (大约3562个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">[转载]让“中国式的聪明”滚出中国</a></p><div class="content"><p>文章后部有增加知乎的内容</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/etc/%E4%B8%AD%E5%9B%BD%E5%BC%8F/" class="post-title-link" itemprop="url">[转载]让“中国式的聪明”滚出中国</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-08 00:06:52" itemprop="dateCreated datePublished" datetime="2021-07-08T00:06:52+08:00">2021-07-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-07-03 13:55:52" itemprop="dateModified" datetime="2021-07-03T13:55:52+08:00">2021-07-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>文章后部有增加知乎的内容</p>
 <p>文&#x2F;庄佩璋</p>
 <p>杨蕙如是台湾台东县台东市人，国立成功大学学士，澳洲昆士兰大学企管硕士。因为善用信用卡八倍红利回馈、网路拍卖、电视购物礼卷优惠，从中国信托银行倒赚一笔，成为卡奴们心中的英雄，被媒体封为“卡神”。</p>
 <p>杨蕙如赚钱的套路：办一张台湾某银行信用卡，获得刷卡消费红利点数（相当于“消费积分”）8倍的优惠，然后在购物台用信用卡购买了600万元（台币）的礼券，转卖给亲友后让亲友在网上拍卖，自己再从网上刷卡买回。这样她的红利点数（消费积分）迅速累积到800余万点，她用这些点数兑换航空公司的头等舱机票，以半价在网上出售，短短两个月内获利上百万元新台币。</p>
@@ -129,7 +964,91 @@
 <style>
 .post_body>p
 {text-indent:2em}
-</style></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-07-07T16:06:53.161Z" title="2021/7/8 00:06:53">2021-07-08</time>发表</span><span class="level-item"><time dateTime="2021-07-02T02:10:51.000Z" title="2021/7/2 10:10:51">2021-07-02</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Software/">Software</a></span><span class="level-item">1 分钟读完 (大约181个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/Software/Document&amp;Texteditor/notepad3/">[文本编辑器]Notepad3</a></p><div class="content"><ul>
+</style>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Document&Texteditor/notepad3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Software/Document&Texteditor/notepad3/" class="post-title-link" itemprop="url">[文本编辑器]Notepad3</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-08 00:06:53" itemprop="dateCreated datePublished" datetime="2021-07-08T00:06:53+08:00">2021-07-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-07-02 10:10:51" itemprop="dateModified" datetime="2021-07-02T10:10:51+08:00">2021-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ul>
 <li><a target="_blank" rel="noopener" href="https://www.rizonesoft.com/downloads/notepad3/">https://www.rizonesoft.com/downloads/notepad3/</a></li>
 <li><a target="_blank" rel="noopener" href="https://github.com/rizonesoft/Notepad3">https://github.com/rizonesoft/Notepad3</a></li>
 </ul>
@@ -137,48 +1056,83 @@
 <p>曾经有个notepad2，最大的作用是完全替换微软的notepad，使用的是映像劫持的方式。所以即便装了别的文本编辑器，我也还是喜欢再装一个notepad2以便彻底干死微软的。<br>可惜弃更了。</p>
 <p>所以这个notepad3也能做到，并且开源。就是不知道会不会有Notepad4。</p>
 <p>缺点应该就是扩展性方面了，比如简繁转换，格式化代码啥的就没。</p>
-</div></article></div><nav class="pagination" role="navigation" aria-label="pagination"><div class="pagination-previous"><a href="/page/10/">上一页</a></div><div class="pagination-next"><a href="/page/12/">下一页</a></div><ul class="pagination-list is-hidden-mobile"><li><a class="pagination-link" href="/">1</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/10/">10</a></li><li><a class="pagination-link is-current" href="/page/11/">11</a></li><li><a class="pagination-link" href="/page/12/">12</a></li><li><span class="pagination-ellipsis">&hellip;</span></li><li><a class="pagination-link" href="/page/38/">38</a></li></ul></nav></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="https://www.gravatar.com/avatar/3581fa7535eb1989959533f1d264012c?s=128" alt="ted423"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">ted423</p><p class="is-size-6 is-block">到处乱跑</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">380</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">145</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ted423" target="_blank" rel="me noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="Github" href="https://github.com/ted423"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="me noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Anime/"><span class="level-start"><span class="level-item">Anime</span></span><span class="level-end"><span class="level-item tag">22</span></span></a></li><li><a class="level is-mobile" href="/categories/Browser/"><span class="level-start"><span class="level-item">Browser</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li><li><a class="level is-mobile" href="/categories/Code/"><span class="level-start"><span class="level-item">Code</span></span><span class="level-end"><span class="level-item tag">40</span></span></a></li><li><a class="level is-mobile" href="/categories/Comic/"><span class="level-start"><span class="level-item">Comic</span></span><span class="level-end"><span class="level-item tag">12</span></span></a></li><li><a class="level is-mobile" href="/categories/Document/"><span class="level-start"><span class="level-item">Document</span></span><span class="level-end"><span class="level-item tag">47</span></span></a></li><li><a class="level is-mobile" href="/categories/Game/"><span class="level-start"><span class="level-item">Game</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Issue/"><span class="level-start"><span class="level-item">Issue</span></span><span class="level-end"><span class="level-item tag">49</span></span></a></li><li><a class="level is-mobile" href="/categories/Music/"><span class="level-start"><span class="level-item">Music</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/categories/Optimization/"><span class="level-start"><span class="level-item">Optimization</span></span><span class="level-end"><span class="level-item tag">8</span></span></a></li><li><a class="level is-mobile" href="/categories/Picture-Photo-Image/"><span class="level-start"><span class="level-item">Picture&amp;Photo&amp;Image</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Software/"><span class="level-start"><span class="level-item">Software</span></span><span class="level-end"><span class="level-item tag">88</span></span></a></li><li><a class="level is-mobile" href="/categories/System/"><span class="level-start"><span class="level-item">System</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/Video/"><span class="level-start"><span class="level-item">Video</span></span><span class="level-end"><span class="level-item tag">13</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/1080i/"><span class="tag">1080i</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/1080p/"><span class="tag">1080p</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/3-clause-BSD-license/"><span class="tag">3-clause BSD license</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/480P/"><span class="tag">480P</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/720P/"><span class="tag">720P</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/720p/"><span class="tag">720p</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AGPLv3/"><span class="tag">AGPLv3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/AKB48/"><span class="tag">AKB48</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ARK/"><span class="tag">ARK</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Android/"><span class="tag">Android</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anime/"><span class="tag">Anime</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Anti-996-License/"><span class="tag">Anti 996 License</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Apache-License-2-0/"><span class="tag">Apache License 2.0</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Archived/"><span class="tag">Archived</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDMV/"><span class="tag">BDMV</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BDrip/"><span class="tag">BDrip</span><span class="tag">22</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Browser/"><span class="tag">Browser</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CMD/"><span class="tag">CMD</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/COS/"><span class="tag">COS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/CSS/"><span class="tag">CSS</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chrome/"><span class="tag">Chrome</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Chromium-Chrome/"><span class="tag">Chromium(Chrome)</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Code/"><span class="tag">Code</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Comic/"><span class="tag">Comic</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compare/"><span class="tag">Compare</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Compression/"><span class="tag">Compression</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Disney/"><span class="tag">Disney</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Document/"><span class="tag">Document</span><span class="tag">54</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Document-Texteditor/"><span class="tag">Document&amp;Texteditor</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Download-File-hosting-service/"><span class="tag">Download&amp;File hosting service</span><span class="tag">11</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Dropbox/"><span class="tag">Dropbox</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Encode/"><span class="tag">Encode</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Extension/"><span class="tag">Extension</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/FHD/"><span class="tag">FHD</span><span class="tag">38</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Firefox/"><span class="tag">Firefox</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Font/"><span class="tag">Font</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GM%E8%84%9A%E6%9C%AC/"><span class="tag">GM脚本</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv2/"><span class="tag">GPLv2</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv3/"><span class="tag">GPLv3</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GPLv3/"><span class="tag">GPLv3+</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game/"><span class="tag">Game</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Game-Tool/"><span class="tag">Game Tool</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Git/"><span class="tag">Git</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github/"><span class="tag">Github</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HD/"><span class="tag">HD</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HDR/"><span class="tag">HDR</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML5/"><span class="tag">HTML5</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hardware/"><span class="tag">Hardware</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hardware-Tool/"><span class="tag">Hardware Tool</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo-Theme/"><span class="tag">Hexo Theme</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Issue/"><span class="tag">Issue</span><span class="tag">51</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JP/"><span class="tag">JP</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Javascript/"><span class="tag">Javascript</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/K-ON/"><span class="tag">K-ON</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPL/"><span class="tag">LGPL</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPLv2-1/"><span class="tag">LGPLv2.1</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/LGPLv3/"><span class="tag">LGPLv3</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Linux/"><span class="tag">Linux</span><span class="tag">34</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Lossless/"><span class="tag">Lossless</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MIT/"><span class="tag">MIT</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MPL/"><span class="tag">MPL</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/MV/"><span class="tag">MV</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Maintenance/"><span class="tag">Maintenance</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Movie/"><span class="tag">Movie</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NEKO-WORKs-Sayori/"><span class="tag">NEKO WORKs(Sayori)</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Network/"><span class="tag">Network</span><span class="tag">9</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OS-X/"><span class="tag">OS X</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/OST/"><span class="tag">OST</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Office/"><span class="tag">Office</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Offline-Install/"><span class="tag">Offline Install</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Open-Source/"><span class="tag">Open Source</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Optimization/"><span class="tag">Optimization</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PIXAR/"><span class="tag">PIXAR</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PSP/"><span class="tag">PSP</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Personal-Free/"><span class="tag">Personal Free</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Picture-Photo-Image/"><span class="tag">Picture&amp;Photo&amp;Image</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Pool/"><span class="tag">Pool</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PowerShell/"><span class="tag">PowerShell</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Proxy/"><span class="tag">Proxy</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/R18/"><span class="tag">R18</span><span class="tag">36</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Regedit/"><span class="tag">Regedit</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Remote/"><span class="tag">Remote</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SEO/"><span class="tag">SEO</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SIL-Open-Font/"><span class="tag">SIL Open Font</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SVG/"><span class="tag">SVG</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Security-Software/"><span class="tag">Security Software</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Software/"><span class="tag">Software</span><span class="tag">58</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Steam/"><span class="tag">Steam</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/System/"><span class="tag">System</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Terminal/"><span class="tag">Terminal</span><span class="tag">18</span></a></div><div class="control"><a class="tags has-addons" href="/tags/To-LOVE%E3%82%8B/"><span class="tag">To LOVEる</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/UHD/"><span class="tag">UHD</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/US/"><span class="tag">US</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Ubuntu/"><span class="tag">Ubuntu</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/VM/"><span class="tag">VM</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Vocaloid/"><span class="tag">Vocaloid</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WWW/"><span class="tag">WWW</span><span class="tag">32</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows/"><span class="tag">Windows</span><span class="tag">144</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-10/"><span class="tag">Windows 10</span><span class="tag">19</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-AD/"><span class="tag">Windows AD</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-Server/"><span class="tag">Windows Server</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Windows-Update/"><span class="tag">Windows Update</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Youtube/"><span class="tag">Youtube</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/iOS/"><span class="tag">iOS</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/macOS/"><span class="tag">macOS</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/pixiv/"><span class="tag">pixiv</span><span class="tag">15</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E2%98%86/"><span class="tag">☆</span><span class="tag">10</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"><span class="tag">三次元</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/"><span class="tag">不再推荐</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%93%E8%BE%91/"><span class="tag">专辑</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"><span class="tag">个人观点</span><span class="tag">21</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%AA%E4%BA%BA%E8%AF%84%E4%BB%B7/"><span class="tag">个人评价</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%81%B6%E5%83%8F%E5%A4%A7%E5%B8%88-The-iDOLM-STER/"><span class="tag">偶像大师(The iDOLM@STER)</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"><span class="tag">分类汇总</span><span class="tag">14</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AF-Hatsune-Miku/"><span class="tag">初音ミク(Hatsune Miku)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%9A%E8%A1%8C-Autolyric/"><span class="tag">多行(Autolyric)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%A4%A7%E7%9C%BC%E4%BB%94-%E6%97%AD/"><span class="tag">大眼仔~旭</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/"><span class="tag">字符编码</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%89%E5%85%A8%E8%BD%AF%E4%BB%B6/"><span class="tag">安全软件</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%AE%8C%E7%BB%93/"><span class="tag">完结</span><span class="tag">13</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E4%BF%8A/"><span class="tag">小俊</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E8%AF%B4/"><span class="tag">小说</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A7%E5%85%8B%E5%8A%9B%E4%B8%8E%E9%A6%99%E5%AD%90%E5%85%B0/"><span class="tag">巧克力与香子兰</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"><span class="tag">建设中</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BC%80%E6%BA%90/"><span class="tag">开源</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%BE%85%E7%BB%B4%E6%8A%A4/"><span class="tag">待维护</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%81%B6%E4%B9%8B%E5%8D%8E/"><span class="tag">恶之华</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%88%98%E5%9C%BA%E7%9A%84%E5%A5%B3%E6%AD%A6%E7%A5%9E-Valkyria-Chronicles/"><span class="tag">战场的女武神[Valkyria Chronicles]</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%89%8B%E5%8A%9E/"><span class="tag">手办</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A0%E5%8F%8C%E7%B3%BB%E5%88%97/"><span class="tag">无双系列</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%A0%E6%8D%9F/"><span class="tag">无损</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%8C%E8%AF%8D-LRC/"><span class="tag">歌词(LRC)</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%AD%A3%E7%89%88/"><span class="tag">正版</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B1%89%E5%8C%96/"><span class="tag">汉化</span><span class="tag">30</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%83%88%E7%81%AB/"><span class="tag">烈火</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A0%B4%E8%A7%A3/"><span class="tag">破解</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"><span class="tag">破解&amp;激活</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/"><span class="tag">第三方修改|绿化</span><span class="tag">12</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy/"><span class="tag">组策略(Group Policy)</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%89%A6%E9%9A%8A%E3%81%93%E3%82%8C%E3%81%8F%E3%81%97%E3%82%87%E3%82%93-%E8%89%A6%E3%81%93%E3%82%8C/"><span class="tag">艦隊これくしょん -艦これ-</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/"><span class="tag">跨平台</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AC%E8%BD%BD/"><span class="tag">转载</span><span class="tag">17</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%87%E6%97%B6/"><span class="tag">过时</span><span class="tag">23</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BF%AA%E5%A3%AB%E5%B0%BC-Disney/"><span class="tag">迪士尼[Disney]</span><span class="tag">2</span></a></div></div></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-08-07T13:26:37.417Z">2023-08-07</time></p><p class="title"><a href="/Issue/Windows%20Update/80072EE2/">[问题处理]Windows 7 update 报 80072EE2</a></p><p class="categories"><a href="/categories/Issue/">Issue</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-15T15:46:25.499Z">2023-07-15</time></p><p class="title"><a href="/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/">Adobe Acrobat Reader DC Offline / 离线安装包</a></p><p class="categories"><a href="/categories/Software/">Software</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-15T15:43:07.968Z">2023-07-15</time></p><p class="title"><a href="/Software/Webmin/">[开源]Webmin - WebUI for Linux</a></p><p class="categories"><a href="/categories/Software/">Software</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-16T07:57:00.000Z">2023-06-16</time></p><p class="title"><a href="/etc/%E5%AE%BD%E5%AE%B9%E6%82%96%E8%AE%BA/">[转载]苏了了：宽容的悖论———当代西方宽容理论困境的批判性反思</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-06-06T16:12:13.159Z">2023-06-07</time></p><p class="title"><a href="/Anime/JP/Angel%20Beats!/">Angel Beats!(エンジェル ビーツ)</a></p><p class="categories"><a href="/categories/Anime/">Anime</a></p></div></article></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/avatar/avatar.jpg" alt="个人小站" height="28"></a><p class="is-size-7"><span>&copy; 2024 ted423</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
-            article: {
-                highlight: {
-                    clipboard: true,
-                    fold: 'unfolded'
-                }
-            }
-        };</script><script data-pjax src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script data-pjax src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
-      window.cookieconsent.initialise({
-        type: "info",
-        theme: "edgeless",
-        static: false,
-        position: "bottom-left",
-        content: {
-          message: "此网站使用Cookie来改善您的体验。",
-          dismiss: "知道了！",
-          allow: "允许使用Cookie",
-          deny: "拒绝",
-          link: "了解更多",
-          policy: "Cookie政策",
-          href: "https://www.cookiesandyou.com/",
-        },
-        palette: {
-          popup: {
-            background: "#edeff5",
-            text: "#838391"
-          },
-          button: {
-            background: "#4b81e8"
-          },
-        },
-      });
-    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
-            if (typeof $.fn.lightGallery === 'function') {
-                $('.article').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof $.fn.justifiedGallery === 'function') {
-                if ($('.justified-gallery > p > .gallery-item').length) {
-                    $('.justified-gallery > p > .gallery-item').unwrap();
-                }
-                $('.justified-gallery').justifiedGallery();
-            }
-        });</script><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script src="/js/pjax.js"></script><!--!--><!--!--><!--!--><script data-pjax src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
-            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
-        });</script></body></html>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/10/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/12/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">ted423</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
