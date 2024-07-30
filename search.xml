@@ -6930,18 +6930,20 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
   <entry>
     <title>NFS squash特性相关</title>
     <url>/Software/NFS%20Squash/</url>
-    <content><![CDATA[<p>写这篇文章是因为之前写的那个samba的想到了。顺带整理下。<br>这篇文章大部分都为猜测，未作有效以及查证相关检测。</p>
+    <content><![CDATA[<h1 id="胡言乱语"><a href="#胡言乱语" class="headerlink" title="胡言乱语"></a>胡言乱语</h1><p>写这篇文章是因为之前写的那个samba的想到了。顺带整理下。<br>这篇文章大部分都为猜测，未作有效以及查证相关检测。</p>
 <p>在阅读这篇文章之前你需要了解</p>
 <ol>
 <li>Linux是多用户操作系统</li>
 <li>用户以及组的保存都是基于id(uid gid)</li>
 <li>root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在<code>/etc/group</code>里可以看，但是不同的Linux版本可能会有不同</li>
 <li><a href="http://linux.vbird.org/linux_server/0430nis.php">NIS Server</a></li>
-<li><a href="http://linux.vbird.org/linux_enterprise/kerberos.php">Kerberos</a> (Attention，我知道这个是AD域主要的验证方式，具体见<a href="https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview</a>,<a href="https://ted423.github.io/Issue/Kerberos/">https://ted423.github.io/Issue/Kerberos/</a>。但我目前的理解是Kerberos并不在NIS中使用，这个条目可能甚至跟整篇文章无关，但是NFS可以使用Kerberos进行验证)</li>
+<li>LDAP Server: <a href="https://linux.vbird.org/linux_server/rocky9/0240ldap.php">https://linux.vbird.org/linux_server/rocky9/0240ldap.php</a></li>
+<li><a href="http://linux.vbird.org/linux_enterprise/kerberos.php">Kerberos</a> (Attention，我知道这个是AD域主要的验证方式，具体见<a href="https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview</a>, <a href="/Issue/Kerberos/">Kerberos</a>。但我目前的理解是Kerberos并不在NIS中使用，这个条目可能甚至跟整篇文章无关，但是NFS可以使用Kerberos进行验证)</li>
 </ol>
-<p>众所周知<br>no_root_squash、root_squash、all_squash<br>但是所有文章只说了root帐户是否被映射为nobody，root_squash是把root映射为nobody。那么问题来了，其他用户呢？<br>众所周知<br>Linux是多用户操作系统。所以，其他用户如字面意思，不会被映射为nobody。这也是我踩得一个坑(<br>这几个设置，其实是要配合NIS来看的。<br>在多台Linux中，NIS保证用户以及组ID一致，然后挂载NFS确保相关的权限问题。</p>
+<h1 id="squash"><a href="#squash" class="headerlink" title="squash"></a>squash</h1><p>众所周知<br>no_root_squash、root_squash、all_squash<br>但是所有文章只说了root帐户是否被映射为nobody，root_squash是把root映射为nobody。那么问题来了，其他用户呢？<br>众所周知<br>Linux是多用户操作系统。所以，其他用户如字面意思，不会被映射为nobody。这也是我踩得一个坑(<br>这几个设置，其实是要配合NIS来看的。<br>在多台Linux中，NIS保证用户以及组ID一致，然后挂载NFS确保相关的权限问题。</p>
 <p>如果你没有NIS Server，你就只要用all_squash就好了，别的你都不用仔细理解，除非你是root everything的用户。<br>否则你会发现你的NFS Server文件夹文件权限里出现一堆乱七八糟的ID。或者因为用户ID、组ID重复变成了奇怪的问题<br>不过这里有另一点要说明，在没有NIS的情况下。如果希望同时在server端和client端使用。可能会需要no_root_squash，否则客户端没有root权限的话，会没法修改文件权限。<br>(其实个人用Linux的话，我感觉你能用samba就用samba吧，哪怕是两台Linux。基于IP的验证其实还是适合企业用)</p>
-<p>扩展阅读(我还没看)<br><a href="https://en.wikipedia.org/wiki/NIS%2B">NIS+</a></p>
+<h1 id="扩展阅读-我还没看"><a href="#扩展阅读-我还没看" class="headerlink" title="扩展阅读(我还没看)"></a>扩展阅读(我还没看)</h1><p><a href="https://en.wikipedia.org/wiki/NIS%2B">NIS+</a></p>
+<h1 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h1><p>NFS 尽量不要挂载到根目录下的一级目录下，因为网络系统的不稳定性，这种挂载一旦不成功很可能导致根目录下的很多操作卡死（除非这台机子设计上就是强依赖 NFS 主机运作的）。其实还是比较推荐 autofs，这样也不会因为 nfs 主机没开机导致机子开不起来。</p>
 ]]></content>
       <categories>
         <category>Software</category>

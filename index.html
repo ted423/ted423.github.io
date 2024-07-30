@@ -185,6 +185,104 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/NFS%20Squash/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Software/NFS%20Squash/" class="post-title-link" itemprop="url">NFS squash特性相关</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-19 00:00:00" itemprop="dateCreated datePublished" datetime="2021-06-19T00:00:00+08:00">2021-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-07-30 09:39:13" itemprop="dateModified" datetime="2024-07-30T09:39:13+08:00">2024-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="胡言乱语"><a href="#胡言乱语" class="headerlink" title="胡言乱语"></a>胡言乱语</h1><p>写这篇文章是因为之前写的那个samba的想到了。顺带整理下。<br>这篇文章大部分都为猜测，未作有效以及查证相关检测。</p>
+<p>在阅读这篇文章之前你需要了解</p>
+<ol>
+<li>Linux是多用户操作系统</li>
+<li>用户以及组的保存都是基于id(uid gid)</li>
+<li>root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在<code>/etc/group</code>里可以看，但是不同的Linux版本可能会有不同</li>
+<li><a target="_blank" rel="noopener" href="http://linux.vbird.org/linux_server/0430nis.php">NIS Server</a></li>
+<li>LDAP Server: <a target="_blank" rel="noopener" href="https://linux.vbird.org/linux_server/rocky9/0240ldap.php">https://linux.vbird.org/linux_server/rocky9/0240ldap.php</a></li>
+<li><a target="_blank" rel="noopener" href="http://linux.vbird.org/linux_enterprise/kerberos.php">Kerberos</a> (Attention，我知道这个是AD域主要的验证方式，具体见<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview</a>, <a href="/Issue/Kerberos/">Kerberos</a>。但我目前的理解是Kerberos并不在NIS中使用，这个条目可能甚至跟整篇文章无关，但是NFS可以使用Kerberos进行验证)</li>
+</ol>
+<h1 id="squash"><a href="#squash" class="headerlink" title="squash"></a>squash</h1><p>众所周知<br>no_root_squash、root_squash、all_squash<br>但是所有文章只说了root帐户是否被映射为nobody，root_squash是把root映射为nobody。那么问题来了，其他用户呢？<br>众所周知<br>Linux是多用户操作系统。所以，其他用户如字面意思，不会被映射为nobody。这也是我踩得一个坑(<br>这几个设置，其实是要配合NIS来看的。<br>在多台Linux中，NIS保证用户以及组ID一致，然后挂载NFS确保相关的权限问题。</p>
+<p>如果你没有NIS Server，你就只要用all_squash就好了，别的你都不用仔细理解，除非你是root everything的用户。<br>否则你会发现你的NFS Server文件夹文件权限里出现一堆乱七八糟的ID。或者因为用户ID、组ID重复变成了奇怪的问题<br>不过这里有另一点要说明，在没有NIS的情况下。如果希望同时在server端和client端使用。可能会需要no_root_squash，否则客户端没有root权限的话，会没法修改文件权限。<br>(其实个人用Linux的话，我感觉你能用samba就用samba吧，哪怕是两台Linux。基于IP的验证其实还是适合企业用)</p>
+<h1 id="扩展阅读-我还没看"><a href="#扩展阅读-我还没看" class="headerlink" title="扩展阅读(我还没看)"></a>扩展阅读(我还没看)</h1><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/NIS%2B">NIS+</a></p>
+<h1 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h1><p>NFS 尽量不要挂载到根目录下的一级目录下，因为网络系统的不稳定性，这种挂载一旦不成功很可能导致根目录下的很多操作卡死（除非这台机子设计上就是强依赖 NFS 主机运作的）。其实还是比较推荐 autofs，这样也不会因为 nfs 主机没开机导致机子开不起来。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Picture/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1052,115 +1150,6 @@
 <hr>
 <p>QNAP 的 nfsv4 有问题，具体见 <a target="_blank" rel="noopener" href="https://forum.qnap.com/viewtopic.php?f=35&t=165385#p813893">https://forum.qnap.com/viewtopic.php?f=35&amp;t=165385#p813893</a></p>
 <p>不幸的在于，autofs似乎完全没办法，只能用nfsv3                –2024-07-15</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/NtpClient/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Issue/NtpClient/" class="post-title-link" itemprop="url">[问题处理]AD相关 时间提供程序 NtpClient 报错处理</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-01 00:00:00" itemprop="dateCreated datePublished" datetime="2020-08-01T00:00:00+08:00">2020-08-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-06-26 13:24:44" itemprop="dateModified" datetime="2024-06-26T13:24:44+08:00">2024-06-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Issue/" itemprop="url" rel="index"><span itemprop="name">Issue</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>报错信息如下<br>“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”</p>
-<p>看到了这篇文章<br><a target="_blank" rel="noopener" href="https://shiyousan.com/post/635774974180847748">https://shiyousan.com/post/635774974180847748</a></p>
-<p>有说明原因，但说的很含糊。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。<del>(但实际不是，<a target="_blank" rel="noopener" href="https://www.azurew.com/windows/windows-server-2016/3098.html">https://www.azurew.com/windows/windows-server-2016/3098.html</a>，也可以不这么设)</del><br>划掉，按个人理解，虽然没有显式的设置以及注明，但实际加域客户端默认都是找AD进行NTP，类似于潜规则。从之前的AD断电导致的客户端时间异常，以及一些相应的文章都表明如此。</p>
-<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server">https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server</a></p>
-<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings</a><br><del>还没折腾完，等会再更</del></p>
-<p>我手头的系统都没有类似设置项，查询的都是看注册表，除了个别设了个内网机子(没报错的那台)<br>别的都是time.windows.com,0x8或0x9，但是ping不通<br>理论上Server自己进行过NTP所以应该能用才是</p>
-<p>说下个人猜测，默认AD域会自动开启NTP Server，注册表里能看到enable，普通电脑默认不开NTP Server。很可能单纯的是网络问题，原先两个域控，我看提示有问题的那个域防火墙开了，但其他工作或者公共的防火墙是关的。<br>而另一台刚好相反，别的都开了，把域防火墙关了……………..</p>
-<hr>
-<p>发现360这个憨逼似乎会把win32tm相关服务禁用（再结合360浏览器的速度单位M&#x2F;s,可以确定360是垃圾软件）（这是另一次处理问题发现的） -2022-06-22</p>
-<hr>
-<p>问题得到了有效的解决<br>之前的是事件报告<br>“时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有效的时间数据。”</p>
-<p>然后基本每条后面跟最前面那种报错报告。<br>似乎成功不会进事件，也就是最后日志只能看到16号的。所以后面应该都成功了。<br>究其原因 123端口是udp的，也就是telnet不通，所以不大好判断。总之是防火墙的锅，所以理论按那个文章写的似乎没有任何意义。<br>也不知道前任是怎么做出这种奇葩配置的，两个防火墙刚好配的相反(域防火墙应该专门针对域里的机子，然后把公用，工作关了就很emmmm)</p>
-<hr>
-<p>又仔细看了下，问题机子还有其他问题，在我来之前已经带病坚持了半年。然后我来了一年，就只动过上面的DHCP</p>
-<p>先记一下，之后可能会用到的名词<br>PDC Emulator: The DC with the Primary Domain Controller Emulator role is the authoritative DC in the domain. The PDC Emulator responds to authentication requests, changes passwords, and manages Group Policy Objects. And the PDC Emulator tells everyone else what time it is! It’s good to be the PDC.</p>
-<p><a target="_blank" rel="noopener" href="https://www.renanrodrigues.com/post/how-to-configure-ntp-server-in-active-directory-step-by-step">https://www.renanrodrigues.com/post/how-to-configure-ntp-server-in-active-directory-step-by-step</a></p>
-<hr>
-<p><time>2020-08-17 17:25</time><br>又研究了一下，13天没报错，所以其实是成功了，中间出问题,连续疯狂报错我也没太搞懂。</p>
-<p>简单的说，这台问题服务器，实际是配了NTP Server，但是域防火墙一直没关。<br>理论上域内的NTP Server是自动查询，有啥用啥（没做验证），理论client端不需要做任何配置，可以在client端用<code>w32tm /query /status</code>验证，未加域的机子，不会启用用w32tm，”The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). “说明w32tm是AD域里专用的。<br>w32tm配置主要还是通过命令行。<br>NTP Server配置可以见<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters</code><br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/configure-authoritative-time-server">https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/configure-authoritative-time-server</a></p>
-<p>如问题机的type就是NTP，新加的AD是NT5DS(Most domain-joined computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. An exception to this is the domain controller, which functions as the primary domain controller (PDC) emulator operations master for the root forest domain. The PDC emulator operations master in turn is usually configured to synchronize time with an external time source.)<br>具体type的意思文档里都有</p>
-<hr>
-<p><time>2022-06-22 11:16</time><br>NTP Server 也是用 w32tm 这个命令配置，可以自己看文档(有误)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Windows Server 2016 已改进时间同步算法以与 RFC 规范保持一致。 因此，如果要将本地时间客户端设置为指向多个对等节点，我们建议你准备三个或更多不同的时间服务器。</span><br></pre></td></tr></table></figure>
-
-<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">https://docs.microsoft.com/zh-cn/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings</a></p>
 
       
     </div>

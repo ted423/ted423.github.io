@@ -185,6 +185,93 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Optimization/%E5%85%B3%E9%97%AD%E4%BC%91%E7%9C%A0/" class="post-title-link" itemprop="url">[优化]Windows 关闭休眠功能</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-19 10:46:48" itemprop="dateCreated datePublished" datetime="2020-06-19T10:46:48+08:00">2020-06-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-08-18 14:48:00" itemprop="dateModified" datetime="2021-08-18T14:48:00+08:00">2021-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Optimization/" itemprop="url" rel="index"><span itemprop="name">Optimization</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>hiberfil.sys在C盘下占了3G多(这个文件大小跟内存大小有关)，其实这玩意是休眠产生的，我平常不用，所以决定关闭它。<br>通常来说，笔记本会非常需要休眠来省电，不过关机会更好就是了</p>
+<h2 id="以管理员权限运行命令提示符-cmd-，执行以下命令：如需启用，则执行："><a href="#以管理员权限运行命令提示符-cmd-，执行以下命令：如需启用，则执行：" class="headerlink" title="以管理员权限运行命令提示符(cmd)，执行以下命令：如需启用，则执行："></a>以管理员权限运行命令提示符(cmd)，执行以下命令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powercfg -h off</span><br></pre></td></tr></table></figure><br>如需启用，则执行：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powercfg -h on</span><br></pre></td></tr></table></figure></h2><p>2021-08-06<br>本来想放个文章说明下休眠跟睡眠的，但看最开头是知乎，对这种社区似的知识分享，有些人又是冲着流量去的，质量可能还行，但是远不如Stack Overflow这种。<br>比较开心的是看见了微软提供了MVP写的东西，但是……..<br>开篇一堆废话就让我心头一凉，再然后我看到了待机….<br>待机！<br>叉掉吧，Vista就干掉的东西<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%BE%85%E6%9C%BA">https://zh.wikipedia.org/wiki/待机</a><br>中文社区MVP真是远不如英文社区，搜索问题的时候就是，英文社区往往跳出几个MVP告诉你怎么改注册表，啪的一下就解决一个疑难杂症。<br>自己写写自己的理解吧。</p>
+<p>睡眠东西保存在内存中，一旦彻底断电电脑状态会丢失，硬盘因为彻底关了，断电应该不会伤硬盘(以前有很多笔记本合上盖子进睡眠之后，再开机可能因为硬件唤醒之类的会起不来，当时似乎都是更驱动或者换主板解决的)<br>休眠是把内存状态那些塞到硬盘里，如果你是固态的话，就很快，但机械的话，可能会要很久，无论进入休眠和退出休眠都是。好处是彻底的断电，理论和关机一样。不过在大内存的机子就比较惨了，因为是完全保存内存的状态，再加上虚拟内存一般会设的跟内存差不多大。(32G内存机子系统盘没空间也是挺2333的)。<br>另外还有个混合式睡眠，似乎需要开休眠才看得到。不过感觉Win10可能把这个干掉了？另外还有Fast Startup的东西。<br>有需求的自己查下吧，我个人猜是先进睡眠，然后把内存的东西再写到硬盘上。<br>超大内存(200+G)的服务器装Win10会出问题，休眠总会自己打开，然后把C盘用光，虽然hiberfil.sys只有90G。但我也不确定这是不是偶然的<br>补充一点，Sever默认是没休眠的。甚至默认虚拟内存都小</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Anime/Disney/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -965,98 +1052,6 @@
 .post_body>p
 {text-indent:2em}
 </style>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Document&Texteditor/notepad3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Software/Document&Texteditor/notepad3/" class="post-title-link" itemprop="url">[文本编辑器]Notepad3</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-07-08 00:06:53" itemprop="dateCreated datePublished" datetime="2021-07-08T00:06:53+08:00">2021-07-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-07-02 10:10:51" itemprop="dateModified" datetime="2021-07-02T10:10:51+08:00">2021-07-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <ul>
-<li><a target="_blank" rel="noopener" href="https://www.rizonesoft.com/downloads/notepad3/">https://www.rizonesoft.com/downloads/notepad3/</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/rizonesoft/Notepad3">https://github.com/rizonesoft/Notepad3</a></li>
-</ul>
-<p>先说开源协议我没看懂，并没写开源协议的名字，感觉有点像MIT？没细看规则。反正是Copyright类的。<br>对了下，是3-clause BSD的License</p>
-<p>曾经有个notepad2，最大的作用是完全替换微软的notepad，使用的是映像劫持的方式。所以即便装了别的文本编辑器，我也还是喜欢再装一个notepad2以便彻底干死微软的。<br>可惜弃更了。</p>
-<p>所以这个notepad3也能做到，并且开源。就是不知道会不会有Notepad4。</p>
-<p>缺点应该就是扩展性方面了，比如简繁转换，格式化代码啥的就没。</p>
-
       
     </div>
 
