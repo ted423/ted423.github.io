@@ -185,6 +185,102 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/etc/NoQNAP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/etc/NoQNAP/" class="post-title-link" itemprop="url">请勿购买QNAP</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-11-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-11-24T00:00:00+08:00">2021-11-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-07-15 11:21:40" itemprop="dateModified" datetime="2024-07-15T11:21:40+08:00">2024-07-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>本文属于用啥黑啥系列。<br>在专用NAS中，如果想用那些某类玩家都用的软件，其实可选择性不多。<br>像什么西数，铁威马，别人跟你说某软件可能用不了，估计你的心就凉了大半。<br>然后就会了解到群晖的贵。</p>
+<p>此时留给你的选择大概不多，QNAP这性价比高，普及率还非常好的NAS大概这时候就会走入视野。</p>
+<p>那么问题来了，硬件性能好就一定好用么？<br>我司的一个十年前的群晖，因为CPU是x86，docker和套件找不到对应的(网上一堆喊着x86的实际是x86_64)，在其他人的帮助下，我最终在这台破群晖上成功的跑起来了QB的docker，虽然还有点小问题，但是QNAP呢？跑起来了，登不进去。</p>
+<p>目前我用QNAP遇到的问题有</p>
+<ol>
+<li>原系统DNS本机架了个dnsmasq，配置啥的都是锁死的，重启自动还原，然后不定时就对自己进行DNS投毒，给一些域名解析返回10.0.0.1。扩展阅读: <a target="_blank" rel="noopener" href="https://www.google.com/search?q=dnsmasq+%E8%BF%94%E5%9B%9E+10.0.0.1">https://www.google.com/search?q=dnsmasq+返回+10.0.0.1</a> （用了大概一年，QNAP才更新系统修正这个问题）</li>
+<li>想改的话，web里配置没用，只能进ssh改(但是重启会还原，所以每次都要改)，但是改了之后就天天告诉你硬盘分析上传失败(虽然我也不在乎这个)</li>
+<li>qb、tr有了(de要钱，rt还是个pro版本)</li>
+<li>docker折腾了，进不去，各种界面不如群晖那么方便。</li>
+<li>最后逼得我上了虚拟机，结果自带的vnc因为安全相关，不允许访问剪贴板。自带支持的spice也是同样。</li>
+<li>Nomachine相关问题: <a href="https://ted423.github.io/Software/Remote/NoMachine">https://ted423.github.io/Software/Remote/NoMachine</a>，目测QNAP虚拟机的VNC画面可能创建的比较特殊</li>
+<li>很多东西都是重启会还原</li>
+<li>nfs server再检查完硬盘后需要ssh进去重启服务，不然会挂载不上<br>简要的问题在于，你买了QNAP，系统就只能用QNAP的，当你发现你不喜欢这个系统的时候。就很尴尬了。<br>在我的使用环境中，经常要ssh进去，比如结束进程，或者mount。但是QNAP又是有自己一套体系的，你没法确保他的命令和别的完全是一致的，效果也是一致的。比如docker，无形中增加了很多学习难度。</li>
+<li>迁移共享文件夹，只给你ln过去，东西还在原来的盘上。什么傻逼系统</li>
+</ol>
+<p>东西不是有就行了的，有些甚至你不知道他到底实现到什么程度。</p>
+<p>目前大部分软件都是第三方开发的Qoolbox(qb升级换位置，然后变成了两个软件)，他要是哪天不干了就很麻烦。相对群晖那边会自己编译弄套件的似乎多些。</p>
+<p>当然，QNAP 4盘位的空间利用率还是不错的，你弄个DIY的，电源就占很大位置。<br>可能还有别的解决方案，不过我只负责吐槽</p>
+<hr>
+<p>QNAP 的 nfsv4 有问题，具体见 <a target="_blank" rel="noopener" href="https://forum.qnap.com/viewtopic.php?f=35&t=165385#p813893">https://forum.qnap.com/viewtopic.php?f=35&amp;t=165385#p813893</a></p>
+<p>不幸的在于，autofs似乎完全没办法，只能用nfsv3                –2024-07-15</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/NtpClient/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -411,7 +507,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-08-07 21:26:37 / 修改时间：21:28:20" itemprop="dateCreated datePublished" datetime="2023-08-07T21:26:37+08:00">2023-08-07</time>
+      <time title="创建时间：2023-08-07 21:28:23 / 修改时间：21:28:20" itemprop="dateCreated datePublished" datetime="2023-08-07T21:28:23+08:00">2023-08-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -708,7 +804,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-07-15 23:43:07" itemprop="dateCreated datePublished" datetime="2023-07-15T23:43:07+08:00">2023-07-15</time>
+      <time title="创建时间：2023-06-06 23:52:53" itemprop="dateCreated datePublished" datetime="2023-06-06T23:52:53+08:00">2023-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -899,15 +995,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2023-07-15 23:46:25" itemprop="dateCreated datePublished" datetime="2023-07-15T23:46:25+08:00">2023-07-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-22 17:46:11" itemprop="dateModified" datetime="2023-06-22T17:46:11+08:00">2023-06-22</time>
+      <time title="创建时间：2023-06-22 17:43:41 / 修改时间：17:46:11" itemprop="dateCreated datePublished" datetime="2023-06-22T17:43:41+08:00">2023-06-22</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1034,100 +1124,6 @@
 <p>前面讨论的在西方学界颇具影响的几种解决方案， 实际上都试图通过为宽容划定正当性底线来判定是否宽容不宽容者， 因此就其努力的方向本身而言是没有什么问题的。但是， 在如何确定这条正当性底线的内容， 特别是如何兼顾宽容的正当性底线与社会的安全稳定这个关键问题上， 西方学者似乎并没有提供令人满意的方案。他们要么出于对后者的考虑回避了正当性底线的问题， 要么在宽容的正当性底线上模棱两可、自相矛盾。因此， 破解宽容悖论的突破口可以说在于找到一条逻辑上能够贯彻到底的正当性底线， 而这条底线在维系自身的时候又能够充分考虑到公共安全和社会稳定的需要。宽容并非西方自由主义传统独有的主题。因此， 如何从其他思想传统借鉴有启发意义的积极资源，对于我们解决宽容悖论将大有裨益。比如， 中国传统哲学就包含了有关宽容的丰富思想资源。众所周知， 儒家早在两千多年前就将 “和而不同”视为优于 “同而不和” 的理念， 深刻认识到了在存在 “不同”的情形下维系 “和谐”的可欲性与可行性。正如一些论者指出的那样， 儒家将 “和而不同” 作为一个普遍原则提出来， 这种 “尚和去同”的价值取向对中国文化的包容性具有很大影响。</p>
 <p>除了儒家之外， 墨家学说同样包含了关于宽容的重要观念， 甚至还在某种意义上提出了解决宽容悖论的一种重要思路。墨家承认 “千人千义” 的事实， 也就是承认人们在何为正义的规范性立场上具有各种各样的差异; 但与此同时， 墨家又强调指出所有人都认可 “亏害人” 是 “不义” 的， 因而 “不应当亏害他人”构成了不可违背的 “公义”底线， 也就是所有人都会接受的正当性规范， 从而构成了解决 “千人千义”带来的各种争端冲突的共识基础。在这种视域下， 作为 “公义” 实质内涵的 “不应当亏害他人”其实就是宽容的正当性底线， 是判断任何行为是否应当被宽容的根本依据。任何亏害了他人的行为———比如侵夺他人财物、伤害他人肢体和生命等， 由于违背了公义底线， 就是不应当被宽容的; 与之相应， 没有亏害他人的行为则是应当被宽容的。</p>
 <p>与前面分析的西方理论相比， 墨家方案的优势在于: 第一， 墨家提出的宽容底线清晰明确， 不存在双重标准， 因而也不会陷入逻辑困境。第二， “不应当亏害他人” 作为宽容的底线， 超越了自由或非自由主义原则之争， 更能够充当为所有人都共同接受的规范性标准。第三， “不应当亏害他人” 的墨家底线以是否实际作出了亏害他人的行为 ( 而非观念) 作为是否施用宽容的标准， 因此不会将不宽容的信念与行为不加区分地混为一谈。第四， “不应当亏害他人”的标准从内容上直接明确禁止任何亏害他人的行为， 结合了对于公共安全的考虑， 而且由于其广泛的共识性基础能够被普遍接受， 从而能够更好地实现确保公共安全的要求。从这个角度看， 墨家设定的宽容底线兼顾了正当性的要求和公共安全的需要， 克服了西方理论的诸多困境， 展现了逻辑上的清晰性和连贯性， 为我们提供了解决宽容悖论的重要启示。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Remote/NoMachine/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Software/Remote/NoMachine/" class="post-title-link" itemprop="url">[Remote]NoMachine 远程工具</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-07-01 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-01T00:00:00+08:00">2021-07-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-06-16 16:23:35" itemprop="dateModified" datetime="2023-06-16T16:23:35+08:00">2023-06-16</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://www.nomachine.com/">https://www.nomachine.com/</a></p>
-<h1 id="推荐理由"><a href="#推荐理由" class="headerlink" title="推荐理由"></a>推荐理由</h1><p>免费(ssh协议连接收费)，支持Linux<br>其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。<br>最起码你不要纠结各种桌面环境之间的兼容性问题。</p>
-<p>不过呢，问题还是有的。<br>默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）<br>然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。(后来不知道咋就好了)</p>
-<p>在低速率网络下要考虑到切到VP8或者MJGEP？这种情况下画面会很烂。<br>不过RDP虽然画面好点，但是会失联。要重连才行</p>
-<p>开源的使用NX协议的叫x2go</p>
-<h1 id="Ctrl-alt-del"><a href="#Ctrl-alt-del" class="headerlink" title="Ctrl+alt+del"></a>Ctrl+alt+del</h1><p>使用Ctrl+alt+end是在Nomachine远程里，但是rdp里Nomachine就会出问题，完全没法使用Ctrl+alt+del，因为会Ctrl+alt+end会被rdp接收掉（这点还是RealVNC做的好）</p>
-<h1 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h1><p><del>Ubuntu下，手动启动和服务自动启动展示的画面是不一样的。手动启动连接会是主画面，自动启动会是新建一个桌面出来。并且会登录卡死(这个有可能是混合Bug)(可能是QNAP虚拟机导致的混合BUG)</del><br>同样是Ubuntu下，xubuntu以及kubuntu都有，普通台式机(服务器反而正常)，在不接显示器的情况下，速度飞快，拔掉显示器，窗口拖动非常卡。同环境直接x11 Forward反而效果很好。但x11会黑非常久(不用x2go的情况下)<br>另外还有开机不接屏，或者长期不接屏的情况下，接显示器上去不亮的情况（<del>虽然这个肯定不是Nomachine或者NX的锅，应该是Linux的锅</del> (后续了解到是显卡的问题，服务器一般没问题，其他机器长期没物理输入，显卡会进入低功耗模式。我尝试用了显卡欺骗器，但似乎不太好用 )</p>
-<p>BTW，网上一堆把Teamviewer，Anydesk，向日葵这类内网穿透式的软件不加详细区分就放在一起讲的，甚至还把这类内网穿透当成优点，不知道是不是因为智商不够。<br>BTW2，在同样环境下，Anydesk效果不如向日葵，不知道是不是因为服务器在国外</p>
-<hr>
-<p><time>2021-09-22</time>增加快捷键 Ctrl+alt+del 相关说明</p>
 
       
     </div>

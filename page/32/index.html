@@ -185,6 +185,159 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/ol-prettify/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Code/WWW/ol-prettify/" class="post-title-link" itemprop="url">[转载]本文介绍如何使用CSS 3美化有序列表的计数器样式</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2015-11-01 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-01T00:00:00+08:00">2015-11-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>来源<br><a target="_blank" rel="noopener" href="http://www.html5online.com.cn/series/css3/css313.html">http://www.html5online.com.cn/series/css3/css313.html</a></p>
+<p>example</p>
+<ol>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>3.1</li>
+<li>3.2</li>
+<li>4</li>
+</ol>
+<p>个人对代码有调整</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">ol</span>&#123;</span><br><span class="line">	<span class="attribute">counter-reset</span>: li; <span class="comment">/* 初始化计数器 */</span></span><br><span class="line">	<span class="attribute">list-style</span>: none; <span class="comment">/* 移除浏览器默认编号 */</span></span><br><span class="line">	<span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">0</span> <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,.<span class="number">5</span>);</span><br><span class="line">	<span class="attribute">padding-bottom</span>: <span class="number">10px</span>;</span><br><span class="line">	<span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ol</span> <span class="selector-tag">ol</span>&#123;</span><br><span class="line">	<span class="attribute">padding-bottom</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ol</span> <span class="selector-tag">ol</span>&gt;<span class="selector-tag">li</span><span class="selector-pseudo">:first-of-type</span>&gt;<span class="selector-tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">margin-top</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ol</span> <span class="selector-tag">ol</span>&gt;<span class="selector-tag">li</span><span class="selector-pseudo">:last-of-type</span>&gt;<span class="selector-tag">p</span>&#123;</span><br><span class="line">	<span class="attribute">margin-bottom</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ol</span>&gt;<span class="selector-tag">li</span>&gt;<span class="selector-tag">p</span><span class="selector-pseudo">:first-of-type</span>&#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">padding</span>: .<span class="number">2em</span> <span class="number">1.3em</span>;</span><br><span class="line">	*<span class="attribute">padding</span>: .<span class="number">4em</span>;</span><br><span class="line">	<span class="attribute">min-height</span>: <span class="number">31px</span>;</span><br><span class="line">	<span class="attribute">margin</span>: .<span class="number">5em</span> <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#444</span>;</span><br><span class="line">	<span class="attribute">background</span>:<span class="number">#eee</span>;</span><br><span class="line">	<span class="attribute">text-decoration</span>: none;</span><br><span class="line">	<span class="attribute">border-radius</span>: .<span class="number">3em</span>;</span><br><span class="line">	<span class="attribute">transition</span>: all .<span class="number">3s</span> ease-out;	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ol</span>&gt;<span class="selector-tag">li</span>&gt;<span class="selector-tag">p</span><span class="selector-pseudo">:first-of-type</span><span class="selector-pseudo">:hover</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">	<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">360deg</span>);	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">ol</span>&gt;<span class="selector-tag">li</span>&gt;<span class="selector-tag">p</span><span class="selector-pseudo">:first-of-type</span><span class="selector-pseudo">:before</span>&#123;</span><br><span class="line">	<span class="attribute">content</span>: <span class="built_in">counter</span>(li);</span><br><span class="line">	<span class="attribute">counter-increment</span>: li;</span><br><span class="line">	<span class="attribute">position</span>: absolute;	</span><br><span class="line">	<span class="attribute">left</span>: -<span class="number">1.3em</span>;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">	<span class="attribute">margin-top</span>: -<span class="number">1.3em</span>;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#87ceeb</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="attribute">border</span>: .<span class="number">3em</span> solid <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">font-weight</span>: bold;</span><br><span class="line">	<span class="attribute">border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">	<span class="attribute">transition</span>: all .<span class="number">3s</span> ease-out;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在本博客中，用了以下脚本对原生的ol列表代码进行修正</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">lis=<span class="variable language_">document</span>.<span class="title function_">querySelectorAll</span>(<span class="string">&#x27;ol&gt;li&#x27;</span>);</span><br><span class="line">[].<span class="property">forEach</span>.<span class="title function_">call</span>(lis,<span class="keyword">function</span>(<span class="params">li</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(li.<span class="property">firstChild</span>.<span class="property">nodeName</span>==<span class="string">&quot;#text&quot;</span>||<span class="title function_">getComputedStyle</span>(li.<span class="property">firstChild</span>).<span class="property">display</span>==<span class="string">&quot;inline&quot;</span>)&#123;</span><br><span class="line">		p=<span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;p&#x27;</span>);</span><br><span class="line">		<span class="keyword">if</span>(li.<span class="property">firstChild</span>.<span class="property">nodeName</span>==<span class="string">&quot;#text&quot;</span>)p.<span class="property">innerHTML</span>=li.<span class="property">firstChild</span>.<span class="property">textContent</span>;</span><br><span class="line">		<span class="keyword">else</span> p.<span class="property">innerHTML</span>=li.<span class="property">firstChild</span>.<span class="property">outerHTML</span>;</span><br><span class="line">		$(li.<span class="property">childNodes</span>[<span class="number">0</span>]).<span class="title function_">remove</span>();</span><br><span class="line">		<span class="keyword">if</span>(li.<span class="property">firstChild</span>)&#123;</span><br><span class="line">			li.<span class="title function_">insertBefore</span>(p,li.<span class="property">firstChild</span>)</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> li.<span class="title function_">appendChild</span>(p);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (li.<span class="property">firstChild</span>.<span class="property">nodeName</span>!=<span class="string">&quot;P&quot;</span>&amp;&amp;<span class="title function_">getComputedStyle</span>(li.<span class="property">firstChild</span>).<span class="property">display</span>==<span class="string">&quot;block&quot;</span>)&#123;</span><br><span class="line">		p=<span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;p&#x27;</span>);</span><br><span class="line">		<span class="keyword">if</span>(li.<span class="property">firstChild</span>)&#123;li.<span class="title function_">insertBefore</span>(p,li.<span class="property">firstChild</span>)&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+<style>
+ol{
+    counter-reset: li; /* 初始化计数器 */
+    list-style: none; /* 移除浏览器默认编号 */
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+ol ol{
+    padding-bottom: 0px;
+}
+
+ol ol>li:first-of-type>p{
+    margin-top: 0px !important;
+}
+
+ol ol>li:last-of-type>p{
+    margin-bottom: 0px !important;
+}
+
+ol>li>p:first-of-type{
+    position: relative;
+    padding: .2em 1.3em;
+    *padding: .4em;
+    min-height: 31px;
+    margin: .5em 0;
+    color: #444;
+    background:#eee;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;	
+}
+
+ol>li>p:first-of-type:hover:before{
+    transform: rotate(360deg);	
+}
+
+ol>li>p:first-of-type:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;	
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #87ceeb;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+</style>
+
+<hr>
+<p>老博客有用，但是新博客因为li里不带p所以大概有点问题，后续有空改吧 -2021-0821<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/dragonir/p/14475600.html">https://www.cnblogs.com/dragonir/p/14475600.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/%E7%AC%A6%E5%8F%B7%E8%BD%AC%E4%B9%89/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -214,7 +367,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-08-05 19:32:08" itemprop="dateCreated datePublished" datetime="2021-08-05T19:32:08+08:00">2021-08-05</time>
+      <time title="创建时间：2023-06-07 00:10:26" itemprop="dateCreated datePublished" datetime="2023-06-07T00:10:26+08:00">2023-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -903,116 +1056,6 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Network/IP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Document/Network/IP/" class="post-title-link" itemprop="url">[转载]奇葩的IP地址</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2015-11-01 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-01T00:00:00+08:00">2015-11-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Document/" itemprop="url" rel="index"><span itemprop="name">Document</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>原文:<a target="_blank" rel="noopener" href="http://blog.caoyue.me/post/ip-address-as-octal">http://blog.caoyue.me/post/ip-address-as-octal</a><br>作者:且听疯吟<br>一个奇怪的地址，形如 <code>23.244.200.000000000354</code>，而且这个地址居然还是可以访问的。很显然这不是域名，ping 一下，返回地址来自于 <code>23.244.200.236</code>，可以看出 <code>000000000354</code> 是 <code>236</code> 的八进制表示形式。</p>
-<h3 id="混合进制"><a href="#混合进制" class="headerlink" title="混合进制"></a>混合进制</h3><p>原来 IP 地址居然可以混合进制来显示……前导的 0 的数字会被当作八进制来处理。而且可以同时使用不同进制：包括十六进制、八进制和十进制。<br>比如 <code>http://0x17.244.0xc8.00000354</code> 这样奇葩的地址也是可以访问的……</p>
-<h3 id="DWORD-形式的-IP"><a href="#DWORD-形式的-IP" class="headerlink" title="DWORD 形式的 IP"></a>DWORD 形式的 IP</h3><p>还有更奇葩的，整数型的 IP —— 比如这个：<code>http://401918188</code> ，同样可以访问。<br>转换过程是将 <code>23.244.200.236</code> 转换为二进制形式，不足8为的数字用 0 补足： <code>00010111111101001100100011101100</code>，然后将这一串二进制数字转换为整数，即可得到整数型的 IP 地址。<br>当然，如果将这个整数换成其他进制也是可以的，比如：<br><code>http://02775144354</code> 和 <code>http://0x17f4c8ec</code></p>
-<h3 id="可省略的-0"><a href="#可省略的-0" class="headerlink" title="可省略的 0"></a>可省略的 0</h3><p>当然，奇葩还没有结束。比如这样的 IP 地址 <code>192.168.1</code> 也是可以访问的……因为某部分为 0 则可以省略。OK，那我们怎么知道省略的是哪一部分呢？别急，「聪明」的标准的制定者们早就想到这一点了，规则如下：</p>
-<table>
-<thead>
-<tr>
-<th>abbr</th>
-<th>IP</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>A</td>
-<td>0.0.0.A</td>
-</tr>
-<tr>
-<td>A.B</td>
-<td>A.0.0.B</td>
-</tr>
-<tr>
-<td>A.B.C</td>
-<td>A.B.0.C</td>
-</tr>
-<tr>
-<td>A.B.C.D</td>
-<td>A.B.C.D</td>
-</tr>
-</tbody></table>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>原 IP <code>127.0.0.1</code> 按上面的方法改变下形式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">http://0x7f.0.000000000001</span><br><span class="line"> http://2130706433</span><br><span class="line"> http://017700000001</span><br><span class="line"> http://0x7f000001</span><br><span class="line"> http://127.1</span><br><span class="line"> ……</span><br></pre></td></tr></table></figure>
-
-<p>这个特性在不同的平台上是由 socket 库实现的。在 Linux 上是 <a target="_blank" rel="noopener" href="http://linux.die.net/man/3/inet_aton">inet_aton</a> ，在 Windows 上是 <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms738563">inet_addr</a> 。<br>但是相关的标准文档我还没有找到。<code>rfc 2396</code> 和 <code>rfc 1738</code> 也都是语焉不详。</p>
-<p>btw，虽然主流浏览器和很多其他软件支持这种表示方法。但在某些地方可能导致问题，一般都不推荐这种做法，比如 <a target="_blank" rel="noopener" href="http://support.apple.com/kb/TA22205">Mac OS X: Do Not Use Leading Zeros in IP Address</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/%E6%97%A0%E7%AD%BE%E5%90%8DUTF8%E5%92%8C%E5%B8%A6%E7%AD%BE%E5%90%8DUTF8%E6%A0%BC%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1042,7 +1085,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-08-10 20:32:50" itemprop="dateCreated datePublished" datetime="2021-08-10T20:32:50+08:00">2021-08-10</time>
+      <time title="创建时间：2023-06-07 00:02:07" itemprop="dateCreated datePublished" datetime="2023-06-07T00:02:07+08:00">2023-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1133,7 +1176,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-08-18 20:19:24" itemprop="dateCreated datePublished" datetime="2021-08-18T20:19:24+08:00">2021-08-18</time>
+      <time title="创建时间：2023-06-07 00:12:14" itemprop="dateCreated datePublished" datetime="2023-06-07T00:12:14+08:00">2023-06-07</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1626,7 +1669,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-09-24 19:47:30" itemprop="dateCreated datePublished" datetime="2021-09-24T19:47:30+08:00">2021-09-24</time>
+      <time title="创建时间：2023-06-06 23:54:10" itemprop="dateCreated datePublished" datetime="2023-06-06T23:54:10+08:00">2023-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -1788,7 +1831,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-09-24 19:47:30" itemprop="dateCreated datePublished" datetime="2021-09-24T19:47:30+08:00">2021-09-24</time>
+      <time title="创建时间：2023-06-06 23:54:28" itemprop="dateCreated datePublished" datetime="2023-06-06T23:54:28+08:00">2023-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">

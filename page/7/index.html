@@ -185,6 +185,95 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Linux/netplan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Linux/netplan/" class="post-title-link" itemprop="url">netplan配置网络</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-19 14:52:00 / 修改时间：15:08:17" itemprop="dateCreated datePublished" datetime="2022-04-19T14:52:00+08:00">2022-04-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Document/" itemprop="url" rel="index"><span itemprop="name">Document</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Ubuntu 17 开始使用netplan配置网络，因此很多其它系统的教程都不再适用(&#x2F;etc&#x2F;network&#x2F;interfaces 下的配置已经不再起作用)</p>
+<p><a target="_blank" rel="noopener" href="https://netplan.io/">https://netplan.io/</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"> cat /etc/netplan/01-network-manager-all.yaml</span><br><span class="line"># Let NetworkManager manage all devices on this system</span><br><span class="line">network:</span><br><span class="line">  version: 2</span><br><span class="line">  renderer: NetworkManager</span><br><span class="line">  ethernets:</span><br><span class="line">    enp5s0f0:</span><br><span class="line">      dhcp4: no</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.0.4/24</span><br><span class="line">    enp6s0f0:</span><br><span class="line">      dhcp4: yes</span><br><span class="line">      dhcp4-overrides:</span><br><span class="line">          route-metric: 1</span><br><span class="line">    enp6s0f1:</span><br><span class="line">      dhcp4: no</span><br><span class="line">      addresses:</span><br><span class="line">        - 192.168.1.80/24</span><br><span class="line">      gateway4: 192.168.1.254</span><br></pre></td></tr></table></figure>
+
+<p>The top-level node in a netplan configuration file is a network: mapping<br>that contains version: 2 (the YAML currently being used by curtin, MaaS,<br>etc. is version 1), and then device definitions grouped by their type, such as<br>ethernets:, modems:, wifis:, or bridges:. These are the types that our<br>renderer can understand and are supported by our backends.</p>
+<p>Each type block contains device definitions as a map where the keys (called<br>“configuration IDs”) are defined as below.</p>
+<p>老实说，version干嘛的我没看懂，反正都写version: 2就完事了</p>
+<p>测试</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan try</span><br></pre></td></tr></table></figure>
+
+<p>应用(其实上面那个命令用完之后按Enter也就应用了)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netplan apply</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/Terminal/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -337,100 +426,6 @@
 </ol>
 <h1 id="Rocky"><a href="#Rocky" class="headerlink" title="Rocky"></a>Rocky</h1><p>版本8.4 Dell R710找不到硬盘。(据悉是Redhat删了不少驱动)<br>然后我随手装了Manjaro…….<br>我是不想装系统折腾半天，又不是不能用(目测Ubuntu也能用)</p>
 <h1 id="xfce"><a href="#xfce" class="headerlink" title="xfce"></a>xfce</h1><p>没有disk这个程序，看了下kde manjaro里的，似乎需要桌面环境的支持？默认gnome和kde都会带(不过可以手动装)，比较实用，能看硬盘smart和坏扇区。不过目前感觉普通台式机，不接显示器，kde的vnc会比较卡(nomachine也是同样)<br>(装gnome-disk-utility)</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/9211-8i/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Document/9211-8i/" class="post-title-link" itemprop="url">记一次Raid卡固件升级(刷IT mode)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-04-13 11:53:00 / 修改时间：12:20:28" itemprop="dateCreated datePublished" datetime="2022-04-13T11:53:00+08:00">2022-04-13</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Document/" itemprop="url" rel="index"><span itemprop="name">Document</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a target="_blank" rel="noopener" href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p>
-<p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p>
-<p>Copy the following three files from your download to our bootable USB stick.</p>
-<ul>
-<li>sasbios_rel&#x2F;mptsas2.rom</li>
-<li>Firmware&#x2F;HBA_9211_8i_IT&#x2F;2118it.bin</li>
-<li>sas2flsh_dos_rel&#x2F;sas2flsh.exe</li>
-</ul>
-<p>这些文件都放在根目录(不保留文件夹)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">	Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">	Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">	Resetting Adapter...</span><br><span class="line">	Reset Successful!</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">		Firmware Image has a Valid Checksum. </span><br><span class="line">		Firmware Version 20.00.04.00</span><br><span class="line">		Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">		Valid NVDATA Image found. </span><br><span class="line">		NVDATA Version 14.01.00.00 </span><br><span class="line">		Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">		NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">		Valid Initialization Image verified.</span><br><span class="line">		Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Mfg Page 2 Mismatch Detected.</span><br><span class="line">		Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">		Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Performing Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Beginning Firmware Download...</span><br><span class="line">		Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">		Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">		BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">		BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">		BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">		BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">		Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">		Verifying Download...</span><br><span class="line"></span><br><span class="line">		Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">		Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p>
-<p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a target="_blank" rel="noopener" href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p>
-<p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>
 
       
     </div>

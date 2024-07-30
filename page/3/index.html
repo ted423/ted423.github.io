@@ -185,6 +185,100 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Remote/NoMachine/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Software/Remote/NoMachine/" class="post-title-link" itemprop="url">[Remote]NoMachine 远程工具</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-07-01 00:00:00" itemprop="dateCreated datePublished" datetime="2021-07-01T00:00:00+08:00">2021-07-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-06-16 16:23:35" itemprop="dateModified" datetime="2023-06-16T16:23:35+08:00">2023-06-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://www.nomachine.com/">https://www.nomachine.com/</a></p>
+<h1 id="推荐理由"><a href="#推荐理由" class="headerlink" title="推荐理由"></a>推荐理由</h1><p>免费(ssh协议连接收费)，支持Linux<br>其实就是开源的VNC功能实在有限罢了。配置麻烦，然后问题还多。<br>最起码你不要纠结各种桌面环境之间的兼容性问题。</p>
+<p>不过呢，问题还是有的。<br>默认直接给你开共享桌面。如果你只想装个client，但这玩意一体的，装完后桌面就给你共享了。当然，由于他这个一般是基于用户密码的共享（没试空密码），有一定的安全保障。（向日葵这傻逼软件也有类似问题，自启动+自动共享，脑残设计，甚至便携版远程路径的自启）<br>然后就是登录问题，win下一台机子登录界面不会动，登都登不进去。(后来不知道咋就好了)</p>
+<p>在低速率网络下要考虑到切到VP8或者MJGEP？这种情况下画面会很烂。<br>不过RDP虽然画面好点，但是会失联。要重连才行</p>
+<p>开源的使用NX协议的叫x2go</p>
+<h1 id="Ctrl-alt-del"><a href="#Ctrl-alt-del" class="headerlink" title="Ctrl+alt+del"></a>Ctrl+alt+del</h1><p>使用Ctrl+alt+end是在Nomachine远程里，但是rdp里Nomachine就会出问题，完全没法使用Ctrl+alt+del，因为会Ctrl+alt+end会被rdp接收掉（这点还是RealVNC做的好）</p>
+<h1 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h1><p><del>Ubuntu下，手动启动和服务自动启动展示的画面是不一样的。手动启动连接会是主画面，自动启动会是新建一个桌面出来。并且会登录卡死(这个有可能是混合Bug)(可能是QNAP虚拟机导致的混合BUG)</del><br>同样是Ubuntu下，xubuntu以及kubuntu都有，普通台式机(服务器反而正常)，在不接显示器的情况下，速度飞快，拔掉显示器，窗口拖动非常卡。同环境直接x11 Forward反而效果很好。但x11会黑非常久(不用x2go的情况下)<br>另外还有开机不接屏，或者长期不接屏的情况下，接显示器上去不亮的情况（<del>虽然这个肯定不是Nomachine或者NX的锅，应该是Linux的锅</del> (后续了解到是显卡的问题，服务器一般没问题，其他机器长期没物理输入，显卡会进入低功耗模式。我尝试用了显卡欺骗器，但似乎不太好用 )</p>
+<p>BTW，网上一堆把Teamviewer，Anydesk，向日葵这类内网穿透式的软件不加详细区分就放在一起讲的，甚至还把这类内网穿透当成优点，不知道是不是因为智商不够。<br>BTW2，在同样环境下，Anydesk效果不如向日葵，不知道是不是因为服务器在国外</p>
+<hr>
+<p><time>2021-09-22</time>增加快捷键 Ctrl+alt+del 相关说明</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
     <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/File-recovery/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -307,9 +401,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-05-15 18:43:43 / 修改时间：14:18:36" itemprop="dateCreated datePublished" datetime="2023-05-15T18:43:43+08:00">2023-05-15</time>
+      <time title="创建时间：2023-06-06 23:53:51" itemprop="dateCreated datePublished" datetime="2023-06-06T23:53:51+08:00">2023-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-05-15 14:18:36" itemprop="dateModified" datetime="2023-05-15T14:18:36+08:00">2023-05-15</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -571,9 +671,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-04-23 20:10:31 / 修改时间：16:08:13" itemprop="dateCreated datePublished" datetime="2023-04-23T20:10:31+08:00">2023-04-23</time>
+      <time title="创建时间：2023-06-07 00:10:06" itemprop="dateCreated datePublished" datetime="2023-06-07T00:10:06+08:00">2023-06-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-23 16:08:13" itemprop="dateModified" datetime="2023-04-23T16:08:13+08:00">2023-04-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -783,9 +889,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-03-23 19:10:42 / 修改时间：17:34:55" itemprop="dateCreated datePublished" datetime="2023-03-23T19:10:42+08:00">2023-03-23</time>
+      <time title="创建时间：2023-06-06 23:58:55" itemprop="dateCreated datePublished" datetime="2023-06-06T23:58:55+08:00">2023-06-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-23 17:34:55" itemprop="dateModified" datetime="2023-03-23T17:34:55+08:00">2023-03-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -864,7 +976,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-03-21 00:05:42" itemprop="dateCreated datePublished" datetime="2023-03-21T00:05:42+08:00">2023-03-21</time>
+      <time title="创建时间：2023-06-06 23:51:49" itemprop="dateCreated datePublished" datetime="2023-06-06T23:51:49+08:00">2023-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -951,7 +1063,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2023-03-21 00:03:46" itemprop="dateCreated datePublished" datetime="2023-03-21T00:03:46+08:00">2023-03-21</time>
+      <time title="创建时间：2023-06-06 23:52:20" itemprop="dateCreated datePublished" datetime="2023-06-06T23:52:20+08:00">2023-06-06</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -983,94 +1095,6 @@
           <p>一款不错的图形化工具，虽然我装了很少用，但感觉还是很牛逼的<br>比较坑的是跟 Linux 软件同名</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/BornToBeRoot/NETworkManager">https://github.com/BornToBeRoot/NETworkManager</a></p>
 <p><a target="_blank" rel="noopener" href="https://winget.run/pkg/BornToBeRoot/NETworkManager">https://winget.run/pkg/BornToBeRoot/NETworkManager</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/proxifier/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/proxifier/" class="post-title-link" itemprop="url">[不再推荐]Proxifier 及其 注册码</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2019-04-03 11:12:00" itemprop="dateCreated datePublished" datetime="2019-04-03T11:12:00+08:00">2019-04-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2023-03-18 00:15:35" itemprop="dateModified" datetime="2023-03-18T00:15:35+08:00">2023-03-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="http://www.proxifier.com/">http://www.proxifier.com/</a><br><del>但是感觉有时候效果不是太好</del><br>（现在发现是dns解析的问题）<br>菜单栏Profile(配置文件)-&gt;Name Resolution(名称解析)；如果你的DNS没有被污染(比如在下使用的DNS)，可以保持默认配置，即选中Detect DNS settings automatically；而如果你的DNS已经被污染，无法解析某些网站的地址，则取消选中Detect DNS settings automatically并选中Resolve hostnames through proxy。在下的网络环境下进行测试两者效果相同，各位可以根据自己网络情况酌情配置。</p>
-<p>这个软件可以根据不同的规则进行转发，例如host或者进程。可以对一些本身不支持代理或者只支持全局代理的软件提供支持<br>该软件需配合代理使用<br>L6Z8A-XY2J4-BTZ3P-ZZ7DF-A2Q9C（Portable Edition）<br>5EZ8G-C3WL5-B56YG-SCXM9-6QZAP（Standard Edition）<br>P427L-9Y552-5433E-8DSR3-58Z68（MAC）</p>
-<hr>
-<p>现在用Clash了 –<time>2023-03-15</time></p>
 
       
     </div>
