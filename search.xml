@@ -9933,12 +9933,16 @@ font-size: 0.78em;
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*               text=auto</span><br><span class="line">*.txt		text</span><br><span class="line">*.vcproj	text eol=crlf</span><br><span class="line">*.sh		text eol=lf</span><br><span class="line">*.jpg		-text</span><br></pre></td></tr></table></figure>
 
 <p><code>-text</code>意味着去除文本属性</p>
+<p>今天想起来，顺便给 Hexo 里弄了下，这样每次跑不会一大堆 warning，不过设的是 lf</p>
 <p>参考</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes">https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes</a></li>
 <li><a href="https://git-scm.com/docs/gitattributes">https://git-scm.com/docs/gitattributes</a></li>
 </ul>
 ]]></content>
+      <categories>
+        <category>Code</category>
+      </categories>
       <tags>
         <tag>Code</tag>
         <tag>Github</tag>

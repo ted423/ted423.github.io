@@ -50,10 +50,10 @@
     <title>git 换行符问题</title>
     <link href="http://ted423.github.io/Code/Git/git%20eol/"/>
     <id>http://ted423.github.io/Code/Git/git%20eol/</id>
-    <published>2024-08-02T08:34:16.723Z</published>
-    <updated>2024-08-02T09:32:41.450Z</updated>
+    <published>2024-08-02T10:58:57.175Z</published>
+    <updated>2024-08-02T13:46:53.276Z</updated>
     
-    <content type="html"><![CDATA[<p>之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。<br>默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。</p><p>默认行为 <code>core.autocrlf=input</code></p><p>一般这种不建议改全局设置，除非你的全部项目都是只有自己一个人维护，可以在项目的 .gitattributes 里改。</p><p><code>text=auto</code>意味着会自动判断，例如一些图片不会被设置文本属性。(之前未设置的时候有遇到exe被设置了text属性)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* text=auto</span><br><span class="line">* eol=crlf</span><br></pre></td></tr></table></figure><p>更具体的还有</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*               text=auto</span><br><span class="line">*.txttext</span><br><span class="line">*.vcprojtext eol=crlf</span><br><span class="line">*.shtext eol=lf</span><br><span class="line">*.jpg-text</span><br></pre></td></tr></table></figure><p><code>-text</code>意味着去除文本属性</p><p>参考</p><ul><li><a href="https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes">https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes</a></li><li><a href="https://git-scm.com/docs/gitattributes">https://git-scm.com/docs/gitattributes</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。<br>默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。</p><p>默认行为 <code>core.autocrlf=input</code></p><p>一般这种不建议改全局设置，除非你的全部项目都是只有自己一个人维护，可以在项目的 .gitattributes 里改。</p><p><code>text=auto</code>意味着会自动判断，例如一些图片不会被设置文本属性。(之前未设置的时候有遇到exe被设置了text属性)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* text=auto</span><br><span class="line">* eol=crlf</span><br></pre></td></tr></table></figure><p>更具体的还有</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*               text=auto</span><br><span class="line">*.txttext</span><br><span class="line">*.vcprojtext eol=crlf</span><br><span class="line">*.shtext eol=lf</span><br><span class="line">*.jpg-text</span><br></pre></td></tr></table></figure><p><code>-text</code>意味着去除文本属性</p><p>今天想起来，顺便给 Hexo 里弄了下，这样每次跑不会一大堆 warning，不过设的是 lf</p><p>参考</p><ul><li><a href="https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes">https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes</a></li><li><a href="https://git-scm.com/docs/gitattributes">https://git-scm.com/docs/gitattributes</a></li></ul>]]></content>
     
     
       
@@ -63,6 +63,8 @@
       
     
     
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
     
     
     <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>

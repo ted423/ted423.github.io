@@ -24,8 +24,8 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。 默认行为 core.autocrlf&#x3D;input 一般这种不建议改全局设置，除非你的全部项目都是只有自己一个人维护，可以在项目的 .gitattributes 里改。 text&#x3D;auto意味着会自动判断，例如一些">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-02T08:34:16.723Z">
-<meta property="article:modified_time" content="2024-08-02T09:32:41.450Z">
+<meta property="article:published_time" content="2024-08-02T10:58:57.175Z">
+<meta property="article:modified_time" content="2024-08-02T13:46:53.276Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Code">
 <meta property="article:tag" content="Github">
@@ -151,7 +151,7 @@
             
             
             <ul class="kratos-post-meta text-center">
-                <li><time datetime="2024-08-02T08:34:16.723Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-08-02</time></li>
+                <li><time datetime="2024-08-02T10:58:57.175Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-08-02</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -160,7 +160,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            519
+                            567
                         
                         字
                     </li>
@@ -172,7 +172,7 @@
             
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
                 <div class="icon"><i class="fa fa-warning"></i></div>
-                <div class="text"><p>本文最后编辑于 <time datetime="1722591161450"></time> 前，其中的内容可能需要更新。</p></div>
+                <div class="text"><p>本文最后编辑于 <time datetime="1722606413276"></time> 前，其中的内容可能需要更新。</p></div>
             </div>
             
             
@@ -188,6 +188,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*               text=auto</span><br><span class="line">*.txt		text</span><br><span class="line">*.vcproj	text eol=crlf</span><br><span class="line">*.sh		text eol=lf</span><br><span class="line">*.jpg		-text</span><br></pre></td></tr></table></figure>
 
 <p><code>-text</code>意味着去除文本属性</p>
+<p>今天想起来，顺便给 Hexo 里弄了下，这样每次跑不会一大堆 warning，不过设的是 lf</p>
 <p>参考</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes">https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes</a></li>
@@ -283,7 +284,7 @@
                     <a class="tag-none-link" href="/tags/Code/" rel="tag">Code</a>, <a class="tag-none-link" href="/tags/Git/" rel="tag">Git</a>, <a class="tag-none-link" href="/tags/Github/" rel="tag">Github</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-08-02T09:32:41.450Z" itemprop="dateModified">最后编辑：2024-08-02</time>
+                    <time datetime="2024-08-02T13:46:53.276Z" itemprop="dateModified">最后编辑：2024-08-02</time>
                 </div>
             </div>
         </footer>
@@ -361,7 +362,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类目录</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">40</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">47</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">50</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">88</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">47</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">50</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">88</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
   </aside>
 
 
