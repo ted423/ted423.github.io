@@ -6707,6 +6707,9 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 </ul>
 <p>我习惯从根源上解决问题，所以，大概再见了。<br>寻找下一个符合我喜好的博客或干脆彻底的解放自己。</p>
 ]]></content>
+      <categories>
+        <category>etc</category>
+      </categories>
       <tags>
         <tag>个人观点</tag>
       </tags>
@@ -27791,6 +27794,21 @@ $(function () {
         <tag>WWW</tag>
         <tag>MIT</tag>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows 11 奇怪的 Wifi 速度问题</title>
+    <url>/Issue/notebook%20wifi/</url>
+    <content><![CDATA[<p>简单说，设置合上盖子设置了不睡眠休眠，但是 Wifi 速度会变成超低。远程进去拷文件有问题，打开盖子直接操作就跑满了。</p>
+<p>原因暂不明。</p>
+]]></content>
+      <categories>
+        <category>Issue</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Hardware</tag>
+        <tag>Issue</tag>
       </tags>
   </entry>
 </search>
