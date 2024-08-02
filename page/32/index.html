@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-count">381</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1030,6 +1030,116 @@ ol>li>p:first-of-type:before{
 <td>&amp;#255;</td>
 </tr>
 </tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Network/IP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Document/Network/IP/" class="post-title-link" itemprop="url">[转载]奇葩的IP地址</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2015-11-01 00:00:00" itemprop="dateCreated datePublished" datetime="2015-11-01T00:00:00+08:00">2015-11-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Document/" itemprop="url" rel="index"><span itemprop="name">Document</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>原文:<a target="_blank" rel="noopener" href="http://blog.caoyue.me/post/ip-address-as-octal">http://blog.caoyue.me/post/ip-address-as-octal</a><br>作者:且听疯吟<br>一个奇怪的地址，形如 <code>23.244.200.000000000354</code>，而且这个地址居然还是可以访问的。很显然这不是域名，ping 一下，返回地址来自于 <code>23.244.200.236</code>，可以看出 <code>000000000354</code> 是 <code>236</code> 的八进制表示形式。</p>
+<h3 id="混合进制"><a href="#混合进制" class="headerlink" title="混合进制"></a>混合进制</h3><p>原来 IP 地址居然可以混合进制来显示……前导的 0 的数字会被当作八进制来处理。而且可以同时使用不同进制：包括十六进制、八进制和十进制。<br>比如 <code>http://0x17.244.0xc8.00000354</code> 这样奇葩的地址也是可以访问的……</p>
+<h3 id="DWORD-形式的-IP"><a href="#DWORD-形式的-IP" class="headerlink" title="DWORD 形式的 IP"></a>DWORD 形式的 IP</h3><p>还有更奇葩的，整数型的 IP —— 比如这个：<code>http://401918188</code> ，同样可以访问。<br>转换过程是将 <code>23.244.200.236</code> 转换为二进制形式，不足8为的数字用 0 补足： <code>00010111111101001100100011101100</code>，然后将这一串二进制数字转换为整数，即可得到整数型的 IP 地址。<br>当然，如果将这个整数换成其他进制也是可以的，比如：<br><code>http://02775144354</code> 和 <code>http://0x17f4c8ec</code></p>
+<h3 id="可省略的-0"><a href="#可省略的-0" class="headerlink" title="可省略的 0"></a>可省略的 0</h3><p>当然，奇葩还没有结束。比如这样的 IP 地址 <code>192.168.1</code> 也是可以访问的……因为某部分为 0 则可以省略。OK，那我们怎么知道省略的是哪一部分呢？别急，「聪明」的标准的制定者们早就想到这一点了，规则如下：</p>
+<table>
+<thead>
+<tr>
+<th>abbr</th>
+<th>IP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>0.0.0.A</td>
+</tr>
+<tr>
+<td>A.B</td>
+<td>A.0.0.B</td>
+</tr>
+<tr>
+<td>A.B.C</td>
+<td>A.B.0.C</td>
+</tr>
+<tr>
+<td>A.B.C.D</td>
+<td>A.B.C.D</td>
+</tr>
+</tbody></table>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>原 IP <code>127.0.0.1</code> 按上面的方法改变下形式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">http://0x7f.0.000000000001</span><br><span class="line"> http://2130706433</span><br><span class="line"> http://017700000001</span><br><span class="line"> http://0x7f000001</span><br><span class="line"> http://127.1</span><br><span class="line"> ……</span><br></pre></td></tr></table></figure>
+
+<p>这个特性在不同的平台上是由 socket 库实现的。在 Linux 上是 <a target="_blank" rel="noopener" href="http://linux.die.net/man/3/inet_aton">inet_aton</a> ，在 Windows 上是 <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/en-us/library/windows/desktop/ms738563">inet_addr</a> 。<br>但是相关的标准文档我还没有找到。<code>rfc 2396</code> 和 <code>rfc 1738</code> 也都是语焉不详。</p>
+<p>btw，虽然主流浏览器和很多其他软件支持这种表示方法。但在某些地方可能导致问题，一般都不推荐这种做法，比如 <a target="_blank" rel="noopener" href="http://support.apple.com/kb/TA22205">Mac OS X: Do Not Use Leading Zeros in IP Address</a></p>
 
       
     </div>
@@ -2037,94 +2147,8 @@ ol>li>p:first-of-type:before{
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Network/%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Document/Network/%E6%90%9C%E7%B4%A2%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">[资料]高级搜索语法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2015-10-01 00:00:00" itemprop="dateCreated datePublished" datetime="2015-10-01T00:00:00+08:00">2015-10-01</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Document/" itemprop="url" rel="index"><span itemprop="name">Document</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>请注意，这个语法未必适合所有搜索引擎，就连百度也有部分不支持(谷人希)</p>
-<ul>
-<li>把搜索范围限定在网页标题中——intitle<br>网页标题通常是对网页内容提纲挈领式的归纳。把查询内容范围限定在网页标题中，有时能获得良好的效果。使用的方式，是把查询内容中，特别关键的部分，用“intitle:”领起来。<br>例如，找林青霞的写真，就可以这样查询：写真 intitle:林青霞<br>注意，intitle:和后面的关键词之间，不要有空格。</li>
-<li>把搜索范围限定在特定站点中——site<br>有时候，您如果知道某个站点中有自己需要找的东西，就可以把搜索范围限定在这个站点中，提高查询效率。使用的方式，是在查询内容的后面，加上“site:站点域名”。<br>例如，天空网下载软件不错，就可以这样查询：msn site:skycn.com<br>注意，“site:”后面跟的站点域名，不要带“http:&#x2F;&#x2F;”；另外，site:和站点名之间，不要带空格。</li>
-<li>把搜索范围限定在url链接中——inurl<br>网页url中的某些信息，常常有某种有价值的含义。于是，您如果对搜索结果的url做某种限定，就可以获得良好的效果。实现的方式，是用“inurl:”，后跟需要在url中出现的关键词。<br>例如，找关于photoshop的使用技巧，可以这样查询：photoshop inurl:jiqiao<br>上面这个查询串中的“photoshop”，是可以出现在网页的任何位置，而“jiqiao”则必须出现在网页url中。<br>注意，inurl:语法和后面所跟的关键词，不要有空格。</li>
-<li>精确匹配——双引号和书名号<br>如果输入的查询词很长，百度在经过分析后，给出的搜索结果中的查询词，可能是拆分的。如果您对这种情况不满意，可以尝试让百度不拆分查询词。给查询词加上双引号，就可以达到这种效果。<br>例如，搜索 上海科技大学 ，如果不加双引号，搜索结果被拆分，效果不是很好，但加上双引号后，“上海科技大学”，获得的结果就全是符合要求的了。<br>书名号是百度独有的一个特殊查询语法。在其他搜索引擎中，书名号会被忽略，而在百度，中文书名号是可被查询的。加上书名号的查询词，有两层特殊功能，一是书名号会出现在搜索结果中；二是被书名号扩起来的内容，不会被拆分。 书名号在某些情况下特别有效果，例如，查名字很通俗和常用的那些电影或者小说。比如，查电影“手机”，如果不加书名号，很多情况下出来的是通讯工具——手机，而加上书名号后，《手机》结果就都是关于电影方面的了。</li>
-<li>要求搜索结果中不含特定查询词 “-“(百度不支持)<br>如果您发现搜索结果中，有某一类网页是您不希望看见的，而且，这些网页都包含特定的关键词，那么用减号语法，就可以去除所有这些含有特定关键词的网页。<br>例如，搜 神雕侠侣，希望是关于武侠小说方面的内容，却发现很多关于电视剧方面的网页。那么就可以这样查询：神雕侠侣 -电视剧<br>注意，前一个关键词，和减号之间必须有空格，否则，减号会被当成连字符处理，而失去减号语法功能。减号和后一个关键词之间，有无空格均可。</li>
-<li>Filetype<br>很多有价值的资料，在互联网上并非是普通的网页，而是以Word、PowerPoint、PDF等格式存在。百度支持对Office文档（包括Word、 Excel、Powerpoint）、Adobe PDF文档、RTF文档进行了全文搜索。要搜索这类文档，很简单，在普通的查询词后面，加一个“filetype：”文档类型限定。 “Filetype:”后可以跟以下文件格式：DOC、XLS、PPT、PDF、RTF、ALL。其中，ALL表示搜索所有这些文件类型。例如，查找张五 常关于交易费用方面的经济学论文。“交易费用 张五常 filetype:doc”，点击结果标题，直接下载该文档，也可以点击标题后的“HTML版”快速查看该文档的网页格式内容。<br>您也可以通过 百度文档搜索 界面（<a target="_blank" rel="noopener" href="http://file.baidu.com/%EF%BC%89">http://file.baidu.com/）</a> ，直接使用专业文档搜索功能。</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/31/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/33/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/31/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/31/">31</a><span class="page-number current">32</span><a class="page-number" href="/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/33/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

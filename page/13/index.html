@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-count">381</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -176,6 +176,97 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/madvr/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Document/madvr/" class="post-title-link" itemprop="url">madVR 瞎写篇</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-12 16:17:00" itemprop="dateCreated datePublished" datetime="2021-05-12T16:17:00+08:00">2021-05-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Document/" itemprop="url" rel="index"><span itemprop="name">Document</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="http://lysandria1985.blogspot.com/2013/01/3-madvr.html">http://lysandria1985.blogspot.com/2013/01/3-madvr.html?</a></p>
+<h1 id="devices"><a href="#devices" class="headerlink" title="devices"></a>devices</h1><p>projector是投影仪的意思。<br>properties 这项，madVR本身都提供比较详细的信息了，可以跳过<br>calibration 是校色，没校色过或低端显示器选disable就好，最下面”disable GPU gamma ramps”如果没有校色过的话就不要勾选<br>display modes 这里<br>主要会切换显卡数出分辨率以及刷新率，主要是刷新率符合影片帧率，减少丢帧以及掉帧，需要设备支持，至于是否支持，可以参考Custom display modes<br>个人建议是使用进入全屏切换，这样平时偶尔看下影片不会有长时间的黑屏<br>至于Custom display modes，可以用来取代Reclock<br>原理在这里<br><a target="_blank" rel="noopener" href="http://lysandria1985.blogspot.com/2018/04/3reclock-madvr.html">http://lysandria1985.blogspot.com/2018/04/3reclock-madvr.html</a><br>(但我最后没成功，因为关掉再开后madVR的optimize会重头跑起)</p>
+<p>color &amp; gamma<br>开disable calibration controls for this display的情况下 ，建议pure power curve 预设的2.2就可以，可根据光暗调整，暗环境下，可以增加</p>
+<p>HDR<br>看设备调整，通常未说明显示器都是SDR的，播HDR会有色彩问题，建议直接避开HDR影片，这里的选项也不用管。</p>
+<h1 id="processing"><a href="#processing" class="headerlink" title="processing"></a>processing</h1><p>去交错不用动，除非你还看DVD。<br>剩下的除了artifact removal 这块reduce banding artifact 开个low,其他都保持默认就好</p>
+<h1 id="scaling-algorithms"><a href="#scaling-algorithms" class="headerlink" title="scaling algorithms"></a>scaling algorithms</h1><p>madVR核心功能</p>
+<h2 id="chroma-upscaling"><a href="#chroma-upscaling" class="headerlink" title="chroma upscaling"></a>chroma upscaling</h2><p>建议开NGU-AA，档位看自己选就好，我选high会有奇怪的声音，所以还是medium吧。</p>
+<h2 id="image-downscaling"><a href="#image-downscaling" class="headerlink" title="image downscaling"></a>image downscaling</h2><p>SSIM 2D 100% scale in linear light + activate anti-ringing filter<br>这么设置有个前提，不要拿普通显示器跑4K………</p>
+<h2 id="image-upscaling"><a href="#image-upscaling" class="headerlink" title="image upscaling"></a>image upscaling</h2><p>选NGU ，选个very high ，剩下的让madvr decide </p>
+<h2 id="upscaling-refinement"><a href="#upscaling-refinement" class="headerlink" title="upscaling refinement"></a>upscaling refinement</h2><p>这里跟锐化有关，个人没调整</p>
+<h1 id="rendering"><a href="#rendering" class="headerlink" title="rendering"></a>rendering</h1><h2 id="general"><a href="#general" class="headerlink" title="general"></a>general</h2><p>delay playback start until render queue is full 勾上<br>use a separate device for presentation (Vista and newer) 勾上<br>use a separate device for DXVA processing (Vista and newer) 勾上</p>
+<h2 id="smooth-motion"><a href="#smooth-motion" class="headerlink" title="smooth motion"></a>smooth motion</h2><p>打开就好</p>
+<h2 id="dithering"><a href="#dithering" class="headerlink" title="dithering"></a>dithering</h2><p>最后3个随便选一个就好。</p>
+<h2 id="trade-quality-for-performance"><a href="#trade-quality-for-performance" class="headerlink" title="trade quality for performance"></a>trade quality for performance</h2><p>这里是降低效果来维持性能的。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -996,81 +1087,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/etc/why%20PT/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/etc/why%20PT/" class="post-title-link" itemprop="url">为什么我入了PT</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-08-31 00:00:00" itemprop="dateCreated datePublished" datetime="2020-08-31T00:00:00+08:00">2020-08-31</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>首先我发现PT还是蛮好入的，短短10天时间我已经加了9个PT了。小站开注啊，求种都还是有的。只要有心，加PT并不难。<br>虽说两个外站PT还不太好下手，但国内的基本都能混下去。<br>(几个开注的站还是有遇到吸血的，一些是根本没注意规则的。我运气比较好)</p>
-<p>BT做种的越来越少，下完就跑的越来越多，PT大家都在抱怨抢不到上传。<br>BT天天纠结断种，PT天天盼望着有人来下载。<br>BT我传了几个T，后头一看做种的个位数。<br>PT我传了1.X的分享率，然后就没我什么事了</p>
-<p>离线已经越来越不行了，各种离线的服务质量都在下降，迅雷以前的热门种子现在下都会卡一半，百度离线的各种BUG就没停过</p>
-<p>下面这个基本坚定了我入PT的决心<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/23457714">https://zhuanlan.zhihu.com/p/23457714</a><br>我满心以为会是有点质量的文章，没想到通篇都是充满优越感的让”小白”学会用百度的离线下载。Excuse me？<br>知乎上到处充斥着喷百度作恶，喷百度限速，喷百度网盘收费的东西，结果一个平反是这种？<br>没事你们还是继续忙着普及吧。</p>
-<p>PT的缺陷<br>不同站的风格不同，这里的允许的资源，别处可能发不了。而且部分小站完全没有热度，导致发种没上传，下种没下载。<br>由于是私有社区，不能祈祷管理都大公无私，逻辑正常，不少都是看管理员心情。<br>当然我加的社区都还好就是了。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/14/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/12/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/14/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

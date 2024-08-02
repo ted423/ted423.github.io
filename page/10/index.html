@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-count">381</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -176,6 +176,190 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/No%20Refs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Software/No%20Refs/" class="post-title-link" itemprop="url">不建议使用Refs</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-06-07 00:02:38" itemprop="dateCreated datePublished" datetime="2023-06-07T00:02:38+08:00">2023-06-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2021-12-22 18:04:23" itemprop="dateModified" datetime="2021-12-22T18:04:23+08:00">2021-12-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview">https://docs.microsoft.com/zh-cn/windows-server/storage/refs/refs-overview</a></p>
+<p>目前 REFS 上未提供以下功能</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>ReFS</th>
+<th>NTFS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>文件系统压缩</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>文件系统加密</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>事务</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>对象 ID</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>卸载数据传输 (ODX)</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>短名称</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>扩展的属性</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>磁盘配额</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>可引导</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>页面文件支持</td>
+<td>否</td>
+<td>是</td>
+</tr>
+<tr>
+<td>在可移动媒体上受支持</td>
+<td>否</td>
+<td>是</td>
+</tr>
+</tbody></table>
+<p>以下功能仅可用于 REFS</p>
+<table>
+<thead>
+<tr>
+<th>功能</th>
+<th>ReFS</th>
+<th>NTFS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>块克隆</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>稀疏 VDL</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>镜像加速奇偶校验</td>
+<td>是（在存储空间直通上）</td>
+<td>否</td>
+</tr>
+<tr>
+<td>文件级快照</td>
+<td>是1</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<p>其他不说就算了，引导啥的可有可无，毕竟Refs目标是存储用的文件系统。<br><del>结果你不支持压缩….</del></p>
+<p>举个例子吧，zfs 上 10t 压缩率 1.44x(当然要看文件)，原本是14T。<br>那么问题来了，NTFS也支持Dedupe<br>甚至磁盘配额是AD共享文件服务器非常重要的功能。</p>
+<hr>
+<p>不过需注意的是开了整盘压缩后写入速度会降非常多，大概只有30MB&#x2F;s。所以建议不要全开，仅对可压缩的文本之类的开下就好了。或者干脆7z会更好</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -989,95 +1173,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/Windows%20Update/0x80072EFE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Issue/Windows%20Update/0x80072EFE/" class="post-title-link" itemprop="url">[问题处理]Windows Update:0x80072EFE</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2023-06-06 23:53:04" itemprop="dateCreated datePublished" datetime="2023-06-06T23:53:04+08:00">2023-06-06</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2021-09-24 16:23:16" itemprop="dateModified" datetime="2021-09-24T16:23:16+08:00">2021-09-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Issue/" itemprop="url" rel="index"><span itemprop="name">Issue</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>2008 R2遇到<br>这个问题是由于update agent过旧导致的<br>理论Windows7早期版本也有问题，会导致后台占用很多内存</p>
-<p>从文章得知Win8 和2012也有更新包，但是报错不明</p>
-<p>更新包似乎是这两个系统通用的<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent">https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/11/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/9/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/11/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

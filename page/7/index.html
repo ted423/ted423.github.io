@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-count">381</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -176,6 +176,92 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Compression/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Document/Compression/" class="post-title-link" itemprop="url">压缩算法测试</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-04-21 09:37:00 / 修改时间：11:00:17" itemprop="dateCreated datePublished" datetime="2022-04-21T09:37:00+08:00">2022-04-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Document/" itemprop="url" rel="index"><span itemprop="name">Document</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>主要最近到处看到Zstd，ZFS都支持了，就想起来测一下<br>平时我还是都用LZMA2_L5，自从有次开到最高反而压出来更大我都默认用L5了</p>
+<p>用了个216G的虚拟机，但是测试结果仅供参考</p>
+<p><img src="/img/Compression.png" alt="Compression"></p>
+<p>耗时都是预估，Zstd Level 22耗时相当长，CPU跑满大概压了2个多小时。(LZMA2大概45分钟，Zstd L5就很快了)</p>
+<p>LZ4基本不怎么跑CPU，所以这大概是ZFS默认用这个的原因。</p>
+<p>Zstd的CPU占用也还好。<br><img src="/img/Compression2.jpg" alt="Compression"></p>
+<p>故，如果追求压缩率以及性价比，还是LZMA2_L5。追求速度和极限压缩比的话Zstd可能是不错的选择。不过L5-L22之间其实我不大推荐<br>LZ4是个速度奇快，但是压缩比一般的算法</p>
+<p><img src="/img/Compression3.jpg" alt="Compression"><br>这是一个原体积360GB的虚拟机，里面充满了易压缩的资料</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -958,94 +1044,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Game/Plants%20Vs%20Zombies/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Game/Plants%20Vs%20Zombies/" class="post-title-link" itemprop="url">植物大战僵尸[PlantsVsZombies](English,含个人档)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2018-10-24 23:24:00" itemprop="dateCreated datePublished" datetime="2018-10-24T23:24:00+08:00">2018-10-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-03-25 15:05:18" itemprop="dateModified" datetime="2022-03-25T15:05:18+08:00">2022-03-25</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="破解英文版"><a href="#破解英文版" class="headerlink" title="破解英文版"></a>破解英文版</h1><p>中文版有BUG</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://cloud.189.cn/t/uQzUJb7RBFfa">https://cloud.189.cn/t/uQzUJb7RBFfa</a></li>
-<li><a target="_blank" rel="noopener" href="http://pan.baidu.com/s/1hqh0zuG">http://pan.baidu.com/s/1hqh0zuG</a></li>
-<li><a target="_blank" rel="noopener" href="https://mega.nz/#!v1lBRAKL!cVCtzMP-DD5-lxGvP6heSZFGqIdLDxFM6aOwM94bPAs">https://mega.nz/#!v1lBRAKL!cVCtzMP-DD5-lxGvP6heSZFGqIdLDxFM6aOwM94bPAs</a></li>
-</ul>
-<h1 id="Steam版"><a href="#Steam版" class="headerlink" title="Steam版"></a>Steam版</h1><p><a target="_blank" rel="noopener" href="https://store.steampowered.com/app/3590/Plants_vs_Zombies_GOTY_Edition/">https://store.steampowered.com/app/3590/Plants_vs_Zombies_GOTY_Edition/</a></p>
-<h1 id="存档相关"><a href="#存档相关" class="headerlink" title="存档相关"></a>存档相关</h1><p>破解版存档似乎跟Steam正版的存档不大兼容(破解版应该是老版本)，相互交换存档那块都会崩溃，主要差异是花园那块记录的问题，没花园数据的存档就不会崩溃，并且存档没法直接解锁Steam成就</p>
-<p>其中user2是存档数据，game2应该是小游戏的中断数据。用UE或者CE之类的打开编辑<br>存档末尾是成就，只有00和01的值(只影响游戏中),前面的数据和最末尾的数据是固定的，花园的数据会夹在中间，所以理论上只要把破解版存档中对应的数据复制到新创建的Steam存档中，是可以继承的(除了花园那块)。<br>我自己这成功了，但隔了一段时间，具体哪到哪就记不清了。</p>
-<hr>
-<p><time>2018-10-24</time>增加存档相关</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/8/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/6/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/8/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

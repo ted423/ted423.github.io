@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-count">381</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -176,6 +176,90 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/Git/git%20eol/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Code/Git/git%20eol/" class="post-title-link" itemprop="url">git 换行符问题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-08-02 16:34:16 / 修改时间：17:32:41" itemprop="dateCreated datePublished" datetime="2024-08-02T16:34:16+08:00">2024-08-02</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。<br>默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。</p>
+<p>默认行为 <code>core.autocrlf=input</code></p>
+<p>一般这种不建议改全局设置，除非你的全部项目都是只有自己一个人维护，可以在项目的 .gitattributes 里改。</p>
+<p><code>text=auto</code>意味着会自动判断，例如一些图片不会被设置文本属性。(之前未设置的时候有遇到exe被设置了text属性)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* text=auto</span><br><span class="line">* eol=crlf</span><br></pre></td></tr></table></figure>
+
+<p>更具体的还有</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*               text=auto</span><br><span class="line">*.txt		text</span><br><span class="line">*.vcproj	text eol=crlf</span><br><span class="line">*.sh		text eol=lf</span><br><span class="line">*.jpg		-text</span><br></pre></td></tr></table></figure>
+
+<p><code>-text</code>意味着去除文本属性</p>
+<p>参考</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes">https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes</a></li>
+<li><a target="_blank" rel="noopener" href="https://git-scm.com/docs/gitattributes">https://git-scm.com/docs/gitattributes</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1070,110 +1154,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/ShareX/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/ShareX/" class="post-title-link" itemprop="url">[不再推荐][截图]ShareX</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-05-02 13:22:00" itemprop="dateCreated datePublished" datetime="2021-05-02T13:22:00+08:00">2021-05-02</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-07-15 15:50:46" itemprop="dateModified" datetime="2024-07-15T15:50:46+08:00">2024-07-15</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>第二次不再推荐 - 2024-07-15</p>
-<p>跑去用 fastone capture 了</p>
-<ul>
-<li>设置项过于复杂，设置分到了各个地方，却没有一个明确的分类的方法。找起来十分的累，没什么用的选项过多</li>
-<li>滚动截屏印象里存在问题</li>
-<li>文件名命名规则虽然设置了但部分情况下不起作用，估计是被他那过于复杂的设置系统拖累了</li>
-</ul>
-<p>最后一点是最后的稻草</p>
-<hr>
-<p>不再推荐的原因如下<br>新装(已经是第二次装了)之后各种按键魔幻的要死，然后自动给你上传，然后自动报错。<br>虽然之前的机子设置过，但第二次找设置来回翻了两三遍<br>个人感觉这个软件设计其实不太合理，一个软件的设置项过多其实是开源软件的老毛病了。就个人想法，软件是作为工具存在的，那么应该是节省时间而不是让人花费一大堆不必要的精力去适应。</p>
-<p>目前新装第一次截图已经有提醒是否进行上传了，取消后正常，说明有人反馈并被接受。<br>目前仍有设置项复杂的情况，一级带单里就有任务设置，应用程序设置，和快捷键设置。</p>
-<p>当然，使用的理解上可能也有翻译带来的问题，例如截图后里面可以设置是否上传。</p>
-<p><del>总之因为开源软件是可以所有人参与贡献的项目，姑且我认为这个软件是未来可期的，故收回之前的不推荐(虽然不推荐那些观点都没发布就已经被收回了，不过曾经确实曾经想过)</del></p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://getsharex.com/">https://getsharex.com/</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/ShareX/ShareX">https://github.com/ShareX/ShareX</a></li>
-</ul>
-<p>Greenshot长期不更新，这个开源带长截图，装FFmpeg后支持录屏以及录gif。<br>虽然1.3.4之后一直没版本，但是一直有新得commit</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

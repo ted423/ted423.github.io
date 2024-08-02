@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-count">381</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -176,6 +176,112 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Maintenance/RAMMap/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Software/Maintenance/RAMMap/" class="post-title-link" itemprop="url">RAMMap - 内存分析工具</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2018-06-28 09:13:00" itemprop="dateCreated datePublished" datetime="2018-06-28T09:13:00+08:00">2018-06-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/sysinternals/downloads/rammap">https://docs.microsoft.com/zh-cn/sysinternals/downloads/rammap</a></p>
+<p>其中显示项目的说明</p>
+<p>来源于:<a target="_blank" rel="noopener" href="http://blog.darkthread.net/post-2013-10-27-where-have-all-the-memory-gone.aspx">http://blog.darkthread.net/post-2013-10-27-where-have-all-the-memory-gone.aspx</a></p>
+<p>微软文档: <a target="_blank" rel="noopener" href="https://techcommunity.microsoft.com/t5/Ask-The-Performance-Team/Introduction-to-the-new-Sysinternals-tool-RAMMap/ba-p/374717">https://techcommunity.microsoft.com/t5/Ask-The-Performance-Team/Introduction-to-the-new-Sysinternals-tool-RAMMap/ba-p/374717</a></p>
+<ul>
+<li>Process Private: 分配给每个进程专用的内存</li>
+<li>Mapped File: 用来储放文件内容缓存(Cache)的内存空间</li>
+<li>Shared Memory: 标注给多个进程共用的内存分页(Page，内存管理单位)</li>
+<li>Page Table: 用来描述虚拟内存地址的分页表(里面是一笔一笔的PTE，Page Table Entries)</li>
+<li>Paged Pool: 允许移至磁盘的核心集区内存(Kernal Pool Memory)</li>
+<li>Nonpaged Pool: 不允许移至磁盘的核心集区内存</li>
+<li>System PTEs: 与I&#x2F;O空间、核心堆栈、内存描述清单等系统分页相关的PTE</li>
+<li>Session Private: 登录工作阶段相关的内存</li>
+<li>Metafile: 是系统缓存的一部份，包含NTFS Metadata(包含MFT及其他NTFS Metadata文件)。在MFT中，每个文件属性记录占用1K，而一个文件至少有一个属性记录，再加上其他NTFS Metadata档，当文件数众多，这块会很快速成长。</li>
+<li>AWE: 启用Address Windowing Extension技术所使用的相关内存空间(较常应用在SQL或其他DB)</li>
+<li>Driver Locked: 驱动程序锁定的物理内存。多用于I&#x2F;O的暂时性小量应用，如果有装RAMDisk，也会算在这一区。</li>
+<li>Kernel Stack: 核心线程推叠，线程愈多，用量愈大。</li>
+</ul>
+<p>每项分类都有以下字段:</p>
+<ul>
+<li>Active: 正在使用中的物理内存分页(Process Working Set或System Working Set)</li>
+<li>Standby: 留在物理内存但暂不使用的分页，保留供后续能快速重复利用</li>
+<li>Modified: 与Standy类似，但内容被修改过，重复使用前要先回写到磁盘机</li>
+<li>Modified no write: 与Modified类似，但标注为不需回写到磁盘</li>
+<li>Transition: 在分类之间转换的分页</li>
+<li>Zeroed: 内容已清空可供使用的分页，系统刚开机时明显增加，随着使用一段时间逐步转为Standby</li>
+<li>Free: 可以使用但残留先前数据的分页，使用前需先转为Zeroed</li>
+<li>Bad: 标注损坏的内存</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1904,94 +2010,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Hardware/Disk%20manager/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Software/Hardware/Disk%20manager/" class="post-title-link" itemprop="url">硬盘管理工具</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2018-04-28 22:45:00" itemprop="dateCreated datePublished" datetime="2018-04-28T22:45:00+08:00">2018-04-28</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Software/" itemprop="url" rel="index"><span itemprop="name">Software</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="DiskGenius"><a href="#DiskGenius" class="headerlink" title="DiskGenius"></a>DiskGenius</h1><p>其实建议用官方免费版的，数据恢复其实有其他软件能做到<br>这个软件的搜索已丢失分区是非常有用的(不过傲梅分区助手也有这个功能，藏得比较隐蔽，之前没找到)<br>这个软件严格意义上来讲，我不是很喜欢，分区格式的支持还不如分区助手。有其他分区工具是支持ext4的。<br>官网: <a target="_blank" rel="noopener" href="http://www.diskgenius.cn/">http://www.diskgenius.cn/</a><br>roustar31:  <a target="_blank" rel="noopener" href="https://www.repaik.com/forum.php?mod=viewthread&tid=66789">https://www.repaik.com/forum.php?mod=viewthread&amp;tid=66789</a><br>(repaik网站停止运营)</p>
-<p>破解的，4.9.2版本看起来是可用来恢复的</p>
-<h1 id="Victoria"><a href="#Victoria" class="headerlink" title="Victoria"></a>Victoria</h1><p>Victoria 是一款继MHDD无法适应新机器后得最佳硬盘坏道检测工具。<br>当然，这里必须提下物理坏道和逻辑坏道。<br>由于以上坏道相关信息来源于英文翻译，并且经常有弄不懂的也发文章，所以概念非常混乱。<br>通常来说，我的区分方式就是是否能被MHDD用eraser修复，能被修复得就是逻辑坏道，否则就是物理坏道。</p>
-<p>但是这个工具有写  [Hint] Recommend 32-bit Windows XP for a best work!<br>Warning! Windows x64 detected! PIO mode supported on Windows x86 only.</p>
-<p>官网:<a target="_blank" rel="noopener" href="http://hdd.by/victoria/">http://hdd.by/victoria/</a>(俄文，建议google翻译英文看…)<br>下载站:<a target="_blank" rel="noopener" href="https://download-software.ru/victoria-hdd-download.html">https://download-software.ru/victoria-hdd-download.html</a></p>
-<h1 id="傲梅分区助手"><a href="#傲梅分区助手" class="headerlink" title="傲梅分区助手"></a><del>傲梅分区助手</del></h1><p>不推荐使用，简单说就是虽然功能看起来非常多，但是很多功能的实现都有问题，样子货<br>英文官网: <a target="_blank" rel="noopener" href="https://www.disk-partition.com/">https://www.disk-partition.com/</a><br>中文官网: <a target="_blank" rel="noopener" href="http://disktool.cn/">http://disktool.cn/</a><br><del>英文版更新更完善，估计国外比较容易赚到钱</del>(现在都一样了)<br>大眼仔破解: <a target="_blank" rel="noopener" href="http://www.dayanzai.me/partition-assistant.html">http://www.dayanzai.me/partition-assistant.html</a></p>
-<p>之前一直在用DiskGenius进行磁盘分区调整的相关操作,但是当我因为工作需要将一个XP系统的NTFS无损转FAT32分区的时候，遇见了傲梅分区助手。随后当我发现公司电脑硬盘本身不大，却还分了3个区的时候，又是分区助手的合并分区功能帮了我。后来试图将动态磁盘转为基本磁盘，还是找到了分区助手(虽然我选择了用DiskGenius恢复分区表来还原之前的磁盘，不过DiskGenius中间出了各种问题，吓得我一身冷汗之后才解决倒是)</p>
-<p>一方面，这款软件没什么广告而且免费，功能也很全，界面也很干净。老实说，我倒不是特别喜欢界面漂亮的软件，因为很少有软件界面漂亮还在功能上符合我胃口。虽然像什么迁移系统到固态硬盘、启动光盘制作之类的功能让我觉得这款软件还是有点中国软件的风格以外，但还是得说分区助手做的不错。<br>相对DiskGenius来说，傲梅分区助手不具备恢复文件的功能(不过相对来讲DiskGenius这个功能也是要钱的)。</p>
-<h2 id="不过个人感觉这个软件基本是参照着MiniTool-Partition-Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4-英文版支持-。小问题有点多，对于一个操作硬盘的软件来说这点不大好"><a href="#不过个人感觉这个软件基本是参照着MiniTool-Partition-Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4-英文版支持-。小问题有点多，对于一个操作硬盘的软件来说这点不大好" class="headerlink" title="不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4(英文版支持)。小问题有点多，对于一个操作硬盘的软件来说这点不大好"></a>不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，<del>还有不支持格式化成ext4</del>(英文版支持)。<br>小问题有点多，对于一个操作硬盘的软件来说这点不大好</h2><p><time>2018-04-28 22:45</time>分区助手增加国外破解版，增加DiskGenius破解版</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/21/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/23/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/21/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/21/">21</a><span class="page-number current">22</span><a class="page-number" href="/page/23/">23</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/23/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>

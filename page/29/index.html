@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">380</span>
+          <span class="site-state-item-count">381</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -176,6 +176,145 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/cookie/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ted423">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | 个人小站">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/Code/WWW/cookie/" class="post-title-link" itemprop="url">[Javascript]Cookie操作测试</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-06-07 00:06:51" itemprop="dateCreated datePublished" datetime="2023-06-07T00:06:51+08:00">2023-06-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2016-02-19 15:59:00" itemprop="dateModified" datetime="2016-02-19T15:59:00+08:00">2016-02-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Code/" itemprop="url" rel="index"><span itemprop="name">Code</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>测试页面<br>尝试设置cookies里加入test cookie</p>
+<script>
+document.writeln("<br>")
+function setCookie (cookieName, cookieValue, cookiePath, cookieExpires)
+{
+   cookieValue = escape(cookieValue);
+   if (cookieExpires == "")
+   {
+      var nowDate = new Date();
+      nowDate.setMonth(nowDate.getMonth() + 6);
+      cookieExpires = nowDate.toGMTString();
+   }
+   if (cookiePath != "")
+   {
+      cookiePath = ";Path=" + cookiePath;
+   }
+   document.cookie = cookieName + "=" + cookieValue + 
+      ";expires=" + cookieExpires + cookiePath;
+}
+function getCookieValue(cookieName)
+{
+   var cookieValue = document.cookie;
+   var cookieStartsAt = cookieValue.indexOf(" " + cookieName + "=");
+
+  if (cookieStartsAt == -1)
+  {
+      cookieStartsAt = cookieValue.indexOf(cookieName + "=");
+  }
+
+   if (cookieStartsAt == -1)
+   {
+      cookieValue = null;
+   }
+   else
+   {
+
+      cookieStartsAt = cookieValue.indexOf("=", cookieStartsAt) + 1;
+      var cookieEndsAt = cookieValue.indexOf(";", cookieStartsAt);
+      if (cookieEndsAt == -1)
+      {
+         cookieEndsAt = cookieValue.length;
+      }
+      cookieValue = unescape(cookieValue.substring(cookieStartsAt, cookieEndsAt));
+
+   }
+
+   return cookieValue;
+}
+setCookie("TestCookie","Yes","","");
+if(getCookieValue("TestCookie")==null)
+document.writeln("SetCookie wrong<br>");
+else document.writeln("SetCookie sucess :<br>"+document.cookie+"<br>");
+</script>
+
+<p>源码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">writeln</span>(<span class="string">&quot;&lt;br&gt;&quot;</span>)</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setCookie</span> (<span class="params">cookieName, cookieValue, cookiePath, cookieExpires</span>)</span><br><span class="line">&#123;</span><br><span class="line">   cookieValue = <span class="built_in">escape</span>(cookieValue);</span><br><span class="line">   <span class="keyword">if</span> (cookieExpires == <span class="string">&quot;&quot;</span>)</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="keyword">var</span> nowDate = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">      nowDate.<span class="title function_">setMonth</span>(nowDate.<span class="title function_">getMonth</span>() + <span class="number">6</span>);</span><br><span class="line">      cookieExpires = nowDate.<span class="title function_">toGMTString</span>();</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">if</span> (cookiePath != <span class="string">&quot;&quot;</span>)</span><br><span class="line">   &#123;</span><br><span class="line">      cookiePath = <span class="string">&quot;;Path=&quot;</span> + cookiePath;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="variable language_">document</span>.<span class="property">cookie</span> = cookieName + <span class="string">&quot;=&quot;</span> + cookieValue + </span><br><span class="line">      <span class="string">&quot;;expires=&quot;</span> + cookieExpires + cookiePath;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getCookieValue</span>(<span class="params">cookieName</span>)</span><br><span class="line">&#123;</span><br><span class="line">   <span class="keyword">var</span> cookieValue = <span class="variable language_">document</span>.<span class="property">cookie</span>;</span><br><span class="line">   <span class="keyword">var</span> cookieStartsAt = cookieValue.<span class="title function_">indexOf</span>(<span class="string">&quot; &quot;</span> + cookieName + <span class="string">&quot;=&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (cookieStartsAt == -<span class="number">1</span>)</span><br><span class="line">  &#123;</span><br><span class="line">      cookieStartsAt = cookieValue.<span class="title function_">indexOf</span>(cookieName + <span class="string">&quot;=&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span> (cookieStartsAt == -<span class="number">1</span>)</span><br><span class="line">   &#123;</span><br><span class="line">      cookieValue = <span class="literal">null</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line"></span><br><span class="line">      cookieStartsAt = cookieValue.<span class="title function_">indexOf</span>(<span class="string">&quot;=&quot;</span>, cookieStartsAt) + <span class="number">1</span>;</span><br><span class="line">      <span class="keyword">var</span> cookieEndsAt = cookieValue.<span class="title function_">indexOf</span>(<span class="string">&quot;;&quot;</span>, cookieStartsAt);</span><br><span class="line">      <span class="keyword">if</span> (cookieEndsAt == -<span class="number">1</span>)</span><br><span class="line">      &#123;</span><br><span class="line">         cookieEndsAt = cookieValue.<span class="property">length</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      cookieValue = <span class="built_in">unescape</span>(cookieValue.<span class="title function_">substring</span>(cookieStartsAt, cookieEndsAt));</span><br><span class="line"></span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">return</span> cookieValue;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">setCookie</span>(<span class="string">&quot;TestCookie&quot;</span>,<span class="string">&quot;Yes&quot;</span>,<span class="string">&quot;&quot;</span>,<span class="string">&quot;&quot;</span>);</span><br><span class="line"><span class="keyword">if</span>(<span class="title function_">getCookieValue</span>(<span class="string">&quot;TestCookie&quot;</span>)==<span class="literal">null</span>)</span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">writeln</span>(<span class="string">&quot;SetCookie wrong&lt;br&gt;&quot;</span>);</span><br><span class="line"><span class="keyword">else</span> <span class="variable language_">document</span>.<span class="title function_">writeln</span>(<span class="string">&quot;SetCookie sucess :&lt;br&gt;&quot;</span>+<span class="variable language_">document</span>.<span class="property">cookie</span>+<span class="string">&quot;&lt;br&gt;&quot;</span>);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1439,86 +1578,8 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="ted423">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人小站">
-      <meta itemprop="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | 个人小站">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/" class="post-title-link" itemprop="url">[资料]Unicode字符编码表</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2015-12-20 10:45:00" itemprop="dateCreated datePublished" datetime="2015-12-20T10:45:00+08:00">2015-12-20</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Document/" itemprop="url" rel="index"><span itemprop="name">Document</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>起始-十进制|终止-十进制|起始-16进制|终止-16进制|字符数|	编码分类（中文）|编码分类（英文）<br>    —    |    —    |   —     |    —    | —  |     —         |      —<br>0|127|0000|007F|128|C0控制符及基本拉丁文|C0 Control and Basic Latin<br>128|255|0080|00FF|128|C1控制符及拉丁文补充-1|C1 Control and Latin 1 Supplement<br>256|383|0100|017F|128|拉丁文扩展-A|Latin Extended-A<br>384|591|0180|024F|208|拉丁文扩展-B|Latin Extended-B<br>592|687|0250|02AF|96|国际音标扩展|IPA Extensions<br>688|767|02B0|02FF|80|空白修饰字母|Spacing Modifiers<br>768|879|0300|036F|112|结合用读音符号|Combining Diacritics Marks<br>880|1023|0370|03FF|144|希腊文及科普特文|Greek and Coptic<br>1024|1279|0400|04FF|256|西里尔字母|Cyrillic<br>1280|1327|0500|052F|48|西里尔字母补充|Cyrillic Supplement<br>1328|1423|0530|058F|96|亚美尼亚语|Armenian<br>1424|1535|0590|05FF|112|希伯来文|Hebrew<br>1536|1791|0600|06FF|256|阿拉伯文|Arabic<br>1792|1871|0700|074F|80|叙利亚文|Syriac<br>1872|1919|0750|077F|48|阿拉伯文补充|Arabic Supplement<br>1920|1983|0780|07BF|64|马尔代夫语|Thaana<br>1984|2047|07C0|07FF|64|西非書面語言|N’Ko<br>2048|2143|0800|085F|96|阿维斯塔语及巴列维语|Avestan and Pahlavi<br>2144|2175|0860|087F|32|Mandaic|Mandaic<br>2176|2223|0880|08AF|48|撒马利亚语|Samaritan<br>2304|2431|0900|097F|128|天城文书|Devanagari<br>2432|2559|0980|09FF|128|孟加拉语|Bengali<br>2560|2687|0A00|0A7F|128|锡克教文|Gurmukhi<br>2688|2815|0A80|0AFF|128|古吉拉特文|Gujarati<br>2816|2943|0B00|0B7F|128|奥里亚文|Oriya<br>2944|3071|0B80|0BFF|128|泰米尔文|Tamil<br>3072|3199|0C00|0C7F|128|泰卢固文|Telugu<br>3200|3327|0C80|0CFF|128|卡纳达文|Kannada<br>3328|3455|0D00|0D7F|128|德拉维族语|Malayalam<br>3456|3583|0D80|0DFF|128|僧伽罗语|Sinhala<br>3584|3711|0E00|0E7F|128|泰文|Thai<br>3712|3839|0E80|0EFF|128|老挝文|Lao<br>3840|4095|0F00|0FFF|256|藏文|Tibetan<br>4096|4255|1000|109F|160|缅甸语|Myanmar<br>4256|4351|10A0|10FF|96|格鲁吉亚语|Georgian<br>4352|4607|1100|11FF|256|朝鲜文|Hangul Jamo<br>4608|4991|1200|137F|384|埃塞俄比亚语|Ethiopic<br>4992|5023|1380|139F|32|埃塞俄比亚语补充|Ethiopic Supplement<br>5024|5119|13A0|13FF|96|切罗基语|Cherokee<br>5120|5759|1400|167F|640|统一加拿大土著语音节|Unified Canadian Aboriginal Syllabics<br>5760|5791|1680|169F|32|欧甘字母|Ogham<br>5792|5887|16A0|16FF|96|如尼文|Runic<br>5888|5919|1700|171F|32|塔加拉语|Tagalog<br>5920|5951|1720|173F|32|Hanunóo|Hanunóo<br>5952|5983|1740|175F|32|Buhid|Buhid<br>5984|6015|1760|177F|32|Tagbanwa|Tagbanwa<br>6016|6143|1780|17FF|128|高棉语|Khmer<br>6144|6319|1800|18AF|176|蒙古文|Mongolian<br>6320|6399|18B0|18FF|80|Cham|Cham<br>6400|6479|1900|194F|80|Limbu|Limbu<br>6480|6527|1950|197F|48|德宏泰语|Tai Le<br>6528|6623|1980|19DF|96|新傣仂语|New Tai Lue<br>6624|6655|19E0|19FF|32|高棉语记号|Kmer Symbols<br>6656|6687|1A00|1A1F|32|Buginese|Buginese<br>6688|6751|1A20|1A5F|64|Batak|Batak<br>6784|6895|1A80|1AEF|112|Lanna|Lanna<br>6912|7039|1B00|1B7F|128|巴厘语|Balinese<br>7040|7088|1B80|1BB0|49|巽他语|Sundanese<br>7104|7167|1BC0|1BFF|64|Pahawh Hmong|Pahawh Hmong<br>7168|7247|1C00|1C4F|80|雷布查语|Lepcha<br>7248|7295|1C50|1C7F|48|Ol Chiki|Ol Chiki<br>7296|7391|1C80|1CDF|96|曼尼普尔语|Meithei&#x2F;Manipuri<br>7424|7551|1D00|1D7F|128|语音学扩展|Phonetic Extensions<br>7552|7615|1D80|1DBF|64|语音学扩展补充|Phonetic Extensions Supplement<br>7616|7679|1DC0|1DFF|64|结合用读音符号补充|Combining Diacritics Marks Supplement<br>7680|7935|1E00|1EFF|256|拉丁文扩充附加|Latin Extended Additional<br>7936|8191|1F00|1FFF|256|希腊语扩充|Greek Extended<br>8192|8303|2000|206F|112|常用标点|General Punctuation<br>8304|8351|2070|209F|48|上标及下标|Superscripts and Subscripts<br>8352|8399|20A0|20CF|48|货币符号|Currency Symbols<br>8400|8447|20D0|20FF|48|组合用记号|Combining Diacritics Marks for Symbols<br>8448|8527|2100|214F|80|字母式符号|Letterlike Symbols<br>8528|8591|2150|218F|64|数字形式|Number Form<br>8592|8703|2190|21FF|112|箭头|Arrows<br>8704|8959|2200|22FF|256|数学运算符|Mathematical Operator<br>8960|9215|2300|23FF|256|杂项工业符号|Miscellaneous Technical<br>9216|9279|2400|243F|64|控制图片|Control Pictures<br>9280|9311|2440|245F|32|光学识别符|Optical Character Recognition<br>9312|9471|2460|24FF|160|封闭式字母数字|Enclosed Alphanumerics<br>9472|9599|2500|257F|128|制表符|Box Drawing<br>9600|9631|2580|259F|32|方块元素|Block Element<br>9632|9727|25A0|25FF|96|几何图形|Geometric Shapes<br>9728|9983|2600|26FF|256|杂项符号|Miscellaneous Symbols<br>9984|10175|2700|27BF|192|印刷符号|Dingbats<br>10176|10223|27C0|27EF|48|杂项数学符号-A|Miscellaneous Mathematical Symbols-A<br>10224|10239|27F0|27FF|16|追加箭头-A|Supplemental Arrows-A<br>10240|10495|2800|28FF|256|盲文点字模型|Braille Patterns<br>10496|10623|2900|297F|128|追加箭头-B|Supplemental Arrows-B<br>10624|10751|2980|29FF|128|杂项数学符号-B|Miscellaneous Mathematical Symbols-B<br>10752|11007|2A00|2AFF|256|追加数学运算符|Supplemental Mathematical Operator<br>11008|11263|2B00|2BFF|256|杂项符号和箭头|Miscellaneous Symbols and Arrows<br>11264|11359|2C00|2C5F|96|格拉哥里字母|Glagolitic<br>11360|11391|2C60|2C7F|32|拉丁文扩展-C|Latin Extended-C<br>11392|11519|2C80|2CFF|128|古埃及语|Coptic<br>11520|11567|2D00|2D2F|48|格鲁吉亚语补充|Georgian Supplement<br>11568|11647|2D30|2D7F|80|提非纳文|Tifinagh<br>11648|11743|2D80|2DDF|96|埃塞俄比亚语扩展|Ethiopic Extended<br>11776|11903|2E00|2E7F|128|追加标点|Supplemental Punctuation<br>11904|12031|2E80|2EFF|128|CJK 部首补充|CJK Radicals Supplement<br>12032|12255|2F00|2FDF|224|康熙字典部首|Kangxi Radicals<br>12272|12287|2FF0|2FFF|16|表意文字描述符|Ideographic Description Characters<br>12288|12351|3000|303F|64|CJK 符号和标点|CJK Symbols and Punctuation<br>12352|12447|3040|309F|96|日文平假名|Hiragana<br>12448|12543|30A0|30FF|96|日文片假名|Katakana<br>12544|12591|3100|312F|48|注音字母|Bopomofo<br>12592|12687|3130|318F|96|朝鲜文兼容字母|Hangul Compatibility Jamo<br>12688|12703|3190|319F|16|象形字注释标志|Kanbun<br>12704|12735|31A0|31BF|32|注音字母扩展|Bopomofo Extended<br>12736|12783|31C0|31EF|48|CJK 笔画|CJK Strokes<br>12784|12799|31F0|31FF|16|日文片假名语音扩展|Katakana Phonetic Extensions<br>12800|13055|3200|32FF|256|封闭式 CJK 文字和月份|Enclosed CJK Letters and Months<br>13056|13311|3300|33FF|256|CJK 兼容|CJK Compatibility<br>13312|19903|3400|4DBF|6592|CJK 统一表意符号扩展 A|CJK Unified Ideographs Extension A<br>19904|19967|4DC0|4DFF|64|易经六十四卦符号|Yijing Hexagrams Symbols<br>19968|40895|4E00|9FBF|20928|CJK 统一表意符号|CJK Unified Ideographs<br>40960|42127|A000|A48F|1168|彝文音节|Yi Syllables<br>42128|42191|A490|A4CF|64|彝文字根|Yi Radicals<br>42240|42527|A500|A61F|288|Vai|Vai<br>42592|42751|A660|A6FF|160|统一加拿大土著语音节补充|Unified Canadian Aboriginal Syllabics Supplement<br>42752|42783|A700|A71F|32|声调修饰字母|Modifier Tone Letters<br>42784|43007|A720|A7FF|224|拉丁文扩展-D|Latin Extended-D<br>43008|43055|A800|A82F|48|Syloti Nagri|Syloti Nagri<br>43072|43135|A840|A87F|64|八思巴字|Phags-pa<br>43136|43231|A880|A8DF|96|Saurashtra|Saurashtra<br>43264|43391|A900|A97F|128|爪哇语|Javanese<br>43392|43487|A980|A9DF|96|Chakma|Chakma<br>43520|43583|AA00|AA3F|64|Varang Kshiti|Varang Kshiti<br>43584|43631|AA40|AA6F|48|Sorang Sompeng|Sorang Sompeng<br>43648|43743|AA80|AADF|96|Newari|Newari<br>43776|43871|AB00|AB5F|96|越南傣语|Vi?t Thái<br>43904|43936|AB80|ABA0|33|Kayah Li|Kayah Li<br>44032|55215|AC00|D7AF|11184|朝鲜文音节|Hangul Syllables<br>55296|56319|D800|DBFF|1024|High-half zone of UTF-16|High-half zone of UTF-16<br>56320|57343|DC00|DFFF|1024|Low-half zone of UTF-16|Low-half zone of UTF-16<br>57344|63743|E000|F8FF|6400|自行使用區域|Private Use Zone<br>63744|64255|F900|FAFF|512|CJK 兼容象形文字|CJK Compatibility Ideographs<br>64256|64335|FB00|FB4F|80|字母表達形式|Alphabetic Presentation Form<br>64336|65023|FB50|FDFF|688|阿拉伯表達形式A|Arabic Presentation Form-A<br>65024|65039|FE00|FE0F|16|变量选择符|Variation Selector<br>65040|65055|FE10|FE1F|16|竖排形式|Vertical Forms<br>65056|65071|FE20|FE2F|16|组合用半符号|Combining Half Marks<br>65072|65103|FE30|FE4F|32|CJK 兼容形式|CJK Compatibility Forms<br>65104|65135|FE50|FE6F|32|小型变体形式|Small Form Variants<br>65136|65279|FE70|FEFF|144|阿拉伯表達形式B|Arabic Presentation Form-B<br>65280|65519|FF00|FFEF|240|半型及全型形式|Halfwidth and Fullwidth Form<br>65520|65535|FFF0|FFFF|16|特殊|Specials</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/28/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/38/">38</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/30/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/page/28/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/39/">39</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/30/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
