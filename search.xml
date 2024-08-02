@@ -6831,6 +6831,9 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <hr>
 <p><a href="https://github.com/ppoffice/hexo-theme-icarus/issues/1254">https://github.com/ppoffice/hexo-theme-icarus/issues/1254</a><br>最后又弃用的原因见这个issue</p>
 ]]></content>
+      <categories>
+        <category>etc</category>
+      </categories>
       <tags>
         <tag>个人观点</tag>
         <tag>Hexo Theme</tag>
@@ -6838,17 +6841,15 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       </tags>
   </entry>
   <entry>
-    <title>Hexo NexT</title>
+    <title>为什么试了下 Hexo NexT 然后不用了</title>
     <url>/etc/hexo-next/</url>
-    <content><![CDATA[<p>原标题 为什么试了下 Hexo NexT 然后不用了(现在还是用了)</p>
-<hr>
-<p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p>
+    <content><![CDATA[<p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p>
 <p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p>
 <p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p>
 <hr>
-<p>跑回来用这个了，一些原因见 <a href="/etc/hexo-theme-icarus">icarus</a></p>
+<p><del>跑回来用这个了</del>，一些原因见 <a href="/etc/hexo-theme-icarus">icarus</a></p>
 <p><a href="https://github.com/theme-next/hexo-theme-next/issues/1246">https://github.com/theme-next/hexo-theme-next/issues/1246</a></p>
-<p>不过看了下这个 issue 感觉还是想换</p>
+<p>不过看了下这个 issue 最后还是换了</p>
 ]]></content>
       <categories>
         <category>etc</category>
