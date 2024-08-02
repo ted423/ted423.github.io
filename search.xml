@@ -6834,22 +6834,29 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       <tags>
         <tag>个人观点</tag>
         <tag>Hexo Theme</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
     <title>Hexo NexT</title>
     <url>/etc/hexo-next/</url>
-    <content><![CDATA[<p>原标题 为什么试了下 Hexo NexT 然后不用了</p>
+    <content><![CDATA[<p>原标题 为什么试了下 Hexo NexT 然后不用了(现在还是用了)</p>
 <hr>
 <p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p>
 <p>前者比较重要，后者的话，会增加很大的维护量，使用<code>hexo-excerpt</code>的话，会对所有文章产生一个阅读全文按钮。</p>
 <p>本意是想 Hexo NexT 比较成熟，维护的人比较多，文档也丰富。但博客嘛，能看就行了。</p>
 <hr>
 <p>跑回来用这个了，一些原因见 <a href="/etc/hexo-theme-icarus">icarus</a></p>
+<p><a href="https://github.com/theme-next/hexo-theme-next/issues/1246">https://github.com/theme-next/hexo-theme-next/issues/1246</a></p>
+<p>不过看了下这个 issue 感觉还是想换</p>
 ]]></content>
+      <categories>
+        <category>etc</category>
+      </categories>
       <tags>
         <tag>个人观点</tag>
         <tag>Hexo Theme</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -17976,51 +17983,6 @@ Maximum Frame-Average Light Level : <b>1076</b> cd/m2
       </tags>
   </entry>
   <entry>
-    <title>Hexo+Github搭建博客</title>
-    <url>/Document/Network/Hexo+github/</url>
-    <content><![CDATA[<p>Hexo可以作为一个Server使用(hexo server 运行), <code>hexo-deployer-git</code>是官方开发的插件用于 Github 上搭建博客。</p>
-<h1 id="需要的环境"><a href="#需要的环境" class="headerlink" title="需要的环境"></a>需要的环境</h1><p>Hexo基于node.js,故需要先装nodejs以及npm。推荐装LTS的。<br>确保git版本是最新的</p>
-<p>最好了解下<a href="https://docs.npmjs.com/cli/v8/commands/npm-init">nodejs项目</a></p>
-<p>请注意 hexo-deployer-git 第一次登陆时不能设置 Socks5代理（蛋疼的是中文 cmd 下显示乱码），实际显示的是<code>ServicePointManager 不支持具有 socks5 方案的代理</code> —<time datetime="2023-07-18">2023-07-18</time></p>
-<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>其中<code>-g</code>是<code>--global</code>的简写，使用后是安装到系统中，你可以在任何地方使用Hexo命令，而下面则是将<code>hexo-deployer-git</code>直接安装到文件夹(项目中)</p>
-<p>初始化blog(下面命令blog的name可以改为你想要的名字)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是这个blog文件夹是一个独立的项目，你可以挪出来放到你想要的地方，或者改名都行</p>
-<h1 id="命令文档"><a href="#命令文档" class="headerlink" title="命令文档"></a>命令文档</h1><p><a href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a></p>
-<h1 id="Github上的操作"><a href="#Github上的操作" class="headerlink" title="Github上的操作"></a>Github上的操作</h1><p>新增一个仓库（Repositories）,仓库名为yourname.github.io</p>
-<h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>找到”blog”文件夹里的<code>_config.yml</code><br>改最下面</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: http://github.com/yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><p><code>.\source\_posts</code><br>这里放的博客文本，<code> hexo new [layout] &lt;title&gt;</code><br>用于生成一个新博客。<br>不过一般我会手动建</p>
-<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<p>意思可以看上面的命令文档，基本等同于<code>hexo g -d</code></p>
-<h1 id="安装一个主题"><a href="#安装一个主题" class="headerlink" title="安装一个主题"></a>安装一个主题</h1><p>这个就自己折腾吧,很多主题还要装依赖<br>还有很多的坑</p>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>网页有缓存</p>
-<h1 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm update --save</span><br></pre></td></tr></table></figure>
-<p>(我这好像没成功，因为cli版本其实没有升级，Hexo版本倒是到了6)</p>
-<p>最终是看了这个成功的 –2022-06-29<br><a href="https://novnan.github.io/Hexo/update_hexo/">https://novnan.github.io/Hexo/update_hexo/</a></p>
-<p>而且是试了下就好了，完全没搞懂之前啥毛病。<br>可能跟<code>npm update --save</code>这个有关<br>只有用了这个才会更新项目的npm包</p>
-<h1 id="本地Debug"><a href="#本地Debug" class="headerlink" title="本地Debug"></a>本地Debug</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure>
-<p>可以本地debug好了再提交，不用像逗逼的我一样每次提交了看有问题再改。</p>
-<h1 id="algolia"><a href="#algolia" class="headerlink" title="algolia"></a>algolia</h1><p>可以看下这里<br><a href="https://github.com/fi3ework/hexo-theme-archer/issues/304">https://github.com/fi3ework/hexo-theme-archer/issues/304</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> hexo algolia --help</span><br><span class="line">INFO  Validating config</span><br><span class="line">Usage: hexo algolia</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">Index your content in Algolia Search API</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  --dry-run       Does not push content to Algolia (default: false).</span><br><span class="line">  --flush         Resets the Algolia index before starting the indexation (default: false).</span><br><span class="line">  --indexing-key  An algolia API key with add/delete records permissions.</span><br><span class="line">                  It should be different than the search-only API key configured in _config.yml.</span><br><span class="line">  --layouts       A comma-separated list of page layouts to index (default: &quot;page&quot;).</span><br></pre></td></tr></table></figure>
-<p>flush 什么的，很少有教程说，不过文件换路径会非常有用</p>
-<h1 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h1><ul>
-<li>hexo 的相对链接只能在图片或者<code>[]()</code>里使用，<code>&lt;&gt;</code>里不会解析</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Document</category>
-      </categories>
-      <tags>
-        <tag>Open Source</tag>
-        <tag>Document</tag>
-        <tag>WWW</tag>
-        <tag>MIT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[转载]奇葩的IP地址</title>
     <url>/Document/Network/IP/</url>
     <content><![CDATA[<p>原文:<a href="http://blog.caoyue.me/post/ip-address-as-octal">http://blog.caoyue.me/post/ip-address-as-octal</a><br>作者:且听疯吟<br>一个奇怪的地址，形如 <code>23.244.200.000000000354</code>，而且这个地址居然还是可以访问的。很显然这不是域名，ping 一下，返回地址来自于 <code>23.244.200.236</code>，可以看出 <code>000000000354</code> 是 <code>236</code> 的八进制表示形式。</p>
@@ -27782,6 +27744,53 @@ $(function () {
         <tag>初音ミク(Hatsune Miku)</tag>
         <tag>歌词(LRC)</tag>
         <tag>多行(Autolyric)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo + Github搭建博客</title>
+    <url>/Document/Network/Hexo%20github/</url>
+    <content><![CDATA[<p>Hexo可以作为一个Server使用(hexo server 运行), <code>hexo-deployer-git</code>是官方开发的插件用于 Github 上搭建博客。</p>
+<h1 id="需要的环境"><a href="#需要的环境" class="headerlink" title="需要的环境"></a>需要的环境</h1><p>Hexo基于node.js,故需要先装nodejs以及npm。推荐装LTS的。<br>确保git版本是最新的</p>
+<p>最好了解下<a href="https://docs.npmjs.com/cli/v8/commands/npm-init">nodejs项目</a></p>
+<p>请注意 hexo-deployer-git 第一次登陆时不能设置 Socks5代理（蛋疼的是中文 cmd 下显示乱码），实际显示的是<code>ServicePointManager 不支持具有 socks5 方案的代理</code> —<time datetime="2023-07-18">2023-07-18</time></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>其中<code>-g</code>是<code>--global</code>的简写，使用后是安装到系统中，你可以在任何地方使用Hexo命令，而下面则是将<code>hexo-deployer-git</code>直接安装到文件夹(项目中)</p>
+<p>初始化blog(下面命令blog的name可以改为你想要的名字)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是这个blog文件夹是一个独立的项目，你可以挪出来放到你想要的地方，或者改名都行</p>
+<h1 id="命令文档"><a href="#命令文档" class="headerlink" title="命令文档"></a>命令文档</h1><p><a href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a></p>
+<h1 id="Github上的操作"><a href="#Github上的操作" class="headerlink" title="Github上的操作"></a>Github上的操作</h1><p>新增一个仓库（Repositories）,仓库名为yourname.github.io</p>
+<h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>找到”blog”文件夹里的<code>_config.yml</code><br>改最下面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: http://github.com/yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p><code>hexo config theme 主题名</code> 产生新的主题配置(记录下主要好多主题没说明)</p>
+<h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><p><code>.\source\_posts</code><br>这里放的博客文本，<code> hexo new [layout] &lt;title&gt;</code><br>用于生成一个新博客。<br>不过一般我会手动建</p>
+<h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>意思可以看上面的命令文档，基本等同于<code>hexo g -d</code></p>
+<h1 id="安装一个主题"><a href="#安装一个主题" class="headerlink" title="安装一个主题"></a>安装一个主题</h1><p>这个就自己折腾吧,很多主题还要装依赖<br>还有很多的坑</p>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>网页有缓存</p>
+<h1 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm update --save</span><br></pre></td></tr></table></figure>
+<p>(我这好像没成功，因为cli版本其实没有升级，Hexo版本倒是到了6)</p>
+<p>最终是看了这个成功的 –2022-06-29<br><a href="https://novnan.github.io/Hexo/update_hexo/">https://novnan.github.io/Hexo/update_hexo/</a></p>
+<p>而且是试了下就好了，完全没搞懂之前啥毛病。<br>可能跟<code>npm update --save</code>这个有关<br>只有用了这个才会更新项目的npm包</p>
+<h1 id="本地Debug"><a href="#本地Debug" class="headerlink" title="本地Debug"></a>本地Debug</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure>
+<p>可以本地debug好了再提交，不用像逗逼的我一样每次提交了看有问题再改。</p>
+<h1 id="algolia"><a href="#algolia" class="headerlink" title="algolia"></a>algolia</h1><p>可以看下这里<br><a href="https://github.com/fi3ework/hexo-theme-archer/issues/304">https://github.com/fi3ework/hexo-theme-archer/issues/304</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> hexo algolia --help</span><br><span class="line">INFO  Validating config</span><br><span class="line">Usage: hexo algolia</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">Index your content in Algolia Search API</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  --dry-run       Does not push content to Algolia (default: false).</span><br><span class="line">  --flush         Resets the Algolia index before starting the indexation (default: false).</span><br><span class="line">  --indexing-key  An algolia API key with add/delete records permissions.</span><br><span class="line">                  It should be different than the search-only API key configured in _config.yml.</span><br><span class="line">  --layouts       A comma-separated list of page layouts to index (default: &quot;page&quot;).</span><br></pre></td></tr></table></figure>
+<p>flush 什么的，很少有教程说，不过文件换路径会非常有用</p>
+<h1 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h1><ul>
+<li>hexo 的相对链接只能在图片或者<code>[]()</code>里使用，<code>&lt;&gt;</code>里不会解析</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>Open Source</tag>
+        <tag>Document</tag>
+        <tag>WWW</tag>
+        <tag>MIT</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
