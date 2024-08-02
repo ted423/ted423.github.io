@@ -10889,7 +10889,7 @@ else document.writeln("SetCookie sucess :<br>"+document.cookie+"<br>");
   <entry>
     <title>HTML5 数据结构(structured-data) 之 微数据(microdata)</title>
     <url>/Code/WWW/itemscope/</url>
-    <content><![CDATA[<p>知道微数据是因为谷歌告诉我<a href="https://ted423.bitcron.com/post/anime/tangled">https://ted423.bitcron.com/post/anime/tangled</a>这个页面的数据结构有问题(最后发现class里有个vevent，所以谷歌认为这是一个活动)</p>
+    <content><![CDATA[<p>知道微数据是因为谷歌告诉我 <a href="https://ted423.bitcron.com/post/anime/tangled">https://ted423.bitcron.com/post/anime/tangled</a> 这个页面的数据结构有问题(最后发现class里有个vevent，所以谷歌认为这是一个活动)</p>
 <p>经过搜索，终于了解了微数据这么一个东西，微数据是为了方便机器(搜索引擎)识别而产生的东西。其有特定的规范，有特定的格式。可以丰富搜索引擎的网页摘要。</p>
 <p>本人按自己的理解乱说了一通，不保证本篇文章具备学术严谨性。</p>
 <p>还是以此为例说下</p>
@@ -11019,8 +11019,6 @@ else document.writeln("SetCookie sucess :<br>"+document.cookie+"<br>");
       </categories>
       <tags>
         <tag>WWW</tag>
-        <tag>SEO</tag>
-        <tag>HTML5</tag>
       </tags>
   </entry>
   <entry>
