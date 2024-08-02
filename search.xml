@@ -27763,7 +27763,6 @@ $(function () {
 <h1 id="Github上的操作"><a href="#Github上的操作" class="headerlink" title="Github上的操作"></a>Github上的操作</h1><p>新增一个仓库（Repositories）,仓库名为yourname.github.io</p>
 <h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>找到”blog”文件夹里的<code>_config.yml</code><br>改最下面</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: http://github.com/yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<p><code>hexo config theme 主题名</code> 产生新的主题配置(记录下主要好多主题没说明)</p>
 <h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><p><code>.\source\_posts</code><br>这里放的博客文本，<code> hexo new [layout] &lt;title&gt;</code><br>用于生成一个新博客。<br>不过一般我会手动建</p>
 <h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 <p>意思可以看上面的命令文档，基本等同于<code>hexo g -d</code></p>
