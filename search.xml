@@ -2503,9 +2503,9 @@
         <category>Issue</category>
       </categories>
       <tags>
-        <tag>过时</tag>
         <tag>Android</tag>
         <tag>Issue</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -25922,6 +25922,7 @@ Poppler - PDF函式库
       <tags>
         <tag>Windows</tag>
         <tag>不再推荐</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Download&amp;File hosting service</tag>
       </tags>
   </entry>
@@ -26009,8 +26010,9 @@ Poppler - PDF函式库
 <li>Transmission<ol>
 <li>tracker连接性不强，获取tracker信息过慢</li>
 <li>制作种子不支持网络映射</li>
-<li>单线程，牺牲性能降低占用(理论我觉得rt会更好，不过rt不支持改名文件夹这些，并且两个长期不更新的软件，tr反倒是最后更新了一下)</li>
+<li>单线程，牺牲性能降低占用(理论我觉得rt会更好，不过rt不支持改名文件夹这些，并且两个长期不更新的软件)</li>
 <li>部分种子识别有问题，部分种子无法使用(我提issue被ban)</li>
+<li>长期严重 <a href="https://github.com/transmission/transmission/issues/7078">issue</a> 版本,Issue 虽然修了，但还没发新版(5月份版本的 bug,8.26 Issue 创建,10月份未发新版)</li>
 </ol>
 </li>
 <li>qbittorrent</li>
@@ -26044,6 +26046,7 @@ Poppler - PDF函式库
         <tag>Windows</tag>
         <tag>个人观点</tag>
         <tag>分类汇总</tag>
+        <tag>建设中</tag>
         <tag>Download&amp;File hosting service</tag>
       </tags>
   </entry>
@@ -26238,6 +26241,7 @@ Poppler - PDF函式库
       <tags>
         <tag>个人观点</tag>
         <tag>分类汇总</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Download&amp;File hosting service</tag>
       </tags>
   </entry>
@@ -26333,7 +26337,7 @@ Poppler - PDF函式库
   <entry>
     <title>[ARK工具]PC Hunter</title>
     <url>/Software/Maintenance/PCHunter/</url>
-    <content><![CDATA[<p>已经不再适宜Win10<br>来源<br><a href="http://www.xuetr.com/">http://www.xuetr.com/</a></p>
+    <content><![CDATA[<p>已经不再适宜Win10<br>来源<br><del><a href="http://www.xuetr.com/">http://www.xuetr.com/</a></del> (网站已挂) -2024-10-10</p>
 <p>PC Hunter比Powertool稍微要完善一些</p>
 ]]></content>
       <categories>
@@ -26341,8 +26345,8 @@ Poppler - PDF函式库
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>过时</tag>
         <tag>Software</tag>
+        <tag>过时(Outdated)</tag>
         <tag>ARK</tag>
         <tag>Maintenance</tag>
       </tags>
@@ -26364,9 +26368,9 @@ Poppler - PDF函式库
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>过时</tag>
         <tag>Software</tag>
         <tag>第三方修改|绿化</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Maintenance</tag>
         <tag>小俊</tag>
       </tags>
@@ -26386,8 +26390,8 @@ Poppler - PDF函式库
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>过时</tag>
         <tag>Software</tag>
+        <tag>过时(Outdated)</tag>
         <tag>ARK</tag>
         <tag>Maintenance</tag>
       </tags>

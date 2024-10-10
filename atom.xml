@@ -102,6 +102,39 @@
   </entry>
   
   <entry>
+    <title>下载、资源类软件缺陷记录</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/download-defect/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/download-defect/</id>
+    <published>2024-09-16T09:56:55.168Z</published>
+    <updated>2021-04-24T08:17:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="BUG"><a href="#BUG" class="headerlink" title="BUG"></a>BUG</h1><ul><li>aria2c <a href="https://ted423.bitcron.com/post/software/zi-yuan-lei/aria2c">https://ted423.bitcron.com/post/software/zi-yuan-lei/aria2c</a></li><li>Transmission<ol><li>tracker连接性不强，获取tracker信息过慢</li><li>制作种子不支持网络映射</li><li>单线程，牺牲性能降低占用(理论我觉得rt会更好，不过rt不支持改名文件夹这些，并且两个长期不更新的软件)</li><li>部分种子识别有问题，部分种子无法使用(我提issue被ban)</li><li>长期严重 <a href="https://github.com/transmission/transmission/issues/7078">issue</a> 版本,Issue 虽然修了，但还没发新版(5月份版本的 bug,8.26 Issue 创建,10月份未发新版)</li></ol></li><li>qbittorrent</li></ul><ol><li>制作的种子dmhy无法读取中文文件名(但应该是网站问题)</li><li>制作的种子tracker中必须隔开一行，否则traker其他软件无法识别</li><li>Others <a href="https://github.com/qbittorrent/qBittorrent/issues/created_by/ted423">https://github.com/qbittorrent/qBittorrent/issues/created_by/ted423</a></li></ol><ul><li>迅雷</li></ul><ol><li>做种相当week,特别是点击添加重新下载时会直接把已下载文件从磁盘抹掉</li><li>现在的版本不能从别的地方下好然后拉进去补充进度了</li><li>迅雷并不会显示具体的tracker信息，并且也不会具体的显示谁给你传数据，也不会显示你在给谁传数据，个人感觉它是努力淡化BT原理，营造一种速度都是迅雷提供的错觉，所以很多迅雷用户体现一种反智现象</li></ol><ul><li>Deluge</li></ul><ol><li>对中文支持不好,添加种子时路径有中文就出错了，但BT下载的文件夹又可以是中文</li><li>2.0.3大概是不准备也没法支持Windows了</li></ol><h1 id="我为什么仍在使用迅雷"><a href="#我为什么仍在使用迅雷" class="headerlink" title="我为什么仍在使用迅雷"></a>我为什么仍在使用迅雷</h1><h2 id="https-ted423-bitcron-com-post-software-zi-yuan-lei-use-thunder"><a href="#https-ted423-bitcron-com-post-software-zi-yuan-lei-use-thunder" class="headerlink" title="https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder"></a><a href="https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder">https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder</a></h2><p><time>2021-04-24</time>增加一些问题<br><time>2019-08-10</time>增加Transmission，Bittorrent经判断校验缺少文件导致另一个文件无法完成校验是正常的（与分块有关）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;BUG&quot;&gt;&lt;a href=&quot;#BUG&quot; class=&quot;headerlink&quot; title=&quot;BUG&quot;&gt;&lt;/a&gt;BUG&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;aria2c &lt;a href=&quot;https://ted423.bitcron.com/post/software/zi-</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
+    
+    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/IDM/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/IDM/</id>
@@ -542,30 +575,6 @@
     <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
     
     <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[R18]SY-118</title>
-    <link href="http://ted423.github.io/Video/R18/SY-118/"/>
-    <id>http://ted423.github.io/Video/R18/SY-118/</id>
-    <published>2024-08-15T14:36:31.657Z</published>
-    <updated>2015-11-23T23:36:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Abigaile Johnson<br>1.5G WMV</p><p>magnet:?xt&#x3D;urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Abigaile Johnson&lt;br&gt;1.5G WMV&lt;/p&gt;
-&lt;p&gt;magnet:?xt&amp;#x3D;urn:btih:0501F005E8086467FB51F8B2074A4C5D138968AC&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="R18" scheme="http://ted423.github.io/tags/R18/"/>
     
   </entry>
   
