@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Issue, Regedit, Windows" />
+    <meta name="keywords" content="Issue, Regedit, Windows, 过时(Outdated)" />
   
   <meta name="description" content="原始链接：http:&#x2F;&#x2F;answers.microsoft.com&#x2F;en-us&#x2F;windows&#x2F;forum&#x2F;windows8_1-desktop&#x2F;lockscreen-issues-on-windows-81&#x2F;c51f570a-7a69-4e92-8348-3ebbed778592 个人处理方法打开注册表管理器，找到HKEY_CURRENT_USER\Software\Microsoft\Wind">
 <meta property="og:type" content="article">
@@ -32,6 +32,7 @@
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Issue">
 <meta property="article:tag" content="Regedit">
+<meta property="article:tag" content="过时(Outdated)">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
@@ -157,7 +158,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1370
+                            1371
                         
                         字
                     </li>
@@ -173,7 +174,8 @@
             <hr />
             <div itemprop="articleBody"><p>原始链接：<a target="_blank" rel="noopener" href="http://answers.microsoft.com/en-us/windows/forum/windows8_1-desktop/lockscreen-issues-on-windows-81/c51f570a-7a69-4e92-8348-3ebbed778592">http://answers.microsoft.com/en-us/windows/forum/windows8_1-desktop/lockscreen-issues-on-windows-81/c51f570a-7a69-4e92-8348-3ebbed778592</a></p>
 <p>个人处理方法<br>打开注册表管理器，找到HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion<br>删除下面的lock screen，添加注册表<br><a target="_blank" rel="noopener" href="https://mega.nz/#!ToUmES7Y!vCzx4C3Br_bg8dC1uYSeCVS2FN2mLN9-1gHvBzqXi0c">https://mega.nz/#!ToUmES7Y!vCzx4C3Br_bg8dC1uYSeCVS2FN2mLN9-1gHvBzqXi0c</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen]</span><br><span class="line">&quot;ImageId_A&quot;=&quot;&#123;9F5E9C6C-8359-4271-81D0-2B72817D3CDF&#125;&quot;</span><br><span class="line">&quot;Details_A&quot;=&quot;ROAMING&quot;</span><br><span class="line">&quot;ImageId_B&quot;=&quot;&#123;4F9143FC-E200-44C8-A55B-39084FB5C3C0&#125;&quot;</span><br><span class="line">&quot;Details_B&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.PhotoManager&quot;</span><br><span class="line">&quot;ImageId_C&quot;=&quot;&#123;7C104D7F-E472-42CB-BE45-436218EEC483&#125;&quot;</span><br><span class="line">&quot;Details_C&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.FileManager&quot;</span><br><span class="line">&quot;ImageId_D&quot;=&quot;&#123;F4BE80C1-0EBB-47F7-841A-E3F766DB1550&#125;&quot;</span><br><span class="line">&quot;Details_D&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.FileManager&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager]</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager\Feeds]</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager\Selected]</span><br></pre></td></tr></table></figure></div>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen]</span><br><span class="line">&quot;ImageId_A&quot;=&quot;&#123;9F5E9C6C-8359-4271-81D0-2B72817D3CDF&#125;&quot;</span><br><span class="line">&quot;Details_A&quot;=&quot;ROAMING&quot;</span><br><span class="line">&quot;ImageId_B&quot;=&quot;&#123;4F9143FC-E200-44C8-A55B-39084FB5C3C0&#125;&quot;</span><br><span class="line">&quot;Details_B&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.PhotoManager&quot;</span><br><span class="line">&quot;ImageId_C&quot;=&quot;&#123;7C104D7F-E472-42CB-BE45-436218EEC483&#125;&quot;</span><br><span class="line">&quot;Details_C&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.FileManager&quot;</span><br><span class="line">&quot;ImageId_D&quot;=&quot;&#123;F4BE80C1-0EBB-47F7-841A-E3F766DB1550&#125;&quot;</span><br><span class="line">&quot;Details_D&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.FileManager&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager]</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager\Feeds]</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager\Selected]</span><br></pre></td></tr></table></figure>
+</div>
         </div>
         
         <footer class="kratos-entry-footer clearfix">
@@ -190,7 +192,7 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
+                    <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E8%BF%87%E6%97%B6-Outdated/" rel="tag">过时(Outdated)</a>
                 </div>
                 <div class="pull-date">
                     <time datetime="2015-07-31T16:00:00.000Z" itemprop="dateModified">最后编辑：2015-08-01</time>
@@ -246,7 +248,7 @@
                 文章
             </span>
             <span class="count">
-                384
+                383
             </span>
         </a>
         <a class="meta-item" href="/categories/">

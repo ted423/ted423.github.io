@@ -1580,7 +1580,7 @@
 <p>这时候你会发现本地文件夹大小没怎么变化，跑下gc清理下就好</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git gc</span><br></pre></td></tr></table></figure>
 
-<p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩</p>
+<p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩(查了下就是 <code>git gc</code>，不过好像后续提交就要重新压缩)</p>
 ]]></content>
       <categories>
         <category>Code</category>
@@ -2435,7 +2435,8 @@
     <url>/Issue/8.1%E9%94%81%E5%B1%8F%E5%A3%81%E7%BA%B8/</url>
     <content><![CDATA[<p>原始链接：<a href="http://answers.microsoft.com/en-us/windows/forum/windows8_1-desktop/lockscreen-issues-on-windows-81/c51f570a-7a69-4e92-8348-3ebbed778592">http://answers.microsoft.com/en-us/windows/forum/windows8_1-desktop/lockscreen-issues-on-windows-81/c51f570a-7a69-4e92-8348-3ebbed778592</a></p>
 <p>个人处理方法<br>打开注册表管理器，找到HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion<br>删除下面的lock screen，添加注册表<br><a href="https://mega.nz/#!ToUmES7Y!vCzx4C3Br_bg8dC1uYSeCVS2FN2mLN9-1gHvBzqXi0c">https://mega.nz/#!ToUmES7Y!vCzx4C3Br_bg8dC1uYSeCVS2FN2mLN9-1gHvBzqXi0c</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen]</span><br><span class="line">&quot;ImageId_A&quot;=&quot;&#123;9F5E9C6C-8359-4271-81D0-2B72817D3CDF&#125;&quot;</span><br><span class="line">&quot;Details_A&quot;=&quot;ROAMING&quot;</span><br><span class="line">&quot;ImageId_B&quot;=&quot;&#123;4F9143FC-E200-44C8-A55B-39084FB5C3C0&#125;&quot;</span><br><span class="line">&quot;Details_B&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.PhotoManager&quot;</span><br><span class="line">&quot;ImageId_C&quot;=&quot;&#123;7C104D7F-E472-42CB-BE45-436218EEC483&#125;&quot;</span><br><span class="line">&quot;Details_C&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.FileManager&quot;</span><br><span class="line">&quot;ImageId_D&quot;=&quot;&#123;F4BE80C1-0EBB-47F7-841A-E3F766DB1550&#125;&quot;</span><br><span class="line">&quot;Details_D&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.FileManager&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager]</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager\Feeds]</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager\Selected]</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen]</span><br><span class="line">&quot;ImageId_A&quot;=&quot;&#123;9F5E9C6C-8359-4271-81D0-2B72817D3CDF&#125;&quot;</span><br><span class="line">&quot;Details_A&quot;=&quot;ROAMING&quot;</span><br><span class="line">&quot;ImageId_B&quot;=&quot;&#123;4F9143FC-E200-44C8-A55B-39084FB5C3C0&#125;&quot;</span><br><span class="line">&quot;Details_B&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.PhotoManager&quot;</span><br><span class="line">&quot;ImageId_C&quot;=&quot;&#123;7C104D7F-E472-42CB-BE45-436218EEC483&#125;&quot;</span><br><span class="line">&quot;Details_C&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.FileManager&quot;</span><br><span class="line">&quot;ImageId_D&quot;=&quot;&#123;F4BE80C1-0EBB-47F7-841A-E3F766DB1550&#125;&quot;</span><br><span class="line">&quot;Details_D&quot;=&quot;APPID:FileManager_cw5n1h2txyewy!Microsoft.Windows.FileManager&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager]</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager\Feeds]</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lock Screen\FeedManager\Selected]</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>Issue</category>
       </categories>
@@ -2443,6 +2444,7 @@
         <tag>Windows</tag>
         <tag>Issue</tag>
         <tag>Regedit</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -3162,9 +3164,9 @@
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>过时</tag>
         <tag>Issue</tag>
         <tag>Windows 10</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -8790,17 +8792,6 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       </tags>
   </entry>
   <entry>
-    <title>Write-box</title>
-    <url>/etc/Write-box/</url>
-    <content><![CDATA[<p>不得不说…..farbox的在线编辑器有点让人蛋碎。</p>
-<p>于是找到了Writebox完美解决了在线编辑的问题。</p>
-<p><a href="https://write-box.appspot.com/">https://write-box.appspot.com</a></p>
-]]></content>
-      <tags>
-        <tag>过时</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为什么试了下 Hexo NexT 然后不用了</title>
     <url>/etc/hexo-next/</url>
     <content><![CDATA[<p>尽量用简介的语言表达吧，就是tags不会在列表页显示，然后就是auto_excerpt的移除。</p>
@@ -9913,11 +9904,12 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 table{
 font-size: 0.78em;
 }
-</style>]]></content>
+</style>
+]]></content>
       <tags>
-        <tag>过时</tag>
         <tag>完结</tag>
         <tag>小说</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -25947,9 +25939,9 @@ Poppler - PDF函式库
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>过时</tag>
         <tag>第三方修改|绿化</tag>
         <tag>破解</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Download&amp;File hosting service</tag>
       </tags>
   </entry>

@@ -27,7 +27,7 @@
 <meta property="og:description" content="首先你需要知道的是，因为 hexo 每次生成都是基本所有文件全部重新编译，因此部署的变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。 如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。 另外因为hexo-deployer-git是force提交，所以你可以直接在本地.deploy_git起新空分支。记得之后删除老分支。 1g">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-16T09:35:52.074Z">
-<meta property="article:modified_time" content="2024-10-10T07:43:16.197Z">
+<meta property="article:modified_time" content="2024-10-10T09:22:12.331Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="WWW">
 <meta property="article:tag" content="Document">
@@ -159,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            318
+                            347
                         
                         字
                     </li>
@@ -181,7 +181,7 @@
 <p>这时候你会发现本地文件夹大小没怎么变化，跑下gc清理下就好</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git gc</span><br></pre></td></tr></table></figure>
 
-<p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩</p>
+<p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩(查了下就是 <code>git gc</code>，不过好像后续提交就要重新压缩)</p>
 </div>
         </div>
         
@@ -202,7 +202,7 @@
                     <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="tag-none-link" href="/tags/MIT/" rel="tag">MIT</a>, <a class="tag-none-link" href="/tags/Open-Source/" rel="tag">Open Source</a>, <a class="tag-none-link" href="/tags/WWW/" rel="tag">WWW</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-10-10T07:43:16.197Z" itemprop="dateModified">最后编辑：2024-10-10</time>
+                    <time datetime="2024-10-10T09:22:12.331Z" itemprop="dateModified">最后编辑：2024-10-10</time>
                 </div>
             </div>
         </footer>
@@ -255,7 +255,7 @@
                 文章
             </span>
             <span class="count">
-                384
+                383
             </span>
         </a>
         <a class="meta-item" href="/categories/">
