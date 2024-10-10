@@ -1622,9 +1622,14 @@
 <h1 id="Github上的操作"><a href="#Github上的操作" class="headerlink" title="Github上的操作"></a>Github上的操作</h1><p>新增一个仓库（Repositories）,仓库名为yourname.github.io</p>
 <h1 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h1><p>找到”blog”文件夹里的<code>_config.yml</code><br>改最下面</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: http://github.com/yourname/yourname.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>另外注意可以加上 username 跟 mail</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">name: [git user]</span><br><span class="line">email: [git email]</span><br></pre></td></tr></table></figure>
+
 <h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><p><code>.\source\_posts</code><br>这里放的博客文本，<code> hexo new [layout] &lt;title&gt;</code><br>用于生成一个新博客。<br>不过一般我会手动建</p>
 <h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 <p>意思可以看上面的命令文档，基本等同于<code>hexo g -d</code></p>
+<p>这里有个<a href="https://github.com/hexojs/hexo-deployer-git/issues/381">Issue</a></p>
+<p>第一次使用的时候会需要你输入 username 和 token (虽然显示的是密码，但实际要输入 github token，至于怎么生成就自己去搜索下好了)</p>
 <h1 id="安装一个主题"><a href="#安装一个主题" class="headerlink" title="安装一个主题"></a>安装一个主题</h1><p>这个就自己折腾吧,很多主题还要装依赖<br>还有很多的坑</p>
 <h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><p>网页有缓存</p>
 <h1 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm update --save</span><br></pre></td></tr></table></figure>
