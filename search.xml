@@ -2092,9 +2092,9 @@
         <category>Browser</category>
       </categories>
       <tags>
-        <tag>过时</tag>
         <tag>Browser</tag>
         <tag>Firefox</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -2134,8 +2134,8 @@
         <category>Browser</category>
       </categories>
       <tags>
-        <tag>过时</tag>
         <tag>Firefox</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -2149,8 +2149,8 @@
         <category>Browser</category>
       </categories>
       <tags>
-        <tag>过时</tag>
         <tag>Firefox</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -2159,6 +2159,8 @@
     <content><![CDATA[<p>这是一个FF为了想让浏览器显得安全些做的。很神奇的是，却没有”下次不再显示”这个选项(也可能最新版有了？)总之这个设定显示出了FF是多么的不人性化。在FF目前做出很多奇怪决定的状况，我完全不想再继续使用火狐。 -2021-08-18</p>
 <p>粘个脚本，被那啥“欺诈警告：粘贴您不了解的东西时请务必小心，这可能会允许攻击者窃取你的身份信息，或者控制您的计算机。请在下方的代码草稿纸中输入”allow pasting”以允许粘贴”烦的要死。<br>烦的想骂人</p>
 <p>具体进到<code>about:config</code>里将<code>devtools.selfxss.count</code>调到100就可以了</p>
+<hr>
+<p>Chrome好像也开始了，但最近没有经常测试 -2024-10-10</p>
 ]]></content>
       <categories>
         <category>Browser</category>
@@ -2166,6 +2168,7 @@
       <tags>
         <tag>Browser</tag>
         <tag>Firefox</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -2179,8 +2182,8 @@
         <category>Browser</category>
       </categories>
       <tags>
-        <tag>过时</tag>
         <tag>Firefox</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -23720,16 +23723,17 @@ function hide(id){
     <content><![CDATA[<p>这个错误应该跟下载相关，我手动下载手动安装的这个安装包<br>x64:<a href="http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x64_9b2f96010adf1b547157c79c8ad52bdb26815e0b.cab">http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x64_9b2f96010adf1b547157c79c8ad52bdb26815e0b.cab</a></p>
 <p>x86:<a href="http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x86_63c92652dc15328484dc68883d5473e6d496ac6f.cab">http://download.windowsupdate.com/c/msdownload/update/software/crup/2015/09/windows10.0-kb3093266-x86_63c92652dc15328484dc68883d5473e6d496ac6f.cab</a></p>
 <p>然后用DISM命令进行安装</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dism /online /add-package /packagepath:“cab所在文件夹”</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dism /online /add-package /packagepath:“cab所在文件夹”</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>Issue</category>
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>过时</tag>
         <tag>Issue</tag>
         <tag>Windows 10</tag>
         <tag>Windows Update</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
