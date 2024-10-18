@@ -2614,27 +2614,6 @@
       </tags>
   </entry>
   <entry>
-    <title>[问题处理]Lync联系人名片显示异常</title>
-    <url>/Issue/Lync/</url>
-    <content><![CDATA[<h1 id="症状"><a href="#症状" class="headerlink" title="症状"></a>症状</h1><p>Lync是公司内部使用，公司有自己的Exchange服务器。<br>联系人资料显示异常，如姓名不对(账号相同，更换其他人使用，但仍显示之前的人的姓名)，电话号码不显示，或者其他。</p>
-<h1 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h1><p>由于删除Lync配置无效，但Lync跟outlook有联系，因此需要找到Outlook里相关配置进行删除。</p>
-<h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><ol>
-<li>退出lync, 打开“%appdata%..\Local\Microsoft\Outlook”</li>
-<li>删除“Offline Address Books”文件夹，重新登录Lync</li>
-<li>如仍有问题，在Outlook里找到联系人名片以及Lync联系人名片删除</li>
-<li>如Outlook里删除不了，可能需要登录网页版的邮件服务器里删除，或者联系Exchange服务器管理员</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Issue</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>过时</tag>
-        <tag>Issue</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[问题处理]AD相关 时间提供程序 NtpClient 报错处理</title>
     <url>/Issue/NtpClient/</url>
     <content><![CDATA[<p>报错信息如下<br>“时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。”</p>
@@ -4147,34 +4126,6 @@
       <tags>
         <tag>Document</tag>
         <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</title>
-    <url>/Document/McAfee/</url>
-    <content><![CDATA[<p>目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50<br>以前用，自己写规则经常不起作用，而且找不到官方文档…..<br>但实际上来讲，McAfee的规则还是很难用的<br>现在总算是找到了文档(原来很多地方要用“<code>**</code>”而不是”<code>*</code>“)</p>
-<h1 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h1><p>‘,’用于在匹配进程以及排除进程中进行分割，支持带路径的以及进程名</p>
-<h1 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h1><p>最重要的就是’<em>‘以及’**’的区别，可以这么理解，’</em>‘只是一级目录，’**’则表示多级目录。比方说’C:*‘代表C盘根目录下能看到的所有文件夹以及文件，’C:**’则代表所有C盘下的东西<br>McAfee 8.8 规则设置之难，难于通配符而已。通配符之难，难于8.8不支持“？：\”表示任意盘符。以WINDOWS和Program Files文件夹为例，下面是文件夹的表示方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*\WINDOWS：表示任意盘符下的WINDOWS文件夹（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS：表示任意盘符下的WINDOWS文件夹（所有进程有效）。</span><br><span class="line">*\**\WINDOWS：表示任意盘符下的WINDOWS文件夹（所有进程有效）。</span><br></pre></td></tr></table></figure>
-<p>文件的通配符表示方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（所有进程有效）。</span><br><span class="line">*\**\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（所有进程有效）。</span><br><span class="line">*\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（所有进程有效）。</span><br><span class="line">*\**\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（所有进程有效）。</span><br></pre></td></tr></table></figure>
-<p>文件夹名的通配符表示方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Program Files*：表示Program Files文件夹以及其后有多个任意字符的文件夹，当然包括Program Files (x86)。</span><br><span class="line">PROGRA~?：？表示任意单个字符，当然包括1、2、3、4等。关于PROGRA~1，百度一下就知道了。</span><br><span class="line">*\Program Files*\**\*.*：表示任意盘符Program Files和Program Files (x86)文件夹下多级目录中的所有带后缀的文件（在“要阻止的进程”中无效）</span><br><span class="line">**\Program Files*\**\*.*：表示任意盘符Program Files和Program Files (x86)文件夹下多级目录中的所有带后缀的文件（所有进程有效）</span><br><span class="line">*\**\Program Files*\**\*.*：表示任意盘符Program Files和Program Files (x86)文件夹下多级目录中的所有带后缀的文件（所有进程有效）</span><br></pre></td></tr></table></figure>
-<p>要包含的进程通配符表示方法：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*：表示所有进程。</span><br><span class="line">**：表示所有进程。</span><br><span class="line">*.*：表示所有带后缀的进程（解决System进程无法排除的问题）。</span><br></pre></td></tr></table></figure>
-<p>其它：?:以及*：单独表示根目录继续有效。<br>说明：经实践，以上语法在8.7i中同样有效</p>
-<h1 id="规则备份"><a href="#规则备份" class="headerlink" title="规则备份"></a>规则备份</h1><p>需要在关闭软件自保护的情况下导出如下注册表</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\McAfee\SystemCore\VSCore\On Access Scanner</span><br></pre></td></tr></table></figure>
-<p>(导入时同样需要关闭软件自保护)</p>
-]]></content>
-      <categories>
-        <category>Document</category>
-      </categories>
-      <tags>
-        <tag>Document</tag>
-        <tag>Windows</tag>
-        <tag>过时</tag>
-        <tag>安全软件</tag>
       </tags>
   </entry>
   <entry>
@@ -6818,6 +6769,8 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
     <title>[开源]FlashPatch</title>
     <url>/Software/FlashPatch/</url>
     <content><![CDATA[<p>一个你懂的软件<br><a href="https://github.com/darktohka/FlashPatch">https://github.com/darktohka/FlashPatch</a><br>并且实际我不想介绍它。<br>如果不是某些傻逼还在用，我都不想搞这个</p>
+<hr>
+<p>应该没人在用了 –2024-10-18</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -6826,6 +6779,8 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>MIT</tag>
         <tag>Windows</tag>
         <tag>Software</tag>
+        <tag>过时(Outdated)</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -6936,13 +6891,13 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <category>Software</category>
       </categories>
       <tags>
-        <tag>Open Source</tag>
         <tag>Windows</tag>
         <tag>Linux</tag>
         <tag>Software</tag>
         <tag>GPLv2</tag>
         <tag>GPLv3</tag>
         <tag>OS X</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -7251,6 +7206,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Software</tag>
         <tag>OS X</tag>
         <tag>VM</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -26062,7 +26018,6 @@ Poppler - PDF函式库
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>过时</tag>
         <tag>Offline Install</tag>
         <tag>Dropbox</tag>
         <tag>Download&amp;File hosting service</tag>
@@ -26745,6 +26700,7 @@ Poppler - PDF函式库
         <category>Software</category>
       </categories>
       <tags>
+        <tag>过时(Outdated)</tag>
         <tag>Security Software</tag>
         <tag>个人评价</tag>
       </tags>
@@ -26766,6 +26722,7 @@ Poppler - PDF函式库
       <tags>
         <tag>Windows</tag>
         <tag>个人观点</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Security Software</tag>
       </tags>
   </entry>
@@ -27890,6 +27847,34 @@ $(function () {
       <tags>
         <tag>Document</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置</title>
+    <url>/Software/Security/McAfee/</url>
+    <content><![CDATA[<p>目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50<br>以前用，自己写规则经常不起作用，而且找不到官方文档…..<br>但实际上来讲，McAfee的规则还是很难用的<br>现在总算是找到了文档(原来很多地方要用“<code>**</code>”而不是”<code>*</code>“)</p>
+<h1 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h1><p>‘,’用于在匹配进程以及排除进程中进行分割，支持带路径的以及进程名</p>
+<h1 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h1><p>最重要的就是’<em>‘以及’**’的区别，可以这么理解，’</em>‘只是一级目录，’**’则表示多级目录。比方说’C:*‘代表C盘根目录下能看到的所有文件夹以及文件，’C:**’则代表所有C盘下的东西<br>McAfee 8.8 规则设置之难，难于通配符而已。通配符之难，难于8.8不支持“？：\”表示任意盘符。以WINDOWS和Program Files文件夹为例，下面是文件夹的表示方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*\WINDOWS：表示任意盘符下的WINDOWS文件夹（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS：表示任意盘符下的WINDOWS文件夹（所有进程有效）。</span><br><span class="line">*\**\WINDOWS：表示任意盘符下的WINDOWS文件夹（所有进程有效）。</span><br></pre></td></tr></table></figure>
+<p>文件的通配符表示方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（所有进程有效）。</span><br><span class="line">*\**\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（所有进程有效）。</span><br><span class="line">*\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（所有进程有效）。</span><br><span class="line">*\**\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（所有进程有效）。</span><br></pre></td></tr></table></figure>
+<p>文件夹名的通配符表示方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Program Files*：表示Program Files文件夹以及其后有多个任意字符的文件夹，当然包括Program Files (x86)。</span><br><span class="line">PROGRA~?：？表示任意单个字符，当然包括1、2、3、4等。关于PROGRA~1，百度一下就知道了。</span><br><span class="line">*\Program Files*\**\*.*：表示任意盘符Program Files和Program Files (x86)文件夹下多级目录中的所有带后缀的文件（在“要阻止的进程”中无效）</span><br><span class="line">**\Program Files*\**\*.*：表示任意盘符Program Files和Program Files (x86)文件夹下多级目录中的所有带后缀的文件（所有进程有效）</span><br><span class="line">*\**\Program Files*\**\*.*：表示任意盘符Program Files和Program Files (x86)文件夹下多级目录中的所有带后缀的文件（所有进程有效）</span><br></pre></td></tr></table></figure>
+<p>要包含的进程通配符表示方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*：表示所有进程。</span><br><span class="line">**：表示所有进程。</span><br><span class="line">*.*：表示所有带后缀的进程（解决System进程无法排除的问题）。</span><br></pre></td></tr></table></figure>
+<p>其它：?:以及*：单独表示根目录继续有效。<br>说明：经实践，以上语法在8.7i中同样有效</p>
+<h1 id="规则备份"><a href="#规则备份" class="headerlink" title="规则备份"></a>规则备份</h1><p>需要在关闭软件自保护的情况下导出如下注册表</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\McAfee\SystemCore\VSCore\On Access Scanner</span><br></pre></td></tr></table></figure>
+<p>(导入时同样需要关闭软件自保护)</p>
+]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>Document</tag>
+        <tag>Windows</tag>
+        <tag>安全软件</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
 </search>
