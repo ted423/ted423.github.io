@@ -3914,10 +3914,10 @@
       </tags>
   </entry>
   <entry>
-    <title>FHD、HD、SD、1080p、1080I、720P等等的涵义</title>
+    <title>FHD、HD、SD、1080p、1080i、720p等等的涵义</title>
     <url>/Document/Graphics%20display%20resolution/</url>
-    <content><![CDATA[<p>我想大多都知道1080p的意思，但是我想说只是了解个大概不行。<br>字母p意为逐行扫描（progressive scan），但是需注意的是只要水平扫描线超过1080条就能称之为1080p，比方说分辨率1000×1080同样能称为1080p.<br>有了逐行扫描，就有隔行扫描（interlaced scan），1080I以及1080p的就在这里，当然，1080I只有540条线。<br>另外1080I和540P是两个概念，具体就在逐行和隔行上,虽然都是540条线(笑)。还有个需要了解的概念是<a href="https://zh.wikipedia.org/wiki/D%E7%AB%AF%E5%AD%90">D端子</a>,就因为这个，往往有人把1080I和540P划上等号。<br>关于隔行扫描，还有个需要了解的概念就是<a href="https://zh.wikipedia.org/wiki/%E5%8E%BB%E4%BA%A4%E9%8C%AF">去交错</a></p>
-<p>然后就到了High-Definition(高清)环节了。<br>其实这里只有一个需要记住<strong>FHD≠1080p</strong>，因为这里的标准都是分辨率，FHD (1920x1080)，而1080p仅仅对行数有要求，并且隔行(1080I)也可以称为FHD，至于720P什么的以此类推。</p>
+    <content><![CDATA[<p>我想大多都知道1080p的意思，但是我想说只是了解个大概不行。<br>字母p意为逐行扫描（progressive scan），但是需注意的是只要水平扫描线超过1080条就能称之为1080p，比方说分辨率1000×1080同样能称为1080p.<br>有了逐行扫描，就有隔行扫描（interlaced scan），1080i以及1080p的就在这里，当然，1080i只有540条线。<br>另外1080i和540P是两个概念，具体就在逐行和隔行上,虽然都是540条线(笑)。还有个需要了解的概念是<a href="https://zh.wikipedia.org/wiki/D%E7%AB%AF%E5%AD%90">D端子</a>,就因为这个，往往有人把1080i和540p划上等号。<br>关于隔行扫描，还有个需要了解的概念就是<a href="https://zh.wikipedia.org/wiki/%E5%8E%BB%E4%BA%A4%E9%8C%AF">去交错</a></p>
+<p>然后就到了High-Definition(高清)环节了。<br>其实这里只有一个需要记住<strong>FHD≠1080p</strong>，因为这里的标准都是分辨率，FHD (1920x1080)，而1080p仅仅对行数有要求，并且隔行(1080i)也可以称为FHD，至于720p什么的以此类推。</p>
 <p>来张表吧</p>
 <table>
 <thead>
@@ -8292,7 +8292,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>MV</tag>
         <tag>AKB48</tag>
         <tag>HD</tag>
-        <tag>720P</tag>
+        <tag>720p</tag>
       </tags>
   </entry>
   <entry>
