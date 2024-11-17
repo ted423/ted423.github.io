@@ -23588,7 +23588,7 @@ function hide(id){
     <title>关闭打开文件的安全警告 不提示 这些文件可能对你的计算机有害</title>
     <url>/Issue/Group%20Policy/%E5%85%B3%E9%97%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A/</url>
     <content><![CDATA[<p>在组策略中<br>用户配置 –&gt; 管理模板 –&gt; Windows组件 –&gt; 附件管理器<br>打开 “低风险文件类型的包含列表”<br>启用后把相关扩展名添加进去。<br>例如<code>.exe;.js</code></p>
-<p>另外一个是访问SMB遇到的处理方式<br>打开“INTERNET 选项”，“安全”选项卡；在“本地Intranet”的“站点”中；<br>把你本地的网络段加上，如<br>“192.168.<em>.<em>”，“10.</em>.</em>.*”</p>
+<p>另外一个是访问SMB遇到的处理方式<br>打开“INTERNET 选项”，“安全”选项卡；在“本地Intranet”的“站点”中；<br>把你本地的网络段加上，如<br><code>192.168.*.*</code>，<code>10.*.*.*</code></p>
 <hr>
 <p><time>2019-12-19</time> 增加网络映射里放执行文件的问题</p>
 ]]></content>
