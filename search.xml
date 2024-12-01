@@ -27888,4 +27888,29 @@ $(function () {
         <tag>过时(Outdated)</tag>
       </tags>
   </entry>
+  <entry>
+    <title>对 Nextcloud 的抱怨</title>
+    <url>/Software/Download&amp;File%20hosting%20service/Nextcloud/</url>
+    <content><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p>
+<ol>
+<li>Dropbox 长期在右键菜单里拉屎</li>
+<li>很多次同步卡住(后面发现文件有些奇怪的状态)</li>
+</ol>
+<p>但 Nextcloud 的问题也不少，甚至更可怕</p>
+<ol>
+<li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。(不过也有可能跟 Server 性能有关)</li>
+<li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>个人观点</tag>
+        <tag>Linux</tag>
+        <tag>Dropbox</tag>
+        <tag>Download&amp;File hosting service</tag>
+      </tags>
+  </entry>
 </search>

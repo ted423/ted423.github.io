@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2015-11-15T02:00:00.000Z</updated>
+  <updated>2024-11-28T15:19:42.573Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对 Nextcloud 的抱怨</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
+    <published>2024-11-28T14:11:40.109Z</published>
+    <updated>2024-11-28T15:19:42.573Z</updated>
+    
+    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li></ol><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。(不过也有可能跟 Server 性能有关)</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dropbox 长期在右键菜单里拉屎&lt;/li&gt;
+&lt;li&gt;很多次同步卡住(后面发现文件有些奇怪的状态)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;但 Nextcloud 的问题也不少，甚</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Dropbox" scheme="http://ted423.github.io/tags/Dropbox/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
   
   <entry>
     <title>[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</title>
@@ -538,36 +575,6 @@
     <category term="HD" scheme="http://ted423.github.io/tags/HD/"/>
     
     <category term="480p" scheme="http://ted423.github.io/tags/480p/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[性感MV]AOA - Miniskirt</title>
-    <link href="http://ted423.github.io/Video/AOA%20-%20Miniskirt/"/>
-    <id>http://ted423.github.io/Video/AOA%20-%20Miniskirt/</id>
-    <published>2024-08-15T14:36:33.302Z</published>
-    <updated>2015-12-27T07:44:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://vignette.wikia.nocookie.net/kpop/images/c/c7/AOA_Miniskirt_Japanese_digital_cover.png/revision/latest?cb%5Cu003d20170903202225" alt="AOA - Miniskirt"><br>来源<br><a href="ed2k://|file|AOA%20-%20Miniskirt.mp4|91430286|8FA1C148DB79EB06C901D35D86B84D1A|h=4E5QHRZEKI2LBPOG4PKQSKNUOFCHSPNE|/">ed2k://|file|AOA%20-%20Miniskirt.mp4|91430286|8FA1C148DB79EB06C901D35D86B84D1A|h=4E5QHRZEKI2LBPOG4PKQSKNUOFCHSPNE|/</a></p><p>网盘分流<br><a href="https://mega.nz/#!fxMG2SbL!MmSnfOPg6HcO6P-bxAjLiQuYbgBjSIsjBo7rZLxwNVg">https://mega.nz/#!fxMG2SbL!MmSnfOPg6HcO6P-bxAjLiQuYbgBjSIsjBo7rZLxwNVg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://vignette.wikia.nocookie.net/kpop/images/c/c7/AOA_Miniskirt_Japanese_digital_cover.png/revision/latest?cb%5Cu003d2017090</summary>
-      
-    
-    
-    
-    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
-    
-    
-    <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
-    
-    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
-    
-    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
-    
-    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
     
   </entry>
   
