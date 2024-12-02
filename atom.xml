@@ -307,7 +307,7 @@
     <link href="http://ted423.github.io/Software/Compression/7-Zip-zstd/"/>
     <id>http://ted423.github.io/Software/Compression/7-Zip-zstd/</id>
     <published>2024-09-16T09:56:53.740Z</published>
-    <updated>2024-10-10T06:05:08.020Z</updated>
+    <updated>2024-10-10T06:05:00.000Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p><hr><p>不幸的 见<a href="https://github.com/mcmilk/7-Zip-zstd/issues/377">Issue</a> -2024-10-10</p>]]></content>
     
@@ -322,8 +322,6 @@
     <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
     
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
-    
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="LGPLv2.1" scheme="http://ted423.github.io/tags/LGPLv2-1/"/>
@@ -331,6 +329,8 @@
     <category term="过时(Outdated)" scheme="http://ted423.github.io/tags/%E8%BF%87%E6%97%B6-Outdated/"/>
     
     <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
     
   </entry>
   
@@ -362,10 +362,10 @@
   
   <entry>
     <title>Hexo精简</title>
-    <link href="http://ted423.github.io/Code/Hexo%E7%B2%BE%E7%AE%80/"/>
-    <id>http://ted423.github.io/Code/Hexo%E7%B2%BE%E7%AE%80/</id>
+    <link href="http://ted423.github.io/Document/Hexo%E7%B2%BE%E7%AE%80/"/>
+    <id>http://ted423.github.io/Document/Hexo%E7%B2%BE%E7%AE%80/</id>
     <published>2024-09-16T09:35:52.074Z</published>
-    <updated>2024-10-10T09:22:12.331Z</updated>
+    <updated>2024-10-09T16:00:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>首先你需要知道的是，因为 hexo 每次生成都是基本所有文件全部重新编译，因此部署的变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。</p><p>如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。</p><p>另外因为<code>hexo-deployer-git</code>是force提交，所以你可以直接在本地.deploy_git起新空分支。记得之后删除老分支。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan branchname</span><br></pre></td></tr></table></figure><p>这时候你会发现本地文件夹大小没怎么变化，跑下gc清理下就好</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git gc</span><br></pre></td></tr></table></figure><p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩(查了下就是 <code>git gc</code>，不过好像后续提交就要重新压缩)</p>]]></content>
     
@@ -378,16 +378,12 @@
     
     
     
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
     
     
     <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
-    
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
     
     <category term="Hexo" scheme="http://ted423.github.io/tags/Hexo/"/>
     

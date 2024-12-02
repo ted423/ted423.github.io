@@ -1570,30 +1570,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo精简</title>
-    <url>/Code/Hexo%E7%B2%BE%E7%AE%80/</url>
-    <content><![CDATA[<p>首先你需要知道的是，因为 hexo 每次生成都是基本所有文件全部重新编译，因此部署的变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。</p>
-<p>如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。</p>
-<p>另外因为<code>hexo-deployer-git</code>是force提交，所以你可以直接在本地.deploy_git起新空分支。记得之后删除老分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout --orphan branchname</span><br></pre></td></tr></table></figure>
-
-<p>这时候你会发现本地文件夹大小没怎么变化，跑下gc清理下就好</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git gc</span><br></pre></td></tr></table></figure>
-
-<p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩(查了下就是 <code>git gc</code>，不过好像后续提交就要重新压缩)</p>
-]]></content>
-      <categories>
-        <category>Code</category>
-      </categories>
-      <tags>
-        <tag>WWW</tag>
-        <tag>Document</tag>
-        <tag>MIT</tag>
-        <tag>Open Source</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MFC界面定制</title>
     <url>/Code/MFC%E6%9C%80%E5%A4%A7%E6%9C%80%E5%B0%8F%E5%8C%96%E7%9A%84%E6%A1%86/</url>
     <content><![CDATA[<p>位于rc文件中<br>STYLE 这一行控制WS_MAXIMIZEBOX就是最大化的按钮，删掉最大化按钮就不能点击</p>
@@ -1660,8 +1636,8 @@
         <tag>WWW</tag>
         <tag>Document</tag>
         <tag>MIT</tag>
-        <tag>Open Source</tag>
         <tag>Hexo</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -25580,11 +25556,11 @@ $(function () {
         <category>Software</category>
       </categories>
       <tags>
-        <tag>Open Source</tag>
         <tag>Windows</tag>
         <tag>LGPLv2.1</tag>
         <tag>过时(Outdated)</tag>
         <tag>Compression</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -27954,6 +27930,28 @@ $(function () {
         <tag>Apache License 2.0</tag>
         <tag>LGPLv2.1</tag>
         <tag>开源(Open Source)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo精简</title>
+    <url>/Document/Hexo%E7%B2%BE%E7%AE%80/</url>
+    <content><![CDATA[<p>首先你需要知道的是，因为 hexo 每次生成都是基本所有文件全部重新编译，因此部署的变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。</p>
+<p>如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。</p>
+<p>另外因为<code>hexo-deployer-git</code>是force提交，所以你可以直接在本地.deploy_git起新空分支。记得之后删除老分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git checkout --orphan branchname</span><br></pre></td></tr></table></figure>
+
+<p>这时候你会发现本地文件夹大小没怎么变化，跑下gc清理下就好</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git gc</span><br></pre></td></tr></table></figure>
+
+<p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩(查了下就是 <code>git gc</code>，不过好像后续提交就要重新压缩)</p>
+]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>WWW</tag>
+        <tag>Document</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
