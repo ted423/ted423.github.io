@@ -27934,4 +27934,17 @@ $(function () {
         <tag>iOS</tag>
       </tags>
   </entry>
+  <entry>
+    <title>[开源]Bulk Crap Uninstaller</title>
+    <url>/Software/Bulk%20Crap%20Uninstaller/</url>
+    <content><![CDATA[<p><a href="https://github.com/Klocman/Bulk-Crap-Uninstaller/">https://github.com/Klocman/Bulk-Crap-Uninstaller/</a></p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Apache License 2.0</tag>
+      </tags>
+  </entry>
 </search>

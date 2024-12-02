@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-02T01:26:21.438Z</updated>
+  <updated>2024-12-02T01:34:27.916Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[开源]Bulk Crap Uninstaller</title>
+    <link href="http://ted423.github.io/Software/Bulk%20Crap%20Uninstaller/"/>
+    <id>http://ted423.github.io/Software/Bulk%20Crap%20Uninstaller/</id>
+    <published>2024-12-02T01:32:19.648Z</published>
+    <updated>2024-12-02T01:34:27.916Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/Klocman/Bulk-Crap-Uninstaller/">https://github.com/Klocman/Bulk-Crap-Uninstaller/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/Klocman/Bulk-Crap-Uninstaller/&quot;&gt;https://github.com/Klocman/Bulk-Crap-Uninstaller/&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
+    
+  </entry>
   
   <entry>
     <title>[开源]localsend - 跨端文件传输工具</title>
@@ -559,29 +586,6 @@
     
     
     <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Font]字体包</title>
-    <link href="http://ted423.github.io/etc/Fonts/"/>
-    <id>http://ted423.github.io/etc/Fonts/</id>
-    <published>2024-08-15T14:36:34.809Z</published>
-    <updated>2014-12-31T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>所有的资源我都没留字体，放到了一起</p><p><a href="https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0">https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;所有的资源我都没留字体，放到了一起&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/sh/x5lizqza957hsol/AACqgVqTO2yktoy08qF0sCHBa?dl=0&quot;&gt;https://www.dropbox.com/sh/x</summary>
-      
-    
-    
-    
-    
-    <category term="Font" scheme="http://ted423.github.io/tags/Font/"/>
     
   </entry>
   
