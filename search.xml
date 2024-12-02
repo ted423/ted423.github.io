@@ -6632,6 +6632,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Software</tag>
         <tag>Windows Update</tag>
         <tag>破解&amp;激活</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -6709,6 +6710,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>WWW</tag>
         <tag>MIT</tag>
         <tag>Software</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -6871,6 +6873,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Windows</tag>
         <tag>Software</tag>
         <tag>破解&amp;激活</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -7282,6 +7285,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>OS X</tag>
         <tag>LGPL</tag>
         <tag>跨平台</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -27934,6 +27938,7 @@ $(function () {
         <tag>Apache License 2.0</tag>
         <tag>macOS</tag>
         <tag>iOS</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -27947,6 +27952,7 @@ $(function () {
       <tags>
         <tag>Windows</tag>
         <tag>Apache License 2.0</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
 </search>

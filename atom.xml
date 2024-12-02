@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-02T01:34:27.916Z</updated>
+  <updated>2024-12-02T01:41:59.244Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ted423.github.io/Software/Bulk%20Crap%20Uninstaller/"/>
     <id>http://ted423.github.io/Software/Bulk%20Crap%20Uninstaller/</id>
     <published>2024-12-02T01:32:19.648Z</published>
-    <updated>2024-12-02T01:34:27.916Z</updated>
+    <updated>2024-12-02T01:41:59.244Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/Klocman/Bulk-Crap-Uninstaller/">https://github.com/Klocman/Bulk-Crap-Uninstaller/</a></p>]]></content>
     
@@ -41,6 +41,8 @@
     
     <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
     
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
   </entry>
   
   <entry>
@@ -48,7 +50,7 @@
     <link href="http://ted423.github.io/Software/localsend/"/>
     <id>http://ted423.github.io/Software/localsend/</id>
     <published>2024-12-02T01:15:41.230Z</published>
-    <updated>2024-12-02T01:26:21.438Z</updated>
+    <updated>2024-12-02T01:44:54.431Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/localsend/localsend">https://github.com/localsend/localsend</a></p><p>缺点就是要在同一个wifi&#x2F;网段下面，不过能通过发送连接来解决这个问题，不过这个还需要一个聊天软件或者剪贴板同步工具之类的来处理</p>]]></content>
     
@@ -75,6 +77,8 @@
     <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
     
     <category term="iOS" scheme="http://ted423.github.io/tags/iOS/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
     
   </entry>
   
