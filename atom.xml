@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-11-28T15:19:42.573Z</updated>
+  <updated>2024-12-02T01:26:21.438Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,13 +17,48 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[开源]localsend - 跨端文件传输工具</title>
+    <link href="http://ted423.github.io/Software/localsend/"/>
+    <id>http://ted423.github.io/Software/localsend/</id>
+    <published>2024-12-02T01:15:41.230Z</published>
+    <updated>2024-12-02T01:26:21.438Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/localsend/localsend">https://github.com/localsend/localsend</a></p><p>缺点就是要在同一个wifi&#x2F;网段下面，不过能通过发送连接来解决这个问题，不过这个还需要一个聊天软件或者剪贴板同步工具之类的来处理</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/localsend/localsend&quot;&gt;https://github.com/localsend/localsend&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;缺点就是要在同一个wifi&amp;#x2F;网段下面，不过能通过发送连接来解决这个</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
+    
+    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
+    
+    <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
+    
+    <category term="iOS" scheme="http://ted423.github.io/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>对 Nextcloud 的抱怨</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
-    <published>2024-11-28T14:11:40.109Z</published>
-    <updated>2024-11-28T15:19:42.573Z</updated>
+    <published>2024-11-28T15:29:00.612Z</published>
+    <updated>2024-12-02T01:27:34.826Z</updated>
     
-    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li></ol><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。(不过也有可能跟 Server 性能有关)</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li></ol><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。(不过也有可能跟 Server 性能有关)</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li>怀疑由上述两个问题导致的同步问题</li></ol><p>目前处于纠结期</p>]]></content>
     
     
       
@@ -547,34 +582,6 @@
     
     
     <category term="Font" scheme="http://ted423.github.io/tags/Font/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[MV]真野恵里菜 - お願いだから</title>
-    <link href="http://ted423.github.io/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/"/>
-    <id>http://ted423.github.io/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/</id>
-    <published>2024-08-15T14:36:34.188Z</published>
-    <updated>2018-11-22T13:22:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Dance.Shot.Version)].MV.(VOB).vob|293855232|cdd6b63d2be2b5eb977736e25d4cea03|h=qm24cwdhtzwzzbd7vdxpeb2b5ymtd7us|/">ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Dance.Shot.Version)].MV.(VOB).vob|293855232|cdd6b63d2be2b5eb977736e25d4cea03|h=qm24cwdhtzwzzbd7vdxpeb2b5ymtd7us|/</a></p><p><a href="ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Close.Up.Version)].MV.(VOB).vob|293107712|767583085a3ed01ecb67c98e0c176e00|h=3kjtsiwjrqvkf26hfjc3v44hek6jppqf|/">ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Close.Up.Version)].MV.(VOB).vob|293107712|767583085a3ed01ecb67c98e0c176e00|h=3kjtsiwjrqvkf26hfjc3v44hek6jppqf|/</a></p><p><a href="ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから].MV.(VOB).vob|294270976|bd84065e35b6651a22bb576a25fadd87|h=wucl7ouzkqjibzwgh4vwnzi2r5lvknfw|/">ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから].MV.(VOB).vob|294270976|bd84065e35b6651a22bb576a25fadd87|h=wucl7ouzkqjibzwgh4vwnzi2r5lvknfw|/</a></p><p>在线(youtube)</p><iframe width="853" height="480" src="https://www.youtube.com/embed/G0pZo3E0I98" frameborder="0" allowfullscreen></iframe><p><a href="https://mega.nz/#F!j8lXVYAJ!vlOXuyc1GKLTvp0LANq_qA">https://mega.nz/#F!j8lXVYAJ!vlOXuyc1GKLTvp0LANq_qA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Dance.Shot.Version)].MV.(VOB).vob|293855232|cdd6b63d2be2b5eb977736e25d4cea03|h=qm24cwd</summary>
-      
-    
-    
-    
-    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
-    
-    
-    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
-    
-    <category term="HD" scheme="http://ted423.github.io/tags/HD/"/>
-    
-    <category term="480p" scheme="http://ted423.github.io/tags/480p/"/>
     
   </entry>
   

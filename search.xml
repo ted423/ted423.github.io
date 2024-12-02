@@ -7182,6 +7182,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
     <title>[开源]Ventoy - iso启动器</title>
     <url>/Software/Ventoy/</url>
     <content><![CDATA[<p>Ventoy是一个专用于启动iso安装盘的启动盘，其本身不会将系统启动盘刻录到U盘&#x2F;移动硬盘中，而是可以去选择运行指定的ISO。</p>
+<p>甚至可以执行 PE 的 iso - <time>2024-12-02</time></p>
 <p>个人感觉这个软件有些类PE</p>
 <p><a href="https://www.ventoy.net/cn/index.html">https://www.ventoy.net/cn/index.html</a></p>
 <p>优势是可以不用反复格式化U盘&#x2F;移动硬盘，将ISO放入U盘&#x2F;移动硬盘中即可，也可以支持本地硬盘中的ISO文件，可以一定程度上规避一些Linux启动盘刻录到移动硬盘后无法mount cdrom的问题。可以说兼容性可能比刻录安装盘效果更好些。</p>
@@ -27899,8 +27900,10 @@ $(function () {
 <p>但 Nextcloud 的问题也不少，甚至更可怕</p>
 <ol>
 <li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。(不过也有可能跟 Server 性能有关)</li>
-<li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃</li>
+<li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li>
+<li>怀疑由上述两个问题导致的同步问题</li>
 </ol>
+<p>目前处于纠结期</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -27911,6 +27914,24 @@ $(function () {
         <tag>Linux</tag>
         <tag>Dropbox</tag>
         <tag>Download&amp;File hosting service</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[开源]localsend - 跨端文件传输工具</title>
+    <url>/Software/localsend/</url>
+    <content><![CDATA[<p><a href="https://github.com/localsend/localsend">https://github.com/localsend/localsend</a></p>
+<p>缺点就是要在同一个wifi&#x2F;网段下面，不过能通过发送连接来解决这个问题，不过这个还需要一个聊天软件或者剪贴板同步工具之类的来处理</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Linux</tag>
+        <tag>Android</tag>
+        <tag>Apache License 2.0</tag>
+        <tag>macOS</tag>
+        <tag>iOS</tag>
       </tags>
   </entry>
 </search>
