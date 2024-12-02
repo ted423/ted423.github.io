@@ -7200,6 +7200,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Windows</tag>
         <tag>Linux</tag>
         <tag>GPLv3+</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -7338,65 +7339,6 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Software</tag>
         <tag>建设中</tag>
         <tag>GPLv3</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[开源]软件更新管理 - Winget</title>
-    <url>/Software/winget/</url>
-    <content><![CDATA[<p>Winget 打败了所有（<br>所以地址由 Software Update 改成了 Winget</p>
-<h1 id="Winget"><a href="#Winget" class="headerlink" title="Winget"></a>Winget</h1><p>开源，MIT，开源地址 <a href="https://github.com/microsoft/winget-cli">https://github.com/microsoft/winget-cli</a><br>Winget 永远的神，Win 10 开始自带<br>目前除了批量升级有点使用上的问题以外，其他做的都挺强</p>
-<p>目前可以通过以下方式批量升级(也可以用来备份恢复软件列表)</p>
-<ol>
-<li><code>winget export -o 文件</code></li>
-<li>删除列表里不需要的文件</li>
-<li><code>winget import 文件</code></li>
-</ol>
-<p>winget 下的升级文件都在 %Temp% 里，一些软件升级时需要关闭其他软件可能会导致升级失败，可以手动运行安装包升级</p>
-<p><a href="https://winstall.app/apps">https://winstall.app/apps</a></p>
-<p>这里可以自己选软件然后生成批量安装的代码</p>
-<h2 id="UniGetUI"><a href="#UniGetUI" class="headerlink" title="UniGetUI"></a>UniGetUI</h2><p>开源 LGPLv2.1</p>
-<p>原名 WingetUI， 其实不依赖系统的 winget,他自己又带了一个，系统的是appx，然后配置放在软件的同目录下，而 WingetUI 的 winget 的配置是放在 <code>C:\Users\XX\AppData\Local\Microsoft\WinGet</code> — <time datetime="2023-07-18">2023-07-18</time></p>
-<h2 id="https-www-marticliment-com-unigetui-https-github-com-marticliment-UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。"><a href="#https-www-marticliment-com-unigetui-https-github-com-marticliment-UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。" class="headerlink" title="https://www.marticliment.com/unigetui/https://github.com/marticliment/UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。"></a><a href="https://www.marticliment.com/unigetui/">https://www.marticliment.com/unigetui/</a><br><a href="https://github.com/marticliment/UniGetUI">https://github.com/marticliment/UniGetUI</a><br><del>第三方UI，目前没弄懂为啥他获取的会比命令行的要新</del><br>不过有忽略模式就行。</h2><p><del>首先，下面两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。</del><br><del>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</del></p>
-<h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p>公司停运了，挺可惜的，由于软件依赖 Server，现在也没法用了。 –2024-11-06<br><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p>
-<p>这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)</p>
-<h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h1><p>目前不太推荐<br>Chocolatey 虽然是开源的，但其实际还是一款面向企业的商业产品，并且国内体验不好。Apache License 2.0<br>像什么微信QQ企业微信，里面是没有的。<br>免费产品限制了功能，并且只能装到C盘。之前还有安装失败也会计入软件列表的问题</p>
-<p>因此这个产品的主要定位是一定程度上处理软件升级的问题。主要处理软件自带升级智障的问题，例如WinSCP(之前有用scoop，这个自己本身也智障，配置放便携版里，结果一更新配置没了)</p>
-<h2 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h2><p><code>choco install chocolateygui</code></p>
-<p>也可以用 UniGetUI</p>
-<p>注意的点</p>
-<ul>
-<li>这软件在Win7上要更新PowerShell。</li>
-<li>只有想装C盘并且不需要安装包配置关联的软件才用Chocolatey直接装，否则建议自行安装，其后用Chocolatey升级</li>
-<li>社区维护，因此很多软件安装行为都由社区维护者决定</li>
-<li>因为上面一条，可能面临没有维护或者不再维护的情况</li>
-<li>网络问题</li>
-<li>还可能有升级报错的情况，如<a href="https://community.chocolatey.org/packages/obs-studio">OBS-Studio</a></li>
-<li>部分时候需要重装.install <a href="https://github.com/chocolatey/choco/issues/1027">https://github.com/chocolatey/choco/issues/1027</a></li>
-<li>他的软件列表和计算机的列表是相互独立的，并且不能单纯只删记录(只能pin)</li>
-</ul>
-<p>一些常用命令</p>
-<ul>
-<li>列出本地安装软件 <code>choco list --local-only</code></li>
-<li>列出可升级的软件 <code>choco outdated</code></li>
-<li>安装指定等级 <code>choco install virtualbox --version 4.3.26</code></li>
-<li>不检查更新<code>choco pin add -n=googlechrome</code></li>
-<li><code>choco search 名字</code></li>
-<li><a href="https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey">Proxy Server</a> (不支持socks5,)</li>
-</ul>
-<h1 id="Why-not-360-and-etc"><a href="#Why-not-360-and-etc" class="headerlink" title="Why not 360(and etc)"></a>Why not 360(and etc)</h1><p>实际上我是最早的360以及金山清理专家使用者。<br>然后他们之间打了一架，360弹窗给用户洗脑，往傲游和金山网盾身上扔了一堆屎盆子。<br>而傅盛把清理专家砍了然后做了个界面奇丑无比的金山卫士(因为这玩意做了开机自启)<br>然后在金山卫士开始有一堆受众的时候把卫士砍了。</p>
-<p>国内软件喜欢加驱是免不了的，还喜欢起后台服务，那么作为一个免费加驱软件(剩下的我就不说了)。<br>重点是你愿意为了你需要的功能使用这些免费加驱软件，然后进入他们的流量入口么？</p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>MIT</tag>
-        <tag>Open Source</tag>
-        <tag>Windows</tag>
-        <tag>个人观点</tag>
-        <tag>Software</tag>
-        <tag>Apache License 2.0</tag>
-        <tag>LGPLv2.1</tag>
       </tags>
   </entry>
   <entry>
@@ -27952,6 +27894,65 @@ $(function () {
       <tags>
         <tag>Windows</tag>
         <tag>Apache License 2.0</tag>
+        <tag>开源(Open Source)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[开源]软件更新管理 - Winget &amp; UniGetUI</title>
+    <url>/Software/unigetgui/</url>
+    <content><![CDATA[<p>Winget 打败了所有（<br>所以地址由 Software Update 改成了 Winget</p>
+<h1 id="Winget"><a href="#Winget" class="headerlink" title="Winget"></a>Winget</h1><p>开源，MIT，开源地址 <a href="https://github.com/microsoft/winget-cli">https://github.com/microsoft/winget-cli</a><br>Winget 永远的神，Win 10 开始自带<br>目前除了批量升级有点使用上的问题以外，其他做的都挺强</p>
+<p>目前可以通过以下方式批量升级(也可以用来备份恢复软件列表)</p>
+<ol>
+<li><code>winget export -o 文件</code></li>
+<li>删除列表里不需要的文件</li>
+<li><code>winget import 文件</code></li>
+</ol>
+<p>winget 下的升级文件都在 %Temp% 里，一些软件升级时需要关闭其他软件可能会导致升级失败，可以手动运行安装包升级</p>
+<p><a href="https://winstall.app/apps">https://winstall.app/apps</a></p>
+<p>这里可以自己选软件然后生成批量安装的代码</p>
+<h2 id="UniGetUI"><a href="#UniGetUI" class="headerlink" title="UniGetUI"></a>UniGetUI</h2><p>开源 LGPLv2.1</p>
+<p>原名 WingetUI， 其实不依赖系统的 winget,他自己又带了一个，系统的是appx，然后配置放在软件的同目录下，而 WingetUI 的 winget 的配置是放在 <code>C:\Users\XX\AppData\Local\Microsoft\WinGet</code> — <time datetime="2023-07-18">2023-07-18</time></p>
+<h2 id="https-www-marticliment-com-unigetui-https-github-com-marticliment-UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。"><a href="#https-www-marticliment-com-unigetui-https-github-com-marticliment-UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。" class="headerlink" title="https://www.marticliment.com/unigetui/https://github.com/marticliment/UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。"></a><a href="https://www.marticliment.com/unigetui/">https://www.marticliment.com/unigetui/</a><br><a href="https://github.com/marticliment/UniGetUI">https://github.com/marticliment/UniGetUI</a><br><del>第三方UI，目前没弄懂为啥他获取的会比命令行的要新</del><br>不过有忽略模式就行。</h2><p><del>首先，下面两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。</del><br><del>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</del></p>
+<h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p>公司停运了，挺可惜的，由于软件依赖 Server，现在也没法用了。 –2024-11-06<br><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p>
+<p>这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)</p>
+<h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h1><p>目前不太推荐<br>Chocolatey 虽然是开源的，但其实际还是一款面向企业的商业产品，并且国内体验不好。Apache License 2.0<br>像什么微信QQ企业微信，里面是没有的。<br>免费产品限制了功能，并且只能装到C盘。之前还有安装失败也会计入软件列表的问题</p>
+<p>因此这个产品的主要定位是一定程度上处理软件升级的问题。主要处理软件自带升级智障的问题，例如WinSCP(之前有用scoop，这个自己本身也智障，配置放便携版里，结果一更新配置没了)</p>
+<h2 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h2><p><code>choco install chocolateygui</code></p>
+<p>也可以用 UniGetUI</p>
+<p>注意的点</p>
+<ul>
+<li>这软件在Win7上要更新PowerShell。</li>
+<li>只有想装C盘并且不需要安装包配置关联的软件才用Chocolatey直接装，否则建议自行安装，其后用Chocolatey升级</li>
+<li>社区维护，因此很多软件安装行为都由社区维护者决定</li>
+<li>因为上面一条，可能面临没有维护或者不再维护的情况</li>
+<li>网络问题</li>
+<li>还可能有升级报错的情况，如<a href="https://community.chocolatey.org/packages/obs-studio">OBS-Studio</a></li>
+<li>部分时候需要重装.install <a href="https://github.com/chocolatey/choco/issues/1027">https://github.com/chocolatey/choco/issues/1027</a></li>
+<li>他的软件列表和计算机的列表是相互独立的，并且不能单纯只删记录(只能pin)</li>
+</ul>
+<p>一些常用命令</p>
+<ul>
+<li>列出本地安装软件 <code>choco list --local-only</code></li>
+<li>列出可升级的软件 <code>choco outdated</code></li>
+<li>安装指定等级 <code>choco install virtualbox --version 4.3.26</code></li>
+<li>不检查更新<code>choco pin add -n=googlechrome</code></li>
+<li><code>choco search 名字</code></li>
+<li><a href="https://docs.chocolatey.org/en-us/guides/usage/proxy-settings-for-chocolatey">Proxy Server</a> (不支持socks5,)</li>
+</ul>
+<h1 id="Why-not-360-and-etc"><a href="#Why-not-360-and-etc" class="headerlink" title="Why not 360(and etc)"></a>Why not 360(and etc)</h1><p>实际上我是最早的360以及金山清理专家使用者。<br>然后他们之间打了一架，360弹窗给用户洗脑，往傲游和金山网盾身上扔了一堆屎盆子。<br>而傅盛把清理专家砍了然后做了个界面奇丑无比的金山卫士(因为这玩意做了开机自启)<br>然后在金山卫士开始有一堆受众的时候把卫士砍了。</p>
+<p>国内软件喜欢加驱是免不了的，还喜欢起后台服务，那么作为一个免费加驱软件(剩下的我就不说了)。<br>重点是你愿意为了你需要的功能使用这些免费加驱软件，然后进入他们的流量入口么？</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>MIT</tag>
+        <tag>Windows</tag>
+        <tag>个人观点</tag>
+        <tag>Software</tag>
+        <tag>Apache License 2.0</tag>
+        <tag>LGPLv2.1</tag>
         <tag>开源(Open Source)</tag>
       </tags>
   </entry>
