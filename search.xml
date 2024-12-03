@@ -6853,7 +6853,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       </tags>
   </entry>
   <entry>
-    <title>[开源]KeePassXC - 强大的密码管理软件以及密码自动填写工具</title>
+    <title>[开源]KeymouseGo</title>
     <url>/Software/KeePassXC/</url>
     <content><![CDATA[<p>我在寻找一个在自动填写密码上能超过Firefox自带的扩展，Lastpass算一个，但是他折腾的我连为什么不想用他都忘了，直到我找到了KeePass。</p>
 <p>而KeePassXC是KeePass(Windows only)的跨平台版本KeePassX的升级版(瞧这复杂的关系)</p>
@@ -6881,7 +6881,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Software</tag>
         <tag>GPLv2</tag>
         <tag>GPLv3</tag>
-        <tag>OS X</tag>
+        <tag>macOS</tag>
         <tag>开源(Open Source)</tag>
       </tags>
   </entry>
@@ -7076,33 +7076,6 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       <tags>
         <tag>Windows</tag>
         <tag>Software</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[大眼仔~旭]Total Uninstall</title>
-    <url>/Software/Total%20Uninstall/</url>
-    <content><![CDATA[<p>我的选择最主要就是因为这个能处理自带卸载失效的程序。</p>
-<p>现在用 Bulk Crap Uninstaller 了</p>
-<h1 id="Total-Uninstall-Professional-特点"><a href="#Total-Uninstall-Professional-特点" class="headerlink" title="Total Uninstall Professional 特点"></a>Total Uninstall Professional 特点</h1><p>原生支持 32位&#x2F;64位 Windows XP SP3&#x2F;Vista&#x2F;Windows 7&#x2F;Windows 8<br>精准分析现有安装并创建安装变更日志<br>批量分析和卸载程序<br>新程序安装期间，监视其对注册表和文件系统所做的修改<br>完全彻底的卸载已分析&#x2F;已监视的程序<br>分组管理已安装&#x2F;已监视程序*<br>通过关键字轻松的找到要卸载的程序<br>为每个已安装&#x2F;已监视程序产生简要信息&#x2F;详细信息<br>用户可配置用于分析&#x2F;监视的配置以及检测的修改视图*<br>详细的卸载日志<br>在检测到修改方面的强大搜索功能*<br>扫描并安全的移除残留项目<br>独立运行的通知程序通知新程序的安装*<br>导出安装&#x2F;卸载用注册表项目*<br>导出或打印已安装&#x2F;已监视程序列表<br>导出或打印检测到的修改信息*<br>查看并应用待决文件重命名操作不用重启</p>
-<h1 id="Total-Uninstall-Professional-分析"><a href="#Total-Uninstall-Professional-分析" class="headerlink" title="Total Uninstall Professional 分析"></a>Total Uninstall Professional 分析</h1><p>Total Uninstall 列出已安装到您系统上的程序。从列表内选择程序，开始分析过程。如果选中绑定（批处理）复选框，可一次选择多个程序进行卸载。选中程序后，几秒后将在 变更 页显示检测到的注册表和文件系统项目。可以尝试不同的分析级别以获取最佳结果。</p>
-<h1 id="Total-Uninstall-Professional-卸载"><a href="#Total-Uninstall-Professional-卸载" class="headerlink" title="Total Uninstall Professional 卸载"></a>Total Uninstall Professional 卸载</h1><p>1.可创建系统恢复点<br>2.可创建要卸载程序的副本。<br>3.启动程序自带的卸载程序<br>4.使用在分析期间检测到的修改卸载残留项目</p>
-<p>监视程序的安装过程<br>1.安装程序前，Total Uninstall 将创建预安装系统快照<br>2.照例安装程序<br>3.Total Uninstall 创建后安装系统快照。它将与预安装快照进行对比，产生安装日志。</p>
-<p>扫描时间<br>1.通常，引起扫描时间过长的主要原因是硬盘的内容，而不是注册表。硬盘在系统重启后首次扫描时速度低，之后由于 Windows 的文件系统缓存会显著的缩减扫描时间。<br>2.扫描时排除临时文件夹，如 Firefox 的因特网临时文件夹（已经排除了一些标准的位置）。以相同的概念排除其他文件夹，包括存储有图片或 MP3 的文件夹。这也是个安全措施。<br>3.扫描驱动器时不要包含只有数据或任何您不计划作为安装目标使用的驱动器，除安装有 Windows 的引导驱动器外。（通常情况下，Windows 是安装在引导驱动器上的）。<br>4.扫描时，请不要在配置内添加任何与默认已有项目无关的注册表项，尤其是 HKEY_CLASSES_ROOT，它只是其它注册表项的映射，打开时由于注册表的重定向还需要一定的时间。<br>5.不要从已配置的默认注册表排除列表内移除任何项目。其某些项目可避免重复扫描相同的注册表项。<br>6.如果您将所有的程序安装到了一个文件夹内，则在扫描时不要包含整个驱动器时（除系统驱动器外），请只包含那个文件夹，如添加 d:\Programs 而不是 d:<br>7.反病毒程序，防火墙或其它安全软件会拦截注册表和文件的访问，这将增加扫描时间。在创建快照时，通过开启&#x2F;关闭反病毒程序的实时保护（或类似的选项）进行来进行影响程度的评估。<br>8.在扫描配置内，如开启选项“包含文件详细信息版本”，则需要额外的磁盘访问动作。但您几乎用不到这些额外的信息。<br>9.进行硬盘碎片整理。整理过的硬盘扫描速度更快。</p>
-<p>卸载速度<br>卸载速度低只要是由大量删除大量的文件到回收站引起的。<br>卸载期间可以随时清空回收站。<br>使用适合的功能模块：“已安装程序”或“已监视程序”<br>监视程序的安装是确保您能完全卸载的最佳方法。已监视程序模块是安装和卸载程序的最佳方法，就精确性来说它不会凌驾于其它卸载方法之上。其缺点就是每次安装时，用户必须启动并完成监视过长，这大概需要两分钟左右。<br>已安装程序模块是用于卸载非监视&#x2F;已安装的程序，监视安装不再是唯一的选择了。对于很多安装来说，“已安装程序”模块的效果可达 100% 或接近 100%，但不保证受监视的程序也能得到这样的效果。<br>Total Uninstall 积极维护保证最精确的分析已安装的程序。保证最好的卸载效果，并且很大的程度上超过了其它同类卸载工具产品。</p>
-<h1 id="常规问题解答"><a href="#常规问题解答" class="headerlink" title="常规问题解答"></a>常规问题解答</h1><p>1.Total Uninstall 将已卸载程序的副本保存到什么位置了?我要恢复这个程序。<br>要从备份恢复已卸载的程序，请转到程序主界面，并使用菜单 文件 -&gt; 从备份恢复程序…<br>默认的备份文件位置：<br>Windows XP<br>C:\Documents and Settings\All Users\Martau\Total Uninstall 6\Backup<br>Windows Vista&#x2F;7&#x2F;8<br>C:\ProgramData\Martau\Total Uninstall 6\Backup<br>2.如果我更改了程序数据路径从原始的 A 到 B，并且Total Uninstall 也移动了全部数据到新文件夹并且产生了 tui.ini 文件。可是，当下次程序启动时，它忽略了在B位置已保存好的设置，在 A 位置重新重建了设置文件，为什么?<br>要解决这个问题，请注册您的程序副本，只有已注册的专业版才能永久保存程序数据路径的改变。<br>3.在已安装程序列表上，某些项目的图标上带有一个黄圈感叹号。名称也不是正常的 “83579989”。在 TU 里这个感叹号表示什么?<br>那些是 MSI 产品残留或部分安装的程序。您要自己确定其是否有用。如果没用，您可以卸载它们。如果检测到的修改没有显示出它与任何使用的产品有关，那么可以安全的卸载它。<br>4.如果监视的安装程序，在安装期间请求重启系统，我应该怎么做?<br>请允许重启系统。Total Uninstall 将会随 Windows 启动完成监视过程。在安装前和安装后期间，您可以对监视的程序做任何事情，比如您可以重启系统多次，安装多个程序或手动编辑注册表等。结束之后将显示单独的日志。<br>5.扫描阶段速度低或临时悬挂，这是为什么?<br>TU 要获取“之前的”快照的新旧程度。进度条到达大约 70% 左右时会停留几秒。之后，恢复到正常速度并且最终的比较是非常迅速的。<br>可能的原因；<br>– 反病毒程序干扰了扫描过程。请查看任务管理器内所有用户的进程列表，检查下是哪个进程消耗了 CPU 和内存。<br>– 硬盘的物理错误可能会触发扇区重定位。操作期间该症状会冻结整个系统。<br>– 由系统重启后用于加速硬盘物理访问的文件系统缓存缺失引起的延迟。</p>
-<h1 id="官方主页"><a href="#官方主页" class="headerlink" title="官方主页"></a>官方主页</h1><p>Total Uninstall Professional 6.27.0 更新日志<br>Better follow up of the launched built-in uninstaller(s) during uninstall process.<br>Detected changes tree view: more from registry binary data are displayed as text based on the encoding detection.<br>Uninstall log entries are no longer truncated.<br>Added support for dedicated analysis of ClickOnce applications.<br>Russian, Hindi interface translation updated.</p>
-<p><a href="http://www.martau.com/tu_releasehistory.php">http://www.martau.com/tu_releasehistory.php</a></p>
-<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p><a href="http://www.dayanzai.me/total-uninstall-pro.html">http://www.dayanzai.me/total-uninstall-pro.html</a></p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>Software</tag>
-        <tag>破解&amp;激活</tag>
-        <tag>第三方修改|绿化</tag>
-        <tag>大眼仔~旭</tag>
-        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -25819,30 +25792,6 @@ Poppler - PDF函式库
       </tags>
   </entry>
   <entry>
-    <title>[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</title>
-    <url>/Software/Download&amp;File%20hosting%20service/IDM/</url>
-    <content><![CDATA[<p>就个人感觉来说，这个软件强制添加扩展项，并且在Chrome的体验并不好。这货就是专为百度网盘准备的。<br>不过Cent browser可以调用，部分资源可以比迅雷下载速度高，并且代理支持PAC就相当棒,下载国外慢速资源会很好用</p>
-<p>目前百度封了IDM，<del>我也找到了proxyee-down这个替代品。毕竟能不用破解软件就不用比较好</del></p>
-<p>缺点是每次更新版本设置都会还原，然后每次都会提示装扩展，下载文件夹里给你生成一堆文件夹。(当然这个问题可能跟这是修改的人弄的安装包有关)</p>
-<p><del>烈火的IDM要购买才能看了</del><br><del>roustar31的可能会有exe损坏的提醒</del><br><del><a href="https://www.repaik.com/forum.php?mod=viewthread&tid=32105(%E7%BD%91%E7%AB%99%E5%81%9C%E6%AD%A2%E8%BF%90%E8%90%A5)">https://www.repaik.com/forum.php?mod=viewthread&amp;tid=32105(网站停止运营)</a></del></p>
-<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Internet Download Manager，简称IDM，是国外的一款优秀下载工具，该软件同时是一款共享软件。目前凭借着下载计算的速度优势在外媒网站中均受好评，现在已被多数国人熟知。Internet Download Manager提升你的下载速度最多达5倍，安排下载时程，带有续传功能，可以恢复因为断线、网络问题、计算机当机甚至无预警的停电导致下传到一半的资料。</p>
-<p>此程序具有动态档案分割、多重下载点技术，而且它会重复使用现有的联机，而不需再重新联机登入一遍。聪明的in-speed技术会动态地将所有设定应用到某种联机类型，以充分利用下载速度。</p>
-<h1 id="破解程序名称"><a href="#破解程序名称" class="headerlink" title="破解程序名称"></a>破解程序名称</h1><p>IDM_6.3x_Crack_v17.8_Ali.Dbg</p>
-<hr>
-<p><time>2018-10-11</time>改成roustar31的<br><time>2019-05-23</time>更新版本</p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>第三方修改|绿化</tag>
-        <tag>破解</tag>
-        <tag>过时(Outdated)</tag>
-        <tag>Download&amp;File hosting service</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我为什么仍在使用迅雷</title>
     <url>/Software/Download&amp;File%20hosting%20service/Use%20Thunder/</url>
     <content><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p>
@@ -25891,6 +25840,8 @@ Poppler - PDF函式库
       <tags>
         <tag>Windows</tag>
         <tag>个人观点</tag>
+        <tag>Software</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Download&amp;File hosting service</tag>
       </tags>
   </entry>
@@ -27836,6 +27787,7 @@ $(function () {
         <tag>Windows</tag>
         <tag>个人观点</tag>
         <tag>Linux</tag>
+        <tag>Software</tag>
         <tag>Dropbox</tag>
         <tag>Download&amp;File hosting service</tag>
       </tags>
@@ -27952,6 +27904,96 @@ $(function () {
         <tag>WWW</tag>
         <tag>Document</tag>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[开源]KeymouseGo - 鼠标键盘模拟</title>
+    <url>/Software/KeymouseGo/</url>
+    <content><![CDATA[<p><a href="https://github.com/taojy123/KeymouseGo">https://github.com/taojy123/KeymouseGo</a></p>
+<p>如果不是被 Necloud 坑了 <a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a> 我是不准备用这个的</p>
+<p>缺点就是点的不够块，有个上下限</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Software</tag>
+        <tag>GPLv2</tag>
+        <tag>macOS</tag>
+        <tag>开源(Open Source)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[开源]AB Download Manager - 多段下载器</title>
+    <url>/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/</url>
+    <content><![CDATA[<p><a href="https://github.com/amir1376/ab-download-manager">https://github.com/amir1376/ab-download-manager</a></p>
+<p>开源，Lin + Win,多语言,buff 已经满了。就不多介绍了<br>多段下载，会下载后合并，基本就是 IDM 的开源替代品。<br>目前未测试断点续传</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Linux</tag>
+        <tag>Software</tag>
+        <tag>Apache License 2.0</tag>
+        <tag>Download&amp;File hosting service</tag>
+        <tag>开源(Open Source)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[2019/05/15]Internet Download Manager 6.33.2 中文特别版(IDM)</title>
+    <url>/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/IDM/</url>
+    <content><![CDATA[<p>用 AB Download Manager 了 - <time>2024-12-3</time></p>
+<p>就个人感觉来说，这个软件强制添加扩展项，并且在Chrome的体验并不好。这货就是专为百度网盘准备的。<br>不过Cent browser可以调用，部分资源可以比迅雷下载速度高，并且代理支持PAC就相当棒,下载国外慢速资源会很好用</p>
+<p>目前百度封了IDM，<del>我也找到了proxyee-down这个替代品。毕竟能不用破解软件就不用比较好</del></p>
+<p>缺点是每次更新版本设置都会还原，然后每次都会提示装扩展，下载文件夹里给你生成一堆文件夹。(当然这个问题可能跟这是修改的人弄的安装包有关)</p>
+<p><del>烈火的IDM要购买才能看了</del><br><del>roustar31的可能会有exe损坏的提醒</del><br><del><a href="https://www.repaik.com/forum.php?mod=viewthread&tid=32105(%E7%BD%91%E7%AB%99%E5%81%9C%E6%AD%A2%E8%BF%90%E8%90%A5)">https://www.repaik.com/forum.php?mod=viewthread&amp;tid=32105(网站停止运营)</a></del></p>
+<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>Internet Download Manager，简称IDM，是国外的一款优秀下载工具，该软件同时是一款共享软件。目前凭借着下载计算的速度优势在外媒网站中均受好评，现在已被多数国人熟知。Internet Download Manager提升你的下载速度最多达5倍，安排下载时程，带有续传功能，可以恢复因为断线、网络问题、计算机当机甚至无预警的停电导致下传到一半的资料。</p>
+<p>此程序具有动态档案分割、多重下载点技术，而且它会重复使用现有的联机，而不需再重新联机登入一遍。聪明的in-speed技术会动态地将所有设定应用到某种联机类型，以充分利用下载速度。</p>
+<h1 id="破解程序名称"><a href="#破解程序名称" class="headerlink" title="破解程序名称"></a>破解程序名称</h1><p>IDM_6.3x_Crack_v17.8_Ali.Dbg</p>
+<hr>
+<p><time>2018-10-11</time>改成roustar31的<br><time>2019-05-23</time>更新版本</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>第三方修改|绿化</tag>
+        <tag>破解</tag>
+        <tag>不再推荐</tag>
+        <tag>过时(Outdated)</tag>
+        <tag>Download&amp;File hosting service</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[大眼仔~旭]Total Uninstall</title>
+    <url>/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/Total%20Uninstall/</url>
+    <content><![CDATA[<p>我的选择最主要就是因为这个能处理自带卸载失效的程序。</p>
+<p>现在用 Bulk Crap Uninstaller 了</p>
+<h1 id="Total-Uninstall-Professional-特点"><a href="#Total-Uninstall-Professional-特点" class="headerlink" title="Total Uninstall Professional 特点"></a>Total Uninstall Professional 特点</h1><p>原生支持 32位&#x2F;64位 Windows XP SP3&#x2F;Vista&#x2F;Windows 7&#x2F;Windows 8<br>精准分析现有安装并创建安装变更日志<br>批量分析和卸载程序<br>新程序安装期间，监视其对注册表和文件系统所做的修改<br>完全彻底的卸载已分析&#x2F;已监视的程序<br>分组管理已安装&#x2F;已监视程序*<br>通过关键字轻松的找到要卸载的程序<br>为每个已安装&#x2F;已监视程序产生简要信息&#x2F;详细信息<br>用户可配置用于分析&#x2F;监视的配置以及检测的修改视图*<br>详细的卸载日志<br>在检测到修改方面的强大搜索功能*<br>扫描并安全的移除残留项目<br>独立运行的通知程序通知新程序的安装*<br>导出安装&#x2F;卸载用注册表项目*<br>导出或打印已安装&#x2F;已监视程序列表<br>导出或打印检测到的修改信息*<br>查看并应用待决文件重命名操作不用重启</p>
+<h1 id="Total-Uninstall-Professional-分析"><a href="#Total-Uninstall-Professional-分析" class="headerlink" title="Total Uninstall Professional 分析"></a>Total Uninstall Professional 分析</h1><p>Total Uninstall 列出已安装到您系统上的程序。从列表内选择程序，开始分析过程。如果选中绑定（批处理）复选框，可一次选择多个程序进行卸载。选中程序后，几秒后将在 变更 页显示检测到的注册表和文件系统项目。可以尝试不同的分析级别以获取最佳结果。</p>
+<h1 id="Total-Uninstall-Professional-卸载"><a href="#Total-Uninstall-Professional-卸载" class="headerlink" title="Total Uninstall Professional 卸载"></a>Total Uninstall Professional 卸载</h1><p>1.可创建系统恢复点<br>2.可创建要卸载程序的副本。<br>3.启动程序自带的卸载程序<br>4.使用在分析期间检测到的修改卸载残留项目</p>
+<p>监视程序的安装过程<br>1.安装程序前，Total Uninstall 将创建预安装系统快照<br>2.照例安装程序<br>3.Total Uninstall 创建后安装系统快照。它将与预安装快照进行对比，产生安装日志。</p>
+<p>扫描时间<br>1.通常，引起扫描时间过长的主要原因是硬盘的内容，而不是注册表。硬盘在系统重启后首次扫描时速度低，之后由于 Windows 的文件系统缓存会显著的缩减扫描时间。<br>2.扫描时排除临时文件夹，如 Firefox 的因特网临时文件夹（已经排除了一些标准的位置）。以相同的概念排除其他文件夹，包括存储有图片或 MP3 的文件夹。这也是个安全措施。<br>3.扫描驱动器时不要包含只有数据或任何您不计划作为安装目标使用的驱动器，除安装有 Windows 的引导驱动器外。（通常情况下，Windows 是安装在引导驱动器上的）。<br>4.扫描时，请不要在配置内添加任何与默认已有项目无关的注册表项，尤其是 HKEY_CLASSES_ROOT，它只是其它注册表项的映射，打开时由于注册表的重定向还需要一定的时间。<br>5.不要从已配置的默认注册表排除列表内移除任何项目。其某些项目可避免重复扫描相同的注册表项。<br>6.如果您将所有的程序安装到了一个文件夹内，则在扫描时不要包含整个驱动器时（除系统驱动器外），请只包含那个文件夹，如添加 d:\Programs 而不是 d:<br>7.反病毒程序，防火墙或其它安全软件会拦截注册表和文件的访问，这将增加扫描时间。在创建快照时，通过开启&#x2F;关闭反病毒程序的实时保护（或类似的选项）进行来进行影响程度的评估。<br>8.在扫描配置内，如开启选项“包含文件详细信息版本”，则需要额外的磁盘访问动作。但您几乎用不到这些额外的信息。<br>9.进行硬盘碎片整理。整理过的硬盘扫描速度更快。</p>
+<p>卸载速度<br>卸载速度低只要是由大量删除大量的文件到回收站引起的。<br>卸载期间可以随时清空回收站。<br>使用适合的功能模块：“已安装程序”或“已监视程序”<br>监视程序的安装是确保您能完全卸载的最佳方法。已监视程序模块是安装和卸载程序的最佳方法，就精确性来说它不会凌驾于其它卸载方法之上。其缺点就是每次安装时，用户必须启动并完成监视过长，这大概需要两分钟左右。<br>已安装程序模块是用于卸载非监视&#x2F;已安装的程序，监视安装不再是唯一的选择了。对于很多安装来说，“已安装程序”模块的效果可达 100% 或接近 100%，但不保证受监视的程序也能得到这样的效果。<br>Total Uninstall 积极维护保证最精确的分析已安装的程序。保证最好的卸载效果，并且很大的程度上超过了其它同类卸载工具产品。</p>
+<h1 id="常规问题解答"><a href="#常规问题解答" class="headerlink" title="常规问题解答"></a>常规问题解答</h1><p>1.Total Uninstall 将已卸载程序的副本保存到什么位置了?我要恢复这个程序。<br>要从备份恢复已卸载的程序，请转到程序主界面，并使用菜单 文件 -&gt; 从备份恢复程序…<br>默认的备份文件位置：<br>Windows XP<br>C:\Documents and Settings\All Users\Martau\Total Uninstall 6\Backup<br>Windows Vista&#x2F;7&#x2F;8<br>C:\ProgramData\Martau\Total Uninstall 6\Backup<br>2.如果我更改了程序数据路径从原始的 A 到 B，并且Total Uninstall 也移动了全部数据到新文件夹并且产生了 tui.ini 文件。可是，当下次程序启动时，它忽略了在B位置已保存好的设置，在 A 位置重新重建了设置文件，为什么?<br>要解决这个问题，请注册您的程序副本，只有已注册的专业版才能永久保存程序数据路径的改变。<br>3.在已安装程序列表上，某些项目的图标上带有一个黄圈感叹号。名称也不是正常的 “83579989”。在 TU 里这个感叹号表示什么?<br>那些是 MSI 产品残留或部分安装的程序。您要自己确定其是否有用。如果没用，您可以卸载它们。如果检测到的修改没有显示出它与任何使用的产品有关，那么可以安全的卸载它。<br>4.如果监视的安装程序，在安装期间请求重启系统，我应该怎么做?<br>请允许重启系统。Total Uninstall 将会随 Windows 启动完成监视过程。在安装前和安装后期间，您可以对监视的程序做任何事情，比如您可以重启系统多次，安装多个程序或手动编辑注册表等。结束之后将显示单独的日志。<br>5.扫描阶段速度低或临时悬挂，这是为什么?<br>TU 要获取“之前的”快照的新旧程度。进度条到达大约 70% 左右时会停留几秒。之后，恢复到正常速度并且最终的比较是非常迅速的。<br>可能的原因；<br>– 反病毒程序干扰了扫描过程。请查看任务管理器内所有用户的进程列表，检查下是哪个进程消耗了 CPU 和内存。<br>– 硬盘的物理错误可能会触发扇区重定位。操作期间该症状会冻结整个系统。<br>– 由系统重启后用于加速硬盘物理访问的文件系统缓存缺失引起的延迟。</p>
+<h1 id="官方主页"><a href="#官方主页" class="headerlink" title="官方主页"></a>官方主页</h1><p>Total Uninstall Professional 6.27.0 更新日志<br>Better follow up of the launched built-in uninstaller(s) during uninstall process.<br>Detected changes tree view: more from registry binary data are displayed as text based on the encoding detection.<br>Uninstall log entries are no longer truncated.<br>Added support for dedicated analysis of ClickOnce applications.<br>Russian, Hindi interface translation updated.</p>
+<p><a href="http://www.martau.com/tu_releasehistory.php">http://www.martau.com/tu_releasehistory.php</a></p>
+<h1 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h1><p><a href="http://www.dayanzai.me/total-uninstall-pro.html">http://www.dayanzai.me/total-uninstall-pro.html</a></p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Software</tag>
+        <tag>破解&amp;激活</tag>
+        <tag>第三方修改|绿化</tag>
+        <tag>大眼仔~旭</tag>
+        <tag>不再推荐</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
 </search>
