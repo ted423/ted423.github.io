@@ -27,7 +27,7 @@
 <meta property="og:description" content="不正常的使用rsync可能会造成灾难性的后果，因此建议先带-n跑一次试试请务必注意Linux命令的路径问题，带不带’&#x2F;‘是不一样的，不带’&#x2F;‘代表的文件夹本身，带’&#x2F;‘则会表示这是一个路径，通常来说，目标路径建议最后跟上’&#x2F;‘，不是很理解的话，建议带-n先跑一次。请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-17T19:15:00.000Z">
-<meta property="article:modified_time" content="2024-09-04T09:26:49.968Z">
+<meta property="article:modified_time" content="2024-12-04T02:17:03.868Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Code">
 <meta property="article:tag" content="Linux">
@@ -157,7 +157,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1443
+                            ~2.08K
                         
                         字
                     </li>
@@ -176,15 +176,15 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>不正常的使用rsync可能会造成灾难性的后果，因此建议先带<code>-n</code>跑一次试试<br>请务必注意Linux命令的路径问题，带不带’&#x2F;‘是不一样的，不带’&#x2F;‘代表的文件夹本身，带’&#x2F;‘则会表示这是一个路径，通常来说，目标路径建议最后跟上’&#x2F;‘，不是很理解的话，建议带<code>-n</code>先跑一次。<br>请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功<br><code>rsync -avP source destination --log-file=$HOME/.rsync.log</code><br>其中  source destination 都可以使用ssh<br>root@ip:&#x2F;目录</p>
-<h1 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> 其中z为压缩，在网络性能足够的情况下，不开会快(公网才建议开，另外在内容本身为有损压缩或者压缩包的情况下可以不开，文本 或者 code 多的话，开会比较好)</span><br><span class="line">-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)</span><br><span class="line">--delete 删除目标路径中源目录不存在的文件，通常用于同步，源目录删除东西，新目录也会删除。</span><br><span class="line">--delete-excluded 包含`--delete`，进一步的，删除目标路径中列入排除的文件目录</span><br><span class="line">-u, --update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时间晚于要备份的文件。（不覆盖更新的文件）</span><br><span class="line">--ignore-existing参数表示只要该文件在目标目录中已经存在，就跳过去，不再同步这些文件。 </span><br><span class="line">-n 参数或--dry-run参数模拟将要执行的操作，而并不真的执行。配合-v参数使用，可以看到哪些内容会被同步过去。</span><br><span class="line">-P 参数是--progress和--partial这两个参数的结合。</span><br><span class="line">--remove-source-files 字面意思，注意不要乱用--delete</span><br><span class="line">--exclude 排除特定文件或目录，相对路径，注意是相对，如果您想使用单个--exclude选项，则可以用大括号&#123;&#125;列出要排除的文件和目录，用逗号分隔</span><br><span class="line">--exclude-from 排除特定文件或目录，相较于上面，这个是弄个文件列表，并进行引用 </span><br><span class="line">--port 端口 用于ssh是非标端口(网络上一堆老教程)</span><br><span class="line">-H 保持硬链接</span><br></pre></td></tr></table></figure>
+            <div itemprop="articleBody"><p>不正常的使用rsync可能会造成灾难性的后果，因此建议先带<code>-n</code>跑一次试试<br>请务必注意Linux命令的路径问题，带不带’&#x2F;‘是不一样的，不带’&#x2F;‘代表的文件夹本身，带’&#x2F;‘则会表示这是一个路径，通常来说，目标路径建议最后跟上’&#x2F;‘，不是很理解的话，建议带<code>-n</code>先跑一次。<br>请务必注意如果rsync发现元数据不一致会需要整个档案重传。所以请注意是通过是ssh拷还是nfs挂载拷，混弄的话，会做无用功<br><code>rsync -avPlHi source destination --log-file=$HOME/.rsync.log</code><br>其中  source destination 都可以使用ssh<br>root@ip:&#x2F;目录</p>
+<h1 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">-z z为压缩，该参数会显著影响大文件的传输速度，大文件或者在内容本身为有损压缩或者压缩包的情况下不要开，但是因为 rsync 是单线程，小文件较 多文本 或者 code 多的话，开会比较好且 CPU 性能足够的话可以开(不过大文件可能瞬间就把进度追上来了，rsync的压缩并不会把cpu跑满,只会跑一点点并且影响写入速度)。</span><br><span class="line">-a 参数表示存档模式，保存所有的元数据，比如修改时间（modification time）、权限、所有者等，并且软链接也会同步过去。(理论来说，请务必确认是否需要使用这个参数，如果不使用，建议不要用rsync，寻找其他的替代方案。rsync基本所有功能，都基于此参数)</span><br><span class="line">--delete 删除目标路径中源目录不存在的文件，通常用于同步，源目录删除东西，新目录也会删除。</span><br><span class="line">--delete-excluded 包含`--delete`，进一步的，删除目标路径中列入排除的文件目录</span><br><span class="line">-u, --update   仅仅进行更新，也就是跳过所有已经存在于 DST，并且文件时间晚于要备份的文件。（不覆盖更新的文件）</span><br><span class="line">--ignore-existing参数表示只要该文件在目标目录中已经存在，就跳过去，不再同步这些文件。 </span><br><span class="line">-n 参数或--dry-run参数模拟将要执行的操作，而并不真的执行。配合-v参数使用，可以看到哪些内容会被同步过去。</span><br><span class="line">-P 参数是--progress和--partial这两个参数的结合。</span><br><span class="line">--remove-source-files 字面意思，注意不要乱用--delete</span><br><span class="line">--exclude 排除特定文件或目录，相对路径，注意是相对，如果您想使用单个--exclude选项，则可以用大括号&#123;&#125;列出要排除的文件和目录，用逗号分隔</span><br><span class="line">--exclude-from 排除特定文件或目录，相较于上面，这个是弄个文件列表，并进行引用 </span><br><span class="line">--port 端口 用于ssh是非标端口(网络上一堆老教程)</span><br><span class="line">-i 仅输出变更摘要</span><br><span class="line"></span><br><span class="line">-H 保持硬链接</span><br><span class="line">-l, --links                 copy symlinks as symlinks</span><br><span class="line">-L, --copy-links            transform symlink into referent file/dir</span><br><span class="line">    --copy-unsafe-links     only &quot;unsafe&quot; symlinks are transformed</span><br><span class="line">    --safe-links            ignore symlinks that point outside the source tree</span><br><span class="line">    --munge-links           munge symlinks to make them safer (but unusable)</span><br><span class="line">-k, --copy-dirlinks         transform symlink to a dir into referent dir</span><br><span class="line">-K, --keep-dirlinks         treat symlinked dir on receiver as dir</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <p> 如无必要不要使用</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-c、--checksum参数改变rsync的校验方式。默认情况下，rsync 只检查文件的大小和最后修改日期是否发生变化，如果发生变化，就重新传输；使用这个参数以后，则通过判断文件内容的校验和，决定是否重新传输。(比较操蛋的是这玩意校验是整个文件hash，所以全读一遍还是很慢的。)</span><br></pre></td></tr></table></figure>
 <h1 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h1><p><code>--delete-excluded</code> 完全等同于 <code>--delete --delete-excluded</code></p>
 <h1 id="群晖"><a href="#群晖" class="headerlink" title="群晖"></a>群晖</h1><p>群晖的rsync权限要自己开，否则没法使用(报错应该是 “ERROR: module is read only” )，另外支持的参数不完全一致，有些参数差异会导致无法使用</p>
 <hr>
-<p><time>2022-06-20</time> -z 参数先取消<br><time>2022-09-05</time>增加 –port 以及群晖的说明<br><time>2022-10-28</time>增加硬链接信息</p>
+<p><time>2022-06-20</time> -z 参数先取消<br><time>2022-09-05</time>增加 –port 以及群晖的说明<br><time>2022-10-28</time>增加硬链接信息<br><time>2024-12-03</time>更新也锁参数说明，增加软连接参数的说明</p>
 </div>
         </div>
         
@@ -205,7 +205,7 @@
                     <a class="tag-none-link" href="/tags/Code/" rel="tag">Code</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Terminal/" rel="tag">Terminal</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-09-04T09:26:49.968Z" itemprop="dateModified">最后编辑：2024-09-04</time>
+                    <time datetime="2024-12-04T02:17:03.868Z" itemprop="dateModified">最后编辑：2024-12-04</time>
                 </div>
             </div>
         </footer>
