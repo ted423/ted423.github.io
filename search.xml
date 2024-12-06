@@ -24573,81 +24573,6 @@ function hide(id){
       </tags>
   </entry>
   <entry>
-    <title>x265 HDR 参数计算方法</title>
-    <url>/Document/Encode/HDR/</url>
-    <content><![CDATA[<p>HDR 压制参数为 <code>--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)L(10000000,1)&quot; --max-cll=1000,400</code></p>
-<p>首先，不同的色彩空间有不同的G B R WP 数据</p>
-<p>通常，不同的片会有不同的L 数据 以及 max-cll</p>
-<p>Mediainfo范例</p>
-<p>BT.2020  Olympus Has Fallen 2013</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Color range : Limited</span><br><span class="line">Color primaries : BT.2020</span><br><span class="line">Transfer characteristics : PQ</span><br><span class="line">Matrix coefficients : BT.2020 non-constant</span><br><span class="line">Mastering display color primaries : BT.2020</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 891 cd/m2</span><br><span class="line">Maximum Frame-Average Light Level : 428 cd/m2</span><br><span class="line">Original source medium : Blu-ray</span><br></pre></td></tr></table></figure>
-
-<p>Display P3 会比较多</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Color range                 : Limited</span><br><span class="line">Color primaries             : BT.2020</span><br><span class="line">Transfer characteristics    : PQ</span><br><span class="line">Matrix coefficients         : BT.2020 non-constant</span><br><span class="line">Mastering display color pri : Display P3</span><br><span class="line">Mastering display luminance : min: 0.0001 cd/m2, max: 1000 cd/m2</span><br><span class="line">Maximum Content Light Level : 479 cd/m2</span><br><span class="line">Maximum Frame-Average Light : 464 cd/m2</span><br></pre></td></tr></table></figure>
-
-
-<p>G B R WP 数据看Mediainfo里的Mastering display color pri</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Display P3</span><br><span class="line">--master-display &quot;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)&quot;</span><br><span class="line">BT.2020</span><br><span class="line">--master-display &quot;G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)&quot;</span><br></pre></td></tr></table></figure>
-
-
-<p>Venom 2018 movie mediainfo :</p>
-<pre><code>Mastering display luminance : min: <b>0.0050</b> cd/m2, max: <b>4000</b> cd/m2
-Maximum Content Light Level : <b>3903</b> cd/m2
-Maximum Frame-Average Light Level : <b>1076</b> cd/m2
-</code></pre>
-<p>In this case master-display&#x3D;G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)<strong>L(40000000,50)</strong> and max-cll&#x3D;<strong>3903,1076</strong></p>
-<p>About Maximum Content Light Level and Maximum Frame-Average Light Level … If those not present -&gt; max-cll&#x3D;0,0</p>
-<p>测试用临时Code</p>
-<p>前置参数</p>
-<textarea style="width: 80%; height: 200px" id="x265" onkeyup="refresh();">--level-idc 5.1 --bframes 8 --rd 4 --me 3 --subme 7 --ref 5 --merange 57 --ipratio 1.3 --pbratio 1.2 --aq-mode 2 --aq-strength 1.00 --qcomp 0.60 --psy-rd 1.5 --psy-rdoq 1.00 --ctu 64 --rc-lookahead 100 --deblock -3:-3 --no-strong-intra-smoothing --cbqpoffs 0 --crqpoffs 0 --qg-size 8 --range limited --no-frame-dup --selective-sao 0 --no-cutree --tu-intra-depth 4 --no-open-gop --tu-inter-depth 4 --rskip 0 --no-tskip --no-early-skip --min-keyint=1 --no-rect --no-amp --no-sao --aud --vbv-bufsize 160000 --vbv-maxrate 160000 --repeat-headers --hrd --hdr-opt --colorprim bt2020 --colormatrix bt2020nc --transfer smpte2084 --chromaloc 2 --pmode </textarea>
-
-<textarea style="width: 80%; height: 200px" onkeyup="refresh();" placeholder="仅支持输入JSON版mediainfo" id="HDR"></textarea>
-<br>
-<div><input type="checkbox" id="DoVi" name="DoVi" value="DoVi" onclick="refresh();"><label for="DoVi">DoVi P8压制</label></div>
-
-<p> 请注意你可能需要自己修改RPU的路径</p>
-<pre><code id="result" name="result"></code></pre>
-<script>
-  var refresh = function () {
-    document.getElementById("result").textContent = $('#x265').text();
-    var mediainfo = document.getElementById("HDR").value.replaceAll("\\\"", "|").replaceAll("\\", "|");
-    if (mediainfo) {
-      var whole = JSON.parse(mediainfo);
-      var track = whole.media.track;
-      var hevc = track.filter(function (video) {
-        return video["@type"] === "Video";
-      })[0];
-      if (hevc.MasteringDisplay_ColorPrimaries == "Display P3")
-        document.getElementById("result").textContent += '--master-display "G(13250,34500)B(7500,3000)R(34000,16000)WP(15635,16450)';
-      else if (hevc.MasteringDisplay_ColorPrimaries == "BT.2020")
-        document.getElementById("result").textContent += '--master-display "G(8500,39850)B(6550,2300)R(35400,14600)WP(15635,16450)';
-      var Luminance = hevc.MasteringDisplay_Luminance.replaceAll(
-        " cd/m2",
-        ""
-      ).match(/\d\.?\d*/g);
-      var max = Luminance[1] * 10000,
-        min = Luminance[0] * 10000;
-      document.getElementById("result").textContent += "L(" + max + "," + min + ')"';
-      if (hevc.MaxCLL)
-        document.getElementById("result").textContent += " --max-cll=" + hevc.MaxCLL.replace(" cd/m2", "") + "," + hevc.MaxFALL.replace(" cd/m2", "");
-      if (document.getElementById('DoVi').checked) document.getElementById("result").textContent += " --dolby-vision-profile 8.1 --dolby-vision-rpu \"RPU.bin\"";
-    }
-  };
-  refresh();
-</script>
-]]></content>
-      <categories>
-        <category>Document</category>
-      </categories>
-      <tags>
-        <tag>WWW</tag>
-        <tag>Document</tag>
-        <tag>Code</tag>
-        <tag>Javascript</tag>
-        <tag>Encode</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Jane Eyre gmma 调整对比</title>
     <url>/Document/Encode/Jane.Eyre/</url>
     <content><![CDATA[<p><a href="https://slow.pics/c/uI5S7CSk">https://slow.pics/c/uI5S7CSk</a><br>起因是某外站把我发的删了，说USA的细节比较好。<br>所以找人问了下调gmma的办法，感谢小火龙，下面是TVrange的，full range的话要把 min和 max删了<br>filtered &#x3D; core.std.Levels(clip, gamma&#x3D;0.88, min_in&#x3D;16 &lt;&lt; 8, max_in&#x3D;235 &lt;&lt; 8, min_out&#x3D;16 &lt;&lt; 8, max_out&#x3D;235 &lt;&lt; 8, planes&#x3D;0)</p>
@@ -25895,11 +25820,11 @@ Poppler - PDF函式库
       </tags>
   </entry>
   <entry>
-    <title>下载DropBox离线安装包的方法(可能失效)</title>
+    <title>下载DropBox离线安装包的方法</title>
     <url>/Software/Download&amp;File%20hosting%20service/dropbox/</url>
-    <content><![CDATA[<p>一直无法理解那些给软件下载地址非要给个下载器的。特别对于开代理的，非要忍受那个下载器没速度的奇葩问题。<br>原来dropbox是提供离线下载包的，现在不知道为什么又取消了。<br>目前可以在dropbox的(下载页面)[<a href="https://www.dropbox.com/install#downloaded]%E4%B8%8A">https://www.dropbox.com/install#downloaded]上</a><br>找到下载连接：<a href="https://www.dropbox.com/download?os=win&amp;full=1">https://www.dropbox.com/download?os=win&amp;full=1</a><br>在地址链接后加上“&amp;full&#x3D;1”即可。<br><a href="https://www.dropbox.com/download?os=win&amp;full=1">https://www.dropbox.com/download?os=win&amp;full=1</a></p>
+    <content><![CDATA[<p>一直无法理解那些给软件下载地址非要给个下载器的。特别对于开代理的，非要忍受那个下载器没速度的奇葩问题。<br>原来dropbox是提供离线下载包的，现在不知道为什么又取消了。<br>目前可以在dropbox的<a href="https://www.dropbox.com/install#downloaded">下载页面</a>上<br>找到下载连接：<a href="https://www.dropbox.com/download?os=win&amp;full=1">https://www.dropbox.com/download?os=win&amp;full=1</a><br>在地址链接后加上“&amp;full&#x3D;1”即可。<br><a href="https://www.dropbox.com/download?os=win&amp;full=1">https://www.dropbox.com/download?os=win&amp;full=1</a></p>
 <hr>
-<p>现在由于有clash应该没太大问题 - 2021-07-24</p>
+<p><del>现在由于有 Clash 应该没太大问题</del> - <time>2021-07-24</time><br>Clash 也不行，用的时候解析成 IP 了 - <time>2024-12-05</time></p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -27772,14 +27697,18 @@ $(function () {
 <ol>
 <li>Dropbox 长期在右键菜单里拉屎</li>
 <li>很多次同步卡住(后面发现文件有些奇怪的状态)</li>
+<li>经常被它锁定文件打断操作</li>
+<li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li>
 </ol>
+<p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p>
 <p>但 Nextcloud 的问题也不少，甚至更可怕</p>
 <ol>
-<li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。(不过也有可能跟 Server 性能有关)</li>
+<li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li>
 <li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li>
 <li>怀疑由上述两个问题导致的同步问题</li>
+<li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li>
 </ol>
-<p>目前处于纠结期</p>
+<p>最终应该还是放弃了，毕竟我自己没空一个个版本慢慢试。</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -27790,7 +27719,9 @@ $(function () {
         <tag>Linux</tag>
         <tag>Software</tag>
         <tag>Dropbox</tag>
+        <tag>AGPLv3</tag>
         <tag>Download&amp;File hosting service</tag>
+        <tag>开源(Open Source)</tag>
       </tags>
   </entry>
   <entry>
@@ -27843,6 +27774,9 @@ $(function () {
 <h2 id="UniGetUI"><a href="#UniGetUI" class="headerlink" title="UniGetUI"></a>UniGetUI</h2><p>开源 LGPLv2.1</p>
 <p>原名 WingetUI， 其实不依赖系统的 winget,他自己又带了一个，系统的是appx，然后配置放在软件的同目录下，而 WingetUI 的 winget 的配置是放在 <code>C:\Users\XX\AppData\Local\Microsoft\WinGet</code> — <time datetime="2023-07-18">2023-07-18</time></p>
 <h2 id="https-www-marticliment-com-unigetui-https-github-com-marticliment-UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。"><a href="#https-www-marticliment-com-unigetui-https-github-com-marticliment-UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。" class="headerlink" title="https://www.marticliment.com/unigetui/https://github.com/marticliment/UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。"></a><a href="https://www.marticliment.com/unigetui/">https://www.marticliment.com/unigetui/</a><br><a href="https://github.com/marticliment/UniGetUI">https://github.com/marticliment/UniGetUI</a><br><del>第三方UI，目前没弄懂为啥他获取的会比命令行的要新</del><br>不过有忽略模式就行。</h2><p><del>首先，下面两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。</del><br><del>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</del></p>
+<h2 id="你懂的"><a href="#你懂的" class="headerlink" title="你懂的"></a>你懂的</h2><p>需要管理员运行 cmd，powershell 不行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;C:\Program Files\UniGetUI\winget-cli_x64\winget.exe&quot; settings set DefaultProxy socks://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+
 <h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p>公司停运了，挺可惜的，由于软件依赖 Server，现在也没法用了。 –2024-11-06<br><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p>
 <p>这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)</p>
 <h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h1><p>目前不太推荐<br>Chocolatey 虽然是开源的，但其实际还是一款面向企业的商业产品，并且国内体验不好。Apache License 2.0<br>像什么微信QQ企业微信，里面是没有的。<br>免费产品限制了功能，并且只能装到C盘。之前还有安装失败也会计入软件列表的问题</p>
