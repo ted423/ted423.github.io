@@ -27708,6 +27708,8 @@ $(function () {
 <li>怀疑由上述两个问题导致的同步问题</li>
 <li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li>
 <li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li>
+<li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li>
+<li>还有文件丢失时间标签无法同步的</li>
 </ol>
 <p>整体来说，感觉主要的东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里</p>
 ]]></content>
