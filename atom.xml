@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-04T06:18:49.645Z</updated>
+  <updated>2024-12-01T16:00:00.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对 Nextcloud 的抱怨</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
+    <published>2024-12-10T11:50:28.550Z</published>
+    <updated>2024-12-01T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认同步机制问题很大。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dropbox 长期在右键菜单里拉屎&lt;/li&gt;
+&lt;li&gt;很多次同步卡住(后面发现文件有些奇怪的状态)&lt;/li&gt;
+&lt;li&gt;经常被它锁定文件打断操作&lt;/li&gt;
+&lt;li&gt;长期接</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Dropbox" scheme="http://ted423.github.io/tags/Dropbox/"/>
+    
+    <category term="AGPLv3" scheme="http://ted423.github.io/tags/AGPLv3/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+  </entry>
   
   <entry>
     <title>从域中强制删除失效的域控制器</title>
@@ -177,49 +220,6 @@
     <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
     
     <category term="iOS" scheme="http://ted423.github.io/tags/iOS/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对 Nextcloud 的抱怨</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
-    <published>2024-11-28T16:02:04.113Z</published>
-    <updated>2024-12-01T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li>怀疑由上述两个问题导致的同步问题</li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li></ol><p>整体来说，感觉主要的东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Dropbox 长期在右键菜单里拉屎&lt;/li&gt;
-&lt;li&gt;很多次同步卡住(后面发现文件有些奇怪的状态)&lt;/li&gt;
-&lt;li&gt;经常被它锁定文件打断操作&lt;/li&gt;
-&lt;li&gt;长期接</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="Dropbox" scheme="http://ted423.github.io/tags/Dropbox/"/>
-    
-    <category term="AGPLv3" scheme="http://ted423.github.io/tags/AGPLv3/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
     
     <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
     

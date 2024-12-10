@@ -27705,13 +27705,13 @@ $(function () {
 <ol>
 <li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li>
 <li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li>
-<li>怀疑由上述两个问题导致的同步问题</li>
+<li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li>
 <li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li>
 <li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li>
 <li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li>
 <li>还有文件丢失时间标签无法同步的</li>
 </ol>
-<p>整体来说，感觉主要的东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里</p>
+<p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认同步机制问题很大。</p>
 ]]></content>
       <categories>
         <category>Software</category>
