@@ -2447,7 +2447,7 @@
     <content><![CDATA[<p>今天升级Adobe Acrobat 一直报错，一开始以为缺少dll是因为运行库的原因后来发现不是。报错信息如下。</p>
 <p>Error-1723. —-&gt;<br>“There is a problem with this windows installer package. A DLL required for this install to complete could not be run. Action ISSetupFilesExtract, entry: SFStartupEx, Library- C:\users~\AppData\Local\Temp\MSI649C.tmp “</p>
 <p>问题症状是弹出了上述信息框<br>网上查到了:<a href="https://www.facebook.com/adobeacrobat/posts/10151332383682319">https://www.facebook.com/adobeacrobat/posts/10151332383682319</a></p>
-<p>大概看了下就是temp的权限问题导致的（可能有重复文件了？）<br>反正我是用iobit unlocker直接对temp文件夹进行了解锁&amp;删除操作。<br>然后就能正常安装了</p>
+<h2 id="大概看了下就是temp的权限问题导致的（可能有重复文件了？）反正我是用iobit-unlocker直接对temp文件夹进行了解锁-删除操作。然后就能正常安装了"><a href="#大概看了下就是temp的权限问题导致的（可能有重复文件了？）反正我是用iobit-unlocker直接对temp文件夹进行了解锁-删除操作。然后就能正常安装了" class="headerlink" title="大概看了下就是temp的权限问题导致的（可能有重复文件了？）反正我是用iobit unlocker直接对temp文件夹进行了解锁&amp;删除操作。然后就能正常安装了"></a>大概看了下就是temp的权限问题导致的（可能有重复文件了？）<br>反正我是用iobit unlocker直接对temp文件夹进行了解锁&amp;删除操作。<br>然后就能正常安装了</h2><p>主要应该是当时重装系统然后将以前的用户文件夹配置复制到了新的，存在了一些权限问题</p>
 ]]></content>
       <categories>
         <category>Issue</category>
@@ -2455,6 +2455,7 @@
       <tags>
         <tag>Windows</tag>
         <tag>Issue</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -2944,6 +2945,7 @@
         <tag>Windows</tag>
         <tag>Issue</tag>
         <tag>Windows 10</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -14499,10 +14501,12 @@ font-size: 0.78em;
       </tags>
   </entry>
   <entry>
-    <title>[Git]设置和取消代理</title>
+    <title>[Git]设置查看和取消代理</title>
     <url>/Code/Git/git%20proxy/</url>
     <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global http.proxy socks5://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global --get http.proxy</span><br></pre></td></tr></table></figure>
 <p>吐槽下git的升级连续用了3个裸IP<br>https那个没用</p>
 <hr>
 <p>似乎可能Win下cmd里用就是会解析成IP丢到代理里(</p>
@@ -14815,6 +14819,8 @@ refresh();
       </categories>
       <tags>
         <tag>WWW</tag>
+        <tag>Javascript</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -26563,6 +26569,7 @@ Poppler - PDF函式库
         <tag>第三方修改|绿化</tag>
         <tag>大眼仔~旭</tag>
         <tag>不再推荐</tag>
+        <tag>过时(Outdated)</tag>
       </tags>
   </entry>
   <entry>
@@ -27699,6 +27706,7 @@ $(function () {
 <li>很多次同步卡住(后面发现文件有些奇怪的状态)</li>
 <li>经常被它锁定文件打断操作</li>
 <li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li>
+<li>会因为个别文件占用阻塞整个同步操作</li>
 </ol>
 <p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p>
 <p>但 Nextcloud 的问题也不少，甚至更可怕</p>
@@ -27710,8 +27718,9 @@ $(function () {
 <li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li>
 <li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li>
 <li>还有文件丢失时间标签无法同步的</li>
+<li>Dropbox 支持 LAN 同步，它不支持</li>
 </ol>
-<p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认同步机制问题很大。</p>
+<p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p>
 ]]></content>
       <categories>
         <category>Software</category>

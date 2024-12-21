@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-01T16:00:00.000Z</updated>
+  <updated>2021-06-10T07:22:00.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,13 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[Git]设置查看和取消代理</title>
+    <link href="http://ted423.github.io/Code/Git/git%20proxy/"/>
+    <id>http://ted423.github.io/Code/Git/git%20proxy/</id>
+    <published>2024-12-16T11:10:15.574Z</published>
+    <updated>2021-06-10T07:22:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy socks5://127.0.0.1:7890</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --get http.proxy</span><br></pre></td></tr></table></figure><p>吐槽下git的升级连续用了3个裸IP<br>https那个没用</p><hr><p>似乎可能Win下cmd里用就是会解析成IP丢到代理里(</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
+    
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
+    
+    <category term="Git" scheme="http://ted423.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>对 Nextcloud 的抱怨</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
-    <published>2024-12-10T11:50:28.550Z</published>
+    <published>2024-12-11T11:57:24.826Z</published>
     <updated>2024-12-01T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认同步机制问题很大。</p>]]></content>
+    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li><li>会因为个别文件占用阻塞整个同步操作</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li><li>Dropbox 支持 LAN 同步，它不支持</li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p>]]></content>
     
     
       
@@ -582,31 +610,6 @@
       
       
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/adobe-fonts/source-han-sans&quot;&gt;https://github.com/adobe-fonts/source-han-sans&lt;/a&gt;&lt;br&gt;这个字体是Adobe和Google共同开发的，谷歌那</summary>
-      
-    
-    
-    
-    
-    <category term="Font" scheme="http://ted423.github.io/tags/Font/"/>
-    
-    <category term="SIL Open Font" scheme="http://ted423.github.io/tags/SIL-Open-Font/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Font]等宽字体(Monospaced Font)推荐</title>
-    <link href="http://ted423.github.io/etc/Monospaced%20Font/"/>
-    <id>http://ted423.github.io/etc/Monospaced%20Font/</id>
-    <published>2024-08-15T14:36:35.344Z</published>
-    <updated>2016-02-21T03:54:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>因为用EverEdit可以自己设置字体，结果就因为用了普通字体代码对不齐闹了笑话，所以就想起来找等宽字体。</p><h1 id="Source-Code-Pro"><a href="#Source-Code-Pro" class="headerlink" title="Source Code Pro"></a>Source Code Pro</h1><p>大名顶顶的Adobe的作品<br><a href="https://github.com/adobe-fonts/source-code-pro">https://github.com/adobe-fonts/source-code-pro</a></p><p><a href="https://zh.wikipedia.org/wiki/OpenType">OpenType fonts</a></p><p>使用 SIL Open Font License</p><p>来源:<a href="https://www.oschina.net/news/40762/10-great-free-monospaced-fonts-for-programming">https://www.oschina.net/news/40762/10-great-free-monospaced-fonts-for-programming</a><br>其他的我都没试，毕竟等宽字体这种，好看不到哪去，差不多就行了。</p><h1 id="Impression-of-Font"><a href="#Impression-of-Font" class="headerlink" title="Impression of Font"></a>Impression of Font</h1><p>不过字体协议可能会有些问题<br><a href="https://ted423.github.io/2020/06/19/etc/Impression%20of%20Font/">https://ted423.github.io/2020/06/19/etc/Impression%20of%20Font/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;因为用EverEdit可以自己设置字体，结果就因为用了普通字体代码对不齐闹了笑话，所以就想起来找等宽字体。&lt;/p&gt;
-&lt;h1 id=&quot;Source-Code-Pro&quot;&gt;&lt;a href=&quot;#Source-Code-Pro&quot; class=&quot;headerlink&quot; title=&quot;S</summary>
       
     
     
