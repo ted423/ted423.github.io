@@ -1751,8 +1751,11 @@
 <p><a href="https://ted423.github.io/etc/hexo-theme-icarus/">https://ted423.github.io/etc/hexo-theme-icarus/</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> hexo algolia --help</span><br><span class="line">INFO  Validating config</span><br><span class="line">Usage: hexo algolia</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">Index your content in Algolia Search API</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  --dry-run       Does not push content to Algolia (default: false).</span><br><span class="line">  --flush         Resets the Algolia index before starting the indexation (default: false).</span><br><span class="line">  --indexing-key  An algolia API key with add/delete records permissions.</span><br><span class="line">                  It should be different than the search-only API key configured in _config.yml.</span><br><span class="line">  --layouts       A comma-separated list of page layouts to index (default: &quot;page&quot;).</span><br></pre></td></tr></table></figure>
 <p>flush 什么的，很少有教程说，不过文件换路径会非常有用</p>
+<h1 id="相对连接"><a href="#相对连接" class="headerlink" title="相对连接"></a>相对连接</h1><p><a href="https://hexo.io/zh-cn/docs/asset-folders">https://hexo.io/zh-cn/docs/asset-folders</a></p>
 <h1 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h1><ul>
 <li>hexo 的相对链接只能在图片或者<code>[]()</code>里使用，<code>&lt;&gt;</code>里不会解析</li>
+<li>Win 不区分大小写，文件名或者 tag 可能会造成问题，处理时需要手动删文件或文件夹（包括 public .git_deploy 里的），还要删掉 db.json</li>
+<li>LF CRLF 可以搜下博客的 git 换行符问题，可以在 .git_deploy 里弄</li>
 </ul>
 ]]></content>
       <categories>
@@ -7225,17 +7228,23 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <h1 id="EaseUS-Data-Recovery-Wizard"><a href="#EaseUS-Data-Recovery-Wizard" class="headerlink" title="EaseUS Data Recovery Wizard"></a>EaseUS Data Recovery Wizard</h1><p>界面设计相当合理，功能确实非常不错，将别人出问题的SD卡里整个文件夹的东西都还原出来了。<br>傻瓜化，易操作，效果非常好</p>
 <p>官网<br><a href="https://www.easeus.com/">https://www.easeus.com/</a><br>(有国内官网，但我现在不敢信任经过国内软件商改的东西)</p>
 <p>破解版(部分电脑激活有点问题，原因未知)<br><a href="http://www.dayanzai.me/easeus.html">http://www.dayanzai.me/easeus.html</a></p>
-<h1 id="PhotoRec-CN"><a href="#PhotoRec-CN" class="headerlink" title="PhotoRec_CN"></a>PhotoRec_CN</h1><p>开源，免费………<br>GPLv2<br>单看界面没有按文件夹整个恢复，也就是没有目录层级的恢复。就这点来讲不如上面那个。<br>恢复是一点就全部恢复出来，不会弄个界面让你选<br><a href="https://www.cgsecurity.org/wiki/PhotoRec_CN">https://www.cgsecurity.org/wiki/PhotoRec_CN</a></p>
-<h1 id="Kickass-Undelete"><a href="#Kickass-Undelete" class="headerlink" title="Kickass Undelete"></a><del>Kickass Undelete</del></h1><p>开源，免费<br>GPLv3<br>但懒得试了，毕竟SSD大行其道<br>另外2018年后就没再更新过了<br><a href="http://kickassundelete.sourceforge.net/">http://kickassundelete.sourceforge.net/</a></p>
+<h1 id="PhotoRec-CN"><a href="#PhotoRec-CN" class="headerlink" title="PhotoRec_CN"></a><del>PhotoRec_CN</del></h1><p>开源，免费………<br>GPLv2<br>单看界面没有按文件夹整个恢复，也就是没有目录层级的恢复。就这点来讲不如上面那个。<br>恢复是一点就全部恢复出来，不会弄个界面让你选</p>
+<h1 id="Kickass-Undelete"><a href="#Kickass-Undelete" class="headerlink" title="Kickass Undelete"></a><del>Kickass Undelete</del></h1><p>开源，免费<br>GPLv3<br>但懒得试了，毕竟SSD大行其道<br>另外2018年后就没再更新过了</p>
 <h1 id="R-Studio"><a href="#R-Studio" class="headerlink" title="R-Studio"></a>R-Studio</h1><p>印象里是说非常有名非常强大<br><a href="http://www.dayanzai.me/r-studio.html">http://www.dayanzai.me/r-studio.html</a></p>
 <h1 id="魔方恢复"><a href="#魔方恢复" class="headerlink" title="魔方恢复"></a><del>魔方恢复</del></h1><p>优点是有个健康度<br>在SSD上运行并成功恢复出来了，但是健康度100%出来也是坏的(大概因为SSD)</p>
-<p><del><a href="https://ted423.bitcron.com/post/software/xi-tong-gong-ju/pcmaster">https://ted423.bitcron.com/post/software/xi-tong-gong-ju/pcmaster</a></del></p>
+<p><del><a href="/Software/Maintenance/PCMaster">pcmaster</a></del></p>
+<h1 id="WinFR"><a href="#WinFR" class="headerlink" title="WinFR"></a>WinFR</h1><p><a href="https://www.winfr.com.cn/">https://www.winfr.com.cn/</a><br>我印象里我上次试扫不出来东西，这个是 GUI，基于微软官方的功能 <a href="https://support.microsoft.com/en-us/windows/windows-file-recovery-61f5b28a-f5b8-3cc2-0f8e-a63cb4e1d4c4%E3%80%82">https://support.microsoft.com/en-us/windows/windows-file-recovery-61f5b28a-f5b8-3cc2-0f8e-a63cb4e1d4c4。</a></p>
+<p>开发傲梅软件助手的公司开发的。</p>
+<p>但总之放到列表里</p>
+<hr>
+<p>清理了不推荐软件的 url，增加 WinFR- <time>2024-12-23</time></p>
 ]]></content>
       <categories>
         <category>Software</category>
       </categories>
       <tags>
         <tag>分类汇总</tag>
+        <tag>Windows</tag>
         <tag>Software</tag>
         <tag>第三方修改|绿化</tag>
         <tag>破解</tag>
