@@ -27967,19 +27967,21 @@ $(function () {
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title>[开源]fio-cdm - CrystalDiskMark-style disk speed test with fio. Python version</title>
     <url>/Software/Hardware/fio-cdm/</url>
-    <content><![CDATA[<hr>
-<p>title: “[开源]fio-cdm - CrystalDiskMark-style disk speed test with fio. Python version”<br>tags:</p>
-<ul>
-<li>Linux</li>
-<li>Software</li>
-<li>MIT</li>
-<li>Hardware Tool</li>
-<li>Open Source</li>
-<li>python2<br>categories: Software<br>一个 python2 的脚本，不过代码不多，后学要改用3应该挺容易的</li>
-</ul>
+    <content><![CDATA[<p>一个 python2 的脚本，不过代码不多，后学要改用3应该挺容易的</p>
 <p><a href="https://github.com/xlucn/fio-cdm">https://github.com/xlucn/fio-cdm</a></p>
 ]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>MIT</tag>
+        <tag>Open Source</tag>
+        <tag>Linux</tag>
+        <tag>Software</tag>
+        <tag>Hardware Tool</tag>
+        <tag>python2</tag>
+      </tags>
   </entry>
 </search>

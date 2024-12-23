@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-23T02:55:58.897Z</updated>
+  <updated>2024-12-23T02:58:39.669Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,26 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>[开源]fio-cdm - CrystalDiskMark-style disk speed test with fio. Python version</title>
     <link href="http://ted423.github.io/Software/Hardware/fio-cdm/"/>
     <id>http://ted423.github.io/Software/Hardware/fio-cdm/</id>
     <published>2024-12-23T02:49:46.304Z</published>
-    <updated>2024-12-23T02:55:58.897Z</updated>
+    <updated>2024-12-23T02:58:39.669Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title: “[开源]fio-cdm - CrystalDiskMark-style disk speed test with fio. Python version”<br>tags:</p><ul><li>Linux</li><li>Software</li><li>MIT</li><li>Hardware Tool</li><li>Open Source</li><li>python2<br>categories: Software<br>一个 python2 的脚本，不过代码不多，后学要改用3应该挺容易的</li></ul><p><a href="https://github.com/xlucn/fio-cdm">https://github.com/xlucn/fio-cdm</a></p>]]></content>
+    <content type="html"><![CDATA[<p>一个 python2 的脚本，不过代码不多，后学要改用3应该挺容易的</p><p><a href="https://github.com/xlucn/fio-cdm">https://github.com/xlucn/fio-cdm</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;title: “[开源]fio-cdm - CrystalDiskMark-style disk speed test with fio. Python version”&lt;br&gt;tags:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Linux&lt;/li&gt;
-&lt;li&gt;Software&lt;</summary>
+    <summary type="html">&lt;p&gt;一个 python2 的脚本，不过代码不多，后学要改用3应该挺容易的&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/xlucn/fio-cdm&quot;&gt;https://github.com/xlucn/fio-cdm&lt;/a&gt;&lt;/p&gt;
+</summary>
       
     
     
     
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Hardware Tool" scheme="http://ted423.github.io/tags/Hardware-Tool/"/>
+    
+    <category term="python2" scheme="http://ted423.github.io/tags/python2/"/>
     
   </entry>
   
