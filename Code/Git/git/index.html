@@ -176,7 +176,7 @@
             
             
                 <div class="kratos-post-inner-toc toc-div-class" >
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%88%A0%E9%99%A4"><span class="toc-number">1.</span> <span class="toc-text">本地分支删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reset-%E5%88%A0%E9%99%A4%E9%94%99%E8%AF%AF%E6%8F%90%E4%BA%A4%E7%9A%84commit"><span class="toc-number">2.</span> <span class="toc-text">reset 删除错误提交的commit</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rebase-%E4%BC%AA%E9%80%A0%E5%8E%86%E5%8F%B2"><span class="toc-number">3.</span> <span class="toc-text">rebase 伪造历史</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eol-amp-ignoreCase"><span class="toc-number">4.</span> <span class="toc-text">eol &amp; ignoreCase</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-config"><span class="toc-number">5.</span> <span class="toc-text">git config</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%88%A0%E9%99%A4"><span class="toc-number">1.</span> <span class="toc-text">本地分支删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reset-%E5%88%A0%E9%99%A4%E9%94%99%E8%AF%AF%E6%8F%90%E4%BA%A4%E7%9A%84commit"><span class="toc-number">2.</span> <span class="toc-text">reset 删除错误提交的commit</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rebase-%E4%BC%AA%E9%80%A0%E5%8E%86%E5%8F%B2"><span class="toc-number">3.</span> <span class="toc-text">rebase 伪造历史</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eol-ignoreCase"><span class="toc-number">4.</span> <span class="toc-text">eol &amp; ignoreCase</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-config"><span class="toc-number">5.</span> <span class="toc-text">git config</span></a></li></ol>
                 </div>
             
             <hr />
@@ -196,7 +196,7 @@
 <p>需要注意的是git里以记录改动为主，如果修改历史变动是会改变现有代码的(特别是你把某个文件的最后一次commit给弄没的时候)。drop 意味着当时进行的修改也会被取消。很容易造成冲突(conflict)，<br>所以一般是建议squash来合并commit</p>
 <p>最后 <code>git push --force</code><br>这个命令会把远程的彻底抹掉，出问题也会很彻底的，所以要谨慎。</p>
 <p><a href="/Code/git/conflict">conflict处理</a></p>
-<h1 id="eol-amp-ignoreCase"><a href="#eol-amp-ignoreCase" class="headerlink" title="eol &amp; ignoreCase"></a>eol &amp; ignoreCase</h1><p>eol 问题见 [&#x2F;Code&#x2F;Git&#x2F;git eol&#x2F;]</p>
+<h1 id="eol-ignoreCase"><a href="#eol-ignoreCase" class="headerlink" title="eol &amp; ignoreCase"></a>eol &amp; ignoreCase</h1><p>eol 问题见 [&#x2F;Code&#x2F;Git&#x2F;git eol&#x2F;]</p>
 <p>大小写问题见 <a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth/issues/208">https://github.com/Candinya/Kratos-Rebirth/issues/208</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config core.ignorecase false</span><br></pre></td></tr></table></figure>
 
@@ -279,7 +279,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%88%A0%E9%99%A4"><span class="toc-number">1.</span> <span class="toc-text">本地分支删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reset-%E5%88%A0%E9%99%A4%E9%94%99%E8%AF%AF%E6%8F%90%E4%BA%A4%E7%9A%84commit"><span class="toc-number">2.</span> <span class="toc-text">reset 删除错误提交的commit</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rebase-%E4%BC%AA%E9%80%A0%E5%8E%86%E5%8F%B2"><span class="toc-number">3.</span> <span class="toc-text">rebase 伪造历史</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eol-amp-ignoreCase"><span class="toc-number">4.</span> <span class="toc-text">eol &amp; ignoreCase</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-config"><span class="toc-number">5.</span> <span class="toc-text">git config</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%88%A0%E9%99%A4"><span class="toc-number">1.</span> <span class="toc-text">本地分支删除</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#reset-%E5%88%A0%E9%99%A4%E9%94%99%E8%AF%AF%E6%8F%90%E4%BA%A4%E7%9A%84commit"><span class="toc-number">2.</span> <span class="toc-text">reset 删除错误提交的commit</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#rebase-%E4%BC%AA%E9%80%A0%E5%8E%86%E5%8F%B2"><span class="toc-number">3.</span> <span class="toc-text">rebase 伪造历史</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#eol-ignoreCase"><span class="toc-number">4.</span> <span class="toc-text">eol &amp; ignoreCase</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git-config"><span class="toc-number">5.</span> <span class="toc-text">git config</span></a></li></ol>
     </div>
 </aside>
                 
