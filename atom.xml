@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-23T03:13:36.408Z</updated>
+  <updated>2024-12-23T03:39:34.079Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,17 +21,15 @@
     <link href="http://ted423.github.io/Software/PasteLink/"/>
     <id>http://ted423.github.io/Software/PasteLink/</id>
     <published>2024-12-23T03:02:20.130Z</published>
-    <updated>2024-12-23T03:13:36.408Z</updated>
+    <updated>2024-12-23T03:39:34.079Z</updated>
     
-    <content type="html"><![CDATA[<p>软件没设 License, 故应该算开源无限制？</p><p>长期没有维护比较可惜，不过应该没什么明显问题。</p><p>注意 .reg 文件的编码改为 utf-8,不然使用可能会右键菜单乱码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file]</span><br><span class="line">@=&quot;粘贴为硬连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&lt;\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink]</span><br><span class="line">@=&quot;粘贴为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file]</span><br><span class="line">@=&quot;复制目录，粘贴文件为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&gt;\&quot;&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/zhaoyangwx/PasteLink">https://github.com/zhaoyangwx/PasteLink</a><br>软件没设 License, 故应该算开源无限制？</p><p>长期没有维护比较可惜，不过应该没什么明显问题。</p><p>注意 .reg 文件的编码改为 utf-8,不然使用可能会右键菜单乱码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file]</span><br><span class="line">@=&quot;粘贴为硬连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&lt;\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink]</span><br><span class="line">@=&quot;粘贴为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file]</span><br><span class="line">@=&quot;复制目录，粘贴文件为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&gt;\&quot;&quot;</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;软件没设 License, 故应该算开源无限制？&lt;/p&gt;
-&lt;p&gt;长期没有维护比较可惜，不过应该没什么明显问题。&lt;/p&gt;
-&lt;p&gt;注意 .reg 文件的编码改为 utf-8,不然使用可能会右键菜单乱码&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/zhaoyangwx/PasteLink&quot;&gt;https://github.com/zhaoyangwx/PasteLink&lt;/a&gt;&lt;br&gt;软件没设 License, 故应该算开源无限制？&lt;/p&gt;
+&lt;p&gt;长期没有维护比较</summary>
       
     
     
