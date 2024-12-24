@@ -7234,6 +7234,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <h1 id="魔方恢复"><a href="#魔方恢复" class="headerlink" title="魔方恢复"></a><del>魔方恢复</del></h1><p>优点是有个健康度<br>在SSD上运行并成功恢复出来了，但是健康度100%出来也是坏的(大概因为SSD)</p>
 <p><del><a href="/Software/Maintenance/PCMaster">pcmaster</a></del></p>
 <h1 id="WinFR"><a href="#WinFR" class="headerlink" title="WinFR"></a>WinFR</h1><p><a href="https://www.winfr.com.cn/">https://www.winfr.com.cn/</a><br>我印象里我上次试扫不出来东西，这个是 GUI，基于微软官方的功能 <a href="https://support.microsoft.com/en-us/windows/windows-file-recovery-61f5b28a-f5b8-3cc2-0f8e-a63cb4e1d4c4%E3%80%82">https://support.microsoft.com/en-us/windows/windows-file-recovery-61f5b28a-f5b8-3cc2-0f8e-a63cb4e1d4c4。</a></p>
+<p>现在发现应该是要先装 <a href="https://apps.microsoft.com/detail/9n26s50ln705?hl=zh-cn&gl=US">Windows File Recovery</a> 并且只能在微软商店安装。</p>
 <p>开发傲梅软件助手的公司开发的。</p>
 <p>但总之放到列表里</p>
 <hr>
@@ -27028,9 +27029,12 @@ Poppler - PDF函式库
 <h1 id="Victoria"><a href="#Victoria" class="headerlink" title="Victoria"></a>Victoria</h1><p>Victoria 是一款继MHDD无法适应新机器后得最佳硬盘坏道检测工具。<br>当然，这里必须提下物理坏道和逻辑坏道。<br>由于以上坏道相关信息来源于英文翻译，并且经常有弄不懂的也发文章，所以概念非常混乱。<br>通常来说，我的区分方式就是是否能被MHDD用eraser修复，能被修复得就是逻辑坏道，否则就是物理坏道。</p>
 <p>但是这个工具有写  [Hint] Recommend 32-bit Windows XP for a best work!<br>Warning! Windows x64 detected! PIO mode supported on Windows x86 only.</p>
 <p>官网:<a href="http://hdd.by/victoria/">http://hdd.by/victoria/</a>(俄文，建议google翻译英文看…)<br>下载站:<a href="https://download-software.ru/victoria-hdd-download.html">https://download-software.ru/victoria-hdd-download.html</a></p>
-<h1 id="傲梅分区助手"><a href="#傲梅分区助手" class="headerlink" title="傲梅分区助手"></a><del>傲梅分区助手</del></h1><p>不推荐使用，简单说就是虽然功能看起来非常多，但是很多功能的实现都有问题，样子货<br>英文官网: <a href="https://www.disk-partition.com/">https://www.disk-partition.com/</a><br>中文官网: <a href="http://disktool.cn/">http://disktool.cn/</a><br><del>英文版更新更完善，估计国外比较容易赚到钱</del>(现在都一样了)<br>大眼仔破解: <a href="http://www.dayanzai.me/partition-assistant.html">http://www.dayanzai.me/partition-assistant.html</a></p>
-<p>之前一直在用DiskGenius进行磁盘分区调整的相关操作,但是当我因为工作需要将一个XP系统的NTFS无损转FAT32分区的时候，遇见了傲梅分区助手。随后当我发现公司电脑硬盘本身不大，却还分了3个区的时候，又是分区助手的合并分区功能帮了我。后来试图将动态磁盘转为基本磁盘，还是找到了分区助手(虽然我选择了用DiskGenius恢复分区表来还原之前的磁盘，不过DiskGenius中间出了各种问题，吓得我一身冷汗之后才解决倒是)</p>
-<p>一方面，这款软件没什么广告而且免费，功能也很全，界面也很干净。老实说，我倒不是特别喜欢界面漂亮的软件，因为很少有软件界面漂亮还在功能上符合我胃口。虽然像什么迁移系统到固态硬盘、启动光盘制作之类的功能让我觉得这款软件还是有点中国软件的风格以外，但还是得说分区助手做的不错。<br>相对DiskGenius来说，傲梅分区助手不具备恢复文件的功能(不过相对来讲DiskGenius这个功能也是要钱的)。</p>
+<h1 id="傲梅分区助手"><a href="#傲梅分区助手" class="headerlink" title="傲梅分区助手"></a>傲梅分区助手</h1><p>不是很推荐使用，简单说就是虽然功能看起来非常多，但是很多功能的实现都有问题，样子货</p>
+<p>不过毕竟免费，除非出个开源的来吊打他</p>
+<p>英文官网: <a href="https://www.disk-partition.com/">https://www.disk-partition.com/</a><br>中文官网: <a href="http://disktool.cn/">http://disktool.cn/</a><br><del>英文版更新更完善，估计国外比较容易赚到钱</del>(现在都一样了)<br>大眼仔破解: <a href="http://www.dayanzai.me/partition-assistant.html">http://www.dayanzai.me/partition-assistant.html</a></p>
+<p>有个拉屎的问题<br><a href="https://www.reddit.com/r/24hoursupport/comments/2ceq6o/what_is_amtagbin/">https://www.reddit.com/r/24hoursupport/comments/2ceq6o/what_is_amtagbin/</a> - <time>20241224</time></p>
+<p>之前一直在用DiskGenius进行磁盘分区调整的相关操作,但是当我因为工作需要将一个XP系统的NTFS无损转FAT32分区的时候，遇见了傲梅分区助手。随后当我发现公司电脑硬盘本身不大，却还分了3个区的时候，又是分区助手的合并分区功能帮了我。后来试图将动态磁盘转为基本磁盘，还是找到了分区助手(虽然我选择了用 DiskGenius 恢复分区表来还原之前的磁盘，不过DiskGenius中间出了各种问题，吓得我一身冷汗之后才解决倒是)</p>
+<p>一方面，这款软件没什么广告而且免费，功能也很全，界面也很干净。老实说，我倒不是特别喜欢界面漂亮的软件，因为很少有软件界面漂亮还在功能上符合我胃口。虽然像什么迁移系统到固态硬盘、启动光盘制作之类的功能让我觉得这款软件还是有点中国软件的风格以外，但还是得说分区助手做的不错。<br>相对 DiskGenius 来说，傲梅分区助手不具备恢复文件的功能(不过相对来讲DiskGenius这个功能也是要钱的)。</p>
 <h2 id="不过个人感觉这个软件基本是参照着MiniTool-Partition-Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4-英文版支持-。小问题有点多，对于一个操作硬盘的软件来说这点不大好"><a href="#不过个人感觉这个软件基本是参照着MiniTool-Partition-Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4-英文版支持-。小问题有点多，对于一个操作硬盘的软件来说这点不大好" class="headerlink" title="不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4(英文版支持)。小问题有点多，对于一个操作硬盘的软件来说这点不大好"></a>不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，<del>还有不支持格式化成ext4</del>(英文版支持)。<br>小问题有点多，对于一个操作硬盘的软件来说这点不大好</h2><p><time>2018-04-28 22:45</time>分区助手增加国外破解版，增加DiskGenius破解版</p>
 ]]></content>
       <categories>
