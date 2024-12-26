@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>硬件相关的一些笔记 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Hardware/HardwareNotes/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Document, Hardware, Notes" />
+  
+  <meta name="description" content="Intel Network这是一个集成包 https:&#x2F;&#x2F;www.intel.com&#x2F;content&#x2F;www&#x2F;us&#x2F;en&#x2F;download&#x2F;15084&#x2F;intel-ethernet-adapter-complete-driver-pack.html 10GiB 网卡 X540 因为是比较型号老的，最后的驱动日期是2020年的，其只能手动安装。不支持 2.5 GiB 模式。 只建议在 Linux 下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="硬件相关的一些笔记">
+<meta property="og:url" content="http://ted423.github.io/Hardware/HardwareNotes/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="Intel Network这是一个集成包 https:&#x2F;&#x2F;www.intel.com&#x2F;content&#x2F;www&#x2F;us&#x2F;en&#x2F;download&#x2F;15084&#x2F;intel-ethernet-adapter-complete-driver-pack.html 10GiB 网卡 X540 因为是比较型号老的，最后的驱动日期是2020年的，其只能手动安装。不支持 2.5 GiB 模式。 只建议在 Linux 下">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-27T06:16:27.477Z">
+<meta property="article:modified_time" content="2025-11-27T06:35:42.713Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="Hardware">
+<meta property="article:tag" content="Notes">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Hardware/HardwareNotes/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">硬件相关的一些笔记</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-11-27T06:16:27.477Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-11-27</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~1.56K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intel-Network"><span class="toc-number">1.</span> <span class="toc-text">Intel Network</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Intel-R-Serial-IO-GPIO"><span class="toc-number">2.</span> <span class="toc-text">Intel(R) Serial IO GPIO</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-number">3.</span> <span class="toc-text">内存</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DDR5-%E5%86%85%E5%AD%98"><span class="toc-number">3.1.</span> <span class="toc-text">DDR5 内存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ECC"><span class="toc-number">3.2.</span> <span class="toc-text">ECC</span></a></li></ol></li></ol>
+                </div>
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="Intel-Network"><a href="#Intel-Network" class="headerlink" title="Intel Network"></a>Intel Network</h1><p>这是一个集成包</p>
+<p><a target="_blank" rel="noopener" href="https://www.intel.com/content/www/us/en/download/15084/intel-ethernet-adapter-complete-driver-pack.html">https://www.intel.com/content/www/us/en/download/15084/intel-ethernet-adapter-complete-driver-pack.html</a></p>
+<p>10GiB 网卡 X540 因为是比较型号老的，最后的驱动日期是2020年的，其只能手动安装。不支持 2.5 GiB 模式。</p>
+<p>只建议在 Linux 下使用，Windows 下驱动已经不更新了</p>
+<h1 id="Intel-R-Serial-IO-GPIO"><a href="#Intel-R-Serial-IO-GPIO" class="headerlink" title="Intel(R) Serial IO GPIO"></a>Intel(R) Serial IO GPIO</h1><p>Intel(R) Serial IO GPIO 控制器驱动在 Intel 官网没有提供，且 Windows Update 通常不推送</p>
+<p>该驱动分发依赖 OEM 厂商定制，而非 Intel 直接提供</p>
+<p>一方面是OEM 定制化主导</p>
+<p>Intel 将此类驱动（如 GPIO&#x2F;I2C 主机控制器）视为芯片组配套组件，授权给设备制造商（如 Dell、Lenovo、ASUS）进行适配和分发。用户需通过电脑品牌的官方支持页面获取驱动，例如：</p>
+<ul>
+<li>Dell 为特定机型提供专用版本（版本号 30.100.2020.7）；</li>
+<li>Lenovo 要求先安装主板芯片组驱动，再装 Serial IO 驱动（仅支持指定机型如 ThinkPad Helix）。</li>
+</ul>
+<p>另一方面硬件 ID 绑定严格，硬件 ID（如 ACPI\INT345D）深度关联，不同主板型号（如 100 系列与 300 系列芯片组）需匹配不同驱动版本。若用户未按硬件 ID 精确搜索，在 Intel 官网难以定位正确驱动。</p>
+<h1 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h1><h2 id="DDR5-内存"><a href="#DDR5-内存" class="headerlink" title="DDR5 内存"></a>DDR5 内存</h2><p>DDR5内存将传统的64位位宽拆分为两个独立的32位子通道（称为双子通道），因此单条DDR5即可实现类似双通道的带宽效果。例如，单条DDR5 4800MHz的理论带宽为38.4 GB&#x2F;s（32位×2通道），而DDR4单通道仅25.6 GB&#x2F;s（64位单通道）。</p>
+<p>插满四根DDR5可能导致频率下降（如4800MHz降至4000MHz），带宽反而比双条降低15%~20%，延迟增加25%。</p>
+<p>目前绝大多数消费级的DDR5主板都采用一种叫做“菊花链”（Daisy Chain）的布线方式。CPU的内存控制器设计时，通常会对两根内存插槽的信号线路做专门优化，以实现最高的频率和最稳定的运行。当插上四根内存时，相当于内存控制器需要同时管理四条“通道”的信号。这会大大增加控制器的负载和电气压力，导致信号衰减和干扰（Crosstalk）变得更严重。离CPU最近的两个内存插槽（通常是A2和B2）是“主要出口”，信号路径最短，最干净。另外两个插槽（A1和B1），信号需要绕更远的路，质量会下降。在高频情况下不稳定，为了保证四条路都能同步稳定，整个系统的速度就必须被拉低到最差的水平。</p>
+<p>所有DDR5 DRAM芯片都具备 On-Die ECC，仅用于内部，不是传统的系统级ECC（不会将错误报告给CPU或操作系统）。</p>
+<h2 id="ECC"><a href="#ECC" class="headerlink" title="ECC"></a>ECC</h2><p>Unbuffered ECC （非缓冲ECC）和 Registered ECC（注册式ECC）</p>
+<p>Unbuffered ECC内存指的是不带缓冲（unbuffered）的纠错码（Error-Correcting Code）内存模块。它在标准内存基础上添加了额外的位（通常是1&#x2F;8的额外容量）来检测和纠正单比特错误，从而提高数据完整性和可靠性，但没有额外的缓冲芯片来管理信号。 与registered（或buffered）ECC相比，unbuffered ECC的命令直接从内存控制器传输到模块，没有中间寄存器延迟，因此速度更快，但通常支持的内存通道或模块数量较少，适用于桌面、工作站或小型服务器，而非大规模企业级系统。</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Hardware/" rel="tag">Hardware</a>, <a class="tag-none-link" href="/tags/Notes/" rel="tag">Notes</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2025-11-27T06:35:42.713Z" itemprop="dateModified">最后编辑：2025-11-27</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Debian 错误 deb 打包卸载处理" href="/Issue/Errordeb/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" K8S(Kubernetes) 笔记" href="/Software/k8s/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Hardware/HardwareNotes/" data-full-path="http://ted423.github.io/Hardware/HardwareNotes/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intel-Network"><span class="toc-text">Intel Network</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Intel-R-Serial-IO-GPIO"><span class="toc-text">Intel(R) Serial IO GPIO</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-text">内存</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#DDR5-%E5%86%85%E5%AD%98"><span class="toc-text">DDR5 内存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ECC"><span class="toc-text">ECC</span></a></li></ol></li></ol>
+    </div>
+</aside>
+                
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

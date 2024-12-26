@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>K8S(Kubernetes) 笔记 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Software/k8s/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Notes, Software" />
+  
+  <meta name="description" content="没空系统性整理，所以先记笔记好了 最新版的Kubernetes 已不再使用 DockerKubernetes v1.24+ 移除了 dockershim，不再直接依赖 Docker Engine 来作为容器运行时，并且推荐使用像 containerd 这样的 CRI 运行时。同时安装 Docker Engine 和独立的 containerd (被 Kubernetes 使用) 确实可能会导致一些">
+<meta property="og:type" content="article">
+<meta property="og:title" content="K8S(Kubernetes) 笔记">
+<meta property="og:url" content="http://ted423.github.io/Software/k8s/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="没空系统性整理，所以先记笔记好了 最新版的Kubernetes 已不再使用 DockerKubernetes v1.24+ 移除了 dockershim，不再直接依赖 Docker Engine 来作为容器运行时，并且推荐使用像 containerd 这样的 CRI 运行时。同时安装 Docker Engine 和独立的 containerd (被 Kubernetes 使用) 确实可能会导致一些">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-28T11:09:30.255Z">
+<meta property="article:modified_time" content="2026-02-08T15:24:26.014Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Notes">
+<meta property="article:tag" content="Software">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/k8s/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">K8S(Kubernetes) 笔记</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-11-28T11:09:30.255Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-11-28</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~4.87K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>没空系统性整理，所以先记笔记好了</p>
+<h1 id="最新版的Kubernetes-已不再使用-Docker"><a href="#最新版的Kubernetes-已不再使用-Docker" class="headerlink" title="最新版的Kubernetes 已不再使用 Docker"></a>最新版的Kubernetes 已不再使用 Docker</h1><p>Kubernetes v1.24+ 移除了 dockershim，不再直接依赖 Docker Engine 来作为容器运行时，并且推荐使用像 containerd 这样的 CRI 运行时。同时安装 Docker Engine 和独立的 containerd (被 Kubernetes 使用) 确实可能会导致一些混淆或潜在的冲突，但这并不意味着完全不能安装 Docker，或者某些教程推荐安装 Docker 就是完全错误的。<br>这里需要澄清几个关键点，解释为什么有些教程可能仍然会提到安装 docker.io (或 docker-ce)：<br>历史原因和习惯延续：<br>在 Kubernetes v1.23 及更早版本，Docker Engine 是最主流的容器运行时。大量的旧教程和很多人的经验都是基于 Docker 的。<br>即使 dockershim 被移除，Docker Engine 本身的核心运行时就是 containerd。所以，安装 Docker Engine 实际上也会安装和运行 containerd。<br>Docker CLI 的便利性：<br>很多人习惯使用 docker命令行工具 (docker ps, docker images, docker build 等) 来进行本地镜像构建、容器调试等操作。<br>即使 Kubernetes 使用独立的 containerd 实例，管理员或开发者可能仍然希望在节点上拥有 docker CLI 以便进行一些辅助操作。<br>crictl 是与 CRI 运行时（如 containerd）交互的标准工具，但其命令和用户体验与 docker CLI 不同，后者更为用户熟知。<br>误解或简化教程：<br>有些教程可能没有完全更新到最新的 Kubernetes 架构变化，或者为了简化步骤，直接让用户安装 Docker，因为 Docker 安装后，其内部的 containerd 可以被配置为 Kubernetes 的 CRI 运行时。<br>关键点在于如何配置 kubelet： 如果安装了 Docker Engine，kubelet 必须被配置为不使用已废弃的 dockershim，而是直接与 Docker Engine 内部的 containerd 的 CRI socket (&#x2F;run&#x2F;containerd&#x2F;containerd.sock，如果 Docker 将其暴露出来并与 Kubernetes 期望的一致) 通信。<br>Docker 仍然是构建镜像的主流工具：<br>虽然 Kubernetes 运行容器不直接依赖 Docker Engine，但构建容器镜像的生态系统仍然以 Dockerfile 和 docker build (或兼容工具如 buildah, kaniko) 为主。(可以看下最下面的命令)<br>因此，在开发环境或CI&#x2F;CD流程中，Docker Engine 仍然扮演重要角色。有些教程可能会将节点准备和镜像构建环境的准备步骤混合在一起。</p>
+<h1 id="Helm-Helm-Charts"><a href="#Helm-Helm-Charts" class="headerlink" title="Helm &amp; Helm Charts"></a>Helm &amp; Helm Charts</h1><p>Helm 是 Kubernetes 的包管理器，目前唯一安装 Kubernetes Dashboard 的方式(然后它 Archive 了)，目前应该是推荐用<a target="_blank" rel="noopener" href="https://github.com/kubernetes-sigs/headlamp">headlamp</a></p>
+<p>Charts (Helm 包)： Helm 使用一种称为 &quot;Charts&quot; 的打包格式。一个 Chart 就是一个描述了一组相关 Kubernetes 资源的文件集合。它可以包含 Deployment, Service, ConfigMap, Secret, Ingress 等等，以及这些资源的配置模板。Charts 通常允许用户通过一个 values.yaml 文件或命令行参数来定制安装，而无需直接修改 Chart 的模板文件。Helm 会跟踪应用的版本，并允许你轻松地将应用回滚到之前的版本。</p>
+<p>仓库 (Repositories)： Helm Charts 可以存储在称为 &quot;仓库&quot; 的地方，你可以添加这些仓库来访问社区或组织维护的 Charts。</p>
+<h2 id="一些命令"><a href="#一些命令" class="headerlink" title="一些命令"></a>一些命令</h2><p>如 nfs-csi 的镜像代理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">helm upgrade --install nfs-csi csi-driver-nfs/csi-driver-nfs --namespace kube-system \</span><br><span class="line">  --<span class="built_in">set</span> image.nfs.repository=docker.x.lan/k8s/sig-storage/nfsplugin \</span><br><span class="line">  --<span class="built_in">set</span> image.csiProvisioner.repository=docker.x.lan/k8s/sig-storage/csi-provisioner \</span><br><span class="line">  --<span class="built_in">set</span> image.livenessProbe.repository=docker.x.lan/k8s/sig-storage/livenessprobe \</span><br><span class="line">  --<span class="built_in">set</span> image.csiResizer.repository=docker.x.lan/k8s/sig-storage/csi-resizer \</span><br><span class="line">  --<span class="built_in">set</span> image.csiSnapshotter.repository=docker.x.lan/k8s/sig-storage/csi-snapshotter \</span><br><span class="line">  --<span class="built_in">set</span> image.csiNodeDriverRegistrar.repository=docker.x.lan/k8s/sig-storage/csi-node-driver-registrar</span><br></pre></td></tr></table></figure>
+
+
+<p>打印官方提供的配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">helm show values grafana/alloy</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Master-移除以及清理"><a href="#Master-移除以及清理" class="headerlink" title="Master 移除以及清理"></a>Master 移除以及清理</h1><p><strong>注意事项</strong></p>
+<ul>
+<li>当需要调整 K8S Master 的时候，首要注意的 K8S 主节点之间是多数表决，一定要注意控制节点个数长期保持奇数，否则可能有集群不稳定以及脑裂（集群分裂成配置不同的两个）的风险。一般建议主节点为偶数的时间不要超过1小时。</li>
+<li>在已有集群的情况下，注意不要让 Keeplived 在没有主节点功能的节点上启动。否则有可能其会竞争为当前的工作主节点，导致整个集群无法访问。</li>
+<li>应该先添加节点后再进行删除。</li>
+</ul>
+<p>首先注意主节点不能用<code>delete node</code>，移除可能需要<code>kubectl drain</code>(维护模式)。错误操作或者主节点意外失效，主节点的相关信息仍然会保存在 etcd 里。</p>
+<p>需要进入 etcd pod 操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ETCDCTL_API=3 etcdctl -w table endpoint --cluster status</span><br><span class="line"></span><br><span class="line">//这个命令会列出当前主节点，然后选择要移除的移除</span><br><span class="line">ETCDCTL_API=3 etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key member list</span><br><span class="line"></span><br><span class="line">ETCDCTL_API=3 etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key member remove &lt;id&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
+<li>pause 的镜像地址定义在 containerd 配置中</li>
+<li>containerd 的 config.toml 可以配置镜像源</li>
+</ul>
+<h1 id="常用维护命令"><a href="#常用维护命令" class="headerlink" title="常用维护命令"></a>常用维护命令</h1><p>列出 default 下的所有 pods</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n default -o wide</span><br></pre></td></tr></table></figure>
+
+<p>删除一个 pod (通常会自己重启)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl delete pod &lt;podname&gt; -n default</span><br></pre></td></tr></table></figure>
+<p>批量删pods的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n default |grep &quot;Error&quot; |awk &#x27;&#123;print $1&#125;&#x27; |xargs kubectl delete pod</span><br></pre></td></tr></table></figure>
+<p>不过如果机器对 grep 用 alias 显示行号，会需要<code>unalias grep</code></p>
+<h2 id="crictl"><a href="#crictl" class="headerlink" title="crictl"></a>crictl</h2><p>crictl 是为 Kubernetes 设计的，通过 CRI (Container Runtime Interface) 标准与任何兼容的容器运行时（如 containerd, CRI-O）交互。它是跨运行时的调试工具。</p>
+<p><strong>列出所有 pods</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl pods</span><br></pre></td></tr></table></figure>
+
+<p><strong>列出镜像</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl images</span><br></pre></td></tr></table></figure>
+
+<p><strong>下载镜像</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl pull &lt;image-name&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>crictl 只支持下载删除镜像，但不支持 tag、build 等功能</strong></p>
+<p><strong>查看容器 log</strong><br>下面是 containerid ，不是名字，也不是pod id</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl  logs &lt;containerid&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="runtime-endpoint"><a href="#runtime-endpoint" class="headerlink" title="runtime-endpoint"></a>runtime-endpoint</h3><p>runtime-endpoint 是容器运行时（如 containerd, CRI-O）暴露其 CRI 服务的通信地址，<code>--runtime-endpoint</code>用于指定 crictl 工具需要连接的、实现了容器运行时接口（CRI）的 gRPC 服务的监听地址。目前不写也没事</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">containerd: unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line">CRI-O: unix:///var/run/crio/crio.sock</span><br><span class="line"></span><br><span class="line">dockershim (在 Kubernetes v1.24+ 中已移除): unix:///var/run/dockershim.sock</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl --runtime-endpoint unix:///run/containerd/containerd.sock ps -a</span><br></pre></td></tr></table></figure>
+
+<h2 id="ctr"><a href="#ctr" class="headerlink" title="ctr"></a>ctr</h2><p>ctr 是 containerd 项目自带的原生客户端，直接与 containerd 的 API 交互，绕过了 CRI 层。它只适用于 containerd，并且功能更底层。</p>
+<p>在 Kubernetes 环境中，containerd 会为 Kubelet 创建一个名为 k8s.io 的命名空间。因此，使用 ctr 查看 K8s管理的资源时，必须指定该命名空间。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> ctr -n k8s.io images <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+<p>其他还包括 <code>images tag</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zcat harbor.v2.14.1.tar.gz | <span class="built_in">sudo</span> ctr -n k8s.io images import -</span><br></pre></td></tr></table></figure>
+<p>(docker 支持tgz,ctr只支持tar)</p>
+<p>这些用来替代<code>docker</code>的命令</p>
+<h2 id="nerdctl"><a href="#nerdctl" class="headerlink" title="nerdctl"></a>nerdctl</h2><p>是 containerd 的另一个客户端工具。它的目标是提供一个与 Docker CLI 完全兼容的体验。</p>
+<p>未测试</p>
+<p>看了下，目前是需要自己下 bin 文件使用，还涉及到 docker-buildx, debian 目前还不建议用。其它系统自行调研下好了</p>
+<h2 id="其他维护命令"><a href="#其他维护命令" class="headerlink" title="其他维护命令"></a>其他维护命令</h2><p>查看报错，通常用于确认节点的异常。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo journalctl -u kubelet -f --no-pager</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>helm ctr 命令说明更新 -<time datetime="2026-02-08">2026-02-08</time></p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Notes/" rel="tag">Notes</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2026-02-08T15:24:26.014Z" itemprop="dateModified">最后编辑：2026-02-08</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 硬件相关的一些笔记" href="/Hardware/HardwareNotes/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [问题处理]Docker Container 卡死关闭" href="/Issue/stopContainer/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Software/k8s/" data-full-path="http://ted423.github.io/Software/k8s/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

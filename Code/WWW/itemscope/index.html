@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>HTML5 数据结构(structured-data) 之 微数据(microdata) | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Code/WWW/itemscope/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="SEO, WWW" />
+  
+  <meta name="description" content="知道微数据是因为谷歌告诉我 https:&#x2F;&#x2F;ted423.bitcron.com&#x2F;post&#x2F;anime&#x2F;tangled 这个页面的数据结构有问题(最后发现class里有个vevent，所以谷歌认为这是一个活动) 经过搜索，终于了解了微数据这么一个东西，微数据是为了方便机器(搜索引擎)识别而产生的东西。其有特定的规范，有特定的格式。可以丰富搜索引擎的网页摘要。 本人按自己的理解乱说了一通，不保证本篇">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5 数据结构(structured-data) 之 微数据(microdata)">
+<meta property="og:url" content="http://ted423.github.io/Code/WWW/itemscope/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="知道微数据是因为谷歌告诉我 https:&#x2F;&#x2F;ted423.bitcron.com&#x2F;post&#x2F;anime&#x2F;tangled 这个页面的数据结构有问题(最后发现class里有个vevent，所以谷歌认为这是一个活动) 经过搜索，终于了解了微数据这么一个东西，微数据是为了方便机器(搜索引擎)识别而产生的东西。其有特定的规范，有特定的格式。可以丰富搜索引擎的网页摘要。 本人按自己的理解乱说了一通，不保证本篇">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/zh/e/e6/Tangled_poster_on_zh_Wikipedia.jpg">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/22px-Flag_of_Singapore.svg.png">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png">
+<meta property="article:published_time" content="2025-01-10T06:46:13.591Z">
+<meta property="article:modified_time" content="2016-03-08T00:02:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="SEO">
+<meta property="article:tag" content="WWW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload.wikimedia.org/wikipedia/zh/e/e6/Tangled_poster_on_zh_Wikipedia.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/itemscope/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">HTML5 数据结构(structured-data) 之 微数据(microdata)</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-01-10T06:46:13.591Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-01-10</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~4.36K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>知道微数据是因为谷歌告诉我 <a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/anime/tangled">https://ted423.bitcron.com/post/anime/tangled</a> 这个页面的数据结构有问题(最后发现class里有个vevent，所以谷歌认为这是一个活动)</p>
+<p>经过搜索，终于了解了微数据这么一个东西，微数据是为了方便机器(搜索引擎)识别而产生的东西。其有特定的规范，有特定的格式。可以丰富搜索引擎的网页摘要。</p>
+<p>本人按自己的理解乱说了一通，不保证本篇文章具备学术严谨性。</p>
+<p>还是以此为例说下</p>
+<table itemscope itemtype="https://schema.org/Movie" style="font-size:10px;">
+    <tbody>
+        <tr>
+			<th colspan="2" style="background: #C6C9FF;"><span itemprop="name">魔发奇缘<br><small>Tangled</small></span>
+			</th>
+        </tr>
+        <tr>
+        <td colspan="2" style="text-align:center;">
+         	<img alt="Tangled poster on zh Wikipedia.jpg" itemprop="image" src="//upload.wikimedia.org/wikipedia/zh/e/e6/Tangled_poster_on_zh_Wikipedia.jpg" height="326" width="220">
+         	</td>
+        </tr>
+        <tr>
+            <th scope="row">导演</th>
+            <td itemprop="director">纳桑·格莱诺
+                <br><span class="ilh-all">拜伦·霍华德(Byron Howard</a>)</span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">监制</th>
+            <td>罗伊·康丽
+                <br>约翰·雷斯特</a>
+                <br>格兰·基恩</a>
+                <br>菲力浦·洛法罗</td>
+        </tr>
+        <tr>
+            <th scope="row">剧本</th>
+            <td>丹·佛格曼</td>
+        </tr>
+        <tr>
+            <th scope="row">原著</th>
+            <td>长发姑娘</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">旁白</th>
+            <td>克里斯·柯林斯</td>
+        </tr>
+        <tr>
+            <th scope="row">主演</th>
+            <td itemprop="actor">曼迪·穆尔</a>
+                <br>扎卡里·李维</a>
+                <br><span class="ilh-all"><span class="ilh-page">唐娜·墨菲</span>
+                <br><span class="noprint ilh-comment">(<span class="ilh-link"><span dir="auto" xml:lang="en" lang="en">Donna Murphy</span>
+                </a>
+                </span>)</span>
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">配乐作曲</th>
+            <td>亚伦·孟肯</a>
+                <br><span class="ilh-all"><span class="noprint ilh-comment"><span class="ilh-link"><span dir="auto" xml:lang="en" lang="en">Glenn Slater</span>
+                </a>
+                </span>
+                </span>
+                </span><small style="font-size:85%;">(歌词)</small>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">剪辑</th>
+            <td>提姆·墨腾斯</td>
+        </tr>
+        <tr>
+            <th scope="row">制片商</th>
+            <td itemprop="copyrightHolder">华特迪士尼动画工作室</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">产地</th>
+            <td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" class="thumbborder"  height="12" width="22">&nbsp;</span><a itemprop="locationCreated" target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/美國" title="美国" class="mw-redirect">美国</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">语言</th>
+            <td>英语</a>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2" style="text-align:center; background: #C6C9FF;;">上映及发行</th>
+        </tr>
+        <tr itemprop="Duration datePublished">
+            <th scope="row">上映日期</th>
+            <td><span class="flagicon"><img alt="美国" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" class="thumbborder"  height="12" width="22"></a></span> 2010年11月24日
+                <br><span class="flagicon"><img alt="新加坡" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/22px-Flag_of_Singapore.svg.png" class="thumbborder"  height="15" width="22"></a></span> 2010年11月25日
+                <br><span class="flagicon"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span>
+                <span class="flagicon">
+                	<img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder" height="15" width="22">
+                    </a>
+                    </span>2011年2月3日
+                    <br><span class="flagicon"><img alt="中国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span>未上映
+                    <br>（其他国家）</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">发行商</th>
+            <td itemprop="publisher"><span class="flagicon"><img alt="美国" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" class="thumbborder"  height="12" width="22"></a></span> 
+                <a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/華特迪士尼影業" title="华特迪士尼影业" class="mw-redirect">华特迪士尼</a>
+                    <br><span class="flagicon"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> 洲立</td>
+        </tr>
+        <tr>
+            <th scope="row">预算</th>
+            <td>2亿6,000万美元</td>
+        </tr>
+        <tr>
+            <th scope="row">票房</th>
+            <td class="price">5亿90,721,936美元</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>其中<code>itemscope</code>标记了这块HTML标签具有微数据特性，该标签应该同时具有<code>itemtype</code>来说明这块微数据描述的是什么。<br>比方说所上面那一块</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;table itemscope itemtype=&quot;https://schema.org/Movie&quot; style=&quot;font-size:10px;&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>搜索引擎通过发现<code>itemtype</code>是<code>https://schema.org/Movie</code>,就能明白这说的是一部电影。<br><code>itemprop</code>则是具体元素，比方说</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span itemprop=&quot;name&quot;&gt;魔发奇缘&lt;br&gt;&lt;small&gt;Tangled&lt;/small&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p>再有<code>itemref</code>可以在itemtype里再嵌套一个itemtype<br>类似这种</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta itemprop=&quot;worksFor&quot; itemscope itemtype=&quot;http://schema.org/Organization&quot; itemref=&quot;organization&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>itemid</code>则是全局唯一标志，这个应该比较好理解，比方说身份证号什么的。</p>
+<p>可以用结构化数据工具查看微数据用的有没有问题<br><a target="_blank" rel="noopener" href="https://developers.google.com/structured-data/testing-tool/?url=http://ted423.bitcron.com/post/videos/film/tangled">https://developers.google.com/structured-data/testing-tool/?url=http://ted423.bitcron.com/post/videos/film/tangled</a></p>
+<p>微数据的作用在于能较好的转化为json<br><a target="_blank" rel="noopener" href="https://foolip.org/microdatajs/live/">https://foolip.org/microdatajs/live/</a><br>可以看到上文表格可以转化为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;items&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;type&quot;: [</span><br><span class="line">        &quot;https://schema.org/Movie&quot;</span><br><span class="line">      ],</span><br><span class="line">      &quot;properties&quot;: &#123;</span><br><span class="line">        &quot;name&quot;: [</span><br><span class="line">          &quot;魔发奇缘Tangled&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;image&quot;: [</span><br><span class="line">          &quot;https://upload.wikimedia.org/wikipedia/zh/e/e6/Tangled_poster_on_zh_Wikipedia.jpg&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;director&quot;: [</span><br><span class="line">          &quot;纳桑·格莱诺\n                拜伦·霍华德(Byron Howard)\n            &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;actor&quot;: [</span><br><span class="line">          &quot;曼迪·穆尔\n                扎卡里·李维\n                唐娜·墨菲\n                (Donna Murphy\n                \n                )\n                \n            &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;copyrightHolder&quot;: [</span><br><span class="line">          &quot;华特迪士尼动画工作室\n            &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;locationCreated&quot;: [</span><br><span class="line">          &quot;http://zh.wikipedia.org/wiki/%E7%BE%8E%E5%9C%8B&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;Duration&quot;: [</span><br><span class="line">          &quot;\n            上映日期\n             2010年11月24日\n                 2010年11月25日\n                \n                \n                \t\n                    \n                    2011年2月3日\n                    未上映\n                    （其他国家）\n            \n        &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;datePublished&quot;: [</span><br><span class="line">          &quot;\n            上映日期\n             2010年11月24日\n                 2010年11月25日\n                \n                \n                \t\n                    \n                    2011年2月3日\n                    未上映\n                    （其他国家）\n            \n        &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;publisher&quot;: [</span><br><span class="line">          &quot; \n                华特迪士尼\n                     洲立&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/SEO/" rel="tag">SEO</a>, <a class="tag-none-link" href="/tags/WWW/" rel="tag">WWW</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2016-03-08T00:02:00.000Z" itemprop="dateModified">最后编辑：2016-03-08</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" HTML转BBCODE[HTML2BBCODE]" href="/Code/WWW/html2bbcode/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 手机版网页的meta" href="/Code/WWW/手机版网页的meta/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Code/WWW/itemscope/" data-full-path="http://ted423.github.io/Code/WWW/itemscope/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

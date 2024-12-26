@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>LDAP &amp; OpenLDAP | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/LDAP/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="AD(Active Directory), Document, Linux, Software, 开源(Open Source)" />
+  
+  <meta name="description" content="LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。 目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LDAP &amp; OpenLDAP">
+<meta property="og:url" content="http://ted423.github.io/Document/LDAP/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。 目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-09-13T06:38:50.287Z">
+<meta property="article:modified_time" content="2025-09-19T03:53:48.940Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="AD(Active Directory)">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Software">
+<meta property="article:tag" content="开源(Open Source)">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/LDAP/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">LDAP & OpenLDAP</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-09-13T06:38:50.287Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-09-13</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~15.57K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#phpLDAPadmin"><span class="toc-number">1.</span> <span class="toc-text">phpLDAPadmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">名词解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenLDAP-HDB-%E4%B8%8E-MDB-%E5%90%8E%E7%AB%AF%E5%AF%B9%E6%AF%94"><span class="toc-number">2.1.</span> <span class="toc-text">OpenLDAP HDB 与 MDB 后端对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distinguished-Name-DN"><span class="toc-number">2.2.</span> <span class="toc-text">Distinguished Name (DN)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rootdn"><span class="toc-number">2.3.</span> <span class="toc-text">rootdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OU-Organizational-Unit"><span class="toc-number">2.4.</span> <span class="toc-text">OU(Organizational Unit)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDIF-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.5.</span> <span class="toc-text">LDIF 文件格式介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE"><span class="toc-number">2.6.</span> <span class="toc-text">动态配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E9%9B%86%E6%88%90"><span class="toc-number">3.</span> <span class="toc-text">LDAP 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OS-%E9%9B%86%E6%88%90"><span class="toc-number">3.1.</span> <span class="toc-text">OS 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSSD-%E6%88%96-NSCD"><span class="toc-number">3.1.1.</span> <span class="toc-text">SSSD 或 NSCD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.1.2.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.3.</span> <span class="toc-text">集成配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bindn"><span class="toc-number">3.2.</span> <span class="toc-text">bindn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base-DN"><span class="toc-number">3.3.</span> <span class="toc-text">Base DN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">3.4.</span> <span class="toc-text">LDAP 过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">3.4.1.</span> <span class="toc-text">LDAP 过滤器的基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-AD-%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7%E5%8F%8A%E8%BF%87%E6%BB%A4%E5%99%A8%E6%9E%84%E5%BB%BA%E5%9D%97"><span class="toc-number">3.4.2.</span> <span class="toc-text">常用的 AD 用户属性及过滤器构建块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-LDAP-%E7%94%A8%E6%88%B7%E8%BF%87%E6%BB%A4%E5%99%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.4.3.</span> <span class="toc-text">常见的 LDAP 用户过滤器示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E7%9A%84-ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">OpenLDAP 的 ACL（访问控制列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F"><span class="toc-number">4.1.</span> <span class="toc-text">ACL 加载顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-number">4.2.</span> <span class="toc-text">ACL 语法详解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">5.</span> <span class="toc-text">OpenLDAP 权限验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#etc"><span class="toc-number">5.1.</span> <span class="toc-text">etc</span></a></li></ol></li></ol>
+                </div>
+            
+            <hr />
+            <div itemprop="articleBody"><p>LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。</p>
+<p>目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时的数据不一致情况是允许出现的，只要最终这些数据得到同步即可。</p>
+<p>LDAP由互联网工程任务组（IETF）的文档RFC定义，使用了描述语言ASN.1定义。最新的版本是版本3，由RFC 4511所定义。</p>
+<p>轻型目录访问协议(Lightweight Directory Access Protocol) 议是一个开放的，中立的，工业标准的应用协议，通过IP协议提供访问控制和维护分布式信息的目录信息。 目录服务在开发内部网和与互联网程序共享用户、系统、网络、服务和应用的过程中占据了重要地位。</p>
+<p>OpenLDAP 是一个基于标准实现的使用最多的 LDAP Server。</p>
+<p>BTW，微软的 Active Directory Domain Services(AD DS) 也提供目录服务，支持 LDAP 协议，不过具体的属性跟 OpenLDAP 有很大的区别。</p>
+<h1 id="phpLDAPadmin"><a href="#phpLDAPadmin" class="headerlink" title="phpLDAPadmin"></a>phpLDAPadmin</h1><p><a target="_blank" rel="noopener" href="https://github.com/leenooks/phpLDAPadmin">phpLDAPadmin</a> 是 LDAP 的一个 Web GUI。</p>
+<p>需要注意大部分的文档都是 v1 的，v2 进行了重构，有很大的区别。<strong>并且不能用 rootdn 登录</strong></p>
+<p>就个人来说，并不太喜欢 v2，虽说直接使用 rootdn 有安全性问题，但是直接不让用就很尬。具体见<a target="_blank" rel="noopener" href="https://github.com/leenooks/phpLDAPadmin/issues/325">Issue</a></p>
+<h1 id="名词解析"><a href="#名词解析" class="headerlink" title="名词解析"></a>名词解析</h1><h2 id="OpenLDAP-HDB-与-MDB-后端对比"><a href="#OpenLDAP-HDB-与-MDB-后端对比" class="headerlink" title="OpenLDAP HDB 与 MDB 后端对比"></a>OpenLDAP HDB 与 MDB 后端对比</h2><p>老的 openldap 2.4.44，后端是HDB</p>
+<p>OpenLDAP 中两种主要数据库后端：<strong>HDB</strong>（Hierarchical Berkeley DB）与<strong>MDB</strong>（Memory-Mapped Database），并对它们的架构、性能和配置差异进行对比。</p>
+<ul>
+<li><strong>HDB</strong> 使用 Oracle Berkeley DB (BDB) 存储数据，支持完全的层次结构和子树重命名，但需要合理配置 <code>DB_CONFIG</code>、<code>idlcachesize</code> 等缓存参数以获得良好性能。  </li>
+<li><strong>MDB</strong> 基于 LMDB（Lightning Memory-Mapped Database）库，无需外部缓存，直接通过内存映射实现高效存取，功能等同于 HDB 且支持子树重命名。  </li>
+<li>自 OpenLDAP 2.6 起，<strong>HDB 已移除，MDB 为推荐默认后端</strong>；官方文档建议新部署使用 MDB，并逐步将旧 HDB 迁移至 MDB。</li>
+</ul>
+<h2 id="Distinguished-Name-DN"><a href="#Distinguished-Name-DN" class="headerlink" title="Distinguished Name (DN)"></a>Distinguished Name (DN)</h2><p>DN：每个 LDAP 条目在目录树中的唯一标识，类似文件系统中的完整路径；由若干层级的 RDN（Relative Distinguished Name，相对可分辨名称）组成，每个 RDN 为属性–值对。</p>
+<p>RDN 示例：uid&#x3D;john.doe 或 cn&#x3D;Users，多属性 RDN 如 givenName&#x3D;John+sn&#x3D;Doe</p>
+<h2 id="rootdn"><a href="#rootdn" class="headerlink" title="rootdn"></a>rootdn</h2><p><strong>部分软件里是root DN按basedn理解的,请注意这里有个空格，是跟rootdn完全不同的东西，这个 root DN 理解为根DN</strong></p>
+<p>rootdn（Root Distinguished Name）是 LDAP 数据库中的超级管理员 DN，具备对该数据库条目的完全控制权限，不受常规访问控制列表（ACL）限制。</p>
+<p>超级权限 </p>
+<p>rootdn 对应的用户拥有忽略所有 ACL 的完全访问权限，可执行添加、删除、修改、查询等任意操作。  </p>
+<p>配置示例  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">database mdb</span><br><span class="line">suffix &quot;dc=example,dc=com&quot;</span><br><span class="line">rootdn &quot;cn=Manager,dc=example,dc=com&quot;</span><br><span class="line">rootpw secret</span><br></pre></td></tr></table></figure>
+
+<p>SASL 绑定<br>也可以指定 SASL 身份作为 rootdn，例如： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rootdn &quot;uid=root,cn=example.com,cn=digest-md5,cn=auth&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="OU-Organizational-Unit"><a href="#OU-Organizational-Unit" class="headerlink" title="OU(Organizational Unit)"></a>OU(Organizational Unit)</h2><p>是 LDAP 中用于构建目录层次结构、组织条目、应用策略和委派管理的基本构建块。它像文件夹一样，帮助你将目录中的信息整理得井井有条，使其更易于管理和理解。</p>
+<p>OU 的名字是可以自定义的，不过因为一些教程和预定义设置的原因的原因，很多人可能会使用比较常见的例如<code>ou=People</code>和<code>ou=Group</code>或<code>ou=users</code>和<code>ou=groups</code>，如 bitnami 的 OpenLDAP 的 docker 预制就是后者，而 dokuwiki 的过滤器中默认则用前者过滤。</p>
+<p>AD 中也有相同的概念，不过有些管理可能会把 OU 当部门使用，然后把不同的用户塞到不同的 OU。总之，这些跟后面的过滤器是强相关的，因为使用起来五花八门，所以过滤器这块基本都是可以自定义的。</p>
+<h2 id="LDIF-文件格式介绍"><a href="#LDIF-文件格式介绍" class="headerlink" title="LDIF 文件格式介绍"></a>LDIF 文件格式介绍</h2><p>LDIF（<strong>LDAP Data Interchange Format</strong>，LDAP 数据交换格式）是一种基于文本的格式，用于表示 LDAP（轻量目录访问协议）目录中的数据。LDIF 文件通常用于：</p>
+<ul>
+<li>导入（import）或导出（export）LDAP 条目；</li>
+<li>批量添加、删除或修改 LDAP 数据；</li>
+<li>与 <code>ldapadd</code>, <code>ldapmodify</code>, <code>ldapdelete</code> 等命令行工具配合使用。</li>
+</ul>
+<p>LDIF 文件由一系列的“条目（entry）”组成。每个条目表示 LDAP 目录中的一个对象，并由若干“属性（attribute）”组成。条目之间用空行分隔。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dn: cn=John Doe,dc=example,dc=com</span><br><span class="line">objectClass: inetOrgPerson</span><br><span class="line">cn: John Doe</span><br><span class="line">sn: Doe</span><br><span class="line">givenName: John</span><br><span class="line">mail: john.doe@example.com</span><br></pre></td></tr></table></figure>
+<h2 id="动态配置"><a href="#动态配置" class="headerlink" title="动态配置"></a>动态配置</h2><p>OpenLDAP 的动态配置，也称为<code>cn=config</code>或 DIT (Directory Information Tree) 配置，是一种现代的 OpenLDAP 服务器配置管理方式。它取代了传统的基于单个文本文件 (slapd.conf) 的静态配置方法。</p>
+<p>简单来说，动态配置就是将 OpenLDAP 服务器自身的所有配置信息存储在它自己的一个特殊 LDAP 数据库（DIT）中。这个配置数据库的根条目通常是<code>cn=config</code>。</p>
+<ul>
+<li>配置即数据： 所有的配置参数，如数据库后端、索引、覆盖层 (overlays)、访问控制列表 (ACLs)、TLS 设置、模块加载等，都以 LDAP 条目 (entries) 和属性 (attributes) 的形式存在。</li>
+<li>LDAP 操作管理： 你可以使用标准的 LDAP 客户端工具（如 ldapadd, ldapmodify, ldapdelete）通过 LDAP 协议来查看和修改这些配置条目。</li>
+<li>实时生效： 大部分配置更改在通过 LDAP 操作提交后会立即生效，无需重启 slapd 服务。</li>
+<li>结构化存储： 配置信息在磁盘上以 LDIF (LDAP Data Interchange Format) 文件的形式存储在一个特定目录中（通常是 &#x2F;etc&#x2F;ldap&#x2F;slapd.d&#x2F; 或 &#x2F;usr&#x2F;local&#x2F;etc&#x2F;openldap&#x2F;slapd.d&#x2F;）。</li>
+</ul>
+<p>注意不能直接编辑这些 LDIF 文件！所有更改都应通过 LDAP 操作进行。</p>
+<p><strong>优势</strong></p>
+<p><strong>无需重启服务 (No Server Restart)</strong></p>
+<p>核心优势： 这是最主要和最吸引人的优点。对大多数配置参数的更改可以立即生效，无需停止和重新启动 slapd 服务。这大大提高了服务的可用性，尤其是在生产环境中，最大限度地减少了服务中断时间。</p>
+<p>对于 slapd.conf，任何微小的更改都需要重启服务才能应用。</p>
+<p><strong>远程管理 (Remote Administration)</strong></p>
+<p>由于配置本身就是 LDAP 数据，你可以从任何具有 LDAP 客户端工具和适当权限的机器上远程管理 OpenLDAP 服务器的配置。</p>
+<p>使用 slapd.conf 时，你通常需要登录到服务器本地文件系统才能编辑配置文件。</p>
+<p><strong>标准化访问控制 (Standardized Access Control)</strong></p>
+<p>对<code>cn=config</code>树的访问和修改可以像对普通数据 DIT 一样，使用 LDAP ACLs 进行精细控制。你可以定义哪些用户或组有权限修改哪些配置项。</p>
+<p>slapd.conf 的访问控制依赖于操作系统的文件权限。</p>
+<p><strong>配置复制 (Configuration Replication)</strong></p>
+<p><code>cn=config</code>DIT 可以像其他数据 DIT 一样被复制到其他 OpenLDAP 副本服务器。这对于维护多主复制 (multi-master replication) 或高可用性集群中的配置一致性至关重要。</p>
+<p>使用 slapd.conf 时，你需要手动同步配置文件到所有副本服务器，容易出错。</p>
+<p><strong>原子性和事务性 (Atomicity and Transactionality)</strong></p>
+<p>LDAP 操作本质上具有一定的原子性。复杂的配置更改（例如，添加一个新数据库及其相关覆盖层和 ACL）可以作为一个或多个 LDAP 修改操作来执行。</p>
+<p>虽然不是完全的事务性，但比编辑文本文件更容易管理复杂更改的完整性。</p>
+<p><strong>模式感知 (Schema Aware)</strong></p>
+<p><code>cn=config</code>本身也遵循特定的 LDAP 模式。这意味着服务器可以验证你尝试应用的配置更改是否符合预定义的结构和数据类型，从而减少配置错误。</p>
+<p>slapd.conf 只是一个文本文件，其语法错误通常在服务器启动时才会被发现。</p>
+<p><strong>更易于脚本化和自动化 (Easier Scripting and Automation)</strong></p>
+<p>可以使用标准的 LDAP 命令行工具或各种编程语言的 LDAP 库来编写脚本，以编程方式进行配置更改和管理，这比解析和修改文本文件更可靠、更强大。</p>
+<p><strong>版本控制和审计</strong></p>
+<p>虽然 LDAP 本身不直接提供版本控制，但结合 LDAP 的日志记录和备份策略，可以更容易地跟踪配置更改历史。一些第三方工具也可以辅助实现。</p>
+<h1 id="LDAP-集成"><a href="#LDAP-集成" class="headerlink" title="LDAP 集成"></a>LDAP 集成</h1><p>主要有两种配置，一个是对 AD 的集成，还有一个则是对 OpenLDAP 的集成。</p>
+<p>需要注意的是，AD 虽然底层也符合标准，但跟 OpenLDAP 的各项属性有很大区别，很多服务会特别的专门适配 AD，但有些会以 OpenLDAP 为标准，连接 AD 会需要自行修改配置项。</p>
+<h2 id="OS-集成"><a href="#OS-集成" class="headerlink" title="OS 集成"></a>OS 集成</h2><h3 id="SSSD-或-NSCD"><a href="#SSSD-或-NSCD" class="headerlink" title="SSSD 或 NSCD"></a>SSSD 或 NSCD</h3><p>sssd 会更现代一些，<del>不过强制 TLS</del>(ubuntu 特性)，安全以及复杂。如果各种 ssl 苦手且目标环境做了物理隔离，建议 nscd。(不过 sssd 战未来)，请务必注意 NSCD 会跟现代的 systemd-resolved 的缓存机制产生冲突和不可预知的行为。遇到问题可能需要<code>sudo nscd -i hosts</code> 清理一下，即便不用636，sssd 也会开启 START_TLS 。</p>
+<p>Ubuntu（尤其是 20.04&#x2F;22.04 及以后的版本）在打包 SSSD 时，通常会附带 更严格的默认安全策略。这可能导致你看到“ldap_id_use_start_tls &#x3D; false 没有效果”。</p>
+<p>sssd.conf 里配置 <code>ldap_auth_disable_tls_never_use_in_production = true</code>可以不开启 tls，这个配置可能跟 sssd 的版本有关，已知 Ubuntu 22 LTS 里是需要开启的，Redhat7系列似乎不用。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>debian 是有一个 ldapd，<a target="_blank" rel="noopener" href="https://wiki.debian.org/LDAP/PAM">https://wiki.debian.org/LDAP/PAM</a> </p>
+<p>ubuntu 也有 ldapd，但是没有存在感， ubuntu 所有的教程还是基于非 ldapd 的，甚至 AI 都不知道有这个包。</p>
+<h3 id="集成配置"><a href="#集成配置" class="headerlink" title="集成配置"></a>集成配置</h3><p>deb 系是 sudo pam-auth-update，rpm 系是有 <code>authconfig --enableldap --enableldapauth</code>。后者看 redhat 文档就好。</p>
+<p>PS，<code>authconfig</code>中 sssd 和 ldap 是不同的，sssd 的参数是<code>--enablesssdauth --enablesssd</code></p>
+<p>PS2，<code>authconfig</code>默认启用 ldap 只会启用 nslcd，不会启用 nscd。</p>
+<p>PS3，<code>authconfig</code>在有 sssd 的情况下可能<code>--enableldap --enableldapauth</code>会默认启用sssd。</p>
+<p>PS4，默认的 sssd config 可能本身就有问题，你直接启用可能是用不了的，主要是 service 那块没包括 ldap pam 那些</p>
+<h2 id="bindn"><a href="#bindn" class="headerlink" title="bindn"></a>bindn</h2><p>通常 AD 下使用具有域控管理员权限的账号，不过出于安全性考虑可以降低权限（普通 domain user 没有读取其他用户邮箱的权限），目前都使用的管理员权限的账号做bind</p>
+<p>OpenLDAP 中则一般使用 rootdn (也可以不使用，不过需要创建具有特殊权限的账号)</p>
+<h2 id="Base-DN"><a href="#Base-DN" class="headerlink" title="Base DN"></a>Base DN</h2><p>定义：LDAP 搜索操作（例如 ldapsearch）使用的“起始 DN”，决定了查询范围的顶端节点。</p>
+<p>格式：通常为域组件（DC，Domain Component），如 dc&#x3D;example,dc&#x3D;com；也可为组织单元（OU，如 ou&#x3D;Users,dc&#x3D;example,dc&#x3D;com）或通用名称（CN，如 cn&#x3D;Administrator,cn&#x3D;Users,dc&#x3D;example,dc&#x3D;com）。 </p>
+<p><strong>在客户端或应用配置中填入 Base DN 后，后续的搜索操作会从该节点及其子树进行。例如，若 Base DN 为 ou&#x3D;Users,dc&#x3D;example,dc&#x3D;com，那么只有位于该 OU 下的用户才会被索引。</strong></p>
+<p>上面加粗了，因为实际上大多会使用 Users 或 People ,主要是查找用户</p>
+<p>不过你需要注意下有些服务是不需要同步 LDAP 组的，例如 dokuwiki 里就没有设basedn，他会让你设用户过滤和组的过滤条件。</p>
+<h2 id="LDAP-过滤器"><a href="#LDAP-过滤器" class="headerlink" title="LDAP 过滤器"></a>LDAP 过滤器</h2><p>LDAP 过滤器 (LDAP Filter) 在与 LDAP&#x2F;AD 集成的应用程序（如 DokuWiki 的 authad 插件 或 Snipe-IT）中扮演着至关重要的角色。它定义了<strong>如何查找和验证用户</strong>。</p>
+<p>简单来说，LDAP 过滤器就像是你在 Active Directory 这个大数据库里进行搜索时使用的<strong>搜索条件</strong>。你需要告诉应用程序：当用户尝试登录时，应该使用哪些标准来找到 AD 中对应的用户对象，并确认这个对象是有效的、允许登录的。</p>
+<p>一个可供参考的问题见 <a target="_blank" rel="noopener" href="https://github.com/witersen/SvnAdminV2.0/issues/51">Issue</a></p>
+<h3 id="LDAP-过滤器的基本语法"><a href="#LDAP-过滤器的基本语法" class="headerlink" title="LDAP 过滤器的基本语法"></a>LDAP 过滤器的基本语法</h3><ul>
+<li>使用括号 <code>()</code> 包裹整个过滤器。</li>
+<li>基本条件通常是 <code>(属性名=值)</code> 的形式。</li>
+<li>可以使用逻辑运算符将多个条件组合起来：<br>*   <strong>&amp;</strong>：与 (AND) - 所有条件都必须满足。格式：<code>(&amp;(条件1)(条件2)...)</code><br>*   <strong>|</strong>：或 (OR) - 至少一个条件满足。格式：<code>(|(条件1)(条件2)...)</code><br>*   <strong>!</strong>：非 (NOT) - 条件不满足。格式：<code>(!(条件))</code></li>
+<li>值可以是具体的值，也可以是通配符 <code>*</code>，或者是一个<strong>占位符</strong>，应用程序会在运行时将其替换为用户输入的内容（通常是用户名）。</li>
+</ul>
+<h3 id="常用的-AD-用户属性及过滤器构建块"><a href="#常用的-AD-用户属性及过滤器构建块" class="headerlink" title="常用的 AD 用户属性及过滤器构建块"></a>常用的 AD 用户属性及过滤器构建块</h3><ul>
+<li><code>objectCategory=person</code>：查找对象类别为 &quot;person&quot; 的对象（通常包含用户）。</li>
+<li><code>objectClass=user</code>：查找对象类别为 &quot;user&quot; 的对象。通常与 <code>objectCategory=person</code> 一起使用，更精确地定位用户。</li>
+<li><code>sAMAccountName</code>：用户的登录名（通常是 Windows 2000 之前的短名称，例如 <code>johndoe</code>）。这是最常用的登录名字段。</li>
+<li><code>userPrincipalName</code> (UPN)：用户的邮箱风格登录名（例如 <code>johndoe@yourdomain.local</code>）。</li>
+<li><code>mail</code>：用户的电子邮件地址。有时也用作登录名。</li>
+<li><code>userAccountControl</code>：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： <code>(!(userAccountControl:1.2.840.113556.1.4.803:=2))</code>。这里的 <code>2</code> 代表 <code>ADS_UF_ACCOUNTDISABLE</code> 标志位，<code>:1.2.840.113556.1.4.803:=</code> 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
+<li><code>memberOf</code>：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 <code>CN=AppUsers,OU=Groups,DC=yourdomain,DC=local</code>。</li>
+</ul>
+<h3 id="常见的-LDAP-用户过滤器示例"><a href="#常见的-LDAP-用户过滤器示例" class="headerlink" title="常见的 LDAP 用户过滤器示例"></a>常见的 LDAP 用户过滤器示例</h3><p><strong>注意：</strong> 以下示例使用占位符 <code>&#123;username&#125;</code> 代表用户输入的用户名。<strong>请务必查阅你所使用的应用程序（如 DokuWiki authad 插件）的文档，确认它实际使用的占位符是什么</strong>，可能是 <code>@USER@</code>, <code>%user%</code>, <code>$user</code> 等。</p>
+<p>最基本：使用 sAMAccountName 查找未禁用的用户 (推荐作为起点) </p>
+<p>下面最外层的括号或许需要取消</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectCategory=person)(objectClass=user)(sAMAccountName=&#123;username&#125;)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>&amp;</code>: 所有条件都需满足。</li>
+<li><code>objectCategory=person</code> 和 <code>objectClass=user</code>: 确保找到的是用户对象。</li>
+<li><code>sAMAccountName=&#123;username&#125;</code>: 用户的 <code>sAMAccountName</code> 属性必须等于登录时输入的用户名。</li>
+<li><code>(!(userAccountControl:1.2.840.113556.1.4.803:=2))</code>: 确保账户未被禁用。(部分服务会同步已禁用账号，然后在本地显示账号禁用，如果不需要可以直接通过过滤器排除掉)</li>
+</ul>
+<p><strong>OpenLDAP</strong><br>因为大部分都会以 OpenLDAP 为主，所以基本没什么好写的，你只要注意不要因为自己设的不同名字的 OU 被坑了就行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectClass=posixGroup)(|(memberUid=%&#123;uid&#125;)(gidNumber=%&#123;gid&#125;)))</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>objectCategory=posixGroup</code>: 确保找到的是组对象。</li>
+<li><code>|(memberUid=%&#123;uid&#125;)(gidNumber=%&#123;gid&#125;)</code>: 用户主组是gidNumber，memberUid是次组</li>
+</ul>
+<h1 id="OpenLDAP-的-ACL（访问控制列表）"><a href="#OpenLDAP-的-ACL（访问控制列表）" class="headerlink" title="OpenLDAP 的 ACL（访问控制列表）"></a>OpenLDAP 的 ACL（访问控制列表）</h1><p>OpenLDAP 中的访问控制列表 (ACL) 是一套强大的规则，用于定义谁 (who) 可以对目录中的哪些数据 (what) 执行何种操作 (access level)。正确配置 ACL 是保护 LDAP 目录安全、确保数据完整性和实现细粒度权限管理的关键。</p>
+<p>OpenLDAP 的 ACL 规则遵循一个基本结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">access to &lt;what&gt;</span><br><span class="line">    [by &lt;who&gt; &lt;access_level&gt; [&lt;control&gt;]]+</span><br></pre></td></tr></table></figure>
+
+<p>或者在动态配置 <code>cn=config</code> 中（推荐方式），使用 <code>olcAccess</code> 属性：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">olcAccess: &#123;&lt;index&gt;&#125;to &lt;what&gt;</span><br><span class="line">  [by &lt;who&gt; &lt;access_level&gt; [&lt;control&gt;]]</span><br><span class="line">  [by &lt;who&gt; &lt;access_level&gt; [&lt;control&gt;]]</span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>&#123;&lt;index&gt;&#125;</code>: 是一个非负整数，用于对多条 <code>olcAccess</code> 规则进行排序。规则按索引号从小到大评估。</li>
+<li><code>to &lt;what&gt;</code>: 定义规则适用的目标资源（条目或属性）。</li>
+<li><code>by &lt;who&gt; &lt;access_level&gt; [&lt;control&gt;]</code>: 定义授权子句。一个 <code>access to</code> 块可以包含多个 <code>by</code> 子句。</li>
+</ul>
+<h2 id="ACL-加载顺序"><a href="#ACL-加载顺序" class="headerlink" title="ACL 加载顺序"></a>ACL 加载顺序</h2><ul>
+<li>OpenLDAP 服务器会按照 olcAccess 规则的索引顺序（或 slapd.conf 中的顺序）逐个评估 access to 块。当请求的目标与某个 access to 块的 <what> 部分匹配时，服务器会继续在该块内部按顺序评估 by <who> 子句。通常，该块内第一个匹配的 by <who> 子句所授予的权限会生效，除非使用了 continue 或 break 等控制流指令。</li>
+<li>设计 ACL 规则时，强烈建议遵循“从最具体到最通用”的排序原则。例如，先为特定条目或属性定义规则，然后是子树，最后是全局规则。在 by <who> 子句内部也应遵循此原则。</li>
+<li>如果请求的操作没有匹配任何 access to 块，或者在匹配的块内没有 by <who> 子句授予权限，并且没有配置非限制性的 olcDefaultAccess，则访问将被拒绝。为确保明确的默认拒绝策略，最佳实践是在 ACL 规则集的末尾添加一条 access to * by * none 规则。</li>
+</ul>
+<h2 id="ACL-语法详解"><a href="#ACL-语法详解" class="headerlink" title="ACL 语法详解"></a>ACL 语法详解</h2><ol>
+<li><code>to &lt;what&gt;</code> (目标资源)</li>
+</ol>
+<p>这部分指定 ACL 规则应用于目录中的哪些对象或属性。</p>
+<ul>
+<li><code>*</code>: 应用于所有条目和属性。</li>
+<li><code>dn[.&lt;style&gt;]=&lt;pattern&gt;</code>: 应用于 DN (Distinguished Name) 匹配的条目。<ul>
+<li>Pattern: DN 字符串或正则表达式。<br>例如: <code>dn.subtree=&quot;ou=users,dc=example,dc=com&quot;</code></li>
+<li>Style:<ul>
+<li><code>base</code> (或 <code>exact</code>): 精确匹配 DN。<br><code>to dn.exact=&quot;ou=users,dc=example,dc=com&quot;</code></li>
+<li><code>one</code> (或 <code>onelevel</code>): 匹配指定 DN 的下一级子条目。<br><code>to dn.one=&quot;ou=groups,dc=example,dc=com&quot;</code></li>
+<li><code>subtree</code>: 匹配指定 DN 及其所有子树条目。<br><code>to dn.subtree=&quot;dc=example,dc=com&quot;</code></li>
+<li><code>children</code>: 匹配指定 DN 的所有子树条目，但不包括该 DN 本身。</li>
+<li><code>regex</code>: 使用正则表达式匹配 DN。<br><code>to dn.regex=&quot;uid=[^,]+,ou=users,dc=example,dc=com&quot;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>attrs=&lt;attrlist&gt;</code>: 应用于条目中的特定属性。<ul>
+<li><code>attrlist</code>: 逗号分隔的属性名列表 (e.g., <code>userPassword,mail</code>) 或特殊值：<ul>
+<li><code>entry</code>: 条目本身（控制添加、删除、重命名等操作），不包括其属性。</li>
+<li><code>children</code>: 条目的子条目（控制添加、删除子条目）。<br><code>to attrs=userPassword,shadowLastChange</code><br><code>to attrs=entry</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>filter=&lt;ldap_filter&gt;</code>: 应用于匹配 LDAP 搜索过滤器的条目。<br><code>to filter=&quot;(objectClass=inetOrgPerson)&quot;</code></li>
+<li><code>val.&lt;attribute&gt;=&lt;value&gt;</code>: (较少用) 应用于其 <code>&lt;attribute&gt;</code> 属性具有特定 <code>&lt;value&gt;</code> 的条目。</li>
+</ul>
+<ol start="2">
+<li><code>by &lt;who&gt;</code> (访问者)</li>
+</ol>
+<p>指定谁可以执行操作。</p>
+<ul>
+<li><code>*</code>: 任何人，包括匿名用户。<br><code>by * read</code></li>
+<li><code>anonymous</code>: 未认证的（匿名）用户。<br><code>by anonymous auth</code></li>
+<li><code>users</code>: 任何已成功认证的用户。<br><code>by users read</code></li>
+<li><code>self</code>: 正在访问的条目与当前绑定用户的 DN 相同。<br>这是实现用户修改自己信息（如密码）的关键。<br><code>by self write</code></li>
+<li><code>dn[.&lt;style&gt;]=&lt;pattern&gt;</code>: 特定 DN 或匹配模式的 DN。<br>Style: <code>base</code> (或 <code>exact</code>), <code>regex</code>, <code>subtree</code> (表示绑定用户是该子树下的用户)。<br><code>by dn.exact=&quot;cn=admin,dc=example,dc=com&quot; manage</code></li>
+<li><code>group[/&lt;objectclass&gt;[/&lt;groupattr&gt;]][.&lt;style&gt;]=&lt;pattern&gt;</code>: 属于特定组的成员。<ul>
+<li><code>objectclass</code>: 组对象的 objectClass (e.g., <code>groupOfNames</code>, <code>groupOfUniqueNames</code>)。<br>默认为 <code>groupOfNames</code>。</li>
+<li><code>groupattr</code>: 包含组成员 DN 的属性 (e.g., <code>member</code>, <code>uniqueMember</code>)。<br>默认为 <code>member</code>。</li>
+<li>Style and Pattern: 用于匹配组的 DN。<br><code>by group.exact=&quot;cn=administrators,ou=groups,dc=example,dc=com&quot; write</code></li>
+</ul>
+</li>
+<li><code>peername.&lt;style&gt;=&lt;pattern&gt;</code>: 基于客户端的 IP 地址或主机名。<br><code>by peername.ip=&quot;192.168.1.0/24&quot; read</code></li>
+<li><code>sockname.&lt;style&gt;=&lt;pattern&gt;</code>: 基于服务器监听的 IP 地址。</li>
+<li><code>dnattr=&lt;attrname&gt;</code>: 绑定用户的 DN 存在于目标条目的某个指定属性中<br>（例如，条目的 <code>owner</code> 属性值是当前用户的 DN）。<br><code>by dnattr=owner write</code></li>
+<li><code>set=&lt;set_expression&gt;</code>: 使用布尔逻辑 (<code>AND</code>, <code>OR</code>, <code>NOT</code>, <code>&amp;</code>, <code>|</code>, <code>!</code>) 组合多个 <code>&lt;who&gt;</code> 条件。<br><code>by set=&quot;user and group/groupOfNames/member.exact=cn=editors,ou=groups,dc=example,dc=com&quot; write</code><br>或者更简洁的语法 (OpenLDAP 2.5+):<code>by set=&quot;[cn=editors,ou=groups,dc=example,dc=com]/member &amp; user&quot; write</code></li>
+</ul>
+<ol start="3">
+<li><code>&lt;access_level&gt;</code> (权限级别)</li>
+</ol>
+<p>指定授予的权限。权限是分级的，较高的权限通常隐含较低的权限。</p>
+<ul>
+<li><code>none</code>: 无任何访问权限。</li>
+<li><code>disclose</code>: 允许在访问被拒绝时报告更详细的原因 (不常用)。</li>
+<li><code>auth</code>: 认证权限 (允许用户使用该条目进行 BIND 操作，例如检查密码)。</li>
+<li><code>compare</code>: 比较权限 (允许执行 LDAP 比较操作)。</li>
+<li><code>search</code>: 搜索权限 (允许在搜索操作中返回此条目&#x2F;属性，隐含 <code>compare</code> 权限)。</li>
+<li><code>read</code>: 读取权限 (允许读取条目&#x2F;属性的值，隐含 <code>search</code> 和 <code>compare</code> 权限)。</li>
+<li><code>write</code>: 写入权限 (允许修改、添加、删除属性；也允许 <code>add</code>, <code>delete</code>, <code>modrdn</code> 操作，如果应用到 <code>entry</code> 或 <code>children</code>。隐含 <code>read</code>, <code>search</code>, <code>compare</code> 权限)。</li>
+<li><code>manage</code>: 管理权限 (OpenLDAP 2.5+)。这是一个更高级别的权限，通常授予对子条目、模式等的管理能力。隐含 <code>write</code>。</li>
+</ul>
+<ol start="4">
+<li><code>&lt;control&gt;</code> (控制流)</li>
+</ol>
+<p>可选，控制 ACL 处理流程。</p>
+<ul>
+<li><code>stop</code>: 如果此 <code>by</code> 子句匹配，则停止处理当前 <code>access to</code> 块中的后续 <code>by</code> 子句。这是默认行为。</li>
+<li><code>continue</code>: 如果此 <code>by</code> 子句匹配，则授予指定的权限，并继续处理当前 <code>access to</code> 块中的后续 <code>by</code> 子句。这允许权限累积或被后续规则覆盖。</li>
+<li><code>break</code>: 如果此 <code>by</code> 子句匹配，则停止处理所有后续的 <code>access to</code> 块。</li>
+<li><code>implicit</code>: (OpenLDAP 2.5+) 使其行为如同由 <code>olcDefaultAccess</code> 定义的默认访问权限。</li>
+<li><code>self &lt;access_level&gt;</code>: 类似于 <code>by self &lt;access_level&gt;</code>，但通常用于特定场景，例如结合 <code>set</code>。</li>
+</ul>
+<p><strong>例子</strong></p>
+<p>一个用于hdb的支持用户自行修改密码的 ACL，注意目前正常普遍是mdb</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">dn: olcDatabase=&#123;2&#125;hdb,cn=config</span><br><span class="line">changetype: modify</span><br><span class="line">add: olcAccess</span><br><span class="line">olcAccess: &#123;0&#125;to attrs=userPassword</span><br><span class="line">  by self write</span><br><span class="line">  by anonymous auth</span><br><span class="line">  by * none</span><br><span class="line">-</span><br><span class="line">add: olcAccess</span><br><span class="line">olcAccess: &#123;1&#125;to attrs=shadowLastChange by self write by * read</span><br><span class="line">-</span><br><span class="line">add: olcAccess</span><br><span class="line">olcAccess: &#123;2&#125;to * by * read</span><br></pre></td></tr></table></figure>
+
+<p>其它简单示例 (olcAccess 格式):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># &#123;0&#125; Allow rootdn full access (this is usually implicit but can be explicit)</span><br><span class="line">olcAccess: &#123;0&#125;to *</span><br><span class="line">  by dn.exact=&quot;gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth&quot; manage</span><br><span class="line">  by dn.exact=&quot;cn=admin,dc=example,dc=com&quot; manage</span><br><span class="line">  by * break</span><br><span class="line"></span><br><span class="line"># &#123;1&#125; Users can read their own entry and change their own password</span><br><span class="line">olcAccess: &#123;1&#125;to dn.subtree=&quot;ou=users,dc=example,dc=com&quot;</span><br><span class="line">  by self write_protect=&quot;userPassword&quot; # Example of attribute-level write protection</span><br><span class="line">  by self read</span><br><span class="line">  by group.exact=&quot;cn=helpdesk,ou=groups,dc=example,dc=com&quot; write # Helpdesk can manage users</span><br><span class="line">  by * auth</span><br><span class="line"></span><br><span class="line"># &#123;2&#125; Users can read common attributes in other user entries</span><br><span class="line">olcAccess: &#123;2&#125;to dn.subtree=&quot;ou=users,dc=example,dc=com&quot;</span><br><span class="line">  attrs=&quot;uid,cn,sn,givenName,mail,telephoneNumber&quot;</span><br><span class="line">  by users read</span><br><span class="line">  by anonymous auth # Allow anonymous bind to check if user exists for some apps</span><br><span class="line"></span><br><span class="line"># &#123;3&#125; Allow users to read group information</span><br><span class="line">olcAccess: &#123;3&#125;to dn.subtree=&quot;ou=groups,dc=example,dc=com&quot;</span><br><span class="line">  by users read</span><br><span class="line">  by anonymous auth</span><br><span class="line"></span><br><span class="line"># &#123;4&#125; Deny everything else to everyone else by default</span><br><span class="line"># This is very important!</span><br><span class="line">olcAccess: &#123;4&#125;to *</span><br><span class="line">  by * none</span><br><span class="line">Use code with caution.</span><br></pre></td></tr></table></figure>
+<p>注意： 上面的 write_protect&#x3D;&quot;userPassword&quot; 不是标准的OpenLDAP ACL语法，它更像是一个概念性描述。正确的做法是，针对 userPassword 单独设置规则，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Users can change their own password</span><br><span class="line">olcAccess: &#123;X&#125;to dn.subtree=&quot;ou=users,dc=example,dc=com&quot;</span><br><span class="line">  attrs=userPassword</span><br><span class="line">  by self write</span><br><span class="line">  by group.exact=&quot;cn=helpdesk,ou=groups,dc=example,dc=com&quot; write</span><br><span class="line">  by anonymous auth # For password changes, often need auth for old pass</span><br><span class="line">  by * none</span><br><span class="line"></span><br><span class="line"># Users can read their other attributes (excluding password)</span><br><span class="line">olcAccess: &#123;Y&#125;to dn.subtree=&quot;ou=users,dc=example,dc=com&quot;</span><br><span class="line">  filter=(objectClass=inetOrgPerson) # Example filter</span><br><span class="line">  attrs!=&quot;userPassword&quot; # Exclude password from general read</span><br><span class="line">  by self read</span><br><span class="line">  by users read # If users should read other users&#x27; info</span><br><span class="line">  by * none</span><br></pre></td></tr></table></figure>
+<h1 id="OpenLDAP-权限验证"><a href="#OpenLDAP-权限验证" class="headerlink" title="OpenLDAP 权限验证"></a>OpenLDAP 权限验证</h1><p><code>-Y EXTERNAL -H ldapi:///</code>  本地 root 权限绑定，仅限ldapserver本地使用，也就是要在docker内执行命令(权限级别与使用rootdn一样)</p>
+<p>EXTERNAL 是一种 SASL（Simple Authentication and Security Layer）机制，用于通过已有的外部身份验证方式（例如 Unix socket 权限）来认证你的 LDAP 操作。</p>
+<p>SASL 是一种认证框架，OpenLDAP 支持多种 SASL 机制，例如：</p>
+<ul>
+<li>PLAIN</li>
+<li>DIGEST-MD5</li>
+<li>GSSAPI</li>
+<li>EXTERNAL</li>
+</ul>
+<p>EXTERNAL 是其中一种最常见的机制，通常用于本地系统用户以 root 权限访问 OpenLDAP 的配置数据库（cn&#x3D;config），不需要输入用户名和密码。</p>
+<p>当你通过 EXTERNAL 使用 Unix socket 登录时，OpenLDAP 会通过 socket 的所有者判断是谁发起的连接，比如：</p>
+<ul>
+<li>如果你是 root 用户，就会映射为 gidNumber&#x3D;0+uidNumber&#x3D;0,cn&#x3D;peercred,cn&#x3D;external,cn&#x3D;auth。</li>
+<li>通常系统会在 olcAccess 中授予该身份读写权限。</li>
+</ul>
+<p>不过有遇到部分执行不了的情况，最后是修改<code>/etc/ldap/slapd.d</code>里解决的</p>
+<h3 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h3><p>最新的 OpanLDAP 通常使用动态配置</p>
+<p>bitnami 的 openldap 中获取信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slapcat -F /bitnami/openldap/slapd.d/</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>追加 rootdn 、root DN 区别说明 -<time>2025-09-11</time></p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/AD-Active-Directory/" rel="tag">AD(Active Directory)</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2025-09-19T03:53:48.940Z" itemprop="dateModified">最后编辑：2025-09-19</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" (无标题)" href="/Code/Git/git_reset_local/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 笔记书签方面的一些纠结" href="/Software/Notes/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/LDAP/" data-full-path="http://ted423.github.io/Document/LDAP/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#phpLDAPadmin"><span class="toc-text">phpLDAPadmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90"><span class="toc-text">名词解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenLDAP-HDB-%E4%B8%8E-MDB-%E5%90%8E%E7%AB%AF%E5%AF%B9%E6%AF%94"><span class="toc-text">OpenLDAP HDB 与 MDB 后端对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distinguished-Name-DN"><span class="toc-text">Distinguished Name (DN)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rootdn"><span class="toc-text">rootdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OU-Organizational-Unit"><span class="toc-text">OU(Organizational Unit)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDIF-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="toc-text">LDIF 文件格式介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE"><span class="toc-text">动态配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E9%9B%86%E6%88%90"><span class="toc-text">LDAP 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OS-%E9%9B%86%E6%88%90"><span class="toc-text">OS 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSSD-%E6%88%96-NSCD"><span class="toc-text">SSSD 或 NSCD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE"><span class="toc-text">集成配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bindn"><span class="toc-text">bindn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base-DN"><span class="toc-text">Base DN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-text">LDAP 过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">LDAP 过滤器的基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-AD-%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7%E5%8F%8A%E8%BF%87%E6%BB%A4%E5%99%A8%E6%9E%84%E5%BB%BA%E5%9D%97"><span class="toc-text">常用的 AD 用户属性及过滤器构建块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-LDAP-%E7%94%A8%E6%88%B7%E8%BF%87%E6%BB%A4%E5%99%A8%E7%A4%BA%E4%BE%8B"><span class="toc-text">常见的 LDAP 用户过滤器示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E7%9A%84-ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-text">OpenLDAP 的 ACL（访问控制列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F"><span class="toc-text">ACL 加载顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-text">ACL 语法详解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-text">OpenLDAP 权限验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#etc"><span class="toc-text">etc</span></a></li></ol></li></ol>
+    </div>
+</aside>
+                
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

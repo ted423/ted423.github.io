@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>[Terminal]常用CMD&amp;批处理命令 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Code/Terminal/cmd/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="CMD, Code, Terminal, Windows" />
+  
+  <meta name="description" content="微软官方资料https:&#x2F;&#x2F;technet.microsoft.com&#x2F;en-us&#x2F;library&#x2F;cc754340(v&#x3D;ws.11).aspx 大部分命令可以通过后面+&quot; &#x2F;?&quot;来查看使用方法 https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;501676440 批处理中一些参数（下面代码只能以批处理的方式执行）pause用来保证批处理运行完后，终端窗口">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Terminal]常用CMD&amp;批处理命令">
+<meta property="og:url" content="http://ted423.github.io/Code/Terminal/cmd/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="微软官方资料https:&#x2F;&#x2F;technet.microsoft.com&#x2F;en-us&#x2F;library&#x2F;cc754340(v&#x3D;ws.11).aspx 大部分命令可以通过后面+&quot; &#x2F;?&quot;来查看使用方法 https:&#x2F;&#x2F;www.zhihu.com&#x2F;question&#x2F;501676440 批处理中一些参数（下面代码只能以批处理的方式执行）pause用来保证批处理运行完后，终端窗口">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-09-20T10:03:00.000Z">
+<meta property="article:modified_time" content="2022-11-29T02:48:29.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="CMD">
+<meta property="article:tag" content="Code">
+<meta property="article:tag" content="Terminal">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/Terminal/cmd/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[Terminal]常用CMD&批处理命令</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2015-09-20T10:03:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2015-09-20</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~2.87K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>微软官方资料<br><a target="_blank" rel="noopener" href="https://technet.microsoft.com/en-us/library/cc754340(v=ws.11).aspx">https://technet.microsoft.com/en-us/library/cc754340(v=ws.11).aspx</a></p>
+<p>大部分命令可以通过后面+&quot; &#x2F;?&quot;来查看使用方法</p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/501676440">https://www.zhihu.com/question/501676440</a></p>
+<h1 id="批处理中一些参数"><a href="#批处理中一些参数" class="headerlink" title="批处理中一些参数"></a>批处理中一些参数</h1><p>（下面代码只能以批处理的方式执行）<br><br><code>pause</code>用来保证批处理运行完后，终端窗口不会被关闭<br>请注意保存成ANSI(GBK)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">echo 当前盘符：%~d0</span><br><span class="line">echo 当前盘符和路径：%~dp0</span><br><span class="line">echo 当前批处理全路径：%~f0</span><br><span class="line">echo 当前盘符和路径的短文件名格式：%~sdp0</span><br><span class="line">echo 当前CMD默认目录：%cd%</span><br><span class="line">echo 目录中有空格也可以加入&quot;&quot;避免找不到路径</span><br><span class="line">echo 当前盘符：&quot;%~d0&quot;</span><br><span class="line">echo 当前盘符和路径：&quot;%~dp0&quot;</span><br><span class="line">echo 当前批处理全路径：&quot;%~f0&quot;</span><br><span class="line">echo 当前盘符和路径的短文件名格式：&quot;%~sdp0&quot;</span><br><span class="line">echo 当前CMD默认目录：&quot;%cd%&quot;</span><br><span class="line">echo %~1         - 删除引号(&quot;)，扩充 %1</span><br><span class="line">echo %~f1        - 将 %1 扩充到一个完全合格的路径名</span><br><span class="line">echo %~d1        - 仅将 %1 扩充到一个驱动器号</span><br><span class="line">echo %~p1        - 仅将 %1 扩充到一个路径</span><br><span class="line">echo %~n1        - 仅将 %1 扩充到一个文件名</span><br><span class="line">echo %~x1        - 仅将 %1 扩充到一个文件扩展名</span><br><span class="line">echo %~s1        - 扩充的路径指含有短名</span><br><span class="line">echo %~a1        - 将 %1 扩充到文件属性</span><br><span class="line">echo %~t1        - 将 %1 扩充到文件的日期/时间</span><br><span class="line">echo %~z1        - 将 %1 扩充到文件的大小</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
+<h1 id="命令参数"><a href="#命令参数" class="headerlink" title="命令参数"></a>命令参数</h1><p>大多数命令可以用<code>/？</code>来查看命令的具体参数</p>
+<ul>
+<li>%0 代表文件本身</li>
+<li>%1 代表第一个命令行参数</li>
+</ul>
+<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><ul>
+<li><p><code>at</code> 计划任务 (<strong>win8已取消at这个命令,改为schtasks(但用法不一样)</strong>)(弃用)</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">at 22:00 Shutdown -s</span><br></pre></td></tr></table></figure></li>
+<li><p><code>schtasks</code><br>这里使用重启做示范，不过实际来说，强制参数要求较多，不如计划任务里点点点还不容易出错，毕竟最后最好还是打开计划任务检查一下，只有用多了才能确保自己没弄错</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">schtasks /create /tn restart /sc ONCE /st 20:00 /tr &quot;Shutdown -r -t 0 -f&quot;</span><br></pre></td></tr></table></figure></li>
+<li><p><code>cd</code> 进入目录</p>
+</li>
+<li><p><code>cls</code> 清屏</p>
+</li>
+<li><p><code>chkdsk</code> 磁盘检查，可以处理坏道、索引错误以及修复文件错误</p>
+</li>
+<li><p><code>bcdboot</code> Bcd 启动文件创建和修复工具 详细：<a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/code/terminal/bcdboot">https://ted423.bitcron.com/post/code/terminal/bcdboot</a></p>
+</li>
+<li><p><code>bededit</code> 启动配置数据存储编辑器 例:<a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/document/wen-ti-chu-li/shan-chu-qi-dong-xi-tong-xuan-ze-xiang">Windiows系统下删除启动选择系统项</a></p>
+</li>
+<li><p><code>dir</code> 显示当前目录下所有文件及文件夹</p>
+</li>
+<li><p>del:删除文件</p>
+</li>
+<li><p>rd:删除目录<br>  下面是一个常用来删除因<strong>文件名错误</strong>而导致无法删除的批处理</p>
+  <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">DEL</span> /F /A /Q \\?\%<span class="number">1</span> </span><br><span class="line"><span class="built_in">RD</span> /S /Q \\?\%<span class="number">1</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>echo 将字符串输出到终端上<br><br>  DOS、Microsoft Windows支持选项on和off。例如，<code>echo off</code>可以关闭回显，即不显示命令提示符。</p>
+  <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\&gt;<span class="title">ECHO</span> <span class="title">off</span></span></span><br><span class="line"><span class="function">::注意下一条命令前无命令提示符</span></span><br><span class="line"><span class="function"><span class="title">ECHO</span> <span class="title">Hello</span> <span class="title">World</span>!</span></span><br><span class="line"><span class="function"><span class="title">Hello</span> <span class="title">World</span>!</span></span><br><span class="line"><span class="function"><span class="title">ECHO</span> <span class="title">on</span></span></span><br><span class="line"><span class="function"><span class="title">C</span>:\&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>  一般，批处理会在首行执行此条命令，以关闭执行过程中的回显。然而，执行此条命令亦会显示命令提示符，需使用<code>@echo off</code>以关闭该条命令的回显。</p>
+  <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">ECHO</span> off</span><br><span class="line"><span class="built_in">ECHO</span> Hello World!</span><br><span class="line"><span class="built_in">PAUSE</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>help 可以使用help来具体查看命令的参数<br>例如<code>help rd</code></p>
+</li>
+<li><p>ipconfig:微软的Windows 操作系统的计算机上用来控制网络连接的一个命令行工具。它的主要功用，包括用来显示现时网络连接的设置-&#39;&#x2F;all参数）&#39;,&#39;&#x2F;flushdns&#39;清理DNS缓存,或通过&#39;&#x2F;release&#39;参数来释放取得的ip位置，和通过 &#x2F;renew 来重新获取ip位置的分配。</p>
+</li>
+<li><p>mklink 符号链接   详细:<a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/code/terminal/symlink">https://ted423.bitcron.com/post/code/terminal/symlink</a></p>
+</li>
+<li><p>netsh 相关</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/code/terminal/pc-wifi">https://ted423.bitcron.com/post/code/terminal/pc-wifi</a></li>
+<li><a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/code/terminal/wifi_password">https://ted423.bitcron.com/post/code/terminal/wifi_password</a></li>
+</ul>
+</li>
+<li><p>nbtstat 檢視 NetBIOS 名稱表格,反向查询主机名(需要在同一个工作组或者域里)<br><code>nbtstat -n</code></p>
+</li>
+<li><p>nslookup 域名 (域名解析服务器)      （域名解析用的）</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nslookup ted423.bitcron.com 114.114.114.114</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>robocopy 多线程复制<code>/MT:</code>即可以调整线程数，速度相当快<br>文档 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy">https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy</a></p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">robocopy e:\ d:\ /MT:50 /E</span><br></pre></td></tr></table></figure></li>
+<li><p>sc:添加服务</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc Create  魔方雷达 binPath= &quot;D:\Programs\PCMaster\radar.exe&quot;</span><br></pre></td></tr></table></figure>
+<p>  对应的</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sc Delete  魔方雷达</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>sfc &#x2F;scannow<br>  sfc &#x2F;scannow用于扫描和校对当前系统文件，修复缺失&#x2F;异常的系统文件。<br>  这命令目前已经救了我两次<a target="_blank" rel="noopener" href="https://ted423.bitcron.com/post/document/wen-ti-chu-li/kb3081444">https://ted423.bitcron.com/post/document/wen-ti-chu-li/kb3081444</a></p>
+</li>
+<li><p>shutdown 关机命令</p>
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shutdown -s -t 9999        //9999秒后关机</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tasklist<br>  用来显示当前或远程计算机上运行的进程列表<br>  <code>tasklist /svc</code>可以显示进程装载的服务，包括每个svchost</p>
+</li>
+</ul>
+<hr>
+<p><time>2022-11-24</time>增加计划任务重启命令</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/CMD/" rel="tag">CMD</a>, <a class="tag-none-link" href="/tags/Code/" rel="tag">Code</a>, <a class="tag-none-link" href="/tags/Terminal/" rel="tag">Terminal</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2022-11-29T02:48:29.000Z" itemprop="dateModified">最后编辑：2022-11-29</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Ubuntu注意事项" href="/Linux/Ubuntu注意事项/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 真三国无双7 全秘藏武器获得条件 以及 任务注意事项" href="/Game/无双系列/357Weapon&Task/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Code/Terminal/cmd/" data-full-path="http://ted423.github.io/Code/Terminal/cmd/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

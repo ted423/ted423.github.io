@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>[资料]DNS相关 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/Network/DNS/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Document, Network" />
+  
+  <meta name="description" content="DNS概念DNS一般分为权威服务节点和递归服务节点。我们一般使用的都是递归服务节点。 递归DNS(local dns)递归DNS可以理解为是一种功能复杂些的resolver，其核心功能一个是缓存、一个是递归查询。收到域名查询请求后其首先看本地缓存是否有记录，如果没有则一级一级向上级递归服务器查询，直到最上级递归服务器开始向根服务器，顶级域名服务器（例如“.com”），一级域名服务器（例如“exam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[资料]DNS相关">
+<meta property="og:url" content="http://ted423.github.io/Document/Network/DNS/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="DNS概念DNS一般分为权威服务节点和递归服务节点。我们一般使用的都是递归服务节点。 递归DNS(local dns)递归DNS可以理解为是一种功能复杂些的resolver，其核心功能一个是缓存、一个是递归查询。收到域名查询请求后其首先看本地缓存是否有记录，如果没有则一级一级向上级递归服务器查询，直到最上级递归服务器开始向根服务器，顶级域名服务器（例如“.com”），一级域名服务器（例如“exam">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-06-27T09:00:00.000Z">
+<meta property="article:modified_time" content="2019-06-27T09:00:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="Network">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Network/DNS/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[资料]DNS相关</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2019-06-27T09:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2019-06-27</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~3.94K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92DNS-local-dns"><span class="toc-number">1.</span> <span class="toc-text">递归DNS(local dns)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E4%BB%A5%E5%8F%8A%E8%BF%AD%E4%BB%A3"><span class="toc-number">2.</span> <span class="toc-text">递归以及迭代</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B9%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8-root-name-server"><span class="toc-number">3.</span> <span class="toc-text">根域名服务器(root name server)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B6%E7%BA%A7-DNS-TLD-DNS"><span class="toc-number">4.</span> <span class="toc-text">顶级 DNS(TLD DNS)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%83%E5%A8%81-DNS-Authoritative-name-server"><span class="toc-number">5.</span> <span class="toc-text">权威 DNS(Authoritative name server)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E5%8F%91DNS"><span class="toc-number">6.</span> <span class="toc-text">转发DNS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ECS"><span class="toc-number">7.</span> <span class="toc-text">ECS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%ADDNS%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81ECS%E7%9A%84%E5%8A%9E%E6%B3%95"><span class="toc-number">7.1.</span> <span class="toc-text">判断DNS是否支持ECS的办法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="toc-number">8.</span> <span class="toc-text">软件相关</span></a></li></ol>
+                </div>
+            
+            <hr />
+            <div itemprop="articleBody"><p>DNS概念<br>DNS一般分为权威服务节点和递归服务节点。<br>我们一般使用的都是递归服务节点。</p>
+<h1 id="递归DNS-local-dns"><a href="#递归DNS-local-dns" class="headerlink" title="递归DNS(local dns)"></a>递归DNS(local dns)</h1><p>递归DNS可以理解为是一种功能复杂些的resolver，其核心功能一个是缓存、一个是递归查询。<br>收到域名查询请求后其首先看本地缓存是否有记录，如果没有则一级一级向上级递归服务器查询，直到最上级递归服务器开始向根服务器，顶级域名服务器（例如“.com”），一级域名服务器（例如“example.com”）<strong>迭代</strong>查询……直到获取到结果然后返回给用户。</p>
+<p>递归 DNS 由网络运营商建设，提供域名查询解析服务。</p>
+<h1 id="递归以及迭代"><a href="#递归以及迭代" class="headerlink" title="递归以及迭代"></a>递归以及迭代</h1><p>这里是重点强调下，因为我感觉网上查的不少在这都很混乱<br>我的理解是local dns，也就是递归DNS的层级可以设置不止一层（最终到根域名服务器）。</p>
+<p>客户端和递归DNS之间的查询是递归的。</p>
+<p>递归DNS(local DNS)向root name server、顶级域名服务器(TLD DNS),权威DNS(Authoritative name server)的查询是迭代的。</p>
+<h1 id="根域名服务器-root-name-server"><a href="#根域名服务器-root-name-server" class="headerlink" title="根域名服务器(root name server)"></a>根域名服务器(root name server)</h1><p>最高级别的域名服务器，全球只有13<strong>组</strong>根服务器(一组很多台，共用一个IP，而且可以架设不同IP的镜像)。<br>域名格式为“字母(a-m).root-servers.net”<br>中国架设了F、I、K、L根镜像服务器。<br>根域名“.” 服务器，例如<a target="_blank" rel="noopener" href="http://www.baidu.com的域名是www.baidu.com.,最后那个“.”通常被隐藏./">www.baidu.com的域名是www.baidu.com.，最后那个“.”通常被隐藏。</a><br>通常只有根域名服务器有Root Zone file，而其他递归DNS服务器则只需要配置Root Hits文件，只包含根域名服务器的地址。</p>
+<h1 id="顶级-DNS-TLD-DNS"><a href="#顶级-DNS-TLD-DNS" class="headerlink" title="顶级 DNS(TLD DNS)"></a>顶级 DNS(TLD DNS)</h1><p>负责处理 .com, .org及所有顶级国家域名，提供到权威域服务器的映射。</p>
+<h1 id="权威-DNS-Authoritative-name-server"><a href="#权威-DNS-Authoritative-name-server" class="headerlink" title="权威 DNS(Authoritative name server)"></a>权威 DNS(Authoritative name server)</h1><p>特定域名记录（例如“example.com”）在域名注册商处所设置的 DNS 服务器，用于特定域名本身的管理（增加、删除、修改等）。</p>
+<p>权威 DNS 服务器只对自己所拥有的域名进行域名解析，对于不是自己的域名则拒绝访问。比如，向“example.com”的权威 DNS 服务器查询“test.com”的域名肯定会查询失败。</p>
+<p>权威DNS即通俗上“这个域名我说了算”的服务器。<br>权威 DNS 由域名解析服务商建设，提供域名管理服务，维护域名解析记录。</p>
+<p>我觉得可以把根服务器和顶级DNS理解为权威 DNS的最高两级</p>
+<h1 id="转发DNS"><a href="#转发DNS" class="headerlink" title="转发DNS"></a>转发DNS</h1><p>转发DNS是一种特殊的递归。如果本地的缓存记录中没有相应域名结果时，其将查询请求转发给另外一台DNS服务器，由另外一台DNS服务器来完成查询请求。</p>
+<h1 id="ECS"><a href="#ECS" class="headerlink" title="ECS"></a>ECS</h1><p>用个人看法总结一下，local DNS的查询通常只会提供local DNS的IP，而现代网络为了效能需要由距离用户最近的节点来响应。而ECS是用来附加请求解析的客户端的信息。<br>下面有论文说明<br><a target="_blank" rel="noopener" href="https://www.ixueshu.com/document/36449a6cef21d28dec8b4f308072b7f5.html">https://www.ixueshu.com/document/36449a6cef21d28dec8b4f308072b7f5.html</a></p>
+<h2 id="判断DNS是否支持ECS的办法"><a href="#判断DNS是否支持ECS的办法" class="headerlink" title="判断DNS是否支持ECS的办法"></a>判断DNS是否支持ECS的办法</h2><p>使用命令(个人猜测域名也要支持才会有我所说的返回值，像百度就不支持)<br><code>dig a100.phobos.apple.com @119.29.29.29 +subnet=218.92.128.0/32 +nocookie</code></p>
+<p>返回值如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">; &lt;&lt;&gt;&gt; DiG 9.14.3 &lt;&lt;&gt;&gt; a100.phobos.apple.com @119.29.29.29 +subnet=218.92.128.0/32 +nocookie</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 34296</span><br><span class="line">;; flags: qr rd ra; QUERY: 1, ANSWER: 7, AUTHORITY: 0, ADDITIONAL: 1</span><br><span class="line"></span><br><span class="line">;; OPT PSEUDOSECTION:</span><br><span class="line">; EDNS: version: 0, flags:; udp: 512</span><br><span class="line">; CLIENT-SUBNET: 218.92.128.0/32/24</span><br><span class="line">;; QUESTION SECTION:</span><br><span class="line">;a100.phobos.apple.com.         IN      A</span><br><span class="line"></span><br><span class="line">;; ANSWER SECTION:</span><br><span class="line">a100.phobos.apple.com.  83      IN      CNAME   a2.phobos.g.aaplimg.com.</span><br><span class="line">a2.phobos.g.aaplimg.com. 83     IN      CNAME   a1-a200.itunes-apple.com.akadns.net.</span><br><span class="line">a1-a200.itunes-apple.com.akadns.net. 83 IN CNAME a1-a200.phobos.apple.chinacache.net.</span><br><span class="line">a1-a200.phobos.apple.chinacache.net. 83 IN CNAME a1-a200.phobos.apple.telssr.chinacache.net.</span><br><span class="line">a1-a200.phobos.apple.telssr.chinacache.net. 83 IN CNAME hpcc-download.telssr.chinacache.net.</span><br><span class="line">hpcc-download.telssr.chinacache.net. 83 IN A    58.216.29.69</span><br><span class="line">hpcc-download.telssr.chinacache.net. 83 IN A    103.53.126.61</span><br><span class="line"></span><br><span class="line">;; Query time: 277 msec</span><br><span class="line">;; SERVER: 119.29.29.29#53(119.29.29.29)</span><br><span class="line">;; WHEN: Tue Jul 02 11:34:53 中国标准时间 2019</span><br><span class="line">;; MSG SIZE  rcvd: 293</span><br></pre></td></tr></table></figure>
+
+<p>注意到EDNS version那里有一个CLIENT-SUBNET: 218.92.128.0&#x2F;32&#x2F;24<br>而使用114.114.114.114或者223.5.5.5的返回值就没有上面那一段(114有时候第一次会有，待观察)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">; &lt;&lt;&gt;&gt; DiG 9.14.3 &lt;&lt;&gt;&gt; a100.phobos.apple.com @114.114.114.114 +subnet=218.92.128.0/32 +nocookie</span><br><span class="line">;; global options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 3730</span><br><span class="line">;; flags: qr rd ra; QUERY: 1, ANSWER: 7, AUTHORITY: 0, ADDITIONAL: 1</span><br><span class="line"></span><br><span class="line">;; OPT PSEUDOSECTION:</span><br><span class="line">; EDNS: version: 0, flags:; udp: 1280</span><br><span class="line">;; QUESTION SECTION:</span><br><span class="line">;a100.phobos.apple.com.         IN      A</span><br><span class="line"></span><br><span class="line">;; ANSWER SECTION:</span><br><span class="line">a100.phobos.apple.com.  112     IN      CNAME   a2.phobos.g.aaplimg.com.</span><br><span class="line">a2.phobos.g.aaplimg.com. 112    IN      CNAME   a1-a200.itunes-apple.com.akadns.net.</span><br><span class="line">a1-a200.itunes-apple.com.akadns.net. 112 IN CNAME a1-a200.phobos.apple.chinacache.net.</span><br><span class="line">a1-a200.phobos.apple.chinacache.net. 112 IN CNAME a1-a200.phobos.apple.telssr.chinacache.net.</span><br><span class="line">a1-a200.phobos.apple.telssr.chinacache.net. 112 IN CNAME hpcc-download.telssr.chinacache.net.</span><br><span class="line">hpcc-download.telssr.chinacache.net. 112 IN A   103.53.126.61</span><br><span class="line">hpcc-download.telssr.chinacache.net. 112 IN A   222.186.186.246</span><br><span class="line"></span><br><span class="line">;; Query time: 0 msec</span><br><span class="line">;; SERVER: 114.114.114.114#53(114.114.114.114)</span><br><span class="line">;; WHEN: Tue Jul 02 12:08:45 中国标准时间 2019</span><br><span class="line">;; MSG SIZE  rcvd: 322</span><br></pre></td></tr></table></figure>
+
+<h1 id="软件相关"><a href="#软件相关" class="headerlink" title="软件相关"></a>软件相关</h1><p>dig是Liunx包括Mac下最好用的DNS查询工具，Windows 下可以下载<a target="_blank" rel="noopener" href="https://www.isc.org/">Bind 9</a>来获取dig工具<br>根域名服务器不少用的都是Bind 9</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Network/" rel="tag">Network</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2019-06-27T09:00:00.000Z" itemprop="dateModified">最后编辑：2019-06-27</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 压制组相关" href="/etc/rip/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [雛原えみ] まいすうぃーとでびる [中国翻訳]" href="/Comic/R18/まいすうぃーとでびる/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/Network/DNS/" data-full-path="http://ted423.github.io/Document/Network/DNS/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92DNS-local-dns"><span class="toc-text">递归DNS(local dns)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E4%BB%A5%E5%8F%8A%E8%BF%AD%E4%BB%A3"><span class="toc-text">递归以及迭代</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B9%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8-root-name-server"><span class="toc-text">根域名服务器(root name server)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B6%E7%BA%A7-DNS-TLD-DNS"><span class="toc-text">顶级 DNS(TLD DNS)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%83%E5%A8%81-DNS-Authoritative-name-server"><span class="toc-text">权威 DNS(Authoritative name server)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E5%8F%91DNS"><span class="toc-text">转发DNS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ECS"><span class="toc-text">ECS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%ADDNS%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81ECS%E7%9A%84%E5%8A%9E%E6%B3%95"><span class="toc-text">判断DNS是否支持ECS的办法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="toc-text">软件相关</span></a></li></ol>
+    </div>
+</aside>
+                
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

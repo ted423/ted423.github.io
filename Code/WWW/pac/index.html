@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>pac文件写法 代理自动配置(英语:Proxy auto-config,简称PAC) | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Code/WWW/pac/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Browser, Code, 过时(Outdated)" />
+  
+  <meta name="description" content="火狐的autoproxy和Foxyproxy都开始出现这样那样的问题，于是我想到了.pac,没想到的是，这方法简单、有效，不但省了个扩展，还比扩展用起来舒服多了 一个PAC文件包含一个JavaScript形式的函数“FindProxyForURL(url, host)”。这个函数返回一个包含一个或多个访问规则的字符串。用户代理根据这些规则适用一个特定的代理其或者直接访问。当一个代理服务器无法响应的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pac文件写法 代理自动配置(英语:Proxy auto-config,简称PAC)">
+<meta property="og:url" content="http://ted423.github.io/Code/WWW/pac/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="火狐的autoproxy和Foxyproxy都开始出现这样那样的问题，于是我想到了.pac,没想到的是，这方法简单、有效，不但省了个扩展，还比扩展用起来舒服多了 一个PAC文件包含一个JavaScript形式的函数“FindProxyForURL(url, host)”。这个函数返回一个包含一个或多个访问规则的字符串。用户代理根据这些规则适用一个特定的代理其或者直接访问。当一个代理服务器无法响应的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-06-22T12:56:00.000Z">
+<meta property="article:modified_time" content="2016-06-22T12:56:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Browser">
+<meta property="article:tag" content="Code">
+<meta property="article:tag" content="过时(Outdated)">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/pac/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">pac文件写法 代理自动配置(英语:Proxy auto-config,简称PAC)</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2016-06-22T12:56:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2016-06-22</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~10.23K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>火狐的autoproxy和Foxyproxy都开始出现这样那样的问题，于是我想到了.pac,没想到的是，这方法简单、有效，不但省了个扩展，还比扩展用起来舒服多了</p>
+<p>一个PAC文件包含一个JavaScript形式的函数“FindProxyForURL(url, host)”。这个函数返回一个包含一个或多个访问规则的字符串。用户代理根据这些规则适用一个特定的代理其或者直接访问。当一个代理服务器无法响应的时候，多个访问规则提供了其他的后备访问方法。浏览器在访问其他页面以前，首先访问这个PAC文件。PAC文件中的URL可能是手工配置的，也可能是是通过网页的网络代理自发现协议（Web Proxy Autodiscovery Protocol）自动配置的。</p>
+<p>网络代理自发现协议（WPAD）：浏览器通过DHCP和DNS的查询来搜索PAC文件的位置。(与本文无关)</p>
+<p><strong>火狐可以打开浏览器控制台进行调试</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PAC file installed from file:///C:/Users/XX/Dropbox/Documents/GitHub/rules-GM-stylish-UC/test.pac</span><br><span class="line">PAC-alert: false</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="来源文档"><a href="#来源文档" class="headerlink" title="来源文档"></a>来源文档</h1><ul>
+<li><a target="_blank" rel="noopener" href="http://findproxyforurl.com/pac-functions/">http://findproxyforurl.com/pac-functions/</a></li>
+<li><a target="_blank" rel="noopener" href="https://web.archive.org/web/20070602031929/http://wp.netscape.com/eng/mozilla/2.0/relnotes/demo/proxy-live.html">https://web.archive.org/web/20070602031929/http://wp.netscape.com/eng/mozilla/2.0/relnotes/demo/proxy-live.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file">https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file</a></li>
+</ul>
+<h1 id="既定参数"><a href="#既定参数" class="headerlink" title="既定参数"></a>既定参数</h1><p><strong>url</strong>：the full URL being accessed.<br><strong>host</strong>：the hostname extracted from the URL.  it is the exact same string as between :&#x2F;&#x2F; and the first : or &#x2F; after that. The port number is not included in this parameter. It can be extracted from the URL when necessary.<br><strong>ret</strong>：(the return value) a string describing the configuration. The format of this string is defined below. </p>
+<h1 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h1><table>
+<thead>
+<tr>
+<th>Instruction</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DIRECT</td>
+<td>Fetch the object directly from the content HTTP server denoted by its URL</td>
+</tr>
+<tr>
+<td>PROXY host:port</td>
+<td>Fetch the object via the proxy HTTP server at the given location (name and port)</td>
+</tr>
+<tr>
+<td>SOCKS host:port</td>
+<td>Fetch the object via the SOCKS server at the given location (name and port)</td>
+</tr>
+</tbody></table>
+<p>SOCKS可以写SOCKS5或者SOCKS4的样子，写SOCKS就是SOCKS4。<br>区别在于用SOCKS4只支持TCP，而用SOCKS5支持UDP，还有支持各种身份验证机制。但用SOCKS5是远程代理解析DNS(FF是这样)。</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable constant_">PROXY</span> w3proxy.<span class="property">netscape</span>.<span class="property">com</span>:<span class="number">8080</span>; <span class="variable constant_">PROXY</span> mozilla.<span class="property">netscape</span>.<span class="property">com</span>:<span class="number">8081</span></span><br><span class="line"><span class="comment">//Primary proxy is w3proxy:8080; if that goes down start using mozilla:8081 until the primary proxy comes up again.</span></span><br><span class="line"><span class="variable constant_">PROXY</span> w3proxy.<span class="property">netscape</span>.<span class="property">com</span>:<span class="number">8080</span>; <span class="variable constant_">PROXY</span> mozilla.<span class="property">netscape</span>.<span class="property">com</span>:<span class="number">8081</span>; <span class="variable constant_">DIRECT</span></span><br><span class="line"><span class="comment">//Same as above, but if both proxies go down, automatically start making direct connections. </span></span><br><span class="line"><span class="variable constant_">PROXY</span> w3proxy.<span class="property">netscape</span>.<span class="property">com</span>:<span class="number">8080</span>; <span class="variable constant_">SOCKS</span> <span class="attr">socks</span>:<span class="number">1080</span></span><br><span class="line"><span class="comment">//Use SOCKS if the primary proxy goes down.</span></span><br><span class="line"><span class="comment">//就个人来讲，喜欢只写一个值，这样好知道代理是不是挂了</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>就是用看起来很吓唬人的函数名实现一个很简单的功能，除了url跟host，其他都是用来唬人的<br>##Hostname based conditions</p>
+<h3 id="isPlainHostName-host"><a href="#isPlainHostName-host" class="headerlink" title="isPlainHostName(host)"></a>isPlainHostName(host)</h3><p>This function will return true if the hostname contains no dots, e.g. <a target="_blank" rel="noopener" href="http://intranet/">http://intranet</a><br>Useful when applying exceptions for internal websites, e.g. may not require resolution of a hostname to IP address to determine if local.<br>主要保证没有&quot;.&quot;，通常这样的属于内网的主机名<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If user requests plain hostnames, e.g. http://intranet/, </span></span><br><span class="line"><span class="comment">// http://webserver-name01/, send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">isPlainHostName</span>(host))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="localHostOrDomainIs-host-hostdom"><a href="#localHostOrDomainIs-host-hostdom" class="headerlink" title="localHostOrDomainIs(host, hostdom)"></a>localHostOrDomainIs(host, hostdom)</h3><p>Evaluates hostname and only returns true if exact hostname match is found.<br>似乎是通过判断&quot;.&quot;间隔的内容是否相同来实现的(可以没有，但不能不一样)<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the Host requested is &quot;www&quot; or &quot;www.google.com&quot;, send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">localHostOrDomainIs</span>(host, <span class="string">&quot;www.google.com&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+<br>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the Host requested is &quot;google.com&quot; or a subdomain of google.com, e.g. &quot;example.google.com&quot;, send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">localHostOrDomainIs</span>(host, <span class="string">&quot;.google.com&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="isResolvable-host"><a href="#isResolvable-host" class="headerlink" title="isResolvable(host)"></a>isResolvable(host)</h3><p>Attempts to resolve a hostname to an IP address and returns true if successful. WARNING – This may cause a browser to temporarily hang if a domain isn’t resolvable.<br>判断域名是否可以被解析<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the host requested can be resolved by DNS, send via proxy1.example.com.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">isResolvable</span>(host))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="isInNet-host-pattern-mask"><a href="#isInNet-host-pattern-mask" class="headerlink" title="isInNet(host, pattern, mask)"></a>isInNet(host, pattern, mask)</h3><p>This function evaluates the IP address of a hostname, and if within a specified subnet returns true. If a hostname is passed the function will resolve the hostname to an IP address.<br>判断IP是否在指定的网段内，<code>dnsResolve</code>这个函数的作用在下面有。最后个参数是子网掩码，如果不懂的话可以去查下子网掩码是做什么的。<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="title function_">isInNet</span>(<span class="title function_">dnsResolve</span>(host), <span class="string">&quot;172.16.0.0&quot;</span>, <span class="string">&quot;255.240.0.0&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Related-utility-functions"><a href="#Related-utility-functions" class="headerlink" title="Related utility functions"></a>Related utility functions</h2><h3 id="dnsDomainIs-host-domain"><a href="#dnsDomainIs-host-domain" class="headerlink" title="dnsDomainIs(host, domain)"></a>dnsDomainIs(host, domain)</h3><p>Evaluates hostnames and returns true if hostnames match. Used mainly to match and exception individual hostnames.<br>判断是否是同域名，但这个函数很奇葩，火狐里诸如<code>if(dnsDomainIs(&quot;aaaa&quot;, &quot;aa&quot;))</code>是返回<strong>true</strong>的(别的没测，个人猜测是通过判断第一个字符串是否包含第二个字符串来实现的)<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the hostname matches or contains google.com (e.g. maps.google.com, www.google.com),</span></span><br><span class="line"><span class="comment">// send direct to the Internet.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">dnsDomainIs</span>(host, <span class="string">&quot;.google.com&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="myIpAddress"><a href="#myIpAddress" class="headerlink" title="myIpAddress()"></a>myIpAddress()</h3><p>Returns the IP address of the host machine.<br>返回你的当前IP地址，就是网卡获取的多少就是多少<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If the machine requesting a website falls within IP range,</span></span><br><span class="line"><span class="comment">// send traffic via proxy 10.10.5.1 running on port 8080.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">isInNet</span>(<span class="title function_">myIpAddress</span>(), <span class="string">&quot;10.10.1.0&quot;</span>, <span class="string">&quot;255.255.255.0&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;PROXY 10.10.5.1:8080&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PAC file installed from file:///C:/Users/XX/Dropbox/Documents/GitHub/rules-GM-stylish-UC/test.pac</span><br><span class="line">PAC-alert: 192.168.1.7</span><br></pre></td></tr></table></figure>
+
+<h3 id="dnsResolve-host"><a href="#dnsResolve-host" class="headerlink" title="dnsResolve(host)"></a>dnsResolve(host)</h3><p>Resolves hostnames to an IP address. This function can be used to reduce the number of DNS lookups, e.g. below example.<br>按我的理解这就是把域名解析成IP的，上面的英文其实我觉得有点问题。通常配合<code>isInNet</code>使用。(在火狐上使用会影响页面加载)<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If IP of the requested host falls within any of the ranges specified, send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">isInNet</span>(<span class="title function_">dnsResolve</span>(host), <span class="string">&quot;10.0.0.0&quot;</span>, <span class="string">&quot;255.0.0.0&quot;</span>) ||</span><br><span class="line">    <span class="title function_">isInNet</span>(<span class="title function_">dnsResolve</span>(host), <span class="string">&quot;172.16.0.0&quot;</span>,  <span class="string">&quot;255.240.0.0&quot;</span>) ||</span><br><span class="line">    <span class="title function_">isInNet</span>(<span class="title function_">dnsResolve</span>(host), <span class="string">&quot;192.168.0.0&quot;</span>, <span class="string">&quot;255.255.0.0&quot;</span>) ||</span><br><span class="line">    <span class="title function_">isInNet</span>(<span class="title function_">dnsResolve</span>(host), <span class="string">&quot;127.0.0.0&quot;</span>, <span class="string">&quot;255.255.255.0&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="dnsDomainLevels-host"><a href="#dnsDomainLevels-host" class="headerlink" title="dnsDomainLevels(host)"></a>dnsDomainLevels(host)</h3><p>Allows rules to be time based, e.g. only return a proxy during specific days.<br>就是数下字符串里有几个&quot;.&quot;,例如<code>dnsDomainLevels(&quot;www.netscape.com/www.www&quot;)</code>会返回3<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If hostname contains any dots, send via proxy1.example.com, otherwise send direct.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">dnsDomainLevels</span>(host) &gt; <span class="number">0</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="URL-hostname-based-conditions"><a href="#URL-hostname-based-conditions" class="headerlink" title="URL&#x2F;hostname based conditions"></a>URL&#x2F;hostname based conditions</h2><h3 id="shExpMatch-str-shexp"><a href="#shExpMatch-str-shexp" class="headerlink" title="shExpMatch(str, shexp)"></a>shExpMatch(str, shexp)</h3><p>Will attempt to match hostname or URL to a specified shell expression, and returns true if matched.<br>通过主机名或URL进行匹配,其实就是一个能用通配符(&#42;)的检测<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Any requests with a hostname ending with the extension .local</span></span><br><span class="line"><span class="comment">// will be sent direct to the Internet.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(url, <span class="string">&quot;*.local&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+<br>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// A request for the host vpn.domain.com or any request for a file or folder in the</span></span><br><span class="line"><span class="comment">// location http://abcdomain.com/folder/ will be sent direct to the Internet.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;vpn.domain.com&quot;</span>) ||</span><br><span class="line">    <span class="title function_">shExpMatch</span>(url, <span class="string">&quot;http://abcdomain.com/folder/*&quot;</span>))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Time-based-conditions"><a href="#Time-based-conditions" class="headerlink" title="Time based conditions"></a>Time based conditions</h2><h3 id="weekdayRange-wd1-wd2-gmt"><a href="#weekdayRange-wd1-wd2-gmt" class="headerlink" title="weekdayRange(wd1, wd2, gmt)"></a>weekdayRange(wd1, wd2, gmt)</h3><p>Allows rules to be time based, e.g. only return a proxy during specific days.<br><strong>wd1</strong><br>    and<br><strong>wd2</strong><br>    are one of the weekday strings:</p>
+<pre><code>SUN MON TUE WED THU FRI SAT
+</code></pre>
+<p><strong>gmt</strong><br>    is either the string: GMT or is left out.<br>在wd1到wd2时会返回true,gmt是格林尼治标准时间<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If during the period of Monday to Friday, proxy1.example.com will be returned, otherwise</span></span><br><span class="line"><span class="comment">// users will go direct for any day outside this period.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">weekdayRange</span>(<span class="string">&quot;MON&quot;</span>, <span class="string">&quot;FRI&quot;</span>)) <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="dateRange"><a href="#dateRange" class="headerlink" title="dateRange"></a>dateRange</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">dateRange(day)</span><br><span class="line">dateRange(day1, day2)</span><br><span class="line">dateRange(mon)</span><br><span class="line">dateRange(month1, month2)</span><br><span class="line">dateRange(year)</span><br><span class="line">dateRange(year1, year2)</span><br><span class="line">dateRange(day1, month1, day2, month2)</span><br><span class="line">dateRange(month1, year1, month2, year2)</span><br><span class="line">dateRange(day1, month1, year1, day2, month2, year2)</span><br><span class="line">dateRange(day1, month1, year1, day2, month2, year2, gmt)</span><br></pre></td></tr></table></figure>
+<p>Allows rules to be time based, e.g. only return a proxy during specific months.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If during the period of January to March, proxy1.example.com will be returned, otherwise</span></span><br><span class="line"><span class="comment">// users will go direct for any month outside this period.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">dateRange</span>(<span class="string">&quot;JAN&quot;</span>, <span class="string">&quot;MAR&quot;</span>)) <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="timeRange"><a href="#timeRange" class="headerlink" title="timeRange"></a>timeRange</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">timeRange(hour)</span><br><span class="line">timeRange(hour1, hour2)</span><br><span class="line">timeRange(hour1, min1, hour2, min2)</span><br><span class="line">timeRange(hour1, min1, sec1, hour2, min2, sec2)</span><br><span class="line">timeRange(hour1, min1, sec1, hour2, min2, sec2, gmt)</span><br></pre></td></tr></table></figure>
+<p>Allows rules to be time based, e.g. only return a proxy during specific hours.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// If during the period 8am to 6pm, proxy1.example.com will be returned, otherwise</span></span><br><span class="line"><span class="comment">// users will go direct for any time outside this period.</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> (<span class="title function_">timeRange</span>(<span class="number">8</span>, <span class="number">18</span>)) <span class="keyword">return</span> <span class="string">&quot;PROXY proxy1.example.com:8080&quot;</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Logging-utility"><a href="#Logging-utility" class="headerlink" title="Logging utility"></a>Logging utility</h2><h3 id="alert"><a href="#alert" class="headerlink" title="alert"></a>alert</h3><p>The alert() function is not specified in the original PAC specification, although support for this is included in Internet Explorer and Firefox.The function can be used to output the value of a variable or result of a function in a manner that is viewable by the end-user. This can be useful for troubleshooting PAC file rule issues.</p>
+<p>See <a target="_blank" rel="noopener" href="http://findproxyforurl.com/debug-pac-file/">debug PAC file</a> article for an advanced example of using this function.<br><strong>Example:</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Outputs the resolved IP address of the host in the browser</span></span><br><span class="line"><span class="comment">// to end-user or error console. </span></span><br><span class="line"> </span><br><span class="line">resolved_host = <span class="title function_">dnsResolve</span>(host);</span><br><span class="line"><span class="title function_">alert</span>(resolved_host);</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="个人用代码"><a href="#个人用代码" class="headerlink" title="个人用代码"></a>个人用代码</h1><p><a target="_blank" rel="noopener" href="https://github.com/ted423/rules-GM-stylish-UC/blob/master/proxy-1080.pac">https://github.com/ted423/rules-GM-stylish-UC/blob/master/proxy-1080.pac</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">FindProxyForURL</span>(<span class="params">url, host</span>)</span><br><span class="line">&#123;</span><br><span class="line">	proxy = <span class="string">&quot;PROXY 127.0.0.1:8080&quot;</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">isInNet</span>(<span class="title function_">dnsResolve</span>(host), <span class="string">&quot;198.0.0.1&quot;</span>, <span class="string">&quot;255.0.0.0&quot;</span>))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">isPlainHostName</span>(host)) <span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.google.*&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.googleapis.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.google-analytics.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.googleusercontent.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.gstatic.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.googlecode.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.dropbox.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.dropboxstatic.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.iobit.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.mediafire.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.blogspot.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">if</span> (<span class="title function_">shExpMatch</span>(host, <span class="string">&quot;*.blogger.com&quot;</span> ))<span class="keyword">return</span> proxy;</span><br><span class="line">	<span class="keyword">return</span> <span class="string">&quot;DIRECT&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h1><h2 id="MIME-type"><a href="#MIME-type" class="headerlink" title="MIME type"></a>MIME type</h2><p>application&#x2F;x-ns-proxy-autoconfig</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Browser/" rel="tag">Browser</a>, <a class="tag-none-link" href="/tags/Code/" rel="tag">Code</a>, <a class="tag-none-link" href="/tags/%E8%BF%87%E6%97%B6-Outdated/" rel="tag">过时(Outdated)</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2016-06-22T12:56:00.000Z" itemprop="dateModified">最后编辑：2016-06-22</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" WordPress修改固定链接之后,无法访问的解决办法" href="/Code/WWW/WordPress修改固定链接之后 无法访问的解决办法/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [ARK工具]PowerTool" href="/坟场/PowerTool/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Code/WWW/pac/" data-full-path="http://ted423.github.io/Code/WWW/pac/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

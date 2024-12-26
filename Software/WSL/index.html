@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>WSL | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Software/WSL/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Linux, MIT, Software, System, Windows, 开源(Open Source)" />
+  
+  <meta name="description" content="WSL (Windows Subsystem for Linux)WSL 是微软推出的兼容层工具，允许用户在 Windows 系统上原生运行 Linux 二进制文件，无需传统虚拟机或双系统。 核心优势无缝的 Windows 与 Linux 集成 文件系统互操作性 在 Linux 中访问 Windows 文件：自动挂载在 &#x2F;mnt 下。例如，访问 C 盘用户目录：1&#x2F;mnt&#x2F;c&#x2F;Users&#x2F;Your">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WSL">
+<meta property="og:url" content="http://ted423.github.io/Software/WSL/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="WSL (Windows Subsystem for Linux)WSL 是微软推出的兼容层工具，允许用户在 Windows 系统上原生运行 Linux 二进制文件，无需传统虚拟机或双系统。 核心优势无缝的 Windows 与 Linux 集成 文件系统互操作性 在 Linux 中访问 Windows 文件：自动挂载在 &#x2F;mnt 下。例如，访问 C 盘用户目录：1&#x2F;mnt&#x2F;c&#x2F;Users&#x2F;Your">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-12-31T12:29:15.270Z">
+<meta property="article:modified_time" content="2025-12-31T11:22:14.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="MIT">
+<meta property="article:tag" content="Software">
+<meta property="article:tag" content="System">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="开源(Open Source)">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/WSL/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">WSL</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-12-31T12:29:15.270Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-12-31</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~1.97K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="WSL-Windows-Subsystem-for-Linux"><a href="#WSL-Windows-Subsystem-for-Linux" class="headerlink" title="WSL (Windows Subsystem for Linux)"></a>WSL (Windows Subsystem for Linux)</h1><p>WSL 是微软推出的兼容层工具，允许用户在 Windows 系统上原生运行 Linux 二进制文件，无需传统虚拟机或双系统。</p>
+<h2 id="核心优势"><a href="#核心优势" class="headerlink" title="核心优势"></a>核心优势</h2><p>无缝的 Windows 与 Linux 集成</p>
+<h3 id="文件系统互操作性"><a href="#文件系统互操作性" class="headerlink" title="文件系统互操作性"></a>文件系统互操作性</h3><ul>
+<li><strong>在 Linux 中访问 Windows 文件</strong>：<br>自动挂载在 <code>/mnt</code> 下。例如，访问 C 盘用户目录：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/mnt/c/Users/YourName</span><br></pre></td></tr></table></figure></li>
+<li><strong>在 Windows 中访问 Linux 文件</strong>：<br>在资源管理器地址栏输入以下路径（其中 <code>&lt;发行版名称&gt;</code> 需替换为实际名称，如 <code>Ubuntu-22.04</code>）：<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\wsl$\&lt;发行版名称&gt;\</span><br></pre></td></tr></table></figure></li>
+<li><strong>典型用例</strong>：<br>开发者可以直接使用 Windows 端的 IDE（如 VS Code）编辑位于 Linux 环境中的代码文件。</li>
+</ul>
+<h3 id="命令行混合调用"><a href="#命令行混合调用" class="headerlink" title="命令行混合调用"></a>命令行混合调用</h3><ul>
+<li><strong>在 PowerShell 或 CMD 中运行 Linux 命令</strong>：<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="built_in">ls</span> <span class="literal">-l</span> /home  <span class="comment"># 调用 Linux 的 `ls` 命令</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>在 Linux 中运行 Windows 程序</strong>：<br>可以直接调用 <code>.exe</code>，例如 <code>explorer.exe .</code>。</li>
+</ul>
+<hr>
+<h2 id="安装与初始化"><a href="#安装与初始化" class="headerlink" title="安装与初始化"></a>安装与初始化</h2><p>在管理员模式下的 PowerShell 或 CMD 中执行：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化安装（默认安装 Ubuntu）</span></span><br><span class="line">wsl.exe <span class="literal">--install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出可在线安装的发行版列表</span></span><br><span class="line">wsl <span class="literal">--list</span> <span class="literal">--online</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装指定的发行版</span></span><br><span class="line">wsl <span class="literal">--install</span> <span class="literal">-d</span> &lt;发行版名称&gt;</span><br><span class="line"><span class="comment"># 示例：wsl --install -d Ubuntu-22.04</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="常用操作命令"><a href="#常用操作命令" class="headerlink" title="常用操作命令"></a>常用操作命令</h2><h3 id="管理发行版"><a href="#管理发行版" class="headerlink" title="管理发行版"></a>管理发行版</h3><table>
+<thead>
+<tr>
+<th align="left">功能</th>
+<th align="left">命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>列出所有发行版</strong></td>
+<td align="left"><code>wsl -l -v</code></td>
+</tr>
+<tr>
+<td align="left"><strong>设置默认发行版</strong></td>
+<td align="left"><code>wsl --set-default &lt;名称&gt;</code></td>
+</tr>
+<tr>
+<td align="left"><strong>直接运行命令</strong></td>
+<td align="left"><code>wsl &lt;命令&gt;</code> (如 <code>wsl ls /</code>)</td>
+</tr>
+<tr>
+<td align="left"><strong>版本更新</strong></td>
+<td align="left"><code>wsl --update</code></td>
+</tr>
+</tbody></table>
+<h3 id="备份与迁移-导入-导出"><a href="#备份与迁移-导入-导出" class="headerlink" title="备份与迁移 (导入&#x2F;导出)"></a>备份与迁移 (导入&#x2F;导出)</h3><p><strong>导出（备份）</strong>：<br>将现有系统打包成 tar 文件。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--export</span> &lt;名称&gt; &lt;备份文件名&gt;.tar</span><br><span class="line"><span class="comment"># 示例：wsl --export Ubuntu-22.04 backup.tar</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>导入（恢复&#x2F;迁移）</strong>：<br>将备份文件导入为新的发行版。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--import</span> &lt;新名称&gt; &lt;安装路径&gt; &lt;备份文件名&gt;.tar</span><br><span class="line"><span class="comment"># 示例：wsl --import Ubuntu-New D:\WSL\Ubuntu backup.tar</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>⚠️ 注意事项</strong>：</p>
+<ol>
+<li><strong>删除需谨慎</strong>：使用 <code>wsl --unregister &lt;名称&gt;</code> 会注销发行版并<strong>永久删除</strong>其对应的虚拟磁盘文件（ext4.vhdx），请务必先备份。</li>
+<li><strong>迁移建议</strong>：<ul>
+<li><strong>推荐</strong>：使用官方的 <code>export</code> 和 <code>import</code> 流程，这能最大程度避免跨机器兼容性问题。</li>
+<li><strong>本机迁移</strong>：如果是本机移动位置，也可以先关闭 WSL，手动移动 <code>.vhdx</code> 硬盘文件，然后 <code>unregister</code> 原系统，再在新位置执行 <code>import</code>（指向移动后的文件）。</li>
+<li><strong>注册表修改（不推荐）</strong>：WSL 注册信息存储在 <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss</code>，理论上修改 <code>BasePath</code> 可行，但风险较大，不建议操作。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="社区镜像与自定义安装"><a href="#社区镜像与自定义安装" class="headerlink" title="社区镜像与自定义安装"></a>社区镜像与自定义安装</h2><p>推荐直接使用在线安装。如果需要使用社区镜像（如 openSUSE），可以手动下载并导入。</p>
+<h3 id="资源链接"><a href="#资源链接" class="headerlink" title="资源链接"></a>资源链接</h3><ul>
+<li><strong>官方文档</strong>: <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows/wsl/install-manual">Microsoft Learn - WSL 安装手册</a></li>
+<li><strong>官方 Ubuntu 22.04 镜像</strong>: <a target="_blank" rel="noopener" href="https://aka.ms/wslubuntu2204">aka.ms&#x2F;wslubuntu2204</a></li>
+<li><strong>社区镜像源 (openSUSE 等)</strong>: <a target="_blank" rel="noopener" href="https://download.opensuse.org/repositories/Virtualization:/WSL:/instarball/">OpenSUSE Repository</a></li>
+</ul>
+<h3 id="手动导入示例"><a href="#手动导入示例" class="headerlink" title="手动导入示例"></a>手动导入示例</h3><p>假设镜像文件位于 <code>_images</code> 目录：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 语法：wsl --import &lt;系统名&gt; &lt;安装目录&gt; &lt;镜像tar包路径&gt;</span></span><br><span class="line">wsl <span class="literal">--import</span> openS<span class="built_in">USE-Leap</span><span class="literal">-15</span>.<span class="number">6</span> .\openS<span class="built_in">USE-Leap</span><span class="literal">-15</span>.<span class="number">6</span>\ .\openS<span class="built_in">USE-Leap</span><span class="literal">-15</span>.<span class="number">6</span><span class="literal">-15</span>.<span class="number">6</span>.x86_64.tar</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="其他命令-Legacy-Global-Config"><a href="#其他命令-Legacy-Global-Config" class="headerlink" title="其他命令 (Legacy &#x2F; Global Config)"></a>其他命令 (Legacy &#x2F; Global Config)</h2><p><code>wslconfig</code> 是较旧但依然有效的全局配置工具：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出当前已安装系统（包含详细信息）</span></span><br><span class="line">wslconfig /l</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换默认的系统</span></span><br><span class="line">wslconfig.exe /setdefault openS<span class="built_in">USE-Leap</span><span class="literal">-16</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure></div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/MIT/" rel="tag">MIT</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/System/" rel="tag">System</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2025-12-31T11:22:14.000Z" itemprop="dateModified">最后编辑：2025-12-31</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 连不上的打印机会导致 Office 卡死" href="/Issue/Office_Printer_Halt/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" Windows RSAT(Remote Server Administration Tools) 远程服务器管理工具" href="/Document/Acrive Directry/RAST/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Software/WSL/" data-full-path="http://ted423.github.io/Software/WSL/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

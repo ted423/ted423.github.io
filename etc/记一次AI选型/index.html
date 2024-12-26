@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>记一次AI选型 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="个人观点" />
+  
+  <meta name="description" content="不得不说，以后 AI 应该是会带来一场明明确确的变革，很效率起因是我想逃离 Notion，最近又刚好看到两款类似软件的推荐。 Trilium Notes, Notion, 和 Vikunja Gemini 很清晰的给出了对比。    特性 Trilium Notes Notion Vikunja    核心定位 知识管理，个人笔记 工作空间，笔记+任务+数据库 任务管理，项目管理   笔记功能 强">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次AI选型">
+<meta property="og:url" content="http://ted423.github.io/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="不得不说，以后 AI 应该是会带来一场明明确确的变革，很效率起因是我想逃离 Notion，最近又刚好看到两款类似软件的推荐。 Trilium Notes, Notion, 和 Vikunja Gemini 很清晰的给出了对比。    特性 Trilium Notes Notion Vikunja    核心定位 知识管理，个人笔记 工作空间，笔记+任务+数据库 任务管理，项目管理   笔记功能 强">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-03-05T16:05:27.771Z">
+<meta property="article:modified_time" content="2025-05-01T02:25:02.799Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="个人观点">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">记一次AI选型</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-03-05T16:05:27.771Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-03-06</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~2.75K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>不得不说，以后 AI 应该是会带来一场明明确确的变革，很效率<br>起因是我想逃离 Notion，最近又刚好看到两款类似软件的推荐。</p>
+<p>Trilium Notes, Notion, 和 Vikunja</p>
+<p>Gemini 很清晰的给出了对比。</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>Trilium Notes</th>
+<th>Notion</th>
+<th>Vikunja</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>核心定位</td>
+<td>知识管理，个人笔记</td>
+<td>工作空间，笔记+任务+数据库</td>
+<td>任务管理，项目管理</td>
+</tr>
+<tr>
+<td>笔记功能</td>
+<td>强大的富文本编辑器，支持 Markdown、代码高亮等。笔记之间可以建立链接，形成知识网络。</td>
+<td>富文本编辑器，支持 Markdown。笔记可以嵌入各种内容块 (任务、表格、图片等)。</td>
+<td>简单笔记功能，主要用于任务描述、备注等。</td>
+</tr>
+<tr>
+<td>任务管理</td>
+<td>可以通过标签、属性等方式在笔记中标记任务，但相对简单，没有专门的任务管理模块。</td>
+<td>强大的任务管理功能，支持看板、列表、日历等多种视图。可以设置截止日期、负责人、优先级等。</td>
+<td>核心功能就是任务管理，看板、列表、甘特图等视图。支持依赖关系、标签、优先级、到期日、提醒等。</td>
+</tr>
+<tr>
+<td>任务和笔记关联</td>
+<td>可以通过链接将任务和笔记关联起来，方便查找相关信息。</td>
+<td>任务可以嵌入到笔记中，或者将笔记链接到任务。</td>
+<td>任务描述可以包含笔记链接，但关联性相对较弱。</td>
+</tr>
+<tr>
+<td>灵活性&#x2F;定制性</td>
+<td>非常灵活，可以自定义笔记结构、样式等。支持 JavaScript 脚本，可以扩展功能。</td>
+<td>灵活性较高，可以通过页面、数据库、模板等进行定制。</td>
+<td>灵活性相对较低，主要通过设置标签、优先级等属性来定制。</td>
+</tr>
+<tr>
+<td>模板</td>
+<td>没有预设模板，需要自己搭建。</td>
+<td>大量模板，涵盖笔记、任务管理、项目管理等各种场景。</td>
+<td>相对较少，主要集中在项目管理和任务管理方面。</td>
+</tr>
+<tr>
+<td>代码处理</td>
+<td>代码块支持高亮，但可能需要手动设置语言类型。</td>
+<td>代码块支持高亮，但有时会自动修改代码中的字符，需要注意。</td>
+<td>不太适合处理大量代码，主要用于任务相关的小段代码或命令。</td>
+</tr>
+<tr>
+<td>离线使用</td>
+<td>完全离线可用，数据存储在本地。</td>
+<td>部分内容可以离线访问，但同步和协作需要网络连接。</td>
+<td>可以自托管，但移动端通常需要网络访问</td>
+</tr>
+<tr>
+<td>数据安全</td>
+<td>数据存储在本地，安全性较高。可以定期备份。</td>
+<td>数据存储在云端，安全性取决于 Notion 的安全措施。</td>
+<td>可以自托管，安全性由自己掌控。</td>
+</tr>
+<tr>
+<td>协作</td>
+<td>不擅长协作，主要用于个人知识管理。</td>
+<td>协作能力强，可以多人共同编辑页面、管理任务。</td>
+<td>协作能力较强，适合团队进行项目管理。</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>针对你的需求和 Notion 的问题：<br>模板太花： Notion 确实有很多花哨的模板，但你也可以自己创建简洁的页面和数据库，或者选择一些简约风格的模板。重要的是根据自己的需求定制，而不是被模板牵着鼻子走。<br>代码自动修改： 这是 Notion 的一个已知问题。 解决办法：<br>使用代码块 (Code Block): 确保你把代码放在了 &quot;Code&quot; 块里，而不是简单的文本块。<br>手动检查： 编写或粘贴代码后，务必仔细检查一遍，确保没有被修改。<br>使用外部编辑器： 如果你经常需要处理大量代码，可以考虑在外部编辑器中编写代码，然后复制粘贴到 Notion 中。</p>
+</blockquote>
+<p>我: 主要我不希望花太多时间在研究设置项上，而检查代码不是一个可行方案，保持原始数据无损是一个很重要的需求，不能到使用时才发现数据是坏的</p>
+<p>之后它就给我推了 Trilium Notes </p>
+<blockquote>
+<p>Trilium Notes (优点):<br>本地优先，数据安全： 数据完全存储在本地，你拥有绝对的掌控权，不用担心第三方平台的数据安全问题。<br>原始数据保证： Trilium Notes 本身不会主动修改你的代码。只要你正确地使用了代码块，就可以确保代码的原始性。<br>专注笔记，避免过度设计： 虽然 Trilium Notes 的功能非常强大，但它的核心仍然是笔记。这使得它避免了像 Notion 那样过度设计的问题，让你能够专注于知识的记录和组织<br>Trilium Notes (缺点):<br>任务管理相对简单： 任务管理不是 Trilium Notes 的强项。虽然可以通过标签、属性等方式来标记任务，但缺乏专业的任务管理功能，例如看板、甘特图等。<br>协作能力弱： Trilium Notes 主要面向个人用户，协作能力较弱。<br>解决方案（如果选择Trilium Notes但需要更好的任务管理）：</p>
+</blockquote>
+<p>我：我不需要甘特图这些，但我可能需要记住任务的开始时间，和任务变动</p>
+<blockquote>
+<p>好的，如果你不需要甘特图，但需要记录任务的开始时间和任务的变动，那么 Trilium Notes + 外部任务管理工具 或 Vikunja 这两种方案仍然是比较合适的选择，只是在具体实现上可以做一些调整。<br>Trilium Notes + 外部任务管理工具</p>
+</blockquote>
+<p>我：Vikunja 无法满足么，他无法满足的原因是？</p>
+<blockquote>
+<p>Vikunja 可能无法完全满足需求的原因：<br>笔记功能的局限性:<br>不适合大量知识记录： Vikunja 的笔记功能主要用于任务描述和备注，对于记录大量的知识、构建知识体系来说，功能过于简单。<br>缺乏知识关联： 无法像 Trilium Notes 那样，通过链接将笔记组织成知识网络。</p>
+</blockquote>
+<p>我：我可能不太需要知识网络，只是简单的记录</p>
+<blockquote>
+<p>好的，既然你不需要知识网络，只是简单的记录，那么我们重新评估一下 Vikunja 和 Trilium Notes + 外部任务管理工具这两种方案。<br>在这种情况下，Vikunja 的优势就更加明显了：<br>专注任务管理： 避免了为了知识网络而引入不必要的复杂性。<br>学习曲线更低： 相比于需要学习如何构建知识网络的 Trilium Notes，Vikunja 的学习曲线更低，更容易上手。<br>集成性： 任务和记录都在同一个工具中，减少了工具切换的成本。<br>自带评论和活动日志： 虽然不如专业的日志工具强大，但是对于简单的任务变动记录来说，已经足够。<br>Vikunja 的劣势：<br>笔记功能仍然有限： 虽然够用，但对于需要记录大量细节的任务来说，可能不够方便。<br>代码处理能力弱： 如果需要记录大量的代码片段，仍然可能遇到代码高亮和字符修改的问题。<br>开始时间需要手动维护： 仍然需要通过自定义字段或者备注记录，不如直接修改创建时间直观。<br>Trilium Notes + 外部任务管理工具 的方案，优势会相对降低：<br>知识网络不再是优势： 如果不需要知识网络，Trilium Notes 的优势会大打折扣。<br>多工具管理： 需要在两个工具之间切换，增加了操作的复杂性。<br>在这种简化需求的前提下，强烈建议你优先考虑 Vikunja。<br>从结果来看，我可能会继续用 Notion,因为我之前忽略了 Notion 支持 Markdown 😀 虽然他会自动转换，并且转换之后就只能点点点了。</p>
+</blockquote>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/" rel="tag">个人观点</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2025-05-01T02:25:02.799Z" itemprop="dateModified">最后编辑：2025-05-01</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Windows 11 右键相关" href="/Document/Win11右键/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" DHCP备份恢复" href="/Document/Acrive Directry/DHCP-Backup/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B/" data-full-path="http://ted423.github.io/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

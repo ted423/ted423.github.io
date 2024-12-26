@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Document, 字符编码" />
+  
+  <meta name="description" content="突然间想搞清楚unicode以及utf-8之间的关系，虽说之前有点印象，但还是云里雾里的，于是查了下。简单说就是太混乱，没弄清楚也跑出来写文章的很多，很难有文章能真正全说清楚的。当然我也是按我的理解来写的，不一定都对。 基本知识字符集 - Character Set编码 - encoding代码页 - CodePage代码页是一个选定字符代码的列表，与字符集其实是差不多的概念，只不过代码页是计算机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16">
+<meta property="og:url" content="http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="突然间想搞清楚unicode以及utf-8之间的关系，虽说之前有点印象，但还是云里雾里的，于是查了下。简单说就是太混乱，没弄清楚也跑出来写文章的很多，很难有文章能真正全说清楚的。当然我也是按我的理解来写的，不一定都对。 基本知识字符集 - Character Set编码 - encoding代码页 - CodePage代码页是一个选定字符代码的列表，与字符集其实是差不多的概念，只不过代码页是计算机">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-11-11T15:24:00.000Z">
+<meta property="article:modified_time" content="2018-06-21T13:53:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="字符编码">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[资料]字符编码详解，系数ASCII、ANSI、Unicode、UTF-8、UTF-16</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2015-11-11T15:24:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2015-11-11</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~8.04K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text">基本知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ASCII-SBCS"><span class="toc-number">2.</span> <span class="toc-text">ASCII-SBCS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ASCII%E7%A0%81%E8%A1%A8"><span class="toc-number">2.1.</span> <span class="toc-text">ASCII码表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ASCII%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6"><span class="toc-number">2.1.1.</span> <span class="toc-text">ASCII控制字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ASCII%E5%8F%AF%E6%98%BE%E7%A4%BA%E5%AD%97%E7%AC%A6"><span class="toc-number">2.1.2.</span> <span class="toc-text">ASCII可显示字符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ANSI-DBCS"><span class="toc-number">3.</span> <span class="toc-text">ANSI-DBCS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Unicode-UCS-%E4%B8%87%E5%9B%BD%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text">Unicode - UCS - 万国码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UTF-Unicode-UCS-Transformation-Format"><span class="toc-number">4.1.</span> <span class="toc-text">UTF - Unicode&#x2F;UCS Transformation Format</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UCS-2%E3%80%81UCS-4%E4%B8%8EUTF-16%E3%80%81UTF-32"><span class="toc-number">5.</span> <span class="toc-text">UCS-2、UCS-4与UTF-16、UTF-32</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E9%A1%BA%E5%BA%8F%E6%A0%87%E8%AE%B0-BOM"><span class="toc-number">5.1.</span> <span class="toc-text">字节顺序标记-BOM</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-number">6.</span> <span class="toc-text">扩展阅读</span></a></li></ol>
+                </div>
+            
+            <hr />
+            <div itemprop="articleBody"><p>突然间想搞清楚unicode以及utf-8之间的关系，虽说之前有点印象，但还是云里雾里的，于是查了下。简单说就是太混乱，没弄清楚也跑出来写文章的很多，很难有文章能真正全说清楚的。当然我也是按我的理解来写的，不一定都对。</p>
+<h1 id="基本知识"><a href="#基本知识" class="headerlink" title="基本知识"></a>基本知识</h1><p><strong>字符集 - Character Set</strong><br><strong>编码 - encoding</strong><br><strong>代码页 - CodePage</strong><br>代码页是一个选定字符代码的列表，与字符集其实是差不多的概念，只不过代码页是计算机用来切换编码的概念(从Page来理解)。最早来自IBM，后来被微软，oracle ,SAP等广泛采用。由于最开始每个国家都在搞自己的locale编码(也就是ANSI，随后会有详细解释)，导致每个国家都不统一，不兼容，可能导致冲突，所以一个系统在处理文字的时候，必须要告诉计算机你的编码是哪个国家和地区的标准，这种国家和标准的代号（其实就是字符编码格式的代号），微软称为Codepage(代码页)，其实这个代码页和字符集编码的意思是一样的。告诉你代码页，本质就是告诉了你编码格式。<br>但是不同厂家的代码页可能完全不同(这个全看厂家怎么放，没有标准，当然一个公司一般也不会随便改自己的代码页)，比如， UTF-8字符编码 在IBM对应的代码页是1208，在微软对应的是65001,在德国的SAP公司对应的是 4110<br>GBK的在微软的代码页是936，告诉你代码页是936其实和告诉你我编码格式是GBK效果完全相同。那么处理文本的时候就不会有问题，不会去考虑某个代码是显示的韩文还是中文，同样，日文和韩文的代码页就和中文不同，这样就可以避免编码冲突导致计算机不知如何处理的问题。当然用这个也可以很容易的切换语言版本。<br><strong>内码</strong><br>指操作系统内部的字符编码，中国人的原创词，可以理解为没有任何组织定义过这个词。<br><strong>区位码</strong><br>汉字GB2312编码里的概念，不需要特别理解</p>
+<h1 id="ASCII-SBCS"><a href="#ASCII-SBCS" class="headerlink" title="ASCII-SBCS"></a>ASCII-SBCS</h1><p>ASCII又称SBCS(单字节字符集)<br>ASCII(American Standard Code for Information Interchange)美国信息交换标准代码，这是计算机上最早使用的通用的编码方案。<br>上个世纪60年代，美国制定了一套字符编码，对英语字符与二进制位之间的关系，做了统一规定。这被称为ASCII码，一直沿用至今。</p>
+<p>ASCII码一共规定了128个字符的编码，比如空格&quot;SPACE&quot;是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。</p>
+<p><strong>ASCII 这部标准本身就直接规定了字符和字符编码的方式，所以既是字符集又是编码方案。</strong><br><strong>无论是ANSI标准编码还是Unicode都包含ASCII，通常的乱码都是由非ASCII字符造成的</strong></p>
+<h2 id="ASCII码表"><a href="#ASCII码表" class="headerlink" title="ASCII码表"></a>ASCII码表</h2><h3 id="ASCII控制字符"><a href="#ASCII控制字符" class="headerlink" title="ASCII控制字符"></a>ASCII控制字符</h3><table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>十进制</th>
+<th>十六进制</th>
+<th>缩写</th>
+<th>可以显示的表示法</th>
+<th>名称&#x2F;意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0000 0000</td>
+<td>0</td>
+<td>00</td>
+<td>NUL</td>
+<td>␀</td>
+<td>空字符（Null）</td>
+</tr>
+<tr>
+<td>0000 0001</td>
+<td>1</td>
+<td>01</td>
+<td>SOH</td>
+<td>␁</td>
+<td>标题开始</td>
+</tr>
+<tr>
+<td>0000 0010</td>
+<td>2</td>
+<td>02</td>
+<td>STX</td>
+<td>␂</td>
+<td>本文开始</td>
+</tr>
+<tr>
+<td>0000 0011</td>
+<td>3</td>
+<td>03</td>
+<td>ETX</td>
+<td>␃</td>
+<td>本文结束</td>
+</tr>
+<tr>
+<td>0000 0100</td>
+<td>4</td>
+<td>04</td>
+<td>EOT</td>
+<td>␄</td>
+<td>传输结束</td>
+</tr>
+<tr>
+<td>0000 0101</td>
+<td>5</td>
+<td>05</td>
+<td>ENQ</td>
+<td>␅</td>
+<td>请求</td>
+</tr>
+<tr>
+<td>0000 0110</td>
+<td>6</td>
+<td>06</td>
+<td>ACK</td>
+<td>␆</td>
+<td>确认回应</td>
+</tr>
+<tr>
+<td>0000 0111</td>
+<td>7</td>
+<td>07</td>
+<td>BEL</td>
+<td>␇</td>
+<td>响铃</td>
+</tr>
+<tr>
+<td>0000 1000</td>
+<td>8</td>
+<td>08</td>
+<td>BS</td>
+<td>␈</td>
+<td>退格</td>
+</tr>
+<tr>
+<td>0000 1001</td>
+<td>9</td>
+<td>09</td>
+<td>HT</td>
+<td>␉</td>
+<td>水平定位符号</td>
+</tr>
+<tr>
+<td>0000 1010</td>
+<td>10</td>
+<td>0A</td>
+<td>LF</td>
+<td>␊</td>
+<td>换行键</td>
+</tr>
+<tr>
+<td>0000 1011</td>
+<td>11</td>
+<td>0B</td>
+<td>VT</td>
+<td>␋</td>
+<td>垂直定位符号</td>
+</tr>
+<tr>
+<td>0000 1100</td>
+<td>12</td>
+<td>0C</td>
+<td>FF</td>
+<td>␌</td>
+<td>换页键</td>
+</tr>
+<tr>
+<td>0000 1101</td>
+<td>13</td>
+<td>0D</td>
+<td>CR</td>
+<td>␍</td>
+<td>归位键</td>
+</tr>
+<tr>
+<td>0000 1110</td>
+<td>14</td>
+<td>0E</td>
+<td>SO</td>
+<td>␎</td>
+<td>取消变换（Shift out）</td>
+</tr>
+<tr>
+<td>0000 1111</td>
+<td>15</td>
+<td>0F</td>
+<td>SI</td>
+<td>␏</td>
+<td>启用变换（Shift in）</td>
+</tr>
+<tr>
+<td>0001 0000</td>
+<td>16</td>
+<td>10</td>
+<td>DLE</td>
+<td>␐</td>
+<td>跳出数据通讯</td>
+</tr>
+<tr>
+<td>0001 0001</td>
+<td>17</td>
+<td>11</td>
+<td>DC1</td>
+<td>␑</td>
+<td>设备控制一（XON 启用软件速度控制）</td>
+</tr>
+<tr>
+<td>0001 0010</td>
+<td>18</td>
+<td>12</td>
+<td>DC2</td>
+<td>␒</td>
+<td>设备控制二</td>
+</tr>
+<tr>
+<td>0001 0011</td>
+<td>19</td>
+<td>13</td>
+<td>DC3</td>
+<td>␓</td>
+<td>设备控制三（XOFF 停用软件速度控制）</td>
+</tr>
+<tr>
+<td>0001 0100</td>
+<td>20</td>
+<td>14</td>
+<td>DC4</td>
+<td>␔</td>
+<td>设备控制四</td>
+</tr>
+<tr>
+<td>0001 0101</td>
+<td>21</td>
+<td>15</td>
+<td>NAK</td>
+<td>␕</td>
+<td>确认失败回应</td>
+</tr>
+<tr>
+<td>0001 0110</td>
+<td>22</td>
+<td>16</td>
+<td>SYN</td>
+<td>␖</td>
+<td>同步用暂停</td>
+</tr>
+<tr>
+<td>0001 0111</td>
+<td>23</td>
+<td>17</td>
+<td>ETB</td>
+<td>␗</td>
+<td>区块传输结束</td>
+</tr>
+<tr>
+<td>0001 1000</td>
+<td>24</td>
+<td>18</td>
+<td>CAN</td>
+<td>␘</td>
+<td>取消</td>
+</tr>
+<tr>
+<td>0001 1001</td>
+<td>25</td>
+<td>19</td>
+<td>EM</td>
+<td>␙</td>
+<td>连接介质中断</td>
+</tr>
+<tr>
+<td>0001 1010</td>
+<td>26</td>
+<td>1A</td>
+<td>SUB</td>
+<td>␚</td>
+<td>替换</td>
+</tr>
+<tr>
+<td>0001 1011</td>
+<td>27</td>
+<td>1B</td>
+<td>ESC</td>
+<td>␛</td>
+<td>跳出</td>
+</tr>
+<tr>
+<td>0001 1100</td>
+<td>28</td>
+<td>1C</td>
+<td>FS</td>
+<td>␜</td>
+<td>文件分割符</td>
+</tr>
+<tr>
+<td>0001 1101</td>
+<td>29</td>
+<td>1D</td>
+<td>GS</td>
+<td>␝</td>
+<td>组群分隔符</td>
+</tr>
+<tr>
+<td>0001 1110</td>
+<td>30</td>
+<td>1E</td>
+<td>RS</td>
+<td>␞</td>
+<td>记录分隔符</td>
+</tr>
+<tr>
+<td>0001 1111</td>
+<td>31</td>
+<td>1F</td>
+<td>US</td>
+<td>␟</td>
+<td>单元分隔符</td>
+</tr>
+<tr>
+<td>0111 1111</td>
+<td>127</td>
+<td>7F</td>
+<td>DEL</td>
+<td>␡</td>
+<td>删除</td>
+</tr>
+</tbody></table>
+<h3 id="ASCII可显示字符"><a href="#ASCII可显示字符" class="headerlink" title="ASCII可显示字符"></a>ASCII可显示字符</h3><table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>十进制</th>
+<th>十六进制</th>
+<th>图形</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0010 0000</td>
+<td>32</td>
+<td>20</td>
+<td>（空格）(␠)</td>
+</tr>
+<tr>
+<td>0010 0001</td>
+<td>33</td>
+<td>21</td>
+<td>!</td>
+</tr>
+<tr>
+<td>0010 0010</td>
+<td>34</td>
+<td>22</td>
+<td>&quot;</td>
+</tr>
+<tr>
+<td>0010 0011</td>
+<td>35</td>
+<td>23</td>
+<td>#</td>
+</tr>
+<tr>
+<td>0010 0100</td>
+<td>36</td>
+<td>24</td>
+<td>$</td>
+</tr>
+<tr>
+<td>0010 0101</td>
+<td>37</td>
+<td>25</td>
+<td>%</td>
+</tr>
+<tr>
+<td>0010 0110</td>
+<td>38</td>
+<td>26</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>0010 0111</td>
+<td>39</td>
+<td>27</td>
+<td>&#39;</td>
+</tr>
+<tr>
+<td>0010 1000</td>
+<td>40</td>
+<td>28</td>
+<td>(</td>
+</tr>
+<tr>
+<td>0010 1001</td>
+<td>41</td>
+<td>29</td>
+<td>)</td>
+</tr>
+<tr>
+<td>0010 1010</td>
+<td>42</td>
+<td>2A</td>
+<td>*</td>
+</tr>
+<tr>
+<td>0010 1011</td>
+<td>43</td>
+<td>2B</td>
+<td>+</td>
+</tr>
+<tr>
+<td>0010 1100</td>
+<td>44</td>
+<td>2C</td>
+<td>,</td>
+</tr>
+<tr>
+<td>0010 1101</td>
+<td>45</td>
+<td>2D</td>
+<td>-</td>
+</tr>
+<tr>
+<td>0010 1110</td>
+<td>46</td>
+<td>2E</td>
+<td>.</td>
+</tr>
+<tr>
+<td>0010 1111</td>
+<td>47</td>
+<td>2F</td>
+<td>&#x2F;</td>
+</tr>
+<tr>
+<td>0011 0000</td>
+<td>48</td>
+<td>30</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0011 0001</td>
+<td>49</td>
+<td>31</td>
+<td>1</td>
+</tr>
+<tr>
+<td>0011 0010</td>
+<td>50</td>
+<td>32</td>
+<td>2</td>
+</tr>
+<tr>
+<td>0011 0011</td>
+<td>51</td>
+<td>33</td>
+<td>3</td>
+</tr>
+<tr>
+<td>0011 0100</td>
+<td>52</td>
+<td>34</td>
+<td>4</td>
+</tr>
+<tr>
+<td>0011 0101</td>
+<td>53</td>
+<td>35</td>
+<td>5</td>
+</tr>
+<tr>
+<td>0011 0110</td>
+<td>54</td>
+<td>36</td>
+<td>6</td>
+</tr>
+<tr>
+<td>0011 0111</td>
+<td>55</td>
+<td>37</td>
+<td>7</td>
+</tr>
+<tr>
+<td>0011 1000</td>
+<td>56</td>
+<td>38</td>
+<td>8</td>
+</tr>
+<tr>
+<td>0011 1001</td>
+<td>57</td>
+<td>39</td>
+<td>9</td>
+</tr>
+<tr>
+<td>0011 1010</td>
+<td>58</td>
+<td>3A</td>
+<td>:</td>
+</tr>
+<tr>
+<td>0011 1011</td>
+<td>59</td>
+<td>3B</td>
+<td>;</td>
+</tr>
+<tr>
+<td>0011 1100</td>
+<td>60</td>
+<td>3C</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>0011 1101</td>
+<td>61</td>
+<td>3D</td>
+<td>&#x3D;</td>
+</tr>
+<tr>
+<td>0011 1110</td>
+<td>62</td>
+<td>3E</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>0011 1111</td>
+<td>63</td>
+<td>3F</td>
+<td>?</td>
+</tr>
+<tr>
+<td>0100 0000</td>
+<td>64</td>
+<td>40</td>
+<td>@</td>
+</tr>
+<tr>
+<td>0100 0001</td>
+<td>65</td>
+<td>41</td>
+<td>A</td>
+</tr>
+<tr>
+<td>0100 0010</td>
+<td>66</td>
+<td>42</td>
+<td>B</td>
+</tr>
+<tr>
+<td>0100 0011</td>
+<td>67</td>
+<td>43</td>
+<td>C</td>
+</tr>
+<tr>
+<td>0100 0100</td>
+<td>68</td>
+<td>44</td>
+<td>D</td>
+</tr>
+<tr>
+<td>0100 0101</td>
+<td>69</td>
+<td>45</td>
+<td>E</td>
+</tr>
+<tr>
+<td>0100 0110</td>
+<td>70</td>
+<td>46</td>
+<td>F</td>
+</tr>
+<tr>
+<td>0100 0111</td>
+<td>71</td>
+<td>47</td>
+<td>G</td>
+</tr>
+<tr>
+<td>0100 1000</td>
+<td>72</td>
+<td>48</td>
+<td>H</td>
+</tr>
+<tr>
+<td>0100 1001</td>
+<td>73</td>
+<td>49</td>
+<td>I</td>
+</tr>
+<tr>
+<td>0100 1010</td>
+<td>74</td>
+<td>4A</td>
+<td>J</td>
+</tr>
+<tr>
+<td>0100 1011</td>
+<td>75</td>
+<td>4B</td>
+<td>K</td>
+</tr>
+<tr>
+<td>0100 1100</td>
+<td>76</td>
+<td>4C</td>
+<td>L</td>
+</tr>
+<tr>
+<td>0100 1101</td>
+<td>77</td>
+<td>4D</td>
+<td>M</td>
+</tr>
+<tr>
+<td>0100 1110</td>
+<td>78</td>
+<td>4E</td>
+<td>N</td>
+</tr>
+<tr>
+<td>0100 1111</td>
+<td>79</td>
+<td>4F</td>
+<td>O</td>
+</tr>
+<tr>
+<td>0101 0000</td>
+<td>80</td>
+<td>50</td>
+<td>P</td>
+</tr>
+<tr>
+<td>0101 0001</td>
+<td>81</td>
+<td>51</td>
+<td>Q</td>
+</tr>
+<tr>
+<td>0101 0010</td>
+<td>82</td>
+<td>52</td>
+<td>R</td>
+</tr>
+<tr>
+<td>0101 0011</td>
+<td>83</td>
+<td>53</td>
+<td>S</td>
+</tr>
+<tr>
+<td>0101 0100</td>
+<td>84</td>
+<td>54</td>
+<td>T</td>
+</tr>
+<tr>
+<td>0101 0101</td>
+<td>85</td>
+<td>55</td>
+<td>U</td>
+</tr>
+<tr>
+<td>0101 0110</td>
+<td>86</td>
+<td>56</td>
+<td>V</td>
+</tr>
+<tr>
+<td>0101 0111</td>
+<td>87</td>
+<td>57</td>
+<td>W</td>
+</tr>
+<tr>
+<td>0101 1000</td>
+<td>88</td>
+<td>58</td>
+<td>X</td>
+</tr>
+<tr>
+<td>0101 1001</td>
+<td>89</td>
+<td>59</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>0101 1010</td>
+<td>90</td>
+<td>5A</td>
+<td>Z</td>
+</tr>
+<tr>
+<td>0101 1011</td>
+<td>91</td>
+<td>5B</td>
+<td>[</td>
+</tr>
+<tr>
+<td>0101 1100</td>
+<td>92</td>
+<td>5C</td>
+<td>\</td>
+</tr>
+<tr>
+<td>0101 1101</td>
+<td>93</td>
+<td>5D</td>
+<td>]</td>
+</tr>
+<tr>
+<td>0101 1110</td>
+<td>94</td>
+<td>5E</td>
+<td>^</td>
+</tr>
+<tr>
+<td>0101 1111</td>
+<td>95</td>
+<td>5F</td>
+<td>_</td>
+</tr>
+<tr>
+<td>0110 0000</td>
+<td>96</td>
+<td>60</td>
+<td>&#96;</td>
+</tr>
+<tr>
+<td>0110 0001</td>
+<td>97</td>
+<td>61</td>
+<td>a</td>
+</tr>
+<tr>
+<td>0110 0010</td>
+<td>98</td>
+<td>62</td>
+<td>b</td>
+</tr>
+<tr>
+<td>0110 0011</td>
+<td>99</td>
+<td>63</td>
+<td>c</td>
+</tr>
+<tr>
+<td>0110 0100</td>
+<td>100</td>
+<td>64</td>
+<td>d</td>
+</tr>
+<tr>
+<td>0110 0101</td>
+<td>101</td>
+<td>65</td>
+<td>e</td>
+</tr>
+<tr>
+<td>0110 0110</td>
+<td>102</td>
+<td>66</td>
+<td>f</td>
+</tr>
+<tr>
+<td>0110 0111</td>
+<td>103</td>
+<td>67</td>
+<td>g</td>
+</tr>
+<tr>
+<td>0110 1000</td>
+<td>104</td>
+<td>68</td>
+<td>h</td>
+</tr>
+<tr>
+<td>0110 1001</td>
+<td>105</td>
+<td>69</td>
+<td>i</td>
+</tr>
+<tr>
+<td>0110 1010</td>
+<td>106</td>
+<td>6A</td>
+<td>j</td>
+</tr>
+<tr>
+<td>0110 1011</td>
+<td>107</td>
+<td>6B</td>
+<td>k</td>
+</tr>
+<tr>
+<td>0110 1100</td>
+<td>108</td>
+<td>6C</td>
+<td>l</td>
+</tr>
+<tr>
+<td>0110 1101</td>
+<td>109</td>
+<td>6D</td>
+<td>m</td>
+</tr>
+<tr>
+<td>0110 1110</td>
+<td>110</td>
+<td>6E</td>
+<td>n</td>
+</tr>
+<tr>
+<td>0110 1111</td>
+<td>111</td>
+<td>6F</td>
+<td>o</td>
+</tr>
+<tr>
+<td>0111 0000</td>
+<td>112</td>
+<td>70</td>
+<td>p</td>
+</tr>
+<tr>
+<td>0111 0001</td>
+<td>113</td>
+<td>71</td>
+<td>q</td>
+</tr>
+<tr>
+<td>0111 0010</td>
+<td>114</td>
+<td>72</td>
+<td>r</td>
+</tr>
+<tr>
+<td>0111 0011</td>
+<td>115</td>
+<td>73</td>
+<td>s</td>
+</tr>
+<tr>
+<td>0111 0100</td>
+<td>116</td>
+<td>74</td>
+<td>t</td>
+</tr>
+<tr>
+<td>0111 0101</td>
+<td>117</td>
+<td>75</td>
+<td>u</td>
+</tr>
+<tr>
+<td>0111 0110</td>
+<td>118</td>
+<td>76</td>
+<td>v</td>
+</tr>
+<tr>
+<td>0111 0111</td>
+<td>119</td>
+<td>77</td>
+<td>w</td>
+</tr>
+<tr>
+<td>0111 1000</td>
+<td>120</td>
+<td>78</td>
+<td>x</td>
+</tr>
+<tr>
+<td>0111 1001</td>
+<td>121</td>
+<td>79</td>
+<td>y</td>
+</tr>
+<tr>
+<td>0111 1010</td>
+<td>122</td>
+<td>7A</td>
+<td>z</td>
+</tr>
+<tr>
+<td>0111 1011</td>
+<td>123</td>
+<td>7B</td>
+<td>{</td>
+</tr>
+<tr>
+<td>0111 1100</td>
+<td>124</td>
+<td>7C</td>
+<td></td>
+</tr>
+<tr>
+<td>0111 1101</td>
+<td>125</td>
+<td>7D</td>
+<td>}</td>
+</tr>
+<tr>
+<td>0111 1110</td>
+<td>126</td>
+<td>7E</td>
+<td>~</td>
+</tr>
+</tbody></table>
+<h1 id="ANSI-DBCS"><a href="#ANSI-DBCS" class="headerlink" title="ANSI-DBCS"></a>ANSI-DBCS</h1><p>ANSI，<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/American_National_Standards_Institute">American National Standards Institute</a><br>个人感觉理论上来讲其实ANSI不算是一种编码，从缩写可以看出，这是一个标准制定协会。应该是它把各地的locale编码都给记录为相应的标准(遗憾的是搜索不到相应的文章，网上都会非常欣喜的告诉你，有好多种ANSI编码。)wiki上有句话&quot;ANSI is a bit of a misnomer as the behavior does not exactly match the ANSI standards and other codepages can be selected, most recently UTF-8 Unicode.&quot;来源于<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Windows_code_page">https://en.wikipedia.org/wiki/Windows_code_page</a>,可惜我英文不是很好。从微软的<a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-tw/library/windows/desktop/dd317756(v=vs.85).aspx">Code Page Identifiers</a>可以看到如下</p>
+<ul>
+<li>ANSI&#x2F;OEM Thai (ISO 8859-11); Thai (Windows)</li>
+<li>ANSI&#x2F;OEM Japanese; Japanese (Shift-JIS)</li>
+<li>ANSI&#x2F;OEM Simplified Chinese (PRC, Singapore); Chinese Simplified (GB2312)</li>
+<li>ANSI&#x2F;OEM Korean (Unified Hangul Code)</li>
+<li>ANSI&#x2F;OEM Traditional Chinese (Taiwan; Hong Kong SAR, PRC); Chinese Traditional (Big5)</li>
+</ul>
+<p>Windows 里说的「ANSI」其实是根据当前 locale 选定具体的编码，比如简中 locale 下是 GBK。把自己这些 code page 称作「ANSI」是 Windows 的臭毛病。通常来讲，GB、BIG5、 Shift-JIS都属于ANSI编码。<br>DBCS(Double-byte Character Sets)的意思是双字节字符集<br>also known as an &quot;expanded 8-bit character set&quot;, is an extended single-byte character set (SBCS), implemented as a code page. （DBCS是SBCS的扩展）<br>在这一方案下，字符的宽度可以是一个字节，也可是两个字节。如果字符的宽度是两个字节，那么它的第一个字节就是一个特殊的“前导字节”，该字节是根据所使用的代码页从某个特定范围选定的。前导字节和“尾字节”合起来指定一个唯一的字符编码。<br>各个ANSI码(GB、BIG5、 Shift-JIS)是由于早期各个国家搞自己的字符编码造成的，这些国家的编码区间都是重叠的。举个例子，一个ANSI的文本文档从中文环境放到日文环境下就会乱码。</p>
+<h1 id="Unicode-UCS-万国码"><a href="#Unicode-UCS-万国码" class="headerlink" title="Unicode - UCS - 万国码"></a>Unicode - UCS - 万国码</h1><p>通用字符集 - UCS(Universal Character Set)<br><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-cn/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86#Unicode.E5.92.8CISO_10646.E7.9A.84.E5.BC.82.E5.90.8C">首先要说明的是Unicode和UCS并不是完全相同的概念</a></p>
+<p>Unicode的实现方式不同于编码方式。一个字符的Unicode编码是确定的。它只规定了符号的二进制代码，却没有规定这个二进制代码应该如何存储。Unicode符号需要字节数不等，从1个字节到4个字节，甚至更多。这里就有个严重的问题，计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢？第二个问题是，我们已经知道，英文字母只用一个字节表示就够了，如果Unicode统一规定，每个符号用三个或四个字节表示，那么每个英文字母前都必然有二到三个字节是0，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍，这是无法接受的。出于节省空间的目的，对Unicode编码的实现方式有所不同。</p>
+<p>Unicode的<strong>实现方式</strong>称为Unicode转换格式（Unicode Transformation Format，简称为UTF）<br>把带有 BOM 的小端序 UTF-16 称作「Unicode」也是 Windows 的臭毛病。<br>简单说Windows记事本里的Unicode会误导别人。Unicode本身是没有大端序以及小端序的区别的。</p>
+<h2 id="UTF-Unicode-UCS-Transformation-Format"><a href="#UTF-Unicode-UCS-Transformation-Format" class="headerlink" title="UTF - Unicode&#x2F;UCS Transformation Format"></a>UTF - Unicode&#x2F;UCS Transformation Format</h2><p>UTF-8编码字节含义</p>
+<ul>
+<li>UTF-8编码中的任意字节B，如果B的第一位为0，则B为ASCII码且B独立的表示一个字符；</li>
+<li>如果B的第一位为1，第二位为0，则B为一个多字节字符中的后续字节；</li>
+<li>如果B的前两位为1，第三位为0，则B为两个字节的字符中的第一个字节；</li>
+<li>如果B的前三位为1，第四位为0，则B为三个字节的字符中的第一个字节；</li>
+<li>如果B的前四位为1，第五位为0，则B为四个字节的字符中的第一个字节；</li>
+</ul>
+<p>因此，对UTF-8编码中的任意字节，根据第一位，可判断是否为ASCII字符；根据前二位，可判断该字节是否为一个字符编码的第一个字节；根据前四位（如果前两位均为1），可确定该字节为字符编码的第一个字节，并且可判断对应的字符由几个字节表示；根据前五位（如果前四位为1），可判断编码是否有错误或数据传输过程中是否有错误。<br>在ASCII字符较多的情况下，UTF-8比UTF-16更节省空间，而在中文字符较多的情况下(UTF-8一个中文字符3字节，UTF-16仍然是两个)UTF-16占用空间更少，<strong>UTF-16、UTF-32不是UTF-8的升级。</strong></p>
+<table>
+<thead>
+<tr>
+<th>字符</th>
+<th>UTF-8</th>
+<th>UTF-16(LE)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>！</td>
+<td>21(00100001)</td>
+<td>00 21(00000000 00100001)</td>
+</tr>
+<tr>
+<td>☺</td>
+<td>E2(11100010) 98(1001100) BA(10111010)</td>
+<td>26 3A(0010,0110 00,111010)</td>
+</tr>
+<tr>
+<td>我</td>
+<td>E6(11100110) 88(10001000) 91(10010001)</td>
+<td>62 11(0110,0010 00,010001)</td>
+</tr>
+</tbody></table>
+<p>注：LE为小端序，上表中UTF-16(LE)里的&quot;,&quot;用于标出和UTF-8里对应关系。</p>
+<p>可以在这里<a href="/Code/WWW/UTF-8/">UTF-8</a>以及这里<a href="/Code/WWW/2unicode/">UTF-16 LE</a>验证</p>
+<h1 id="UCS-2、UCS-4与UTF-16、UTF-32"><a href="#UCS-2、UCS-4与UTF-16、UTF-32" class="headerlink" title="UCS-2、UCS-4与UTF-16、UTF-32"></a>UCS-2、UCS-4与UTF-16、UTF-32</h1><p>UCS-2对每一个Unicode码位使用2bytes字集(16位bit);<br>UCS-4对每一个Unicode码位使用4bytes字集(32位bit);<br>UTF-16可看成是UCS-2的父集。在没有辅助平面字符（surrogate code points）前，UTF-16与UCS-2所指的是同一的意思。但当引入辅助平面字符后，就称为UTF-16了。现在若有软件声称自己支持UCS-2编码，那其实是暗指它不能支持在UTF-16中超过2bytes的字集。对于小于0x10000的UCS码，UTF-16编码就等于UCS码。<br>UTF-32 原本是 UCS-4 的子集，但JTC1&#x2F;SC2&#x2F;WG2声明，所有未来对字符的指定都将会限制在BMP及其14个补充平面。<br>于是就现状而言，除了 UTF-32 标准包含额外的 Unicode 意涵，UCS-4 和 UTF-32 大体是相同的。</p>
+<h2 id="字节顺序标记-BOM"><a href="#字节顺序标记-BOM" class="headerlink" title="字节顺序标记-BOM"></a>字节顺序标记-BOM</h2><table>
+<thead>
+<tr>
+<th>编码</th>
+<th>表示（十六进制）</th>
+<th>表示（十进制）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>UTF-8</td>
+<td>EF BB BF</td>
+<td>239 187 191</td>
+</tr>
+<tr>
+<td>UTF-16（大端序）</td>
+<td>FE FF</td>
+<td>254 255</td>
+</tr>
+<tr>
+<td>UTF-16（小端序）</td>
+<td>FF FE</td>
+<td>255 254</td>
+</tr>
+<tr>
+<td>UTF-32（大端序）</td>
+<td>00 00 FE FF</td>
+<td>0 0 254 255</td>
+</tr>
+<tr>
+<td>UTF-32（小端序）</td>
+<td>FF FE 00 00</td>
+<td>255 254 0 0</td>
+</tr>
+<tr>
+<td>UTF-7</td>
+<td>2B 2F 76和以下的一个字节：[ 38 、 39、 2B、2F ]</td>
+<td>43 47 118和以下的一个字节：[ 56、57 、43、47 ]</td>
+</tr>
+<tr>
+<td>en:UTF-1</td>
+<td>F7 64 4C</td>
+<td>247 100 76</td>
+</tr>
+<tr>
+<td>en:UTF-EBCDIC</td>
+<td>DD 73 66 73</td>
+<td>221 115 102 115</td>
+</tr>
+<tr>
+<td>en:Standard Compression Scheme for Unicode</td>
+<td>0E FE FF</td>
+<td>14 254 255</td>
+</tr>
+<tr>
+<td>en:BOCU-1</td>
+<td>FB EE 28 及可能跟随着FF</td>
+<td>251 238 40 及可能跟随着255</td>
+</tr>
+<tr>
+<td>GB-18030</td>
+<td>84 31 95 33</td>
+<td>132 49 149 51</td>
+</tr>
+<tr>
+<td>由于UTF-8没有大端序以及小端序的区别，在Linux等系统中，是不带BOM头的，而微软在记事本的保存中都会默认带上BOM头用于区别ANSI文本文档。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h1><ul>
+<li>MBCS(multibyte character set):在微软中，一般都是指DBCS，而Wiki认为微软<strong>用词不当</strong></li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Variable-width_encoding#CJK_multibyte_encodings">https://en.wikipedia.org/wiki/Variable-width_encoding#CJK_multibyte_encodings</a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81#.E7.8E.B0.E4.BB.A3.E7.BC.96.E7.A0.81.E6.A8.A1.E5.9E.8B">Unicode字符编码五层次模型</a></li>
+</ul>
+<hr>
+<p><time>2018-06-21</time>试着用自己的语句把自己的理解表达出来，但还是有点乱哈</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" rel="tag">字符编码</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2018-06-21T13:53:00.000Z" itemprop="dateModified">最后编辑：2018-06-21</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 偶像大师[THE iDOLM@STER]" href="/Anime/THE iDOLM@STER/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [R18]蒂亞[ティア]=浅間アリス（黒川メイサ）" href="/Video/R18/蒂亚/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" data-full-path="http://ted423.github.io/Document/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-text">基本知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ASCII-SBCS"><span class="toc-text">ASCII-SBCS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ASCII%E7%A0%81%E8%A1%A8"><span class="toc-text">ASCII码表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ASCII%E6%8E%A7%E5%88%B6%E5%AD%97%E7%AC%A6"><span class="toc-text">ASCII控制字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ASCII%E5%8F%AF%E6%98%BE%E7%A4%BA%E5%AD%97%E7%AC%A6"><span class="toc-text">ASCII可显示字符</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ANSI-DBCS"><span class="toc-text">ANSI-DBCS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Unicode-UCS-%E4%B8%87%E5%9B%BD%E7%A0%81"><span class="toc-text">Unicode - UCS - 万国码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#UTF-Unicode-UCS-Transformation-Format"><span class="toc-text">UTF - Unicode&#x2F;UCS Transformation Format</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#UCS-2%E3%80%81UCS-4%E4%B8%8EUTF-16%E3%80%81UTF-32"><span class="toc-text">UCS-2、UCS-4与UTF-16、UTF-32</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E8%8A%82%E9%A1%BA%E5%BA%8F%E6%A0%87%E8%AE%B0-BOM"><span class="toc-text">字节顺序标记-BOM</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E9%98%85%E8%AF%BB"><span class="toc-text">扩展阅读</span></a></li></ol>
+    </div>
+</aside>
+                
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>

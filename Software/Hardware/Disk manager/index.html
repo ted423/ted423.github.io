@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>硬盘管理工具 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Software/Hardware/Disk%20manager/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Hardware Tool, Software, Windows, 大眼仔~旭, 破解&激活, 第三方修改|绿化" />
+  
+  <meta name="description" content="DiskGenius其实建议用官方免费版的，数据恢复其实有其他软件能做到这个软件的搜索已丢失分区是非常有用的(不过傲梅分区助手也有这个功能，藏得比较隐蔽，之前没找到)这个软件严格意义上来讲，我不是很喜欢，分区格式的支持还不如分区助手。有其他分区工具是支持ext4的。官网: http:&#x2F;&#x2F;www.diskgenius.cn&#x2F;roustar31:  https:&#x2F;&#x2F;www.repaik.com&#x2F;for">
+<meta property="og:type" content="article">
+<meta property="og:title" content="硬盘管理工具">
+<meta property="og:url" content="http://ted423.github.io/Software/Hardware/Disk%20manager/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="DiskGenius其实建议用官方免费版的，数据恢复其实有其他软件能做到这个软件的搜索已丢失分区是非常有用的(不过傲梅分区助手也有这个功能，藏得比较隐蔽，之前没找到)这个软件严格意义上来讲，我不是很喜欢，分区格式的支持还不如分区助手。有其他分区工具是支持ext4的。官网: http:&#x2F;&#x2F;www.diskgenius.cn&#x2F;roustar31:  https:&#x2F;&#x2F;www.repaik.com&#x2F;for">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-04-28T14:45:00.000Z">
+<meta property="article:modified_time" content="2025-01-09T06:15:46.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Hardware Tool">
+<meta property="article:tag" content="Software">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="大眼仔~旭">
+<meta property="article:tag" content="破解&amp;激活">
+<meta property="article:tag" content="第三方修改|绿化">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Hardware/Disk%20manager/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">硬盘管理工具</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2018-04-28T14:45:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2018-04-28</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~1.57K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="DiskGenius"><a href="#DiskGenius" class="headerlink" title="DiskGenius"></a>DiskGenius</h1><p>其实建议用官方免费版的，数据恢复其实有其他软件能做到<br>这个软件的搜索已丢失分区是非常有用的(不过傲梅分区助手也有这个功能，藏得比较隐蔽，之前没找到)<br>这个软件严格意义上来讲，我不是很喜欢，分区格式的支持还不如分区助手。有其他分区工具是支持ext4的。<br>官网: <a target="_blank" rel="noopener" href="http://www.diskgenius.cn/">http://www.diskgenius.cn/</a><br>roustar31:  <a target="_blank" rel="noopener" href="https://www.repaik.com/forum.php?mod=viewthread&tid=66789">https://www.repaik.com/forum.php?mod=viewthread&amp;tid=66789</a><br>(repaik网站停止运营)</p>
+<p>破解的，4.9.2版本看起来是可用来恢复的</p>
+<h1 id="Victoria"><a href="#Victoria" class="headerlink" title="Victoria"></a>Victoria</h1><p>Victoria 是一款继MHDD无法适应新机器后得最佳硬盘坏道检测工具。<br>当然，这里必须提下物理坏道和逻辑坏道。<br>由于以上坏道相关信息来源于英文翻译，并且经常有弄不懂的也发文章，所以概念非常混乱。<br>通常来说，我的区分方式就是是否能被MHDD用eraser修复，能被修复得就是逻辑坏道，否则就是物理坏道。</p>
+<p>但是这个工具有写  [Hint] Recommend 32-bit Windows XP for a best work!<br>Warning! Windows x64 detected! PIO mode supported on Windows x86 only.</p>
+<p>官网:<a target="_blank" rel="noopener" href="http://hdd.by/victoria/">http://hdd.by/victoria/</a>(俄文，建议google翻译英文看...)<br>下载站:<a target="_blank" rel="noopener" href="https://download-software.ru/victoria-hdd-download.html">https://download-software.ru/victoria-hdd-download.html</a></p>
+<h1 id="傲梅分区助手"><a href="#傲梅分区助手" class="headerlink" title="傲梅分区助手"></a>傲梅分区助手</h1><p>不是很推荐使用，简单说就是虽然功能看起来非常多，但是很多功能的实现都有问题，样子货</p>
+<p>不过毕竟免费，除非出个开源的来吊打他</p>
+<p>英文官网: <a target="_blank" rel="noopener" href="https://www.disk-partition.com/">https://www.disk-partition.com/</a><br>中文官网: <a target="_blank" rel="noopener" href="http://disktool.cn/">http://disktool.cn/</a><br><del>英文版更新更完善，估计国外比较容易赚到钱</del>(现在都一样了)<br>大眼仔破解: <a target="_blank" rel="noopener" href="http://www.dayanzai.me/partition-assistant.html">http://www.dayanzai.me/partition-assistant.html</a></p>
+<p>之前一直在用DiskGenius进行磁盘分区调整的相关操作,但是当我因为工作需要将一个XP系统的NTFS无损转FAT32分区的时候，遇见了傲梅分区助手。随后当我发现公司电脑硬盘本身不大，却还分了3个区的时候，又是分区助手的合并分区功能帮了我。后来试图将动态磁盘转为基本磁盘，还是找到了分区助手(虽然我选择了用 DiskGenius 恢复分区表来还原之前的磁盘，不过DiskGenius中间出了各种问题，吓得我一身冷汗之后才解决倒是)</p>
+<p>一方面，这款软件没什么广告而且免费，功能也很全，界面也很干净。老实说，我倒不是特别喜欢界面漂亮的软件，因为很少有软件界面漂亮还在功能上符合我胃口。虽然像什么迁移系统到固态硬盘、启动光盘制作之类的功能让我觉得这款软件还是有点中国软件的风格以外，但还是得说分区助手做的不错。<br>相对 DiskGenius 来说，傲梅分区助手不具备恢复文件的功能(不过相对来讲DiskGenius这个功能也是要钱的)。</p>
+<p>不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，<del>还有不支持格式化成ext4</del>(英文版支持)。<br>小问题有点多，对于一个操作硬盘的软件来说这点不大好</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>有个拉屎的问题<br><a target="_blank" rel="noopener" href="https://www.reddit.com/r/24hoursupport/comments/2ceq6o/what_is_amtagbin/">https://www.reddit.com/r/24hoursupport/comments/2ceq6o/what_is_amtagbin/</a> -<time datetime="2024-12-24">2024-12-24</time></p>
+<p>还在用2005的运行库  -<time datetime="2025-01-09">2025-01-09</time></p>
+<hr>
+<p><time>2018-04-28 22:45</time>分区助手增加国外破解版，增加DiskGenius破解版</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Hardware-Tool/" rel="tag">Hardware Tool</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E5%A4%A7%E7%9C%BC%E4%BB%94-%E6%97%AD/" rel="tag">大眼仔~旭</a>, <a class="tag-none-link" href="/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/" rel="tag">破解&激活</a>, <a class="tag-none-link" href="/tags/%E7%AC%AC%E4%B8%89%E6%96%B9%E4%BF%AE%E6%94%B9-%E7%BB%BF%E5%8C%96/" rel="tag">第三方修改|绿化</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2025-01-09T06:15:46.000Z" itemprop="dateModified">最后编辑：2025-01-09</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" [开源]两款录屏软件 LICEcap 以及 OBS Studio (Open Broadcaster Software)" href="/Software/录屏/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [问题处理]Linux下Apache2无法启动的原因排查" href="/Issue/Apache/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Software/Hardware/Disk%20manager/" data-full-path="http://ted423.github.io/Software/Hardware/Disk%20manager/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                443
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                19
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                153
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">57</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">17</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.69em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.66em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.74em;">Browser</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2026 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>
