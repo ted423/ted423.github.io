@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>[转载]取得 CD-FLAC+100%LOG+CUE 教学（EAC配置教学） | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/CD_log100/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Document, 转载" />
+  
+  <meta name="description" content="原文https:&#x2F;&#x2F;home.gamer.com.tw&#x2F;creationDetail.php?sn&#x3D;4710402在能看原文的情况下尽量去看原文我没抓过CD，所以并没测试过 原作者:宁空的淡薄·望月幽兰 翻译自:Sharky 原作者申请授权截图 软件Windows &amp; Linux - EAC - Exact Audio CopyMAC - XLD - X Lossless Decoder">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[转载]取得 CD-FLAC+100%LOG+CUE 教学（EAC配置教学）">
+<meta property="og:url" content="http://ted423.github.io/Document/CD_log100/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="原文https:&#x2F;&#x2F;home.gamer.com.tw&#x2F;creationDetail.php?sn&#x3D;4710402在能看原文的情况下尽量去看原文我没抓过CD，所以并没测试过 原作者:宁空的淡薄·望月幽兰 翻译自:Sharky 原作者申请授权截图 软件Windows &amp; Linux - EAC - Exact Audio CopyMAC - XLD - X Lossless Decoder">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ted423.github.io/img/CD01.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD02.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD03.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD04.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD05.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD06.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD07.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD08.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD09.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD10.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD11.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD12.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD13.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD14.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD15.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD16.jpg">
+<meta property="og:image" content="http://ted423.github.io/img/CD17.jpg">
+<meta property="article:published_time" content="2022-04-29T06:16:00.000Z">
+<meta property="article:modified_time" content="2022-04-29T08:43:50.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="转载">
+<meta property="article:tag" content="Document">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ted423.github.io/img/CD01.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/CD_log100/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[转载]取得 CD-FLAC+100%LOG+CUE 教学（EAC配置教学）</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2022-04-29T06:16:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-04-29</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~5.38K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="原文"><a href="#原文" class="headerlink" title="原文"></a>原文</h1><p><a target="_blank" rel="noopener" href="https://home.gamer.com.tw/creationDetail.php?sn=4710402">https://home.gamer.com.tw/creationDetail.php?sn=4710402</a><br>在能看原文的情况下尽量去看原文<br>我没抓过CD，所以并没测试过</p>
+<p>原作者:宁空的淡薄·望月幽兰 翻译自:Sharky</p>
+<p>原作者申请授权截图<br><img src="/img/CD01.jpg" alt="CD"></p>
+<h1 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h1><p>Windows &amp; Linux - EAC - Exact Audio Copy<br>MAC - XLD - X Lossless Decoder (<a target="_blank" rel="noopener" href="https://tmkk.undo.jp/xld/index_e.html">https://tmkk.undo.jp/xld/index_e.html</a>)<br>Linux - Whipper<br>(注意：如果可以，请将WINE与EAC一起使用，Whippers翻录的档案在音轨通常不被接受。 )</p>
+<p>检查你的.log档分数 - 翻录CD后，使用它来查看它是否为100%。<br>(<a target="_blank" rel="noopener" href="https://github.com/ligh7s/hey-bro-check-log">https://github.com/ligh7s/hey-bro-check-log</a>)</p>
+<h2 id="EAC-配置指南"><a href="#EAC-配置指南" class="headerlink" title="EAC - 配置指南"></a>EAC - 配置指南</h2><ul>
+<li>这是一次性的设置，之后你不用再重新配置EAC。</li>
+<li>绿色框框 表示必需的设置</li>
+<li>橙色框框 是必需的，但取决于你的装置</li>
+<li>空白&#x2F;无框框 是完全可选的，不会影响翻录出来的质量</li>
+</ul>
+<p>下载并安装EAC</p>
+<p>DL：<a target="_blank" rel="noopener" href="http://www.exactaudiocopy.de/en/index.php/resources/download/">http://www.exactaudiocopy.de/en/index.php/resources/download/</a></p>
+<p>打开EAC后，会出现下面的画面。<br>选择“Freedb， CDRDAO， FLAC， AccurateRip CTDB Plugin and CueTools Database Plugin”<br>这些是让翻录文件最完美所必需的选项，也使编辑TAG和翻录更容易。</p>
+<p>EAC选项<br><img src="/img/CD02.jpg" alt="CD"></p>
+<p>从EAC Options开始。<br>（任何未显示的标记都是完全可选的，或者与翻录无关）</p>
+<p>“Tools”中的前两个设置取决于你的光驱。<br>那些以绿色突出显示的是必需的。<br>如果你的光驱能够读取UPC &#x2F; ISRC代码和CD文本，则可以启用前两个选项。<br>如果没有，请取消勾选它们。<br>这只能通过反复试验才能确定，如果你很懒，可以不勾选它们。</p>
+<p><img src="/img/CD03.jpg" alt="CD"><br>所有其他图片设置都是理想的。<br>请注意，<br>“m3u”文件在技术上是可选的，但某些用户会使用这些文件来管理他们的数据库，<br>因此，如果你打算共享你的记录，请保持启用状态。</p>
+<p>此外，<br>启用“compressors”功能<br>由于有时会导致EAC出现故障，因而关闭了启动在后台排队的compressors的设置，<br>但是，如果你的设备在启用此功能后可以正常工作，则可以这样做。<br>如果你不知道，请取消勾选它。</p>
+<p>接下来，<br>在“extraction” 页面，确保你的设置与绿色完全相同。<br>其余的是可选的。<br>如果需要，你也可以选择 “lock the drive tray during extraction”，但这不是必需的。</p>
+<p><img src="/img/CD04.jpg" alt="CD"></p>
+<p>在“General”页面，这些设置大多数都是可选的。<br>建议开启“use alternative CD play routines &amp; disable CD autostart”。<br><img src="/img/CD05.jpg" alt="CD"></p>
+<p>“show status dialog after extraction”将在提取后显示log文件并选择保存它。<br>但是，遵循本指南，EAC会自动保存log文件。<br>除非你知道自己在做什么，否则不要打开它，这对于某些用户来说是个麻烦。</p>
+<p>确保在“normalize”页面中关闭了“normalize”<br>如果点开，则该翻录将不再是100%精确完美的。</p>
+<p>如图所示，这是命名曲目的正确方法。<br>命名方案：<code>%tracknr2%-%title%</code><br>勾选“Use Various Artists Naming Scheme”<br>并使用：<code>%tracknr2%-%artist%-%title%</code><br>如果你比较喜欢句点，则可以使用以下内容：<code>%tracknr2%。 ％artist％-％title％</code><br>不要用下划线代替空格。 这看起来真的很荒谬。<br><img src="/img/CD06.jpg" alt="CD"></p>
+<p>注意 ：<br>不在EAC文档名选项中使用目录结构，除非你想稍后再编辑. Cue。<br>将目录添加到命名方案时，会将目录路径放入文件中。<br>当你以后可能要移动文件时，想要使用. Cue在EAC中刻录文件时，将无法这样做。<br>如果你确实坚持在此使用目录结构，<br>则需要返回，在记事本中编辑. Cue，然后从每一行中删除文件夹名称。</p>
+<p>如果坚持要这样做，该方案可能看起来像这样：<br><code>％artist％-％albumtitle％（％year％）[FLAC] \％tracknr2％-％title％</code></p>
+<p>如果你希望使用其他方案，请遵循“Filename”页面上列出的项目。</p>
+<p>光盘机选项</p>
+<p>首先点击“Detect Read Features…”。<br>这实际上需要几分钟。<br>完成后，如果你的光驱可以使用“Accurate Stream”，请启用它<br>（大多数现代光驱都具有“Accurate Stream”）。<br>如果不能，那就不要。</p>
+<p><img src="/img/CD07.jpg" alt="CD"></p>
+<p>无论你的光驱是否可以缓存音频或使用你所使用的C2头<br>如图所示，启用“caches audio data”并禁用“retrieving C2 error information”。<br>这样做不会损害翻录，并且可以确保在音轨中获得100%的.log分数。</p>
+<p>点击“Autodetect read command now”。<br>完成后，可以将其余部分保留为未选中状态。<br>如果遇到了问题，可以通过检查其中的一些问题来解决它<br><img src="/img/CD08.jpg" alt="CD"></p>
+<p>如果成功启用了AccurateRip，则在“Offset&#x2F;Speed”中，选项的上半部将显示为灰色<br>如果你的选项未显示为灰色，则说明没有成功，请向上滚动至该部分并启用它<br>或是前往下面的网站，查询光驱在“Usw read sample offset correction”所需要填入数值<br><a target="_blank" rel="noopener" href="http://www.accuraterip.com/driveoffsets.htm">http://www.accuraterip.com/driveoffsets.htm</a></p>
+<p><img src="/img/CD09.jpg" alt="CD"></p>
+<p>如图所示，应启用后半部分。<br>“Over-read into Lead-in and Lead-Out”是一个可选设置，具体取决于你的光驱。</p>
+<p>几乎每个光驱都应使用图片示范的设置。<br>如果停滞不前，检测差距或发现明显错误的差距，可以尝试检测方法B或C，<br>如果仍然失败，请将检测准确度切换为“Accurate”，而不是“Secure”，然后重试。</p>
+<p><img src="/img/CD10.jpg" alt="CD"></p>
+<p>Metadata选项</p>
+<p>这里是选择元数据提供者的地方。<br>建议使用CueTools Database，因为它在元数据查询中使用了多个数据库。<br><img src="/img/CD11.jpg" alt="CD"></p>
+<p>如果决定改用“ freedb”，则设置应类似于下图所示。<br>确保将电子信箱放在顶部，信箱不一定要真的。<br>点击“get active freedb server list”。<br>然后选中最后一个选项。<br><img src="/img/CD12.jpg" alt="CD"></p>
+<p>压缩选项</p>
+<p>完全按照所示设置此页面。<br>你必须浏览到flac.exe所在的路径，<br>如果使用EAC进行安装，则位于C：\ Program Files（x86）\ Exact Audio Copy \ FLAC \ flac.exe中。<br>如果单独安装，则你安装在哪里就到哪里。<br>bit rate and high&#x2F;low quality对翻录没有影响。</p>
+<p><img src="/img/CD13.jpg" alt="CD"></p>
+<p>下面的字符串复制并粘贴到“additional command-line parameters”中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-8 -V -T &quot;ARTIST=%artist%&quot; -T &quot;TITLE=%title%&quot; -T &quot;ALBUM=%albumtitle%&quot; -T &quot;DATE=%year%&quot; -T &quot;TRACKNUMBER=%tracknr%&quot; -T &quot;GENRE=%genre%&quot; -T &quot;PERFORMER=%albuminterpret%&quot; -T &quot;COMPOSER=% composer%&quot; %haslyrics%--tag-from-file=LYRICS=&quot;%lyricsfile%&quot;%haslyrics% -T &quot;ALBUMARTIST=%albumartist%&quot; -T &quot;DISCNUMBER=%cdnumber%&quot; -T &quot;TOTALDISCS=%totalcds%&quot; -T &quot;TOTALTRACKS=% numtracks%&quot; -T &quot;COMMENT=%comment%&quot; %source% -o %dest%</span><br></pre></td></tr></table></figure>
+
+<p>接下来，ID3 Tag settings。<br>除最后一个选项外，将整个选项卡留空。<br>根据最初在“filename”页面中选择的内容，命名方案将有所不同。</p>
+<p><img src="/img/CD14.jpg" alt="CD"></p>
+<p>恭喜，已经完成设置EAC！</p>
+<p>现在可以通过点击EAC右下角的“new”来保存所有设置的“profile”。<br>你的当前设置将保存，以备将来使用。<br>无需重新设置。</p>
+<h2 id="EAC-翻录指南"><a href="#EAC-翻录指南" class="headerlink" title="EAC - 翻录指南"></a>EAC - 翻录指南</h2><p>第1步-标签</p>
+<p>不幸的是，很常出现专辑没有出现在任何数据库中的情况，<br>因此这些以绿色框框起来的字段通常不会自动填写。<br>必须在此处手动输入标签。<br>信息请查阅购买的CD的小册子&#x2F;封底或官方网站&#x2F; xfd。</p>
+<p><img src="/img/CD15.jpg" alt="CD"><br>如果需要，还可以填写其他任何未突出显示的标签。<br>单击“Lyrics”按钮将允许添加歌词。<br>单击“new”按钮将保存设置。<br>这样就不需要每次翻录CD时都这样做。<br>如果你不使用标签，不必太担心。</p>
+<p>要在“CD cover”框中获取专辑封面，请将其拖到EAC中。<br>有时这行不通，很多人对此觉得麻烦，<br>因此我建议将其保留为空白。<br>之后添加封面图像在翻录后的文件夹<br>再命名为“ cover.jpg”</p>
+<p>第2步- 间隙检测和. Cue</p>
+<p>确保已经勾选“Append Gaps to Previous Track （default）”。<br>接下来，按显示的顺序点击选项。 这些是获得100%日志所必需的。</p>
+<p><img src="/img/CD16.jpg" alt="CD"></p>
+<p>#1 - 点击“Detect Gaps”，<br>如果第一首曲目有红色显示，代表有音轨被隐藏。<br>这就需要阅读以下内容：<br><a target="_blank" rel="noopener" href="https://web.archive.org/web/20121112011036/http://www.blowfish.be/eac/Rip/rip11-hidden.html">https://web.archive.org/web/20121112011036/http://www.blowfish.be/eac/Rip/rip11-hidden.html</a></p>
+<p>#2 - 点击“Create CueSheet”，<br>然后选择“Multiple WAV files with Gaps..”<br>创建要翻录成功后的存档文件夹。</p>
+<p>请确保你在上面的存档文件夹路径不包含您的姓名或是任何可识别信息<br>如果感到疑惑，<br>请直接使用E：\ Rips就可以了。</p>
+<p>我通常将文件夹标记为<br><code>[Event] Circle (Artist) - Album &#123;cat#&#125; [Format]</code><br>或使用<code> Artist - Album &#123;Label - cat#&#125; （Year） [Format]</code></p>
+<p>总之就是创建文件夹，<br>然后将.cue文件保存到其中。</p>
+<p>第3步 - 翻录</p>
+<p>确保已选择所有要翻录的曲目。<br>然后，转到“Actions”&gt;“ Test &amp; Copy Selected Tracks”<br>然后，选择“Compressed”，确保在翻录CD时执行此操作，否则.log将不是100%。</p>
+<p><img src="/img/CD17.jpg" alt="CD"></p>
+<p>就这样！<br>现在只需要等待翻录完成即可。</p>
+<p>[5] 标签和优化</p>
+<p>软件和工具</p>
+<p>Itunes Scrubber：在共享iTunes文件之前，从iTunes文件中删除所有可识别的信息。<br>MP3Tag：批量处理标签，自动标记&#x2F;重命名文件，从FLAC文件中删除ID3标签<br>Unicue：允许将损坏的.cue重新编码为UTF-8（用于修复中日文.cue）。<br>CueTools：创建，编辑，修复，重新编码提示文件以及拆分文件。<br>Foobar2000 + 免费编码器包：下采样，压缩，转换，自动重命名，去嵌入专辑封面并优化文件。</p>
+<p>标签和优化快速指南</p>
+<p>●必需的标签：曲目编号，歌曲标题，艺术家，专辑 | <a target="_blank" rel="noopener" href="https://i.imgur.com/0V2Unbw.png">范例</a><br>●有时需要的标签：年（指定不同版本）和光盘编号（如果有多张光盘） | <a target="_blank" rel="noopener" href="https://i.imgur.com/NodXKwx.png">范例</a><br>●可选标签：专辑艺术家，类型，歌词，作曲家，制作人 | <a target="_blank" rel="noopener" href="https://i.imgur.com/HFoDcz9.png">范例</a><br>●文件名：曲目编号艺术家-歌曲名称或光盘编号-曲目编号艺术家-歌曲名称 | <a target="_blank" rel="noopener" href="https://i.imgur.com/NodXKwx.png">范例</a><br>●封面：请勿嵌入艺术作品，在相册文件夹中添加一个“ cover.png &#x2F; jpg”。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/qRr9QfA.png">范例</a><br>●BK：位于名为“扫描”的嵌套文件夹内。 文件名应反映每次扫描的含义。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/Qlr2xOx.png">范例</a><br>●格式：无损&#x3D; FLAC和有损&#x3D; MP3 V0 &#x2F; 320或M4A AAC | <a target="_blank" rel="noopener" href="https://i.imgur.com/xrlx7LY.png">范例</a><br>●压缩：始终将未压缩的无损格式转换为FLAC并将其压缩为8级。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/66lWReG.png">范例</a><br>●转换：转换无损（FLAC）-&gt;有损（MP3 V0 &#x2F; 320）。 不要将任何有损转换为有损 | <a target="_blank" rel="noopener" href="https://i.imgur.com/v2NPMDa.png">范例</a><br>●Track Padding：你的文件应具有1MB以下的Track Padding。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/PWY8NKn.gif">范例</a><br>●. Cue：采用UTF-8编码，应将完整的曲目列表导入任何音乐播放器 | <a target="_blank" rel="noopener" href="https://i.imgur.com/ZK8lvWK.gif">范例</a><br>●.log：永远不要编辑日志文件的内容。 校验和以及CRC码应与档案匹配。 | <a target="_blank" rel="noopener" href="https://i.imgur.com/bnQf5Ks.gif">范例</a></p>
+<p>原文由加拿大人Sharky撰写<br>望月幽兰 整理</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2022-04-29T08:43:50.000Z" itemprop="dateModified">最后编辑：2022-04-29</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" Linux中find批量删除空文件夹" href="/Code/Terminal/Linux批量删除空文件夹/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" What is Qualcomm Voice Assist 是什么" href="/Document/Qualcomm Voice Assist/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/CD_log100/" data-full-path="http://ted423.github.io/Document/CD_log100/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                391
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                14
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                148
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">48</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.66em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.6em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Browser/" style="font-size: 0.7em;">Browser</a> <a href="/tags/CMD/" style="font-size: 0.62em;">CMD</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>[转载][Javascript]图片滑动切换效果 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Javascript, WWW, 转载, 过时(Outdated)" />
+  
+  <meta name="description" content="本来想在本页加个展示，结果似乎一堆问题（原来用过），这是很早以前折腾得了，现在看感觉jquery就很好 -2021-08-21 来源页面:http:&#x2F;&#x2F;www.blueidea.com&#x2F;tech&#x2F;web&#x2F;2009&#x2F;7031.asp 个人对其中的脚本进行了提取，只保留了横向切换效果（但有冗余代码）(注销了代码147行) 简要说明 this.Change是图片切换的宽度，但由于原生的计算有些问题，th">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[转载][Javascript]图片滑动切换效果">
+<meta property="og:url" content="http://ted423.github.io/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="本来想在本页加个展示，结果似乎一堆问题（原来用过），这是很早以前折腾得了，现在看感觉jquery就很好 -2021-08-21 来源页面:http:&#x2F;&#x2F;www.blueidea.com&#x2F;tech&#x2F;web&#x2F;2009&#x2F;7031.asp 个人对其中的脚本进行了提取，只保留了横向切换效果（但有冗余代码）(注销了代码147行) 简要说明 this.Change是图片切换的宽度，但由于原生的计算有些问题，th">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2013-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2013-12-31T16:00:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="过时(Outdated)">
+<meta property="article:tag" content="转载">
+<meta property="article:tag" content="WWW">
+<meta property="article:tag" content="Javascript">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[转载][Javascript]图片滑动切换效果</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2013-12-31T16:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2014-01-01</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~8.94K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>本来想在本页加个展示，结果似乎一堆问题（原来用过），这是很早以前折腾得了，现在看感觉jquery就很好 -2021-08-21</p>
+<p>来源页面:<a target="_blank" rel="noopener" href="http://www.blueidea.com/tech/web/2009/7031.asp">http://www.blueidea.com/tech/web/2009/7031.asp</a></p>
+<p>个人对其中的脚本进行了提取，只保留了横向切换效果（但有冗余代码）(注销了代码147行)</p>
+<p>简要说明</p>
+<p>this.Change是图片切换的宽度，但由于原生的计算有些问题，this.Change&#x3D;224是我手动加上去的。（84行）<br>因为我个人在图片上给的样式宽度是224</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">源码：</span><br><span class="line"></span><br><span class="line">```javascript:n</span><br><span class="line">var $ = function (id) &#123;</span><br><span class="line">    return &quot;string&quot; == typeof id ? document.getElementById(id) : id;</span><br><span class="line">&#125;;   </span><br><span class="line">console.log(&quot;run&quot;);</span><br><span class="line">var Extend = function(destination, source) &#123;</span><br><span class="line">    for (var property in source) &#123;</span><br><span class="line">        destination[property] = source[property];   </span><br><span class="line">    &#125;   </span><br><span class="line">    return destination;</span><br><span class="line">&#125;   </span><br><span class="line">  </span><br><span class="line">var CurrentStyle = function(element)&#123;</span><br><span class="line">    return element.currentStyle || document.defaultView.getComputedStyle(element, null);</span><br><span class="line">&#125;   </span><br><span class="line">  </span><br><span class="line">var Bind = function(object, fun) &#123;</span><br><span class="line">    var args = Array.prototype.slice.call(arguments).slice(2);</span><br><span class="line">    return function() &#123;</span><br><span class="line">        return fun.apply(object, args.concat(Array.prototype.slice.call(arguments)));</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;   </span><br><span class="line">  </span><br><span class="line">var Tween = &#123;</span><br><span class="line">    Quart: &#123;   </span><br><span class="line">        easeOut: function(t,b,c,d)&#123;</span><br><span class="line">            return -c * ((t=t/d-1)*t*t*t - 1) + b;</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;,   </span><br><span class="line">    Back: &#123;   </span><br><span class="line">        easeOut: function(t,b,c,d,s)&#123;</span><br><span class="line">            if (s == undefined) s = 1.70158;</span><br><span class="line">            return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;,   </span><br><span class="line">    Bounce: &#123;   </span><br><span class="line">        easeOut: function(t,b,c,d)&#123;</span><br><span class="line">            if ((t/=d) &lt; (1/2.75)) &#123;</span><br><span class="line">                return c*(7.5625*t*t) + b;</span><br><span class="line">            &#125; else if (t &lt; (2/2.75)) &#123;</span><br><span class="line">                return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;</span><br><span class="line">            &#125; else if (t &lt; (2.5/2.75)) &#123;</span><br><span class="line">                return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;</span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;   </span><br><span class="line">&#125;   </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">//容器对象,滑动对象,切换数量</span><br><span class="line">var SlideTrans = function(container, slider, count, options) &#123;</span><br><span class="line">    this._slider = $(slider);</span><br><span class="line">    this._container = $(container);//容器对象</span><br><span class="line">    this._timer = null;//定时器</span><br><span class="line">    this._count = Math.abs(count);//切换数量</span><br><span class="line">    this._target = 0;//目标值</span><br><span class="line">    this._t = this._b = this._c = 0;//tween参数</span><br><span class="line">       </span><br><span class="line">    this.Index = 0;//当前索引</span><br><span class="line">       </span><br><span class="line">    this.SetOptions(options);</span><br><span class="line">       </span><br><span class="line">    this.Auto = !!this.options.Auto;</span><br><span class="line">    this.Duration = Math.abs(this.options.Duration);</span><br><span class="line">    this.Time = Math.abs(this.options.Time);</span><br><span class="line">    this.Pause = Math.abs(this.options.Pause);</span><br><span class="line">    this.Tween = this.options.Tween;</span><br><span class="line">    this.onStart = this.options.onStart;</span><br><span class="line">    this.onFinish = this.options.onFinish;</span><br><span class="line">       </span><br><span class="line">    var bVertical = !!this.options.Vertical;</span><br><span class="line">    this._css = bVertical ? &quot;top&quot; : &quot;left&quot;;//方向</span><br><span class="line">       </span><br><span class="line">    //样式设置</span><br><span class="line">    var p = CurrentStyle(this._container).position;</span><br><span class="line">    p == &quot;relative&quot; || p == &quot;absolute&quot; || (this._container.style.position = &quot;relative&quot;);</span><br><span class="line">    this._container.style.overflow = &quot;hidden&quot;;</span><br><span class="line">    this._slider.style.position = &quot;absolute&quot;;</span><br><span class="line">       </span><br><span class="line">    this.Change = this.options.Change ? this.options.Change :</span><br><span class="line">        this._slider[bVertical ? &quot;offsetHeight&quot; : &quot;offsetWidth&quot;] / this._count;</span><br><span class="line">        this.Change=224;</span><br><span class="line">&#125;;   </span><br><span class="line">SlideTrans.prototype = &#123;   </span><br><span class="line">  //设置默认属性</span><br><span class="line">  SetOptions: function(options) &#123;</span><br><span class="line">    this.options = &#123;//默认值</span><br><span class="line">        Vertical:   true,//是否垂直方向（方向不能改）</span><br><span class="line">        Auto:       true,//是否自动</span><br><span class="line">        Change:     0,//改变量</span><br><span class="line">        Duration:   50,//滑动持续时间</span><br><span class="line">        Time:       10,//滑动延时</span><br><span class="line">        Pause:      2000,//停顿时间(Auto为true时有效)</span><br><span class="line">        onStart:    function()&#123;&#125;,//开始转换时执行</span><br><span class="line">        onFinish:   function()&#123;&#125;,//完成转换时执行</span><br><span class="line">        Tween:      Tween.Quart.easeOut//tween算子</span><br><span class="line">    &#125;;   </span><br><span class="line">    Extend(this.options, options || &#123;&#125;);</span><br><span class="line">  &#125;,   </span><br><span class="line">  //开始切换</span><br><span class="line">  Run: function(index) &#123;</span><br><span class="line">    //修正index</span><br><span class="line">    index == undefined &amp;&amp; (index = this.Index);</span><br><span class="line">    index &lt; 0 &amp;&amp; (index = this._count - 1) || index &gt;= this._count &amp;&amp; (index = 0);</span><br><span class="line">    //设置参数</span><br><span class="line">    this._target = -Math.abs(this.Change) * (this.Index = index);</span><br><span class="line">    this._t = 0;</span><br><span class="line">    this._b = parseInt(CurrentStyle(this._slider)[this.options.Vertical ? &quot;top&quot; : &quot;left&quot;]);</span><br><span class="line">    this._c = this._target - this._b;</span><br><span class="line">       </span><br><span class="line">    this.onStart();</span><br><span class="line">    this.Move();</span><br><span class="line">  &#125;,   </span><br><span class="line">  //移动</span><br><span class="line">  Move: function() &#123;</span><br><span class="line">    clearTimeout(this._timer);</span><br><span class="line">    //未到达目标继续移动否则进行下一次滑动</span><br><span class="line">    if (this._c &amp;&amp; this._t &lt; this.Duration) &#123;</span><br><span class="line">        this.MoveTo(Math.round(this.Tween(this._t++, this._b, this._c, this.Duration)));</span><br><span class="line">        this._timer = setTimeout(Bind(this, this.Move), this.Time);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        this.MoveTo(this._target);</span><br><span class="line">        this.Auto &amp;&amp; (this._timer = setTimeout(Bind(this, this.Next), this.Pause));</span><br><span class="line">    &#125;   </span><br><span class="line">  &#125;,   </span><br><span class="line">  //移动到</span><br><span class="line">  MoveTo: function(i) &#123;</span><br><span class="line">    this._slider.style[this._css] = i + &quot;px&quot;;</span><br><span class="line">  &#125;,   </span><br><span class="line">  //下一个</span><br><span class="line">  Next: function() &#123;</span><br><span class="line">    this.Run(++this.Index);</span><br><span class="line">  &#125;,   </span><br><span class="line">  //上一个</span><br><span class="line">  Previous: function() &#123;</span><br><span class="line">    this.Run(--this.Index);</span><br><span class="line">  &#125;,   </span><br><span class="line">  //停止</span><br><span class="line">  Stop: function() &#123;</span><br><span class="line">    clearTimeout(this._timer); this.MoveTo(this._target);</span><br><span class="line">  &#125;   </span><br><span class="line">&#125;;   </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">//new SlideTrans(&quot;idContainer&quot;, &quot;idSlider&quot;, 3).Run();</span><br><span class="line">  </span><br><span class="line">///////////////////////////////////////////////////////////</span><br><span class="line">  </span><br><span class="line">var forEach = function(array, callback, thisObject)&#123;</span><br><span class="line">    if(array.forEach)&#123;</span><br><span class="line">        array.forEach(callback, thisObject);   </span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        for (var i = 0, len = array.length; i &lt; len; i++) &#123; callback.call(thisObject, array[i], i, array); &#125;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;   </span><br><span class="line">  </span><br><span class="line">var st = new SlideTrans(&quot;idContainer2&quot;, &quot;idSlider2&quot;, 7, &#123; Vertical: false &#125;);</span><br><span class="line">  </span><br><span class="line">var nums = [];</span><br><span class="line">//插入数字</span><br><span class="line">for(var i = 0, n = st._count - 1; i &lt;= n;)&#123;</span><br><span class="line">    (nums[i] = $(&quot;idNum&quot;).appendChild(document.createElement(&quot;li&quot;))).innerHTML = ++i;</span><br><span class="line">&#125;   </span><br><span class="line">  </span><br><span class="line">forEach(nums, function(o, i)&#123;</span><br><span class="line">    o.onmouseover = function()&#123; o.className = &quot;on&quot;; st.Auto = false; st.Run(i); &#125;</span><br><span class="line">    o.onmouseout = function()&#123; o.className = &quot;&quot;; st.Auto = true; st.Run(); &#125;</span><br><span class="line">&#125;)   </span><br><span class="line">  </span><br><span class="line">//设置按钮样式</span><br><span class="line">st.onStart = function()&#123;</span><br><span class="line">    forEach(nums, function(o, i)&#123; o.className = st.Index == i ? &quot;on&quot; : &quot;&quot;; &#125;)</span><br><span class="line">&#125;   </span><br><span class="line">  </span><br><span class="line">/*$(&quot;idAuto&quot;).onclick = function()&#123;  </span><br><span class="line">    if(st.Auto)&#123;  </span><br><span class="line">        st.Auto = false; st.Stop(); this.value = &quot;自动&quot;;  </span><br><span class="line">    &#125;else&#123;  </span><br><span class="line">        st.Auto = true; st.Run(); this.value = &quot;停止&quot;;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;  </span><br><span class="line">$(&quot;idNext&quot;).onclick = function()&#123; st.Next(); &#125;  </span><br><span class="line">$(&quot;idPre&quot;).onclick = function()&#123; st.Previous(); &#125;  </span><br><span class="line"> </span><br><span class="line">$(&quot;idTween&quot;).onchange = function()&#123;  </span><br><span class="line">    switch (parseInt(this.value))&#123;  </span><br><span class="line">        case 2 :  </span><br><span class="line">            st.Tween = Tween.Bounce.easeOut; break;  </span><br><span class="line">        case 1 :  </span><br><span class="line">            st.Tween = Tween.Back.easeOut; break;  </span><br><span class="line">        default :  </span><br><span class="line">            st.Tween = Tween.Quart.easeOut;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;*/</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">st.Run();   </span><br><span class="line">  </span><br><span class="line">  var touchEvent =&#123;</span><br><span class="line">    startY : 0,   </span><br><span class="line">    endY: 0,   </span><br><span class="line">    ismove:0    </span><br><span class="line">    &#125;   </span><br><span class="line">  </span><br><span class="line">  document.querySelector(&#x27;#idContainer2&#x27;).addEventListener(&quot;touchstart&quot;,function()&#123;</span><br><span class="line">    touchEvent.startX=event.touches[0].pageX;   </span><br><span class="line">    touchEvent.endX=touchEvent.startX;   </span><br><span class="line">    touchEvent.ismove=0;   </span><br><span class="line">    &#125;,false);</span><br><span class="line">  </span><br><span class="line">  document.querySelector(&#x27;#idContainer2&#x27;).addEventListener(&quot;touchmove&quot;,function()&#123;</span><br><span class="line">    touchEvent.ismove=1;   </span><br><span class="line">    touchEvent.endX=event.touches[0].pageX;   </span><br><span class="line">  &#125;,false);</span><br><span class="line">  </span><br><span class="line">  document.querySelector(&#x27;#idContainer2&#x27;).addEventListener(&quot;touchend&quot;,function()&#123;</span><br><span class="line">    document.querySelector(&#x27;.show&#x27;).style.opacity=1;</span><br><span class="line">  </span><br><span class="line">    if(touchEvent.ismove===1)&#123;</span><br><span class="line">      if(touchEvent.endX&gt;touchEvent.startX)st.Run(document.querySelector(&#x27;.on&#x27;).innerHTML);</span><br><span class="line">         </span><br><span class="line">      else if(touchEvent.endX&lt;touchEvent.startX)&#123;</span><br><span class="line">      &#125;   </span><br><span class="line">    &#125;   </span><br><span class="line">  &#125;,false);</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  function hide(id)&#123;</span><br><span class="line">    temp1=id.substring(0,id.length-1);   </span><br><span class="line">    temp2=id.substring(id.length-1,id.length);   </span><br><span class="line">    if(temp2===&quot;b&quot;)&#123;</span><br><span class="line">        document.getElementById(temp1).style.display=&#x27;none&#x27;;</span><br><span class="line">    &#125;   </span><br><span class="line">    else&#123;</span><br><span class="line">        for(i=1;i&lt;7;i++)&#123;</span><br><span class="line">            document.getElementById(&#x27;hide&#x27;+i).style.display=&#x27;none&#x27;;</span><br><span class="line">        &#125;   </span><br><span class="line">  </span><br><span class="line">        document.getElementById(temp1).style.display=&#x27;block&#x27;;</span><br><span class="line">    &#125;   </span><br><span class="line">&#125;  </span><br></pre></td></tr></table></figure>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Javascript/" rel="tag">Javascript</a>, <a class="tag-none-link" href="/tags/WWW/" rel="tag">WWW</a>, <a class="tag-none-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a>, <a class="tag-none-link" href="/tags/%E8%BF%87%E6%97%B6-Outdated/" rel="tag">过时(Outdated)</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2013-12-31T16:00:00.000Z" itemprop="dateModified">最后编辑：2014-01-01</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" [PSP][Game]战场的女武神2 资源+资料合集" href="/Game/战场的女武神/战场的女武神2/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [JP] [C] The Money of Soul and Possibility Cont(シー)" href="/Anime/JP/C/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/" data-full-path="http://ted423.github.io/Code/WWW/JavaScript%20%E5%9B%BE%E7%89%87%E6%BB%91%E5%8A%A8%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                391
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                14
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                148
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">48</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.66em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.6em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Browser/" style="font-size: 0.7em;">Browser</a> <a href="/tags/CMD/" style="font-size: 0.62em;">CMD</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+
+
+
+    </body>
+</html>

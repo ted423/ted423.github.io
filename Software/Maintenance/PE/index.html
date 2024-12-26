@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>【PE相关】两个PE以及FbinstTool | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Software/Maintenance/PE/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Maintenance, Software, System, Windows" />
+  
+  <meta name="description" content="FbinstTool-PE相关工具由于种种复杂原因，不同BIOS对U盘CHS&#x2F;LBA参数处理结果不尽相同，导致同一个U盘，在一台机器上BOOT成功，在另一台机器上就可能BOOT失败。 wuwuzz注:早期硬盘也有类似问题，但最后通过多个工业标准，已经解决。而USB是万能接口，且有关标准未得到厂商统一遵守，问题更复杂 开源社区的bean提出了巧妙构思，开发出fbinst，基本解决了BIOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【PE相关】两个PE以及FbinstTool">
+<meta property="og:url" content="http://ted423.github.io/Software/Maintenance/PE/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="FbinstTool-PE相关工具由于种种复杂原因，不同BIOS对U盘CHS&#x2F;LBA参数处理结果不尽相同，导致同一个U盘，在一台机器上BOOT成功，在另一台机器上就可能BOOT失败。 wuwuzz注:早期硬盘也有类似问题，但最后通过多个工业标准，已经解决。而USB是万能接口，且有关标准未得到厂商统一遵守，问题更复杂 开源社区的bean提出了巧妙构思，开发出fbinst，基本解决了BIOS">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-09-10T11:35:00.000Z">
+<meta property="article:modified_time" content="2015-09-10T11:35:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="Software">
+<meta property="article:tag" content="System">
+<meta property="article:tag" content="Maintenance">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Software/Maintenance/PE/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">【PE相关】两个PE以及FbinstTool</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2015-09-10T11:35:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2015-09-10</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            1171
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="FbinstTool-PE相关工具"><a href="#FbinstTool-PE相关工具" class="headerlink" title="FbinstTool-PE相关工具"></a>FbinstTool-PE相关工具</h1><p>由于种种复杂原因，不同BIOS对U盘CHS&#x2F;LBA参数处理结果不尽相同，导致同一个U盘，在一台机器上BOOT成功，在另一台机器上就可能BOOT失败。</p>
+<p>wuwuzz注:早期硬盘也有类似问题，但最后通过多个工业标准，已经解决。而USB是万能接口，且有关标准未得到厂商统一遵守，问题更复杂</p>
+<p>开源社区的bean提出了巧妙构思，开发出<strong>fbinst</strong>，基本解决了BIOS下的CHS&#x2F;LBA参数适应调整问题，使U盘BOOT成功率大大提高。(除非碰上了极度变态的主板和BIOS)。 </p>
+<p><strong>FbinstTool</strong>既是Fbinst的<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2">GUI</a>程序 </p>
+<p>FBA类型文件就是FbinstTool通常使用的文件<br>网盘分享<br><a target="_blank" rel="noopener" href="https://mega.nz/#!6scxFZbD!L3F1HlIx1oE4V3dFI_oRfFalxHP4JvaAa8eg7PWeClI">https://mega.nz/#!6scxFZbD!L3F1HlIx1oE4V3dFI_oRfFalxHP4JvaAa8eg7PWeClI</a><br>来源<br><a target="_blank" rel="noopener" href="http://bbs.wuyou.net/forum.php?mod=viewthread&amp;tid=189221">http://bbs.wuyou.net/forum.php?mod=viewthread&amp;tid=189221</a></p>
+<h1 id="U盘魔术师"><a href="#U盘魔术师" class="headerlink" title="U盘魔术师"></a>U盘魔术师</h1><p>有全能版以及精简版,相对v5来说,<del>v3的BUG更少。</del><br><del>不过就结论来说U盘魔术师经常会出些小问题。</del><br><a target="_blank" rel="noopener" href="http://bbs.sysceo.com/forum.php?mod=forumdisplay&amp;fid=98&amp;page=1">http://bbs.sysceo.com/forum.php?mod=forumdisplay&amp;fid=98&amp;page=1</a></p>
+<p>其他设置项,可以自己设置外部挂载工具<br>USMEND.INI,放在优盘根目录把下面，把代码自己复制进去适当自己添加软件修改，USM工具箱也是放在优盘根目录的(USMSTART则是在加载自带外置工具之前就会加载)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LINK %Desktop%\BIOS+UEFI引导修复,%CurDir%\USM工具箱\BIOS+UEFI引导修复工具.exe</span><br><span class="line">LINK %Desktop%\宽带密码获取,%CurDir%\USM工具箱\宽带密码获取.exe</span><br><span class="line">LINK %Desktop%\密码清除,%CurDir%\USM工具箱\密码清除.exe</span><br><span class="line">LINK %Desktop%\GHOST11,%CurDir%\USM工具箱\GHOST.exe</span><br><span class="line">LINK %Desktop%\CGI-plus,%CurDir%\USM工具箱\CGI-plus.exe</span><br></pre></td></tr></table></figure>
+
+<p>其中%Desktop%后面的是桌面快捷方式的名称，后面则是程序本身路径<br>来源<a target="_blank" rel="noopener" href="https://www.sysceo.com/forum/thread-42989-1-1.html">https://www.sysceo.com/forum/thread-42989-1-1.html</a></p>
+<h1 id="IT天空-的-优启通"><a href="#IT天空-的-优启通" class="headerlink" title="IT天空 的 优启通"></a>IT天空 的 优启通</h1><p><del>ImageX存在推广行为，<strong>而且很流氓</strong>，他是直接对当前C盘文件进行操作，所以你用它备份C盘也同样会修改。</del>(版本2暂时没有推广)<br>没有Acronis,但是他的MHDD比别的PE做的都好</p>
+<p><a target="_blank" rel="noopener" href="https://www.itsk.com/thread-378531-1-1.html">https://www.itsk.com/thread-378531-1-1.html</a></p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Maintenance/" rel="tag">Maintenance</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/System/" rel="tag">System</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2015-09-10T11:35:00.000Z" itemprop="dateModified">最后编辑：2015-09-10</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" [战3]常见问题及易被忽视的常识" href="/Game/战场的女武神/战3常识/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" Ubuntu注意事项" href="/Linux/Ubuntu注意事项/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Software/Maintenance/PE/" data-full-path="http://ted423.github.io/Software/Maintenance/PE/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                391
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                14
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                148
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">48</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.66em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.6em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Browser/" style="font-size: 0.7em;">Browser</a> <a href="/tags/CMD/" style="font-size: 0.62em;">CMD</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+
+
+
+    </body>
+</html>

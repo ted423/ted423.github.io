@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>[半转载]播放器、视频基础知识 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/Encode/Video/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Document, Encode, 转载, 过时(Outdated)" />
+  
+  <meta name="description" content="本文内容基于以下两篇生成视频格式基础知识那些播放器教程背后的知识 增加了这里的一些东西(也是我写的)https:&#x2F;&#x2F;github.com&#x2F;ted423&#x2F;FXXS-Encode-Guide&#x2F;blob&#x2F;main&#x2F;1.%20基础知识&#x2F;1.%20编码、编码器与封装格式.md 封装格式(MP4&#x2F;MKV…)、编码格式(H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC…)、编码器(">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[半转载]播放器、视频基础知识">
+<meta property="og:url" content="http://ted423.github.io/Document/Encode/Video/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="本文内容基于以下两篇生成视频格式基础知识那些播放器教程背后的知识 增加了这里的一些东西(也是我写的)https:&#x2F;&#x2F;github.com&#x2F;ted423&#x2F;FXXS-Encode-Guide&#x2F;blob&#x2F;main&#x2F;1.%20基础知识&#x2F;1.%20编码、编码器与封装格式.md 封装格式(MP4&#x2F;MKV…)、编码格式(H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC…)、编码器(">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2014/12/1111.jpg">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2014/12/111.jpg">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2014/12/1112.jpg">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2014/12/1113.jpg">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2014/12/1114.jpg">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2014/12/1115.jpg">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2014/12/1116.jpg">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2013/11/logo11.png">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2015/12/kanade.png">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2015/12/19867d.png">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2015/12/20153.png">
+<meta property="og:image" content="http://img.2222.moe/images/2015/12/08/output0.png">
+<meta property="og:image" content="http://img.2222.moe/images/2015/12/08/output00e38b.png">
+<meta property="og:image" content="http://img.2222.moe/images/2015/12/08/output012c78.png">
+<meta property="og:image" content="http://vcb-s.com/wp-content/uploads/2015/12/20154.png">
+<meta property="article:published_time" content="2015-12-22T12:54:00.000Z">
+<meta property="article:modified_time" content="2024-10-18T09:35:51.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="过时(Outdated)">
+<meta property="article:tag" content="转载">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="Encode">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://vcb-s.com/wp-content/uploads/2014/12/1111.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Encode/Video/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[半转载]播放器、视频基础知识</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2015-12-22T12:54:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2015-12-22</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~16.42K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>本文内容基于以下两篇生成<br><a target="_blank" rel="noopener" href="http://vcb-s.com/archives/2726">视频格式基础知识</a><br><a target="_blank" rel="noopener" href="http://vcb-s.com/archives/4567">那些播放器教程背后的知识</a></p>
+<p>增加了这里的一些东西(也是我写的)<br><a target="_blank" rel="noopener" href="https://github.com/ted423/FXXS-Encode-Guide/blob/main/1.%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/1.%20%E7%BC%96%E7%A0%81%E3%80%81%E7%BC%96%E7%A0%81%E5%99%A8%E4%B8%8E%E5%B0%81%E8%A3%85%E6%A0%BC%E5%BC%8F.md">https://github.com/ted423/FXXS-Encode-Guide/blob/main/1.%20基础知识/1.%20编码、编码器与封装格式.md</a></p>
+<h1 id="封装格式-MP4-MKV…-、编码格式-H-264-H-265-AC3-AAC…-、编码器-x265-x264-SVT-AV1"><a href="#封装格式-MP4-MKV…-、编码格式-H-264-H-265-AC3-AAC…-、编码器-x265-x264-SVT-AV1" class="headerlink" title="封装格式(MP4&#x2F;MKV…)、编码格式(H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC…)、编码器(x265&#x2F;x264&#x2F;SVT-AV1)"></a>封装格式(MP4&#x2F;MKV…)、编码格式(H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC…)、编码器(x265&#x2F;x264&#x2F;SVT-AV1)</h1><p>容器(Container)又名封装格式，常见的封装格式(MP4&#x2F;MKV…)、而 H.264&#x2F;H.265&#x2F;AC3&#x2F;AAC 属于编码方式，也就是MP4以及MKV上可以使用相同的编码方式</p>
+<h2 id="一些需要注意的"><a href="#一些需要注意的" class="headerlink" title="一些需要注意的"></a>一些需要注意的</h2><p>flac-Free Lossless Audio Codec-自由无损音频压缩编码，flac也是常见的无损音频文件格式(flac用同样的名字做了容器名(即同时是封装格式的名字),<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-TW/docs/Web/Media/Formats/Containers">https://developer.mozilla.org/zh-TW/docs/Web/Media/Formats/Containers</a>)</p>
+<p>而ape属于无损音频文件格式，但其并不代表编码方式。</p>
+<p>又比如m4a(封装格式,仅有音频的MPEG-4&#x2F;mp4文件会使用.m4a扩展名)可以使用ALAC(Apple Lossless Audio Codec)编码也可以使用AAC(Advanced Audio Coding)编码。</p>
+<p>另外MP3(formally MPEG-1 Audio Layer III or MPEG-2 Audio Layer III) 是由MPEG-1封装容器与一个以MPEG-1Audio Layer III encoding编码过的音轨所组成。</p>
+<p>WAV属于封装格式，封装的PCM属于原始音频数据，完全未经压缩的编码方式，脉冲编码调制（Pulse Code Modulation, PCM）是一种模拟信号的数字化方法。它是最常用、最简单的波形编码方式。</p>
+<p>BWF（广播声波格式）</p>
+<p>后缀也用wav,作为WAV的后继者，是由欧洲广播联盟(European Broadcasting Union)创建的一种标准音频格式。BWF has more data regarding the file. 但音轨质量没有区别</p>
+<p>RF64(后缀通常会写w64以作区分)(multichannel audio file)</p>
+<p>WAV 文件格式的扩展，其文件大小可大于 4GB。 It has been specified by the European Broadcasting Union. It has been accepted as the ITU recommendation ITU-R BS.2088.</p>
+<p>H.265&#x2F;HEVC 是编码</p>
+<h2 id="编码器"><a href="#编码器" class="headerlink" title="编码器"></a>编码器</h2><p>x265是开源免费编码器，另外还有一些商业的编码器，例如<a target="_blank" rel="noopener" href="http://www.strongene.com/">视骏</a>,<a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/geforce/guides/broadcasting-guide/">NVENC</a></p>
+<p>qaac 是基于 Apple 编码器的命令行 AAC&#x2F;ALAC 编码器前端。 从 1.00 开始，qaac 直接使用 CoreAudioToolbox.dll。 因此，不再需要安装 QuickTime。 但是，需要 Apple 应用程序支持。 支持 AAC-LC、AAC-HE、ALAC 编码。一般我们制作出来的是LC (开放源代码，似乎是Copyleft的并且没有任何限制)</p>
+<h2 id="封装格式"><a href="#封装格式" class="headerlink" title="封装格式"></a>封装格式</h2><p>比较常见的MP4，MKV，RMVB，TS，FLV，AVI等很多，各种封装格式支持的编码是不一样的。</p>
+<p>MKV vs MP4，主要的区别在于：</p>
+<ol>
+<li>MKV支持封装FLAC作为音频，MP4则不支持。但是MP4也可以封装无损音轨(比如说ALAC，虽然普遍认为ALAC的效率不如FLAC优秀)</li>
+<li>MKV支持封装ASS&#x2F;SSA格式的字幕，MP4则不支持。一般字幕组制作的字幕是ASS格式，所以内封字幕多见于MKV格式</li>
+<li>MP4作为工业标准，在视频编辑软件和播放设备上的兼容性一般好于MKV。这也是vcb-s那些为移动设备优化的视频基本上选择MP4封装的原因。</li>
+</ol>
+<p>还有一些过时的封装格式，比如RM、AVI等等。</p>
+<h2 id="编码格式"><a href="#编码格式" class="headerlink" title="编码格式"></a>编码格式</h2><p>通常mediainfo需要封装格式才能显示比较完整的信息，如.pcm .aac .hevc不能显示时长等信息。.hevc在播放器中是无法使用进度条的。</p>
+<p>LPCM(Linear pulse-code modulation) 一般也会叫PCM，但是一种特定类型的 PCM，其跟PCM(Pulse Code Modulation)有区别，其量化级别是线性均匀的。</p>
+<h2 id="无损压缩以及有损压缩"><a href="#无损压缩以及有损压缩" class="headerlink" title="无损压缩以及有损压缩"></a>无损压缩以及有损压缩</h2><p>首先PCM和LPCM属于未经压缩的格式，不称为无损压缩。<del>(但叫无损应该也没啥错)</del></p>
+<p>日常中的无损较为口语化，需要理解其意思。通常说的无损格式指的算法无损，并不意味着生成的文件必定无损，一些音轨降位深或降频会造成损失。也会有一些有损转无损的非常规操作。</p>
+<p>通常说原盘以及Remux无损，原盘一般是能找到的最优质的源，但其编码格式都属于有损，从母带(口语化)出来进行有损压缩再发布。而Remux主要为视频轨道以及主要音频轨道的无损提取或转换。(不过会有Hybird)</p>
+<h2 id="音频"><a href="#音频" class="headerlink" title="音频"></a>音频</h2><p>DTS的压缩率非常差，并且他们以此作为宣传，认为这样能提高解码效率，音质会更好。</p>
+<p>DTS-HD MA 是无损</p>
+<p>DTS-HD HRA 是有损</p>
+<p>两者同样带核心。</p>
+<p>其编码器同时包含了DTS Digital（DTS的有损音频格式）的编码核心以便在播放器不兼容DTS-HD MA或DTS-HD HRA（DTS-HD High Resolution Audio）时切换成DTS Digital（DTS Digital一般会以255Kbps的恒定码率进行编码，与DTS-HD MA&#x2F;HRA音频放置在同一流中，格式名称为DTS-HD Core）</p>
+<h3 id="有损音频"><a href="#有损音频" class="headerlink" title="有损音频"></a>有损音频</h3><p>AC3是作为影视业的工业标准。但其发布时间非常早。（略早于MP3）</p>
+<h4 id="DTS"><a href="#DTS" class="headerlink" title="DTS"></a>DTS</h4><p>DTS core 768被认为是不如AC3 640的。</p>
+<h4 id="AC3"><a href="#AC3" class="headerlink" title="AC3"></a>AC3</h4><p>杜比实验室采用了 MDCT 算法以及感知编码原理来开发 AC-3 音频格式以满足影院需求。 AC-3 格式于 1991 年作为杜比数字标准发布。</p>
+<p>AC-3 (Audio Codec 3, Advanced Codec 3, Acoustic Coder 3. [不同于Adaptive Transform Acoustic Coding 3&#x2F;ATRAC3，是索尼研发的另一种格式])</p>
+<p>Dolby Digital Surround EX</p>
+<p>杜比数字环绕EX（Dolby Digital Surround EX），是杜比实验室和Lucasfilm THX在1999年5月面世的星球大战首部曲：威胁潜伏电影中合作的产品。在考虑经济效益和向下兼容性，在左环绕和右环绕中间，加插了后环绕声道，形成6.1输出。它使用了矩阵编码，这是一条独立分离声道，情形就像前置左右声道和中置声道的关系一样。所以它能在标准的5.1设备上输出5.1，又能同时支持杜比数字环绕EX的器材上输出6.1。在星球大战系列中使用了这技术。不少DVD支持杜比数字环绕EX的输出。</p>
+<p>Dolby Digital EX</p>
+<p>杜比数字EX（Dolby Digital EX）是杜比数字环绕EX的民用版本。杜比数字EX类似杜比早期的Pro-Logic技术，集成了矩阵技术，在立体声音轨上加入一中置和一后置声道。杜比数字EX在5.1杜比数字的基础上加入后置声道，创出6.1或7.1的声道输出。但是，这技术并不能视为真正的6.1或7.1编码，与它的竞争对手DTS-ES格式不同，它并不能提供完整独立分离的6条或7条音轨。</p>
+<h4 id="Dolby-Digital-Plus-DDP-EAC3"><a href="#Dolby-Digital-Plus-DDP-EAC3" class="headerlink" title="Dolby Digital Plus&#x2F;DDP&#x2F;EAC3"></a>Dolby Digital Plus&#x2F;DDP&#x2F;EAC3</h4><p>目前本组的首选格式(1.0&#x2F;2.0除外，一般建议制作时带EX)</p>
+<p>杜比数字Plus（Dolby Digital Plus）又称为E-AC-3，是基于AC3的基础进行加强的编码系统。它把最高比特率提升至6 Mbps，支持14声道（13.1），增强的编码技术能够减少压缩对杂讯（artifact）。无法兼容于Dolby Digital器材，但是Dolby Digital Plus解码器可以将Dolby Digital Plus转码成Dolby Digital 通过光纤&#x2F;同轴输出。Dolby Digital Plus 是HD DVD和蓝光影碟的必选音频格式。在蓝光播放器中，Dolby Digital Plus是主音轨（Primary Audio）的可选格式，第二音轨（Secondary Audio）必选格式。</p>
+<h4 id="AAC"><a href="#AAC" class="headerlink" title="AAC"></a>AAC</h4><p>AAC在低码下更有优势。（但Opus做的更好）</p>
+<p>因为AAC是一个庞大家族，他们共分为9种规格，以适应不同场合的需要，也正是由于AAC的规格（Profile）繁多，导致普通电脑用户感觉十分困扰：</p>
+<p>MPEG-2 AAC LC低复杂度规格（Low Complexity）</p>
+<p>MPEG-2 AAC Main主规格</p>
+<p>MPEG-2 AAC SSR可变采样率规格（Scaleable Sample Rate）</p>
+<p>MPEG-4 AAC LC低复杂度规格（Low Complexity），现在的手机比较常见的MP4文件中的音频部分就包括了该规格音频档案</p>
+<p>MPEG-4 AAC Main主规格</p>
+<p>MPEG-4 AAC SSR可变采样率规格（Scaleable Sample Rate）</p>
+<p>MPEG-4 AAC LTP长时期预测规格（Long Term Predicition）</p>
+<p>MPEG-4 AAC LD低延迟规格（Low Delay）</p>
+<p>MPEG-4 AAC HE高效率规格（High Efficiency）</p>
+<p>上述的规格中，主规格（Main）包含了除增益控制之外的全部功能，其音质最好，而低复杂度规格（LC）则是比较简单，没有了增益控制，但提高了编码效率，至“SSR”对“LC”规格大体是相同，但是多了增益的控制功能，另外，MPEG-4 AAC&#x2F;LTP&#x2F;LD&#x2F;HE，都是用在低比特率下编码，特别是“HE”是有Nero AAC编码器支持，是近来常用的一种编码器，不过通常来说，Main规格和LC规格的音质相差不大，因此目前使用最多的AAC规格多数是“LC”规格，因为要考虑手机目前的存储器能力未达合理水准。</p>
+<p>MPEG-4 AAC LC（Low Complexity）是最常用的规格，我们叫“低复杂度规格”，我们简称“LC-AAC”，这种规格在中等码率的编码效率以及音质方面，都能找到平衡点。所谓中等码率，就是指：96kbps-192kbps之间的码率。因此，如果要使用LC-AAC规格，请尽可能把码率控制在之前说的那个区间内。</p>
+<p>ffmpeg里</p>
+<p>Based on quality produced from high to low:</p>
+<p>libopus &gt; libvorbis &gt;&#x3D; libfdk_aac &gt; aac &gt; libmp3lame &gt;&#x3D; eac3&#x2F;ac3 &gt; libtwolame &gt; vorbis &gt; mp2 &gt; wmav2&#x2F;wmav1</p>
+<h4 id="一些有损音频测试"><a href="#一些有损音频测试" class="headerlink" title="一些有损音频测试"></a>一些有损音频测试</h4><p>双盲:<br><a target="_blank" rel="noopener" href="https://web.archive.org/web/20060831191536/http://www.rjamorim.com/test/">https://web.archive.org/web/20060831191536/http://www.rjamorim.com/test/</a></p>
+<p><a target="_blank" rel="noopener" href="https://web.archive.org/web/20110522045514/http://cec.concordia.ca/econtact/9_4/tsabary.html">https://web.archive.org/web/20110522045514/http://cec.concordia.ca/econtact/9_4/tsabary.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://tech.ebu.ch/docs/tech/tech3324.pdf">https://tech.ebu.ch/docs/tech/tech3324.pdf</a></p>
+<h1 id="视频的基础参数"><a href="#视频的基础参数" class="headerlink" title="视频的基础参数"></a>视频的基础参数</h1><h2 id="分辨率"><a href="#分辨率" class="headerlink" title="分辨率"></a>分辨率</h2><p>视频是由连续的图像构成的。每一张图像，我们称为一 <strong>帧(frame)</strong> 。图像则是由像素(pixel)构成的。一张图像有多少像素，称为这个图像的 <strong>分辨率</strong>。比如说1920×1080的图像，说明它是由横纵1920×1080个像素点构成。视频的分辨率就是每一帧图像的分辨率。</p>
+<h2 id="帧率"><a href="#帧率" class="headerlink" title="帧率"></a>帧率</h2><p>一个视频，每一秒由多少图像构成，称为这个视频的 <strong>帧率(frame-rate)</strong> 。常见的帧率有24000&#x2F;1001&#x3D;23.976, 30000&#x2F;1001&#x3D;29.970, 60000&#x2F;1001&#x3D;59.940, 25.000, 50.000等等。这个数字是一秒钟内闪过的图像的数量。比如23.976，就是1001秒内，有24000张图像。视频的帧率是可以是恒定的(cfr, Const Frame-Rate)，也可以是变化的(vfr, Variable Frame-Rate)</p>
+<h2 id="码率"><a href="#码率" class="headerlink" title="码率"></a>码率</h2><p><strong>码率</strong> 的定义是视频文件体积除以时间。单位一般是Kbps(Kbit&#x2F;s)或者Mbps(Mbit&#x2F;s)。注意1B(Byte)&#x3D;8b(bit)。所以一个24分钟，900MB的视频：<br>体积：900MB &#x3D; 900MByte &#x3D; 7200Mbit<br>时间：24min &#x3D; 1440s<br>码率：7200&#x2F;1440  &#x3D; 5000 Kbps &#x3D; 5Mbps<br>当视频文件的时间基本相同的时候（比如现在一集番大概是24分钟），码率和体积基本上是等价的，都是用来描述视频大小的参数。长度分辨率都相同的文件，体积不同，实际上就是码率不同。<br>码率也可以解读为单位时间内，用来记录视频的数据总量。码率越高的视频，意味着用来记录视频的数据量越多，潜在的解读就是视频可以拥有更好的质量。（注意，仅仅是潜在，后文我们会分析为什么高码率不一定等于高画质）</p>
+<h1 id="图像的表示方法"><a href="#图像的表示方法" class="headerlink" title="图像的表示方法"></a>图像的表示方法</h1><h2 id="RGB模型"><a href="#RGB模型" class="headerlink" title="RGB模型"></a>RGB模型</h2><p>光的三原色是红(Red)、绿(Green)、蓝(Blue)。现代的显示器技术就是通过组合不同强度的三原色，来达成任何一种可见光的颜色。图像储存中，通过记录每个像素红绿蓝强度，来记录图像的方法，称为RGB模型 (RGB Model)<br>常见的图片格式中，PNG和BMP这两种就是基于RGB模型的。</p>
+<p>比如说原图：<br><img src="//vcb-s.com/wp-content/uploads/2014/12/1111.jpg" alt="原图"><br>分别只显示R G B通道的强度，效果如下：<br><img src="//vcb-s.com/wp-content/uploads/2014/12/111.jpg" alt="RGB-R"><br><img src="//vcb-s.com/wp-content/uploads/2014/12/1112.jpg" alt="RGB-G"><br><img src="//vcb-s.com/wp-content/uploads/2014/12/1113.jpg" alt="RGB-B"><br>三个通道下，信息量和细节程度不一定是均匀分布的。比如说可以注意南小鸟脸上的红晕，在3个平面上的区分程度就不同——红色平面下几乎无从区分，造成区别的主要是绿色和蓝色的平面。外围白色的脸颊，三色都近乎饱和；但是红晕部分，只有红色饱和，绿色和蓝色不饱和。这是造成红色凸显的原因。</p>
+<h2 id="YUV模型"><a href="#YUV模型" class="headerlink" title="YUV模型"></a>YUV模型</h2><p>除了RGB模型，还有一种广泛采用的模型，称为YUV模型，又被称为亮度-色度模型（Luma-Chroma）。它是通过数学转换，将RGB三个通道，转换为一个代表亮度的通道(Y,又称为Luma)，和两个代表色度的通道(UV，并成为Chroma)。</p>
+<p>YUV模型干的是类似的事儿。通过对RGB数据的合理转换，得到另一种表示方式。YUV模型下，还有不同的实现方式。举个用的比较多的YCbCr模型：它把RGB转换成一个亮度(Y)，和 蓝色色度(Cb) 以及 红色色度(Cr)。转换背后复杂的公式大家不需要了解，只需要看看效果：<br>只有亮度通道：<br><img src="//vcb-s.com/wp-content/uploads/2014/12/1114.jpg" alt="YUV-Y"><br>只有蓝色色度：<br><img src="//vcb-s.com/wp-content/uploads/2014/12/1115.jpg" alt="YUV-Cb"><br>只有红色色度：<br><img src="//vcb-s.com/wp-content/uploads/2014/12/1116.jpg" alt="YUV-Cr"><br>在图像视频的加工与储存中，YUV格式一般更受欢迎，理由如下：</p>
+<ol>
+<li>人眼对亮度的敏感度远高于色度，因此人眼看到的有效信息主要来自于亮度。YUV模型可以将绝大多数的有效信息分配到Y通道。UV通道相对记录的信息少的多。相对于RGB模型较为平均的分配，YUV模型将多数有效信息集中在Y通道，不但减少了冗余信息量，还为压缩提供了便利</li>
+<li>保持了对黑白显示设备的向下兼容</li>
+<li>图像编辑中，调节亮度和颜色饱和度，在YUV模型下更方便。</li>
+</ol>
+<p>几乎所有的视频格式，以及广泛使用的JPEG图像格式，都是基于YCbCr模型的。播放的时候，播放器需要将YCbCr的信息，通过计算，转换为RGB。这个步骤称为渲染（Rendering）<br>每个通道的记录，通常是用整数来表示。比如RGB24，就是RGB各8个bit，用0~255 (8bit的二进制数范围)来表示某个颜色的强弱。YUV模型也不例外，也是用整数来表示每个通道的高低。</p>
+<h1 id="色深"><a href="#色深" class="headerlink" title="色深"></a>色深</h1><p>色深(bit-depth)，就是我们通常说的8bit和10bit，是指每个通道的精度。8bit就是每个通道用一个8bit整数(0<del>255)代表，10bit就是用10bit整数(0</del>1023)来显示。16bit则是0<del>65535<br>(注意，上文的表述是不严谨的，视频在编码的时候，并非一定能用到0</del>255的所有范围，而是可能有所保留，只用到一部分，比如16~235。这我们就不详细展开了)</p>
+<p>你的显示器是8bit的，代表它能显示RGB每个通道0~255所有强度。但是视频的色深是YUV的色深，播放的时候，YUV需要通过计算转换到RGB。因此，10bit的高精度是间接的，它使得运算过程中精度增加，以让最后的颜色更细腻。<br>如何理解8bit显示器，播放10bit是有必要的呢：<br>一个圆的半径是12.33m, 求它的面积，保留两位小数。<br>半径的精度给定两位小数，结果也要求两位小数，那么圆周率精度需要给多高呢？也只要两位小数么？<br>取pi&#x3D;3.14, 面积算出来是477.37平方米<br>取pi&#x3D;3.1416，面积算出来是477.61平方米<br>取pi精度足够高，面积算出来是477.61平方米。所以取pi&#x3D;3.1416是足够的，但是3.14就不够了。<br>换言之，即便最终输出的精度要求较低，也不意味着参与运算的数字，以及运算过程，可以保持较低的精度。在最终输出是8bit RGB的前提下，10bit YUV比起8bit YUV依旧具有精度优势的原因就在这里。事实上，8bit YUV转换后，覆盖的精度大概相当于8bit RGB的26%，而10bit转换后的精度大约可以覆盖97%——你想让你家8bit显示器发挥97%的细腻度么？看10bit吧。<br>8bit精度不足，主要表现在亮度较低的区域，容易形成色带<br><img src="//vcb-s.com/wp-content/uploads/2013/11/logo11.png" alt="色带"><br>注意这图右边那一圈圈跟波浪一样的效果。这就是颜色精度不足的表现。<br>10bit的优势不只在于显示精度的提高，在提高视频压缩率，减少失真方面，相对8bit也有优势。这方面就不展开了。</p>
+<h1 id="色度半采样"><a href="#色度半采样" class="headerlink" title="色度半采样"></a>色度半采样</h1><p>在YUV模型的应用中，Y和UV的重要性是不等同的。图像视频的实际储存和传输中，通常将Y以全分辨率记录，UV以减半甚至1&#x2F;4的分辨率记录。这个手段被称为色度半采样(Chroma Sub-Sampling)。色度半采样可以有效减少传输带宽，和加大UV平面的压缩率，但是不可避免的会损失UV平面的有效信息。<br>我们平常的视频，最常见的是420采样。配合YUV格式，常常被写作yuv420。这种采样是Y保留全部，UV只以(1&#x2F;2) x (1&#x2F;2)的分辨率记录。比如说1920×1080的视频，其实只有亮度平面是1920×1080。两个色度平面都只有960×540的分辨率。<br>当然了，你也可以选择不做缩减。这种称为444采样，或者yuv444。YUV三个平面全是满分辨率。<br>在做YUV-&gt;RGB的时候，首先需要将缩水的UV分辨率拉升到Y的分辨率（madVR中允许自定义算法，在Chroma Upscaling当中），然后再转换到RGB。做RGB-&gt;YUV的转换，也是先转换到444（YUV的分辨率相同），再将UV分辨率降低。<br>一般能拿到的片源，包括所有蓝光原盘，都是420采样的。所以成品一般也保留420采样。所以yuv420就表示这个视频是420采样的yuv格式。<br>将420做成444格式，需要自己手动将UV分辨率拉升2×2倍。在今天madVR等渲染器可以很好地拉升UV平面的情况下，这种做法无异于毫无必要的拉升DVD做成伪高清。<br>当然了，有时候也需要在444&#x2F;RGB平面下做处理和修复，常见的比如视频本身RGB平面不重叠（比如摩卡少女樱），这种修复过程首先要将UV分辨率拉升，然后转RGB，做完修复再转回YUV。修复后的结果相当于全新构图，这种情况下保留444格式就是有理由，有必要的。<br>H264格式编码444格式，需要High 4:4:4 Predictive Profile（简称Hi444pp）。所以看到Hi444pp&#x2F;yuv444 之类的标示，你就需要去找压制者的陈述，为什么他要做这么个拉升。如果找不到有效的理由，你应该默认作者是在瞎做。</p>
+<h1 id="清晰度与画质简述"><a href="#清晰度与画质简述" class="headerlink" title="清晰度与画质简述"></a>清晰度与画质简述</h1><p>经常看到的说法：“这个视频清晰度是1080p的”。其实看过上文你就应该知道，1080p只是视频的分辨率，它不能直接代表清晰度——比如说，我可以把一个480p的dvd视频拉升到1080p，那又怎样呢？它的清晰度难道就提高了么？</p>
+<p>视频的画质，是由以下几点共同决定的</p>
+<ol>
+<li><h6>源的画质。</h6>
+俗话说的好，上梁不正下梁歪。如果源的画质本身很差，那么再如何折腾都别指望画质好到哪去。所以压制者往往会选择更好的源进行压制——举个栗子，BDRip一般都比TVRip来的好，哪怕是720p。蓝光也分销售地区，一般日本销售的日版，画质上比美版、台版、港版啥的都来得好，所以同样是BDRip，选取更好的源，就能做到画质上优先一步。
+</li>
+<li><h6>播放条件。</h6>
+观众是否用了足矣支持高画质播放的硬件和软件。这就是为啥我们在发布Rip的同时大力普及好的播放器；有时候一个好的播放器胜过多少在制作方面的精力投入。
+</li>
+<li><h6>码率投入vs编码复杂度。</h6>
+视频的时间和空间复杂度，并称为编码复杂度。编码复杂度高的视频，往往细节多，动态高（比如《魔法少女小圆剧场版 叛逆的物语》），这样的视频天生需要较高的码率去维持一个优秀的观看效果。
+相反，有些视频编码复杂度低（比如《请问今天要来点兔子么》，动态少，线条细节柔和），这种视频就是比较节省码率的。
+</li>
+<li><h6>码率分配的效率和合理度。</h6>
+同样多的码率，能起到怎样好的效果，被称为效率。比如H264就比之前的RealVideo效率高；10bit比8bit效率高；编码器先进，参数设置的比较合理，编码器各种高端参数全开（通常以编码时间作为代价），码率效率就高。
+合理度就是码率在时空分配方面合理与否，合理的分配，给观众的观看效果就比较统一协调。 码率分配的效率和合理度，是对制作者的要求，要求制作者对片源分析，参数设置有比较到位的理解。
+码率分配和合理度做的好，就常常能做出低码率高画质的良心作品。
+</li>
+<li><p>编码前的预处理。预处理分三种：</p>
+</li>
+<li><p>客观修复。强调修复片源固有的瑕疵，比如锯齿，色带，晕轮等等。</p>
+</li>
+<li><p>主观调整，强调将片源调整的更适合人眼观看，比如适度的锐化，调色（有时候你是可以通过科学方法判定片源的颜色有问题，然后针对的做修复的）。</p>
+</li>
+<li><p>移除无效高频信息，比如降噪，避免码率浪费在无效的噪点上</p>
+</li>
+</ol>
+<p> 预处理做的好，往往能达到画质上超越片源，或是在几乎不牺牲清晰度的前提下，节省码率开销。<br> 但是预处理是一把双刃剑，优化的同时，可能引入副效果。降噪、抗锯齿、去晕轮等操作会不可避免的损失一些有效细节（或多或少，取决于制作者水准）；主观调整很可能 会引入副效果（比如过度锐化会导致锯齿和晕轮），或是变成了作者的自我满足，形成对观众的欺骗。</p>
+<p>综上，一个优秀的画质，是由片源、制作者、观看者共同决定的；码率高低也只是部分因素，并非决定性的效果。</p>
+<h1 id="播放器的工作流程"><a href="#播放器的工作流程" class="headerlink" title="播放器的工作流程"></a>播放器的工作流程</h1><p>简单说就三个大步骤：分离、解码、渲染。</p>
+<h2 id="分离"><a href="#分离" class="headerlink" title="分离"></a>分离</h2><p>分离，指的是拿到媒体文件(MKV&#x2F;MP4&#x2F;MKA)等，先收集相关的文件（包括外挂音轨、字幕），然后将所有轨道拆开，拆分成单独的内容。视频流、音频流、字幕、章节信息，等等。负责执行分离的模块滤镜，叫做分离器(splitter&#x2F;demuxer)。</p>
+<p>当同样类型的轨道不止一条的时候（比如多音轨），分离器还负责挑选其中的一条。通常同类型多轨道，会有一条轨道被设定为“默认轨”（比如多音轨MKV一般以主音轨为默认），你想选择副音轨，你就需要在分离器中手动切换。很多播放器会在自己的界面中提供音轨&#x2F;字幕切换的功能，其实也是间接利用分离器实现的。</p>
+<p>分离器现在能用的基本上只有LAV&#x2F;ffmpeg了（这俩几乎可以算一家），以前还有个Haali，然而停止更新已久，不能适应HEVC时代了。</p>
+<p>分离器一般不耗费运算性能。因为它只是简单地收集、拆分和选择。</p>
+<h2 id="解码"><a href="#解码" class="headerlink" title="解码"></a>解码</h2><p>解码，指的是将分离器丢来的各种原生压缩格式，比如H264&#x2F;H265的视频，FLAC&#x2F;AAC的音频，解码为非压缩的格式，比如视频是YUV&#x2F;RGB（相当于bmp），音频是PCM（相当于wav），然后丢给下游模块。负责解码的模块滤镜称为解码器(decoder)。常见的有LAV&#x2F;ffmpeg, ffdshow(同样停止更新了)……</p>
+<p>当解码器能完全解码一个轨道中所有有效信息的时候，我们成为完全解码（现在绝大多数情况是如此），否则称为不完全解码。比如说，早期一些显卡的硬解，不能完全处理H264视频流的所有，解码出的画质有折扣；又或者DTS-HD MA解码器开源之前，基于ffmpeg&#x2F;lav等解码器只能解码出部分信息，导致音频是有损的。</p>
+<p>解码出来的格式，都需要加上精度的度量。比如说10bit 视频完全解码后是YUV 10bit，8bit视频是YUV 8bit，16bit flac格式是PCM 16bit整数，aac是PCM 32bit浮点。麻烦在于，解码器下游的模块不见得能照单全收。比如说以前播放器就不支持10bit YUV丢给下游，解码器只好转为YUV 8bit（后来madVR之所以是一个极大的提升，就是因为madVR基本上全部通吃）。同理；很多声卡能支持24bit整数PCM已经是极限，所以32bit浮点的PCM需要转为24bit整数。</p>
+<p>如果解码器可以将最原始的数据，或者更高精度（比如有时候为了方便，将10bit转为16bit）输出给下游，我们称为全精度输出；否则，解码器会试图降低精度输出，我们称为低精度输出。少数时候，我们会让解码器做一些转换（比如vcb-s新播放器教程中，让lav解码器做YUV-&gt;RGB的转换），我们称为转换输出。</p>
+<p>解码器，特别是视频解码器，往往成为大量消耗运算资源的地方。这个问题在H264早期非常严重，那时候的主流CPU很难负担720p&#x2F;1080p的高清解码，能耗巨大，移动平台尤其如此。所以才催生了各种硬件加速和硬件解码，并逐渐成为一个规范标准。</p>
+<h2 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h2><p>渲染，指的是将解码后的数据，在pc硬件上（显示器、扬声器）进行播放。负责渲染的模块我们称之为渲染器(Render)，视频渲染器主流有EVR（Enhanced Video Render, 微软送的）以及madVR(madshi Video Render)。</p>
+<p>音频渲染器一般都是系统自带的（同样是微软送的），也有可以自定义的。比如MPC播放器有MPC Audio Render，可以支持类似wasapi输出等其他功能。</p>
+<p>因为显示器是RGB显示，而解码后的视频多为YUV格式，渲染器一般也需要负责将YUV转换为RGB，并保证输出的图像大小跟播放窗口吻合。</p>
+<p>多数播放器自带的滤镜（mpc&#x2F;pot都有很多调色之类的功能），显卡的加成，以及SVP，都作用于解码器和渲染器中间。它们接过解码器解码的数据，对其进行处理，然后将处理后的数据送给渲染器。因为渲染器是需要借助显卡进行图形运算，YUV数据基本上需要先进入显存，所以显卡可以检测到丢来的YUV数据，对其进行“优化”。同样需要当心的是，这些滤镜和处理，往往入口精度低，处理精度也低。导致的后果就是解码器被迫低精度输出，给这些滤镜低精度处理，从而大幅降低视频精度，导致色带色块问题。</p>
+<p>字幕的加载可能在渲染器前（将字幕信息整合进YUV&#x2F;RGB数据给渲染器），也可能在渲染器后（播放器来将字幕整合入生成完毕的RGB图像）。</p>
+<p>多数解码包的配置界面，主要就是让你选择分离器、解码器和渲染器的：</p>
+<p>如上图，上方就有让你选择视频渲染器，然后下方左右分别是针对不同文件格式的分离器，以及针对不同媒体格式的解码器。</p>
+<h1 id="硬解的定义与分类"><a href="#硬解的定义与分类" class="headerlink" title="硬解的定义与分类"></a>硬解的定义与分类</h1><p>如上文所说，硬解是为了缓解高分辨率新编码面世初期，CPU不堪重负的解码压力，而诞生的技术。如果说软解的定义是：利用CPU通用运算能力，进行解码，那么硬解的定义可以这么说：不利用CPU通用运算能力，而是依赖其他集成电路，无论是否特制，来进行解码。</p>
+<p>更古老的时候，有些显卡没办法进行完全解码，只是帮助计算部分解码过程中的运算，那么可以归为“硬件加速”。估计Intel下一代CPU“混合加速HEVC解码”也是一样的道理。</p>
+<p>硬解现在比较常见的是以下种类：</p>
+<h2 id="DXVA-DirectX-Video-Acceleration"><a href="#DXVA-DirectX-Video-Acceleration" class="headerlink" title="DXVA(DirectX Video Acceleration)"></a>DXVA(DirectX Video Acceleration)</h2><p>比较古老的方案了。Windows XP以及之前系统上流行的。上古ffdshow的硬解就是利用DXVA。DXVA规范下容易出现不完全解码，导致画质降低。Vista以后，渐渐地被抛弃。</p>
+<h2 id="DXVA2"><a href="#DXVA2" class="headerlink" title="DXVA2"></a>DXVA2</h2><p>目前主流的硬解方式。主要由GPU来实现，但是并非利用GPU的流处理器，INA三家都是使用了单独附在GPU芯片上的一块专职电路来完成。GPU硬解能力往往不与显卡游戏性能相关，而与搭载的专职电路先进与否相关。典型的就是GT610，它是NVIDIA第一款能硬解4K视频的GPU，同时代其他GTX650&#x2F;GTX580什么面对4K视频只有傻眼的份儿，就因为它的GPU塞入的专职电路，是刚开发出最先进的一款（代号为VP5，其他同时代的都是VP4）。</p>
+<p>使用DXVA解码，都需要先将视频数据（压缩的格式）传输到显存中，然后再让GPU进行解码。</p>
+<h3 id="Native、Copy-back"><a href="#Native、Copy-back" class="headerlink" title="Native、Copy-back"></a>Native、Copy-back</h3><p>DXVA2有两种实现方式，区别是解码后的数据是否还要传回内存。</p>
+<p>native选择不传，直接丢给同样依赖GPU工作的渲染器，数据从头到尾都在显存中。而copy-back选择传，数据会传回内存，一番处理后再传回显存，让渲染器工作。native的输出必须为YUV 8bit，而copy-back则可以为10bit。</p>
+<p>之所以需要有copy-back这么个传来传去的过程，就是因为有些滤镜，比如SVP，比如LAV的转格式，必须依赖CPU+内存进行工作。不传回来没办法继续处理。copy-back保证了硬解的流程类似软解，可以不漏下任何后处理。而代价是传来传去必定降低性能，增加能耗。需要注意的是，即便用native，也可能导致解码后的数据被“优化”，因为有些处理，包括播放器、显卡驱动带的那些，是可以完全作用在GPU环境中的。</p>
+<p>除了DXVA2，还有两种特殊的硬解：Intel Quick Sync, 和NVIDIA CUVID。如同名称所示，它们是Intel和NV的专属。</p>
+<h2 id="Intel-Quick-Sync"><a href="#Intel-Quick-Sync" class="headerlink" title="Intel Quick Sync"></a>Intel Quick Sync</h2><p>是集成在CPU中的逻辑电路承担的。注意的是这玩意并非隶属于Intel的集显，而是CPU的直属。它直接读写内存，运行表现和软解非常类似。Intel Quick Sync堪称速度快，能耗低。</p>
+<h2 id="NVIDIA-CUVID"><a href="#NVIDIA-CUVID" class="headerlink" title="NVIDIA CUVID"></a>NVIDIA CUVID</h2><p>是基于NV自己的接口，写的一个类似DXVA2(copy-back)的升级版。</p>
+<h1 id="YUV-RGB转换过程中的细节"><a href="#YUV-RGB转换过程中的细节" class="headerlink" title="YUV-&gt;RGB转换过程中的细节"></a>YUV-&gt;RGB转换过程中的细节</h1><p>将解码器输出的YUV格式，转为RGB，并且缩放到播放窗口输出，是视频渲染器的职能。可以说，如果解码过程是完全解码，也不主动添加播放器调校和驱动增强，渲染的环节决定了最终成品的画质。造成画质区别的可以说就三点：缩放算法，运算精度，和抖动算法。任何试图优化渲染器效果的尝试，都应该从这三个方面着手。</p>
+<p>缩放算法造成的区别，比较好理解。例如原图(150*150)：</p>
+<p><img src="//vcb-s.com/wp-content/uploads/2015/12/kanade.png" alt="缩放-原图"></p>
+<p>用双线性算法（上，多数播放器默认算法）和nnedi3(下)放大到272 * 272像素：</p>
+<p><img src="//vcb-s.com/wp-content/uploads/2015/12/19867d.png" alt="双线性算法"></p>
+<p><img src="//vcb-s.com/wp-content/uploads/2015/12/20153.png" alt="nnedi3"></p>
+<p>不同算法造成的效果肉眼可见。注意上图中随处可见的锯齿，以及细线的模糊。</p>
+<p>精度，是指运算的过程中，参与运算的数，有效位数的高低。在计算机中表现为使用怎样的格式来进行，8bit&#x2F;16bit&#x2F;32bit整数，16bit&#x2F;32bit浮点。精度不足的表现在上篇教程中已经有展示，不做赘述，然而还是提醒一句：千万不要以为显示器是8bit，就认为8bit 整数 的片源精度&#x2F;处理精度是足够的。</p>
+<p>另外，RGB处理相对YUV处理，精度要求相对较低；或者说，RGB处理相比较，精度稍低带来的影响不明显。（不幸的是多数时候处理的数据都是YUV，然后根据水桶原理……）播放过程中，应该尽量减少RGB-YUV互转的次数，每一次转换都要做一次计算与取整，都会导致实际精度降低。</p>
+<p>抖动算法(Dithering Algorithm)，通常出现在高精度转低精度中。在数字图像高转低处理中，全部四舍五入不见得是好习惯。抖动算法通过科学的添加噪点，来掩盖精度的不足。比如说原图（RGB24，即RGB 8bit）：<br><img src="http://img.2222.moe/images/2015/12/08/output0.png" alt="转RGB16原图"></p>
+<p>分别用四舍五入（上） 和 Floyd–Steinberg 抖动算法（下），将此图转为RGB16(RGB分别为5bit，6bit和5bit，早期windows桌面的“16色”，区别于RGB24的“真彩色”)<br><img src="http://img.2222.moe/images/2015/12/08/output00e38b.png" alt="四舍五入"></p>
+<p><img src="http://img.2222.moe/images/2015/12/08/output012c78.png" alt="Floyd–Steinberg 抖动算法"><br>可以看出，使用抖动算法的图片较好的掩盖了精度不足引起的色带和偏色问题。在YUV 和 RGB的运算过程中，如果出现高精度转低精度，是否使用抖动，使用的抖动算法如何，也会决定输出效果。</p>
+<p>现在，我们来模拟一下渲染器的工作流程，并用标注出可能造成画质差别的地方：</p>
+<ol>
+<li><p>渲染器从解码器那里获取YUV数据。注意拿到的数据可能是全精度，<strong>也可能是降精度</strong>，取决于渲染器接口类型；</p>
+</li>
+<li><p>播放器和显卡驱动可能会试图<strong>“优化”</strong>画面；</p>
+</li>
+<li><p>如果不是YUV444格式的，<strong>渲染器会先将UV平面放大到Y平面的大小</strong>。这个步骤称为Chroma upscaling；</p>
+</li>
+<li><p>将YUV444的数据，转为RGB。转换的过程势必需要浮点运算（YUV-&gt;RGB一些参与运算的常数是浮点数）；</p>
+</li>
+<li><p>播放器或者渲染器<strong>将RGB用特定的算法缩放到播放窗口大小</strong>。这个步骤称为Image Upscaling(图像放大)&#x2F;Downscaling(图像缩小)；</p>
+</li>
+<li><p>因为4的步骤中，必须以浮点数运算，而输出结果一定是RGB 8bit整数，因此输出之前<strong>必须有一个高转低的过程</strong>。</p>
+</li>
+</ol>
+<p>2~6每一步都涉及数字运算，<strong>因此有运算精度的区别</strong>。</p>
+<p>最好的渲染器-&gt;madVR。<br><br></p>
+<p>如果你使用的是madVR渲染器，你应该允许LAV输出它默认设置的那些格式，YUV&#x2F;RGB。LAV会以全精度输出YUV给madVR进行处理；如果你使用EVR渲染器，你应该永远只允许LAV输出RGB 8bit。</p>
+<p>RGB 8bit 包括RGB24和RGB32。RGB32多一个透明层通道，看似带了个没用的东西，但是因为计算机更喜欢2的次方，所以部分运算下RGB32比RGB24快。在视频播放中，这两个格式几乎完全等同；互转也人畜无害（加一个空的透明度通道 vs 去掉透明度通道）。</p>
+<p>之前基于EVR CP教程中，之所以pot推荐RGB24输出，而mpc推荐RGB32输出，是测试的结果。这样设置播放器不会再多一次转换（虽然就算转换了也没啥）。</p>
+<h1 id="硬解的优劣与选择"><a href="#硬解的优劣与选择" class="headerlink" title="硬解的优劣与选择"></a>硬解的优劣与选择</h1><p>绝大多数vcb-s的教程，都让大家不要开启硬解，就算开启，优先使用DXVA2(copy-back)，这里我们做一个详细的解释。</p>
+<p>首先考虑一个问题：什么样的视频能被硬解？</p>
+<p>8bit AVC可以被各种显卡硬解；然而8bit AVC格式的软解压力小的可怜，以vcb-s常发的24fps 1080p的视频算，现在CPU软解，占用率普遍不到5%。</p>
+<p>10bit AVC没有能硬解的。（所以10bit版炮姐时代，试图硬解的洗洗睡吧。）软解，解码压力尚可，不是很可怕，24fps 1080p的视频，现在的cpu大约10%</p>
+<p>8bit HEVC现在最新显卡普遍能硬解；然而因为8bit x265的缺陷（或者说8bit x264的优越性），我们发现这玩意表现多数还不及8bit AVC，所以vcb-s从来不用；相对而言，它的解码压力也不大，大致相当于10bit AVC。</p>
+<p>10bit HEVC，目前只有NV的GTX950和GTX960支持硬解。它的软解压力算是比较大，现在主流的CPU占用在20%左右；对于上古CPU或者一些低端笔记本CPU，流畅解码会比较吃力，特别是60fps的特典。对于将来的4K 60fps，现在桌面4核心CPU基本上完全无力软解。</p>
+<p>能硬解的视频必须是YUV420格式。</p>
+<p>分析完毕了，你觉得自己需要硬解么？</p>
+<p>如果你没有GTX960&#x2F;GTX950，你也基本碰不到1080p 60fps乃至4K的8bit HEVC，那么你只能去硬解8bit AVC，省那么5%不到的CPU占用率——真有这个必要么？软解吃力的硬解解不了，硬解解得了的软解解的飞起，那我们为什么要冒着各种潜在风险去开硬解呢？(因为省电←_←)</p>
+<p>好吧，就算你说我真有理由要开硬解：我有GTX960&#x2F;950，我的CPU真的太烂……我们来分析下不同情况下，硬解应该怎么开。硬解设置跟你使用的渲染器有关：</p>
+<p>如果你使用madVR，通常是不建议你开硬解的。众所周知madVR会消耗大量显卡运算，因此没必要再去把大量数据塞进GPU和显存，跟madVR抢夺资源。让CPU分担解码，让GPU专心跑madVR，是比较推荐的做法；</p>
+<p>如果你使用GTX960&#x2F;950硬解10bit HEVC，请务必设置为DXVA2(copy-back)，这是现在唯一可以开启10bit HEVC硬解的模式；</p>
+<p>其他情况下，如果你真的非要开硬解搭配madVR，建议顺序（保证你硬件可用）： Intel QS, DXVA2(native), NV CUVID, DXVA2(copy-back)，其实用哪个都没有太多关系，主要的功耗消耗点在madVR。</p>
+<p>如果你使用EVR CP（调节过缩放算法），希望追求较高质量的播放，你首先要排除的是DXVA2(Native)。因为这种模式下，LAV会直接输出YUV 8bit给显卡，哪怕强制规定了输出只能是RGB。用DXVA2(copy-back)是可以的；这种模式下，解码后的数据将回传给CPU，继续做高质量转RGB的后续操作。</p>
+<p>如果你使用GTX960&#x2F;950硬解10bit HEVC，请务必设置为DXVA2(copy-back)，理由同上，并且也需要强制RGB输出。</p>
+<p>其他情况下，建议顺序： Intel QS, NV CUVID, DXVA2(copy-back)</p>
+<p>所以不难理解为什么之前教程我说了，要开硬解请用DXVA2(copy-back)。这种软解流程、硬解运算的泛用性模式，是最人畜无害的，哪怕这种模式折腾程度，导致在性能和功耗上大多是得不偿失。</p>
+<p>追求最大性能的，特别是用来对付那些能够被硬解的高清病毒的，请使用EVR默认，搭配DXVA2(Native)播放。这样效率应该是最高的，各种专治8bit AVC 4K的高清病毒。只不过这种做法会损失画质，因此不建议日常使用。</p>
+<h1 id="图像格式的标识与查看方法"><a href="#图像格式的标识与查看方法" class="headerlink" title="图像格式的标识与查看方法"></a>图像格式的标识与查看方法</h1><p>在播放器中，不同格式、不同精度的图像，有着规范的定义和标号。这一点可以在LAV的设置界面很清楚的看到：</p>
+<p><img src="//vcb-s.com/wp-content/uploads/2015/12/20154.png" alt="图像格式"></p>
+<p>其中蓝色部分标示的这些是最常见到的，主要是YUV 420的不同精度，以及RGB格式（注意16bit RGB，即RGB48，在现有播放器体系下还没有实装，所以现在播放器中的RGB基本就是RGB 8bit）</p>
+<p>使用DXVA2(Native)硬解的时候，输出是DXVA，也是YUV420 8bit。</p>
+<p>RGB格式除了上文所说的RGB32和RGB24，播放器中还有XRGB和ARGB的标示，也都是一回事儿。</p>
+<p>Potplayer中观察方法，可以用tab键显示</p>
+<p>MPC-HC&#x2F;MPC-BE中，按Ctrl+J可以调出类似的信息：(再按1~2次取消)</p>
+<p>通过这样的查看方法，你可以知道你的播放器工作流程，以及设置是否按照预期。</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Encode/" rel="tag">Encode</a>, <a class="tag-none-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a>, <a class="tag-none-link" href="/tags/%E8%BF%87%E6%97%B6-Outdated/" rel="tag">过时(Outdated)</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2024-10-18T09:35:51.000Z" itemprop="dateModified">最后编辑：2024-10-18</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" [资料]Unicode字符编码表" href="/Document/Unicode字符编码表/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [Archived][开源]Locale-Emulator 游戏乱码的解决方案" href="/Game/Locale-Emulator/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/Encode/Video/" data-full-path="http://ted423.github.io/Document/Encode/Video/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                391
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                14
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                148
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">48</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.66em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.6em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Browser/" style="font-size: 0.7em;">Browser</a> <a href="/tags/CMD/" style="font-size: 0.62em;">CMD</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+
+
+
+    </body>
+</html>

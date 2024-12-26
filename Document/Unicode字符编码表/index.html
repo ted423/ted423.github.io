@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>[资料]Unicode字符编码表 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Document, 字符编码" />
+  
+  <meta name="description" content="起始-十进制|终止-十进制|起始-16进制|终止-16进制|字符数|	编码分类（中文）|编码分类（英文）    —    |    —    |   —     |    —    | —  |     —         |      —0|127|0000|007F|128|C0控制符及基本拉丁文|C0 Control and Basic Latin128|255|0080|00FF|128|">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[资料]Unicode字符编码表">
+<meta property="og:url" content="http://ted423.github.io/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="起始-十进制|终止-十进制|起始-16进制|终止-16进制|字符数|	编码分类（中文）|编码分类（英文）    —    |    —    |   —     |    —    | —  |     —         |      —0|127|0000|007F|128|C0控制符及基本拉丁文|C0 Control and Basic Latin128|255|0080|00FF|128|">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-12-20T02:45:00.000Z">
+<meta property="article:modified_time" content="2015-12-20T02:45:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="字符编码">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[资料]Unicode字符编码表</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2015-12-20T02:45:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2015-12-20</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~6.94K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>起始-十进制|终止-十进制|起始-16进制|终止-16进制|字符数|	编码分类（中文）|编码分类（英文）<br>    —    |    —    |   —     |    —    | —  |     —         |      —<br>0|127|0000|007F|128|C0控制符及基本拉丁文|C0 Control and Basic Latin<br>128|255|0080|00FF|128|C1控制符及拉丁文补充-1|C1 Control and Latin 1 Supplement<br>256|383|0100|017F|128|拉丁文扩展-A|Latin Extended-A<br>384|591|0180|024F|208|拉丁文扩展-B|Latin Extended-B<br>592|687|0250|02AF|96|国际音标扩展|IPA Extensions<br>688|767|02B0|02FF|80|空白修饰字母|Spacing Modifiers<br>768|879|0300|036F|112|结合用读音符号|Combining Diacritics Marks<br>880|1023|0370|03FF|144|希腊文及科普特文|Greek and Coptic<br>1024|1279|0400|04FF|256|西里尔字母|Cyrillic<br>1280|1327|0500|052F|48|西里尔字母补充|Cyrillic Supplement<br>1328|1423|0530|058F|96|亚美尼亚语|Armenian<br>1424|1535|0590|05FF|112|希伯来文|Hebrew<br>1536|1791|0600|06FF|256|阿拉伯文|Arabic<br>1792|1871|0700|074F|80|叙利亚文|Syriac<br>1872|1919|0750|077F|48|阿拉伯文补充|Arabic Supplement<br>1920|1983|0780|07BF|64|马尔代夫语|Thaana<br>1984|2047|07C0|07FF|64|西非書面語言|N’Ko<br>2048|2143|0800|085F|96|阿维斯塔语及巴列维语|Avestan and Pahlavi<br>2144|2175|0860|087F|32|Mandaic|Mandaic<br>2176|2223|0880|08AF|48|撒马利亚语|Samaritan<br>2304|2431|0900|097F|128|天城文书|Devanagari<br>2432|2559|0980|09FF|128|孟加拉语|Bengali<br>2560|2687|0A00|0A7F|128|锡克教文|Gurmukhi<br>2688|2815|0A80|0AFF|128|古吉拉特文|Gujarati<br>2816|2943|0B00|0B7F|128|奥里亚文|Oriya<br>2944|3071|0B80|0BFF|128|泰米尔文|Tamil<br>3072|3199|0C00|0C7F|128|泰卢固文|Telugu<br>3200|3327|0C80|0CFF|128|卡纳达文|Kannada<br>3328|3455|0D00|0D7F|128|德拉维族语|Malayalam<br>3456|3583|0D80|0DFF|128|僧伽罗语|Sinhala<br>3584|3711|0E00|0E7F|128|泰文|Thai<br>3712|3839|0E80|0EFF|128|老挝文|Lao<br>3840|4095|0F00|0FFF|256|藏文|Tibetan<br>4096|4255|1000|109F|160|缅甸语|Myanmar<br>4256|4351|10A0|10FF|96|格鲁吉亚语|Georgian<br>4352|4607|1100|11FF|256|朝鲜文|Hangul Jamo<br>4608|4991|1200|137F|384|埃塞俄比亚语|Ethiopic<br>4992|5023|1380|139F|32|埃塞俄比亚语补充|Ethiopic Supplement<br>5024|5119|13A0|13FF|96|切罗基语|Cherokee<br>5120|5759|1400|167F|640|统一加拿大土著语音节|Unified Canadian Aboriginal Syllabics<br>5760|5791|1680|169F|32|欧甘字母|Ogham<br>5792|5887|16A0|16FF|96|如尼文|Runic<br>5888|5919|1700|171F|32|塔加拉语|Tagalog<br>5920|5951|1720|173F|32|Hanunóo|Hanunóo<br>5952|5983|1740|175F|32|Buhid|Buhid<br>5984|6015|1760|177F|32|Tagbanwa|Tagbanwa<br>6016|6143|1780|17FF|128|高棉语|Khmer<br>6144|6319|1800|18AF|176|蒙古文|Mongolian<br>6320|6399|18B0|18FF|80|Cham|Cham<br>6400|6479|1900|194F|80|Limbu|Limbu<br>6480|6527|1950|197F|48|德宏泰语|Tai Le<br>6528|6623|1980|19DF|96|新傣仂语|New Tai Lue<br>6624|6655|19E0|19FF|32|高棉语记号|Kmer Symbols<br>6656|6687|1A00|1A1F|32|Buginese|Buginese<br>6688|6751|1A20|1A5F|64|Batak|Batak<br>6784|6895|1A80|1AEF|112|Lanna|Lanna<br>6912|7039|1B00|1B7F|128|巴厘语|Balinese<br>7040|7088|1B80|1BB0|49|巽他语|Sundanese<br>7104|7167|1BC0|1BFF|64|Pahawh Hmong|Pahawh Hmong<br>7168|7247|1C00|1C4F|80|雷布查语|Lepcha<br>7248|7295|1C50|1C7F|48|Ol Chiki|Ol Chiki<br>7296|7391|1C80|1CDF|96|曼尼普尔语|Meithei&#x2F;Manipuri<br>7424|7551|1D00|1D7F|128|语音学扩展|Phonetic Extensions<br>7552|7615|1D80|1DBF|64|语音学扩展补充|Phonetic Extensions Supplement<br>7616|7679|1DC0|1DFF|64|结合用读音符号补充|Combining Diacritics Marks Supplement<br>7680|7935|1E00|1EFF|256|拉丁文扩充附加|Latin Extended Additional<br>7936|8191|1F00|1FFF|256|希腊语扩充|Greek Extended<br>8192|8303|2000|206F|112|常用标点|General Punctuation<br>8304|8351|2070|209F|48|上标及下标|Superscripts and Subscripts<br>8352|8399|20A0|20CF|48|货币符号|Currency Symbols<br>8400|8447|20D0|20FF|48|组合用记号|Combining Diacritics Marks for Symbols<br>8448|8527|2100|214F|80|字母式符号|Letterlike Symbols<br>8528|8591|2150|218F|64|数字形式|Number Form<br>8592|8703|2190|21FF|112|箭头|Arrows<br>8704|8959|2200|22FF|256|数学运算符|Mathematical Operator<br>8960|9215|2300|23FF|256|杂项工业符号|Miscellaneous Technical<br>9216|9279|2400|243F|64|控制图片|Control Pictures<br>9280|9311|2440|245F|32|光学识别符|Optical Character Recognition<br>9312|9471|2460|24FF|160|封闭式字母数字|Enclosed Alphanumerics<br>9472|9599|2500|257F|128|制表符|Box Drawing<br>9600|9631|2580|259F|32|方块元素|Block Element<br>9632|9727|25A0|25FF|96|几何图形|Geometric Shapes<br>9728|9983|2600|26FF|256|杂项符号|Miscellaneous Symbols<br>9984|10175|2700|27BF|192|印刷符号|Dingbats<br>10176|10223|27C0|27EF|48|杂项数学符号-A|Miscellaneous Mathematical Symbols-A<br>10224|10239|27F0|27FF|16|追加箭头-A|Supplemental Arrows-A<br>10240|10495|2800|28FF|256|盲文点字模型|Braille Patterns<br>10496|10623|2900|297F|128|追加箭头-B|Supplemental Arrows-B<br>10624|10751|2980|29FF|128|杂项数学符号-B|Miscellaneous Mathematical Symbols-B<br>10752|11007|2A00|2AFF|256|追加数学运算符|Supplemental Mathematical Operator<br>11008|11263|2B00|2BFF|256|杂项符号和箭头|Miscellaneous Symbols and Arrows<br>11264|11359|2C00|2C5F|96|格拉哥里字母|Glagolitic<br>11360|11391|2C60|2C7F|32|拉丁文扩展-C|Latin Extended-C<br>11392|11519|2C80|2CFF|128|古埃及语|Coptic<br>11520|11567|2D00|2D2F|48|格鲁吉亚语补充|Georgian Supplement<br>11568|11647|2D30|2D7F|80|提非纳文|Tifinagh<br>11648|11743|2D80|2DDF|96|埃塞俄比亚语扩展|Ethiopic Extended<br>11776|11903|2E00|2E7F|128|追加标点|Supplemental Punctuation<br>11904|12031|2E80|2EFF|128|CJK 部首补充|CJK Radicals Supplement<br>12032|12255|2F00|2FDF|224|康熙字典部首|Kangxi Radicals<br>12272|12287|2FF0|2FFF|16|表意文字描述符|Ideographic Description Characters<br>12288|12351|3000|303F|64|CJK 符号和标点|CJK Symbols and Punctuation<br>12352|12447|3040|309F|96|日文平假名|Hiragana<br>12448|12543|30A0|30FF|96|日文片假名|Katakana<br>12544|12591|3100|312F|48|注音字母|Bopomofo<br>12592|12687|3130|318F|96|朝鲜文兼容字母|Hangul Compatibility Jamo<br>12688|12703|3190|319F|16|象形字注释标志|Kanbun<br>12704|12735|31A0|31BF|32|注音字母扩展|Bopomofo Extended<br>12736|12783|31C0|31EF|48|CJK 笔画|CJK Strokes<br>12784|12799|31F0|31FF|16|日文片假名语音扩展|Katakana Phonetic Extensions<br>12800|13055|3200|32FF|256|封闭式 CJK 文字和月份|Enclosed CJK Letters and Months<br>13056|13311|3300|33FF|256|CJK 兼容|CJK Compatibility<br>13312|19903|3400|4DBF|6592|CJK 统一表意符号扩展 A|CJK Unified Ideographs Extension A<br>19904|19967|4DC0|4DFF|64|易经六十四卦符号|Yijing Hexagrams Symbols<br>19968|40895|4E00|9FBF|20928|CJK 统一表意符号|CJK Unified Ideographs<br>40960|42127|A000|A48F|1168|彝文音节|Yi Syllables<br>42128|42191|A490|A4CF|64|彝文字根|Yi Radicals<br>42240|42527|A500|A61F|288|Vai|Vai<br>42592|42751|A660|A6FF|160|统一加拿大土著语音节补充|Unified Canadian Aboriginal Syllabics Supplement<br>42752|42783|A700|A71F|32|声调修饰字母|Modifier Tone Letters<br>42784|43007|A720|A7FF|224|拉丁文扩展-D|Latin Extended-D<br>43008|43055|A800|A82F|48|Syloti Nagri|Syloti Nagri<br>43072|43135|A840|A87F|64|八思巴字|Phags-pa<br>43136|43231|A880|A8DF|96|Saurashtra|Saurashtra<br>43264|43391|A900|A97F|128|爪哇语|Javanese<br>43392|43487|A980|A9DF|96|Chakma|Chakma<br>43520|43583|AA00|AA3F|64|Varang Kshiti|Varang Kshiti<br>43584|43631|AA40|AA6F|48|Sorang Sompeng|Sorang Sompeng<br>43648|43743|AA80|AADF|96|Newari|Newari<br>43776|43871|AB00|AB5F|96|越南傣语|Vi?t Thái<br>43904|43936|AB80|ABA0|33|Kayah Li|Kayah Li<br>44032|55215|AC00|D7AF|11184|朝鲜文音节|Hangul Syllables<br>55296|56319|D800|DBFF|1024|High-half zone of UTF-16|High-half zone of UTF-16<br>56320|57343|DC00|DFFF|1024|Low-half zone of UTF-16|Low-half zone of UTF-16<br>57344|63743|E000|F8FF|6400|自行使用區域|Private Use Zone<br>63744|64255|F900|FAFF|512|CJK 兼容象形文字|CJK Compatibility Ideographs<br>64256|64335|FB00|FB4F|80|字母表達形式|Alphabetic Presentation Form<br>64336|65023|FB50|FDFF|688|阿拉伯表達形式A|Arabic Presentation Form-A<br>65024|65039|FE00|FE0F|16|变量选择符|Variation Selector<br>65040|65055|FE10|FE1F|16|竖排形式|Vertical Forms<br>65056|65071|FE20|FE2F|16|组合用半符号|Combining Half Marks<br>65072|65103|FE30|FE4F|32|CJK 兼容形式|CJK Compatibility Forms<br>65104|65135|FE50|FE6F|32|小型变体形式|Small Form Variants<br>65136|65279|FE70|FEFF|144|阿拉伯表達形式B|Arabic Presentation Form-B<br>65280|65519|FF00|FFEF|240|半型及全型形式|Halfwidth and Fullwidth Form<br>65520|65535|FFF0|FFFF|16|特殊|Specials</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/" rel="tag">字符编码</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2015-12-20T02:45:00.000Z" itemprop="dateModified">最后编辑：2015-12-20</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" [扩展]Image Search Options - 右键搜图" href="/Browser/Extension/Image Search Options/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [半转载]播放器、视频基础知识" href="/Document/Encode/Video/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/" data-full-path="http://ted423.github.io/Document/Unicode%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E8%A1%A8/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                391
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                14
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                148
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">48</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.66em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.6em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Browser/" style="font-size: 0.7em;">Browser</a> <a href="/tags/CMD/" style="font-size: 0.62em;">CMD</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+
+
+
+    </body>
+</html>

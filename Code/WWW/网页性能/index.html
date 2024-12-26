@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>[转载]Web设计师和前端工程师要了解的前端性能知识 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="WWW, 转载" />
+  
+  <meta name="description" content="来源页面:http:&#x2F;&#x2F;copri.me&#x2F;post&#x2F;front-end-perf-translation.html 本文翻译自Css Wizardry上的Front-end performance for web designers and front-end developers。  对于任何一个还算过得去的网站，性能毫无疑问是要注意的一个非常重要的方面，无论这是一个个人作品站，或者是一个偏向手">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[转载]Web设计师和前端工程师要了解的前端性能知识">
+<meta property="og:url" content="http://ted423.github.io/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="来源页面:http:&#x2F;&#x2F;copri.me&#x2F;post&#x2F;front-end-perf-translation.html 本文翻译自Css Wizardry上的Front-end performance for web designers and front-end developers。  对于任何一个还算过得去的网站，性能毫无疑问是要注意的一个非常重要的方面，无论这是一个个人作品站，或者是一个偏向手">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-15T14:35:35.639Z">
+<meta property="article:modified_time" content="2015-03-21T12:41:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="转载">
+<meta property="article:tag" content="WWW">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[转载]Web设计师和前端工程师要了解的前端性能知识</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2024-08-15T14:35:35.639Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-08-15</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~10.71K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>来源页面:<a target="_blank" rel="noopener" href="http://copri.me/post/front-end-perf-translation.html">http://copri.me/post/front-end-perf-translation.html</a></p>
+<p>本文翻译自<a target="_blank" rel="noopener" href="http://csswizardry.com/">Css Wizardry</a>上的<a target="_blank" rel="noopener" href="http://csswizardry.com/2013/01/front-end-performance-for-web-designers-and-front-end-developers/">Front-end performance for web designers and front-end developers</a>。</p>
+<hr>
+<p>对于任何一个还算过得去的网站，性能毫无疑问是要注意的一个非常重要的方面，无论这是一个个人作品站，或者是一个偏向手机的web app，亦或是一个巨大的电子商务站点。各种各样的研究、文章和个人经历告诉我们“越快越好”。</p>
+<p>性能问题不仅仅是非常重要，也十分有趣，是我在工作中（我一直都缠着我们的首席性能工程师）、一些个人的项目里以及在CSS Wizardry（我一直缠着<a target="_blank" rel="noopener" href="http://twitter.com/andydavies">Andy Davies</a>）中都要接触的东西。</p>
+<p>在这篇老长的文章里会分享一大堆快速、简单明了而又耐人寻味的性能相关知识作为web设计师和前端开发者的入门指导。希望对于那些想要开始学习性能相关知识、并且想要提升他们的前端页面速度的人来说，这篇文章能够作为一篇比较合适的介绍。你可以比较轻松的运用下面讲到的所有技巧。仅仅需要一些小聪明和了解基本的浏览器工作原理，你就能开始加入整个这场“性能的游戏”了！</p>
+<hr>
+<p>这篇长文里面没有大段大段让人疑惑的图表或者抓狂的数字，里面展现的是我通过不断阅读、运行监视、协作和玩弄（俺花了很多时间黏在CSS Wizardry的性能瀑布图上面）后积累下来的一手的性能相关的技巧。我也会在文章里链接一些类似主题的文章去进一步说明一些比较重要的部分呢。让我们开始吧！</p>
+<p>注意：这篇文章确实需要一些基础的性能知识作为铺垫，不过如果在阅读的过程中有什么不太清楚的地方就去问Google吧！</p>
+<hr>
+<h2 id="基础部分"><a href="#基础部分" class="headerlink" title="基础部分"></a>基础部分</h2><p>有些性能相关的事情几乎所有的设计师和前端工程师都会知道，比如尽量减少请求的数量，优化图片，把样式表放在<code>&lt;head&gt;</code>里，把JS放在<code>&lt;/body&gt;</code>之前，压缩处理JS和CSS文件等。这些基础的东西已经给用户带来了更快的浏览体验，不过这些只是沧海一粟罢了。</p>
+<p>需要注意的很重要的一点是：那些每天虐我们千百遍的浏览器是很聪明的。它们会暗自帮你做一大堆优化工作，所以很多的有关性能优化工作需要去了解浏览器会在哪些地方做文章，并且如何最大化利用这一点。不少有关性能调优技巧仅仅去从理解、利用和操控那些浏览器已经给我们做的东西入手。</p>
+<h3 id="样式放顶部，脚本放底部"><a href="#样式放顶部，脚本放底部" class="headerlink" title="样式放顶部，脚本放底部"></a>样式放顶部，脚本放底部</h3><p>这是非常基础而又很容易被应用的规则，但是为什么它有作用呢？简要的说是这样的：</p>
+<ul>
+<li><strong>CSS会阻塞浏览器的渲染</strong>，所以你需要马上去处理它（即：放在文档头部<code>&lt;head&gt;</code>里）</li>
+<li><strong>JS会阻塞下载</strong>，所以为了防止它们耽搁页面上其它东西的显示你需要将其放到最后的地方。</li>
+</ul>
+<p>CSS阻塞页面渲染是因为浏览器们会更倾向逐步地显示页面：它们一拿到样式，就开始迫不及待地将这些样式按顺序渲染出来。如果样式在页面下方的话，浏览器就会等那么一段时间才能考虑到样式的事情。这样浏览器在之前文档里改变了一些已经渲染的东西时可以防止样式的重绘。所以浏览器在获取到所有的样式信息之前不会去渲染页面，如果将这些信息放在文档的末尾的话就会阻塞浏览器的渲染。</p>
+<p>所以将CSS文件放在页面顶部会让浏览器立马开始页面的渲染。</p>
+<p>Javascript阻塞浏览器的下载有不少原因（浏览器显示聪明材智的另一个地方），不过首先我们需要了解浏览器是任何处理文件的下载的。简单的说，浏览器会从一个域名下并行下载尽可能多的文件。越多域的话，就有越多的文件能够被立即并行下载。</p>
+<p>不过Javascript打断了这个过程，阻塞了从各个域下的并行下载，这是因为：</p>
+<ul>
+<li>被调用的脚本可能会改变页面，这样浏览器在处理下一步之前将不得不面对这个问题。为了解决这个问题浏览器会停止所有的下载并专心放在脚本上。</li>
+<li>脚本的载入通常是有顺序要求的，比如在载入一个jQuery插件之前需要先加载jQuery文件。浏览器会阻塞并行的下载，这样就不会出现同时下载jQuery和插件的情况。很明显如果同时下载jQuery和插件文件的话，插件文件一般会先下载完成。</li>
+</ul>
+<p>因此，正是因为浏览器在处理JS的时候会停止所有其它文件的下载，把你的Javascript放到文档末尾通常是个好的选择。你肯定看到过一些网站在花大把时间加载第三方JS文件的时候阻塞了其它文件的获取从而造成一些区域长时间显示空白的情形，这就是Javascript阻塞的真实故事。</p>
+<p>不过浏览器还算是比较聪明的。我将会引用一段Andy Davies给我的邮件里的内容，因为这里他讲的比我更好：</p>
+<blockquote>
+<p>现代浏览器将会并行地下载JS，不过渲染只有在JS脚本执行结束之后才会开始（当然也需要被下载完毕）。</p>
+<p>脚本的下载通常由浏览器预加载器完成。</p>
+<p>当浏览器的渲染因为等待CSS或执行JS等情况而阻塞，它的预分析器将会扫描页面剩下的部分找寻能够下载的资源。</p>
+<p>有些浏览器，比如Chrome，下载文件的时候不同的文件会有不同的优先级。举个栗子：如果脚本和图片都在同时等待下载的话浏览器会先下载脚本</p>
+</blockquote>
+<p>聪明！</p>
+<p>因此，要是一个页面尽可能快地渲染，将样式放在顶部。要防止JS阻塞页面的渲染，把脚本放在底部吧。</p>
+<h3 id="更少的请求数目"><a href="#更少的请求数目" class="headerlink" title="更少的请求数目"></a>更少的请求数目</h3><p>另外一个非常明显和基本的优化性能的方法就是下载更少的东西。每个页面的一个文件是一个额外的HTTP请求。为了渲染页面，浏览器将不得不去获取页面所需的每一个文件。每一个请求都可能会引发DNS的查找、重定向、404等等。每一个发出去的HTTP请求，不论是样式表、图片、Web字体、JS文件还是你能想到的其它文件，都会是潜在的巨大开销。将请求的数目降到最小是一个最容易的优化方法。</p>
+<p>回到浏览器和并行。大多数的浏览器会一次只从每个引用的域下载一些资源，而JS会阻塞这些资源的下载。每一个HTTP请求都应该好好考量，不要轻视。</p>
+<h3 id="并行的最大化"><a href="#并行的最大化" class="headerlink" title="并行的最大化"></a>并行的最大化</h3><p>为了让浏览器并行地下载更多的资源，你可以通过不同的域来提供。比如，一个浏览器只能同时从一个域获取两个文件，那么由两个域提供的话浏览器就能同时获取4个资源，3个域就是6个资源。</p>
+<p>很多网站会有静态资源域名。你可以看到Twitter使用<code>si0.twimg.com</code>来提供静态资源：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://si0.twimg.com/a/1358386289/t1/css/t1_core.bundle.css&quot;</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span> <span class="attr">media</span>=<span class="string">&quot;screen&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Facebook使用<code>fbstatic-a.akamaihd.net</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://fbstatic-a.akamaihd.net/rsrc.php/v2/yi/r/76f893pcD3j.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>通过使用这些静态文件、资源的域，Twitter和Facebook能够并行提供更多的文件。<code>twitter.com</code>的文件和<code>si0.twimg.com</code>的文件能够连续地下载。这是个增加页面下载并发数目的简单方法，如果联合CDN技术通过将资源放在合适的物理地点用来减少延迟的话就更好了。</p>
+<p>上面讲的东西都挺好的，不过在后面的讨论中，我们将发现在某些特定的情况下，由子域名提供资源会对性能造成不好的影响。</p>
+<p>到此为止，我们有了以下的关于性能的基础知识：</p>
+<ul>
+<li>将样式表放在文档的顶部</li>
+<li>将Javascript放在靠底部（可以放的地方）</li>
+<li>尽量的减少请求的数目</li>
+<li>由不同的域来提供资源可以使浏览器同时下载资源的数目最大化</li>
+</ul>
+<h2 id="HTTP请求和DNS查找"><a href="#HTTP请求和DNS查找" class="headerlink" title="HTTP请求和DNS查找"></a>HTTP请求和DNS查找</h2><p>每当你从任意的域请求一个资源的时候，一个有相关头部信息的HTTP请求便发出，资源被找到，获得响应。这是一个简化了很多的过程，但是整个过程差不多就是这样。对于这样的一个HTTP请求，所有相关的资源都在这个往返的过程中涉及到。这些请求正是前端性能的主要瓶颈所在，因为正如我们说过的，浏览器被并发的请求数量所限制。这就是为什么我们会常用子域名，进而使这些请求发生在不同的域上，增大请求并发的数量。</p>
+<p>不过这样做有会有一个问题，就是DNS查询。每一次（没有被缓存的）一个新的域被引用，相应的HTTP请求会受累于一个耗时不短的DNS查询（差不多20到120ms的一个时间）来确定资源真实的所在地。Internet由一个个IP地址连接，而可以由域名来引用，而DNS则管理这样一个对应的系统。</p>
+<p>若每个被引用的新的域都在DNS查找上先花费时间的话，你最好确认这个花费是值得的。如果是一个小站（比如CSS Wizardry），那么由子域提供资源则有点不值得了。浏览器也许在从一个域下并发获取资源的耗时会比在多的域下执行DNS查找后并发获取的时间要短。</p>
+<p>如果你有一大堆资源需要获取，那么你也许可以考虑将这些资源放在多个子域下，多出来的DNS查询时间对于更多的并发下载数目来说可能是值得的。如果你有比如40个资源，将它们放在两个子域下或许是很值得的，两次额外的DNS查询总共三个域给网站提供服务还是比较划算的。</p>
+<p>DNS查询的代价很高，因此你需要确定上面的那种方案更适合你的网站：花些时间在DNS的查找上还是把所有的东西放在一个域下。</p>
+<p>很重要的一点是一旦HTML从比如<code>foo.com</code>获取到后，对这个域的DNS查找已经发生过了，所以接下来所有到foo.com的请求不会再受制于DNS查询了。</p>
+<h3 id="DNS预获取"><a href="#DNS预获取" class="headerlink" title="DNS预获取"></a>DNS预获取</h3><p>如果你像我这样在网站上会放一些比如Twitter的控件、Analytics，亦或是Web字体，那么你将不得不链到这样的外部网站，而这时会引发DNS查找的。我的建议是一般在没有仔细考虑这些东西对性能的影响之前不要轻易使用它们，但是如果你是真的需要用到的话，下面的技巧会有些作用……</p>
+<p>由于这些东西在其它的域上，这就意味着，比如你的Web字体相关的CSS将会和你自己网站上的CSS同时被下载，当然这是一个好的方面，但是脚本任然会阻塞（除非脚本的加载是<a target="_blank" rel="noopener" href="http://css-tricks.com/thinking-async/">异步</a>的）。</p>
+<p>这里真正的问题是DNS查找会牵扯到第三方的域名。不过幸运的是，有一种超快并、简单的方法来加速这个过程：DNS预获取。</p>
+<p>DNS预获取就跟上面所描述的那样，能够被非常简单的实现。如果你需要从，比如<code>widget.foo.com</code>获取资源的话，你可以通过简单的在<code>&lt;head&gt;</code>里加入下面的片段来预先获取提供者的DNS：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;dns-prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;//widget.foo.com&quot;</span>&gt;</span></span><br><span class="line">    ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这行简单的单面会告诉那些支持DNS预获取的浏览器在需要资源前先去查找相关域名的DNS。这意味着当浏览器处理到相应插件的<code>&lt;script&gt;</code>元素的时候DNS查询已经完成了。它给了浏览器一个小起步。</p>
+<p>这个简单的link元素（<a target="_blank" rel="noopener" href="https://github.com/csswizardry/csswizardry.github.com/blob/b52472cea6a0f087944afda750839d7c96fab7d3/_layouts/default.html#L7-L15">我用在了CSS Wizardry上</a>）是一个完全向后兼容的，并且不会带来任何的性能影响。想想它能够带来多大的性能提升吧！</p>
+<h3 id="深入阅读"><a href="#深入阅读" class="headerlink" title="深入阅读"></a>深入阅读</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://calendar.perfplanet.com/2012/speed-up-your-site-using-prefetching/">Speed Up Your Site Using Prefetching</a></li>
+</ul>
+<h2 id="资源预获取"><a href="#资源预获取" class="headerlink" title="资源预获取"></a>资源预获取</h2><p>和DNS预获取一样，对网站的任何资源的预获取也很简单。为了明确那些资源是我们需要预获取的，我们必须首先了解浏览器是怎样在核实请求一个资源的。</p>
+<p>CSS里面引用的Web字体和图片的表现大体上有相同。浏览器在处理到一段需要这些资源的HTML的文件时才会去开始获取它们。就如我之前所说的，这是浏览器非常聪明的一个例子。想象一下如果浏览器处理那些引用图片CSS的时候在声明的地方就开始下载这些图片：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.page--home</span>         &#123; <span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">home.jpg</span>); &#125;</span><br><span class="line"><span class="selector-class">.page--about</span>        &#123; <span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">about.jpg</span>); &#125;</span><br><span class="line"><span class="selector-class">.page--portfolio</span>    &#123; <span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">portfolio.jpg</span>); &#125;</span><br><span class="line"><span class="selector-class">.page--contact</span>      &#123; <span class="attribute">background-image</span>:<span class="built_in">url</span>(<span class="string">contact.jpg</span>); &#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果浏览器不等等真正需要这些图片的HTML出现的话，那么只访问主页则会将所有的图片都加载，这样真心很浪费啊，所以浏览器会确定页面是否是真的需要这些图片然后才会去下载它们。这儿的问题是对这些图片的下载不能马上进行，要到老远的地方才开始。</p>
+<p>如果我们能够完全确定某张CSS里的图片在每个页面都会用的到，那么我们可以用个技巧让浏览器提前在用到它的HTML片段出现之前下载这张图片。达到这一点异常简单，如果你要求严格的话代码看起来也许有些糙。</p>
+<p>不怎么漂亮的方法，看起来像是一个万能方法，就是在每个页面都放一个隐藏的<code>&lt;div&gt;</code>，里面放有带有那张CSS图片src、alt属性置空的<code>&lt;img&gt;</code>元素。我对CSS Wizarrdy的sprite图片就是这样处理的，这点上我很自信因为我确定所有的页面都会用到这张图。浏览器处理内联（inline）的<img>元素的处理方式正如我们需要的那样会预获取，早早地下载到本地。所以让浏览器以<code>&lt;img&gt;</code>的形式载入我的spirte图片会在真的需要它之前就加载完成。我就能够在HTML引用到图片的时候直接使用了。</p>
+<p>第二种更“漂亮”一些的方法会有些比较困惑的地方，看起来和DNS预获取的例子比较像：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;sprite.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这段话明确的告诉了浏览器开始预获取我的sprite图片，不管它在分析了我的CSS文件后会做出的任何决定。</p>
+<p>困惑主要是源自于两篇文章里面描述的不一致带来的。在<a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Link_prefetching_FAQ">一篇MDN的文章</a>里，看起来这种预获取知识给了浏览器在闲置状况下一个可以开始预获取资源的提示。不过相反的是，在来自于<a target="_blank" rel="noopener" href="http://calendar.perfplanet.com/2012/speed-up-your-site-using-prefetching/">Planet Performance的文章</a>里指出浏览器如果支持<code>rel=&quot;prefetch&quot;</code>的话，就会预获取文件，没有谈到浏览器闲置状态的事情。我在DevTools的网络瀑布图里面看到的好像更支持后一种说法，不过WebKit很怪异的一点是在打开DevTools时候你不能动态观察预获取的情况，这样我不能100%的肯定。如果谁能把这一点说清楚那就感激不尽了。</p>
+<p>我提过字体和图片的表现是差不多的，上面的那条规则对字体文件同样使用，不过你不能通过隐藏的div载入一个字体（需要通过预获取的link）。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;prefetch&quot;</span> <span class="attr">href</span>=<span class="string">&quot;webfont.woff&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>所以基本上我们这里做的就是对浏览器耍些花招让它提前下载资源，到应用我们的CSS的时候，就可以直接使用已经下载好的资源了（或者正在下载中）。漂亮！</p>
+<h3 id="深入阅读-1"><a href="#深入阅读-1" class="headerlink" title="深入阅读"></a>深入阅读</h3><ul>
+<li><a target="_blank" rel="noopener" href="http://calendar.perfplanet.com/2012/speed-up-your-site-using-prefetching/">Speed Up Your Site Using Prefetching</a></li>
+</ul>
+<h2 id="CSS与性能"><a href="#CSS与性能" class="headerlink" title="CSS与性能"></a>CSS与性能</h2><p>很多的建议都有说道如果使用资源域，你应该将所有的静态资源都放在上面。包括了CSS，JS，图片等。</p>
+<p>不过我们在工作中发现，你不应当由资源子域提供CSS文件……</p>
+<p>还记得之前我们讨论过CSS是怎样阻塞页面渲染的？浏览器希望尽快的获得你的CSS文件，越快越好。CSS是条关键路径。所谓关键路径是从用户发起请求到真正的在浏览器上看到什么东西的一条必经之路。正是由于它阻塞了渲染，CSS才是关键路径，JS和图片则不是。你所希望的是使这条路走的尽量快，所以最好没有DNS的查询。</p>
+<p>在工作中，我们创建了这样一个网站，在接近线上的环境里所有资源全放在一个主机（比如<code>foo.com</code>）下，不过当这个环境变得更像真实的场景的时候，我们有奖所有的资源放到了<code>s1.foo.com</code>和<code>s2.foo.com</code>下。也就是说所有的图片、JS、CSS、字体等都从这两个域下获取，这样引发了DNS的查询。问题在于，在查询缓存失败情况下，为了开始获取CSS文件而必须经历的DNS查询会拖慢这条关键路径的节奏。我们的图片大片的不清楚，说明出现了理应不存来的时延。最佳实践告诉我们应该将这些资源全放在子域上，不是么？不过不包括CSS。DNS查询耗费了大段的时间从而拖慢了整个网页的渲染。</p>
+<p>正如<a target="_blank" rel="noopener" href="http://www.phpied.com/css-and-the-critical-path/">Stoyan Stefanov指出的</a>那样，由于CSS阻塞了页面渲染，所以CSS成为了性能面临的最大的敌人之一。同时值得注意的是浏览器在开始渲染之前会下载所有的CSS文件。这意味着浏览器即使只是将页面显示在屏幕上也会去获取print.css文件。这样即使在media query中用到的样式表 (比如<code>&lt;link rel=&quot;stylesheet&quot; media=&quot;screen and (min-device-width: 800px)&quot; href=&quot;desktop.css&quot;&gt;</code>)就算不会被用到还是会被下载下来。</p>
+<p>即便如此，Andy Davices曾经告诉我说WebKit实际上会给调整CSS文件的优先级，这样那些在初始化渲染时所需要的CSS文件就会首先被下载，而其它的，比如<code>print.css</code>被尽量延迟到后面。太棒了！</p>
+<p>在了解CSS这些情况后，根据CSS阻塞渲染、CSS文件全部被请求以及CSS的加载是一条关键路径，我们能够得出下面的一些结论：</p>
+<ul>
+<li><strong>永远不要将CSS文件放在提供静态资源的子域上</strong>，因为它会触发DNS查询造成渲染的延迟</li>
+<li><strong>尽早提供</strong>，这样浏览器可以继续做事</li>
+<li><strong>合并它们</strong>，反正浏览器会加载所有的CSS文件，把它们合到一起减少HTTP请求何乐不为呢</li>
+<li><strong>压缩和最小化</strong>，浏览器下载文件变小</li>
+<li><strong>缓存它们！</strong>减少上面几点的发生</li>
+</ul>
+<p>CSS是一条关键路径，所以你应当尽早解决它，它阻塞了渲染，意味着降低了用户体验。将CSS移到子域上会降低网站的性能。</p>
+<p>###深入阅读</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.phpied.com/css-and-the-critical-path/">CSS and the critial path</a></li>
+</ul>
+<h2 id="压缩和最小化"><a href="#压缩和最小化" class="headerlink" title="压缩和最小化"></a>压缩和最小化</h2><p>这是两个你能（并且应该）对文字类资源做的事情。去除多余的空格和注释来最小化，通过压缩进一步缩减文件的大小。</p>
+<p>如果两者选其一的话，仅压缩会比最小化更高效。不过，你应该尽量两个都用。</p>
+<p>将gzip压缩打开通常需要一些.htaccess的技巧，不过我的好朋友Nick Payne指出，.htaccess从服务器端来看并不是特别好的方式，这是因为每次有新的请求时.htaccess都会被计算一次，所以实际上会有很大的消耗。</p>
+<p>下面摘自<a target="_blank" rel="noopener" href="http://httpd.apache.org/docs/2.2/howto/htaccess.html">Apache的官方文档</a>：</p>
+<blockquote>
+<p>如果你有修改服务器端配置文件的权限，你应该完全避免使用.htaccess文件。使用.htaccess文件会减慢你的<br>Apache服务器。你能在.htaccess文件里声明的指令最好放在<br><a target="_blank" rel="noopener" href="http://httpd.apache.org/docs/2.2/mod/core.html#directory">Directory块</a><br>中，这样会有相同的效果，并获得更好的性能</p>
+</blockquote>
+<p>如果你仅仅有修改.htaccess的权限那么我就不用多担心了。这个开销通常不用太过于担心。在.htaccess里打开gzip压缩很简单。最小化文件倒是不那么容易，除非你有一个具体处理的过程，或者使用CodeKit、预处理器这样一类的同时直接得到最小化后的文件。</p>
+<p>有趣的是，我将inuit.css迁移到Sass上主要是为了很方便的得到一个最小化的版本。</p>
+<p>最小化在大多数情况下只是简单的移去空格和注释。如果你在代码里加了一大堆注释的话，我建议你还是好好最小化一下你的文件。</p>
+<p>Gzip，正如其它的压缩算法一样，将任何文本输入通过对重复的&#x2F;可重复的字符串操作而达到压缩效果。很多有重复字符串的代码都能够很高效地通过gzip进行压缩。比如：CSS文件里面重复的<code>backgrounnd-image</code>，HTML里面的<code>&lt;strong&gt;</code>标签。</p>
+<p>Gzip能够很明显地减小文件的大小，你应该毫无疑问地启用它。<a target="_blank" rel="noopener" href="https://github.com/h5bp/html5-boilerplate/blob/dac15682b35ad69f519205e1b82694d0cab189ca/.htaccess#L153">这里</a>有个很好的.htaccess文件作为模板。</p>
+<p>压缩你的内容会节省大量的资源。在写这篇文章的时候，inuit.css大约有77kb。压缩后打大小只有5.52kb。最小化和压缩后的给我们减少93%的体积。并且由于gzip在文本文件上效果不错，你甚至可以对SVG和字体文件得到不错的压缩结果！</p>
+<h2 id="图片优化"><a href="#图片优化" class="headerlink" title="图片优化"></a>图片优化</h2><p>除了使用一些优化工具外，我对优化图片的艺术了解的并不是很多，不过在处理图片上包括后期处理是一个很有趣的主题。</p>
+<h3 id="Spriting"><a href="#Spriting" class="headerlink" title="Spriting"></a>Spriting</h3><p>CSS sprite技术对于一个高性能的网站是必不可少的，通过一个HTTP请求加载一张大的图片而不要通过几个请求加载几张小图。然而问题在于不是所有的图片是能够被切分放入sprite中。你也许需要一个图标作为一个不定宽度元素的背景，不过你显然不能将器sprite化，因为sprite在非固定宽度的元素上不那么好用。也许你可以用空白来填充图标左右的空间，但这些被浪费的像素又会会造成其它的性能问题</p>
+<p>为了解决这些不能sprite化的元素，我们需要被称为“spriting元素”的东西。它基本上是一个空元素，一般用<code>&lt;i&gt;</code>，它的作用就是一个带有背景的空元素。</p>
+<p>在我开发Sky Bet、YouTube这样用，Facebook这样用，Jonathan Snook在SMACSS里有一大段都是它们。</p>
+<p>基本的做法是，如果你不能将一个宽度不固定元素sprite化，那么就插入一个宽高确定的空元素，这样你就可是使用sprite技术了，比如这样：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/profile/&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;icon  icon--person&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span> Profile</span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在这里，我们不能sprite化<code>&lt;li&gt;</code>元素或者<code>&lt;a&gt;</code>元素，因此，我们在其中插入一个将图标作为背景的空<code>&lt;i&gt;</code>元素。这是我关于性能最喜欢的事情之一，将优化性能的聪明做法和传统的“坏”标记结合起来。真是有趣！</p>
+<h3 id="Retina下的图片"><a href="#Retina下的图片" class="headerlink" title="Retina下的图片"></a>Retina下的图片</h3><p>你不需要将所有的图片都适应Retina屏幕。一个2x的图片包含有标准图片4倍的像素。四 倍 像 素。当然这不是说在传输的时候也是四倍大小-感谢图片自身的编码格式-不过这意味着一旦图片被解压缩并由浏览器渲染出来，4倍相对于标准图片大小内存将被占用。</p>
+<p>如果我们好好思考一下，retina图片多数(即使不总是)是作为手机上高保真的UI组件显示的。手机的内存通常会比其它终端要少。Retina这烧内存的东西居然主要是提供给那些内存不那么多的终端用的……在你决定是否要全盘使用retina图片一定要三思啊，或者你可以做些明智的妥协？</p>
+<p>视网膜屏幕（Retina）是很好的东西，清晰的体验，不过如果要花5秒去下载换得这样的体验是不值得的。在大多数情况下，速度要胜于美学。</p>
+<p>你可以聪明地给所有的终端提供1.5x大小的图片，以换取还算好的图片体现，不过我觉得最好的选择还是谨慎使用retina图片。</p>
+<p>如果你的数据表示可以接受的话，你也许可以使用SVG或者图标字体（icon font）代替位图图片。我在CSS Wizardry上用SVG带来了不少好处：</p>
+<ul>
+<li>分辨率无关</li>
+<li>可最小化</li>
+<li>可压缩</li>
+</ul>
+<p>工作中Matt Allen给我们做了一套图标字体，能够能和sprite元素一起提供retine支持可缩放的图标。</p>
+<h3 id="渐进显示的JPG"><a href="#渐进显示的JPG" class="headerlink" title="渐进显示的JPG"></a>渐进显示的JPG</h3><p>性能的一个有趣的方面是从人的感知所体现的。不是数字反应出来的东西，而是感觉上一个网站的载入速度有多快。</p>
+<p>当显示大的JPG图片的时候，你也许对那种一点一点往下显示的载入方式更熟悉。先是100像素，然后暂停，接着50像素，暂停，突然图片另外200像素又跳了出来，哗，接着整个图片终于显示完全了。</p>
+<p>这是传统的基本类型的JPG的工作方式，停停顿顿的体验。切换到渐进显示的JPG后你可以让它们通过更流行的方式载入：首先显示的是整个图片，不过都是一些像素块，然后逐渐地变得清晰起来。这听起来比前一种方式要差，不过感觉起来载入得更快。用户会马上有东西可看，并且图片的质量逐渐提高。这种类型的JPG会比基本的要稍微大一些，不过使体验快了许多。</p>
+<p>要启用渐进式的JPG你仅需要在Photoshop另存为web格式的时候勾选相应的复选框就行了。收工！</p>
+<h4 id="深入阅读-2"><a href="#深入阅读-2" class="headerlink" title="深入阅读"></a>深入阅读</h4><ul>
+<li><a target="_blank" rel="noopener" href="http://calendar.perfplanet.com/2012/progressive-jpegs-a-new-best-practice/">Progressive jpegs: a new best practice</a></li>
+</ul>
+<h3 id="完全不用图片"><a href="#完全不用图片" class="headerlink" title="完全不用图片"></a>完全不用图片</h3><p>比用CSS sprite、SVG和避免retina兼容更好的做法就是什么图片都不用。如果你能100%用图片还原设计，而纯CSS方法能够做到75%的还原度，那么纯CSS的解决方案会更好（当然代码不要超过100行）。避免图片就潜在地减少了HTTP请求，也有助于维护。尽量不用图片把。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>于是我们有了一些 (但不怎么多)可做的事情可以用来利用浏览器并使你的前端交互更快。了解一些浏览器如何工作的知识可以让我们进一步操控它并提高我们前端页面的速度。</p>
+<p>如果你有任何需要补充或者不同意、需修正的地方，请加入论坛中这一分支的讨论。性能的世界对我来说依然相对较新，因此我期待不断学习他人，并有所进步。</p>
+<p>我真心希望这篇文字能在某种程度上启发到你，也让你接触到你之前可能从未想过的一些新东西。我也希望这篇文章可以帮助你了解到性能的乐趣。</p>
+<p>我要特别感谢Nick Payne和Andy Davies在我写这篇文章的过程中帮助弄清了一些事情。太感谢了！</p>
+<h2 id="深入阅读-3"><a href="#深入阅读-3" class="headerlink" title="深入阅读"></a>深入阅读</h2><p>如果你觉得这篇文章不错，并且想了解更多的话，我强烈建议读读下面的文章：</p>
+<ul>
+<li>Souders’ <a target="_blank" rel="noopener" href="http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309">High Performance Websites</a> and <a target="_blank" rel="noopener" href="http://www.amazon.com/Even-Faster-Web-Sites-Performance/dp/0596522304">Even Faster Websites</a>.</li>
+<li><a target="_blank" rel="noopener" href="http://www.phpied.com/">Stoyan Stefanov</a>‘s site.</li>
+<li><a target="_blank" rel="noopener" href="http://www.igvita.com/">Ilya Grigorik</a>’s site.</li>
+<li><a target="_blank" rel="noopener" href="http://twitter.com/andydavies">Andy Davies</a>.</li>
+</ul>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/WWW/" rel="tag">WWW</a>, <a class="tag-none-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2015-03-21T12:41:00.000Z" itemprop="dateModified">最后编辑：2015-03-21</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 网页符号转义" href="/Code/WWW/符号转义/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [Javascript]获取文本节点" href="/Code/WWW/获取文本节点/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/" data-full-path="http://ted423.github.io/Code/WWW/%E7%BD%91%E9%A1%B5%E6%80%A7%E8%83%BD/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                391
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                14
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                148
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">48</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.66em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.6em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Browser/" style="font-size: 0.7em;">Browser</a> <a href="/tags/CMD/" style="font-size: 0.62em;">CMD</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+
+
+
+    </body>
+</html>

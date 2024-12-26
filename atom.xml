@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>个人小站</title>
+  
+  <subtitle>Take&amp;Give</subtitle>
+  <link href="http://ted423.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://ted423.github.io/"/>
+  <updated>2024-12-26T02:03:18.296Z</updated>
+  <id>http://ted423.github.io/</id>
+  
+  <author>
+    <name>ted423</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DIE-engine - 文件信息查看</title>
+    <link href="http://ted423.github.io/Software/DIE-engine/"/>
+    <id>http://ted423.github.io/Software/DIE-engine/</id>
+    <published>2024-12-25T08:51:48.331Z</published>
+    <updated>2024-12-26T02:03:18.296Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/horsicq/DIE-engine">https://github.com/horsicq/DIE-engine</a></p><p>感觉可以取代 <a href="/Software/Exeinfo%20PE.md">Exeinfo PE</a></p><p>只不过会稍微重一点,不过支持文件夹安装包和压缩包</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/horsicq/DIE-engine&quot;&gt;https://github.com/horsicq/DIE-engine&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;感觉可以取代 &lt;a href=&quot;/Software/Exeinfo%20PE.m</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PasteLink - Win下便捷创建硬链接软连接</title>
+    <link href="http://ted423.github.io/Software/PasteLink/"/>
+    <id>http://ted423.github.io/Software/PasteLink/</id>
+    <published>2024-12-23T03:39:43.243Z</published>
+    <updated>2024-12-23T03:39:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/zhaoyangwx/PasteLink">https://github.com/zhaoyangwx/PasteLink</a><br>软件没设 License, 故应该算开源无限制？</p><p>长期没有维护比较可惜，不过应该没什么明显问题。</p><p>注意 .reg 文件的编码改为 utf-8,不然使用可能会右键菜单乱码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file]</span><br><span class="line">@=&quot;粘贴为硬连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&lt;\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink]</span><br><span class="line">@=&quot;粘贴为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file]</span><br><span class="line">@=&quot;复制目录，粘贴文件为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&gt;\&quot;&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/zhaoyangwx/PasteLink&quot;&gt;https://github.com/zhaoyangwx/PasteLink&lt;/a&gt;&lt;br&gt;软件没设 License, 故应该算开源无限制？&lt;/p&gt;
+&lt;p&gt;长期没有维护比较</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows LTSC 各种版本</title>
+    <link href="http://ted423.github.io/System/WinLTSC/"/>
+    <id>http://ted423.github.io/System/WinLTSC/</id>
+    <published>2024-12-23T03:16:43.327Z</published>
+    <updated>2024-12-23T03:06:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://massgrave.dev/windows_ltsc_links">https://massgrave.dev/windows_ltsc_links</a></p><ul><li>是否 IoT 可以通过密钥转换</li><li>LTSC 缺少 UWP</li><li>LTSC 是否 IoT 的区别连接里面有</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://massgrave.dev/windows_ltsc_links&quot;&gt;https://massgrave.dev/windows_ltsc_links&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;是否 IoT 可以通过密钥转换&lt;/li&gt;
+&lt;li&gt;LTS</summary>
+      
+    
+    
+    
+    <category term="System" scheme="http://ted423.github.io/categories/System/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="System" scheme="http://ted423.github.io/tags/System/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]fio-cdm - CrystalDiskMark-style disk speed test with fio. Python version</title>
+    <link href="http://ted423.github.io/Software/Hardware/fio-cdm/"/>
+    <id>http://ted423.github.io/Software/Hardware/fio-cdm/</id>
+    <published>2024-12-23T03:13:50.618Z</published>
+    <updated>2024-12-23T02:58:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一个 python2 的脚本，不过代码不多，后学要改用3应该挺容易的</p><p><a href="https://github.com/xlucn/fio-cdm">https://github.com/xlucn/fio-cdm</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;一个 python2 的脚本，不过代码不多，后学要改用3应该挺容易的&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/xlucn/fio-cdm&quot;&gt;https://github.com/xlucn/fio-cdm&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Hardware Tool" scheme="http://ted423.github.io/tags/Hardware-Tool/"/>
+    
+    <category term="python2" scheme="http://ted423.github.io/tags/python2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对 Nextcloud 的抱怨</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
+    <published>2024-12-11T10:20:03.189Z</published>
+    <updated>2024-12-01T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li><li>会因为个别文件占用阻塞整个同步操作</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li><li>Dropbox 支持 LAN 同步，它不支持</li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dropbox 长期在右键菜单里拉屎&lt;/li&gt;
+&lt;li&gt;很多次同步卡住(后面发现文件有些奇怪的状态)&lt;/li&gt;
+&lt;li&gt;经常被它锁定文件打断操作&lt;/li&gt;
+&lt;li&gt;长期接</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Dropbox" scheme="http://ted423.github.io/tags/Dropbox/"/>
+    
+    <category term="AGPLv3" scheme="http://ted423.github.io/tags/AGPLv3/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从域中强制删除失效的域控制器</title>
+    <link href="http://ted423.github.io/Document/%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4%E5%9F%9F%E6%8E%A7%E5%88%B6%E5%99%A8/"/>
+    <id>http://ted423.github.io/Document/%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4%E5%9F%9F%E6%8E%A7%E5%88%B6%E5%99%A8/</id>
+    <published>2024-12-05T10:33:04.761Z</published>
+    <updated>2024-12-04T06:18:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>通常来说，域控制器不应该失效。应该在不使用时手动移除。出现失效域控应该是不专业的情形。平时应该做好维护、备份、RAID。</p><p>但也不排除前任留下的坑，以及一些非常情况。</p><p><a href="https://techcommunity.microsoft.com/blog/itopstalkblog/step-by-step-manually-removing-a-domain-controller-server/280564">https://techcommunity.microsoft.com/blog/itopstalkblog/step-by-step-manually-removing-a-domain-controller-server/280564</a></p><p>之前遇到的情况是 GUI 删除报错。</p><p>具体看连接里的 ntdsutil 使用命令行删除。（主要是上次操作比较久远，故再遇到再更新吧，不过理论不会了）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;通常来说，域控制器不应该失效。应该在不使用时手动移除。出现失效域控应该是不专业的情形。平时应该做好维护、备份、RAID。&lt;/p&gt;
+&lt;p&gt;但也不排除前任留下的坑，以及一些非常情况。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://techcommunity.microsoft</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="AD(Active Directory)" scheme="http://ted423.github.io/tags/AD-Active-Directory/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]KeymouseGo - 鼠标键盘模拟</title>
+    <link href="http://ted423.github.io/Software/KeymouseGo/"/>
+    <id>http://ted423.github.io/Software/KeymouseGo/</id>
+    <published>2024-12-03T08:17:20.020Z</published>
+    <updated>2024-12-03T08:16:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/taojy123/KeymouseGo">https://github.com/taojy123/KeymouseGo</a></p><p>如果不是被 Necloud 坑了 <a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a> 我是不准备用这个的</p><p>缺点就是点的不够块，有个上下限</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/taojy123/KeymouseGo&quot;&gt;https://github.com/taojy123/KeymouseGo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;如果不是被 Necloud 坑了 &lt;a href=&quot;https://gith</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="GPLv2" scheme="http://ted423.github.io/tags/GPLv2/"/>
+    
+    <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]AB Download Manager - 多段下载器</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/</id>
+    <published>2024-12-03T08:14:19.509Z</published>
+    <updated>2024-12-03T08:13:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/amir1376/ab-download-manager">https://github.com/amir1376/ab-download-manager</a></p><p>开源，Lin + Win,多语言,buff 已经满了。就不多介绍了<br>多段下载，会下载后合并，基本就是 IDM 的开源替代品。<br>目前未测试断点续传</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/amir1376/ab-download-manager&quot;&gt;https://github.com/amir1376/ab-download-manager&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;开源，Lin + Win,多语言,buf</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo精简</title>
+    <link href="http://ted423.github.io/Document/Hexo%E7%B2%BE%E7%AE%80/"/>
+    <id>http://ted423.github.io/Document/Hexo%E7%B2%BE%E7%AE%80/</id>
+    <published>2024-12-02T04:07:34.852Z</published>
+    <updated>2024-10-09T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先你需要知道的是，Hexo 每次生成的所有文件全部重新编译，因此部署变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。</p><p>如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。</p><p>另外因为<code>hexo-deployer-git</code>是force提交，所以你可以直接在本地.deploy_git起新空分支。记得之后删除老分支。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan branchname</span><br></pre></td></tr></table></figure><p>这时候你会发现本地文件夹大小没怎么变化，跑下gc清理下就好</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git gc</span><br></pre></td></tr></table></figure><p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩(查了下就是 <code>git gc</code>，不过好像后续提交就要重新压缩)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;首先你需要知道的是，Hexo 每次生成的所有文件全部重新编译，因此部署变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。&lt;/p&gt;
+&lt;p&gt;如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Hexo" scheme="http://ted423.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]localsend - 跨端文件传输工具</title>
+    <link href="http://ted423.github.io/Software/localsend/"/>
+    <id>http://ted423.github.io/Software/localsend/</id>
+    <published>2024-12-02T04:07:30.454Z</published>
+    <updated>2024-12-02T01:44:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/localsend/localsend">https://github.com/localsend/localsend</a></p><p>缺点就是要在同一个wifi&#x2F;网段下面，不过能通过发送连接来解决这个问题，不过这个还需要一个聊天软件或者剪贴板同步工具之类的来处理</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/localsend/localsend&quot;&gt;https://github.com/localsend/localsend&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;缺点就是要在同一个wifi&amp;#x2F;网段下面，不过能通过发送连接来解决这个</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
+    
+    <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
+    
+    <category term="iOS" scheme="http://ted423.github.io/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]7-Zip-zstd 7z增强版</title>
+    <link href="http://ted423.github.io/Software/Compression/7-Zip-zstd/"/>
+    <id>http://ted423.github.io/Software/Compression/7-Zip-zstd/</id>
+    <published>2024-12-02T04:07:29.432Z</published>
+    <updated>2024-10-10T06:05:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p><hr><p>不幸的 见<a href="https://github.com/mcmilk/7-Zip-zstd/issues/377">Issue</a> -2024-10-10</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/mcmilk/7-Zip-zstd&quot;&gt;https://github.com/mcmilk/7-Zip-zstd&lt;/a&gt;&lt;br&gt;之前某个群吐槽问7z是不是还是VC6编译，别人给的&lt;br&gt;不会覆盖掉原版的7z&lt;br&gt;总之不</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="过时(Outdated)" scheme="http://ted423.github.io/tags/%E8%BF%87%E6%97%B6-Outdated/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="LGPLv2.1" scheme="http://ted423.github.io/tags/LGPLv2-1/"/>
+    
+    <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[开源]Bulk Crap Uninstaller</title>
+    <link href="http://ted423.github.io/Software/Bulk%20Crap%20Uninstaller/"/>
+    <id>http://ted423.github.io/Software/Bulk%20Crap%20Uninstaller/</id>
+    <published>2024-12-02T04:02:15.300Z</published>
+    <updated>2024-12-02T01:41:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/Klocman/Bulk-Crap-Uninstaller/">https://github.com/Klocman/Bulk-Crap-Uninstaller/</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/Klocman/Bulk-Crap-Uninstaller/&quot;&gt;https://github.com/Klocman/Bulk-Crap-Uninstaller/&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</title>
+    <link href="http://ted423.github.io/Video/Party%20is%20over/"/>
+    <id>http://ted423.github.io/Video/Party%20is%20over/</id>
+    <published>2024-11-06T14:06:14.779Z</published>
+    <updated>2015-11-15T02:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="网盘分流"><a href="#网盘分流" class="headerlink" title="网盘分流"></a>网盘分流</h1><p><a href="https://mega.nz/#!fg80BD7T!AjWaiYGx8ERNJwsWW2zpQ7tAM5B8tnG-OoA5GuHdvrE">https://mega.nz/#!fg80BD7T!AjWaiYGx8ERNJwsWW2zpQ7tAM5B8tnG-OoA5GuHdvrE</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;网盘分流&quot;&gt;&lt;a href=&quot;#网盘分流&quot; class=&quot;headerlink&quot; title=&quot;网盘分流&quot;&gt;&lt;/a&gt;网盘分流&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mega.nz/#!fg80BD7T!AjWaiYGx8ERNJwsWW2zpQ7tAM5</summary>
+      
+    
+    
+    
+    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
+    
+    
+    <category term="JP" scheme="http://ted423.github.io/tags/JP/"/>
+    
+    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
+    
+    <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
+    
+    <category term="HD" scheme="http://ted423.github.io/tags/HD/"/>
+    
+    <category term="720p" scheme="http://ted423.github.io/tags/720p/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5 数据结构(structured-data) 之 微数据(microdata)</title>
+    <link href="http://ted423.github.io/Code/WWW/itemscope/"/>
+    <id>http://ted423.github.io/Code/WWW/itemscope/</id>
+    <published>2024-11-06T09:10:24.899Z</published>
+    <updated>2016-03-08T00:02:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>知道微数据是因为谷歌告诉我 <a href="https://ted423.bitcron.com/post/anime/tangled">https://ted423.bitcron.com/post/anime/tangled</a> 这个页面的数据结构有问题(最后发现class里有个vevent，所以谷歌认为这是一个活动)</p><p>经过搜索，终于了解了微数据这么一个东西，微数据是为了方便机器(搜索引擎)识别而产生的东西。其有特定的规范，有特定的格式。可以丰富搜索引擎的网页摘要。</p><p>本人按自己的理解乱说了一通，不保证本篇文章具备学术严谨性。</p><p>还是以此为例说下</p><table itemscope itemtype="https://schema.org/Movie" style="font-size:10px;">    <tbody>        <tr>            <th colspan="2" style="background: #C6C9FF;"><span itemprop="name">魔发奇缘<br><small>Tangled</small></span>            </th>        </tr>        <tr>        <td colspan="2" style="text-align:center;">             <img alt="Tangled poster on zh Wikipedia.jpg" itemprop="image" src="//upload.wikimedia.org/wikipedia/zh/e/e6/Tangled_poster_on_zh_Wikipedia.jpg" height="326" width="220">             </td>        </tr>        <tr>            <th scope="row">导演</th>            <td itemprop="director">纳桑·格莱诺                <br><span class="ilh-all">拜伦·霍华德(Byron Howard</a>)</span>            </td>        </tr>        <tr>            <th scope="row">监制</th>            <td>罗伊·康丽                <br>约翰·雷斯特</a>                <br>格兰·基恩</a>                <br>菲力浦·洛法罗</td>        </tr>        <tr>            <th scope="row">剧本</th>            <td>丹·佛格曼</td>        </tr>        <tr>            <th scope="row">原著</th>            <td>长发姑娘</a>            </td>        </tr>        <tr>            <th scope="row">旁白</th>            <td>克里斯·柯林斯</td>        </tr>        <tr>            <th scope="row">主演</th>            <td itemprop="actor">曼迪·穆尔</a>                <br>扎卡里·李维</a>                <br><span class="ilh-all"><span class="ilh-page">唐娜·墨菲</span>                <br><span class="noprint ilh-comment">(<span class="ilh-link"><span dir="auto" xml:lang="en" lang="en">Donna Murphy</span>                </a>                </span>)</span>                </span>            </td>        </tr>        <tr>            <th scope="row">配乐作曲</th>            <td>亚伦·孟肯</a>                <br><span class="ilh-all"><span class="noprint ilh-comment"><span class="ilh-link"><span dir="auto" xml:lang="en" lang="en">Glenn Slater</span>                </a>                </span>                </span>                </span><small style="font-size:85%;">(歌词)</small>            </td>        </tr>        <tr>            <th scope="row">剪辑</th>            <td>提姆·墨腾斯</td>        </tr>        <tr>            <th scope="row">制片商</th>            <td itemprop="copyrightHolder">华特迪士尼动画工作室</a>            </td>        </tr>        <tr>            <th scope="row">产地</th>            <td><span class="flagicon"><img alt="" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" class="thumbborder"  height="12" width="22">&nbsp;</span><a itemprop="locationCreated" href="http://zh.wikipedia.org/wiki/美國" title="美国" class="mw-redirect">美国</a>            </td>        </tr>        <tr>            <th scope="row">语言</th>            <td>英语</a>            </td>        </tr>        <tr>            <th colspan="2" style="text-align:center; background: #C6C9FF;;">上映及发行</th>        </tr>        <tr itemprop="Duration datePublished">            <th scope="row">上映日期</th>            <td><span class="flagicon"><img alt="美国" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" class="thumbborder"  height="12" width="22"></a></span> 2010年11月24日                <br><span class="flagicon"><img alt="新加坡" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/22px-Flag_of_Singapore.svg.png" class="thumbborder"  height="15" width="22"></a></span> 2010年11月25日                <br><span class="flagicon"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span>                <span class="flagicon">                    <img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder" height="15" width="22">                    </a>                    </span>2011年2月3日                    <br><span class="flagicon"><img alt="中国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span>未上映                    <br>（其他国家）</a>            </td>        </tr>        <tr>            <th scope="row">发行商</th>            <td itemprop="publisher"><span class="flagicon"><img alt="美国" src="//upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/22px-Flag_of_the_United_States.svg.png" class="thumbborder"  height="12" width="22"></a></span>                 <a href="http://zh.wikipedia.org/wiki/華特迪士尼影業" title="华特迪士尼影业" class="mw-redirect">华特迪士尼</a>                    <br><span class="flagicon"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> 洲立</td>        </tr>        <tr>            <th scope="row">预算</th>            <td>2亿6,000万美元</td>        </tr>        <tr>            <th scope="row">票房</th>            <td class="price">5亿90,721,936美元</td>        </tr>    </tbody></table><p>其中<code>itemscope</code>标记了这块HTML标签具有微数据特性，该标签应该同时具有<code>itemtype</code>来说明这块微数据描述的是什么。<br>比方说所上面那一块</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;table itemscope itemtype=&quot;https://schema.org/Movie&quot; style=&quot;font-size:10px;&quot;&gt;</span><br></pre></td></tr></table></figure><p>搜索引擎通过发现<code>itemtype</code>是<code>https://schema.org/Movie</code>,就能明白这说的是一部电影。<br><code>itemprop</code>则是具体元素，比方说</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span itemprop=&quot;name&quot;&gt;魔发奇缘&lt;br&gt;&lt;small&gt;Tangled&lt;/small&gt;&lt;/span&gt;</span><br></pre></td></tr></table></figure><p>再有<code>itemref</code>可以在itemtype里再嵌套一个itemtype<br>类似这种</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta itemprop=&quot;worksFor&quot; itemscope itemtype=&quot;http://schema.org/Organization&quot; itemref=&quot;organization&quot;&gt;</span><br></pre></td></tr></table></figure><p><code>itemid</code>则是全局唯一标志，这个应该比较好理解，比方说身份证号什么的。</p><p>可以用结构化数据工具查看微数据用的有没有问题<br><a href="https://developers.google.com/structured-data/testing-tool/?url=http://ted423.bitcron.com/post/videos/film/tangled">https://developers.google.com/structured-data/testing-tool/?url=http://ted423.bitcron.com/post/videos/film/tangled</a></p><p>微数据的作用在于能较好的转化为json<br><a href="https://foolip.org/microdatajs/live/">https://foolip.org/microdatajs/live/</a><br>可以看到上文表格可以转化为</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;items&quot;: [</span><br><span class="line">    &#123;</span><br><span class="line">      &quot;type&quot;: [</span><br><span class="line">        &quot;https://schema.org/Movie&quot;</span><br><span class="line">      ],</span><br><span class="line">      &quot;properties&quot;: &#123;</span><br><span class="line">        &quot;name&quot;: [</span><br><span class="line">          &quot;魔发奇缘Tangled&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;image&quot;: [</span><br><span class="line">          &quot;https://upload.wikimedia.org/wikipedia/zh/e/e6/Tangled_poster_on_zh_Wikipedia.jpg&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;director&quot;: [</span><br><span class="line">          &quot;纳桑·格莱诺\n                拜伦·霍华德(Byron Howard)\n            &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;actor&quot;: [</span><br><span class="line">          &quot;曼迪·穆尔\n                扎卡里·李维\n                唐娜·墨菲\n                (Donna Murphy\n                \n                )\n                \n            &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;copyrightHolder&quot;: [</span><br><span class="line">          &quot;华特迪士尼动画工作室\n            &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;locationCreated&quot;: [</span><br><span class="line">          &quot;http://zh.wikipedia.org/wiki/%E7%BE%8E%E5%9C%8B&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;Duration&quot;: [</span><br><span class="line">          &quot;\n            上映日期\n             2010年11月24日\n                 2010年11月25日\n                \n                \n                \t\n                    \n                    2011年2月3日\n                    未上映\n                    （其他国家）\n            \n        &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;datePublished&quot;: [</span><br><span class="line">          &quot;\n            上映日期\n             2010年11月24日\n                 2010年11月25日\n                \n                \n                \t\n                    \n                    2011年2月3日\n                    未上映\n                    （其他国家）\n            \n        &quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;publisher&quot;: [</span><br><span class="line">          &quot; \n                华特迪士尼\n                     洲立&quot;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;知道微数据是因为谷歌告诉我 &lt;a href=&quot;https://ted423.bitcron.com/post/anime/tangled&quot;&gt;https://ted423.bitcron.com/post/anime/tangled&lt;/a&gt; 这个页面的数据结构有问题(最后发现</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="SEO" scheme="http://ted423.github.io/tags/SEO/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>推荐一些完本的轻小说</title>
+    <link href="http://ted423.github.io/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/"/>
+    <id>http://ted423.github.io/etc/%E8%BD%BB%E5%B0%8F%E8%AF%B4/</id>
+    <published>2024-10-11T03:10:02.489Z</published>
+    <updated>2013-12-31T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>原来推荐的，现在可能不推荐了，但没重新看( — 2021-07-03</p><p>小说全部是在轻之国度收的</p><p>个人进行了一些除错以及修改。</p><p><a href="https://www.dropbox.com/sh/648x89gqo5lmqd7/AABFE4tGc_vpoSrEk53z3yvga?dl=0">https://www.dropbox.com/sh/648x89gqo5lmqd7/AABFE4tGc_vpoSrEk53z3yvga?dl=0</a>(这里是最新的)</p><p><a href="https://pan.baidu.com/s/1dDvhFSP">https://pan.baidu.com/s/1dDvhFSP</a></p><h1 id="大小姐×执事"><a href="#大小姐×执事" class="headerlink" title="大小姐×执事!"></a>大小姐×执事!</h1><table class="infobox bordered" style="width: 22em;  float:right; text-align: left;" cellpadding="2">    <tbody>        <tr>            <th colspan="2" style=" background: #ccf; text-align: center;" nowrap="nowrap">大小姐×执事！</th>        </tr>        <tr>            <td colspan="2" style="background: #fff; text-align: center;"><img src="https://lain.bgm.tv/pic/cover/l/8b/22/29920_70nrn.jpg"></img></td>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><span xml:lang="ja" lang="ja">れでぃ×ばと！</span></td>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><i>Ladies versus Butlers!</i></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>罗马字</b></td>            <td style="background: #ffffff;">Redi × Bato!</td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>类型</b></td>            <td style="background: #ffffff;"><a href="//zh.wikipedia.org/wiki/喜剧" title="喜剧">喜剧</a>、校园生活、<a href="//zh.wikipedia.org/wiki/后宫型作品" title="后宫型作品">后宫型作品</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>正式译名</b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中华民国" title="中华民国"><img alt="中华民国" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder" height="15" width="22"></a></span> <span class="flagicon"><a href="//zh.wikipedia.org/wiki/香港" title="香港"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> 大小姐×执事！</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>常用译名</b></td>            <td>管家后宫学园</td>        </tr>        <tr>            <th colspan="2" style="background: #ccf; text-align: center;" nowrap="nowrap"><a href="//zh.wikipedia.org/wiki/轻小说" title="轻小说">轻小说</a></th>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>作者</b></td>            <td>上月司</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>插图</b></td>            <td><span xml:lang="ja" lang="ja">むにゅう</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>出版社</b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/ASCII_MediaWorks" title="ASCII MediaWorks" class="mw-redirect">ASCII MediaWorks</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中华民国" title="中华民国"><img alt="中华民国" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <span class="flagicon"><a href="//zh.wikipedia.org/wiki/香港" title="香港"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/台湾角川" title="台湾角川">台湾角川</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b><a href="//zh.wikipedia.org/wiki/文库" title="文库">文库系列</a></b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/电击文库" title="电击文库">电击文库</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>发表期间</b></td>            <td>2006年9月－2012年3月</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>册数</b></td>            <td>全13卷</td>        </tr>    </tbody></table><p>(又名管家后宫学园)<br>《大小姐×执事！》(日语：れでぃ×ばと！)是上月司所著的轻小说。插图由むにゅう绘制，全13卷。繁体中文版由台湾角川取得授权。此外，于电击萌王2008年6月号(4月26日发售)开始有漫画化作品的连载，2009年9月推出广播剧CD，并在2010年1月开始播放电视动画。<br>嘛，喜剧类后宫故事。</p><h2 id="剧情简介"><a href="#剧情简介" class="headerlink" title="剧情简介"></a>剧情简介</h2><p>小学时因父母双亡而被叔父家收养的日野秋晴，决心进入电视报道原为女子学校的超名门学校──白丽陵高中所新设的从育科就读，之后考试合格而完成入学。但是，因为他有着凶恶的眼神、挂在左眉上的伤痕、倒竖的茶色头发、耳朵上有三连穿孔耳环(安全别针)等不良少年的外表，结果让学生们造成误会(大多都是女生)，对其感到害怕。之后，秋晴阴错阳差的再度与小学时的青梅竹马──彩京朋美重逢，而且还被瑟妮亚・伊织・弗雷姆哈特当成可疑人物。历经了许多事情，尽管秋晴稍微习惯了学校，但包围他的人际关系仍慢慢变化着…</p><h2 id="书籍情报"><a href="#书籍情报" class="headerlink" title="书籍情报"></a>书籍情报</h2><table class="wikitable" style="text-align:center">    <tbody>        <tr>            <th>卷数</th>            <th colspan="2"><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/MediaWorks" title="MediaWorks">MediaWorks</a>→<a href="//zh.wikipedia.org/wiki/ASCII_MediaWorks" title="ASCII MediaWorks" class="mw-redirect">ASCII MediaWorks</a></th>            <th colspan="2"><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中华民国" title="中华民国"><img alt="中华民国" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <span class="flagicon"><a href="//zh.wikipedia.org/wiki/香港" title="香港"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/台湾角川" title="台湾角川">台湾角川</a></th>        </tr>        <tr>            <td>1</td>            <td>2006年9月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840235597" class="internal mw-magiclink-isbn">ISBN 978-4-8402-3559-7</a></td>            <td rowspan="2">2010年4月28日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862375167" class="internal mw-magiclink-isbn">ISBN 978-986-237-516-7</a></td>        </tr>        <tr>            <td>2</td>            <td>2007年1月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840236874" class="internal mw-magiclink-isbn">ISBN 978-4-8402-3687-4</a></td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862376010" class="internal mw-magiclink-isbn">ISBN 978-986-237-601-0</a></td>        </tr>        <tr>            <td>3</td>            <td>2007年5月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840238410" class="internal mw-magiclink-isbn">ISBN 978-4-8402-3841-0</a></td>            <td>2010年5月28日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862376508" class="internal mw-magiclink-isbn">ISBN 978-986-237-650-8</a></td>        </tr>        <tr>            <td>4</td>            <td>2007年8月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840239417" class="internal mw-magiclink-isbn">ISBN 978-4-8402-3941-7</a></td>            <td>2010年6月19日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862377192" class="internal mw-magiclink-isbn">ISBN 978-986-237-719-2</a></td>        </tr>        <tr>            <td>5</td>            <td>2007年12月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840241212" class="internal mw-magiclink-isbn">ISBN 978-4-8402-4121-2</a></td>            <td>2010年9月22日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862377819" class="internal mw-magiclink-isbn">ISBN 978-986-237-781-9</a></td>        </tr>        <tr>            <td>6</td>            <td>2008年4月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784048670173" class="internal mw-magiclink-isbn">ISBN 978-4-04-867017-3</a></td>            <td>2010年10月25日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862378809" class="internal mw-magiclink-isbn">ISBN 978-986-237-880-9</a></td>        </tr>        <tr>            <td>7</td>            <td>2008年9月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784048672160" class="internal mw-magiclink-isbn">ISBN 978-4-04-867216-0</a></td>            <td>2010年12月20日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862379684" class="internal mw-magiclink-isbn">ISBN 978-986-237-968-4</a></td>        </tr>        <tr>            <td>8</td>            <td>2009年4月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784048677653" class="internal mw-magiclink-isbn">ISBN 978-4-04-867765-3</a></td>            <td>2011年2月25日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862870242" class="internal mw-magiclink-isbn">ISBN 978-986-287-024-2</a></td>        </tr>        <tr>            <td>9</td>            <td>2009年9月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784048680110" class="internal mw-magiclink-isbn">ISBN 978-4-04-868011-0</a></td>            <td>2011年6月29日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862871997" class="internal mw-magiclink-isbn">ISBN 978-986-287-199-7</a></td>        </tr>        <tr>            <td>10</td>            <td>2010年1月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784048682749" class="internal mw-magiclink-isbn">ISBN 978-4-04-868274-9</a></td>            <td>2011年10月30日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862874097" class="internal mw-magiclink-isbn">ISBN 978-986-287-409-7</a></td>        </tr>        <tr>            <td>11</td>            <td>2010年3月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784048683944" class="internal mw-magiclink-isbn">ISBN 978-4-04-868394-4</a></td>            <td>2012年7月11日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789862878071" class="internal mw-magiclink-isbn">ISBN 978-986-287-807-1</a></td>        </tr>        <tr>            <td>12</td>            <td>2011年5月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784048704892" class="internal mw-magiclink-isbn">ISBN 978-4-04-870489-2</a></td>            <td>2013年1月23日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789863251422" class="internal mw-magiclink-isbn">ISBN 978-986-325-142-2</a></td>        </tr>        <tr>            <td>13</td>            <td>2012年3月10日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784048863728" class="internal mw-magiclink-isbn">ISBN 978-4-04-886372-8</a></td>            <td>2013年3月14日</td>            <td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789863252450" class="internal mw-magiclink-isbn">ISBN 978-986-325-245-0</a></td>        </tr>    </tbody></table><h1 id="前略-我与猫和天使同居"><a href="#前略-我与猫和天使同居" class="headerlink" title="前略,我与猫和天使同居"></a>前略,我与猫和天使同居</h1><table class="infobox bordered" style="float:right;">    <tbody>        <tr>            <th colspan="2" style="background-color:#ccf; text-align:center;">前略。ねこと天使と同居はじめました。</th>        </tr>        <tr>            <th style="background:#e6e9ff">ジャンル</th>            <td><a href="//jp.wikipedia.org/wiki/ラブコメディ" title="ラブコメディ">ラブコメディ</a></td>        </tr>        <tr>            <th colspan="2" style="background:#ccf; text-align:center; white-space:nowrap">小说</th>        </tr>        <tr>            <th style="background:#e6e9ff; white-space:nowrap">著者</th>            <td>绯月薙</td>        </tr>        <tr>            <th style="background:#e6e9ff; white-space:nowrap">イラスト</th>            <td>明星かがよ</td>        </tr>        <tr>            <th style="background:#e6e9ff; white-space:nowrap">出版社</th>            <td><a href="//jp.wikipedia.org/wiki/ホビージャパン" title="ホビージャパン">ホビージャパン</a></td>        </tr>        <tr>            <th style="background:#e6e9ff; white-space:nowrap">レーベル</th>            <td><a href="//zh.wikipedia.org/wiki/HJ文库" title="HJ文库">HJ文库</a></td>        </tr>        <tr>            <th style="background:#e6e9ff; white-space:nowrap">刊行期间</th>            <td><a href="//jp.wikipedia.org/wiki/2010年" title="2010年">2010年</a><a href="//jp.wikipedia.org/wiki/7月" title="7月">7月</a> -</td>        </tr>        <tr>            <th style="background:#e6e9ff; white-space:nowrap">巻数</th>            <td>既刊6巻</td>        </tr>    </tbody></table><p>HJ文库:<a href="https://www.hobbyjapan.co.jp/hjbunko/lineup/detail/272.html">https://www.hobbyjapan.co.jp/hjbunko/lineup/detail/272.html</a></p><p>东立:<a href="https://www.tongli.com.tw/BooksDetail.aspx?Bd=TC0333007">https://www.tongli.com.tw/BooksDetail.aspx?Bd=TC0333007</a></p><p>『前略。ねこと天使と同居はじめました。』(ぜんりゃく ねことてんしとどうきょはじめました)は、绯月薙による日本のライトノベル作品。イラストは明星かがよが担当している。</p><p>第4回ノベルジャパン大赏(ホビージャパン主催)银赏受赏作品『世の天秤はダンボールの中に』を改题し、2010年7月31日にHJ文库より刊行されて以降、シリーズ化されている。</p><p>后宫类，除了台词肉麻了些以外别的都好。剧情不错，集数适中。</p><h2 id="书籍情报-1"><a href="#书籍情报-1" class="headerlink" title="书籍情报"></a>书籍情报</h2><table><thead><tr><th>各卷标题</th><th>日版时间</th><th>ISBN</th><th>台版时间</th><th>ISBN</th></tr></thead><tbody><tr><td>(无)</td><td>2010年7月31日</td><td>ISBN 978-4-7986-0106-9</td><td>2011年4月14日</td><td>ISBN 978-986-10-7499-3</td></tr><tr><td>二匹目</td><td>2010年12月28日</td><td>ISBN 978-4-7986-0152-6</td><td>2011年8月4日</td><td>ISBN 978-986-10-8316-2</td></tr><tr><td>三匹目</td><td>2011年4月1日</td><td>ISBN 978-4-7986-0214-1</td><td>2011年10月6日</td><td>ISBN 8978-986-10-8694-1</td></tr><tr><td>四匹目</td><td>2011年9月1日</td><td>ISBN 978-4-7986-0265-3</td><td>2012年1月5日</td><td>ISBN 978-986-10-9243-0</td></tr><tr><td>五匹目</td><td>2012年3月1日</td><td>ISBN 978-4-7986-0358-2</td><td>2012年8月2日</td><td>ISBN 978-986-317-633-6</td></tr><tr><td>六匹目</td><td>2012年4月30日</td><td>ISBN 978-4-7986-0399-5</td><td>2013年1月28日</td><td>ISBN 978-986-324-748-7</td></tr></tbody></table><p>#我与她的绝对领域#</p><table class="infobox bordered" style="width: 22em;  float:right; text-align: left;" cellpadding="2">    <tbody>        <tr>            <th colspan="2" style="background: #ccf; text-align: center;" nowrap="nowrap">我与她的绝对领域</th>        </tr>        <tr>            <td colspan="2" style="background: #fff; text-align: center;"><a href="https://upload.wikimedia.org/wikipedia/zh/7/7e/Absolute_field_of_me_and_her_cover.jpg" class="image"><img alt="Kk0319268.jpg" src="//upload.wikimedia.org/wikipedia/zh/2/2e/Kk0319268.jpg" style="width:170px"></a></td>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><span xml:lang="ja" lang="ja">オレと彼女の絶対领域</span></td>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><span xml:lang="en" lang="en"><i>I with her absolute field</i></span></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>日语假名</b></td>            <td style="background: #ffffff;"><span xml:lang="ja" lang="ja">オレトカノジョノゼッタイリョウイキ</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>罗马字</b></td>            <td style="background: #ffffff;"><span xml:lang="ja" lang="ja">Oreto kanojo no zettai ryouiki</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>作者</b></td>            <td>鹰山诚一</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>插图</b></td>            <td><a href="//zh.wikipedia.org/wiki/伍长" title="伍长" class="mw-redirect">伍长</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>出版社</b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/Media_Factory" title="Media Factory">Media Factory</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/台湾" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/东立出版社" title="东立出版社">东立出版社</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中国" title="中国"><img alt="中国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/吉林美术出版社" title="吉林美术出版社">吉林美术出版社</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b><a href="//zh.wikipedia.org/wiki/文库" title="文库">文库</a></b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/HJ文库" title="HJ文库">HJ文库</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>发表期间</b></td>            <td>2010年12月24日－2013年8月8日</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>册数</b></td>            <td>7</td>        </tr>    </tbody></table><p>感觉结尾处理得不够好，不过剧情还算有趣。<br>日文维基居然没收录，有些无语。</p><br><p>《我与她的绝对领域》（日语：オレと彼女の絶対領域）是一部由鹰山诚一创作的轻小说，插画由伍长负责，出版社为HJ文库。<br><br><br>此作在日本受到大批的读者欢迎，曾获2010年第5回的“Novel JAPAN大赏”（现为“HJ文库大赏”）（日语：ノベルヅャパン大賞）的此作在HJ文库中销售量数一数二，在台湾发行第1集自2012年1月在台湾发行后的2星期内就立即再版，可以见得在台湾与日本都享有超高的人气度。</p><br><h2 id="剧情简介-1"><a href="#剧情简介-1" class="headerlink" title="剧情简介"></a>剧情简介</h2><br>甫升上高中的我所一见钟情的黑发少女──观田明日香学姊竟是被视为“告知绝对无从回避之不祥事态的魔女”而令全校师生感到畏惧的存在。得知学姊怀着“自己做过的恶梦​​百分之百都会成真”的烦恼之后，我不顾身为我表姊，同时也是学生会长的沙耶姊之劝阻，毅然决定为了改变学姊的未来而展开行动!然而数不清的偶然事态却一再阻止我......我与学姊的命运究竟将何去何从呢!?<br><br><h2 id="书籍情报-2"><a href="#书籍情报-2" class="headerlink" title="书籍情报"></a>书籍情报</h2><table><thead><tr><th>卷数</th><th>副标题</th><th>发售日期(日本)</th><th>ISBN(日本)</th><th>发售日期(台湾)</th><th>ISBN(台湾)</th></tr></thead><tbody><tr><td>1</td><td>未来を変えられたら、君にすべてをあ・げ・る<br>当你正在改变未来，我会为你付出一切</td><td>2011.07.01</td><td>ISBN 978-4-7986-0248-6</td><td>2012.1.16</td><td>ISBN 978-986-10-9238-6</td></tr><tr><td>2</td><td>この、天然ボーイミーツガール体質っ！<br>这男孩遇见了天然体质的女孩！</td><td>2011.11.01</td><td>ISBN 978-4-7986-0295-0</td><td>2012.5.14</td><td>ISBN 978-986-10-9940-8</td></tr><tr><td>3</td><td>聡里は三番目でいいからね……<br>聪里就是因为第三……</td><td>2012.02.01</td><td>ISBN 978-4-7986-0343-8</td><td>2012.9.10</td><td>ISBN 978-986-317-832-3</td></tr><tr><td>4</td><td>恋のライバルまたまた登場!? 驚きの六角関係!?<br>再次出现情敌的爱情!?惊讶的六角关系!?</td><td>2012.05.01</td><td>ISBN 978-4-7986-0438-1</td><td>2013.2.15</td><td>ISBN 978-986-324-209-3</td></tr><tr><td>5</td><td>今度のヒロインは“腐”幽霊!?<br>即将到来的“腐”女幽灵女主角!?</td><td>2012.08.01</td><td>ISBN 978-4-7986-0495-4</td><td>2013.2.15</td><td>ISBN 978-986-324-868-2</td></tr><tr><td>6</td><td>修羅場の秋。オレ争奪戦線拡大中!?<br>修罗场的秋天。我的争夺战线扩大中？</td><td>2012.11.01</td><td>ISBN 978-4-7986-0495-4</td><td>2013.5.23</td><td>ISBN 978-986-332-533-8</td></tr><tr><td>7</td><td>オレがあなただけのヒーローになってみせる!!<br>我会证明我可以成为只为你的英雄！</td><td>2013.02.01</td><td>ISBN 978-4-7986-0539-5</td><td>2013.8.8</td><td>ISBN 978-986-337-118-2</td></tr></tbody></table><h1 id="电波女和青春男"><a href="#电波女和青春男" class="headerlink" title="电波女和青春男"></a>电波女和青春男</h1><table class="infobox bordered" style="width: 22em; float:right; text-align: left;" cellpadding="2">    <tbody>        <tr>            <th colspan="2" style="font-size: 110%; background: #ccf; text-align: center;" nowrap="nowrap">电波女与青春男</th>        </tr>        <tr>            <td colspan="2" style="background: #fff; text-align: center;"><a href="//zh.wikipedia.org/wiki/File:Denpalogo.png" class="image"><img alt="Denpalogo.png" src="//upload.wikimedia.org/wikipedia/zh/thumb/1/11/Denpalogo.png/200px-Denpalogo.png"  height="58" width="200"></a></td>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><span xml:lang="ja" lang="ja">電波女と青春男</span></td>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><span xml:lang="en" lang="en"><i>Electric Wave Woman and Youthful Man</i></span></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>日语假名</b></td>            <td style="background: #ffffff;"><span xml:lang="ja" lang="ja">でんぱおんなとせいしゅんおとこ</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>罗马字</b></td>            <td style="background: #ffffff;"><span xml:lang="ja" lang="ja">Denpa Onna to Seishun Otoko</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>正式译名</b></td>            <td>电波女&amp;青春男                <ul>                    <li><span class="flagicon"><a href="//zh.wikipedia.org/wiki/臺灣" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <span class="flagicon"><a href="//zh.wikipedia.org/wiki/香港" title="香港"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/台灣角川" title="台湾角川">台湾角川</a></li>                </ul>                <p>电波女与青春男</p>                <ul>                    <li><span class="flagicon"><a href="//zh.wikipedia.org/wiki/臺灣" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/曼迪傳播" title="曼迪传播">曼迪传播</a></li>                    <li><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中国" title="中国"><img alt="中国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/湖南美术出版社" title="湖南美术出版社">湖南美术出版社</a>、<a href="//zh.wikipedia.org/wiki/天闻角川" title="天闻角川">天闻角川</a></li>                </ul>            </td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>常用译名</b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/新加坡" title="新加坡"><img alt="新加坡" src="//upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/22px-Flag_of_Singapore.svg.png" class="thumbborder"  height="15" width="22"></a></span> 电波女与青春男</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>作者</b></td>            <td><a href="//zh.wikipedia.org/wiki/入間人間" title="入间人间">入间人间</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>插图</b></td>            <td><a href="//zh.wikipedia.org/wiki/馬口鐵_(插畫家)" title="马口铁 (插画家)">马口铁</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>出版社</b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/ASCII_Media_Works" title="ASCII Media Works">ASCII Media Works</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/臺灣" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <span class="flagicon"><a href="//zh.wikipedia.org/wiki/香港" title="香港"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/台灣角川書店" title="台湾角川书店" class="mw-redirect">台湾角川书店</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中国" title="中国"><img alt="中国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/湖南美术出版社" title="湖南美术出版社">湖南美术出版社</a>（出版）、<a href="//zh.wikipedia.org/wiki/天闻角川" title="天闻角川">天闻角川</a>（发行）<br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/大韩民国" title="大韩民国"><img alt="大韩民国" src="//upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/22px-Flag_of_South_Korea.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/鶴山文化社" title="鹤山文化社" class="mw-redirect">鹤山文化社</a></div></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b><a href="//zh.wikipedia.org/wiki/文庫" title="文库">文库</a></b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/電擊文庫" title="电击文库">电击文库</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/臺灣" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> Kadokawa Fantastic Novels</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>发表期间</b></td>            <td>2009年1月10日－2011年4月10日</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>册数</b></td>            <td>8卷+1卷SF版</td>        </tr>    </tbody></table><p>挺经典的小说，平淡却不失有趣。</p><h2 id="故事简介"><a href="#故事简介" class="headerlink" title="故事简介"></a>故事简介</h2><p style="text-indent:2em">原本在乡下高中就读的‘丹羽真’，班上的女同学都是成熟面孔，打扮也多半很土气。脱离了乡下的高中，进转到都市的高中的真，正进行一个提升‘青春点数’的计划。只要和可爱女子有好事发生，就可提升他的青春点数，（反之，青春点数便会下降）。因父母工作关系，家里没人，进而寄住到都市的姑姑家，并就读都市的高中。而踏入姑姑家进入到都市的高中就读后，果然认识了一些班上的可爱女同学，使他的青春点数提升了不少，这样下去，累积青春点数在高中生活将不是梦想‧然而在传说被外星人监视的小镇街道里，从乡下寄宿转学到繁华的东京的高二学生丹羽真住到姑姑家中，非常期待着完美新生活，打算在这把“青春”赤字一下扭转过来，在他充满希望的想法却在进入姑姑家的时便出现了裂痕，因为在玄关旁边，他看见了地上那“卷”棉被？等待他的竟是一名用棉被裹住自己上半身的电波女“藤和艾莉欧”，她竟是自己的表妹。与艾莉欧同居时，发现她是位口语间满是外星人、宇宙电波的电波女（其电波女气息令人无法理解的举动，使"真"的青春点数下降不少），从她的口述中得知地球也被盯上了，不过艾莉欧偶然间解开棉被时，竟是个浑身散发奇妙粒子的蓝发美少女…未来他的高中生活提升青春点数的计划是否能够达成呢？ 表妹变成电波女后也流着外星人的血，言行也变得电波。在学校里则遇到天然治愈系的“流子”，有着模特身材喜欢Cosplay的“前川”，他试着找回自己满载的青春。憧憬著到宇宙去，不可思议的故事将开始了……于是这位青春男的“青春”计划在电波女的消磨下渐渐消耗殆尽。<h2 id="书籍情报-3"><a href="#书籍情报-3" class="headerlink" title="书籍情报"></a>书籍情报</h2><table><thead><tr><th>日文标题</th><th>中文标题</th><th>日文版ISBN</th><th>中文繁体版ISBN</th><th>中文简体版ISBN</th></tr></thead><tbody><tr><td>電波女と青春男</td><td>电波女&amp;青春男 1</td><td>ISBN 978-4-04-867468-3</td><td>ISBN 978-986-237-327-9</td><td>ISBN 978-7-5356-4053-6</td></tr><tr><td>電波女と青春男 2</td><td>电波女&amp;青春男 2</td><td>ISBN 978-4-04-867810-0</td><td>ISBN 978-986-237-518-1</td><td>ISBN 978-7-5356-4205-9</td></tr><tr><td>電波女と青春男 3</td><td>电波女&amp;青春男 3</td><td>ISBN 978-4-04-868138-4</td><td>ISBN 978-986-237-771-0</td><td>ISBN 978-7-5356-4317-9</td></tr><tr><td>電波女と青春男 4</td><td>电波女&amp;青春男 4</td><td>ISBN 978-4-04-868395-1</td><td>ISBN 978-986-237-869-4</td><td>ISBN 978-7-5356-4459-6</td></tr><tr><td>電波女と青春男 5</td><td>电波女&amp;青春男 5</td><td>ISBN 978-4-04-868596-2</td><td>ISBN 978-986-237-963-9</td><td>ISBN 978-7-5356-4781-8</td></tr><tr><td>電波女と青春男 6</td><td>电波女&amp;青春男 6</td><td>ISBN 978-4-04-868880-2</td><td>ISBN 978-986-287-060-0</td><td>ISBN 978-7-5356-4897-6</td></tr><tr><td>電波女と青春男 7</td><td>电波女&amp;青春男 7</td><td>ISBN 978-4-04-870125-9</td><td>ISBN 978-986-287-129-4</td><td>ISBN 978-7-5356-5079-5</td></tr><tr><td>電波女と青春男 8</td><td>电波女&amp;青春男 8</td><td>ISBN 978-4-04-870430-4</td><td>ISBN 978-986-287-288-8</td><td>ISBN 978-7-5356-5450-2</td></tr><tr><td>電波女と青春男 SF</td><td>电波女&amp;青春男 SF<br>（一点点不可思议）版</td><td>ISBN 978-4-04-870470-0</td><td>ISBN 978-986-287-525-4</td><td></td></tr></tbody></table><p>#第101篇百物语#</p><table class="infobox bordered" style="width: 22em; font-size: smaller; float:right; text-align: left;" cellpadding="2">    <tbody>        <tr>            <th colspan="2" style="font-size: 110%; background: #ccf; text-align: center;" nowrap="nowrap">第101篇百物语</th>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><span xml:lang="ja" lang="ja">101番目の百物語</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>日语假名</b></td>            <td style="background: #ffffff;"><span xml:lang="ja" lang="ja">101バンメノヒャクモノガタリ</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>罗马字</b></td>            <td style="background: #ffffff;"><span xml:lang="ja" lang="ja">101 Banme no hyakumonogatari</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>作者</b></td>            <td><a href="//zh.wikipedia.org/wiki/サイトウケンジ" title="サイトウケンジ" class="mw-redirect">サイトウケンジ</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>插图</b></td>            <td><a href="//zh.wikipedia.org/wiki/涼香" title="凉香">凉香</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>出版社</b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/Media_Factory" title="Media Factory">Media Factory</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/臺灣" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/東立出版社" title="东立出版社">东立出版社</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b><a href="//zh.wikipedia.org/wiki/文庫" title="文库">文库</a></b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/MF文庫J" title="MF文库J">MF文库J</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/臺灣" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> 东立轻小说</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>发表期间</b></td>            <td>2010年7月23日－2012年11月</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>册数</b></td>            <td>全8册</td>        </tr>    </tbody></table><p>开头明明是以为是恐怖系列的，结果硬是变成了中二小说！</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>《第101篇百物语》（101番目の百物語）是一部由サイトウケンジ创作的轻小说。小说的插画由凉香负责。<br>一文字疾风，绰号文字，是一名过着普通但充满乐趣的生活的高中生。有一天，从迷之少女社处收到名为”D-Phone”的手机，成为“第101篇百物语”的主角。从此开始对都市传说的探索。</p><h2 id="用语"><a href="#用语" class="headerlink" title="用语"></a>用语</h2><p><strong>Lore</strong><br>将都市传说实体化的存在。语源是Folklore（民俗学）。<br>Lore必须按照传说的内容来行动，以维持自身的存在。<br>在“Lore的世界”中，Lore的规则优先于现实的规则。<br>由于容易受到恐怖以及负面力量的影响，因而女性（美少女）的Lore较多。<br>除了直接从传闻中衍生出来的纯种Lore外，也有因他人说法而从人类变为Lore的Half-Lore。身体能力完全超出人类所能承受的范围。</p><p><strong>D-Phone</strong><br>能连接“第八世界”的手机。持有者在受到Lore的袭击或对自己起有杀意时，手机会发出耀眼且发烫的红光。</p><p><strong>第八世界</strong><br>只能用D-Phone连接上，收集了实际发生的都市传说的情报集结网站。</p><h2 id="书籍信息"><a href="#书籍信息" class="headerlink" title="书籍信息"></a>书籍信息</h2><table><thead><tr><th>出版顺序</th><th>标题</th><th>ISBN（日）</th><th>ISBN（中）</th><th>发行（日）</th><th>发行（中）</th></tr></thead><tbody><tr><td>第1卷</td><td>101番目の百物語</td><td>ISBN 978-4-8401-3451-4</td><td>ISBN 978-986-10-7291-3</td><td>2010年7月23日</td><td>2011年3月3日</td></tr><tr><td>第2卷</td><td>101番目の百物語 2</td><td>ISBN 978-4-8401-3581-8</td><td>ISBN 978-986-10-8458-9</td><td>2010年11月25日</td><td>2011年9月8日</td></tr><tr><td>第3卷</td><td>101番目の百物語 3</td><td>ISBN 978-4-8401-3852-9</td><td>ISBN 978-986-10-9524-0</td><td>2011年3月25日</td><td>2012年3月8日</td></tr><tr><td>第4卷</td><td>101番目の百物語 4</td><td>ISBN 978-4-8401-3974-8</td><td>ISBN 978-986-317-119-5</td><td>2011年7月25日</td><td>2012年6月18日</td></tr><tr><td>第5卷</td><td>101番目の百物語 5</td><td>ISBN 978-4-8401-4300-4</td><td>ISBN 978-986-317-638-1</td><td>2011年12月22日</td><td>2012年8月2日</td></tr><tr><td>第6卷</td><td>101番目の百物語 6</td><td>ISBN 978-4-8401-4535-0</td><td>ISBN 978-986-324-211-6</td><td>2012年3月23日</td><td>2012年12月6日</td></tr><tr><td>第7卷</td><td>101番目の百物語 7</td><td>ISBN 978-4-8401-4644-9</td><td>ISBN 978-986-332-367-9</td><td>2012年7月25日</td><td>2013年4月18日</td></tr><tr><td>第8卷</td><td>101番目の百物語 8</td><td>ISBN 978-4-8401-4875-7</td><td>ISBN 978-986-332-968-8</td><td>2012年12月22日</td><td>2013年7月4日</td></tr></tbody></table><h1 id="迷茫管家与懦弱的我"><a href="#迷茫管家与懦弱的我" class="headerlink" title="迷茫管家与懦弱的我"></a>迷茫管家与懦弱的我</h1><table class="infobox bordered" style="width: 27em;  float:right; text-align: left;" cellpadding="2">    <tbody>        <tr>            <th colspan="2" style="font-size: 110%; background: #ccf; text-align: center;" nowrap="nowrap">迷茫管家与懦弱的我</th>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><span xml:lang="ja" lang="ja">まよチキ！</span></td>        </tr>        <tr>            <td colspan="2" style="background: #ccf; text-align: center; border: 0px;"><span xml:lang="en" lang="en"><i>Mayo Chiki!</i></span></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>作品原名</b></td>            <td><span xml:lang="ja" lang="ja">まよチキ！ ～迷える執事とチキンな俺と～</span></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>正式译名</b></td>            <td>迷茫管家与胆怯的我<br>迷茫管家与懦弱的我（<span class="flagicon"><a href="//zh.wikipedia.org/wiki/中华人民共和国" title="中华人民共和国"><img alt="中华人民共和国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span>）</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>作者</b></td>            <td><a href="//zh.wikipedia.org/wiki/朝野始" title="朝野始">朝野始</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>插图</b></td>            <td><a href="//zh.wikipedia.org/wiki/菊池政治" title="菊池政治">菊池政治</a></td>        </tr>        <tr>            <td style="background: #e6e9ff;"><b>出版社</b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/Media_Factory" title="Media Factory">Media Factory</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/臺灣" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <span class="flagicon"><a href="//zh.wikipedia.org/wiki/香港" title="香港"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/尖端出版" title="尖端出版">尖端出版</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中华人民共和国" title="中华人民共和国"><img alt="中华人民共和国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/湖南美术出版社" title="湖南美术出版社">湖南美术出版社</a>（出版）、<a href="//zh.wikipedia.org/wiki/天闻角川" title="天闻角川">天闻角川</a>（发行）<br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/朝鲜半岛" title="朝鲜半岛"><img alt="朝鲜半岛" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flag_of_Korea_(1882-1910).svg/22px-Flag_of_Korea_(1882-1910).svg.png" class="thumbborder"  height="15" width="22"></a></span>D&C media</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b><a href="//zh.wikipedia.org/wiki/文庫" title="文库">文库</a></b></td>            <td><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/MF文庫J" title="MF文库J">MF文库J</a><br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/臺灣" title="台湾"><img alt="台湾" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> 浮文字<br><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中华人民共和国" title="中华人民共和国"><img alt="中华人民共和国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> 天闻角川轻小说</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>发表期间</b></td>            <td>2009年11月－2012年7月</td>        </tr>        <tr>            <td style="background: #e6e9ff;" nowrap="nowrap"><b>册数</b></td>            <td>全12册</td>        </tr>    </tbody></table>相当有意思的小说，但就个人而言觉得剧情有些脱离常理。<br>## 概要书名“まよチキ！”，是当时应征作品“迷える執事とチキンな俺と”（中译：迷茫管家与懦弱的我）的简称。中文繁体版由尖端出版社代理出版，译者为王静怡。中文简体版译名为《迷茫管家与懦弱的我》，由天闻角川代理发行，湖南美术出版社出版，译者为雅岚。就读私立浪岚学园的坂町近次郎，意外发现同年级大小姐“凉月奏”的美少年管家“近卫昴”实际上是女生？！因为种种因素所以必须以男性身分在奏家工作的昴，奏也希望近次郎能替她们守住秘密，而交换条件则是帮助他克服女性恐惧症……。<h2 id="书籍信息-1"><a href="#书籍信息-1" class="headerlink" title="书籍信息"></a>书籍信息</h2><p>自2014年1月起，简体中文版小说在中国大陆各销售通路全面下架，代理方天闻角川尚未对此做法进行说明。</p><table class="wikitable" style="font-size: 12px;"><tbody><tr><th rowspan="2">日文名</th><th rowspan="2">中文名</th><th colspan="2"><span class="flagicon"><a href="//zh.wikipedia.org/wiki/日本" title="日本"><img alt="日本" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/22px-Flag_of_Japan.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/Media_Factory" title="Media Factory">Media Factory</a></th><th colspan="2"><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中華民國" title="中华民国"><img alt="中华民国" src="//upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/22px-Flag_of_the_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <span class="flagicon"><a href="//zh.wikipedia.org/wiki/香港" title="香港"><img alt="香港" src="//upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Flag_of_Hong_Kong.svg/22px-Flag_of_Hong_Kong.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/尖端出版" title="尖端出版">尖端出版</a></th><th colspan="2"><span class="flagicon"><a href="//zh.wikipedia.org/wiki/中华人民共和国" title="中华人民共和国"><img alt="中华人民共和国" src="//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People's_Republic_of_China.svg/22px-Flag_of_the_People's_Republic_of_China.svg.png" class="thumbborder"  height="15" width="22"></a></span> <a href="//zh.wikipedia.org/wiki/天闻角川" title="天闻角川">天闻角川</a></th></tr><tr><th>初版发售日期</th><th><a href="//zh.wikipedia.org/wiki/ISBN" title="ISBN" class="mw-redirect">ISBN</a></th><th>初版发售日期</th><th>ISBN</th><th>初版发售日期</th><th>ISBN</th></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 1</span></td><td>迷茫管家与懦弱的我 1</td><td>2009.11.21</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840130844" class="internal mw-magiclink-isbn">ISBN 978-4-8401-3084-4</a></td><td>2011.4.1</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571044996" class="internal mw-magiclink-isbn">ISBN 978-957-10-4499-6</a></td><td>2012.10.20</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9787535656339" class="internal mw-magiclink-isbn">ISBN 978-7-5356-5633-9</a></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 2</span></td><td>迷茫管家与懦弱的我 2</td><td>2010.1.25</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840131551" class="internal mw-magiclink-isbn">ISBN 978-4-8401-3155-1</a></td><td>2011.6.15</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571045467" class="internal mw-magiclink-isbn">ISBN 978-957-10-4546-7</a></td><td>2013.1.20</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9787535659231" class="internal mw-magiclink-isbn">ISBN 978-7-5356-5923-1</a></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 3</span></td><td>迷茫管家与懦弱的我 3</td><td>2010.4.30</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840132787" class="internal mw-magiclink-isbn">ISBN 978-4-8401-3278-7</a></td><td>2011.8.12</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571045696" class="internal mw-magiclink-isbn">ISBN 978-957-10-4569-6</a></td><td>2013.3.5</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9787535660381" class="internal mw-magiclink-isbn">ISBN 978-7-5356-6038-1</a></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 4</span></td><td>迷茫管家与懦弱的我 4</td><td>2010.7.31</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840134538" class="internal mw-magiclink-isbn">ISBN 978-4-8401-3453-8</a></td><td>2011.10.21</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571046570" class="internal mw-magiclink-isbn">ISBN 978-957-10-4657-0</a></td><td>2013.5.20</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9787535661982" class="internal mw-magiclink-isbn">ISBN 978-7-5356-6198-2</a></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 5</span></td><td>迷茫管家与懦弱的我 5</td><td>2010.10.31</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840135504" class="internal mw-magiclink-isbn">ISBN 978-4-8401-3550-4</a></td><td>2012.2.3</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571047416" class="internal mw-magiclink-isbn">ISBN 978-957-10-4741-6</a></td><td>2013.7.5</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9787535662668" class="internal mw-magiclink-isbn">ISBN 978-7-5356-6266-8</a></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 6</span></td><td>迷茫管家与懦弱的我 6</td><td>2011.1.31</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840136976" class="internal mw-magiclink-isbn">ISBN 978-4-8401-3697-6</a></td><td>2012.4.13</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571048352" class="internal mw-magiclink-isbn">ISBN 978-957-10-4835-2</a></td><td>2013.11.5</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9787535666123" class="internal mw-magiclink-isbn">ISBN 978-7-5356-6612-3</a></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 7</span></td><td>迷茫管家与懦弱的我 7</td><td>2011.4.30</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840138949" class="internal mw-magiclink-isbn">ISBN 978-4-8401-3894-9</a></td><td>2012.6.16</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571048871" class="internal mw-magiclink-isbn">ISBN 978-957-10-4887-1</a></td><td></td><td></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 8</span></td><td>迷茫管家与懦弱的我 8</td><td>2011.6.24</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840139403" class="internal mw-magiclink-isbn">ISBN 978-4-8401-3940-3</a></td><td>2012.7.7</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571049373" class="internal mw-magiclink-isbn">ISBN 978-957-10-4937-3</a></td><td></td><td></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 9</span></td><td>迷茫管家与懦弱的我 9</td><td>2011.9.22</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840142403" class="internal mw-magiclink-isbn">ISBN 978-4-8401-4240-3</a></td><td>2012.10.5</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571050201" class="internal mw-magiclink-isbn">ISBN 978-957-10-5020-1</a></td><td></td><td></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 10</span></td><td>迷茫管家与懦弱的我 10</td><td>2012.1.25</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840143677" class="internal mw-magiclink-isbn">ISBN 978-4-8401-4367-7</a></td><td>2012.12.7</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571050751" class="internal mw-magiclink-isbn">ISBN 978-957-10-5075-1</a></td><td></td><td></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 11</span></td><td>迷茫管家与懦弱的我 11</td><td>2012.4.25</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840145473" class="internal mw-magiclink-isbn">ISBN 978-4-8401-4547-3</a></td><td>2013.2.21</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571051147" class="internal mw-magiclink-isbn">ISBN 978-957-10-5114-7</a></td><td></td><td></td></tr><tr><td><span xml:lang="ja" lang="ja">まよチキ！ 12</span></td><td>迷茫管家与懦弱的我 12</td><td>2012.7.25</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9784840146395" class="internal mw-magiclink-isbn">ISBN 978-4-8401-4639-5</a></td><td>2013.8.19</td><td><a href="//zh.wikipedia.org/wiki/Special:网络书源/9789571052908" class="internal mw-magiclink-isbn">ISBN 978-957-10-5290-8</a></td><td></td><td></td></tr></tbody></table><style>table{font-size: 0.78em;}</style>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;原来推荐的，现在可能不推荐了，但没重新看( — 2021-07-03&lt;/p&gt;
+&lt;p&gt;小说全部是在轻之国度收的&lt;/p&gt;
+&lt;p&gt;个人进行了一些除错以及修改。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/sh/648x89gqo5lmqd7/A</summary>
+      
+    
+    
+    
+    
+    <category term="过时(Outdated)" scheme="http://ted423.github.io/tags/%E8%BF%87%E6%97%B6-Outdated/"/>
+    
+    <category term="完结" scheme="http://ted423.github.io/tags/%E5%AE%8C%E7%BB%93/"/>
+    
+    <category term="小说" scheme="http://ted423.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客换主题，不再用hexo-theme-archer</title>
+    <link href="http://ted423.github.io/etc/hexo-theme-icarus/"/>
+    <id>http://ted423.github.io/etc/hexo-theme-icarus/</id>
+    <published>2024-10-11T03:10:02.192Z</published>
+    <updated>2024-10-10T07:15:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>原来的主题是 <a href="https://github.com/fi3ework/hexo-theme-archer">https://github.com/fi3ework/hexo-theme-archer</a></p><p>但不幸的是，维护者有自己的事要做，老的版本有老的 bug，最新的版本有新的 bug，修复时间未知，PR里另一个维护者有不同意见却长期没有获得回应。整个主题的版本不可控制，并且它推荐的安装方式是用整个 Github 项目，配置什么的都在里面，已经开始影响我写博客了。</p><p>因为提交的时候是主题和文章一起提交。而原项目的所有配置都写死在了项目里，如果我需要使用，最好的方式是我自己去维护一个个人版本。这有几个问题。</p><ul><li>这个项目的使用方式需要使用者自行在 themes 里做一个单独的代码版本控制（项目本身并没有明确要求，但实际使用中肯定是需要的）。如果不做，等哪天你需要更新了，你会发现不知道哪些文件是不必要的，哪些文件需要更新，哪些文件被还原了导致奇怪的问题，甚至你大概需要自己重新编译一下。这是一个正常的 Hexo Theme 不会有的要求，我的主要目的是写博客，虽然个人愿意维护一个自己的版本，甚至已经这么做过了。</li><li>这个自己维护的代码应该是私密的，因为配置都在里面，我不希望别人围观配置，但个人配置这种东西，它就应该在本地。</li><li>调试主题以及配置会影响我更新文章。如果调试需要花几天时间甚至更长，我没法把一个有 bug 的博客更新出去，况且我本身不希望花太多时间在这上面。</li><li>整个项目的设计存在明显问题，大部分其他项目提供配置示例都是加了 .sample，这样不会有配置覆盖修改之类的问题，参考上面第二点，原始 code 应该和编译后的 release 文件分开。而在这个项目中，你需要把 .git 文件夹还有一大堆应该用不上的文件都放到你的 themes 文件夹中，另外我估摸编译的 node_modules 和主题中需要使用的 node_modules 混在了一起。</li><li>主要维护者删 package-lock.json</li><li>其他主题都带 local search</li></ul><p>新的主题是 <a href="https://github.com/ppoffice/hexo-theme-icarus">https://github.com/ppoffice/hexo-theme-icarus</a></p><p>就本身来说我还是比较喜欢原来的主题样式，新的主题还有好多我不太喜欢的变化，例如页面宽度（原来的我自己调宽了），预览的长度。不过好歹支持了 toc，虽然解析似乎还有问题</p><p>不过这块应该可以克服和改进，毕竟很多还没来得及研究</p><hr><p><a href="https://github.com/ppoffice/hexo-theme-icarus/issues/1254">https://github.com/ppoffice/hexo-theme-icarus/issues/1254</a><br>最后又弃用的原因见这个issue</p><hr><p>hexo-theme-icarus 中 hexo-renderer-inferno 似乎导致了 Linux 上无法 <code>npm install</code> 的问题。 -2024-10-10</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;原来的主题是 &lt;a href=&quot;https://github.com/fi3ework/hexo-theme-archer&quot;&gt;https://github.com/fi3ework/hexo-theme-archer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但不幸的是，维护者有自己的事要做，</summary>
+      
+    
+    
+    
+    <category term="etc" scheme="http://ted423.github.io/categories/etc/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Hexo" scheme="http://ted423.github.io/tags/Hexo/"/>
+    
+    <category term="Hexo Theme" scheme="http://ted423.github.io/tags/Hexo-Theme/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>下载、资源类软件缺陷记录</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/download-defect/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/download-defect/</id>
+    <published>2024-10-11T03:10:00.550Z</published>
+    <updated>2021-04-24T08:17:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="BUG"><a href="#BUG" class="headerlink" title="BUG"></a>BUG</h1><ul><li>aria2c <a href="https://ted423.bitcron.com/post/software/zi-yuan-lei/aria2c">https://ted423.bitcron.com/post/software/zi-yuan-lei/aria2c</a></li><li>Transmission<ol><li>tracker连接性不强，获取tracker信息过慢</li><li>制作种子不支持网络映射</li><li>单线程，牺牲性能降低占用(理论我觉得rt会更好，不过rt不支持改名文件夹这些，并且两个长期不更新的软件)</li><li>部分种子识别有问题，部分种子无法使用(我提issue被ban)</li><li>长期严重 <a href="https://github.com/transmission/transmission/issues/7078">issue</a> 版本,Issue 虽然修了，但还没发新版(5月份版本的 bug,8.26 Issue 创建,10月份未发新版)</li></ol></li><li>qbittorrent</li></ul><ol><li>制作的种子dmhy无法读取中文文件名(但应该是网站问题)</li><li>制作的种子tracker中必须隔开一行，否则traker其他软件无法识别</li><li>Others <a href="https://github.com/qbittorrent/qBittorrent/issues/created_by/ted423">https://github.com/qbittorrent/qBittorrent/issues/created_by/ted423</a></li></ol><ul><li>迅雷</li></ul><ol><li>做种相当week,特别是点击添加重新下载时会直接把已下载文件从磁盘抹掉</li><li>现在的版本不能从别的地方下好然后拉进去补充进度了</li><li>迅雷并不会显示具体的tracker信息，并且也不会具体的显示谁给你传数据，也不会显示你在给谁传数据，个人感觉它是努力淡化BT原理，营造一种速度都是迅雷提供的错觉，所以很多迅雷用户体现一种反智现象</li></ol><ul><li>Deluge</li></ul><ol><li>对中文支持不好,添加种子时路径有中文就出错了，但BT下载的文件夹又可以是中文</li><li>2.0.3大概是不准备也没法支持Windows了</li></ol><h1 id="我为什么仍在使用迅雷"><a href="#我为什么仍在使用迅雷" class="headerlink" title="我为什么仍在使用迅雷"></a>我为什么仍在使用迅雷</h1><h2 id="https-ted423-bitcron-com-post-software-zi-yuan-lei-use-thunder"><a href="#https-ted423-bitcron-com-post-software-zi-yuan-lei-use-thunder" class="headerlink" title="https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder"></a><a href="https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder">https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder</a></h2><p><time>2021-04-24</time>增加一些问题<br><time>2019-08-10</time>增加Transmission，Bittorrent经判断校验缺少文件导致另一个文件无法完成校验是正常的（与分块有关）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;BUG&quot;&gt;&lt;a href=&quot;#BUG&quot; class=&quot;headerlink&quot; title=&quot;BUG&quot;&gt;&lt;/a&gt;BUG&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;aria2c &lt;a href=&quot;https://ted423.bitcron.com/post/software/zi-</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm yarn设置代理，以及国内镜像源</title>
+    <link href="http://ted423.github.io/Code/npm%20yarn%20proxy/"/>
+    <id>http://ted423.github.io/Code/npm%20yarn%20proxy/</id>
+    <published>2024-10-11T03:09:57.733Z</published>
+    <updated>2024-10-10T06:41:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set https-proxy socks5://127.0.0.1:7890</span><br><span class="line"></span><br><span class="line">yarn config set proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure><p>https-proxy、proxy可以互换，目前没感到差别。</p><p>还可以设置镜像源，不过改了之后包的地址也会变，如果涉及到跨区域多人开发的话，最好不要乱动。</p><p>需要注意 Linux 下，每个用户以及 root 配置不同，全局可能需要 root 权限</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry  // 查看npm当前镜像源</span><br><span class="line"></span><br><span class="line">npm config set registry https://registry.npmmirror.com  // 设置npm镜像源为淘宝镜像</span><br><span class="line"></span><br><span class="line">npm config set registry http://mirrors.cloud.tencent.com/npm/  //腾讯</span><br><span class="line"></span><br><span class="line">npm config set registry https://mirrors.huaweicloud.com/repository/npm/ //华为</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">yarn config get registry  // 查看yarn当前镜像源</span><br><span class="line"></span><br><span class="line">yarn config set registry https://registry.npmmirror.com  // 设置yarn镜像源为淘宝镜像</span><br></pre></td></tr></table></figure><hr><p>修正了淘宝镜像源地址，增加了腾讯和华为 -2024-10-10</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
+    
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QNAP453Bmini 装 Ubuntu</title>
+    <link href="http://ted423.github.io/Linux/QNAP453Bmini/"/>
+    <id>http://ted423.github.io/Linux/QNAP453Bmini/</id>
+    <published>2024-09-19T13:14:56.785Z</published>
+    <updated>2024-09-19T13:14:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>以前骂 QNAP 骂的很开心来着，现在总觉得很对不起，毕竟开机接显示器按 del 能进 BIOS,能改启动能装机。总归用的不好还有自己菜的关系。</p><p>QNAP系统除了 RAID 和 DDNS 以外基本没啥有意义的东西。所以如果你嫌弃它系统，那还是装系统吧。</p><p>推荐买个U盘做系统盘，毕竟4盘位。注意不要太烂的，注意下U盘的写速度，大部分坑爹U盘3.0的口，写入速度也才几十。</p><p>进 BIOS 最好关闭原始自带的引导，不然它有时候会重置引导顺序，导致起到 QNAP 自身界面。我是直接把它原先引导分区格了。毕竟只有500MB,别到时侯哪天装了硬盘之后被它启动把硬盘给我格了自动装系统。</p><p>然后就注意这个 <a href="https://bugzilla.kernel.org/show_bug.cgi?id=196805">https://bugzilla.kernel.org/show_bug.cgi?id=196805</a> ,不然只能认两块硬盘（Win正常）</p><p><code>/etc/default/grub</code>里<code>GRUB_CMDLINE_LINUX=</code>改成<code>GRUB_CMDLINE_LINUX=&quot;pcie_port_pm=off blacklist=pata_acpi&quot;</code></p><p><code>blacklist=pata_acpi</code>是因为下面这个，不过实际可能不用。</p><p><a href="https://unix.stackexchange.com/questions/665630/asmedia-sata-controller-106x-not-working-under-ubuntu/769680">https://unix.stackexchange.com/questions/665630/asmedia-sata-controller-106x-not-working-under-ubuntu/769680</a></p><p>改完之后 <code>sudo update-grub</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;以前骂 QNAP 骂的很开心来着，现在总觉得很对不起，毕竟开机接显示器按 del 能进 BIOS,能改启动能装机。总归用的不好还有自己菜的关系。&lt;/p&gt;
+&lt;p&gt;QNAP系统除了 RAID 和 DDNS 以外基本没啥有意义的东西。所以如果你嫌弃它系统，那还是装系统吧。&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[文档]Group Policy(组策略)查询</title>
+    <link href="http://ted423.github.io/Document/Group%20Policy/"/>
+    <id>http://ted423.github.io/Document/Group%20Policy/</id>
+    <published>2024-09-08T11:21:41.332Z</published>
+    <updated>2024-09-08T10:50:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>不错的网站<br><a href="https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn">https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;不错的网站&lt;br&gt;&lt;a href=&quot;https://admx.help/?Category=Windows_10_2016&amp;amp;Language=zh-cn&quot;&gt;https://admx.help/?Category=Windows_10_2016&amp;amp;Languag</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="组策略(Group Policy)gpedit.msc" scheme="http://ted423.github.io/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy-gpedit-msc/"/>
+    
+  </entry>
+  
+</feed>

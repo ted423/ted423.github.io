@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>x265参数解析 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/Encode/x265/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Document, Encode" />
+  
+  <meta name="description" content="参考资料  https:&#x2F;&#x2F;tieba.baidu.com&#x2F;p&#x2F;6627144750 https:&#x2F;&#x2F;x265.readthedocs.io&#x2F;en&#x2F;3.1&#x2F;cli.html https:&#x2F;&#x2F;vcb-s.nmm-hd.org&#x2F;Dark%20Shrine&#x2F;[VCB-Studio][教程10]x265%202.9参数设置&#x2F;[VCB-Studio][教程10]x265%202.9参数设置.pdf  crf">
+<meta property="og:type" content="article">
+<meta property="og:title" content="x265参数解析">
+<meta property="og:url" content="http://ted423.github.io/Document/Encode/x265/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="参考资料  https:&#x2F;&#x2F;tieba.baidu.com&#x2F;p&#x2F;6627144750 https:&#x2F;&#x2F;x265.readthedocs.io&#x2F;en&#x2F;3.1&#x2F;cli.html https:&#x2F;&#x2F;vcb-s.nmm-hd.org&#x2F;Dark%20Shrine&#x2F;[VCB-Studio][教程10]x265%202.9参数设置&#x2F;[VCB-Studio][教程10]x265%202.9参数设置.pdf  crf">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-11-28T03:58:00.000Z">
+<meta property="article:modified_time" content="2022-09-26T09:25:07.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="Encode">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Encode/x265/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">x265参数解析</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2020-11-28T03:58:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2020-11-28</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~3.48K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>参考资料</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/6627144750">https://tieba.baidu.com/p/6627144750</a></li>
+<li><a target="_blank" rel="noopener" href="https://x265.readthedocs.io/en/3.1/cli.html">https://x265.readthedocs.io/en/3.1/cli.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://vcb-s.nmm-hd.org/Dark%20Shrine/[VCB-Studio][%E6%95%99%E7%A8%8B10]x265%202.9%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE/[VCB-Studio][%E6%95%99%E7%A8%8B10]x265%202.9%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE.pdf">https://vcb-s.nmm-hd.org/Dark%20Shrine/[VCB-Studio][教程10]x265%202.9参数设置/[VCB-Studio][教程10]x265%202.9参数设置.pdf</a></li>
+</ul>
+<h1 id="crf-qp"><a href="#crf-qp" class="headerlink" title="crf,qp"></a>crf,qp</h1><p><strong>qp</strong> 电脑认为的恒定画质(但一般不进行设置)<br><strong>crf</strong> 人眼认为的恒定画质，但是运动时候画质会降低来节省码率<br>数值越低画质越好。<br>一般低于等于18可以认为和原画差不多(主观观点)</p>
+<h1 id="ctu"><a href="#ctu" class="headerlink" title="ctu &lt;64|32|16&gt;"></a>ctu &lt;64|32|16&gt;</h1><p>分块大小，64速度最慢，32其次<br>设成32 对于复杂场景压缩压缩率最高，64 对于简单场景压缩压缩率最高<br>推荐用32因为速度比64快10%，并且画质更好一些<br>16适合DVD，32适合1080p,64适合4K</p>
+<h1 id="rd-1-6"><a href="#rd-1-6" class="headerlink" title="rd (1-6)"></a>rd (1-6)</h1><p>分析的复杂度，数值越大画质越高，压出来体积越大，5,6非常慢, 默认3.</p>
+<h1 id="early-skip"><a href="#early-skip" class="headerlink" title="early-skip"></a>early-skip</h1><p>–early-skip, –no-early-skip<br>默认开，开了提高压缩速度，关了提高精度，体积小幅度增加</p>
+<h1 id="rdoq-level"><a href="#rdoq-level" class="headerlink" title="rdoq-level"></a>rdoq-level</h1><p>默认0,关闭，预设slow时候默认开启。(preset placebo 似乎也还是2)<br>x265最重要的参数，没有之一，开了能有助于保存细节，当然会有更大文件体积。关闭可以提高压缩速度，看起来会轻度模糊。开启掉速度30%以上，推荐舍弃其他参数，也要开启这个。<br>设成 1 时候 看起来效果最好，但是体积会大30%以上<br>设成 2 时候 效果略差，体积只会小幅度增加，推荐使用2</p>
+<h1 id="tu-intra-depth-tu-inter-depth"><a href="#tu-intra-depth-tu-inter-depth" class="headerlink" title="tu-intra-depth &lt;1..4&gt; tu-inter-depth &lt;1..4&gt;"></a>tu-intra-depth &lt;1..4&gt; tu-inter-depth &lt;1..4&gt;</h1><p>默认1，开高会小幅增加压缩率，但是特别慢 (preset placebo 似乎就是4)</p>
+<h1 id="max-tu-size"><a href="#max-tu-size" class="headerlink" title="max-tu-size &lt;32|16|8|4&gt;"></a>max-tu-size &lt;32|16|8|4&gt;</h1><p>默认32，开低会降低压缩率，并且不会提速，推荐默认</p>
+<h1 id="max-merge"><a href="#max-merge" class="headerlink" title="max-merge &lt;1..5&gt;"></a>max-merge &lt;1..5&gt;</h1><p>开高小幅度提高压缩率，对速度影响不明显，默认2 (preset placebo 似乎就是5)</p>
+<h1 id="me-merange"><a href="#me-merange" class="headerlink" title="me ,merange"></a>me ,merange</h1><p>me 搜索方式，默认hex ，用umh 或star 能小幅度提高压缩率，但是掉速20%<br>merange 搜索范围，默认57，me设成hex时候，对速度影响不大，但是使用umh或star时候，开高掉速严重<br>umh比star好</p>
+<ol>
+<li>dia</li>
+<li>hex (default)</li>
+<li>umh</li>
+<li>star</li>
+<li>sea</li>
+<li>full</li>
+</ol>
+<h1 id="subme-默认2"><a href="#subme-默认2" class="headerlink" title="subme 默认2"></a>subme 默认2</h1><p>开高小幅提高压缩率，开低提高压缩速度，5比3慢10%<br>推荐3</p>
+<h1 id="min-keyint"><a href="#min-keyint" class="headerlink" title="min-keyint"></a>min-keyint</h1><p>最小分组帧数，默认23，推荐改成个位数，提高gop准确度。<br>小幅度提高压缩率，对压缩速度没影响</p>
+<h1 id="rc-lookahead"><a href="#rc-lookahead" class="headerlink" title="rc-lookahead"></a>rc-lookahead</h1><p>预览帧数，默认20<br>开高可以提高分组(gop)准确度，小幅度提高压缩率，同时小幅度降速，推荐40<br>crf模式时，rc-lookahead可以提高cutree的准确度（提高画质)</p>
+<h1 id="bframes"><a href="#bframes" class="headerlink" title="bframes"></a>bframes</h1><p>最大b帧数量<br>开高小幅度提高压缩率，默认4，开到8，掉速10%<br>bframes 开高了会小幅降低画质</p>
+<h1 id="cutree"><a href="#cutree" class="headerlink" title="cutree"></a>cutree</h1><p>–no-cutree since this seems to be a poor implementation of mbtree.<br><del>目前测试是静态场景表现不错，具体可以看<a href="https://ted423.github.io/Document/Encode/cutree/">https://ted423.github.io/Document/Encode/cutree/</a></del> 不建议开，码率分配存在非常大的问题(有一处分配了31M的码率结果效果还不如一半码率的x264)<br>doom9 上2020年有人说”在快速移动的场景中，我一直在努力解决丑陋的扭曲（用条带涂抹看起来有点像运动模糊的东西），最后发现 x265 的 CUTree 是罪魁祸首。<br>关闭它可以解决它，但是当试图在其他场景中保持相同的整体质量时，比特率会爆炸。</p>
+<p>有什么方法可以使 CUTree ‘不那么激进’ 或将其设置为 50% 或某些阈值参数吗？”</p>
+<h1 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h1><p>参照帧数量，默认3<br>开高小幅度提高压缩率，同时小幅度降速，<br>3和4速度差不多，推荐4<br>VCB:不过实测 ref 增加在 x265 中作用不明显。建议不超过 6</p>
+<h1 id="sao-默认开启"><a href="#sao-默认开启" class="headerlink" title="sao 默认开启"></a>sao 默认开启</h1><p>–sao, –no-sao<br>设计目的是去振铃(光环现象)，但是细节丰富地方会去掉太多细节，<br>推荐关闭。</p>
+<h1 id="strong-intra-smoothing"><a href="#strong-intra-smoothing" class="headerlink" title="strong-intra-smoothing"></a>strong-intra-smoothing</h1><p>对关键帧进行平滑处理，看起来挺吓人的，实际上效果不明显，推荐用<code>--no-strong-intra-smoothing</code>关闭，保留细节<br><a target="_blank" rel="noopener" href="http://forum.doom9.net/showthread.php?p=1873696">http://forum.doom9.net/showthread.php?p=1873696</a><br>相关讨论，与贴吧给出的结论不同<br>个人测试是开的话画面细节丢失，影响蛮大(可能适合低码压制)</p>
+<h1 id="lookahead-slices"><a href="#lookahead-slices" class="headerlink" title="lookahead-slices"></a>lookahead-slices</h1><p>设成0有助于提高画质，开高有利于lookahead的并行度，<br>推荐设成0，对压缩速度无影响</p>
+<h1 id="lookahead-slices-1"><a href="#lookahead-slices-1" class="headerlink" title="lookahead-slices"></a>lookahead-slices</h1><p>设成0有助于提高画质，开高有利于lookahead的并行度，<br>推荐设成0，对压缩速度无影响</p>
+<h1 id="deblock-去色块"><a href="#deblock-去色块" class="headerlink" title="deblock 去色块"></a>deblock 去色块</h1><p>要调低 默认太高， 推荐最高调到-1,-1以下，调高了会模糊</p>
+<h1 id="qcomp"><a href="#qcomp" class="headerlink" title="qcomp"></a>qcomp</h1><p>运动时候画质 crf开启时候有效<br>开高提高运动时候画质，开低减少文件体积<br>推荐0.6-0.7</p>
+<h1 id="frame-threads"><a href="#frame-threads" class="headerlink" title="frame-threads"></a>frame-threads</h1><p>帧线程数量，开高提高cpu利用率，开低有利于小幅度提高压缩率<br>如果cpu能够满载可以考虑调到2，如果不能满载考虑使用默认值<br>(默认会自动调整)</p>
+<h1 id="aq-strength-默认1-0"><a href="#aq-strength-默认1-0" class="headerlink" title="aq-strength 默认1.0"></a>aq-strength 默认1.0</h1><p>低于1.0首先保留边缘，高于1.0优先保留纹理<br>不知道不要乱调这个<br>VCB:aq-strength 决定了 aq 的强度，一般来说，动漫的 aq-strength 不用太高（太高了码率也会<br>浪费）。通常，aq-mode&#x3D;1，aq-strength 给 0.8 比较合理；aq-mode&#x3D;2，aq-strength 给 0.9 左右，aq-mode&#x3D;3，<br>aq-strength 给 0.7 左右。</p>
+<h1 id="aq-mode"><a href="#aq-mode" class="headerlink" title="aq-mode"></a>aq-mode</h1><p>目前测试在不足码率压制的情况下,aq1可能会导致画面出现一些奇怪的现象，aq2相对画面更好一些，并且不会出现奇妙的画面(不过测试还不够充分)。<br>在给够码率的情况下，aq1似乎会好些<br>2 x265默认（推荐）</p>
+<p>3 暗处增强，避免暗处被压坏，实际上亮的地方码率也会增加30%以上，所以很 浪费码率(不过就压制而言，通常是差不多码率进行比较，因此浪费码率可以通过调高crf解决)<br> aq-mode 4 :优先保留边缘，噪点很多时候用<br>VCB:x265 目前有三种 aq 模式。aq-mode 1 是最安全稳定的 aq，适合高码率&#x2F;高画质编码；aq-mode<br>2 相对来说效率最高，适合中低码率的编码；aq-mode 3 对暗场进行加强，适合 8bit 编码防止暗场压烂。一般 10bit<br>编码根据 crf 高低决定 aq 选取，个人建议在 crf &lt;&#x3D; 16 时候使用 aq-mode 1，否则使用 aq-mode 2。注意同 crf<br>下，不同 aq-mode 出来的体积是不一样的，3&gt;1&gt;2。</p>
+<h1 id="rskip"><a href="#rskip" class="headerlink" title="rskip &lt;0|1|2&gt;"></a>rskip &lt;0|1|2&gt;</h1><p>开启提高速度，关闭提高画质，0是关闭，默认1<br>模式1比0 wmaf 下降0.03左右<br>模式2比模式1压缩速度要快30%-50%左右，但是压缩率要低<br>对于平滑画面（噪点比较少）画质优于rskip&#x3D;1，但是噪点比较多画面 画质不如rskip&#x3D;1<br>rskip&#x3D;2 和ctu&#x3D;64配合不好，同时开启画质压缩率都会下降<br><del>推荐rskip&#x3D;2 和ctu&#x3D;32配合</del>(我们一般不开)</p>
+<h1 id="rect"><a href="#rect" class="headerlink" title="rect"></a>rect</h1><h2 id="–rect-–no-rect开了小幅度增加压缩率（0-5-左右-和画质，有长方形区域时候才有效，否则是空跑，开了掉速30-以上推荐关闭增加压缩速度。VCB-通常来说，"><a href="#–rect-–no-rect开了小幅度增加压缩率（0-5-左右-和画质，有长方形区域时候才有效，否则是空跑，开了掉速30-以上推荐关闭增加压缩速度。VCB-通常来说，" class="headerlink" title="–rect, –no-rect开了小幅度增加压缩率（0%-5%左右 )和画质，有长方形区域时候才有效，否则是空跑，开了掉速30%以上推荐关闭增加压缩速度。VCB:通常来说，&lt;&#x3D;1080p 下，rect 基本上没什么作用，amp 是几乎完全没作用，但是这俩都是速度黑洞。因此从效率角度建议关闭，或者至少关闭 amp个人测试中，1080p开了，码率低了一点，画面差了一点"></a>–rect, –no-rect<br>开了小幅度增加压缩率（0%-5%左右 )和画质，有长方形区域时候才有效，否则是空跑，开了掉速30%以上<br>推荐关闭增加压缩速度。<br>VCB:通常来说，&lt;&#x3D;1080p 下，rect 基本上没什么作用，amp 是几乎完全没作用，但是这俩都<br>是速度黑洞。因此从效率角度建议关闭，或者至少关闭 amp<br>个人测试中，1080p开了，码率低了一点，画面差了一点</h2><p><date>2021-11-17</data>增加cutree相关<br><date>2022-01-28</date>cutree调整为不建议开</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Encode/" rel="tag">Encode</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2022-09-26T09:25:07.000Z" itemprop="dateModified">最后编辑：2022-09-26</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 两个CPU性能分对比的网站" href="/Document/CPU_info/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" [转载]推特(twitter)怎么看全部的（或特定时间段的）推文？" href="/Document/Network/twitter/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/Encode/x265/" data-full-path="http://ted423.github.io/Document/Encode/x265/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                391
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                14
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                148
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">48</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.66em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.6em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Browser/" style="font-size: 0.7em;">Browser</a> <a href="/tags/CMD/" style="font-size: 0.62em;">CMD</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>一张经典图，开源协议比较 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Code/%E5%BC%80%E6%BA%90/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="Open Source" />
+  
+  <meta name="description" content="部分内容来自维基 CopyleftMPLhttps:&#x2F;&#x2F;www.mozilla.org&#x2F;MPL&#x2F;2.0&#x2F;      Mozilla公共许可证                           作者             Mozilla基金会                               版本             2.0">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一张经典图，开源协议比较">
+<meta property="og:url" content="http://ted423.github.io/Code/%E5%BC%80%E6%BA%90/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="部分内容来自维基 CopyleftMPLhttps:&#x2F;&#x2F;www.mozilla.org&#x2F;MPL&#x2F;2.0&#x2F;      Mozilla公共许可证                           作者             Mozilla基金会                               版本             2.0">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://i.imgur.com/Eq2QNeC.jpg">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/200px-GPLv3_Logo.svg.png">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/LGPLv3_Logo.svg/160px-LGPLv3_Logo.svg.png">
+<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ASF-logo.svg/160px-ASF-logo.svg.png">
+<meta property="article:published_time" content="2015-01-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2015-01-01T16:00:00.000Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Open Source">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://i.imgur.com/Eq2QNeC.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/%E5%BC%80%E6%BA%90/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">一张经典图，开源协议比较</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2015-01-01T16:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2015-01-02</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~7.53K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>部分内容来自维基<br><img src="http://i.imgur.com/Eq2QNeC.jpg" alt="开源"></p>
+<h1 id="Copyleft"><a href="#Copyleft" class="headerlink" title="Copyleft"></a>Copyleft</h1><h2 id="MPL"><a href="#MPL" class="headerlink" title="MPL"></a>MPL</h2><p><a target="_blank" rel="noopener" href="https://www.mozilla.org/MPL/2.0/">https://www.mozilla.org/MPL/2.0/</a></p>
+<table class="infobox" style="border-spacing:3px;width:22em;text-align:left;font-size:small;line-height:1.5em;" cellspacing="3">
+    <caption><b>Mozilla公共许可证</b></caption>
+    <tbody>
+        <tr>
+            <th scope="row" style="text-align:left;">作者</th>
+            <td style=";;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Mozilla基金会" title="Mozilla基金会" class="mw-redirect">Mozilla基金会</a></td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">版本</th>
+            <td style=";;">2.0</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">发布者</th>
+            <td style=";;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Mozilla基金会" title="Mozilla基金会" class="mw-redirect">Mozilla基金会</a></td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">发布日期</th>
+            <td style=";;">2012年1月3日</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Debian自由软件指导方针" title="Debian自由软件指导方针">DFSG</a>兼容</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/自由软件" title="自由软件">自由软件</a></th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/开放源代码促进会" title="开放源代码促进会">OSI</a>认证</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GPL" title="GPL" class="mw-redirect">GPL</a>兼容</th>
+            <td style=";;">是 (MPL 2.0預設與<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GPL" title="GPL" class="mw-redirect">GPL</a> 2+、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/LGPL" title="LGPL" class="mw-redirect">LGPL</a> 2.1+、<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/AGPL" title="AGPL" class="mw-redirect">AGPL</a> 3+相容)</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Copyleft" title="Copyleft">Copyleft</a></th>
+            <td style=";;">有限</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">与其他协议代码链接</th>
+            <td style=";;">是</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>MPL允许在其授权下的源代码与其他授权的文件进行混合，包括私有许可证。但在MPL授权下的代码文件必须保持MPL授权，并且保持开源。这样的条款让MPL既不像MIT和BSD那样允许派生作品完全转化为私有，也不像GPL那样要求所有的派生作品，包括新的组件在内，全部必须保持GPL。通过允许在派生项目中存在私有模块，同时保证核心文件的开源，MPL同时激励了商业及开源社区来参与帮助开发核心软件。</p>
+<p>使用MPL授权的软件并不受专利的限制，其可以自由使用，出售，并可自由的重新发布。带有专利代码的版本仍然可以使用，转让，甚至出售，但未经许可则不能修改代码。此外，MPL并不授予用户对于开发者商标的使用权。</p>
+<p>为了满足MPL的条款限制，用户必须负担一些“责任”，主要是关于散发使用MPL授权的软件。用户必须确保重新散发的软件所有源代码均以MPL授权，即使是以可执行文件的方式提供或是与其他使用专有软件授权的源代码结合也一样。但若跟以GNU通用公共许可协议、GNU宽通用公共许可证、Affero通用公共许可证授权的源代码结合则是例外。此时开发者则可选用以上三种更加严格的条款来授权。</p>
+<p>不像那些较严格的Copyleft许可证，使用MPL授权的源代码可以在一个复杂的软件中与任何其他的许可协议相结合，只要仍满足MPL许可协议中3.3节的规定即可。这意味着在一份给定的源文件里面，必须全部的源代码都以MPL授权，否则就所有源代码均以其他方式授权。</p>
+<p>MPL第二版与Apache许可证以及GPL第二版或更新、LGPL2.1版或更新，及AGPL第三版或更新兼容。而1.1版因为有“一些复杂的限制”造成与GPL的不兼容（从而阻止升级到MPL 2.0）。MPL 1.1版虽然也包含了一个可以让开发者在第二个授权（包含GPL及与GPL兼容的许可证）下撰写代码的条款，但MPL 1.1与GPL却无法“合法的链接”，导致自由软件基金会不鼓励开发者使用MPL 1.1进行授权。因为这个理由，早期的Firefox采用了三重授权：MPL 1.1、GPL 2.0、LGPL 2.1。 Mozilla Application Suite仍采用三重授权。</p>
+<h2 id="GPL"><a href="#GPL" class="headerlink" title="GPL"></a>GPL</h2><table class="infobox" style="border-spacing:3px;width:22em;text-align:left;font-size:small;line-height:1.5em;" cellspacing="3">
+    <caption><b>GNU通用公共许可证</b></caption>
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/File:GPLv3_Logo.svg" class="image"><img alt="GPLv3 Logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/200px-GPLv3_Logo.svg.png" height="99" width="200"></a><br>
+                <div>GNU GPLv3 Logo标识</div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">作者</th>
+            <td style=";;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/自由软件基金会" title="自由软件基金会">自由软件基金会</a></td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">版本</th>
+            <td style=";;">第3版</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">发布者</th>
+            <td style=";;">自由软件基金会</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">发布日期</th>
+            <td style=";;">2007年6月29日</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Debian自由软件指导方针" title="Debian自由软件指导方针">DFSG</a>兼容</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/自由软件" title="自由软件">自由软件</a></th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/开放源代码促进会" title="开放源代码促进会">OSI</a>认证</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Copyleft" title="Copyleft">Copyleft</a></th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">与其他协议代码链接</th>
+            <td style=";;">仅可与<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Affero通用公共许可证" title="Affero通用公共许可证">GNU AGPLv3</a>代码相链接</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">网站</th>
+            <td style=";;"><span class="url"><a rel="nofollow noopener" class="external text" target="_blank" href="https://www.gnu.org/licenses/gpl.html">www.gnu.org/licenses/gpl.html</a></span></td>
+        </tr>
+    </tbody>
+</table>
+
+<p><a target="_blank" rel="noopener" href="https://www.gnu.org/licenses/gpl.html">https://www.gnu.org/licenses/gpl.html</a><br>GPL授予程序接受人以下权利，或称“自由”：</p>
+<ul>
+<li>以任何目的运行此程序的自由；</li>
+<li>再发行复制件的自由；</li>
+<li>改进此程序，并公开发布改进的自由（前提是能得到源代码）。</li>
+</ul>
+<p>GPL与其他一些更“许可的”自由软件许可证（比如BSD许可证）相比，主要区别就在于GPL寻求确保上述自由能在复制件及演绎作品中得到保障。它通过一种由斯托曼发明的叫Copyleft的法律机制实现，即要求GPL程序的演绎作品也要在GPL之下。相反，BSD式的许可证并不禁止演绎作品变成专有软件。</p>
+<p>GPL不会授予许可证接受人无限的权利。再发行权的授予需要许可证接受人开放软件的源代码，及所有修改。且复制件、修改版本，都必须以GPL为许可证。</p>
+<p>这些要求就是copyleft，它的基础就是作品在法律上版权所有。由于它版权所有，许可证接受人就无权进行修改和再发行（除合理使用），除非它有一个copyleft条款。如果某人想行使通常被法律所禁止的权利，只需同意GPL的条款。相反地，如果某人发行软件违反了GPL（比如不开放源代码），他就有可能被原作者起诉。</p>
+<p>copyleft利用版权法来达到与其相反的目的：copyleft给人不可剥夺的权利，而不是版权法所规定的诸多限制。这也是GPL被称作“被黑的版权法”的原因。</p>
+<p>copyleft只在程序再发行时发生效力。对软件的修改可以不公开或开放源代码，只要不发行。注意copyleft只对软件有效力，而对软件的输出并无效力（除非输出的是软件本身）。不过这在GPL版本3中可能会有改动。</p>
+<p>需要注意的有</p>
+<ul>
+<li>个人感觉目前没有软件在用GPLv1了。</li>
+<li>v2 v3区别很大(<a target="_blank" rel="noopener" href="https://www.zhihu.com/question/48884264/answer/113454129">https://www.zhihu.com/question/48884264/answer/113454129</a>)</li>
+<li>可以在不发布的情况下使用(例如网站或者云服务)</li>
+<li>因此为了应对上面第三点的情况有了AGPL(GNU Affero General Public License)</li>
+</ul>
+<h3 id="LGPL"><a href="#LGPL" class="headerlink" title="LGPL"></a>LGPL</h3><table class="infobox" cellspacing="3" style="border-spacing:3px;width:22em;text-align:left;font-size:small;line-height:1.5em">
+    <caption><b>GNU宽通用公共许可证</b>
+    </caption>
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center">
+                <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/File:LGPLv3_Logo.svg" class="image">
+                    <img alt="LGPLv3 Logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/LGPLv3_Logo.svg/160px-LGPLv3_Logo.svg.png" width="160" height="70" srcset="//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/LGPLv3_Logo.svg/240px-LGPLv3_Logo.svg.png 1.5x, //upload.wikimedia.org/wikipedia/commons/thumb/3/3b/LGPLv3_Logo.svg/320px-LGPLv3_Logo.svg.png 2x"
+                    data-file-width="823" data-file-height="358">
+                </a>
+                <div>GNU LGPL v3标志</div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;">作者</th>
+            <td style=""><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/理查德·斯托曼" title="理查德·斯托曼">理查德·斯托曼</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;">版本</th>
+            <td style="">3</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;">发布者</th>
+            <td style=""><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/自由软件基金会" title="自由软件基金会">自由软件基金会</a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Debian自由软件指导方针" title="Debian自由软件指导方针">DFSG</a>兼容</th>
+            <td style="">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/自由软件" title="自由软件">自由软件</a>
+            </th>
+            <td style="">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/开放源代码促进会" title="开放源代码促进会">OSI</a>认证</th>
+            <td style="">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GPL" class="mw-redirect" title="GPL">GPL</a>兼容</th>
+            <td style="">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Copyleft" title="Copyleft">Copyleft</a>
+            </th>
+            <td style="">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;">与其他协议代码链接</th>
+            <td style="">可以</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>GNU宽通用公共许可证（英语：GNU Lesser General Public License）简称LGPL，是由自由软件基金会公布的自由软件授权条款。它允许企业与软件开发者使用，或将LGPL授权的软件集成至他们自己的软件内。</p>
+<p>LGPL可以说是专门为软件库（Software Libraries）准备的，对于其自身，与GPL一样，修改代码或者衍生同样是被要求同样的许可证。但其可以被其他软件包括商业软件所引用。</p>
+<p>LGPL有一特点是LGPL软件可以被转换成GPL</p>
+<h1 id="Copyright"><a href="#Copyright" class="headerlink" title="Copyright"></a>Copyright</h1><h2 id="MIT"><a href="#MIT" class="headerlink" title="MIT"></a>MIT</h2><table class="infobox" style="border-spacing:3px;width:22em;text-align:left;font-size:small;line-height:1.5em;" cellspacing="3">
+    <caption><b>MIT授權條款/X11授權條款</b></caption>
+    <tbody>
+        <tr>
+            <th scope="row" style="text-align:left;;;">作者</th>
+            <td style=";;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/麻省理工学院" title="麻省理工学院">麻省理工学院</a></td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">发布者</th>
+            <td style=";;">麻省理工学院</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">发布日期</th>
+            <td style=";;">1988</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Debian自由软件指导方针" title="Debian自由软件指导方针">DFSG</a>兼容</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/自由软件" title="自由软件">自由软件</a></th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/开放源代码促进会" title="开放源代码促进会">OSI</a>认证</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GPL" title="GPL" class="mw-redirect">GPL</a>兼容</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Copyleft" title="Copyleft">Copyleft</a></th>
+            <td style=";;">否</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">与其他协议代码链接</th>
+            <td style=";;">是</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>MIT许可协议之名源自麻省理工学院（Massachusetts Institute of Technology, MIT），又称“X许可协议”（X License）或“X11许可协议”（X11 License）<br>MIT内容与三条款BSD许可协议（3-clause BSD license）内容颇为近似，但是赋予软件被授权人更大的权利与更少的限制。</p>
+<p><strong>被授权人权利</strong><br>被授权人有权利使用、复制、修改、合并、出版发布、散布、再授权和&#x2F;或贩售软件及软件的副本，及授予被供应人同等权利，惟服从以下义务。<br><strong>被授权人义务</strong><br>在软件和软件的所有副本中都必须包含以上版权声明和本许可声明。<br><strong>其他重要特性</strong><br>此许可协议并非属copyleft的自由软件许可协议条款，允许在自由及开放源代码软件或非自由软件（proprietary software）所使用。<br>MIT的内容可依照程序著作权者的需求更改内容。此亦为MIT与BSD（The BSD license, 3-clause BSD license）本质上不同处。<br>MIT许可协议可与其他许可协议并存。另外，MIT条款也是自由软件基金会（FSF）所认可的自由软件许可协议条款，与GPL兼容。</p>
+<h2 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h2><table class="infobox" style="border-spacing:3px;width:22em;text-align:left;font-size:small;line-height:1.5em;" cellspacing="3">
+    <caption><b>Apache许可证</b></caption>
+    <tbody>
+        <tr>
+            <td colspan="2" style="text-align:center;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/File:ASF-logo.svg" class="image"><img alt="ASF-logo.svg" src="//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ASF-logo.svg/160px-ASF-logo.svg.png" height="48" width="160"></a><br>
+                <div>Apache标志</div>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">作者</th>
+            <td style=";;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Apache软件基金会" title="Apache软件基金会">Apache软件基金会</a></td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">版本</th>
+            <td style=";;">2.0</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">发布者</th>
+            <td style=";;">Apache软件基金会</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">发布日期</th>
+            <td style=";;">2004年1月</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Debian自由软件指导方针" title="Debian自由软件指导方针">DFSG</a>兼容</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/自由软件" title="自由软件">自由软件</a></th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/开放源代码促进会" title="开放源代码促进会">OSI</a>认证</th>
+            <td style=";;">是</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/GPL" title="GPL" class="mw-redirect">GPL</a>兼容</th>
+            <td style=";;">是 - GPLv3</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;"><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Copyleft" title="Copyleft">Copyleft</a></th>
+            <td style=";;">否</td>
+        </tr>
+        <tr>
+            <th scope="row" style="text-align:left;;;">与其他协议代码链接</th>
+            <td style=";;">是</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Apache许可证要求被授权者保留版权和放弃权利的声明，但它不是一个反版权的许可证。此许可证最新版本为“版本2”，于2004年1月发布。</p>
+<p>Apache许可证是宽容的，因为它不会强制派生和修改产物使用相同的许可证进行发布（与一些版权许可证不同，参见比较）。但它仍然要求对所有未修改的部分应用相同的许可证，并且在每个许可文件中，必须保留再分发代码中的任何原始版权，专利，商标和归属通知（不需要包括任何部分的派生作品）;并且在每个更改的许可文件中，都必须添加一条通知，说明对该文件进行了更改。</p>
+<p>如果声明文本文件作为原始作品发布的一部分包含在内，则派生作品必须在包含该通知文本文件的可读副本，可以是文档或显示在软件中。</p>
+<p>声明文件的内容不会修改许可证，因为它们仅用于提供信息，并且可以在许可证文本中添加更多属性声明，前提是这些声明不能被理解为修改许可证。修改可能有适当的版权声明，并可能为修改提供不同的许可条款。</p>
+<p>除非另有明确规定，否则许可证持有者向授权者提交的任何文稿将根据许可证的条款进行，没有任何条款和条件，但这并不排除与授权者有关的这些贡献有单独的协议。</p>
+<h1 id="BSD"><a href="#BSD" class="headerlink" title="BSD"></a>BSD</h1><p>BSD许可证的条款</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">* Copyright (c) 1998 著作权由加州大学董事会所有。著作权人保留一切权利。</span><br><span class="line">* </span><br><span class="line">* 这份授权条款，在使用者符合以下三条件的情形下，授予使用者使用及再散播本</span><br><span class="line">* 软件包装原始码及二进位可执行形式的权利，无论此包装是否经改作皆然：</span><br><span class="line">* </span><br><span class="line">* * 对于本软件源代码的再散播，必须保留上述的版权宣告、此三条件表列，以</span><br><span class="line">*   及下述的免责声明。</span><br><span class="line">* * 对于本套件二进位可执行形式的再散播，必须连带以文件以及／或者其他附</span><br><span class="line">*   于散播包装中的媒介方式，重制上述之版权宣告、此三条件表列，以及下述</span><br><span class="line">*   的免责声明。</span><br><span class="line">* * 未获事前取得书面许可，不得使用柏克莱加州大学或本软件贡献者之名称，</span><br><span class="line">*   来为本软件之衍生物做任何表示支持、认可或推广、促销之行为。</span><br><span class="line">* </span><br><span class="line">* 免责声明：本软件是由加州大学董事会及本软件之贡献者以现状提供，</span><br><span class="line">* 本软件包装不负任何明示或默示之担保责任，包括但不限于就适售性以及特定目</span><br><span class="line">* 的的适用性为默示性担保。加州大学董事会及本软件之贡献者，无论任何条件、</span><br><span class="line">* 无论成因或任何责任主义、无论此责任为因合约关系、无过失责任主义或因非违</span><br><span class="line">* 约之侵权（包括过失或其他原因等）而起，对于任何因使用本软件包装所产生的</span><br><span class="line">* 任何直接性、间接性、偶发性、特殊性、惩罚性或任何结果的损害（包括但不限</span><br><span class="line">* 于替代商品或劳务之购用、使用损失、资料损失、利益损失、业务中断等等），</span><br><span class="line">* 不负任何责任，即在该种使用已获事前告知可能会造成此类损害的情形下亦然。</span><br></pre></td></tr></table></figure>
+<p><strong>与专属软件许可证的兼容性</strong><br>遵守BSD License的软件，允许用作商业用途，甚至可按照专属许可证进行再发布。比较著名的例子如微软产品中引入了BSD网络部分的代码，Mac OS X中使用了不少FreeBSD的组件。也可以将一部分遵照BSD许可证发布，另外一些采取其他许可证。事实上，BSD Unix早期就是这样的，其一部分是来自AT&amp;T的专属内容。<br><strong>与其他自由软件许可证的兼容性</strong><br>BSD许可证的最初稿件，其中含有与GNU通用公共许可证相冲突的地方。由于这两个许可证在自由软件中使用很普遍，如果作者想将GPL和BSD有所结合，就会出现冲突。但是1999年，BSD许可证的修订版去除了相冲突的语句。从此以后，自由软件作者就可以方便地采用BSD许可证下的软件，从而跟GPL下的作品融合。<br>BSD许可证并不允许受让方将其删除或替换为其他许可证。<br>BSD License具有以下分类</p>
+<ul>
+<li>4-clause license (original “BSD License”)</li>
+<li>3-clause license (“Revised BSD License”, “New BSD License”, or “Modified BSD License”)</li>
+<li>2-clause license (“Simplified BSD License” or “FreeBSD License”)</li>
+<li>0-clause license (“Zero Clause BSD”)</li>
+</ul>
+<p>关于此，具体请参考<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/BSD_licenses">英文Wiki</a></p>
+<h1 id="引伸阅读"><a href="#引伸阅读" class="headerlink" title="引伸阅读"></a>引伸阅读</h1><p>开源许可兼容问题<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/387946955">https://zhuanlan.zhihu.com/p/387946955</a></p>
+<p>GPL感染问题<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19771481/answer/16018816">https://www.zhihu.com/question/19771481/answer/16018816</a></p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Open-Source/" rel="tag">Open Source</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2015-01-01T16:00:00.000Z" itemprop="dateModified">最后编辑：2015-01-02</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" [问题处理]Adobe Acrobat update error" href="/Issue/Adobe Acrobat update error/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 第三方编译版火狐推荐" href="/Browser/Firfox第三方编译版/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Code/%E5%BC%80%E6%BA%90/" data-full-path="http://ted423.github.io/Code/%E5%BC%80%E6%BA%90/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                391
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                14
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                148
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">42</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">48</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">97</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.66em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.6em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Browser/" style="font-size: 0.7em;">Browser</a> <a href="/tags/CMD/" style="font-size: 0.62em;">CMD</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+
+
+
+    </body>
+</html>
