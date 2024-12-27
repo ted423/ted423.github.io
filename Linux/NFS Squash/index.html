@@ -19,15 +19,15 @@
   
     <meta name="keywords" content="Linux, Software" />
   
-  <meta name="description" content="胡言乱语写这篇文章是因为之前写的那个samba的想到了。顺带整理下。 在阅读这篇文章之前你需要了解  Linux是多用户操作系统 用户以及组的保存都是基于id(uid gid) root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在&#x2F;etc&#x2F;group里可以看，但是不同的Linux版本可能会有不同 NIS Server LDAP Server: https:&#x2F;&#x2F;">
+  <meta name="description" content="胡言乱语写这篇文章是因为之前写的那个samba的想到了。顺带整理下。 在阅读这篇文章之前你需要了解  Linux是多用户操作系统 用户以及组的保存都是基于id(uid gid) root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在&#x2F;etc&#x2F;group里可以看，但是不同的Linux版本可能会有不同 目录服务(Directory service) https:&#x2F;&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NFS squash特性相关">
 <meta property="og:url" content="http://ted423.github.io/Linux/NFS%20Squash/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="胡言乱语写这篇文章是因为之前写的那个samba的想到了。顺带整理下。 在阅读这篇文章之前你需要了解  Linux是多用户操作系统 用户以及组的保存都是基于id(uid gid) root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在&#x2F;etc&#x2F;group里可以看，但是不同的Linux版本可能会有不同 NIS Server LDAP Server: https:&#x2F;&#x2F;">
+<meta property="og:description" content="胡言乱语写这篇文章是因为之前写的那个samba的想到了。顺带整理下。 在阅读这篇文章之前你需要了解  Linux是多用户操作系统 用户以及组的保存都是基于id(uid gid) root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在&#x2F;etc&#x2F;group里可以看，但是不同的Linux版本可能会有不同 目录服务(Directory service) https:&#x2F;&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-06-18T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-27T09:16:20.964Z">
+<meta property="article:modified_time" content="2024-12-27T09:27:07.012Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Software">
@@ -156,7 +156,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~1.61K
+                            ~1.89K
                         
                         字
                     </li>
@@ -181,6 +181,7 @@
 <li>Linux是多用户操作系统</li>
 <li>用户以及组的保存都是基于id(uid gid)</li>
 <li>root 的 uid 是 0，root group 的 gid 是 0，系统自带的gid在<code>/etc/group</code>里可以看，但是不同的Linux版本可能会有不同</li>
+<li>目录服务(Directory service) <a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%9B%AE%E5%BD%95%E6%9C%8D%E5%8A%A1">https://zh.wikipedia.org/wiki/%E7%9B%AE%E5%BD%95%E6%9C%8D%E5%8A%A1</a></li>
 <li><a target="_blank" rel="noopener" href="http://linux.vbird.org/linux_server/0430nis.php">NIS Server</a></li>
 <li>LDAP Server: <a target="_blank" rel="noopener" href="https://linux.vbird.org/linux_server/rocky9/0240ldap.php">https://linux.vbird.org/linux_server/rocky9/0240ldap.php</a> | <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/title/LDAP_authentication">Arch Wiki</a></li>
 <li><a target="_blank" rel="noopener" href="http://linux.vbird.org/linux_enterprise/kerberos.php">Kerberos</a> (Attention，我知道这个是AD域主要的验证方式，具体见<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview</a>, <a href="/Issue/Kerberos/">Kerberos</a>。但我目前的理解是Kerberos并不在NIS中使用，这个条目可能甚至跟整篇文章无关，但是NFS可以使用Kerberos进行验证)</li>
@@ -189,12 +190,13 @@
 <p>Linux 是多用户操作系统。所以，其他用户如字面意思，不会被映射为 nobody。这也是我踩得一个坑(</p>
 <p>不同 Linux 系统可能会创建不同 uid 的用户，比较常用的是 500 和 1000，在不同系统中，不同的第一个普通用户可能使用同一个 uid,在 Linux 下则意味着 NFS 挂载后你具有相同权限，由于普通的 NFS 挂载是只验证 IP(基本很多人都是直接开一个网段)。因此这样就绕过了本机验证，他可以随便把挂载出来的东西全删了。为了避免这个情况，才有了 squash。把 root 映射为 nobody 仅仅是为了不让你把东西都删了，或者在挂载出来的目录里瞎搞。不是为了让你把文件夹改成 777 好让别人用 root 创建 nobody 文件。</p>
 <p>另外这几个设置，要配合 NIS 和 LDAP 来看。也就是集中式认证。(做同样类似事的还有微软的 AD，AD 同样也能拿来做集中式认证) 可以参考<a target="_blank" rel="noopener" href="https://docs.redhat.com/zh-cn/documentation/red_hat_enterprise_linux/8/html/configuring_authentication_and_authorization_in_rhel/configuring-a-rhel-host-to-use-ad-as-an-authentication-provider_configuring-authentication-and-authorization-in-rhel#configuring-a-RHEL-host-to-use-AD-as-an-authentication-provider_configuring-authentication-and-authorization-in-rhel">Redhat 的文档</a></p>
-<p>早期 AD 用的比较多，因此没弄清楚 ldap 这些</p>
 <p>在多台Linux中，集中式认证保证了用户以及组 ID 一致，然后挂载 NFS 确保相关的权限统一。</p>
 <p>如果你没做这些，你就只要用 all_squash 就好了，别的你都不用仔细理解，除非你是 root everything 的用户。这样可以避免客户端在文件夹里搞出奇怪的权限问题，还有各种奇怪的 uid。</p>
 <p>不过这里有另一点要说明，如果希望同时在 server 端和 client 端协作使用的话(仅限个人)。可能会需要 no_root_squash，否则客户端没有 root 权限的话，会没法修改文件权限。 (其实个人用 Linux 的话，我感觉你能用 samba 就用 samba 吧，哪怕是两台Linux。基于IP的验证其实还是适合企业用)。多人协作环境的话，一定要上 LDAP 之类的，也好进行权限管理。</p>
 <p>另请参考 <a href="/Document/Linux_ACL">ACL</a></p>
-<h1 id="扩展阅读-我还没看"><a href="#扩展阅读-我还没看" class="headerlink" title="扩展阅读(我还没看)"></a>扩展阅读(我还没看)</h1><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/NIS%2B">NIS+</a></p>
+<p>早期 AD 用的比较多，因此没弄清楚 ldap 这些，水平不够，这篇文章写的不少问题，可能让人笑掉了大牙。现在可能还有很多问题叙述没有纠正过来。</p>
+<h1 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h1><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/NIS%2B">NIS+</a></p>
+<h2 id="Directory-service"><a href="#Directory-service" class="headerlink" title="Directory service"></a>Directory service</h2><p>目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时的数据不一致情况是允许出现的，只要最终这些数据得到同步即可。</p>
 <h1 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h1><p>NFS 尽量不要挂载到根目录下的一级目录下，因为网络系统的不稳定性，这种挂载一旦不成功很可能导致根目录下的很多操作卡死（除非这台机子设计上就是强依赖 NFS 主机运作的）。其实还是比较推荐 autofs，这样也不会因为 nfs 主机没开机导致机子开不起来。</p>
 <hr>
 <p><time>2024-12-27</time> 加深了对系统理解，不再强调 Linux 是多用户系统，增加 ldap 的说明</p>
@@ -218,7 +220,7 @@
                     <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-12-27T09:16:20.964Z" itemprop="dateModified">最后编辑：2024-12-27</time>
+                    <time datetime="2024-12-27T09:27:07.012Z" itemprop="dateModified">最后编辑：2024-12-27</time>
                 </div>
             </div>
         </footer>
