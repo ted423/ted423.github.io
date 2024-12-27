@@ -5185,7 +5185,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
   <entry>
     <title>NFS squash特性相关</title>
     <url>/Linux/NFS%20Squash/</url>
-    <content><![CDATA[<h1 id="胡言乱语"><a href="#胡言乱语" class="headerlink" title="胡言乱语"></a>胡言乱语</h1><p>写这篇文章是因为之前写的那个samba的想到了。顺带整理下。<br>这篇文章大部分都为猜测，未作有效以及查证相关检测。</p>
+    <content><![CDATA[<h1 id="胡言乱语"><a href="#胡言乱语" class="headerlink" title="胡言乱语"></a>胡言乱语</h1><p>写这篇文章是因为之前写的那个samba的想到了。顺带整理下。</p>
 <p>在阅读这篇文章之前你需要了解</p>
 <ol>
 <li>Linux是多用户操作系统</li>
@@ -5195,10 +5195,19 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <li>LDAP Server: <a href="https://linux.vbird.org/linux_server/rocky9/0240ldap.php">https://linux.vbird.org/linux_server/rocky9/0240ldap.php</a> | <a href="https://wiki.archlinux.org/title/LDAP_authentication">Arch Wiki</a></li>
 <li><a href="http://linux.vbird.org/linux_enterprise/kerberos.php">Kerberos</a> (Attention，我知道这个是AD域主要的验证方式，具体见<a href="https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview">https://docs.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview</a>, <a href="/Issue/Kerberos/">Kerberos</a>。但我目前的理解是Kerberos并不在NIS中使用，这个条目可能甚至跟整篇文章无关，但是NFS可以使用Kerberos进行验证)</li>
 </ol>
-<h1 id="squash"><a href="#squash" class="headerlink" title="squash"></a>squash</h1><p>众所周知<br>no_root_squash、root_squash、all_squash<br>但是所有文章只说了root帐户是否被映射为nobody，root_squash是把root映射为nobody。那么问题来了，其他用户呢？<br>众所周知<br>Linux是多用户操作系统。所以，其他用户如字面意思，不会被映射为nobody。这也是我踩得一个坑(<br>这几个设置，其实是要配合NIS来看的。<br>在多台Linux中，NIS保证用户以及组ID一致，然后挂载NFS确保相关的权限问题。</p>
-<p>如果你没有NIS Server，你就只要用all_squash就好了，别的你都不用仔细理解，除非你是root everything的用户。<br>否则你会发现你的NFS Server文件夹文件权限里出现一堆乱七八糟的ID。或者因为用户ID、组ID重复变成了奇怪的问题<br>不过这里有另一点要说明，在没有NIS的情况下。如果希望同时在server端和client端使用。可能会需要no_root_squash，否则客户端没有root权限的话，会没法修改文件权限。<br>(其实个人用Linux的话，我感觉你能用samba就用samba吧，哪怕是两台Linux。基于IP的验证其实还是适合企业用)</p>
+<h1 id="squash"><a href="#squash" class="headerlink" title="squash"></a>squash</h1><p>众所周知<br>no_root_squash、root_squash、all_squash<br>但是所有文章只说了 root 帐户是否被映射为 nobody，root_squash 是把 root 映射为 nobody。那么问题来了，其他用户呢？</p>
+<p>Linux 是多用户操作系统。所以，其他用户如字面意思，不会被映射为 nobody。这也是我踩得一个坑(</p>
+<p>不同 Linux 系统可能会创建不同 uid 的用户，比较常用的是 500 和 1000，在不同系统中，不同的第一个普通用户可能使用同一个 uid,在 Linux 下则意味着 NFS 挂载后你具有相同权限，由于普通的 NFS 挂载是只验证 IP(基本很多人都是直接开一个网段)。因此这样就绕过了本机验证，他可以随便把挂载出来的东西全删了。为了避免这个情况，才有了 squash。把 root 映射为 nobody 仅仅是为了不让你把东西都删了，或者在挂载出来的目录里瞎搞。不是为了让你把文件夹改成 777 好让别人用 root 创建 nobody 文件。</p>
+<p>另外这几个设置，要配合 NIS 和 LDAP 来看。也就是集中式认证。(做同样类似事的还有微软的 AD，AD 同样也能拿来做集中式认证) 可以参考<a href="https://docs.redhat.com/zh-cn/documentation/red_hat_enterprise_linux/8/html/configuring_authentication_and_authorization_in_rhel/configuring-a-rhel-host-to-use-ad-as-an-authentication-provider_configuring-authentication-and-authorization-in-rhel#configuring-a-RHEL-host-to-use-AD-as-an-authentication-provider_configuring-authentication-and-authorization-in-rhel">Redhat 的文档</a></p>
+<p>早期 AD 用的比较多，因此没弄清楚 ldap 这些</p>
+<p>在多台Linux中，集中式认证保证了用户以及组 ID 一致，然后挂载 NFS 确保相关的权限统一。</p>
+<p>如果你没做这些，你就只要用 all_squash 就好了，别的你都不用仔细理解，除非你是 root everything 的用户。这样可以避免客户端在文件夹里搞出奇怪的权限问题，还有各种奇怪的 uid。</p>
+<p>不过这里有另一点要说明，如果希望同时在 server 端和 client 端协作使用的话(仅限个人)。可能会需要 no_root_squash，否则客户端没有 root 权限的话，会没法修改文件权限。 (其实个人用 Linux 的话，我感觉你能用 samba 就用 samba 吧，哪怕是两台Linux。基于IP的验证其实还是适合企业用)。多人协作环境的话，一定要上 LDAP 之类的，也好进行权限管理。</p>
+<p>另请参考 <a href="/Document/Linux_ACL">ACL</a></p>
 <h1 id="扩展阅读-我还没看"><a href="#扩展阅读-我还没看" class="headerlink" title="扩展阅读(我还没看)"></a>扩展阅读(我还没看)</h1><p><a href="https://en.wikipedia.org/wiki/NIS%2B">NIS+</a></p>
 <h1 id="其他注意事项"><a href="#其他注意事项" class="headerlink" title="其他注意事项"></a>其他注意事项</h1><p>NFS 尽量不要挂载到根目录下的一级目录下，因为网络系统的不稳定性，这种挂载一旦不成功很可能导致根目录下的很多操作卡死（除非这台机子设计上就是强依赖 NFS 主机运作的）。其实还是比较推荐 autofs，这样也不会因为 nfs 主机没开机导致机子开不起来。</p>
+<hr>
+<p><time>2024-12-27</time> 加深了对系统理解，不再强调 Linux 是多用户系统，增加 ldap 的说明</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -26599,7 +26608,7 @@ Poppler - PDF函式库
       </categories>
       <tags>
         <tag>Windows</tag>
-        <tag>Open Source</tag>
+        <tag>开源(Open Source)</tag>
         <tag>3-clause BSD license</tag>
         <tag>Document&amp;Texteditor</tag>
       </tags>
@@ -28034,7 +28043,7 @@ $(function () {
     <title>DIE-engine - 文件信息查看</title>
     <url>/Software/DIE-engine/</url>
     <content><![CDATA[<p><a href="https://github.com/horsicq/DIE-engine">https://github.com/horsicq/DIE-engine</a></p>
-<p>感觉可以取代 <a href="/Software/Exeinfo%20PE.md">Exeinfo PE</a></p>
+<p>感觉可以取代 <a href="/Software/Exeinfo%20PE">Exeinfo PE</a></p>
 <p>只不过会稍微重一点,不过支持文件夹安装包和压缩包</p>
 ]]></content>
       <categories>
@@ -28045,6 +28054,66 @@ $(function () {
         <tag>MIT</tag>
         <tag>开源(Open Source)</tag>
         <tag>Software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不用 ACL, Linux 的权限管理是一坨</title>
+    <url>/Document/Linux_ACL/</url>
+    <content><![CDATA[<p>集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。</p>
+<p>Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。</p>
+<p>之前比较年轻，以为只是主组和副组，但实际操作中会被新建文件的 gid 和 umask 干的手忙脚乱。其实还是操作姿势不对，因为这块主要还是靠 ACL。不过 Linux 比较奇葩了，<a href="https://unix.stackexchange.com/questions/536300/why-is-nfsv4-not-translating-posix-acls-in-a-usable-way">见此</a>,愣是一个系统干出来左右手互博的感觉</p>
+<p>ACL 目前有两组控制，一个是本地控制(POSIX ACLs)，一个是挂载 NFS 的控制(NFSv4 ACLs)。两组配置互不干涉</p>
+<p>ACL 配置独立于 Linux 的 mode 权限(chmod -&gt; change mode)。可以对文件夹进行精细的权限控制。</p>
+<p>文档<br><a href="https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/">https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/</a></p>
+<h1 id="POSIX-ACLs"><a href="#POSIX-ACLs" class="headerlink" title="POSIX ACLs"></a>POSIX ACLs</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">setfacl -m group:groupname:r-x path</span><br></pre></td></tr></table></figure>
+<p>其中 groupname 是可以更改的组名</p>
+<p>本地默认应该是开启继承的</p>
+<p>文档</p>
+<p><a href="https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html">https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html</a></p>
+<h1 id="NFSv4-ACL"><a href="#NFSv4-ACL" class="headerlink" title="NFSv4 ACL"></a>NFSv4 ACL</h1><p>NFSv4 ACL 配置时只支持组id，该命令直接提交到 nfs server,故只要在一台上面跑就好</p>
+<p>可以通过</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">getent group groupname</span><br></pre></td></tr></table></figure>
+<p>获取组id</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nfs4_setfacl -a A:fdg:1000:RWX path</span><br></pre></td></tr></table></figure>
+<p><code>fdg</code>代表设置组id，大写<code>RWX</code>会自动对应到 mode 的<code>rwx</code>，避免 NFSv4 ACL 和 mode 的兼容问题。(但不清楚具体情况)。<code>-R</code>代表递归</p>
+<p>NFSv4 ACL 设置时不会自动对子目录开启继承，继承应该仅对目录中新创建文件生效。</p>
+<p>配置完后可以通过验证是否成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nfs4_getfacl path</span><br></pre></td></tr></table></figure>
+<p>文档</p>
+<p><a href="https://linux.die.net/man/1/nfs4_setfacl">https://linux.die.net/man/1/nfs4_setfacl</a></p>
+]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Document</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode</title>
+    <url>/Software/Document&amp;Texteditor/VSCode/</url>
+    <content><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p>
+<p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p>
+<p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p>
+<p>问题有</p>
+<ul>
+<li>经常帮你记住一堆文件，打开弹出乱七八糟的东西</li>
+<li>设置项一堆，然后网页搜索经常搜到过时的东西</li>
+<li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。</li>
+<li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li>
+</ul>
+<p>配置项</p>
+<p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>MIT</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>Document&amp;Texteditor</tag>
       </tags>
   </entry>
 </search>

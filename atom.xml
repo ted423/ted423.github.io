@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-26T02:03:18.296Z</updated>
+  <updated>2024-12-27T09:17:57.403Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,19 +17,78 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>不用 ACL, Linux 的权限管理是一坨</title>
+    <link href="http://ted423.github.io/Document/Linux_ACL/"/>
+    <id>http://ted423.github.io/Document/Linux_ACL/</id>
+    <published>2024-12-27T07:50:19.527Z</published>
+    <updated>2024-12-27T09:17:57.403Z</updated>
+    
+    <content type="html"><![CDATA[<p>集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。</p><p>Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。</p><p>之前比较年轻，以为只是主组和副组，但实际操作中会被新建文件的 gid 和 umask 干的手忙脚乱。其实还是操作姿势不对，因为这块主要还是靠 ACL。不过 Linux 比较奇葩了，<a href="https://unix.stackexchange.com/questions/536300/why-is-nfsv4-not-translating-posix-acls-in-a-usable-way">见此</a>,愣是一个系统干出来左右手互博的感觉</p><p>ACL 目前有两组控制，一个是本地控制(POSIX ACLs)，一个是挂载 NFS 的控制(NFSv4 ACLs)。两组配置互不干涉</p><p>ACL 配置独立于 Linux 的 mode 权限(chmod -&gt; change mode)。可以对文件夹进行精细的权限控制。</p><p>文档<br><a href="https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/">https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/</a></p><h1 id="POSIX-ACLs"><a href="#POSIX-ACLs" class="headerlink" title="POSIX ACLs"></a>POSIX ACLs</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setfacl -m group:groupname:r-x path</span><br></pre></td></tr></table></figure><p>其中 groupname 是可以更改的组名</p><p>本地默认应该是开启继承的</p><p>文档</p><p><a href="https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html">https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html</a></p><h1 id="NFSv4-ACL"><a href="#NFSv4-ACL" class="headerlink" title="NFSv4 ACL"></a>NFSv4 ACL</h1><p>NFSv4 ACL 配置时只支持组id，该命令直接提交到 nfs server,故只要在一台上面跑就好</p><p>可以通过</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getent group groupname</span><br></pre></td></tr></table></figure><p>获取组id</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nfs4_setfacl -a A:fdg:1000:RWX path</span><br></pre></td></tr></table></figure><p><code>fdg</code>代表设置组id，大写<code>RWX</code>会自动对应到 mode 的<code>rwx</code>，避免 NFSv4 ACL 和 mode 的兼容问题。(但不清楚具体情况)。<code>-R</code>代表递归</p><p>NFSv4 ACL 设置时不会自动对子目录开启继承，继承应该仅对目录中新创建文件生效。</p><p>配置完后可以通过验证是否成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nfs4_getfacl path</span><br></pre></td></tr></table></figure><p>文档</p><p><a href="https://linux.die.net/man/1/nfs4_setfacl">https://linux.die.net/man/1/nfs4_setfacl</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。&lt;/p&gt;
+&lt;p&gt;Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。&lt;/p&gt;
+&lt;p&gt;之前比较年轻，以为只是主组和副</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VSCode</title>
+    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
+    <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
+    <published>2024-12-27T07:20:42.480Z</published>
+    <updated>2024-12-27T07:29:12.851Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><p>问题有</p><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li></ul><p>配置项</p><p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;https://code.visualstudio.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/microsoft/vscode&quot;&gt;https://g</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
+    
+  </entry>
+  
+  <entry>
     <title>DIE-engine - 文件信息查看</title>
     <link href="http://ted423.github.io/Software/DIE-engine/"/>
     <id>http://ted423.github.io/Software/DIE-engine/</id>
     <published>2024-12-25T08:51:48.331Z</published>
-    <updated>2024-12-26T02:03:18.296Z</updated>
+    <updated>2024-12-27T09:20:00.871Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://github.com/horsicq/DIE-engine">https://github.com/horsicq/DIE-engine</a></p><p>感觉可以取代 <a href="/Software/Exeinfo%20PE.md">Exeinfo PE</a></p><p>只不过会稍微重一点,不过支持文件夹安装包和压缩包</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://github.com/horsicq/DIE-engine">https://github.com/horsicq/DIE-engine</a></p><p>感觉可以取代 <a href="/Software/Exeinfo%20PE">Exeinfo PE</a></p><p>只不过会稍微重一点,不过支持文件夹安装包和压缩包</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/horsicq/DIE-engine&quot;&gt;https://github.com/horsicq/DIE-engine&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;感觉可以取代 &lt;a href=&quot;/Software/Exeinfo%20PE.m</summary>
+&lt;p&gt;感觉可以取代 &lt;a href=&quot;/Software/Exeinfo%20PE&quot;&gt;</summary>
       
     
     
@@ -580,61 +639,6 @@
     <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
     
     <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QNAP453Bmini 装 Ubuntu</title>
-    <link href="http://ted423.github.io/Linux/QNAP453Bmini/"/>
-    <id>http://ted423.github.io/Linux/QNAP453Bmini/</id>
-    <published>2024-09-19T13:14:56.785Z</published>
-    <updated>2024-09-19T13:14:48.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>以前骂 QNAP 骂的很开心来着，现在总觉得很对不起，毕竟开机接显示器按 del 能进 BIOS,能改启动能装机。总归用的不好还有自己菜的关系。</p><p>QNAP系统除了 RAID 和 DDNS 以外基本没啥有意义的东西。所以如果你嫌弃它系统，那还是装系统吧。</p><p>推荐买个U盘做系统盘，毕竟4盘位。注意不要太烂的，注意下U盘的写速度，大部分坑爹U盘3.0的口，写入速度也才几十。</p><p>进 BIOS 最好关闭原始自带的引导，不然它有时候会重置引导顺序，导致起到 QNAP 自身界面。我是直接把它原先引导分区格了。毕竟只有500MB,别到时侯哪天装了硬盘之后被它启动把硬盘给我格了自动装系统。</p><p>然后就注意这个 <a href="https://bugzilla.kernel.org/show_bug.cgi?id=196805">https://bugzilla.kernel.org/show_bug.cgi?id=196805</a> ,不然只能认两块硬盘（Win正常）</p><p><code>/etc/default/grub</code>里<code>GRUB_CMDLINE_LINUX=</code>改成<code>GRUB_CMDLINE_LINUX=&quot;pcie_port_pm=off blacklist=pata_acpi&quot;</code></p><p><code>blacklist=pata_acpi</code>是因为下面这个，不过实际可能不用。</p><p><a href="https://unix.stackexchange.com/questions/665630/asmedia-sata-controller-106x-not-working-under-ubuntu/769680">https://unix.stackexchange.com/questions/665630/asmedia-sata-controller-106x-not-working-under-ubuntu/769680</a></p><p>改完之后 <code>sudo update-grub</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;以前骂 QNAP 骂的很开心来着，现在总觉得很对不起，毕竟开机接显示器按 del 能进 BIOS,能改启动能装机。总归用的不好还有自己菜的关系。&lt;/p&gt;
-&lt;p&gt;QNAP系统除了 RAID 和 DDNS 以外基本没啥有意义的东西。所以如果你嫌弃它系统，那还是装系统吧。&lt;/p&gt;</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[文档]Group Policy(组策略)查询</title>
-    <link href="http://ted423.github.io/Document/Group%20Policy/"/>
-    <id>http://ted423.github.io/Document/Group%20Policy/</id>
-    <published>2024-09-08T11:21:41.332Z</published>
-    <updated>2024-09-08T10:50:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>不错的网站<br><a href="https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn">https://admx.help/?Category=Windows_10_2016&amp;Language=zh-cn</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;不错的网站&lt;br&gt;&lt;a href=&quot;https://admx.help/?Category=Windows_10_2016&amp;amp;Language=zh-cn&quot;&gt;https://admx.help/?Category=Windows_10_2016&amp;amp;Languag</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="组策略(Group Policy)gpedit.msc" scheme="http://ted423.github.io/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy-gpedit-msc/"/>
     
   </entry>
   
