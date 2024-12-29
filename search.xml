@@ -26386,9 +26386,8 @@ img.kickass{
   <entry>
     <title>压缩软件问题记录</title>
     <url>/Software/Compression/Compression-defect/</url>
-    <content><![CDATA[<p>#Bandzip<br>无法对7z文件进行直接修改。</p>
-<p>#Peazip</p>
-<ul>
+    <content><![CDATA[<h1 id="Bandzip"><a href="#Bandzip" class="headerlink" title="Bandzip"></a>Bandzip</h1><p>无法对7z文件进行直接修改。</p>
+<h1 id="Peazip"><a href="#Peazip" class="headerlink" title="Peazip"></a>Peazip</h1><ul>
 <li>无法选取多个文件进行压缩(2021-06-24未测试)</li>
 <li>8.0.0(2021-06-24) 右键对文件夹压缩，然后压缩包生成到了文件夹内</li>
 <li>强烈不建议使用</li>
@@ -26401,6 +26400,7 @@ img.kickass{
         <tag>个人观点</tag>
         <tag>Windows</tag>
         <tag>Compression</tag>
+        <tag>defect</tag>
       </tags>
   </entry>
   <entry>
@@ -28116,6 +28116,56 @@ $(function () {
         <tag>MIT</tag>
         <tag>开源(Open Source)</tag>
         <tag>Document&amp;Texteditor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github git-lfs 注意事项</title>
+    <url>/Issue/Github-lfs/</url>
+    <content><![CDATA[<p>其实主要就是 Github 的 lfs 空间只有1G。 但是坑的点在于。</p>
+<ol>
+<li>在达到限制前不会有任何提醒。</li>
+<li>空间使用量藏得很深。</li>
+</ol>
+<p>然后就是第二方面，网上所有的教程都是删除本地 lfs 文件的。实际你没法自己删除 Gihub Server 上的 lfs 文件。</p>
+<p>目前唯一的处理办法是 <a href="https://stackoverflow.com/questions/34579211/how-to-delete-a-file-tracked-by-git-lfs-and-release-the-storage-quota">https://stackoverflow.com/questions/34579211/how-to-delete-a-file-tracked-by-git-lfs-and-release-the-storage-quota</a></p>
+<blockquote>
+<ol>
+<li>Open support github ticket <a href="https://support.github.com/contact?tags=docs-generic,rr-general-technical">https://support.github.com/contact?tags=docs-generic%2Crr-general-technical</a></li>
+<li>Write subject title as “remove git lfs file”</li>
+<li>Virtual Agent button should appear below</li>
+<li>Click that to open dialog with bot</li>
+<li>Click “Remove a file(s) from LFS</li>
+<li>Bot responds with guide to get LFS file ID’s</li>
+<li>AND you need to remove file from history also <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository</a></li>
+</ol>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Issue</category>
+      </categories>
+      <tags>
+        <tag>Issue</tag>
+        <tag>Github</tag>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Notion</title>
+    <url>/Software/Notion/</url>
+    <content><![CDATA[<ul>
+<li>贴进去一段代码，结果自动给你把字符改了，双引号改中文字符，自动双倍*号。还有别的乱七八糟的改动。</li>
+<li>各种模板过于细化，导致门槛太高。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>个人观点</tag>
+        <tag>Windows</tag>
+        <tag>WWW</tag>
+        <tag>Note</tag>
+        <tag>defect</tag>
       </tags>
   </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-27T09:17:57.403Z</updated>
+  <updated>2024-12-29T04:09:03.665Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github git-lfs 注意事项</title>
+    <link href="http://ted423.github.io/Issue/Github-lfs/"/>
+    <id>http://ted423.github.io/Issue/Github-lfs/</id>
+    <published>2024-12-29T03:47:50.780Z</published>
+    <updated>2024-12-29T04:09:03.665Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实主要就是 Github 的 lfs 空间只有1G。 但是坑的点在于。</p><ol><li>在达到限制前不会有任何提醒。</li><li>空间使用量藏得很深。</li></ol><p>然后就是第二方面，网上所有的教程都是删除本地 lfs 文件的。实际你没法自己删除 Gihub Server 上的 lfs 文件。</p><p>目前唯一的处理办法是 <a href="https://stackoverflow.com/questions/34579211/how-to-delete-a-file-tracked-by-git-lfs-and-release-the-storage-quota">https://stackoverflow.com/questions/34579211/how-to-delete-a-file-tracked-by-git-lfs-and-release-the-storage-quota</a></p><blockquote><ol><li>Open support github ticket <a href="https://support.github.com/contact?tags=docs-generic,rr-general-technical">https://support.github.com/contact?tags=docs-generic%2Crr-general-technical</a></li><li>Write subject title as “remove git lfs file”</li><li>Virtual Agent button should appear below</li><li>Click that to open dialog with bot</li><li>Click “Remove a file(s) from LFS</li><li>Bot responds with guide to get LFS file ID’s</li><li>AND you need to remove file from history also <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository</a></li></ol></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;其实主要就是 Github 的 lfs 空间只有1G。 但是坑的点在于。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在达到限制前不会有任何提醒。&lt;/li&gt;
+&lt;li&gt;空间使用量藏得很深。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然后就是第二方面，网上所有的教程都是删除本地 lfs 文件的。实际你没法自己</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
+    
+    <category term="git" scheme="http://ted423.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Notion</title>
+    <link href="http://ted423.github.io/Software/Notion/"/>
+    <id>http://ted423.github.io/Software/Notion/</id>
+    <published>2024-12-27T16:14:47.394Z</published>
+    <updated>2024-12-27T16:21:56.297Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>贴进去一段代码，结果自动给你把字符改了，双引号改中文字符，自动双倍*号。还有别的乱七八糟的改动。</li><li>各种模板过于细化，导致门槛太高。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;贴进去一段代码，结果自动给你把字符改了，双引号改中文字符，自动双倍*号。还有别的乱七八糟的改动。&lt;/li&gt;
+&lt;li&gt;各种模板过于细化，导致门槛太高。&lt;/li&gt;
+&lt;/ul&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="Note" scheme="http://ted423.github.io/tags/Note/"/>
+    
+    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
+    
+  </entry>
   
   <entry>
     <title>不用 ACL, Linux 的权限管理是一坨</title>
@@ -580,65 +649,6 @@
     <category term="Hexo" scheme="http://ted423.github.io/tags/Hexo/"/>
     
     <category term="Hexo Theme" scheme="http://ted423.github.io/tags/Hexo-Theme/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>下载、资源类软件缺陷记录</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/download-defect/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/download-defect/</id>
-    <published>2024-10-11T03:10:00.550Z</published>
-    <updated>2021-04-24T08:17:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="BUG"><a href="#BUG" class="headerlink" title="BUG"></a>BUG</h1><ul><li>aria2c <a href="https://ted423.bitcron.com/post/software/zi-yuan-lei/aria2c">https://ted423.bitcron.com/post/software/zi-yuan-lei/aria2c</a></li><li>Transmission<ol><li>tracker连接性不强，获取tracker信息过慢</li><li>制作种子不支持网络映射</li><li>单线程，牺牲性能降低占用(理论我觉得rt会更好，不过rt不支持改名文件夹这些，并且两个长期不更新的软件)</li><li>部分种子识别有问题，部分种子无法使用(我提issue被ban)</li><li>长期严重 <a href="https://github.com/transmission/transmission/issues/7078">issue</a> 版本,Issue 虽然修了，但还没发新版(5月份版本的 bug,8.26 Issue 创建,10月份未发新版)</li></ol></li><li>qbittorrent</li></ul><ol><li>制作的种子dmhy无法读取中文文件名(但应该是网站问题)</li><li>制作的种子tracker中必须隔开一行，否则traker其他软件无法识别</li><li>Others <a href="https://github.com/qbittorrent/qBittorrent/issues/created_by/ted423">https://github.com/qbittorrent/qBittorrent/issues/created_by/ted423</a></li></ol><ul><li>迅雷</li></ul><ol><li>做种相当week,特别是点击添加重新下载时会直接把已下载文件从磁盘抹掉</li><li>现在的版本不能从别的地方下好然后拉进去补充进度了</li><li>迅雷并不会显示具体的tracker信息，并且也不会具体的显示谁给你传数据，也不会显示你在给谁传数据，个人感觉它是努力淡化BT原理，营造一种速度都是迅雷提供的错觉，所以很多迅雷用户体现一种反智现象</li></ol><ul><li>Deluge</li></ul><ol><li>对中文支持不好,添加种子时路径有中文就出错了，但BT下载的文件夹又可以是中文</li><li>2.0.3大概是不准备也没法支持Windows了</li></ol><h1 id="我为什么仍在使用迅雷"><a href="#我为什么仍在使用迅雷" class="headerlink" title="我为什么仍在使用迅雷"></a>我为什么仍在使用迅雷</h1><h2 id="https-ted423-bitcron-com-post-software-zi-yuan-lei-use-thunder"><a href="#https-ted423-bitcron-com-post-software-zi-yuan-lei-use-thunder" class="headerlink" title="https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder"></a><a href="https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder">https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder</a></h2><p><time>2021-04-24</time>增加一些问题<br><time>2019-08-10</time>增加Transmission，Bittorrent经判断校验缺少文件导致另一个文件无法完成校验是正常的（与分块有关）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;BUG&quot;&gt;&lt;a href=&quot;#BUG&quot; class=&quot;headerlink&quot; title=&quot;BUG&quot;&gt;&lt;/a&gt;BUG&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;aria2c &lt;a href=&quot;https://ted423.bitcron.com/post/software/zi-</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm yarn设置代理，以及国内镜像源</title>
-    <link href="http://ted423.github.io/Code/npm%20yarn%20proxy/"/>
-    <id>http://ted423.github.io/Code/npm%20yarn%20proxy/</id>
-    <published>2024-10-11T03:09:57.733Z</published>
-    <updated>2024-10-10T06:41:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm config set https-proxy socks5://127.0.0.1:7890</span><br><span class="line"></span><br><span class="line">yarn config set proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure><p>https-proxy、proxy可以互换，目前没感到差别。</p><p>还可以设置镜像源，不过改了之后包的地址也会变，如果涉及到跨区域多人开发的话，最好不要乱动。</p><p>需要注意 Linux 下，每个用户以及 root 配置不同，全局可能需要 root 权限</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">npm config get registry  // 查看npm当前镜像源</span><br><span class="line"></span><br><span class="line">npm config set registry https://registry.npmmirror.com  // 设置npm镜像源为淘宝镜像</span><br><span class="line"></span><br><span class="line">npm config set registry http://mirrors.cloud.tencent.com/npm/  //腾讯</span><br><span class="line"></span><br><span class="line">npm config set registry https://mirrors.huaweicloud.com/repository/npm/ //华为</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">yarn config get registry  // 查看yarn当前镜像源</span><br><span class="line"></span><br><span class="line">yarn config set registry https://registry.npmmirror.com  // 设置yarn镜像源为淘宝镜像</span><br></pre></td></tr></table></figure><hr><p>修正了淘宝镜像源地址，增加了腾讯和华为 -2024-10-10</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
-    
-    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
     
   </entry>
   
