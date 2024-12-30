@@ -308,10 +308,10 @@
     <title>对 Nextcloud 的抱怨</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
-    <published>2024-12-11T10:20:03.189Z</published>
-    <updated>2024-12-01T16:00:00.000Z</updated>
+    <published>2024-12-10T14:05:40.491Z</published>
+    <updated>2024-12-30T08:40:01.098Z</updated>
     
-    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li><li>会因为个别文件占用阻塞整个同步操作</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li><li>Dropbox 支持 LAN 同步，它不支持</li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p>]]></content>
+    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li><li>会因为个别文件占用阻塞整个同步操作</li><li>本地产生了4GiB的log - <time datetime="2024-12-30">2024-12-30</time></li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li><li>Dropbox 支持 LAN 同步，它不支持</li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p>]]></content>
     
     
       
@@ -344,6 +344,8 @@
     <category term="AGPLv3" scheme="http://ted423.github.io/tags/AGPLv3/"/>
     
     <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
     
   </entry>
   

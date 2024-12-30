@@ -7831,11 +7831,13 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
     <content><![CDATA[<h1 id="批量重命名软件类"><a href="#批量重命名软件类" class="headerlink" title="批量重命名软件类"></a>批量重命名软件类</h1><p><a href="https://ted423.github.io/Software/%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E8%BD%AF%E4%BB%B6/">https://ted423.github.io/Software/%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D%E8%BD%AF%E4%BB%B6/</a></p>
 <h1 id="Attribute-Changer"><a href="#Attribute-Changer" class="headerlink" title="Attribute Changer"></a>Attribute Changer</h1><p>同File Property Edit一样可以进行文件属性修改，但主要是通过右键菜单，<br><a href="http://www.petges.lu/home/download/">http://www.petges.lu/home/download/</a></p>
 <h1 id="File-Property-Edit"><a href="#File-Property-Edit" class="headerlink" title="File Property Edit"></a>File Property Edit</h1><p>文件属性修改,你可以将普通文件改成系统文件，十分适合用来藏东西<br><a href="http://www.foryoursoft.com/download.htm">http://www.foryoursoft.com/download.htm</a></p>
-<h1 id="搜索类"><a href="#搜索类" class="headerlink" title="搜索类"></a>搜索类</h1><h2 id="DocFetcher"><a href="#DocFetcher" class="headerlink" title="DocFetcher"></a><del>DocFetcher</del></h2><p>开源(EPL)的文件内容搜索，不止支持文本文件，还支持doc以及pdf等文档<br>不过需要进行索引<br>最重大的缺点就是不能搜索连续的符号，但有时候需要精准结果的时候，这个软件靠不住<br><a href="http://docfetcher.sourceforge.net/en/index.html">http://docfetcher.sourceforge.net/en/index.html</a></p>
-<h2 id="Everything"><a href="#Everything" class="headerlink" title="Everything"></a>Everything</h2><p>搜索文件用，相当出名的文件搜索工具，会通过主文件表中的文件元数据创建卷上每个文件和目录名称的索引，速度相当快，缺点就是只支持文件名，不支持附加条件的搜索，例如文件大小和创建日期<br><a href="http://www.voidtools.com/">http://www.voidtools.com/</a></p>
+<h1 id="搜索类"><a href="#搜索类" class="headerlink" title="搜索类"></a>搜索类</h1><h2 id="Everything"><a href="#Everything" class="headerlink" title="Everything"></a>Everything</h2><p>搜索文件用，相当出名的文件搜索工具，会通过主文件表中的文件元数据创建卷上每个文件和目录名称的索引，速度相当快，缺点就是只支持文件名，不支持附加条件的搜索，例如文件大小和创建日期</p>
+<p>最新的 alpha 版本看起来会增加很多功能， 包括文件内容搜索 -<time datetime="2024-12-30">2024-12-30</time><br><a href="http://www.voidtools.com/">http://www.voidtools.com/</a></p>
 <h2 id="FileSeek"><a href="#FileSeek" class="headerlink" title="FileSeek"></a><del>FileSeek</del></h2><p>这个软件是专门为了搜索文件内容而生的。没有locate32的小毛病，后面感觉用FileLocator会好些，因为我发现FileLocator添加默认为文本的文件类型会比较方便。我印象里FileSeek最早也是直接添加的，不知道是我记错了还是后面改了。<br><a href="https://www.fileseek.ca/">https://www.fileseek.ca/</a></p>
 <h2 id="FileLocator"><a href="#FileLocator" class="headerlink" title="FileLocator"></a>FileLocator</h2><p>跟上面算是同质同类的软件<br><a href="https://www.mythicsoft.com/filelocatorpro/">https://www.mythicsoft.com/filelocatorpro/</a></p>
-<h1 id="locate32"><a href="#locate32" class="headerlink" title="locate32"></a><del>locate32</del></h1><h2 id="BSD-License个人目前没在用，因为FileSeek或者Docfetcher明显更好用搜索文件用-虽然相对于Everything来说不是那么快速，但是功能更为强大，可以搜索文件大小、日期等等就是文件内容搜索是将DBCS与UTF-8分开的，搜索utf-8文本文件的话，需要以utf8-开头。长期没有更新了https-sourceforge-net-projects-locate32"><a href="#BSD-License个人目前没在用，因为FileSeek或者Docfetcher明显更好用搜索文件用-虽然相对于Everything来说不是那么快速，但是功能更为强大，可以搜索文件大小、日期等等就是文件内容搜索是将DBCS与UTF-8分开的，搜索utf-8文本文件的话，需要以utf8-开头。长期没有更新了https-sourceforge-net-projects-locate32" class="headerlink" title="BSD License个人目前没在用，因为FileSeek或者Docfetcher明显更好用搜索文件用,虽然相对于Everything来说不是那么快速，但是功能更为强大，可以搜索文件大小、日期等等就是文件内容搜索是将DBCS与UTF-8分开的，搜索utf-8文本文件的话，需要以utf8:开头。长期没有更新了https://sourceforge.net/projects/locate32/"></a>BSD License<br>个人目前没在用，<del>因为FileSeek或者Docfetcher明显更好用</del><br>搜索文件用,虽然相对于Everything来说不是那么快速，但是功能更为强大，可以搜索文件大小、日期等等<br>就是文件内容搜索是将DBCS与UTF-8分开的，搜索utf-8文本文件的话，需要以utf8:开头。<br>长期没有更新了<br><a href="https://sourceforge.net/projects/locate32/">https://sourceforge.net/projects/locate32/</a></h2><h1 id="Copyq"><a href="#Copyq" class="headerlink" title="Copyq"></a>Copyq</h1><p>GPLv3<br>用就是了 之前在用Ditto，不过感觉Ditto小bug有点多<br><a href="https://github.com/hluk/CopyQ">https://github.com/hluk/CopyQ</a></p>
+<h1 id="Copyq"><a href="#Copyq" class="headerlink" title="Copyq"></a>Copyq</h1><p>GPLv3</p>
+<p>用就是了 之前在用Ditto，不过感觉Ditto小bug有点多。</p>
+<p>最主要的是他会导致其他软件卡死。-<time datetime="2024-12-30">2024-12-30</time><br><a href="https://github.com/hluk/CopyQ">https://github.com/hluk/CopyQ</a></p>
 <h1 id="Exeinfo-PE"><a href="#Exeinfo-PE" class="headerlink" title="Exeinfo PE"></a><a href="/Software/Exeinfo%20PE">Exeinfo PE</a></h1><p>exe信息查询<br>放在Github上的闭源软件,之前有一堆不同域名的主页</p>
 <h1 id="DIE-engine"><a href="#DIE-engine" class="headerlink" title="DIE-engine"></a><a href="/DIE-engine">DIE-engine</a></h1><p>exe信息查询 开源，比上面那个重，不过支持文件夹安装包和压缩包</p>
 <h1 id="HashCheck"><a href="#HashCheck" class="headerlink" title="HashCheck"></a>HashCheck</h1><p>Standard 3-Clause BSD License.<br><a href="https://github.com/gurnec/HashCheck">https://github.com/gurnec/HashCheck</a><br>因为Robin Keir的hash在特殊字符上有些问题，找替代软件找到的。不过只能在右键属性里查看。如进行文件对比，操作量会略微增加。</p>
@@ -7861,6 +7863,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>建设中</tag>
         <tag>Software</tag>
         <tag>GPLv3</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -26650,6 +26653,7 @@ Poppler - PDF函式库
 <li>经常被它锁定文件打断操作</li>
 <li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li>
 <li>会因为个别文件占用阻塞整个同步操作</li>
+<li>本地产生了4GiB的log - <time datetime="2024-12-30">2024-12-30</time></li>
 </ol>
 <p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p>
 <p>但 Nextcloud 的问题也不少，甚至更可怕</p>
@@ -26677,6 +26681,7 @@ Poppler - PDF函式库
         <tag>Dropbox</tag>
         <tag>AGPLv3</tag>
         <tag>Download&amp;File hosting service</tag>
+        <tag>defect</tag>
       </tags>
   </entry>
   <entry>
