@@ -28167,6 +28167,9 @@ $(function () {
 <p>不过这个算小问题。</p>
 <h2 id="diagrams"><a href="#diagrams" class="headerlink" title="diagrams"></a>diagrams</h2><p>相当重要的插件，可以再 Dokuwiki 上画矢量图和流程图，需要配合外部 drawio(可以自己部署) 使用。</p>
 <h1 id="Markdowku"><a href="#Markdowku" class="headerlink" title="Markdowku"></a>Markdowku</h1><p>dokuwiki 本身语法跟 markdown 就有些像，故上了这个之后算是增强</p>
+<h1 id="Indexmenu"><a href="#Indexmenu" class="headerlink" title="Indexmenu"></a>Indexmenu</h1><p>配合官方功能 Sidebar 使用，可以在页面左边增加地图。</p>
+<p>其实还有个类似插件 simplenavi，不过那个功能会比较弱一些。该扩展推荐是每个空间都要写 Siderbar 和 Start。不然会有空间需要点击，并且空间点击会自动显示 Start。</p>
+<p>Indexmenu 可以最外层写一个就好了<br><code>&#123;&#123;indexmenu>..|js navbar nocookie id&#125;&#125;</code></p>
 ]]></content>
       <categories>
         <category>Software</category>

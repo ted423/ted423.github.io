@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2024-12-30T03:35:08.625Z</updated>
+  <updated>2024-12-30T04:21:22.132Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://ted423.github.io/Software/dokuwiki_plugins/"/>
     <id>http://ted423.github.io/Software/dokuwiki_plugins/</id>
     <published>2024-12-30T03:09:27.580Z</published>
-    <updated>2024-12-30T03:35:08.625Z</updated>
+    <updated>2024-12-30T04:21:22.132Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.dokuwiki.org/dokuwiki">Dokuwiki</a><br>是一个应用相当广泛的内部 wiki 系统。优势有</p><ol><li>支持 LDAP 以及 AD 账号集成</li><li>部署以及配置相比其他简单(推荐 Docker)</li></ol><p>然后就是他的一些推荐插件了。</p><h1 id="CosmoCode"><a href="#CosmoCode" class="headerlink" title="CosmoCode"></a><a href="https://github.com/cosmocode">CosmoCode</a></h1><p>这个组织的东西都不错。可以算是官方的。</p><h2 id="edittable"><a href="#edittable" class="headerlink" title="edittable"></a>edittable</h2><p>这个插件最主要的是给不太适应语法的一个快速使用的方法。实际使用中会带出多几个空格，排版上有点小问题。</p><p>不过这个算小问题。</p><h2 id="diagrams"><a href="#diagrams" class="headerlink" title="diagrams"></a>diagrams</h2><p>相当重要的插件，可以再 Dokuwiki 上画矢量图和流程图，需要配合外部 drawio(可以自己部署) 使用。</p><h1 id="Markdowku"><a href="#Markdowku" class="headerlink" title="Markdowku"></a>Markdowku</h1><p>dokuwiki 本身语法跟 markdown 就有些像，故上了这个之后算是增强</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.dokuwiki.org/dokuwiki">Dokuwiki</a><br>是一个应用相当广泛的内部 wiki 系统。优势有</p><ol><li>支持 LDAP 以及 AD 账号集成</li><li>部署以及配置相比其他简单(推荐 Docker)</li></ol><p>然后就是他的一些推荐插件了。</p><h1 id="CosmoCode"><a href="#CosmoCode" class="headerlink" title="CosmoCode"></a><a href="https://github.com/cosmocode">CosmoCode</a></h1><p>这个组织的东西都不错。可以算是官方的。</p><h2 id="edittable"><a href="#edittable" class="headerlink" title="edittable"></a>edittable</h2><p>这个插件最主要的是给不太适应语法的一个快速使用的方法。实际使用中会带出多几个空格，排版上有点小问题。</p><p>不过这个算小问题。</p><h2 id="diagrams"><a href="#diagrams" class="headerlink" title="diagrams"></a>diagrams</h2><p>相当重要的插件，可以再 Dokuwiki 上画矢量图和流程图，需要配合外部 drawio(可以自己部署) 使用。</p><h1 id="Markdowku"><a href="#Markdowku" class="headerlink" title="Markdowku"></a>Markdowku</h1><p>dokuwiki 本身语法跟 markdown 就有些像，故上了这个之后算是增强</p><h1 id="Indexmenu"><a href="#Indexmenu" class="headerlink" title="Indexmenu"></a>Indexmenu</h1><p>配合官方功能 Sidebar 使用，可以在页面左边增加地图。</p><p>其实还有个类似插件 simplenavi，不过那个功能会比较弱一些。该扩展推荐是每个空间都要写 Siderbar 和 Start。不然会有空间需要点击，并且空间点击会自动显示 Start。</p><p>Indexmenu 可以最外层写一个就好了<br><code>&#123;&#123;indexmenu>..|js navbar nocookie id&#125;&#125;</code></p>]]></content>
     
     
       
