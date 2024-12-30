@@ -4395,7 +4395,7 @@
 <h1 id="Unicode-UCS-万国码"><a href="#Unicode-UCS-万国码" class="headerlink" title="Unicode - UCS - 万国码"></a>Unicode - UCS - 万国码</h1><p>通用字符集 - UCS(Universal Character Set)<br><a href="https://zh.wikipedia.org/zh-cn/%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6%E9%9B%86#Unicode.E5.92.8CISO_10646.E7.9A.84.E5.BC.82.E5.90.8C">首先要说明的是Unicode和UCS并不是完全相同的概念</a></p>
 <p>Unicode的实现方式不同于编码方式。一个字符的Unicode编码是确定的。它只规定了符号的二进制代码，却没有规定这个二进制代码应该如何存储。Unicode符号需要字节数不等，从1个字节到4个字节，甚至更多。这里就有个严重的问题，计算机怎么知道三个字节表示一个符号，而不是分别表示三个符号呢？第二个问题是，我们已经知道，英文字母只用一个字节表示就够了，如果Unicode统一规定，每个符号用三个或四个字节表示，那么每个英文字母前都必然有二到三个字节是0，这对于存储来说是极大的浪费，文本文件的大小会因此大出二三倍，这是无法接受的。出于节省空间的目的，对Unicode编码的实现方式有所不同。</p>
 <p>Unicode的<strong>实现方式</strong>称为Unicode转换格式（Unicode Transformation Format，简称为UTF）<br>把带有 BOM 的小端序 UTF-16 称作「Unicode」也是 Windows 的臭毛病。<br>简单说Windows记事本里的Unicode会误导别人。Unicode本身是没有大端序以及小端序的区别的。</p>
-<h2 id="UTF-Unicode-UCS-Transformation-Format"><a href="#UTF-Unicode-UCS-Transformation-Format" class="headerlink" title="UTF - Unicode&#x2F;UCS Transformation Format"></a>UTF - Unicode&#x2F;UCS Transformation Format</h2><p>UTF-8编码字节含义</p>
+<h2 id="UTF-Unicode-x2F-UCS-Transformation-Format"><a href="#UTF-Unicode-x2F-UCS-Transformation-Format" class="headerlink" title="UTF - Unicode&#x2F;UCS Transformation Format"></a>UTF - Unicode&#x2F;UCS Transformation Format</h2><p>UTF-8编码字节含义</p>
 <ul>
 <li>UTF-8编码中的任意字节B，如果B的第一位为0，则B为ASCII码且B独立的表示一个字符；</li>
 <li>如果B的第一位为1，第二位为0，则B为一个多字节字符中的后续字节；</li>
@@ -4429,7 +4429,7 @@
 </tr>
 </tbody></table>
 <p>注：LE为小端序，上表中UTF-16(LE)里的”,”用于标出和UTF-8里对应关系。</p>
-<p>可以在这里<a href="https://ted423.github.io/Code/WWW/UTF-8/">UTF-8</a>以及这里<a href="https://ted423.github.io/Code/WWW/2unicode/">UTF-16 LE</a>验证</p>
+<p>可以在这里<a href="/Code/WWW/UTF-8/">UTF-8</a>以及这里<a href="/Code/WWW/2unicode/">UTF-16 LE</a>验证</p>
 <h1 id="UCS-2、UCS-4与UTF-16、UTF-32"><a href="#UCS-2、UCS-4与UTF-16、UTF-32" class="headerlink" title="UCS-2、UCS-4与UTF-16、UTF-32"></a>UCS-2、UCS-4与UTF-16、UTF-32</h1><p>UCS-2对每一个Unicode码位使用2bytes字集(16位bit);<br>UCS-4对每一个Unicode码位使用4bytes字集(32位bit);<br>UTF-16可看成是UCS-2的父集。在没有辅助平面字符（surrogate code points）前，UTF-16与UCS-2所指的是同一的意思。但当引入辅助平面字符后，就称为UTF-16了。现在若有软件声称自己支持UCS-2编码，那其实是暗指它不能支持在UTF-16中超过2bytes的字集。对于小于0x10000的UCS码，UTF-16编码就等于UCS码。<br>UTF-32 原本是 UCS-4 的子集，但JTC1&#x2F;SC2&#x2F;WG2声明，所有未来对字符的指定都将会限制在BMP及其14个补充平面。<br>于是就现状而言，除了 UTF-32 标准包含额外的 Unicode 意涵，UCS-4 和 UTF-32 大体是相同的。</p>
 <h2 id="字节顺序标记-BOM"><a href="#字节顺序标记-BOM" class="headerlink" title="字节顺序标记-BOM"></a>字节顺序标记-BOM</h2><table>
 <thead>
@@ -7147,6 +7147,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       <tags>
         <tag>Windows</tag>
         <tag>Software</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -7215,6 +7216,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       <tags>
         <tag>Windows</tag>
         <tag>Software</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -7512,6 +7514,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       </categories>
       <tags>
         <tag>Windows</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -7624,6 +7627,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       <tags>
         <tag>Windows</tag>
         <tag>Software</tag>
+        <tag>defect</tag>
       </tags>
   </entry>
   <entry>
@@ -7735,6 +7739,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       <tags>
         <tag>Linux</tag>
         <tag>WWW</tag>
+        <tag>开源(Open Source)</tag>
         <tag>Software</tag>
         <tag>3-clause BSD license</tag>
       </tags>
@@ -7918,6 +7923,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Software</tag>
         <tag>Apache License 2.0</tag>
         <tag>LGPLv2.1</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -15775,7 +15781,9 @@ function GetSelectedText (){
         <category>Code</category>
       </categories>
       <tags>
+        <tag>过时(Outdated)</tag>
         <tag>WWW</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -28032,6 +28040,7 @@ $(function () {
         <tag>MIT</tag>
         <tag>开源(Open Source)</tag>
         <tag>Software</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
   <entry>
@@ -28142,6 +28151,32 @@ $(function () {
         <tag>WWW</tag>
         <tag>Note</tag>
         <tag>defect</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Dokuwiki 推荐插件</title>
+    <url>/Software/dokuwiki_plugins/</url>
+    <content><![CDATA[<p><a href="https://www.dokuwiki.org/dokuwiki">Dokuwiki</a><br>是一个应用相当广泛的内部 wiki 系统。优势有</p>
+<ol>
+<li>支持 LDAP 以及 AD 账号集成</li>
+<li>部署以及配置相比其他简单(推荐 Docker)</li>
+</ol>
+<p>然后就是他的一些推荐插件了。</p>
+<h1 id="CosmoCode"><a href="#CosmoCode" class="headerlink" title="CosmoCode"></a><a href="https://github.com/cosmocode">CosmoCode</a></h1><p>这个组织的东西都不错。可以算是官方的。</p>
+<h2 id="edittable"><a href="#edittable" class="headerlink" title="edittable"></a>edittable</h2><p>这个插件最主要的是给不太适应语法的一个快速使用的方法。实际使用中会带出多几个空格，排版上有点小问题。</p>
+<p>不过这个算小问题。</p>
+<h2 id="diagrams"><a href="#diagrams" class="headerlink" title="diagrams"></a>diagrams</h2><p>相当重要的插件，可以再 Dokuwiki 上画矢量图和流程图，需要配合外部 drawio(可以自己部署) 使用。</p>
+<h1 id="Markdowku"><a href="#Markdowku" class="headerlink" title="Markdowku"></a>Markdowku</h1><p>dokuwiki 本身语法跟 markdown 就有些像，故上了这个之后算是增强</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>WWW</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>Software</tag>
+        <tag>GPLv2</tag>
+        <tag>Github</tag>
       </tags>
   </entry>
 </search>
