@@ -213,9 +213,9 @@
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
     <published>2024-12-27T07:20:42.480Z</published>
-    <updated>2024-12-27T07:29:12.851Z</updated>
+    <updated>2025-01-02T01:18:16.582Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><p>问题有</p><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li></ul><p>配置项</p><p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><p>问题有</p><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li><li><del>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。</del>(最后发现是 Ditto 的问题)</li></ul><p>配置项</p><p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置</p>]]></content>
     
     
       
