@@ -1708,10 +1708,10 @@
   <entry>
     <title>Hexo + Github搭建博客</title>
     <url>/Code/Hexo%20github/</url>
-    <content><![CDATA[<p>Hexo可以作为一个Server使用(hexo server 运行), <code>hexo-deployer-git</code>是官方开发的插件用于 Github 上搭建博客。</p>
+    <content><![CDATA[<p>Hexo可以作为一个Server使用(<code>hexo server</code>运行), <code>hexo-deployer-git</code>是官方开发的插件用于 Github 上搭建博客。</p>
 <h1 id="需要的环境"><a href="#需要的环境" class="headerlink" title="需要的环境"></a>需要的环境</h1><p>Hexo基于node.js,故需要先装nodejs以及npm。推荐装LTS的。<br>确保git版本是最新的</p>
 <p>最好了解下<a href="https://docs.npmjs.com/cli/v8/commands/npm-init">nodejs项目</a></p>
-<p>请注意 hexo-deployer-git 第一次登陆时不能设置 Socks5代理（蛋疼的是中文 cmd 下显示乱码），实际显示的是<code>ServicePointManager 不支持具有 socks5 方案的代理</code> —<time datetime="2023-07-18">2023-07-18</time></p>
+<p>请注意 hexo-deployer-git 第一次登陆时不能设置 Socks5代理(蛋疼的是中文 cmd 下显示乱码)，实际显示的是<code>ServicePointManager 不支持具有 socks5 方案的代理</code> —<time datetime="2023-07-18">2023-07-18</time></p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 <p>创建文件夹并进入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
