@@ -26352,24 +26352,6 @@ img.kickass{
       </tags>
   </entry>
   <entry>
-    <title>[开源]7-Zip-zstd 7z增强版</title>
-    <url>/Software/Compression/7-Zip-zstd/</url>
-    <content><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p>
-<hr>
-<p>不幸的 见<a href="https://github.com/mcmilk/7-Zip-zstd/issues/377">Issue</a> -2024-10-10</p>
-]]></content>
-      <categories>
-        <category>Software</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>过时(Outdated)</tag>
-        <tag>开源(Open Source)</tag>
-        <tag>LGPLv2.1</tag>
-        <tag>Compression</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>压缩软件问题记录</title>
     <url>/Software/Compression/Compression-defect/</url>
     <content><![CDATA[<h1 id="Bandzip"><a href="#Bandzip" class="headerlink" title="Bandzip"></a>Bandzip</h1><p>无法对7z文件进行直接修改。</p>
@@ -27071,9 +27053,10 @@ Poppler - PDF函式库
     <title>硬件信息检测软件</title>
     <url>/Software/Hardware/%E7%A1%AC%E4%BB%B6%E4%BF%A1%E6%81%AF%E6%A3%80%E6%B5%8B/</url>
     <content><![CDATA[<h1 id="AIDA64"><a href="#AIDA64" class="headerlink" title="AIDA64"></a>AIDA64</h1><p>其实这篇文章只有这一个软件就够了….<br>目前没有比这个更全更权威的软件了。</p>
+<p>例如主板对 ecc 的支持，HWiNFO 看不到 AIDA64 可以 -<time datetime="2025-01-02">2025-01-02</time></p>
 <h2 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h2><p><a href="https://www.aida64.com/">https://www.aida64.com/</a></p>
 <h2 id="大眼仔破解"><a href="#大眼仔破解" class="headerlink" title="大眼仔破解"></a>大眼仔破解</h2><p>好像不少人都做了这个，当时选这个好像一个是因为单文件，另一个好像是因为更新提醒<br><a href="http://www.dayanzai.me/aida64.html">http://www.dayanzai.me/aida64.html</a></p>
-<h1 id="HWiNFO"><a href="#HWiNFO" class="headerlink" title="HWiNFO"></a>HWiNFO</h1><p>免费，功能上不如上面那个</p>
+<h1 id="HWiNFO"><a href="#HWiNFO" class="headerlink" title="HWiNFO"></a>HWiNFO</h1><p>免费(仅针对个人)，功能上不如上面那个</p>
 <p><a href="https://www.hwinfo.com/">https://www.hwinfo.com/</a></p>
 <p>发现居然不能刷新信息，比方外接显示器，你只能关了软件重开才能看到信息<br>就硬盘方面，AIDA能看SMART表，这个不能</p>
 <h1 id="单独硬件类"><a href="#单独硬件类" class="headerlink" title="单独硬件类"></a>单独硬件类</h1><p>这类软件会比较权威(不权威还有毛用)</p>
@@ -28184,6 +28167,43 @@ $(function () {
         <tag>Software</tag>
         <tag>GPLv2</tag>
         <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[开源]NanaZip</title>
+    <url>/Software/Compression/NanaZip/</url>
+    <content><![CDATA[<p><a href="https://github.com/M2Team/NanaZip">https://github.com/M2Team/NanaZip</a></p>
+<p>准备完全替代 7zip 以及 7zip-zstd</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>MIT</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>3-clause BSD license</tag>
+        <tag>LGPLv2.1</tag>
+        <tag>Compression</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[开源]7-Zip-zstd 7z增强版</title>
+    <url>/Software/%E4%B8%8D%E5%86%8D%E6%8E%A8%E8%8D%90/7-Zip-zstd/</url>
+    <content><![CDATA[<p><a href="https://github.com/mcmilk/7-Zip-zstd">https://github.com/mcmilk/7-Zip-zstd</a><br>之前某个群吐槽问7z是不是还是VC6编译，别人给的<br>不会覆盖掉原版的7z<br>总之不错。<br>虽然还没详细用到我能推翻之前的结论<br>另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可</p>
+<hr>
+<p>不幸的 见<a href="https://github.com/mcmilk/7-Zip-zstd/issues/377">Issue</a> -2024-10-10</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>过时(Outdated)</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>LGPLv2.1</tag>
+        <tag>不再推荐</tag>
+        <tag>Compression</tag>
       </tags>
   </entry>
 </search>
