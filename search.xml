@@ -7661,7 +7661,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 </ul>
 <h1 id="几款重复图片查找工具"><a href="#几款重复图片查找工具" class="headerlink" title="几款重复图片查找工具"></a>几款重复图片查找工具</h1><p>(就效果来讲Duplicate Finder只支持jpg不过速度快些)</p>
 <ul>
-<li>Visipics: <a href="http://www.visipics.info/index.php?title=Main_Page">http://www.visipics.info/index.php?title=Main_Page</a></li>
+<li>Visipics: <a href="https://visipics.info/zh/visipics-china/">https://visipics.info/zh/visipics-china/</a></li>
 <li>VistanitaDuplicateFinder: <a href="https://pan.baidu.com/s/1eR2lwjg">https://pan.baidu.com/s/1eR2lwjg</a></li>
 <li>Duplicate Finder: <a href="http://duplicatefinder.firmtools.com/download.php">http://duplicatefinder.firmtools.com/download.php</a>(注册码:DFRZ-Y9KL-3UKK-HZBJ)</li>
 <li>AntiDupl.NET: <a href="https://ermig1979.github.io/AntiDupl/english/index.html">https://ermig1979.github.io/AntiDupl/english/index.html</a>(MIT,挺强大的，就是太高端了，有些不会用，笑)</li>
@@ -14837,13 +14837,13 @@ font-size: 0.78em;
 <p>需要注意的是git里以记录改动为主，如果修改历史变动是会改变现有代码的(特别是你把某个文件的最后一次commit给弄没的时候)。drop 意味着当时进行的修改也会被取消。很容易造成冲突(conflict)，<br>所以一般是建议squash来合并commit</p>
 <p>最后 <code>git push --force</code><br>这个命令会把远程的彻底抹掉，出问题也会很彻底的，所以要谨慎。</p>
 <p><a href="/Code/git/conflict">conflict处理</a></p>
-<h1 id="eol-ignoreCase"><a href="#eol-ignoreCase" class="headerlink" title="eol &amp; ignoreCase"></a>eol &amp; ignoreCase</h1><p>eol 问题见 [&#x2F;Code&#x2F;Git&#x2F;git eol&#x2F;]</p>
+<h1 id="eol-amp-ignoreCase"><a href="#eol-amp-ignoreCase" class="headerlink" title="eol &amp; ignoreCase"></a>eol &amp; ignoreCase</h1><p>eol 问题见 [&#x2F;Code&#x2F;Git&#x2F;git eol&#x2F;]</p>
 <p>大小写问题见 <a href="https://github.com/Candinya/Kratos-Rebirth/issues/208">https://github.com/Candinya/Kratos-Rebirth/issues/208</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config core.ignorecase false</span><br></pre></td></tr></table></figure>
 
 <p>不建议使用 -g</p>
 <p>配置保存在<code>git/config</code></p>
-<h1 id="git-config"><a href="#git-config" class="headerlink" title="git config"></a>git config</h1><p>git 配置有 全局配置</p>
+<h1 id="git-config"><a href="#git-config" class="headerlink" title="git config"></a>git config</h1><p>git 配置有 全局配置，参考 <a href="/Code/Git/git%20proxy">proxy</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config -g</span><br></pre></td></tr></table></figure>
 <p>修改，位于用户文件夹下的<code>.gitconfig</code></p>
 <p>项目个人设置</p>
@@ -14853,7 +14853,7 @@ font-size: 0.78em;
 <p>修改</p>
 <p>还有<code>.gitattributes</code></p>
 <p>这种属于每个项目的预定义配置，通常用于统一项目行为，例如<a href="https://github.com/pt-plugins/PT-Plugin-Plus/issues/1981">https://github.com/pt-plugins/PT-Plugin-Plus/issues/1981</a></p>
-]]></content>
+<h1 id="本地获取所有远程分支"><a href="#本地获取所有远程分支" class="headerlink" title="本地获取所有远程分支"></a>本地获取所有远程分支</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git branch -r | grep -v &#x27;\-&gt;&#x27; | sed &quot;s,\x1B\[[0-9;]*[a-zA-Z],,g&quot; | while read remote; do git branch --track &quot;$&#123;remote#origin/&#125;&quot; &quot;$remote&quot;; done</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Code</category>
       </categories>
