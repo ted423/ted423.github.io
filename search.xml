@@ -14875,6 +14875,7 @@ font-size: 0.78em;
 <p>似乎可能Win下cmd里用就是会解析成IP丢到代理里(</p>
 <hr>
 <p>另外需要注意，git 协议走 ssh,需要 ssh 代理以及 ssh key</p>
+<p>Github Desktop 对 ssh key 的支持并不好，它的官方教程让设置 passphrase,因此每次使用都要输入，但它自己的客户端不支持并且会每次都报错 -<time datetime=2025-01-08>2025-01-08</time></p>
 <p>下面是 Win 的配置,config 文件需要自己新建出来，key 的话，放在那里不用特意写配置</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ProxyCommand connect -S 127.0.0.1:7890 -a none %h %p</span><br><span class="line"></span><br><span class="line">Host github.com</span><br><span class="line">  User git</span><br><span class="line">  Port 22</span><br><span class="line">  Hostname github.com</span><br><span class="line">  TCPKeepAlive yes</span><br><span class="line"></span><br><span class="line">Host ssh.github.com</span><br><span class="line">  User git</span><br><span class="line">  Port 443</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  TCPKeepAlive yes</span><br></pre></td></tr></table></figure>
 
