@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-01-08T01:07:26.417Z</updated>
+  <updated>2025-01-09T06:10:32.297Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对 Nextcloud 的抱怨</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
+    <published>2025-01-09T06:35:54.830Z</published>
+    <updated>2025-01-09T06:10:32.297Z</updated>
+    
+    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li><li>会因为个别文件占用阻塞整个同步操作</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li><li>Dropbox 支持 LAN 同步，它不支持</li><li>本地产生了4GiB的log -<time datetime="2025-01-09">2025-01-09</time></li><li>需要管理员权限来删除快捷方式 -<time datetime="2025-01-09">2025-01-09</time></li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dropbox 长期在右键菜单里拉屎&lt;/li&gt;
+&lt;li&gt;很多次同步卡住(后面发现文件有些奇怪的状态)&lt;/li&gt;
+&lt;li&gt;经常被它锁定文件打断操作&lt;/li&gt;
+&lt;li&gt;长期接</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Dropbox" scheme="http://ted423.github.io/tags/Dropbox/"/>
+    
+    <category term="AGPLv3" scheme="http://ted423.github.io/tags/AGPLv3/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dokuwiki 推荐插件</title>
+    <link href="http://ted423.github.io/Software/dokuwiki_plugins/"/>
+    <id>http://ted423.github.io/Software/dokuwiki_plugins/</id>
+    <published>2025-01-08T06:53:48.382Z</published>
+    <updated>2025-01-08T06:52:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.dokuwiki.org/dokuwiki">Dokuwiki</a><br>是一个应用相当广泛的内部 wiki 系统。优势有</p><ol><li>支持 LDAP 以及 AD 账号集成</li><li>部署以及配置相比其他简单(推荐 Docker)</li></ol><p>然后就是他的一些推荐插件了。</p><h1 id="CosmoCode"><a href="#CosmoCode" class="headerlink" title="CosmoCode"></a><a href="https://github.com/cosmocode">CosmoCode</a></h1><p>这个组织的东西都不错。可以算是官方的。</p><h2 id="edittable"><a href="#edittable" class="headerlink" title="edittable"></a>edittable</h2><p>这个插件最主要的是给不太适应语法的一个快速使用的方法。实际使用中会带出多几个空格，排版上有点小问题。</p><p>不过这个算小问题。</p><h2 id="diagrams"><a href="#diagrams" class="headerlink" title="diagrams"></a>diagrams</h2><p>相当重要的插件，可以再 Dokuwiki 上画矢量图和流程图，需要配合外部 drawio(可以自己部署) 使用。</p><h1 id="Markdowku"><a href="#Markdowku" class="headerlink" title="Markdowku"></a><del>Markdowku</del></h1><p>dokuwiki 本身语法跟 markdown 就有些像，故上了这个之后算是增强</p><p>取消了，因为会破坏原生语法，除非你想全部页面重新维护 -<time datetime="2025-01-08">2025-01-08</time></p><h1 id="Indexmenu"><a href="#Indexmenu" class="headerlink" title="Indexmenu"></a>Indexmenu</h1><p>配合官方功能 Sidebar 使用，可以在页面左边增加地图。</p><p>其实还有个类似插件 simplenavi，不过那个功能会比较弱一些。该扩展推荐是每个空间都要写 Siderbar 和 Start。不然会有空间需要点击，并且空间点击会自动显示 Start。</p><p>Indexmenu 可以最外层写一个就好了<br><code>&#123;&#123;indexmenu>..|js navbar nocookie id&#125;&#125;</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.dokuwiki.org/dokuwiki&quot;&gt;Dokuwiki&lt;/a&gt;&lt;br&gt;是一个应用相当广泛的内部 wiki 系统。优势有&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;支持 LDAP 以及 AD 账号集成&lt;/li&gt;
+&lt;li&gt;部署以及配置相比其他简</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="GPLv2" scheme="http://ted423.github.io/tags/GPLv2/"/>
+    
+    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
+    
+  </entry>
   
   <entry>
     <title>[Git]设置查看和取消代理</title>
@@ -77,41 +157,6 @@
     <category term="LGPLv2.1" scheme="http://ted423.github.io/tags/LGPLv2-1/"/>
     
     <category term="Compression" scheme="http://ted423.github.io/tags/Compression/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dokuwiki 推荐插件</title>
-    <link href="http://ted423.github.io/Software/dokuwiki_plugins/"/>
-    <id>http://ted423.github.io/Software/dokuwiki_plugins/</id>
-    <published>2024-12-30T03:09:27.580Z</published>
-    <updated>2024-12-30T04:21:22.132Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.dokuwiki.org/dokuwiki">Dokuwiki</a><br>是一个应用相当广泛的内部 wiki 系统。优势有</p><ol><li>支持 LDAP 以及 AD 账号集成</li><li>部署以及配置相比其他简单(推荐 Docker)</li></ol><p>然后就是他的一些推荐插件了。</p><h1 id="CosmoCode"><a href="#CosmoCode" class="headerlink" title="CosmoCode"></a><a href="https://github.com/cosmocode">CosmoCode</a></h1><p>这个组织的东西都不错。可以算是官方的。</p><h2 id="edittable"><a href="#edittable" class="headerlink" title="edittable"></a>edittable</h2><p>这个插件最主要的是给不太适应语法的一个快速使用的方法。实际使用中会带出多几个空格，排版上有点小问题。</p><p>不过这个算小问题。</p><h2 id="diagrams"><a href="#diagrams" class="headerlink" title="diagrams"></a>diagrams</h2><p>相当重要的插件，可以再 Dokuwiki 上画矢量图和流程图，需要配合外部 drawio(可以自己部署) 使用。</p><h1 id="Markdowku"><a href="#Markdowku" class="headerlink" title="Markdowku"></a>Markdowku</h1><p>dokuwiki 本身语法跟 markdown 就有些像，故上了这个之后算是增强</p><h1 id="Indexmenu"><a href="#Indexmenu" class="headerlink" title="Indexmenu"></a>Indexmenu</h1><p>配合官方功能 Sidebar 使用，可以在页面左边增加地图。</p><p>其实还有个类似插件 simplenavi，不过那个功能会比较弱一些。该扩展推荐是每个空间都要写 Siderbar 和 Start。不然会有空间需要点击，并且空间点击会自动显示 Start。</p><p>Indexmenu 可以最外层写一个就好了<br><code>&#123;&#123;indexmenu>..|js navbar nocookie id&#125;&#125;</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.dokuwiki.org/dokuwiki&quot;&gt;Dokuwiki&lt;/a&gt;&lt;br&gt;是一个应用相当广泛的内部 wiki 系统。优势有&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;支持 LDAP 以及 AD 账号集成&lt;/li&gt;
-&lt;li&gt;部署以及配置相比其他简</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="GPLv2" scheme="http://ted423.github.io/tags/GPLv2/"/>
-    
-    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
     
   </entry>
   
@@ -365,51 +410,6 @@
     <category term="Hardware Tool" scheme="http://ted423.github.io/tags/Hardware-Tool/"/>
     
     <category term="python2" scheme="http://ted423.github.io/tags/python2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对 Nextcloud 的抱怨</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
-    <published>2024-12-10T14:05:40.491Z</published>
-    <updated>2024-12-30T08:40:01.098Z</updated>
-    
-    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li><li>会因为个别文件占用阻塞整个同步操作</li><li>本地产生了4GiB的log - <time datetime="2024-12-30">2024-12-30</time></li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>但 Nextcloud 的问题也不少，甚至更可怕</p><ol><li>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</li><li>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</li><li><strong>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</strong></li><li>目前遇到一个无法开始同步的问题，可能是加的文件太多了。</li><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li><li>还有文件丢失时间标签无法同步的</li><li>Dropbox 支持 LAN 同步，它不支持</li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Dropbox 长期在右键菜单里拉屎&lt;/li&gt;
-&lt;li&gt;很多次同步卡住(后面发现文件有些奇怪的状态)&lt;/li&gt;
-&lt;li&gt;经常被它锁定文件打断操作&lt;/li&gt;
-&lt;li&gt;长期接</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="Dropbox" scheme="http://ted423.github.io/tags/Dropbox/"/>
-    
-    <category term="AGPLv3" scheme="http://ted423.github.io/tags/AGPLv3/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
     
   </entry>
   

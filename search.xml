@@ -5604,13 +5604,15 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
   <entry>
     <title>[问题处理]农业银行证书导致Internet Explorer的TLS 1.2自动取消勾选从而导致Windows Store无法打开</title>
     <url>/Issue/TLS1.2/</url>
-    <content><![CDATA[<p>(国产哈皮软件 -2021-08-06)<br>言而总之，卸载就好了。<br>看网上有说网银相关导致的TLS 1.2自动取消勾选(<a href="http://tieba.baidu.com/p/5991999977">http://tieba.baidu.com/p/5991999977</a>)<br>也有说用友的(我不是财务所以没装过)<br>我是卸载农业银行证书就可以了，不过之前很久没更新了，不太确定最新版是不是还有问题。并且最早没遇到这种问题，怀疑可能在某次Windows Update之后出现了不兼容现象。</p>
+    <content><![CDATA[<p>(国产哈皮软件 -2021-08-06)<br>言而总之，卸载就好了。<br>看网上有说网银相关导致的TLS 1.2自动取消勾选(<a href="http://tieba.baidu.com/p/5991999977">http://tieba.baidu.com/p/5991999977</a>)<br>也有说用友的(我不是财务所以没装过)<br>我是卸载农业银行证书就可以了，不过之前很久没更新了，不太确定最新版是不是还有问题。并且最早没遇到这种问题，怀疑可能在某次 Windows Update 之后出现了。</p>
+<p>应该就是安全要求证书版本升级了 -<time datetime="2025-01-08">2025-01-08</time></p>
 ]]></content>
       <categories>
         <category>Issue</category>
       </categories>
       <tags>
         <tag>Windows</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Windows 10</tag>
         <tag>Issue</tag>
       </tags>
@@ -26640,7 +26642,6 @@ Poppler - PDF函式库
 <li>经常被它锁定文件打断操作</li>
 <li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li>
 <li>会因为个别文件占用阻塞整个同步操作</li>
-<li>本地产生了4GiB的log - <time datetime="2024-12-30">2024-12-30</time></li>
 </ol>
 <p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p>
 <p>但 Nextcloud 的问题也不少，甚至更可怕</p>
@@ -26653,6 +26654,8 @@ Poppler - PDF函式库
 <li><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></li>
 <li>还有文件丢失时间标签无法同步的</li>
 <li>Dropbox 支持 LAN 同步，它不支持</li>
+<li>本地产生了4GiB的log -<time datetime="2025-01-09">2025-01-09</time></li>
+<li>需要管理员权限来删除快捷方式 -<time datetime="2025-01-09">2025-01-09</time></li>
 </ol>
 <p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p>
 ]]></content>
@@ -27020,10 +27023,13 @@ Poppler - PDF函式库
 <h1 id="傲梅分区助手"><a href="#傲梅分区助手" class="headerlink" title="傲梅分区助手"></a>傲梅分区助手</h1><p>不是很推荐使用，简单说就是虽然功能看起来非常多，但是很多功能的实现都有问题，样子货</p>
 <p>不过毕竟免费，除非出个开源的来吊打他</p>
 <p>英文官网: <a href="https://www.disk-partition.com/">https://www.disk-partition.com/</a><br>中文官网: <a href="http://disktool.cn/">http://disktool.cn/</a><br><del>英文版更新更完善，估计国外比较容易赚到钱</del>(现在都一样了)<br>大眼仔破解: <a href="http://www.dayanzai.me/partition-assistant.html">http://www.dayanzai.me/partition-assistant.html</a></p>
-<p>有个拉屎的问题<br><a href="https://www.reddit.com/r/24hoursupport/comments/2ceq6o/what_is_amtagbin/">https://www.reddit.com/r/24hoursupport/comments/2ceq6o/what_is_amtagbin/</a> - <time>20241224</time></p>
 <p>之前一直在用DiskGenius进行磁盘分区调整的相关操作,但是当我因为工作需要将一个XP系统的NTFS无损转FAT32分区的时候，遇见了傲梅分区助手。随后当我发现公司电脑硬盘本身不大，却还分了3个区的时候，又是分区助手的合并分区功能帮了我。后来试图将动态磁盘转为基本磁盘，还是找到了分区助手(虽然我选择了用 DiskGenius 恢复分区表来还原之前的磁盘，不过DiskGenius中间出了各种问题，吓得我一身冷汗之后才解决倒是)</p>
 <p>一方面，这款软件没什么广告而且免费，功能也很全，界面也很干净。老实说，我倒不是特别喜欢界面漂亮的软件，因为很少有软件界面漂亮还在功能上符合我胃口。虽然像什么迁移系统到固态硬盘、启动光盘制作之类的功能让我觉得这款软件还是有点中国软件的风格以外，但还是得说分区助手做的不错。<br>相对 DiskGenius 来说，傲梅分区助手不具备恢复文件的功能(不过相对来讲DiskGenius这个功能也是要钱的)。</p>
-<h2 id="不过个人感觉这个软件基本是参照着MiniTool-Partition-Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4-英文版支持-。小问题有点多，对于一个操作硬盘的软件来说这点不大好"><a href="#不过个人感觉这个软件基本是参照着MiniTool-Partition-Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4-英文版支持-。小问题有点多，对于一个操作硬盘的软件来说这点不大好" class="headerlink" title="不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，还有不支持格式化成ext4(英文版支持)。小问题有点多，对于一个操作硬盘的软件来说这点不大好"></a>不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，<del>还有不支持格式化成ext4</del>(英文版支持)。<br>小问题有点多，对于一个操作硬盘的软件来说这点不大好</h2><p><time>2018-04-28 22:45</time>分区助手增加国外破解版，增加DiskGenius破解版</p>
+<p>不过个人感觉这个软件基本是参照着MiniTool Partition Wizard做的，不过功能上还是比不上，很多功能不是很恰当，<del>还有不支持格式化成ext4</del>(英文版支持)。<br>小问题有点多，对于一个操作硬盘的软件来说这点不大好</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>有个拉屎的问题<br><a href="https://www.reddit.com/r/24hoursupport/comments/2ceq6o/what_is_amtagbin/">https://www.reddit.com/r/24hoursupport/comments/2ceq6o/what_is_amtagbin/</a> -<time datetime="2024-12-24">2024-12-24</time></p>
+<p>还在用2005的运行库  -<time datetime="2025-01-09">2025-01-09</time></p>
+<hr>
+<p><time>2018-04-28 22:45</time>分区助手增加国外破解版，增加DiskGenius破解版</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -28159,7 +28165,8 @@ $(function () {
 <h2 id="edittable"><a href="#edittable" class="headerlink" title="edittable"></a>edittable</h2><p>这个插件最主要的是给不太适应语法的一个快速使用的方法。实际使用中会带出多几个空格，排版上有点小问题。</p>
 <p>不过这个算小问题。</p>
 <h2 id="diagrams"><a href="#diagrams" class="headerlink" title="diagrams"></a>diagrams</h2><p>相当重要的插件，可以再 Dokuwiki 上画矢量图和流程图，需要配合外部 drawio(可以自己部署) 使用。</p>
-<h1 id="Markdowku"><a href="#Markdowku" class="headerlink" title="Markdowku"></a>Markdowku</h1><p>dokuwiki 本身语法跟 markdown 就有些像，故上了这个之后算是增强</p>
+<h1 id="Markdowku"><a href="#Markdowku" class="headerlink" title="Markdowku"></a><del>Markdowku</del></h1><p>dokuwiki 本身语法跟 markdown 就有些像，故上了这个之后算是增强</p>
+<p>取消了，因为会破坏原生语法，除非你想全部页面重新维护 -<time datetime="2025-01-08">2025-01-08</time></p>
 <h1 id="Indexmenu"><a href="#Indexmenu" class="headerlink" title="Indexmenu"></a>Indexmenu</h1><p>配合官方功能 Sidebar 使用，可以在页面左边增加地图。</p>
 <p>其实还有个类似插件 simplenavi，不过那个功能会比较弱一些。该扩展推荐是每个空间都要写 Siderbar 和 Start。不然会有空间需要点击，并且空间点击会自动显示 Start。</p>
 <p>Indexmenu 可以最外层写一个就好了<br><code>&#123;&#123;indexmenu>..|js navbar nocookie id&#125;&#125;</code></p>
