@@ -28219,4 +28219,18 @@ $(function () {
         <tag>Compression</tag>
       </tags>
   </entry>
+  <entry>
+    <title>[问题处理]CentOS7 SWIG director method error. Error detected when calling &#39;RepoCB.handleMirrorFailure&#39;, ignoring this repo.</title>
+    <url>/Issue/SWIG_error/</url>
+    <content><![CDATA[<p>简而言之，就是用 dnf,但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。</p>
+<p>实际<code>yum install</code>的时候会提醒你没有 key,要导入 key</p>
+]]></content>
+      <categories>
+        <category>Issue</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Issue</tag>
+      </tags>
+  </entry>
 </search>
