@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-01-09T07:14:55.487Z</updated>
+  <updated>2025-01-10T03:22:16.460Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]ms-gamingoverlay 报错</title>
+    <link href="http://ted423.github.io/Issue/rmXboxGameBar/"/>
+    <id>http://ted423.github.io/Issue/rmXboxGameBar/</id>
+    <published>2025-01-10T03:14:16.143Z</published>
+    <updated>2025-01-10T03:22:16.460Z</updated>
+    
+    <content type="html"><![CDATA[<p>LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。</p><p>单纯的设置里关闭 Game Bar 不起效果</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reg add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR /f /t REG_DWORD /v &quot;AppCaptureEnabled&quot; /d 0</span><br><span class="line">reg add HKEY_CURRENT_USER\System\GameConfigStore /f /t REG_DWORD /v &quot;GameDVR_Enabled&quot; /d 0</span><br></pre></td></tr></table></figure><p>不过之前试手柄没法用，不清楚跟这块有没有关系，没注意驱动是否正常</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。&lt;/p&gt;
+&lt;p&gt;单纯的设置里关闭 Game Bar 不起效果&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows 11" scheme="http://ted423.github.io/tags/Windows-11/"/>
+    
+  </entry>
   
   <entry>
     <title>对 Nextcloud 的抱怨</title>
@@ -101,15 +131,15 @@
     <link href="http://ted423.github.io/Issue/SWIG_error/"/>
     <id>http://ted423.github.io/Issue/SWIG_error/</id>
     <published>2025-01-08T06:29:52.091Z</published>
-    <updated>2025-01-09T09:30:25.745Z</updated>
+    <updated>2025-01-07T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>简而言之，就是用 dnf,但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。</p><p>实际<code>yum install</code>的时候会提醒你没有 key,要导入 key</p>]]></content>
+    <content type="html"><![CDATA[<p>简而言之，就是用 dnf，但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。</p><p>实际<code>yum install</code>的时候会提醒你没有 key，要导入 key</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;简而言之，就是用 dnf,但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。&lt;/p&gt;
-&lt;p&gt;实际&lt;code&gt;yum install&lt;/code&gt;的时候会提醒你没有 key,要导入 key&lt;/p&gt;
+    <summary type="html">&lt;p&gt;简而言之，就是用 dnf，但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。&lt;/p&gt;
+&lt;p&gt;实际&lt;code&gt;yum install&lt;/code&gt;的时候会提醒你没有 key，要导入 key&lt;/p&gt;
 </summary>
       
     
@@ -639,35 +669,6 @@
     <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
     
     <category term="iOS" scheme="http://ted423.github.io/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]Bulk Crap Uninstaller</title>
-    <link href="http://ted423.github.io/Software/Bulk%20Crap%20Uninstaller/"/>
-    <id>http://ted423.github.io/Software/Bulk%20Crap%20Uninstaller/</id>
-    <published>2024-12-02T04:02:15.300Z</published>
-    <updated>2024-12-02T01:41:59.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/Klocman/Bulk-Crap-Uninstaller/">https://github.com/Klocman/Bulk-Crap-Uninstaller/</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/Klocman/Bulk-Crap-Uninstaller/&quot;&gt;https://github.com/Klocman/Bulk-Crap-Uninstaller/&lt;/a&gt;&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
     
   </entry>
   
