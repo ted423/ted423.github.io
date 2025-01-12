@@ -90,6 +90,9 @@
 
   <!-- 额外的追加注入项 -->
   
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
 <meta name="generator" content="Hexo 7.3.0"></head>
 
     <body class="custom-background">
@@ -160,7 +163,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~2.58K
+                            ~2.54K
                         
                         字
                     </li>
@@ -221,9 +224,8 @@
 <p>因此升级是在项目文件夹里更新包(我因为长期乱用命令，可能会有点乱，例如 hexo-cli也被我装到了博客的文件夹里，实际应该不需要)。</p>
 <h1 id="本地Debug"><a href="#本地Debug" class="headerlink" title="本地Debug"></a>本地Debug</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure>
 <p>可以本地debug好了再提交，不用像逗逼的我一样每次提交了看有问题再改。</p>
-<h1 id="algolia"><a href="#algolia" class="headerlink" title="algolia"></a>algolia</h1><p>不再使用</p>
+<h1 id="algolia"><a href="#algolia" class="headerlink" title="algolia"></a><del>algolia</del></h1><p>不再使用，见<a href="/etc/hexo-theme">Hexo theme</a></p>
 <p>可以看下这里<br><a target="_blank" rel="noopener" href="https://github.com/fi3ework/hexo-theme-archer/issues/304">https://github.com/fi3ework/hexo-theme-archer/issues/304</a></p>
-<p><a href="https://ted423.github.io/etc/hexo-theme-icarus/">https://ted423.github.io/etc/hexo-theme-icarus/</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> hexo algolia --help</span><br><span class="line">INFO  Validating config</span><br><span class="line">Usage: hexo algolia</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">Index your content in Algolia Search API</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  --dry-run       Does not push content to Algolia (default: false).</span><br><span class="line">  --flush         Resets the Algolia index before starting the indexation (default: false).</span><br><span class="line">  --indexing-key  An algolia API key with add/delete records permissions.</span><br><span class="line">                  It should be different than the search-only API key configured in _config.yml.</span><br><span class="line">  --layouts       A comma-separated list of page layouts to index (default: &quot;page&quot;).</span><br></pre></td></tr></table></figure>
 <p>flush 什么的，很少有教程说，不过文件换路径会非常有用</p>
 <h1 id="相对连接"><a href="#相对连接" class="headerlink" title="相对连接"></a>相对连接</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders">https://hexo.io/zh-cn/docs/asset-folders</a></p>
@@ -319,7 +321,7 @@
                 文章
             </span>
             <span class="count">
-                398
+                397
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -335,7 +337,7 @@
                 标签
             </span>
             <span class="count">
-                152
+                151
             </span>
         </a>
     </div>
@@ -344,7 +346,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">101</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">101</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">2</span></li></ul>
   </aside>
 
 
@@ -497,7 +499,7 @@
   <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
 <script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
 <script src="/comments/disqus.js"></script>
-<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}</style>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
 
 
 

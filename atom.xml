@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-01-10T13:58:05.377Z</updated>
+  <updated>2025-01-11T06:52:49.994Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="http://ted423.github.io/Issue/rmXboxGameBar/"/>
     <id>http://ted423.github.io/Issue/rmXboxGameBar/</id>
     <published>2025-01-10T13:03:29.065Z</published>
-    <updated>2025-01-10T13:58:05.377Z</updated>
+    <updated>2025-01-11T06:52:49.994Z</updated>
     
-    <content type="html"><![CDATA[<p>LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。</p><p>单纯的设置里关闭 Game Bar 不起效果</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reg add HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR /f /t REG_DWORD /v &quot;AppCaptureEnabled&quot; /d 0</span><br><span class="line">reg add HKEY_CURRENT_USER\System\GameConfigStore /f /t REG_DWORD /v &quot;GameDVR_Enabled&quot; /d 0</span><br></pre></td></tr></table></figure><p>不过之前试手柄没法用，不清楚跟这块有没有关系，没注意驱动是否正常(似乎因为手柄蓝牙模式是 switch 的，2.4Ghz 才能在 Win 上用)</p><p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866">https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866</a></p><p><a href="https://pastebin.com/EAABLssA">https://pastebin.com/EAABLssA</a> by <a href="https://www.reddit.com/user/aveyo/">aveyo</a> </p><p>我用 steam 那个连接弄了，btw,整数值</p>]]></content>
+    <content type="html"><![CDATA[<p>LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。</p><p>单纯的设置里关闭 Game Bar 不起效果</p><p>(之前的代码删了，因为处理不完全)</p><p>不过之前试手柄没法用，不清楚跟这块有没有关系，没注意驱动是否正常(似乎因为手柄蓝牙模式是 switch 的，2.4Ghz 才能在 Win 上用)</p><p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866">https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866</a></p><p><a href="https://pastebin.com/EAABLssA">https://pastebin.com/EAABLssA</a> by <a href="https://www.reddit.com/user/aveyo/">aveyo</a> </p><p>我用 steam 那个连接弄了，btw,整数值</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。&lt;/p&gt;
 &lt;p&gt;单纯的设置里关闭 Game Bar 不起效果&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;</summary>
+&lt;p&gt;(之前的代码删了，因为处理不完全)&lt;/p&gt;
+&lt;p&gt;不过之前试手柄</summary>
       
     
     
