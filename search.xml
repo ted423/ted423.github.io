@@ -14803,7 +14803,10 @@ font-size: 0.78em;
 <p>修改</p>
 <p>还有<code>.gitattributes</code></p>
 <p>这种属于每个项目的预定义配置，通常用于统一项目行为，例如<a href="https://github.com/pt-plugins/PT-Plugin-Plus/issues/1981">https://github.com/pt-plugins/PT-Plugin-Plus/issues/1981</a></p>
-<h1 id="本地获取所有远程分支"><a href="#本地获取所有远程分支" class="headerlink" title="本地获取所有远程分支"></a>本地获取所有远程分支</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git branch -r | grep -v &#x27;\-&gt;&#x27; | sed &quot;s,\x1B\[[0-9;]*[a-zA-Z],,g&quot; | while read remote; do git branch --track &quot;$&#123;remote#origin/&#125;&quot; &quot;$remote&quot;; done</span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="本地获取所有远程分支"><a href="#本地获取所有远程分支" class="headerlink" title="本地获取所有远程分支"></a>本地获取所有远程分支</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git branch -r | grep -v &#x27;\-&gt;&#x27; | sed &quot;s,\x1B\[[0-9;]*[a-zA-Z],,g&quot; | while read remote; do git branch --track &quot;$&#123;remote#origin/&#125;&quot; &quot;$remote&quot;; done</span><br><span class="line">git push --all</span><br></pre></td></tr></table></figure>
+
+<p>增加 push all -<time datetime="2025-01-15">2025-01-15<time></p>
+]]></content>
       <categories>
         <category>Code</category>
       </categories>
@@ -28197,7 +28200,6 @@ $(function () {
     <content><![CDATA[<p>LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。</p>
 <p>单纯的设置里关闭 Game Bar 不起效果</p>
 <p>(之前的代码删了，因为处理不完全)</p>
-<p>不过之前试手柄没法用，不清楚跟这块有没有关系，没注意驱动是否正常(似乎因为手柄蓝牙模式是 switch 的，2.4Ghz 才能在 Win 上用)</p>
 <p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866">https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866</a></p>
 <p><a href="https://pastebin.com/EAABLssA">https://pastebin.com/EAABLssA</a> by <a href="https://www.reddit.com/user/aveyo/">aveyo</a> </p>
 <p>我用 steam 那个连接弄了，btw,整数值</p>
