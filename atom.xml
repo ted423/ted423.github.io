@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-01-13T12:06:50.000Z</updated>
+  <updated>2025-01-23T13:22:05.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[开源]AB Download Manager - 多段下载器</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/</id>
+    <published>2025-01-24T02:35:07.638Z</published>
+    <updated>2025-01-23T13:22:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/amir1376/ab-download-manager">https://github.com/amir1376/ab-download-manager</a></p><p>开源，Lin + Win,多语言,buff 已经满了。就不多介绍了<br>多段下载，会下载后合并，基本就是 IDM 的开源替代品。<br>目前未测试断点续传</p><hr><p>加个提醒，部分服务器检测到过多的连接，可能会直接Ban你IP，除了thread设到5以外(并不保证一定有效)，没有太合适的建议，请自行斟酌</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/amir1376/ab-download-manager&quot;&gt;https://github.com/amir1376/ab-download-manager&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;开源，Lin + Win,多语言,buf</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]ms-gamingoverlay 报错</title>
@@ -44,6 +79,39 @@
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
     <category term="Windows 11" scheme="http://ted423.github.io/tags/Windows-11/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github git-lfs 注意事项</title>
+    <link href="http://ted423.github.io/Issue/Github-lfs/"/>
+    <id>http://ted423.github.io/Issue/Github-lfs/</id>
+    <published>2025-01-10T06:46:33.110Z</published>
+    <updated>2025-01-28T14:26:06.956Z</updated>
+    
+    <content type="html"><![CDATA[<p>其实主要就是 Github 的 lfs 空间只有1G。 但是坑的点在于。</p><ol><li>在达到限制前不会有任何提醒。</li><li>空间使用量藏得很深。</li></ol><p>然后就是第二方面，网上所有的教程都是删除本地 lfs 文件的。实际你没法自己删除 Gihub Server 上的 lfs 文件。</p><p>目前唯一的处理办法是 <a href="https://stackoverflow.com/questions/34579211/how-to-delete-a-file-tracked-by-git-lfs-and-release-the-storage-quota">https://stackoverflow.com/questions/34579211/how-to-delete-a-file-tracked-by-git-lfs-and-release-the-storage-quota</a></p><blockquote><ol><li>Open support github ticket <a href="https://support.github.com/contact?tags=docs-generic,rr-general-technical">https://support.github.com/contact?tags=docs-generic%2Crr-general-technical</a></li><li>Write subject title as “remove git lfs file”</li><li>Virtual Agent button should appear below</li><li>Click that to open dialog with bot</li><li>Click “Remove a file(s) from LFS</li><li>Bot responds with guide to get LFS file ID’s</li><li>AND you need to remove file from history also <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository</a></li></ol></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;其实主要就是 Github 的 lfs 空间只有1G。 但是坑的点在于。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在达到限制前不会有任何提醒。&lt;/li&gt;
+&lt;li&gt;空间使用量藏得很深。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然后就是第二方面，网上所有的教程都是删除本地 lfs 文件的。实际你没法自己</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
+    
+    <category term="Git" scheme="http://ted423.github.io/tags/Git/"/>
     
   </entry>
   
@@ -280,39 +348,6 @@
   </entry>
   
   <entry>
-    <title>Github git-lfs 注意事项</title>
-    <link href="http://ted423.github.io/Issue/Github-lfs/"/>
-    <id>http://ted423.github.io/Issue/Github-lfs/</id>
-    <published>2024-12-29T03:47:50.780Z</published>
-    <updated>2024-12-29T04:09:03.665Z</updated>
-    
-    <content type="html"><![CDATA[<p>其实主要就是 Github 的 lfs 空间只有1G。 但是坑的点在于。</p><ol><li>在达到限制前不会有任何提醒。</li><li>空间使用量藏得很深。</li></ol><p>然后就是第二方面，网上所有的教程都是删除本地 lfs 文件的。实际你没法自己删除 Gihub Server 上的 lfs 文件。</p><p>目前唯一的处理办法是 <a href="https://stackoverflow.com/questions/34579211/how-to-delete-a-file-tracked-by-git-lfs-and-release-the-storage-quota">https://stackoverflow.com/questions/34579211/how-to-delete-a-file-tracked-by-git-lfs-and-release-the-storage-quota</a></p><blockquote><ol><li>Open support github ticket <a href="https://support.github.com/contact?tags=docs-generic,rr-general-technical">https://support.github.com/contact?tags=docs-generic%2Crr-general-technical</a></li><li>Write subject title as “remove git lfs file”</li><li>Virtual Agent button should appear below</li><li>Click that to open dialog with bot</li><li>Click “Remove a file(s) from LFS</li><li>Bot responds with guide to get LFS file ID’s</li><li>AND you need to remove file from history also <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository</a></li></ol></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;其实主要就是 Github 的 lfs 空间只有1G。 但是坑的点在于。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在达到限制前不会有任何提醒。&lt;/li&gt;
-&lt;li&gt;空间使用量藏得很深。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;然后就是第二方面，网上所有的教程都是删除本地 lfs 文件的。实际你没法自己</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
-    
-    <category term="git" scheme="http://ted423.github.io/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Notion</title>
     <link href="http://ted423.github.io/Software/Notion/"/>
     <id>http://ted423.github.io/Software/Notion/</id>
@@ -534,41 +569,6 @@
     <category term="GPLv2" scheme="http://ted423.github.io/tags/GPLv2/"/>
     
     <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]AB Download Manager - 多段下载器</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/</id>
-    <published>2024-12-03T08:14:19.509Z</published>
-    <updated>2024-12-03T08:13:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/amir1376/ab-download-manager">https://github.com/amir1376/ab-download-manager</a></p><p>开源，Lin + Win,多语言,buff 已经满了。就不多介绍了<br>多段下载，会下载后合并，基本就是 IDM 的开源替代品。<br>目前未测试断点续传</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/amir1376/ab-download-manager&quot;&gt;https://github.com/amir1376/ab-download-manager&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;开源，Lin + Win,多语言,buf</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
     
   </entry>
   

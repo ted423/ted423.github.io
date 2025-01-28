@@ -5670,8 +5670,10 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <p>新建一个<code>AutoEndTasks</code>，值改为<code>1</code><br>注意新建的时候选<strong>字符串值</strong>，也就是类型那里是<code>REG_SZ</code></p>
 <p>找到<code>WaitToKillAppTimeout</code>(找不到就新建，类型应该是同上)<br>数值改小即可</p>
 <p><del>不过笔记本的这个值没改过，我想大概是有软件直接取消了阻止Windows 关机这个功能吧。</del></p>
-<p>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)  –<time>2018-02-26</time></p>
+<hr>
+<p><del>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)</del>  –<time>2018-02-26</time></p>
 <p>Windows Update 以后会偷偷再把值给取消掉 –<time>2019-07-03</time></p>
+<p>Win 11 只要<code>AutoEndTasks</code>就可以，重启后生效 -<time datetime="2025-01-22">2025-01-22</time></p>
 ]]></content>
       <categories>
         <category>Issue</category>
@@ -5681,6 +5683,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Windows 10</tag>
         <tag>Issue</tag>
         <tag>Regedit</tag>
+        <tag>Windows 11</tag>
       </tags>
   </entry>
   <entry>
@@ -26577,6 +26580,8 @@ Poppler - PDF函式库
     <url>/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/</url>
     <content><![CDATA[<p><a href="https://github.com/amir1376/ab-download-manager">https://github.com/amir1376/ab-download-manager</a></p>
 <p>开源，Lin + Win,多语言,buff 已经满了。就不多介绍了<br>多段下载，会下载后合并，基本就是 IDM 的开源替代品。<br>目前未测试断点续传</p>
+<hr>
+<p>加个提醒，部分服务器检测到过多的连接，可能会直接Ban你IP，除了thread设到5以外(并不保证一定有效)，没有太合适的建议，请自行斟酌</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -28091,7 +28096,7 @@ $(function () {
       <tags>
         <tag>Issue</tag>
         <tag>Github</tag>
-        <tag>git</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>

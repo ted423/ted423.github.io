@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Issue, Regedit, Windows, Windows 10" />
+    <meta name="keywords" content="Issue, Regedit, Windows, Windows 10, Windows 11" />
   
   <meta name="description" content="这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师) 个人处理方法 打开注册表管理器，找到 1HKEY_CURRENT_USER\Control Panel\Desktop\ 新建一个AutoEndTas">
 <meta property="og:type" content="article">
@@ -26,13 +26,14 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师) 个人处理方法 打开注册表管理器，找到 1HKEY_CURRENT_USER\Control Panel\Desktop\ 新建一个AutoEndTas">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-15T14:36:03.759Z">
-<meta property="article:modified_time" content="2019-07-02T16:07:00.000Z">
+<meta property="article:published_time" content="2018-02-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-01-22T00:31:00.000Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Windows 10">
 <meta property="article:tag" content="Issue">
 <meta property="article:tag" content="Regedit">
+<meta property="article:tag" content="Windows 11">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
@@ -152,7 +153,7 @@
                 <h1 class="kratos-page-title text-center" itemprop="name headline">[问题处理]此程序(应用)正在阻止windows关机(重新启动) 导致无法自动关机的处理办法</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2024-08-15T14:36:03.759Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-08-15</time></li>
+                <li><time datetime="2018-02-25T16:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2018-02-26</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -161,7 +162,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            415
+                            459
                         
                         字
                     </li>
@@ -187,8 +188,10 @@
 <p>新建一个<code>AutoEndTasks</code>，值改为<code>1</code><br>注意新建的时候选<strong>字符串值</strong>，也就是类型那里是<code>REG_SZ</code></p>
 <p>找到<code>WaitToKillAppTimeout</code>(找不到就新建，类型应该是同上)<br>数值改小即可</p>
 <p><del>不过笔记本的这个值没改过，我想大概是有软件直接取消了阻止Windows 关机这个功能吧。</del></p>
-<p>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)  –<time>2018-02-26</time></p>
+<hr>
+<p><del>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)</del>  –<time>2018-02-26</time></p>
 <p>Windows Update 以后会偷偷再把值给取消掉 –<time>2019-07-03</time></p>
+<p>Win 11 只要<code>AutoEndTasks</code>就可以，重启后生效 -<time datetime="2025-01-22">2025-01-22</time></p>
 </div>
         </div>
         
@@ -206,10 +209,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>
+                    <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>, <a class="tag-none-link" href="/tags/Windows-11/" rel="tag">Windows 11</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2019-07-02T16:07:00.000Z" itemprop="dateModified">最后编辑：2019-07-03</time>
+                    <time datetime="2025-01-22T00:31:00.000Z" itemprop="dateModified">最后编辑：2025-01-22</time>
                 </div>
             </div>
         </footer>
@@ -218,12 +221,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" [问题处理]Windows明明分配了共享权限却无法正常访问网络共享路径" href="/Issue/SMB/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" [Hcomic] (C92) [兔子老大 (じるす)] 女王の陵辱 ケルトの光と影 (Fate/Grand Order)" href="/Comic/R18/女王の陵辱 ケルトの光と影/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" Windows 11 奇怪的 Wifi 速度问题" href="/Issue/notebook wifi/">下一篇 <i class="fa fa-angle-right"></i></a>
+                <a title=" [COS]前羽_rr - 小林家的龙女仆" href="/Picture&Photo&Image/COS/前羽_rr‏/">下一篇 <i class="fa fa-angle-right"></i></a>
             </div>
             
         </nav>
@@ -280,7 +283,7 @@
                 标签
             </span>
             <span class="count">
-                151
+                150
             </span>
         </a>
     </div>
