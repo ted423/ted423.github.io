@@ -1709,7 +1709,8 @@
     <title>Hexo + Github搭建博客</title>
     <url>/Code/Hexo%20github/</url>
     <content><![CDATA[<p>Hexo可以作为一个Server使用(<code>hexo server</code>运行), <code>hexo-deployer-git</code>是官方开发的插件用于 Github 上搭建博客。</p>
-<h1 id="需要的环境"><a href="#需要的环境" class="headerlink" title="需要的环境"></a>需要的环境</h1><p>Hexo基于node.js,故需要先装nodejs以及npm。推荐装LTS的。<br>确保git版本是最新的</p>
+<h1 id="需要的环境"><a href="#需要的环境" class="headerlink" title="需要的环境"></a>需要的环境</h1><p>Hexo 基于 node.js ,故需要先装 nodejs(包含npm)。推荐装LTS的。</p>
+<p>部署到 Github，需要手动安装 git，并确保 git 版本是最新的。</p>
 <p>最好了解下<a href="https://docs.npmjs.com/cli/v8/commands/npm-init">nodejs项目</a></p>
 <p>请注意 hexo-deployer-git 第一次登陆时不能设置 Socks5代理(蛋疼的是中文 cmd 下显示乱码)，实际显示的是<code>ServicePointManager 不支持具有 socks5 方案的代理</code> —<time datetime="2023-07-18">2023-07-18</time></p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
@@ -28248,6 +28249,35 @@ $(function () {
       <tags>
         <tag>个人观点</tag>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>再见了，崩坏：星穹铁道(Honkai: Star Rail)</title>
+    <url>/Game/StarRail/</url>
+    <content><![CDATA[<p>今天完成了所有设备的星铁卸载，其实年前就想卸载了，只不过当时深怕过年没事做，甚至因为强迫症冲了月卡。本来想抖个机灵，说自己节省了大量的设备空间的，想了想，实际节省最多的还是时间。</p>
+<p>如果你有幸看到了这篇文章，那我前排提醒一句，网上米孝子很多，但实际这个游戏仍然是个网络游戏，网游有的问题他都有。</p>
+<p>很多人那真就是孝子，在那强行洗。不需要仔细理解孝子在说什么，因为那就是只洗地狗，你不需要理解狗叫有什么意思。</p>
+<h1 id="角色淘汰或者说数值膨胀问题"><a href="#角色淘汰或者说数值膨胀问题" class="headerlink" title="角色淘汰或者说数值膨胀问题"></a>角色淘汰或者说数值膨胀问题</h1><p>最早出的角色已经完全没法用了，你可以理解为计划报废。之前我看过知乎一个原神角色强度的知乎问题，有孝子甚至嘲讽氪了40w的都不够给人发工资。</p>
+<p>当时当个笑话看了，现在才有深入的感触。你会发现你的前期投入等于没投入。这点可能比其他网游还要过分。</p>
+<p>别看崩铁有什么队伍机制，角色那么多，老角色报废掉，能用的也就新出的人。</p>
+<p>早期我还担心新入坑的人会跟不上强度。后面发现，只要氪金，再把老角色报废掉，大家就都在同一起跑线了，根本不用想那么多。新人打不过，只会觉得是自己不努力，耐受力比老人更强。</p>
+<p>如果还无法理解的话，说个好理解点的，崩铁甚至是整个机制一起报废掉，比如虚无队。出到最后，虚无一个持续伤害的赛道，只有一个靠直伤暴击吃饭的黄泉还能用。</p>
+<p>以前看内鬼消息，什么角色体验服太强被削弱，到现在回头一看，全成了出不了场的小丑。</p>
+<p>引申问题是，数值膨胀破坏了游戏的机制和挑战的乐趣。以前还自己研究怎么配队，现在发现都没必要，官方会自己研究好告诉你该怎么花钱。</p>
+<h1 id="氪金问题"><a href="#氪金问题" class="headerlink" title="氪金问题"></a>氪金问题</h1><p>崩铁跟别的网游还不一样，别的不氪金还能体验下零氪的坚持。崩铁不氪金材料都不够，你只能体验自己像个傻子一样坚持。</p>
+<p>可以跟上面一个问题联系在一起看，只要老角色淘汰的够快，你就可以源源不断的榨取玩家。</p>
+<p>因为淘汰机制问题，无论你前面花了多少钱，基本等于没花，这计划报废其实比联想还狠（</p>
+<h1 id="剧情以及人设问题"><a href="#剧情以及人设问题" class="headerlink" title="剧情以及人设问题"></a>剧情以及人设问题</h1><p>崩铁是20天出一个新人，人物太多的话，人设就没那么细致。我在社区经常能看到别人喷剧情，其实我觉得现在都还好了。早期仙舟时期，白露和符玄直接某些剧情里变成了白痴。</p>
+<p>也不要想太多，其实这就是打工人赶工出来的东西，你只要大致知道发生了什么就好。人设这种细致的东西，只要工期够紧，活动过多，剧情过长，是肯定会出问题的。</p>
+<h1 id="Hoyolab"><a href="#Hoyolab" class="headerlink" title="Hoyolab"></a>Hoyolab</h1><p>因为游戏里不让签到，所以我们就跑别的 app&#x2F;网页签到。然后还弄个加载要半天还不能后台加载的浪费时间的小游戏。你要坚持每天浪费20分钟在这上面。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>当剧情和乐趣都被消减以后，这游戏就不剩什么了，你会发现每天上游戏半小时都成了煎熬，每周固定任务都不想做。想一下吧，200块的游戏你能玩几百小时，社交哪里不行呢（</p>
+]]></content>
+      <categories>
+        <category>Game</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>defect</tag>
       </tags>
   </entry>
 </search>
