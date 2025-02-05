@@ -8033,10 +8033,11 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <p><del>局域网内同步 <strong>自同步</strong></del><br><a href="http://www.zisync.com/">http://www.zisync.com/</a></p>
 <p>特点是不需要服务器，能自动同步不出错<br>缺点是对于大文件(大过20G的)，无法完成同步，并且已停止更新（2015年最后一次）</p>
 <h1 id="Resilio"><a href="#Resilio" class="headerlink" title="Resilio"></a>Resilio</h1><p><a href="https://www.resilio.com/individuals/">https://www.resilio.com/individuals/</a><br>之前之所以不提是因为这个软件会涉及到中间的服务器，如果是公司内部用其实是有一定隐患的，特别是一些对内部管控比较严的公司。后来发现是可以不选用中继服务器跟跟踪服务器，只要指定预定义主机就好。</p>
-<p>这个软件主要做局域网同步，本机的文件夹同步就没办法了，比方说同步移动硬盘上的文件夹之类的。另外就是会生成一个.sync的隐藏文件夹，用来存放删除的文件。<br>注意这个不能在服务器上使用，需要花钱</p>
-<h1 id="SyncTrayzor-Syncthing"><a href="#SyncTrayzor-Syncthing" class="headerlink" title="SyncTrayzor&#x2F;Syncthing"></a>SyncTrayzor&#x2F;Syncthing</h1><p><del>印象里不太好用，不过基本功能还是有的，待评测</del><br><del>比较推荐，毕竟开源</del><br><a href="https://github.com/canton7/SyncTrayzor">https://github.com/canton7/SyncTrayzor</a><br>这个是Windows GUI，MIT</p>
-<hr>
-<p>又不推荐了，因为这个 <a href="https://forum.syncthing.net/t/directory-deletion-on-remote-computer/15941/31">https://forum.syncthing.net/t/directory-deletion-on-remote-computer/15941/31</a>，使用到现在，小问题不断。<br>单纯做一个仅接收的同步逻辑都会出问题，那么说明这个软件同步完全不行。<br>我倾向于认为删除整个父文件夹，对 Syncthing 来说没有删除子文件的 Index导致的。毕竟源目录整个目录都没了。被同步的目录还在报目标路径还有文件就很奇怪</p>
+<p>这个软件主要做局域网同步，本机的文件夹同步就没办法了，比方说同步移动硬盘上的文件夹之类的。另外就是会生成一个.sync的隐藏文件夹，用来存放删除的文件。</p>
+<p>注意这个不能在服务器（Server系统）上使用，需要花钱</p>
+<h1 id="SyncTrayzor-Syncthing"><a href="#SyncTrayzor-Syncthing" class="headerlink" title="SyncTrayzor&#x2F;Syncthing"></a>SyncTrayzor&#x2F;Syncthing</h1><p><del>印象里不太好用，不过基本功能还是有的，待评测</del><br><del>比较推荐，毕竟开源</del><br><a href="https://github.com/canton7/SyncTrayzor">https://github.com/canton7/SyncTrayzor</a> Win 11 下会有问题，需要自行更新 synthing.exe 才行。</p>
+<p>只是个Windows GUI（集成了 synthing.exe），MIT</p>
+<h2 id="配置上的一个问题-https-forum-syncthing-net-t-marker-folder-convenience-improvement-15510-2025-02-05"><a href="#配置上的一个问题-https-forum-syncthing-net-t-marker-folder-convenience-improvement-15510-2025-02-05" class="headerlink" title="配置上的一个问题 https://forum.syncthing.net/t/marker-folder-convenience-improvement/15510 -2025-02-05"></a>配置上的一个问题 <a href="https://forum.syncthing.net/t/marker-folder-convenience-improvement/15510">https://forum.syncthing.net/t/marker-folder-convenience-improvement/15510</a> -2025-02-05</h2><p>又不推荐了，因为这个 <a href="https://forum.syncthing.net/t/directory-deletion-on-remote-computer/15941/31">https://forum.syncthing.net/t/directory-deletion-on-remote-computer/15941/31</a>，使用到现在，小问题不断。<br>单纯做一个仅接收的同步逻辑都会出问题，那么说明这个软件同步完全不行。<br>我倾向于认为删除整个父文件夹，对 Syncthing 来说没有删除子文件的 Index导致的。毕竟源目录整个目录都没了。被同步的目录还在报目标路径还有文件就很奇怪</p>
 <hr>
 <ul>
 <li><a href="https://syncthing.net/">https://syncthing.net/</a></li>
@@ -8044,7 +8045,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 </ul>
 <p>后者是核心进程，MPL-2.0<br><del>不过我也还没在Linux上用过</del></p>
 <hr>
-<p><time>2018-07-06</time>增加Resilio，自同步不再做推荐<br><time>2022-02-18</time>增加SyncTrayzor、Beyond Compare</p>
+<p><time>2018-07-06</time>增加Resilio，自同步不再做推荐<br><time>2022-02-18</time>增加SyncTrayzor、Beyond Compare<br><time datetime="2025-02-05">2025-02-05</time>完善了一些说明</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -28268,6 +28269,7 @@ $(function () {
 <p>可以跟上面一个问题联系在一起看，只要老角色淘汰的够快，你就可以源源不断的榨取玩家。</p>
 <p>因为淘汰机制问题，无论你前面花了多少钱，基本等于没花，这计划报废其实比联想还狠（</p>
 <h1 id="剧情以及人设问题"><a href="#剧情以及人设问题" class="headerlink" title="剧情以及人设问题"></a>剧情以及人设问题</h1><p>崩铁是20天出一个新人，人物太多的话，人设就没那么细致。我在社区经常能看到别人喷剧情，其实我觉得现在都还好了。早期仙舟时期，白露和符玄直接某些剧情里变成了白痴。</p>
+<p>大部分人设都是靠背景故事撑起来的，但实际剧情中，人物性格表现都会有些怪异。最经典的还是阮梅的那个剧情，经常能在社区看到讨厌阮梅。</p>
 <p>也不要想太多，其实这就是打工人赶工出来的东西，你只要大致知道发生了什么就好。人设这种细致的东西，只要工期够紧，活动过多，剧情过长，是肯定会出问题的。</p>
 <h1 id="Hoyolab"><a href="#Hoyolab" class="headerlink" title="Hoyolab"></a>Hoyolab</h1><p>因为游戏里不让签到，所以我们就跑别的 app&#x2F;网页签到。然后还弄个加载要半天还不能后台加载的浪费时间的小游戏。你要坚持每天浪费20分钟在这上面。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>当剧情和乐趣都被消减以后，这游戏就不剩什么了，你会发现每天上游戏半小时都成了煎熬，每周固定任务都不想做。想一下吧，200块的游戏你能玩几百小时，社交哪里不行呢（</p>
