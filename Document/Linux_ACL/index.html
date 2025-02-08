@@ -26,8 +26,8 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。 Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。 之前比较年轻，以为只是主组和副组，但实际操作中会被新建文件的 gid 和 umask 干的手忙脚乱。其实还是操作姿势不对，因为这块主要还是靠 ACL。不过 Linux 比较奇葩了，见此">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-12-27T07:50:19.527Z">
-<meta property="article:modified_time" content="2024-12-27T09:17:57.403Z">
+<meta property="article:published_time" content="2025-01-10T06:46:24.174Z">
+<meta property="article:modified_time" content="2025-02-08T02:10:02.271Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Document">
@@ -150,7 +150,7 @@
                 <h1 class="kratos-page-title text-center" itemprop="name headline">不用 ACL, Linux 的权限管理是一坨</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2024-12-27T07:50:19.527Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-12-27</time></li>
+                <li><time datetime="2025-01-10T06:46:24.174Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-01-10</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -159,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            913
+                            1205
                         
                         字
                     </li>
@@ -178,19 +178,21 @@
             
             
                 <div class="kratos-post-inner-toc toc-div-class" >
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#POSIX-ACLs"><span class="toc-number">1.</span> <span class="toc-text">POSIX ACLs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NFSv4-ACL"><span class="toc-number">2.</span> <span class="toc-text">NFSv4 ACL</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-number">1.</span> <span class="toc-text">文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Default"><span class="toc-number">2.</span> <span class="toc-text">Default</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#POSIX-ACLs"><span class="toc-number">3.</span> <span class="toc-text">POSIX ACLs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NFSv4-ACL"><span class="toc-number">4.</span> <span class="toc-text">NFSv4 ACL</span></a></li></ol>
                 </div>
             
             <hr />
             <div itemprop="articleBody"><p>集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。</p>
 <p>Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。</p>
 <p>之前比较年轻，以为只是主组和副组，但实际操作中会被新建文件的 gid 和 umask 干的手忙脚乱。其实还是操作姿势不对，因为这块主要还是靠 ACL。不过 Linux 比较奇葩了，<a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/536300/why-is-nfsv4-not-translating-posix-acls-in-a-usable-way">见此</a>,愣是一个系统干出来左右手互博的感觉</p>
-<p>ACL 目前有两组控制，一个是本地控制(POSIX ACLs)，一个是挂载 NFS 的控制(NFSv4 ACLs)。两组配置互不干涉</p>
+<p>不过感觉目前这块的文档都不太靠谱，感觉很多写文档的人其实自己也没完全摸透。</p>
+<p>ACL 目前有两组控制，一个是本地控制(POSIX ACLs)，一个是挂载 NFS 的控制(NFSv4 ACLs)。两组配置会自动转换</p>
 <p>ACL 配置独立于 Linux 的 mode 权限(chmod -&gt; change mode)。可以对文件夹进行精细的权限控制。</p>
-<p>文档<br><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/">https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/</a></p>
-<h1 id="POSIX-ACLs"><a href="#POSIX-ACLs" class="headerlink" title="POSIX ACLs"></a>POSIX ACLs</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setfacl -m group:groupname:r-x path</span><br></pre></td></tr></table></figure>
+<h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/">https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/</a></p>
+<h1 id="Default"><a href="#Default" class="headerlink" title="Default"></a>Default</h1><p>Default Policy 是继承 ACE(Access Control Entry),只能作用于目录。 会在设置任意 Default Policy 之后出现默认的user、group、other、mask条目，可以用<code>setfacl -k</code>全部清除。但 nfs4 无此命令，你只能到存储上操作。</p>
+<p>通常你设置 ACL 只能对已有的条目生效，如果要新文件也生效，就要设 Default Policy</p>
+<h1 id="POSIX-ACLs"><a href="#POSIX-ACLs" class="headerlink" title="POSIX ACLs"></a>POSIX ACLs</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setfacl -R -m group:groupname:r-x path</span><br><span class="line">setfacl -m default:group:groupname:r-x path</span><br></pre></td></tr></table></figure>
 <p>其中 groupname 是可以更改的组名</p>
-<p>本地默认应该是开启继承的</p>
 <p>文档</p>
 <p><a target="_blank" rel="noopener" href="https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html">https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html</a></p>
 <h1 id="NFSv4-ACL"><a href="#NFSv4-ACL" class="headerlink" title="NFSv4 ACL"></a>NFSv4 ACL</h1><p>NFSv4 ACL 配置时只支持组id，该命令直接提交到 nfs server,故只要在一台上面跑就好</p>
@@ -198,8 +200,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getent group groupname</span><br></pre></td></tr></table></figure>
 <p>获取组id</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nfs4_setfacl -a A:fdg:1000:RWX path</span><br></pre></td></tr></table></figure>
-<p><code>fdg</code>代表设置组id，大写<code>RWX</code>会自动对应到 mode 的<code>rwx</code>，避免 NFSv4 ACL 和 mode 的兼容问题。(但不清楚具体情况)。<code>-R</code>代表递归</p>
-<p>NFSv4 ACL 设置时不会自动对子目录开启继承，继承应该仅对目录中新创建文件生效。</p>
+<p><code>g</code>(group)代表设置组id，大写<code>RWX</code>会自动对应到 mode 的<code>rwx</code>，避免 NFSv4 ACL 和 mode 的兼容问题。(但不清楚具体情况)。<code>-R</code>代表递归</p>
+<p><code>fd</code>应该是表示只允许条目访问，<code>fdg</code>设置后默认会配置禁止 linux mode 权限的使用。通常不要使用</p>
 <p>配置完后可以通过验证是否成功</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nfs4_getfacl path</span><br></pre></td></tr></table></figure>
 <p>文档</p>
@@ -224,7 +226,7 @@
                     <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-12-27T09:17:57.403Z" itemprop="dateModified">最后编辑：2024-12-27</time>
+                    <time datetime="2025-02-08T02:10:02.271Z" itemprop="dateModified">最后编辑：2025-02-08</time>
                 </div>
             </div>
         </footer>
@@ -233,12 +235,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" VSCode" href="/Software/Document&Texteditor/VSCode/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" [文档]Group Policy(组策略)查询" href="/Document/Group Policy/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" Notion" href="/Software/Notion/">下一篇 <i class="fa fa-angle-right"></i></a>
+                <a title=" What&#39;s the difference between an image, photo, and a picture 的区别" href="/Document/Picture/">下一篇 <i class="fa fa-angle-right"></i></a>
             </div>
             
         </nav>
@@ -271,7 +273,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#POSIX-ACLs"><span class="toc-number">1.</span> <span class="toc-text">POSIX ACLs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NFSv4-ACL"><span class="toc-number">2.</span> <span class="toc-text">NFSv4 ACL</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-number">1.</span> <span class="toc-text">文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Default"><span class="toc-number">2.</span> <span class="toc-text">Default</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#POSIX-ACLs"><span class="toc-number">3.</span> <span class="toc-text">POSIX ACLs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NFSv4-ACL"><span class="toc-number">4.</span> <span class="toc-text">NFSv4 ACL</span></a></li></ol>
     </div>
 </aside>
                 
@@ -316,7 +318,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">101</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">22</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">49</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">102</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">2</span></li></ul>
   </aside>
 
 
