@@ -5608,6 +5608,8 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866">https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866</a></p>
 <p><a href="https://pastebin.com/EAABLssA">https://pastebin.com/EAABLssA</a> by <a href="https://www.reddit.com/user/aveyo/">aveyo</a> </p>
 <p>我用 steam 那个连接弄了，btw,整数值</p>
+<hr>
+<p>接入手柄时ms-gamebar还会显示</p>
 ]]></content>
       <categories>
         <category>Issue</category>
@@ -9279,9 +9281,14 @@ font-size: 0.78em;
       </tags>
   </entry>
   <entry>
-    <title>[推荐]Directory Opus - 多标签资源浏览器</title>
+    <title>[不再推荐]Directory Opus - 多标签资源浏览器</title>
     <url>/Software/Directory%20Opus/</url>
-    <content><![CDATA[<p><a href="https://www.gpsoft.com.au/index.html">https://www.gpsoft.com.au/index.html</a><br>不得不说，资源浏览器这块，Linux走在Win的前面。</p>
+    <content><![CDATA[<p>不再推荐的原因 -<time datetime>2025-02-10</timw></p>
+<ol>
+<li>Win 11 支持了多标签。</li>
+<li>DO 的购买是单版本的，DO更细了大版本，我这人又喜欢追新，不如不用。</li>
+</ol>
+<p><a href="https://www.gpsoft.com.au/index.html">https://www.gpsoft.com.au/index.html</a><br>不得不说，资源浏览器这块，Linux走在Win的前面。</p>
 <p>我基本试了所有多标签资源浏览器， 并没能找到一个完美的资源浏览器。<br><del>（有个ExTab还没试，类似Clover，我当时买DO时他刚刚出生，不过免费软件嘛……不开源的情况下等作者累了就没人维护了，特别时只有QQ群和公众号的情况下,Issue都不好管，不过我可以给别的电脑装装玩玩）</del><br>DO算是里面让我感觉最好的了。</p>
 <p>所以我最终入了正</p>
 <p>别的软件的问题有</p>
@@ -9307,6 +9314,7 @@ font-size: 0.78em;
       </categories>
       <tags>
         <tag>Windows</tag>
+        <tag>不再推荐</tag>
         <tag>正版</tag>
       </tags>
   </entry>
@@ -10070,13 +10078,22 @@ font-size: 0.78em;
 <p>winget 下的升级文件都在 %Temp% 里，一些软件升级时需要关闭其他软件可能会导致升级失败，可以手动运行安装包升级</p>
 <p><a href="https://winstall.app/apps">https://winstall.app/apps</a></p>
 <p>这里可以自己选软件然后生成批量安装的代码</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>可以安装 ffmpeg 这些，安装到全局会需要管理员权限，然后会自动添加环境变量，但更新遇到过问题，卸载也只能手动删。</li>
+<li>会列出系统无法安装的软件，例如 LTSC 系统出现需要微软商店的 unigram，Server 2019 出现 Microsoft Terminal<code>由于程序包 Microsoft.WindowsTerminal_1.22.10352.0_x64__8wekyb3d8bbwe 与设备不兼容，Windows 无法安装该程序包。该程序包要求 Windows.Mobile 设备系列运行操作系统版本 10、0、19041、0 或更高版本。该设备当前运行的操作系统版本为 10、0、17763、6775。</code></li>
+</ul>
 <h2 id="UniGetUI"><a href="#UniGetUI" class="headerlink" title="UniGetUI"></a>UniGetUI</h2><p>开源 LGPLv2.1</p>
-<p>原名 WingetUI， 其实不依赖系统的 winget,他自己又带了一个，系统的是appx，然后配置放在软件的同目录下，而 WingetUI 的 winget 的配置是放在 <code>C:\Users\XX\AppData\Local\Microsoft\WinGet</code> — <time datetime="2023-07-18">2023-07-18</time></p>
+<p>原名 WingetUI</p>
+<p>其实不依赖系统的 winget,他自己又带了一个</p>
+<p>微软的有带数字签名 -<time datetime="2025-02-10">2025-02-10</time></p>
+<p>系统的是appx，然后配置放在软件的同目录下</p>
+<p><del>而 WingetUI 的 winget 的配置是放在 <code>C:\Users\XX\AppData\Local\Microsoft\WinGet</code> -<time datetime="2023-07-18">2023-07-18</time></del></p>
+<p>最新的放在软件目录下 -<time datetime="2025-02-10">2025-02-10</time></p>
 <h2 id="https-www-marticliment-com-unigetui-https-github-com-marticliment-UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。"><a href="#https-www-marticliment-com-unigetui-https-github-com-marticliment-UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。" class="headerlink" title="https://www.marticliment.com/unigetui/https://github.com/marticliment/UniGetUI第三方UI，目前没弄懂为啥他获取的会比命令行的要新不过有忽略模式就行。"></a><a href="https://www.marticliment.com/unigetui/">https://www.marticliment.com/unigetui/</a><br><a href="https://github.com/marticliment/UniGetUI">https://github.com/marticliment/UniGetUI</a><br><del>第三方UI，目前没弄懂为啥他获取的会比命令行的要新</del><br>不过有忽略模式就行。</h2><p><del>首先，下面两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。</del><br><del>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</del></p>
 <h2 id="你懂的"><a href="#你懂的" class="headerlink" title="你懂的"></a>你懂的</h2><p>需要管理员运行 cmd，powershell 不行</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;C:\Program Files\UniGetUI\winget-cli_x64\winget.exe&quot; settings set DefaultProxy socks://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
 
-<h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p>公司停运了，挺可惜的，由于软件依赖 Server，现在也没法用了。 –2024-11-06<br><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p>
+<h1 id="Sumo"><a href="#Sumo" class="headerlink" title="Sumo"></a>Sumo</h1><p>公司停运了，挺可惜的，由于软件依赖 Server，现在也没法用了。 -<time>2024-11-06</time><br><a href="http://www.kcsoftwares.com/?home">http://www.kcsoftwares.com/?home</a><br>夸一夸Sumo，真的很强大，他的软件检测是基于快捷方式，也就是便携版也支持检测。这点已经比360等的强了。<br>不过不给钱他只是一个检测器而已，甚至连从开发者网站获取更新都不让你用。</p>
 <p>这个软件商还有个产品Dumo是升驱动的，不过Win已经大包大揽，再不济还有各类厂商的自用检测。(有点Out of topic)</p>
 <h1 id="Chocolatey"><a href="#Chocolatey" class="headerlink" title="Chocolatey"></a>Chocolatey</h1><p>目前不太推荐<br>Chocolatey 虽然是开源的，但其实际还是一款面向企业的商业产品，并且国内体验不好。Apache License 2.0<br>像什么微信QQ企业微信，里面是没有的。<br>免费产品限制了功能，并且只能装到C盘。之前还有安装失败也会计入软件列表的问题</p>
 <p>因此这个产品的主要定位是一定程度上处理软件升级的问题。主要处理软件自带升级智障的问题，例如WinSCP(之前有用scoop，这个自己本身也智障，配置放便携版里，结果一更新配置没了)</p>

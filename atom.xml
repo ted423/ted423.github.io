@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-02-05T15:27:35.000Z</updated>
+  <updated>2025-02-08T12:51:41.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]ms-gamingoverlay 报错</title>
+    <link href="http://ted423.github.io/Issue/rmXboxGameBar/"/>
+    <id>http://ted423.github.io/Issue/rmXboxGameBar/</id>
+    <published>2025-02-09T06:40:21.141Z</published>
+    <updated>2025-02-08T12:51:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。</p><p>单纯的设置里关闭 Game Bar 不起效果</p><p>(之前的代码删了，因为处理不完全)</p><p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866">https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866</a></p><p><a href="https://pastebin.com/EAABLssA">https://pastebin.com/EAABLssA</a> by <a href="https://www.reddit.com/user/aveyo/">aveyo</a> </p><p>我用 steam 那个连接弄了，btw,整数值</p><hr><p>接入手柄时ms-gamebar还会显示</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。&lt;/p&gt;
+&lt;p&gt;单纯的设置里关闭 Game Bar 不起效果&lt;/p&gt;
+&lt;p&gt;(之前的代码删了，因为处理不完全)&lt;/p&gt;
+&lt;p&gt;&lt;a href</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows 11" scheme="http://ted423.github.io/tags/Windows-11/"/>
+    
+  </entry>
   
   <entry>
     <title>FastStone Capture Full Serial Key</title>
@@ -103,37 +134,6 @@
     <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
     
     <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]ms-gamingoverlay 报错</title>
-    <link href="http://ted423.github.io/Issue/rmXboxGameBar/"/>
-    <id>http://ted423.github.io/Issue/rmXboxGameBar/</id>
-    <published>2025-01-14T00:38:05.282Z</published>
-    <updated>2025-01-13T12:06:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。</p><p>单纯的设置里关闭 Game Bar 不起效果</p><p>(之前的代码删了，因为处理不完全)</p><p><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866">https://steamcommunity.com/sharedfiles/filedetails/?id=3093555866</a></p><p><a href="https://pastebin.com/EAABLssA">https://pastebin.com/EAABLssA</a> by <a href="https://www.reddit.com/user/aveyo/">aveyo</a> </p><p>我用 steam 那个连接弄了，btw,整数值</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;LTSC 系统开游戏时候会有报错，确认了下，Xbox Game Bar相关，我不太需要这个功能，也不想装 Windows Store。&lt;/p&gt;
-&lt;p&gt;单纯的设置里关闭 Game Bar 不起效果&lt;/p&gt;
-&lt;p&gt;(之前的代码删了，因为处理不完全)&lt;/p&gt;
-&lt;p&gt;&lt;a href</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows 11" scheme="http://ted423.github.io/tags/Windows-11/"/>
     
   </entry>
   
