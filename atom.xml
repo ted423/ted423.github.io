@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-02-08T12:51:41.000Z</updated>
+  <updated>2025-02-10T14:41:51.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>讨鬼传：极物品修改笔记</title>
+    <link href="http://ted423.github.io/Game/%E8%AE%A8%E9%AC%BC%E4%BC%A0%E6%9E%81/"/>
+    <id>http://ted423.github.io/Game/%E8%AE%A8%E9%AC%BC%E4%BC%A0%E6%9E%81/</id>
+    <published>2025-02-10T14:42:51.754Z</published>
+    <updated>2025-02-10T14:41:51.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://bbs.3dmgame.com/thread-4858853-1-1.html">https://bbs.3dmgame.com/thread-4858853-1-1.html</a></p><p>修改器不支持繁中，不过存档日&#x2F;英里面都能读，除了名字会乱码以外没什么问题。英文版似乎没有修改成功，后面是日文版改出的。</p><p>不过修改器 Win 11 下过一会会自己退出</p><p>DLC 武器防具没法使用，估计要找个 Win 10 电脑试试。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://bbs.3dmgame.com/thread-4858853-1-1.html&quot;&gt;https://bbs.3dmgame.com/thread-4858853-1-1.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;修改器不支持繁中，不过存档日&amp;#x2F;</summary>
+      
+    
+    
+    
+    <category term="Game" scheme="http://ted423.github.io/categories/Game/"/>
+    
+    
+    <category term="Game" scheme="http://ted423.github.io/tags/Game/"/>
+    
+    <category term="KOEI" scheme="http://ted423.github.io/tags/KOEI/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]ms-gamingoverlay 报错</title>
@@ -549,43 +576,6 @@
     <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
     
     <category term="System" scheme="http://ted423.github.io/tags/System/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]localsend - 跨端文件传输工具</title>
-    <link href="http://ted423.github.io/Software/localsend/"/>
-    <id>http://ted423.github.io/Software/localsend/</id>
-    <published>2025-01-10T06:47:07.596Z</published>
-    <updated>2024-12-02T01:44:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/localsend/localsend">https://github.com/localsend/localsend</a></p><p>缺点就是要在同一个wifi&#x2F;网段下面，不过能通过发送连接来解决这个问题，不过这个还需要一个聊天软件或者剪贴板同步工具之类的来处理</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/localsend/localsend&quot;&gt;https://github.com/localsend/localsend&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;缺点就是要在同一个wifi&amp;#x2F;网段下面，不过能通过发送连接来解决这个</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Android" scheme="http://ted423.github.io/tags/Android/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
-    
-    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
-    
-    <category term="iOS" scheme="http://ted423.github.io/tags/iOS/"/>
     
   </entry>
   

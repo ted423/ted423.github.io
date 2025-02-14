@@ -18674,7 +18674,8 @@ document.writeln("当前浏览器页面编码："+document.characterSet+"<br>");
   <entry>
     <title>[优化]通过组策略使系统不会自动生成Thumbs.db</title>
     <url>/Issue/Group%20Policy/Thumbs/</url>
-    <content><![CDATA[<p><del>Windows 10默认应该不会有Thumbs.db了</del><br><img src="https://i.imgur.com/evjPGGc.png"></p>
+    <content><![CDATA[<p><del>Windows 10默认应该不会有Thumbs.db了</del></p>
+<p>用户配置 Windows组件 文件资源管理器 里，主要避免图片被墙看不到-<time datetime="2025-02-14">2025-02-14</time><br><img src="https://i.imgur.com/evjPGGc.png"></p>
 ]]></content>
       <categories>
         <category>Optimization</category>
@@ -28302,6 +28303,22 @@ $(function () {
         <tag>初音ミク(Hatsune Miku)</tag>
         <tag>歌词(LRC)</tag>
         <tag>多行(Autolyric)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>讨鬼传：极物品修改笔记</title>
+    <url>/Game/%E8%AE%A8%E9%AC%BC%E4%BC%A0%E6%9E%81/</url>
+    <content><![CDATA[<p><a href="https://bbs.3dmgame.com/thread-4858853-1-1.html">https://bbs.3dmgame.com/thread-4858853-1-1.html</a></p>
+<p>修改器不支持繁中，不过存档日&#x2F;英里面都能读，除了名字会乱码以外没什么问题。英文版似乎没有修改成功，后面是日文版改出的。</p>
+<p>不过修改器 Win 11 下过一会会自己退出</p>
+<p>DLC 武器防具没法使用，估计要找个 Win 10 电脑试试。</p>
+]]></content>
+      <categories>
+        <category>Game</category>
+      </categories>
+      <tags>
+        <tag>Game</tag>
+        <tag>KOEI</tag>
       </tags>
   </entry>
 </search>
