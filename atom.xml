@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-03-06T01:08:16.986Z</updated>
+  <updated>2025-03-07T01:52:58.214Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DHCP备份恢复</title>
+    <link href="http://ted423.github.io/Document/Acrive%20Directry/DHCP-Backup/"/>
+    <id>http://ted423.github.io/Document/Acrive%20Directry/DHCP-Backup/</id>
+    <published>2025-03-07T01:48:44.417Z</published>
+    <updated>2025-03-07T01:52:58.214Z</updated>
+    
+    <content type="html"><![CDATA[<p>备份其实挺好备份的，不过直接操作都是恢复失败。</p><p>正常第一次点击备份时会显示一个文件夹，那个是 Windows 的默认的备份位置，并且应该是自动备份。</p><p>恢复其实需要暂停数据库(也就是DHCP服务)，并且需要删除原有的 Windows 生成的备份文件。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;备份其实挺好备份的，不过直接操作都是恢复失败。&lt;/p&gt;
+&lt;p&gt;正常第一次点击备份时会显示一个文件夹，那个是 Windows 的默认的备份位置，并且应该是自动备份。&lt;/p&gt;
+&lt;p&gt;恢复其实需要暂停数据库(也就是DHCP服务)，并且需要删除原有的 Windows 生成的备份文件</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="AD(Active Directory)" scheme="http://ted423.github.io/tags/AD-Active-Directory/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 11 右键相关</title>
@@ -539,35 +571,6 @@
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
-    
-    <category term="System" scheme="http://ted423.github.io/tags/System/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows LTSC 各种版本</title>
-    <link href="http://ted423.github.io/System/WinLTSC/"/>
-    <id>http://ted423.github.io/System/WinLTSC/</id>
-    <published>2025-01-10T06:47:09.485Z</published>
-    <updated>2024-12-23T03:06:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://massgrave.dev/windows_ltsc_links">https://massgrave.dev/windows_ltsc_links</a></p><ul><li>是否 IoT 可以通过密钥转换</li><li>LTSC 缺少 UWP</li><li>LTSC 是否 IoT 的区别连接里面有</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://massgrave.dev/windows_ltsc_links&quot;&gt;https://massgrave.dev/windows_ltsc_links&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;是否 IoT 可以通过密钥转换&lt;/li&gt;
-&lt;li&gt;LTS</summary>
-      
-    
-    
-    
-    <category term="System" scheme="http://ted423.github.io/categories/System/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="System" scheme="http://ted423.github.io/tags/System/"/>
     
