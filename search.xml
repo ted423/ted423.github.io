@@ -9902,18 +9902,16 @@ font-size: 0.78em;
   <entry>
     <title>[转载]WINDBG分析DMP方法（2012.8.19修改）</title>
     <url>/Software/Windbg/</url>
-    <content><![CDATA[<p>Windbg下载地址:<a href="http://www.windbg.org/">http://www.windbg.org/</a><br>然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。<br>像别的什么软件可能也会要不同的组件？<br>另外这憨逼SDK不同版本还能同时装<br>原文:<a href="http://bbs.icafe8.com/thread-400104-1-1.html">http://bbs.icafe8.com/thread-400104-1-1.html</a></p>
+    <content><![CDATA[<p>Windbg下载地址: <a href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-tools">https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-tools</a><br>然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。<br>像别的什么软件可能也会要不同的组件？<br>另外这憨逼SDK不同版本还能同时装<br>原文:<a href="http://bbs.icafe8.com/thread-400104-1-1.html">http://bbs.icafe8.com/thread-400104-1-1.html</a></p>
 <ol>
-<li><p>点击File里的”Symbol File Path”</p>
-</li>
-<li><p>然后把<code>SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols</code><br> 复制进去。(<a href="http://msdl.microsoft.com/download/symbols">http://msdl.microsoft.com/download/symbols</a> 为微软符号表服务器地址)</p>
-</li>
-<li><p>点OK,然后保存工作空间并关闭windbg，下次需要看DUMP的时候，打开windbg.exe，直接可以把抓来的DMP文件拖到打开的界面里面就可以分析了。</p>
-</li>
-<li><p>自动分析命令 !analyze -v</p>
-</li>
+<li>点击File里的”Symbol File Path”</li>
+<li>然后把<code>SRV*d:\.symbols*  http://msdl.microsoft.com/download/symbols</code>(路径可以自己改，我加了个<code>.</code>,这样默认隐藏，应该也可以自己手动下载放置，没仔细研究)<br> 复制进去。(<a href="http://msdl.microsoft.com/download/symbols">http://msdl.microsoft.com/download/symbols</a> 为微软符号表服务器地址)</li>
+<li>点OK,然后保存工作空间并关闭windbg，下次需要看DUMP的时候，打开windbg.exe，直接可以把抓来的DMP文件拖到打开的界面里面就可以分析了。</li>
+<li>自动分析命令<code>!analyze -v</code></li>
 </ol>
 <p>就个人来讲，能力有限，我所能理解的就到这里了，剩下的建议看原文</p>
+<hr>
+<p>windbg.org 不是微软官方地址，所以改到微软官方的，不过应该也是热心人士建的，上面的连接没有什么问题。-<time datetime="2025-03-11">2025-03-11</time></p>
 ]]></content>
       <categories>
         <category>Software</category>

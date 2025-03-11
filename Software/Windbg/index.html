@@ -19,15 +19,15 @@
   
     <meta name="keywords" content="Software, Windows, 转载" />
   
-  <meta name="description" content="Windbg下载地址:http:&#x2F;&#x2F;www.windbg.org&#x2F;然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。像别的什么软件可能也会要不同的组件？另外这憨逼SDK不同版本还能同时装原文:http:&#x2F;&#x2F;bbs.icafe8.com&#x2F;thread-400104-1-1.html  点击File里的”Symbol File Path”  然后把SRV*d">
+  <meta name="description" content="Windbg下载地址: https:&#x2F;&#x2F;learn.microsoft.com&#x2F;zh-cn&#x2F;windows-hardware&#x2F;drivers&#x2F;debugger&#x2F;debugger-download-tools然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。像别的什么软件可能也会要不同的组件？另外这憨逼SDK不同版本还能同时装原文:http:&#x2F;&#x2F;bbs.i">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[转载]WINDBG分析DMP方法（2012.8.19修改）">
 <meta property="og:url" content="http://ted423.github.io/Software/Windbg/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="Windbg下载地址:http:&#x2F;&#x2F;www.windbg.org&#x2F;然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。像别的什么软件可能也会要不同的组件？另外这憨逼SDK不同版本还能同时装原文:http:&#x2F;&#x2F;bbs.icafe8.com&#x2F;thread-400104-1-1.html  点击File里的”Symbol File Path”  然后把SRV*d">
+<meta property="og:description" content="Windbg下载地址: https:&#x2F;&#x2F;learn.microsoft.com&#x2F;zh-cn&#x2F;windows-hardware&#x2F;drivers&#x2F;debugger&#x2F;debugger-download-tools然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。像别的什么软件可能也会要不同的组件？另外这憨逼SDK不同版本还能同时装原文:http:&#x2F;&#x2F;bbs.i">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-10T06:47:07.055Z">
-<meta property="article:modified_time" content="2013-12-31T16:00:00.000Z">
+<meta property="article:published_time" content="2013-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-03-11T02:40:06.084Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="转载">
@@ -151,7 +151,7 @@
                 <h1 class="kratos-page-title text-center" itemprop="name headline">[转载]WINDBG分析DMP方法（2012.8.19修改）</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2025-01-10T06:47:07.055Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-01-10</time></li>
+                <li><time datetime="2013-12-31T16:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2014-01-01</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -160,7 +160,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            450
+                            626
                         
                         字
                     </li>
@@ -179,18 +179,16 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>Windbg下载地址:<a target="_blank" rel="noopener" href="http://www.windbg.org/">http://www.windbg.org/</a><br>然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。<br>像别的什么软件可能也会要不同的组件？<br>另外这憨逼SDK不同版本还能同时装<br>原文:<a target="_blank" rel="noopener" href="http://bbs.icafe8.com/thread-400104-1-1.html">http://bbs.icafe8.com/thread-400104-1-1.html</a></p>
+            <div itemprop="articleBody"><p>Windbg下载地址: <a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-tools">https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/debugger-download-tools</a><br>然后跑去下iso，不然就是一个网络下载器，还贼慢，注意只要装Debugging tool就好。<br>像别的什么软件可能也会要不同的组件？<br>另外这憨逼SDK不同版本还能同时装<br>原文:<a target="_blank" rel="noopener" href="http://bbs.icafe8.com/thread-400104-1-1.html">http://bbs.icafe8.com/thread-400104-1-1.html</a></p>
 <ol>
-<li><p>点击File里的”Symbol File Path”</p>
-</li>
-<li><p>然后把<code>SRV*d:\symbols*  http://msdl.microsoft.com/download/symbols</code><br> 复制进去。(<a target="_blank" rel="noopener" href="http://msdl.microsoft.com/download/symbols">http://msdl.microsoft.com/download/symbols</a> 为微软符号表服务器地址)</p>
-</li>
-<li><p>点OK,然后保存工作空间并关闭windbg，下次需要看DUMP的时候，打开windbg.exe，直接可以把抓来的DMP文件拖到打开的界面里面就可以分析了。</p>
-</li>
-<li><p>自动分析命令 !analyze -v</p>
-</li>
+<li>点击File里的”Symbol File Path”</li>
+<li>然后把<code>SRV*d:\.symbols*  http://msdl.microsoft.com/download/symbols</code>(路径可以自己改，我加了个<code>.</code>,这样默认隐藏，应该也可以自己手动下载放置，没仔细研究)<br> 复制进去。(<a target="_blank" rel="noopener" href="http://msdl.microsoft.com/download/symbols">http://msdl.microsoft.com/download/symbols</a> 为微软符号表服务器地址)</li>
+<li>点OK,然后保存工作空间并关闭windbg，下次需要看DUMP的时候，打开windbg.exe，直接可以把抓来的DMP文件拖到打开的界面里面就可以分析了。</li>
+<li>自动分析命令<code>!analyze -v</code></li>
 </ol>
 <p>就个人来讲，能力有限，我所能理解的就到这里了，剩下的建议看原文</p>
+<hr>
+<p>windbg.org 不是微软官方地址，所以改到微软官方的，不过应该也是热心人士建的，上面的连接没有什么问题。-<time datetime="2025-03-11">2025-03-11</time></p>
 </div>
         </div>
         
@@ -211,7 +209,7 @@
                     <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2013-12-31T16:00:00.000Z" itemprop="dateModified">最后编辑：2014-01-01</time>
+                    <time datetime="2025-03-11T02:40:06.084Z" itemprop="dateModified">最后编辑：2025-03-11</time>
                 </div>
             </div>
         </footer>
@@ -220,12 +218,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" PasteLink - Win下便捷创建硬链接软连接" href="/Software/PasteLink/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" [JP] [C] The Money of Soul and Possibility Cont(シー)" href="/Anime/JP/C/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" Windows 的 X11 问题" href="/Software/X11/">下一篇 <i class="fa fa-angle-right"></i></a>
+                <a title=" [Comic]现在就想告诉哥哥！我是妹妹/いますぐお兄ちゃんに妹だっていいたい!(Ima Sugu Oniichan ni Imōto da tte Iitai!)[天轻汉化组]" href="/Comic/现在就想告诉哥哥！我是妹妹/">下一篇 <i class="fa fa-angle-right"></i></a>
             </div>
             
         </nav>
