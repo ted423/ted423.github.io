@@ -454,17 +454,21 @@
   <entry>
     <title>个人浏览器选择对比</title>
     <url>/Browser/Browser/</url>
-    <content><![CDATA[<p>Chromium其实已经一统江湖<br>最终还是跑回去用Chrome了</p>
+    <content><![CDATA[<p>Chromium 其实已经一统江湖</p>
+<p>目前在用 Vivaldi，虽然毛病很多，但是工作区真不错。</p>
 <h1 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h1><p>我对FF基本看法就是 哀其不幸，怒其不争</p>
 <p>在有这玩意的前提下 <a href="/Browser/no%20allow%20paste">no allow paste</a> 去学Chrome的界面，然后学了一手隐藏”http:&#x2F;&#x2F;“的负优化</p>
-<p>最早的扩展以及脚本开发都在不断叛逃，然后GM更是自己做了一波死。估计没人理解GM那波作死到底是为了什么。</p>
-<p>我始终坚持，软件作为工具，那么最终目的是为了节省别人的时间，而不是浪费别人的时间。<br>PTPP推送因为某些原因没法用，所以放弃了，Chrome永远的神</p>
+<p>最早的扩展以及脚本开发都在不断叛逃，然后 GM 更是自己做了一波死。估计没人理解 GM 那波作死到底是为了什么。</p>
+<p>我始终坚持，软件作为工具，那么最终目的是为了节省别人的时间，而不是浪费别人的时间。</p>
+<p>PTPP推送因为某些原因没法用，所以放弃了。</p>
 <h1 id="Chromium"><a href="#Chromium" class="headerlink" title="Chromium"></a>Chromium</h1><h2 id="360极速"><a href="#360极速" class="headerlink" title="360极速"></a>360极速</h2><p>目前在用，个人感觉有点烂，放久了会自己崩掉。但起码内核跟的比较紧，基本的一些需求功能都还有。<br>傻逼地方-&gt;下载速度单位M&#x2F;S<br>大B小b不分，可想而知程序员水平有多烂</p>
 <h2 id="Edge"><a href="#Edge" class="headerlink" title="Edge"></a>Edge</h2><p>Edge 主要的问题在收藏移动的操作让人蛋疼(微软自己一直在作死)</p>
 <h2 id="Cent"><a href="#Cent" class="headerlink" title="Cent"></a>Cent</h2><p>各版本下载<a href="http://static.centbrowser.com/">http://static.centbrowser.com/</a></p>
-<p>挺喜欢的，但是一个没有收入的闭源软件，能想到后续会如何发展。况且浏览器这块还属于国内软件厂商的兵家必争之地。可惜了<br>遇到的一个问题<br><a href="https://www.centbrowser.net/zh-cn/forum.php?mod=viewthread&amp;tid=13972">https://www.centbrowser.net/zh-cn/forum.php?mod=viewthread&amp;tid=13972</a></p>
+<p>挺喜欢的，但是一个没有收入的闭源软件，能想到后续会如何发展。况且浏览器这块还属于国内软件厂商的兵家必争之地。可惜了</p>
+<p>遇到的一个问题</p>
+<p><a href="https://www.centbrowser.net/zh-cn/forum.php?mod=viewthread&tid=13972">https://www.centbrowser.net/zh-cn/forum.php?mod=viewthread&amp;tid=13972</a></p>
 <h2 id="Opera"><a href="#Opera" class="headerlink" title="Opera"></a>Opera</h2><p>内核跟不上，我猜以后应该也跟不上了</p>
-<h2 id="Vivaldi"><a href="#Vivaldi" class="headerlink" title="Vivaldi"></a>Vivaldi</h2><p>内核倒是跟上了。书签以及快速拨号做的相当不错<br>缺点就是下载exe非要你确认保留<br>目前的解决办法是调整组策略，不过会影响整台电脑(试了下还是会弹)<br>另外随便弹个窗就整个浏览器不让用，这种逻辑太傻逼了</p>
+<h2 id="Vivaldi"><a href="#Vivaldi" class="headerlink" title="Vivaldi"></a>Vivaldi</h2><p>内核倒是跟上了。书签以及快速拨号做的相当不错<br><del>缺点就是下载exe非要你确认保留</del><br><del>目前的解决办法是调整组策略，不过会影响整台电脑(试了下还是会弹)</del><br><del>另外随便弹个窗就整个浏览器不让用，这种逻辑太傻逼了</del></p>
 ]]></content>
       <categories>
         <category>Browser</category>
@@ -499,65 +503,9 @@
       </tags>
   </entry>
   <entry>
-    <title>about:config的一些配置</title>
-    <url>/Browser/about%EF%BC%9Aconfig/</url>
-    <content><![CDATA[<ul>
-<li>browser.safebrowsing.malware.enabled		false可以禁止火狐自动阻止被标为恶意网址的网页</li>
-<li>devtools.selfxss.count		<a href="/Browser/no%20allow%20past">文章</a></li>
-<li>extensions.blocklist.enabled		将设置是否检测阻止的插件，例如旧版flash</li>
-<li>gfx.color_management.enablev4		改为true后支援ICCV4    （<a href="http://en.wikipedia.org/wiki/International_Color_Consortium">International Color Consortium</a>）  </li>
-<li>permissions.default.image		是否加载图片，值的含义</li>
-<li><ol>
-<li>Allow all images to load, regardless of origin. (Default)</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>Block all images from loading</li>
-</ol>
-</li>
-<li><ol start="3">
-<li>Prevent third-party images from loading.</li>
-</ol>
-</li>
-<li>browser.search.openintab		新标签页打开搜索栏地址</li>
-<li>browser.urlbar.trimURLs		设为false后在地址栏显示http:&#x2F;&#x2F;(不然有时候复制网址不会自动加http:&#x2F;&#x2F;)</li>
-<li>xpinstall.signatures.required		设为false后可关闭关闭“扩展未被验证在Firefox中使用，请谨慎使用”</li>
-<li>browser.cache.check_doc_frequency		设定检查是否需要更新缓存文档的频率，值的含义</li>
-<li>0: Once per session 每个进程一次 每次启动Firefox时检查</li>
-<li>1: Each time 每次访问此页时检查</li>
-<li>2: Never 不检查</li>
-<li>3: When appropriate&#x2F;automatically 自动</li>
-<li>plugin.scan.plid.all		是否自动检测系统的插件<br>可以将Firefox\browser下新建个plugins文件夹，然后把需要启动的插件放进这个文件夹。</li>
-<li>browser.tabs.loadDivertedInBackground		后台打开新标签</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Browser</category>
-      </categories>
-      <tags>
-        <tag>Firefox</tag>
-        <tag>过时(Outdated)</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>火狐最值得用的实现翻译功能的脚本</title>
-    <url>/Browser/translate%20on%20Firefox/</url>
-    <content><![CDATA[<p>虽然过时了….但至今没有被超越，阿门 -2021-08-18<br><a href="http://pan.baidu.com/s/1dDxOC6X">http://pan.baidu.com/s/1dDxOC6X</a></p>
-<p>使用方法：<br>1.下载安装FireGestures(手势)扩展<br>2.下载脚本，用记事本打开，复制内容。<br>3.打开FireGestures选项 - 映射 - 添加脚本 - 名称随便，粘贴内容至“脚本”中，设置好动作</p>
-<p>来源<br><a href="http://tieba.baidu.com/p/2828150548">http://tieba.baidu.com/p/2828150548</a></p>
-]]></content>
-      <categories>
-        <category>Browser</category>
-      </categories>
-      <tags>
-        <tag>Browser</tag>
-        <tag>过时(Outdated)</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>userChrome.css</title>
     <url>/Browser/userChrome.css/</url>
-    <content><![CDATA[<p>很久没用火狐了，我印象里这个最新版的能用，但我记忆力毕竟像🐟 -2021-08-06<br>其实还是推荐用stylish的</p>
+    <content><![CDATA[<p>很久没用火狐了，我印象里这个最新版的能用，但我记忆力毕竟像🐟 -2021-08-06<br><del>其实还是推荐用stylish的</del></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/*标签最小宽度*/ </span><br><span class="line">.tabbrowser-tab&#123;min-width:50px !important;&#125;</span><br><span class="line"></span><br><span class="line">/*书签下拉菜单的最大宽度*/   </span><br><span class="line">menu.bookmark-item, menuitem.bookmark-item &#123; max-width: 20em !important; &#125;</span><br><span class="line"></span><br><span class="line">/*书签栏下拉列表中去除&quot;打开所有书签&quot;以及横线，ubuntu去除书签栏文件夹图标旁的小箭头*/</span><br><span class="line">.bookmark-item[container] &gt; .toolbarbutton-menu-dropmarker,.openintabs-menuitem,.bookmarks-actions-menuseparator&#123;display: none !important;&#125;</span><br><span class="line"></span><br><span class="line">/*处理小箭头*/</span><br><span class="line">#PersonalToolbar .toolbarbutton-1:not(#greasemonkey-tbb):not(#ipbuttons-toolbar) dropmarker&#123;display: none !important;&#125;</span><br><span class="line">#greasemonkey-tbb dropmarker&#123;height:22px !important;width:22px !important;margin-left:-22px!important;display:inline!important;opacity:0;&#125;</span><br><span class="line">#ipbuttons-toolbar dropmarker&#123;height:22px !important;width:22px !important;margin-left:-22px!important;display:inline!important;opacity:0;&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/*右键菜单去除设置桌面背景*/  </span><br><span class="line">#context-sendimage,#context-setDesktopBackground&#123;display: none !important;&#125;</span><br><span class="line"></span><br><span class="line">/*新标签页*/</span><br><span class="line">@-moz-document url(&quot;about:newtab&quot;) &#123;     </span><br><span class="line">	.newtab-title&#123;text-align:center !important;&#125;</span><br><span class="line">	.newtab-cell &#123;opacity: 0.4 !important;&#125;</span><br><span class="line">	.newtab-cell:hover &#123;opacity: 1 !important;&#125;</span><br><span class="line">	body&#123;</span><br><span class="line">		background-size:cover !important;</span><br><span class="line">		background-image: url(&quot;file:///d:/XX/wall.jpg&quot;) !important;</span><br><span class="line">	&#125;</span><br><span class="line">	#newtab-margin-bottom&#123;opacity:0;&#125;</span><br><span class="line">	#newtab-search-container,#newtab-margin-undo-container&#123;display: none !important;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>请注意背景图片地址请自行设置</p>
 ]]></content>
@@ -4186,12 +4134,15 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line">[HKEY_CLASSES_ROOT\ftp]</span><br><span class="line">@=&quot;URL:File Transfer Protocol&quot;</span><br><span class="line">&quot;AppUserModelID&quot;=&quot;Microsoft.InternetExplorer.Default&quot;</span><br><span class="line">&quot;EditFlags&quot;=dword:00000002</span><br><span class="line">&quot;FriendlyTypeName&quot;=&quot;@C:\\Windows\\system32\\ieframe.dll,-905&quot;</span><br><span class="line">&quot;ShellFolder&quot;=&quot;&#123;63da6ec0-2e98-11cf-8d82-444553540000&#125;&quot;</span><br><span class="line">&quot;Source Filter&quot;=&quot;&#123;E436EBB6-524F-11CE-9F53-0020AF0BA770&#125;&quot;</span><br><span class="line">&quot;URL Protocol&quot;=&quot;&quot;</span><br><span class="line">[HKEY_CLASSES_ROOT\ftp\DefaultIcon]</span><br><span class="line">@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\</span><br><span class="line">00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,75,00,72,00,\</span><br><span class="line">6c,00,2e,00,64,00,6c,00,6c,00,2c,00,30,00,00,00</span><br><span class="line">[HKEY_CLASSES_ROOT\ftp\shell]</span><br><span class="line">@=&quot;open&quot;</span><br><span class="line">[HKEY_CLASSES_ROOT\ftp\shell\open]</span><br></pre></td></tr></table></figure>
 <p>说下我的理解，windows集成了IE ,explorer上输入ftp:&#x2F;&#x2F;实际上是由IE来访问网络的<br>注册表中是<br>“AppUserModelID”&#x3D;”Microsoft.<em>InternetExplorer</em>.Default”<br>“FriendlyTypeName”&#x3D;”@C:\Windows\system32\<em>ieframe</em>.dll,-905”</p>
 <p>由于一些浏览器把ftp给关联上了，于是资源管理器里就无法直接访问ftp</p>
+<hr>
+<p>Win 11 应该已经没这块的设置了</p>
 ]]></content>
       <categories>
         <category>Issue</category>
       </categories>
       <tags>
         <tag>Windows</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Issue</tag>
         <tag>Regedit</tag>
       </tags>
@@ -4529,7 +4480,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
   <entry>
     <title>由于其配置信息不完整或已损坏，Windows 无法启动该设备</title>
     <url>/Issue/%E5%85%89%E9%A9%B1%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/</url>
-    <content><![CDATA[<p>总而言之，这类都属于卸载残留问题。会导致类似问题的还有各类安全软件 - 2021-09-22<br>光驱没法用了，初步怀疑是daemon tools 安装时选了第2项那个SPd还是啥导致的,有个gear software<br>当时用的笔记本，自带了光驱，嘛，不过已经是很久以前的事了。<br>一些其他的设备也可能会出现这个问题，例如一些安全软件，在非常规卸载后会导致一些设备出现这个问题</p>
+    <content><![CDATA[<p>总而言之，这类都属于卸载残留问题。会导致类似问题的还有各类安全软件 - 2021-09-22<br>光驱没法用了，初步怀疑是 daemon tools 安装时选了第2项那个SPd还是啥导致的,有个 gear software<br>当时用的笔记本，自带了光驱，嘛，不过已经是很久以前的事了。<br>一些其他的设备也可能会出现这个问题，例如一些安全软件，在非常规卸载后会导致一些设备出现这个问题</p>
 <p>由于其配置信息(注册表中的)不完整或已损坏，Windows 无法启动这个硬件设备。 (代码19）</p>
 <ol>
 <li><strong>原因分析</strong><br>有的时候，由于配置信息(注册表中的)不完整或系统已损坏</li>
@@ -4616,11 +4567,14 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
   <entry>
     <title>[问题处理]Win 10 搜索不到本地应用，显示 “这些结果可能不完整”</title>
     <url>/Issue/%E6%90%9C%E4%B8%8D%E5%88%B0%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<p>这应该是早期Win10的bug了，最新版本的Win10可能不会再出这个问题 -2021-08-06<br>原链接:<a href="http://answers.microsoft.com/zh-hans/windows/forum/windows_10-win_cortana/win10/0ce4c437-7d5c-4e36-8716-717932b8be30?auth=1">http://answers.microsoft.com/zh-hans/windows/forum/windows_10-win_cortana/win10/0ce4c437-7d5c-4e36-8716-717932b8be30?auth=1</a></p>
-<p>新装Windows 10 LTSB，结果我自己装什么应用全搜不到了。<br>Win10的各种BUG真是让人头疼……</p>
+    <content><![CDATA[<p>这应该是早期 Win10 的bug了，最新版本的 Win10 可能不会再出这个问题 -2021-08-06<br>原链接:<a href="http://answers.microsoft.com/zh-hans/windows/forum/windows_10-win_cortana/win10/0ce4c437-7d5c-4e36-8716-717932b8be30?auth=1">http://answers.microsoft.com/zh-hans/windows/forum/windows_10-win_cortana/win10/0ce4c437-7d5c-4e36-8716-717932b8be30?auth=1</a></p>
+<p>新装 Windows 10 LTSB，结果我自己装什么应用全搜不到了。<br>Win10的各种BUG真是让人头疼……</p>
 <ol>
 <li>在Cortana搜索栏输入PowerShell后，在第一项点击右键，选择“以管理员身份运行”；</li>
-<li>在PowerShell中输入以下命令后回车（可直接复制粘贴）： <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage -AllUsers| Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register &quot;$($_.InstallLocation)\AppXManifest.xml&quot;&#125;</span><br></pre></td></tr></table></figure></li>
+<li>在PowerShell中输入以下命令后回车（可直接复制粘贴）：</li>
+</ol>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Get-AppxPackage -AllUsers| Foreach &#123;Add-AppxPackage -DisableDevelopmentMode -Register &quot;$($_.InstallLocation)\AppXManifest.xml&quot;&#125;</span><br></pre></td></tr></table></figure>
+<ol start="3">
 <li>等待命令执行完毕。</li>
 </ol>
 <p>我记得当时执行上述步骤还出了啥问题来着，后面好像动用了’sfc &#x2F;scannow’还是什么才把这命令跑完</p>
@@ -4642,7 +4596,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <p>你会发现当前所有者是TrusteInstaller（windows系统安装的时候使用的账号，权限灰常高），而我们要做的是将这个所有者更改为我们的当前用户，比如这里是administators</p>
 <p>点击选择 将所有这更改为administrators，然后勾选替换子容器和对象的所有者（相当于应用设置到子键吧）<br><img src="/img/%E6%9D%83%E9%99%903.jpg" alt="权限处理2"><br>应用确定以后返回到权限窗口，选择当前用户账号我的是administrators（xxxxx\administrators,将完全控制的选项点击设置为允许，点击应用，现在尝试编辑注册表项目看看问题是否解决<br><img src="/img/%E6%9D%83%E9%99%902.jpg" alt="权限处理3"><br>删除的时候如果还是提示出错请依次操作（右键需要操作的项－权限－选择当前的用户名－－高级－权限选项卡，点击当前用户名并勾选使用可从此对象集成的权限替换所有子对象的权限－－－应用，确定）<br><img src="/img/%E6%9D%83%E9%99%904.jpg" alt="权限处理4"></p>
 <hr>
-<p>另外可以通过加驱软件通过超高权限进行删除，一般这种软件叫ARK工具，不过Win10的话基本没有多少这种工具了 -2021-08-06</p>
+<p>另外可以通过加驱软件通过超高权限进行删除，一般这种软件叫ARK工具，不过 Win10 开始的话基本没有多少这种工具了 -2021-08-06</p>
 ]]></content>
       <categories>
         <category>Issue</category>
@@ -9223,7 +9177,8 @@ font-size: 0.78em;
   <entry>
     <title>个人原创以及修改的GM脚本</title>
     <url>/Browser/GM/GM/</url>
-    <content><![CDATA[<p><del>火狐必装扩展<a href="https://addons.mozilla.org/zh-CN/firefox/addon/greasemonkey/">GreaseMonkey</a></del></p>
+    <content><![CDATA[<p>基本没研究这块了</p>
+<p><del>火狐必装扩展<a href="https://addons.mozilla.org/zh-CN/firefox/addon/greasemonkey/">GreaseMonkey</a></del></p>
 <p>Github地址：<a href="https://github.com/ted423/rules-GM-stylish-UC/tree/master/GM">https://github.com/ted423/rules-GM-stylish-UC/tree/master/GM</a></p>
 <h1 id="原创"><a href="#原创" class="headerlink" title="原创"></a>原创</h1><h2 id="tsdm-no-Popups-原创-天使动漫论坛签到防弹窗"><a href="#tsdm-no-Popups-原创-天使动漫论坛签到防弹窗" class="headerlink" title="tsdm no Popups(原创)天使动漫论坛签到防弹窗##"></a>tsdm no Popups(原创)天使动漫论坛签到防弹窗##</h2><p>脚本地址:<a href="https://greasyfork.org/scripts/2393-tsdm-no-popups">https://greasyfork.org/scripts/2393-tsdm-no-popups</a><br>老实说，我觉得天使的签到弹窗让人有些蛋疼…</p>
 <p><del>## Remove”(ED2000.COM)”</del></p>
@@ -28635,5 +28590,77 @@ $(function () {
         <tag>Issue</tag>
         <tag>Driver&amp;Firmware</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>about:config的一些配置</title>
+    <url>/Browser/about%20config/</url>
+    <content><![CDATA[<ul>
+<li>browser.safebrowsing.malware.enabled		false可以禁止火狐自动阻止被标为恶意网址的网页</li>
+<li>devtools.selfxss.count		<a href="/Browser/no%20allow%20past">文章</a></li>
+<li>extensions.blocklist.enabled		将设置是否检测阻止的插件，例如旧版flash</li>
+<li>gfx.color_management.enablev4		改为true后支援ICCV4    （<a href="http://en.wikipedia.org/wiki/International_Color_Consortium">International Color Consortium</a>）  </li>
+<li>permissions.default.image		是否加载图片，值的含义</li>
+<li><ol>
+<li>Allow all images to load, regardless of origin. (Default)</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>Block all images from loading</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>Prevent third-party images from loading.</li>
+</ol>
+</li>
+<li>browser.search.openintab		新标签页打开搜索栏地址</li>
+<li>browser.urlbar.trimURLs		设为false后在地址栏显示http:&#x2F;&#x2F;(不然有时候复制网址不会自动加http:&#x2F;&#x2F;)</li>
+<li>xpinstall.signatures.required		设为false后可关闭关闭“扩展未被验证在Firefox中使用，请谨慎使用”</li>
+<li>browser.cache.check_doc_frequency		设定检查是否需要更新缓存文档的频率，值的含义</li>
+<li>0: Once per session 每个进程一次 每次启动Firefox时检查</li>
+<li>1: Each time 每次访问此页时检查</li>
+<li>2: Never 不检查</li>
+<li>3: When appropriate&#x2F;automatically 自动</li>
+<li>plugin.scan.plid.all		是否自动检测系统的插件<br>可以将Firefox\browser下新建个plugins文件夹，然后把需要启动的插件放进这个文件夹。</li>
+<li>browser.tabs.loadDivertedInBackground		后台打开新标签</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Browser</category>
+      </categories>
+      <tags>
+        <tag>Firefox</tag>
+        <tag>过时(Outdated)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[火狐扩展推荐]你不一定知道，但是很有用的扩展</title>
+    <url>/%E5%9D%9F%E5%9C%BA/FFExtension/</url>
+    <content><![CDATA[<p>#Add to Search Bar<br>能比较方便的向搜索列表里加引擎，比火狐自带的识别好用一些<br><a href="https://firefox.maltekraus.de/extensions/add-to-search-bar">https://firefox.maltekraus.de/extensions/add-to-search-bar</a></p>
+<p>#Copy Link Name<br>你有试过准备在连接上复制文字但死活选不到正确位置时的痛苦么?<br>这个扩展就是用来解决这个的。(其实可能找个UC脚本更好一些？)</p>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/copy-link-name/">https://addons.mozilla.org/en-US/firefox/addon/copy-link-name/</a></p>
+<p>需要注意的是用户评论里有The next version (1.3.5.5) contains adware:<br>并且我注意到火狐默认给装的是 1.3.5.3.1-signed</p>
+<p>#DOM Inspector&amp;Element Inspector<br>Element Inspector:<a href="https://addons.mozilla.org/en-US/firefox/addon/element-inspector/">https://addons.mozilla.org/en-US/firefox/addon/element-inspector/</a><br>可以查看火狐界面的CSS代码，写userChrome.css,也就是浏览器界面样式必备，一般需配合DOM Inspector</p>
+<p>DOM Inspector:<a href="https://developer.mozilla.org/en-US/docs/DOM_Inspector">https://developer.mozilla.org/en-US/docs/DOM_Inspector</a><br>(0.5以后的Element Inspector可以不使用这个,我这调用的是firebug,原生开发者工具貌似没法显示)</p>
+<p>#Developer Edition theme enabler<br>火狐给了Developer Edition一个很酷的外观，正式版却不给用！！！！Developer Edition还天天出问题！！！<br>于是这个扩展很好地解决了这个问题<br><a href="https://addons.mozilla.org/zh-CN/firefox/addon/devedition-theme-enabler/">https://addons.mozilla.org/zh-CN/firefox/addon/devedition-theme-enabler/</a></p>
+<p>#Flagfox<br>可以比较清楚的描述网页所在地,不需要设置(我记得还有一个类似的，还有一大堆设置，部分页面还没有显示)<br><a href="https://addons.mozilla.org/en-US/firefox/addon/flagfox/">https://addons.mozilla.org/en-US/firefox/addon/flagfox/</a></p>
+<p>#Proxy Selector<br><a href="https://addons.mozilla.org/zh-CN/firefox/addon/proxy-selector/">https://addons.mozilla.org/zh-CN/firefox/addon/proxy-selector/</a><br>能定义不同的代理状态并进行切换，比如全局或者PAC，也可以设置不同的PAC，就不用每次都点到选项里了</p>
+<p>#Show parent folder&amp;Go parent folder<br>能比较清楚的找到书签所在文件夹<br><a href="https://addons.mozilla.org/zh-cn/firefox/user/white-alice0775/">https://addons.mozilla.org/zh-cn/firefox/user/white-alice0775/</a><br>注意，Show parent folder需要自己勾选列后他才显示<br><img src="http://ted423-farbox.qiniudn.com/parentfloder1.png" alt="火狐Show parent folder1"><br><img src="http://ted423-farbox.qiniudn.com/parentfloder2.png" alt="火狐Show parent folder2"></p>
+<p>#集图工具(Image Picker)<br>页面图片批量下载工具，也支持当前窗口打开的所有页面<br><a href="https://addons.mozilla.org/en-US/firefox/addon/image-picker/">https://addons.mozilla.org/en-US/firefox/addon/image-picker/</a></p>
+<p>#Url To Qr Code<br>将电脑打开的网页交由手机打开的最简单的方式<br><a href="https://addons.mozilla.org/zh-CN/firefox/addon/url-to-qrcode/?src=search">https://addons.mozilla.org/zh-CN/firefox/addon/url-to-qrcode/?src=search</a></p>
+]]></content>
+      <categories>
+        <category>坟场</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>火狐最值得用的实现翻译功能的脚本</title>
+    <url>/%E5%9D%9F%E5%9C%BA/translate%20on%20Firefox/</url>
+    <content><![CDATA[<p>虽然过时了….但至今没有被超越，阿门 -2021-08-18<br><a href="http://pan.baidu.com/s/1dDxOC6X">http://pan.baidu.com/s/1dDxOC6X</a></p>
+<p>使用方法：<br>1.下载安装FireGestures(手势)扩展<br>2.下载脚本，用记事本打开，复制内容。<br>3.打开FireGestures选项 - 映射 - 添加脚本 - 名称随便，粘贴内容至“脚本”中，设置好动作</p>
+<p>来源<br><a href="http://tieba.baidu.com/p/2828150548">http://tieba.baidu.com/p/2828150548</a></p>
+]]></content>
+      <categories>
+        <category>坟场</category>
+      </categories>
   </entry>
 </search>
