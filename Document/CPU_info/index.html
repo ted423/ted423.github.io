@@ -7,8 +7,8 @@
     <link rel="icon" href="/img/favicon.svg">
   
   
-  <title>Hexo精简 | 个人小站</title>
-  <link rel="canonical" href="http://ted423.github.io/Document/Hexo%E7%B2%BE%E7%AE%80/">
+  <title>两个CPU性能分对比的网站 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/CPU_info/">
   <meta name="author" content="ted423" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -17,21 +17,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Document, Hexo, WWW" />
+    <meta name="keywords" content="Document, Hardware" />
   
-  <meta name="description" content="首先你需要知道的是，Hexo 每次生成的所有文件全部重新编译，因此部署变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。 如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。 另外因为hexo-deployer-git是force提交，所以你可以直接在本地.deploy_git起新空分支。记得之后删除老分支。 1git chec">
+  <meta name="description" content="https:&#x2F;&#x2F;www.cpubenchmark.net&#x2F;https:&#x2F;&#x2F;www.cpu-monkey.com&#x2F;en&#x2F; 前者信息比较充足一些这样就不用看啥天梯图了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo精简">
-<meta property="og:url" content="http://ted423.github.io/Document/Hexo%E7%B2%BE%E7%AE%80/index.html">
+<meta property="og:title" content="两个CPU性能分对比的网站">
+<meta property="og:url" content="http://ted423.github.io/Document/CPU_info/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="首先你需要知道的是，Hexo 每次生成的所有文件全部重新编译，因此部署变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。 如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。 另外因为hexo-deployer-git是force提交，所以你可以直接在本地.deploy_git起新空分支。记得之后删除老分支。 1git chec">
+<meta property="og:description" content="https:&#x2F;&#x2F;www.cpubenchmark.net&#x2F;https:&#x2F;&#x2F;www.cpu-monkey.com&#x2F;en&#x2F; 前者信息比较充足一些这样就不用看啥天梯图了">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-09T04:09:56.633Z">
-<meta property="article:modified_time" content="2024-10-09T16:00:00.000Z">
+<meta property="article:published_time" content="2020-10-25T11:27:00.000Z">
+<meta property="article:modified_time" content="2020-10-25T11:27:00.000Z">
 <meta property="article:author" content="ted423">
-<meta property="article:tag" content="WWW">
 <meta property="article:tag" content="Document">
-<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Hardware">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
@@ -144,14 +143,14 @@
         
 
             <article itemscope itemtype="https://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Hexo%E7%B2%BE%E7%AE%80/">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/CPU_info/">
     <div class="kratos-hentry kratos-page-inner clearfix">
         <header class="kratos-page-header">
             
-                <h1 class="kratos-page-title text-center" itemprop="name headline">Hexo精简</h1>
+                <h1 class="kratos-page-title text-center" itemprop="name headline">两个CPU性能分对比的网站</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2025-01-09T04:09:56.633Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-01-09</time></li>
+                <li><time datetime="2020-10-25T11:27:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2020-10-25</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -160,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            340
+                            82
                         
                         字
                     </li>
@@ -179,15 +178,8 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>首先你需要知道的是，Hexo 每次生成的所有文件全部重新编译，因此部署变动是非常多的。commit 基本没办法追踪变动。历史提交是没有意义的。</p>
-<p>如果你的commit已经超过300个了，那你可以考虑清理一下历史 commit。例如 squash。</p>
-<p>另外因为<code>hexo-deployer-git</code>是force提交，所以你可以直接在本地.deploy_git起新空分支。记得之后删除老分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan branchname</span><br></pre></td></tr></table></figure>
-
-<p>这时候你会发现本地文件夹大小没怎么变化，跑下gc清理下就好</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git gc</span><br></pre></td></tr></table></figure>
-
-<p>BTW： 最近 Linux 下装了 git-gui 之后打开 gui 提示我数据库没有压缩(查了下就是 <code>git gc</code>，不过好像后续提交就要重新压缩)</p>
+            <div itemprop="articleBody"><p><a target="_blank" rel="noopener" href="https://www.cpubenchmark.net/">https://www.cpubenchmark.net/</a><br><a target="_blank" rel="noopener" href="https://www.cpu-monkey.com/en/">https://www.cpu-monkey.com/en/</a></p>
+<p>前者信息比较充足一些<br>这样就不用看啥天梯图了</p>
 </div>
         </div>
         
@@ -205,10 +197,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Hexo/" rel="tag">Hexo</a>, <a class="tag-none-link" href="/tags/WWW/" rel="tag">WWW</a>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Hardware/" rel="tag">Hardware</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-10-09T16:00:00.000Z" itemprop="dateModified">最后编辑：2024-10-10</time>
+                    <time datetime="2020-10-25T11:27:00.000Z" itemprop="dateModified">最后编辑：2020-10-25</time>
                 </div>
             </div>
         </footer>
@@ -217,19 +209,19 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" 博客换主题，不再用hexo-theme-archer" href="/etc/hexo-theme/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" 网站死链检测" href="/Document/死链检测/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" [问题处理]CentOS7 SWIG director method error. Error detected when calling &#39;RepoCB.handleMirrorFailure&#39;, ignoring this repo." href="/Issue/SWIG_error/">下一篇 <i class="fa fa-angle-right"></i></a>
+                <a title=" x265参数解析" href="/Document/Encode/x265/">下一篇 <i class="fa fa-angle-right"></i></a>
             </div>
             
         </nav>
     
     
         <div class="comment-post">
-            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/Hexo%E7%B2%BE%E7%AE%80/" data-full-path="http://ted423.github.io/Document/Hexo%E7%B2%BE%E7%AE%80/"></div>
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/CPU_info/" data-full-path="http://ted423.github.io/Document/CPU_info/"></div>
         </div>
     
 </article>
@@ -263,7 +255,7 @@
                 文章
             </span>
             <span class="count">
-                405
+                404
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -271,7 +263,7 @@
                 分类
             </span>
             <span class="count">
-                15
+                16
             </span>
         </a>
         <a class="meta-item" href="/tags/">
@@ -279,7 +271,7 @@
                 标签
             </span>
             <span class="count">
-                153
+                155
             </span>
         </a>
     </div>
@@ -288,7 +280,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">102</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">40</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">50</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">102</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
   </aside>
 
 

@@ -7,8 +7,8 @@
     <link rel="icon" href="/img/favicon.svg">
   
   
-  <title>[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏 | 个人小站</title>
-  <link rel="canonical" href="http://ted423.github.io/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
+  <title>记一次Raid卡固件升级(刷IT mode) | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/Driver&Firmware/9211-8i/">
   <meta name="author" content="ted423" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -17,22 +17,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Issue, Regedit, Windows" />
+    <meta name="keywords" content="Document, Driver&Firmware" />
   
-  <meta name="description" content="不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动 Widnows 7改AHCI找到下面的注册表子项： 1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci 在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHC">
+  <meta name="description" content="当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程https:&#x2F;&#x2F;nguvu.org&#x2F;freenas&#x2F;Convert-LSI-HBA-card-to-IT-mode&#x2F; 主要步骤rufus写Freedos到USB盘 Copy the following three files from your downl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏">
-<meta property="og:url" content="http://ted423.github.io/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/index.html">
+<meta property="og:title" content="记一次Raid卡固件升级(刷IT mode)">
+<meta property="og:url" content="http://ted423.github.io/Document/Driver&Firmware/9211-8i/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动 Widnows 7改AHCI找到下面的注册表子项： 1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci 在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHC">
+<meta property="og:description" content="当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程https:&#x2F;&#x2F;nguvu.org&#x2F;freenas&#x2F;Convert-LSI-HBA-card-to-IT-mode&#x2F; 主要步骤rufus写Freedos到USB盘 Copy the following three files from your downl">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2016-01-14T10:56:00.000Z">
-<meta property="article:modified_time" content="2016-01-14T10:56:00.000Z">
+<meta property="og:image" content="https://nguvu.org/images/160130-rufus_boot_USB.png">
+<meta property="article:published_time" content="2022-04-13T03:53:00.000Z">
+<meta property="article:modified_time" content="2025-03-15T09:45:42.455Z">
 <meta property="article:author" content="ted423">
-<meta property="article:tag" content="Windows">
-<meta property="article:tag" content="Issue">
-<meta property="article:tag" content="Regedit">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="Driver&amp;Firmware">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://nguvu.org/images/160130-rufus_boot_USB.png">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -144,14 +145,14 @@
         
 
             <article itemscope itemtype="https://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Driver&amp;Firmware/9211-8i/">
     <div class="kratos-hentry kratos-page-inner clearfix">
         <header class="kratos-page-header">
             
-                <h1 class="kratos-page-title text-center" itemprop="name headline">[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</h1>
+                <h1 class="kratos-page-title text-center" itemprop="name headline">记一次Raid卡固件升级(刷IT mode)</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2016-01-14T10:56:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2016-01-14</time></li>
+                <li><time datetime="2022-04-13T03:53:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-04-13</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -160,7 +161,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            743
+                            ~2.32K
                         
                         字
                     </li>
@@ -179,23 +180,22 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动</p>
-<h1 id="Widnows-7"><a href="#Widnows-7" class="headerlink" title="Widnows 7"></a>Widnows 7</h1><h2 id="改AHCI"><a href="#改AHCI" class="headerlink" title="改AHCI"></a>改AHCI</h2><p>找到下面的注册表子项：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci</span><br></pre></td></tr></table></figure>
-<p>在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)<br><strong>0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态</strong></p>
-<h2 id="改IDE"><a href="#改IDE" class="headerlink" title="改IDE"></a>改IDE</h2><p>是找到</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide</span><br></pre></td></tr></table></figure>
-<h2 id="改RAID"><a href="#改RAID" class="headerlink" title="改RAID"></a>改RAID</h2><p>强烈鄙视HP Z200，硬盘模式只有IDE和RAID+AHCI，结果只有AHCI的驱动还不行</p>
-<h2 id="VM-SCSi"><a href="#VM-SCSi" class="headerlink" title="VM SCSi"></a>VM SCSi</h2><p><a target="_blank" rel="noopener" href="https://kb.vmware.com/s/article/1005208">https://kb.vmware.com/s/article/1005208</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\iaStorV</span><br></pre></td></tr></table></figure>
-<p><strong>注意最后是V哈</strong></p>
-<h1 id="Windows-8-Windows-10"><a href="#Windows-8-Windows-10" class="headerlink" title="Windows 8 - Windows 10"></a>Windows 8 - Windows 10</h1><p>AHCI则是找到如下注册表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\StartOverride\</span><br></pre></td></tr></table></figure>
-<p>把0的值由3改为0</p>
-<p>然后就可以在BIOS里更改为AHCI了，之后等驱动装完后重启几次就好了<br>IDE则和Win7下没有区别。</p>
-<p>RAID还没没试过，所以暂没有<br>Windows 10似乎在不改注册表的情况下，通过进安全模式来安装驱动。(一台HP Z200里的Win10就是这么操作成功的)</p>
-<hr>
-<p><time>2023-03-04</time>增加实体机转VM的修改</p>
+            <div itemprop="articleBody"><p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a target="_blank" rel="noopener" href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p>
+<p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p>
+<p>Copy the following three files from your download to our bootable USB stick.</p>
+<ul>
+<li>sasbios_rel&#x2F;mptsas2.rom</li>
+<li>Firmware&#x2F;HBA_9211_8i_IT&#x2F;2118it.bin</li>
+<li>sas2flsh_dos_rel&#x2F;sas2flsh.exe</li>
+</ul>
+<p>这些文件都放在根目录(不保留文件夹)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">	Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">	Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">	Resetting Adapter...</span><br><span class="line">	Reset Successful!</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">		Firmware Image has a Valid Checksum. </span><br><span class="line">		Firmware Version 20.00.04.00</span><br><span class="line">		Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">		Valid NVDATA Image found. </span><br><span class="line">		NVDATA Version 14.01.00.00 </span><br><span class="line">		Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">		NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">		Valid Initialization Image verified.</span><br><span class="line">		Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Mfg Page 2 Mismatch Detected.</span><br><span class="line">		Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">		Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Performing Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Beginning Firmware Download...</span><br><span class="line">		Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">		Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">		BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">		BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">		BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">		BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">		Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">		Verifying Download...</span><br><span class="line"></span><br><span class="line">		Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">		Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p>
+<p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a target="_blank" rel="noopener" href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p>
+<p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>
 </div>
         </div>
         
@@ -213,10 +213,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
+                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Driver-Firmware/" rel="tag">Driver&Firmware</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2016-01-14T10:56:00.000Z" itemprop="dateModified">最后编辑：2016-01-14</time>
+                    <time datetime="2025-03-15T09:45:42.455Z" itemprop="dateModified">最后编辑：2025-03-15</time>
                 </div>
             </div>
         </footer>
@@ -225,19 +225,19 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" about:config的一些配置" href="/Browser/about：config/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" bit Byte bibyte(雾) 存储单位，速度单位的一些说明" href="/Document/Mebibyte/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" [Video]鎌田紘子" href="/Video/鎌田紘子/">下一篇 <i class="fa fa-angle-right"></i></a>
+                <a title=" Hexo + Github搭建博客" href="/Code/Hexo github/">下一篇 <i class="fa fa-angle-right"></i></a>
             </div>
             
         </nav>
     
     
         <div class="comment-post">
-            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/" data-full-path="http://ted423.github.io/Issue/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/"></div>
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/Driver&Firmware/9211-8i/" data-full-path="http://ted423.github.io/Document/Driver&Firmware/9211-8i/"></div>
         </div>
     
 </article>
@@ -271,7 +271,7 @@
                 文章
             </span>
             <span class="count">
-                405
+                404
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -279,7 +279,7 @@
                 分类
             </span>
             <span class="count">
-                15
+                16
             </span>
         </a>
         <a class="meta-item" href="/tags/">
@@ -287,7 +287,7 @@
                 标签
             </span>
             <span class="count">
-                153
+                155
             </span>
         </a>
     </div>
@@ -296,7 +296,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">102</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">40</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">50</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">102</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
   </aside>
 
 

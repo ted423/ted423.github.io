@@ -7,8 +7,8 @@
     <link rel="icon" href="/img/favicon.svg">
   
   
-  <title>记一次Raid卡固件升级(刷IT mode) | 个人小站</title>
-  <link rel="canonical" href="http://ted423.github.io/Document/Hardware/9211-8i/">
+  <title>[Git]处理Github的Commit failed:Failed to create a new commit | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Issue/Github/Github%20Commit%20failed/">
   <meta name="author" content="ted423" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -17,23 +17,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Document, Hardware" />
+    <meta name="keywords" content="Git, Github, Issue, Windows, 过时(Outdated)" />
   
-  <meta name="description" content="当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程https:&#x2F;&#x2F;nguvu.org&#x2F;freenas&#x2F;Convert-LSI-HBA-card-to-IT-mode&#x2F; 主要步骤rufus写Freedos到USB盘 Copy the following three files from your downl">
+  <meta name="description" content="2015.02.15 确认没再出现类似错误，大概 Github 的 Windows 客户端更新了 好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是 .git 文件夹里有个 index.lock 的问题…..只要删掉就好了。大概在创建 commit 的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成 commit, 但由于之前已经有了 index.lock（但没">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记一次Raid卡固件升级(刷IT mode)">
-<meta property="og:url" content="http://ted423.github.io/Document/Hardware/9211-8i/index.html">
+<meta property="og:title" content="[Git]处理Github的Commit failed:Failed to create a new commit">
+<meta property="og:url" content="http://ted423.github.io/Issue/Github/Github%20Commit%20failed/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程https:&#x2F;&#x2F;nguvu.org&#x2F;freenas&#x2F;Convert-LSI-HBA-card-to-IT-mode&#x2F; 主要步骤rufus写Freedos到USB盘 Copy the following three files from your downl">
+<meta property="og:description" content="2015.02.15 确认没再出现类似错误，大概 Github 的 Windows 客户端更新了 好吧，被坑了好多次，之前都是被搞成了删除项目重建……现在终于搞懂了，是 .git 文件夹里有个 index.lock 的问题…..只要删掉就好了。大概在创建 commit 的时候就会自动生成，但此时如果又更改了项目文件的话，就需要重新生成 commit, 但由于之前已经有了 index.lock（但没">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://nguvu.org/images/160130-rufus_boot_USB.png">
-<meta property="article:published_time" content="2022-04-13T03:53:00.000Z">
-<meta property="article:modified_time" content="2024-07-30T01:49:56.000Z">
+<meta property="article:published_time" content="2014-12-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2015-02-14T16:00:00.000Z">
 <meta property="article:author" content="ted423">
-<meta property="article:tag" content="Document">
-<meta property="article:tag" content="Hardware">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="过时(Outdated)">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Issue">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://nguvu.org/images/160130-rufus_boot_USB.png">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -145,14 +146,14 @@
         
 
             <article itemscope itemtype="https://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/Hardware/9211-8i/">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Issue/Github/Github%20Commit%20failed/">
     <div class="kratos-hentry kratos-page-inner clearfix">
         <header class="kratos-page-header">
             
-                <h1 class="kratos-page-title text-center" itemprop="name headline">记一次Raid卡固件升级(刷IT mode)</h1>
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[Git]处理Github的Commit failed:Failed to create a new commit</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2022-04-13T03:53:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-04-13</time></li>
+                <li><time datetime="2014-12-31T16:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2015-01-01</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -161,7 +162,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~2.32K
+                            243
                         
                         字
                     </li>
@@ -180,22 +181,8 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a target="_blank" rel="noopener" href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p>
-<p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p>
-<p>Copy the following three files from your download to our bootable USB stick.</p>
-<ul>
-<li>sasbios_rel&#x2F;mptsas2.rom</li>
-<li>Firmware&#x2F;HBA_9211_8i_IT&#x2F;2118it.bin</li>
-<li>sas2flsh_dos_rel&#x2F;sas2flsh.exe</li>
-</ul>
-<p>这些文件都放在根目录(不保留文件夹)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">	Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">	Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">	Resetting Adapter...</span><br><span class="line">	Reset Successful!</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">		Firmware Image has a Valid Checksum. </span><br><span class="line">		Firmware Version 20.00.04.00</span><br><span class="line">		Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">		Valid NVDATA Image found. </span><br><span class="line">		NVDATA Version 14.01.00.00 </span><br><span class="line">		Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">		NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">		Valid Initialization Image verified.</span><br><span class="line">		Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Mfg Page 2 Mismatch Detected.</span><br><span class="line">		Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">		Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Performing Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Beginning Firmware Download...</span><br><span class="line">		Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">		Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">		BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">		BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">		BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">		BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">		Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">		Verifying Download...</span><br><span class="line"></span><br><span class="line">		Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">		Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p>
-<p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a target="_blank" rel="noopener" href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p>
-<p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>
+            <div itemprop="articleBody"><p>2015.02.15 确认没再出现类似错误，大概 Github 的 Windows 客户端更新了</p>
+<p>好吧，被坑了好多次，之前都是被搞成了删除项目重建……<br>现在终于搞懂了，是 .git 文件夹里有个 index.lock 的问题…..<br>只要删掉就好了。大概在创建 commit 的时候就会自动生成，但此时如果又更改了项目文件的话，<br>就需要重新生成 commit, 但由于之前已经有了 index.lock（但没生成commit），而 git 不允许 index.lock 的覆盖，所以就卡住了…</p>
 </div>
         </div>
         
@@ -213,10 +200,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Hardware/" rel="tag">Hardware</a>
+                    <a class="tag-none-link" href="/tags/Git/" rel="tag">Git</a>, <a class="tag-none-link" href="/tags/Github/" rel="tag">Github</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E8%BF%87%E6%97%B6-Outdated/" rel="tag">过时(Outdated)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-07-30T01:49:56.000Z" itemprop="dateModified">最后编辑：2024-07-30</time>
+                    <time datetime="2015-02-14T16:00:00.000Z" itemprop="dateModified">最后编辑：2015-02-15</time>
                 </div>
             </div>
         </footer>
@@ -225,19 +212,19 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" bit Byte bibyte(雾) 存储单位，速度单位的一些说明" href="/Document/Mebibyte/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" PSP游戏-战场女武神3 尘封的硝烟 资料索引" href="/Game/战场的女武神/战3资料索引/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" Hexo + Github搭建博客" href="/Code/Hexo github/">下一篇 <i class="fa fa-angle-right"></i></a>
+                <a title=" 种子转磁力链接的简单方法以及磁力链转种子的网页" href="/Document/Network/2magnet/">下一篇 <i class="fa fa-angle-right"></i></a>
             </div>
             
         </nav>
     
     
         <div class="comment-post">
-            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/Hardware/9211-8i/" data-full-path="http://ted423.github.io/Document/Hardware/9211-8i/"></div>
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Issue/Github/Github%20Commit%20failed/" data-full-path="http://ted423.github.io/Issue/Github/Github%20Commit%20failed/"></div>
         </div>
     
 </article>
@@ -271,7 +258,7 @@
                 文章
             </span>
             <span class="count">
-                405
+                404
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -279,7 +266,7 @@
                 分类
             </span>
             <span class="count">
-                15
+                16
             </span>
         </a>
         <a class="meta-item" href="/tags/">
@@ -287,7 +274,7 @@
                 标签
             </span>
             <span class="count">
-                153
+                155
             </span>
         </a>
     </div>
@@ -296,7 +283,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">102</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">40</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">50</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">102</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">3</span></li></ul>
   </aside>
 
 
