@@ -28663,4 +28663,28 @@ $(function () {
         <category>坟场</category>
       </categories>
   </entry>
+  <entry>
+    <title></title>
+    <url>/%E5%9D%9F%E5%9C%BA/Pandownload/</url>
+    <content><![CDATA[<p>Title: Pandownload - 百度云专用下载器<br>tags:Windows,资源类<br>date: 2019-03-10 12:34<br>第三方开发，还是相当好用的，不过有可能会被封。<br>由于会需要在软件内登陆，有一定的盗号风险。<br>会对连接的密码建立数据库，这个功能说实话蛮棒的。<br><a href="https://pandownload.com/">https://pandownload.com</a></p>
+<p>同类软件还有<a href="https://github.com/iikira/BaiduPCS-Go">BaiduPCS-Go</a><br>这个软件是命令行的，上手起来更难<br>不过开源 Apache-2.0</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/%E5%9D%9F%E5%9C%BA/TrixIE%20WPF4.5/</url>
+    <content><![CDATA[<p>title: TrixIE WPF4.5 - Greasemonkey in IE<br>date: 2015-11-23<br>updated: 2015-11-23<br>categories: 坟场<br>由于javascript在IE跟其他浏览器里不一样的地方实在太多、还有GM函数等等因素，所以这个软件用起来还是有点吃力的。<br>尚需发展<br><a href="https://sourceforge.net/projects/trixiewpf45/">https://sourceforge.net/projects/trixiewpf45/</a><br>Description</p>
+<p>Several years ago, there was Trix on <a href="http://www.bhelpuri.net/Trixie/">http://www.bhelpuri.net/Trixie/</a> .<br>But there is no official sites, only a copy of Ver.0.2.3 could be gotton.<br>I got a trouble after I installed IE11.<br>I’ve tried to solve my problem making own Greasemonkey and got it.<br>I’ve looking for the way how my Greasemonkey could be applied on IE11.<br>Then I got Trixie binary and started to rewrite it.</p>
+<p>Features:</p>
+<ul>
+<li>almost same as original Trixie</li>
+<li>single exe file</li>
+<li>self COM register</li>
+<li>WPF options dialog</li>
+<li>cross-domain XmlHttpRequest(GM_xmlhttpRequest) is eliminated</li>
+<li>Google DeLinker Greasemonkey script</li>
+<li>.NET 4.5 required</li>
+</ul>
+]]></content>
+  </entry>
 </search>
