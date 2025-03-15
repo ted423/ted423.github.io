@@ -638,7 +638,9 @@
 <p>意思可以看上面的命令文档，基本等同于<code>hexo g -d</code></p>
 <p>这里有个<a href="https://github.com/hexojs/hexo-deployer-git/issues/381">Issue</a></p>
 <p>第一次使用的时候会需要你输入 username 和 token (虽然显示的是密码，但实际要输入 github token，至于怎么生成就自己去搜索下好了)</p>
-<h1 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h1><h2 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm update --save</span><br></pre></td></tr></table></figure>
+<h1 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h1><h2 id="置顶文章"><a href="#置顶文章" class="headerlink" title="置顶文章"></a>置顶文章</h2><p>最前面使用，数字越大越前面</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">top: 1000</span><br></pre></td></tr></table></figure>
+<h2 id="升级Hexo"><a href="#升级Hexo" class="headerlink" title="升级Hexo"></a>升级Hexo</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm update --save</span><br></pre></td></tr></table></figure>
 <p>(我这好像没成功，因为cli版本其实没有升级，Hexo版本倒是到了6)</p>
 <p>最终是看了这个成功的 –2022-06-29<br><a href="https://novnan.github.io/Hexo/update_hexo/">https://novnan.github.io/Hexo/update_hexo/</a></p>
 <p>而且是试了下就好了，完全没搞懂之前啥毛病。<br>可能跟<code>npm update --save</code>这个有关<br>只有用了这个才会更新项目的npm包</p>
