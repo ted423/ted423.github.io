@@ -5293,6 +5293,12 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 
 <p>这篇文章以前写的，目前建议是<code>sudo</code>或者<code>sudo -i</code>用就好了,新接触Linux者乱进Root反而容易造成混乱 - 2021-07-03</p>
 <p>Debian 默认创建的用户不在 sudoers 中，因此大部分用户可能会比较习惯<code>su root</code> - 2021-07-07<br>原文<a href="http://shewolfep.iteye.com/blog/413396">http://shewolfep.iteye.com/blog/413396</a></p>
+<h1 id="snap"><a href="#snap" class="headerlink" title="snap"></a>snap</h1><p>最新版的 ubuntu 很多软件都塞到 snap 里了，导致了一个问题就是磁盘占用较高。还有就是会有一定的权限限制。</p>
+<p>并且这些软件是 apt 安装的，很多人都是无缝踩坑。</p>
+<p>例如看图软件，之前问了才知道是装到了 snap 里。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">snap list  awk &#x27;NR1 &#123;print $1&#125;&#x27;  xargs -L1 sudo snap remove</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">上面的命令可能要反复跑几遍，因为有依赖第一次卸不掉</span></span><br><span class="line">sudo apt purge snapd -y</span><br><span class="line">sudo sudo apt-mark hold snapd</span><br></pre></td></tr></table></figure>
+
+<p>不过用桌面端的话，个人建议是谨慎清理 snap </p>
 ]]></content>
       <categories>
         <category>Document</category>
@@ -28686,5 +28692,18 @@ $(function () {
 <li>.NET 4.5 required</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>journalctl -b -p err 查找错误用</title>
+    <url>/Linux/journalctl/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">journalctl -b -p err</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Document</tag>
+        <tag>Ubuntu</tag>
+      </tags>
   </entry>
 </search>
