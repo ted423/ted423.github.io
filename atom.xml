@@ -45,6 +45,41 @@
   </entry>
   
   <entry>
+    <title>Wintel 的大小核问题处理</title>
+    <link href="http://ted423.github.io/Hardware/%E5%A4%A7%E5%B0%8F%E6%A0%B8/"/>
+    <id>http://ted423.github.io/Hardware/%E5%A4%A7%E5%B0%8F%E6%A0%B8/</id>
+    <published>2025-03-16T12:55:42.596Z</published>
+    <updated>2025-03-16T13:03:25.514Z</updated>
+    
+    <content type="html"><![CDATA[<p>咋说呢，毕竟 Intel 不太行了，有一个解决方案其实是 AMD YES!</p><p>但架不住，AMD 的品牌机真没几个牌子做，所以 Intel 现在的状态我是真不太理解。</p><p>现在的设计真傻逼，后台就降 cpu 占用。跑编译的估计都在那骂娘。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">powercfg -attributes SUB_PROCESSOR 7f2f5cfa-f10c-4823-b5e1-e93ae85f46b5 -ATTRIB_HIDE</span><br><span class="line">powercfg -attributes SUB_PROCESSOR 93b8b6dc-0698-4d1c-9ee4-0644e900c85d -ATTRIB_HIDE</span><br><span class="line">powercfg -attributes SUB_PROCESSOR bae08b81-2d5e-4688-ad6a-13243356654b -ATTRIB_HIDE</span><br><span class="line">powercfg -attributes SUB_PROCESSOR b28a6829-c5f7-444e-8f61-10e24e85c532 -ATTRIB_HIDE</span><br></pre></td></tr></table></figure><p>然后在电源管理的高级那里改就好了</p><p>资料来源<br><a href="https://www.chiphell.com/thread-2524998-1-1.html">https://www.chiphell.com/thread-2524998-1-1.html</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;咋说呢，毕竟 Intel 不太行了，有一个解决方案其实是 AMD YES!&lt;/p&gt;
+&lt;p&gt;但架不住，AMD 的品牌机真没几个牌子做，所以 Intel 现在的状态我是真不太理解。&lt;/p&gt;
+&lt;p&gt;现在的设计真傻逼，后台就降 cpu 占用。跑编译的估计都在那骂娘。&lt;/p&gt;
+&lt;fi</summary>
+      
+    
+    
+    
+    <category term="Hardware" scheme="http://ted423.github.io/categories/Hardware/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Regedit" scheme="http://ted423.github.io/tags/Regedit/"/>
+    
+  </entry>
+  
+  <entry>
     <title>博客时间线的一些整理</title>
     <link href="http://ted423.github.io/etc/readme/"/>
     <id>http://ted423.github.io/etc/readme/</id>
@@ -91,26 +126,6 @@
     
     
     <category term="Animation" scheme="http://ted423.github.io/tags/Animation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://ted423.github.io/%E5%9D%9F%E5%9C%BA/TrixIE%20WPF4.5/"/>
-    <id>http://ted423.github.io/%E5%9D%9F%E5%9C%BA/TrixIE%20WPF4.5/</id>
-    <published>2025-03-14T14:37:43.648Z</published>
-    <updated>2025-03-15T13:10:36.046Z</updated>
-    
-    <content type="html"><![CDATA[<p>title: TrixIE WPF4.5 - Greasemonkey in IE<br>date: 2015-11-23<br>updated: 2015-11-23<br>categories: 坟场<br>由于javascript在IE跟其他浏览器里不一样的地方实在太多、还有GM函数等等因素，所以这个软件用起来还是有点吃力的。<br>尚需发展<br><a href="https://sourceforge.net/projects/trixiewpf45/">https://sourceforge.net/projects/trixiewpf45/</a><br>Description</p><p>Several years ago, there was Trix on <a href="http://www.bhelpuri.net/Trixie/">http://www.bhelpuri.net/Trixie/</a> .<br>But there is no official sites, only a copy of Ver.0.2.3 could be gotton.<br>I got a trouble after I installed IE11.<br>I’ve tried to solve my problem making own Greasemonkey and got it.<br>I’ve looking for the way how my Greasemonkey could be applied on IE11.<br>Then I got Trixie binary and started to rewrite it.</p><p>Features:</p><ul><li>almost same as original Trixie</li><li>single exe file</li><li>self COM register</li><li>WPF options dialog</li><li>cross-domain XmlHttpRequest(GM_xmlhttpRequest) is eliminated</li><li>Google DeLinker Greasemonkey script</li><li>.NET 4.5 required</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;title: TrixIE WPF4.5 - Greasemonkey in IE&lt;br&gt;date: 2015-11-23&lt;br&gt;updated: 2015-11-23&lt;br&gt;categories: 坟场&lt;br&gt;由于javascript在IE跟其他浏览器里不一样的地方实在太</summary>
-      
-    
-    
-    
     
   </entry>
   

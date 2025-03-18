@@ -28474,66 +28474,6 @@ $(function () {
       </tags>
   </entry>
   <entry>
-    <title>记一次Raid卡固件升级(刷IT mode)</title>
-    <url>/Document/Driver&amp;Firmware/9211-8i/</url>
-    <content><![CDATA[<p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p>
-<p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p>
-<p>Copy the following three files from your download to our bootable USB stick.</p>
-<ul>
-<li>sasbios_rel&#x2F;mptsas2.rom</li>
-<li>Firmware&#x2F;HBA_9211_8i_IT&#x2F;2118it.bin</li>
-<li>sas2flsh_dos_rel&#x2F;sas2flsh.exe</li>
-</ul>
-<p>这些文件都放在根目录(不保留文件夹)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">	Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">	Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">	Resetting Adapter...</span><br><span class="line">	Reset Successful!</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">		Firmware Image has a Valid Checksum. </span><br><span class="line">		Firmware Version 20.00.04.00</span><br><span class="line">		Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">		Valid NVDATA Image found. </span><br><span class="line">		NVDATA Version 14.01.00.00 </span><br><span class="line">		Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">		NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">		Valid Initialization Image verified.</span><br><span class="line">		Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Mfg Page 2 Mismatch Detected.</span><br><span class="line">		Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">		Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Performing Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Beginning Firmware Download...</span><br><span class="line">		Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">		Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">		BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">		BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">		BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">		BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">		Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">		Verifying Download...</span><br><span class="line"></span><br><span class="line">		Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">		Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p>
-<p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p>
-<p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>
-]]></content>
-      <categories>
-        <category>Document</category>
-      </categories>
-      <tags>
-        <tag>Document</tag>
-        <tag>Driver&amp;Firmware</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</title>
-    <url>/Document/Driver&amp;Firmware/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/</url>
-    <content><![CDATA[<p>不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动</p>
-<h1 id="Widnows-7"><a href="#Widnows-7" class="headerlink" title="Widnows 7"></a>Widnows 7</h1><h2 id="改AHCI"><a href="#改AHCI" class="headerlink" title="改AHCI"></a>改AHCI</h2><p>找到下面的注册表子项：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci</span><br></pre></td></tr></table></figure>
-<p>在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)<br><strong>0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态</strong></p>
-<h2 id="改IDE"><a href="#改IDE" class="headerlink" title="改IDE"></a>改IDE</h2><p>是找到</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide</span><br></pre></td></tr></table></figure>
-<h2 id="改RAID"><a href="#改RAID" class="headerlink" title="改RAID"></a>改RAID</h2><p>强烈鄙视HP Z200，硬盘模式只有IDE和RAID+AHCI，结果只有AHCI的驱动还不行</p>
-<h2 id="VM-SCSi"><a href="#VM-SCSi" class="headerlink" title="VM SCSi"></a>VM SCSi</h2><p><a href="https://kb.vmware.com/s/article/1005208">https://kb.vmware.com/s/article/1005208</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\iaStorV</span><br></pre></td></tr></table></figure>
-<p><strong>注意最后是V哈</strong></p>
-<h1 id="Windows-8-Windows-10"><a href="#Windows-8-Windows-10" class="headerlink" title="Windows 8 - Windows 10"></a>Windows 8 - Windows 10</h1><p>AHCI则是找到如下注册表</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\StartOverride\</span><br></pre></td></tr></table></figure>
-<p>把0的值由3改为0</p>
-<p>然后就可以在BIOS里更改为AHCI了，之后等驱动装完后重启几次就好了<br>IDE则和Win7下没有区别。</p>
-<p>RAID还没没试过，所以暂没有<br>Windows 10似乎在不改注册表的情况下，通过进安全模式来安装驱动。(一台HP Z200里的Win10就是这么操作成功的)</p>
-<hr>
-<p><time>2023-03-04</time>增加实体机转VM的修改</p>
-]]></content>
-      <categories>
-        <category>Document</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>Document</tag>
-        <tag>Issue</tag>
-        <tag>Regedit</tag>
-        <tag>Driver&amp;Firmware</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>[Git]处理Github的Commit failed:Failed to create a new commit</title>
     <url>/Issue/Github/Github%20Commit%20failed/</url>
     <content><![CDATA[<p>2015.02.15 确认没再出现类似错误，大概 Github 的 Windows 客户端更新了</p>
@@ -28579,22 +28519,6 @@ $(function () {
         <tag>Github</tag>
         <tag>Issue</tag>
         <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>6、7代U装Windows 7强装显卡驱动</title>
-    <url>/Document/Driver&amp;Firmware/67%E4%BB%A3U%E5%BC%BA%E8%A3%85%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</url>
-    <content><![CDATA[<p><a href="https://forums.intel.com/s/question/0D50P0000490QnOSAU/cant-find-correct-graphics-driver-for-windows-7?language=en_US">https://forums.intel.com/s/question/0D50P0000490QnOSAU/cant-find-correct-graphics-driver-for-windows-7?language=en_US</a></p>
-<p>本身Intel没有提供Windows 7下的核显驱动，一个方法就是下载Windows的驱动，然后通过改igdlh.inf的方式来强行安装。<br>替换打星号的部分(也就是内容)其他部分不要动到</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;=====================================================================</span><br><span class="line"></span><br><span class="line">; Windows 7 Install - DT Only</span><br><span class="line"></span><br><span class="line">;=====================================================================</span><br><span class="line"></span><br><span class="line">[IntelGfx.NTamd64.6.1]</span><br><span class="line"></span><br><span class="line">; SKL HW</span><br><span class="line"></span><br><span class="line">***** REPLACE ********</span><br><span class="line"></span><br><span class="line">;=====================================================================</span><br><span class="line"></span><br><span class="line">; Windows Threshold Install - DT + Mobile</span><br><span class="line"></span><br><span class="line">;=====================================================================</span><br><span class="line"></span><br><span class="line">[IntelGfx.NTamd64.10.0]</span><br><span class="line"></span><br><span class="line">; SKL HW</span><br><span class="line"></span><br><span class="line">***** WITH THIS ********</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Hardware</category>
-      </categories>
-      <tags>
-        <tag>Windows</tag>
-        <tag>Document</tag>
-        <tag>Issue</tag>
-        <tag>Driver&amp;Firmware</tag>
       </tags>
   </entry>
   <entry>
@@ -28677,9 +28601,9 @@ $(function () {
 ]]></content>
   </entry>
   <entry>
-    <title></title>
+    <title>TrixIE WPF4.5 - Greasemonkey in IE</title>
     <url>/%E5%9D%9F%E5%9C%BA/TrixIE%20WPF4.5/</url>
-    <content><![CDATA[<p>title: TrixIE WPF4.5 - Greasemonkey in IE<br>date: 2015-11-23<br>updated: 2015-11-23<br>categories: 坟场<br>由于javascript在IE跟其他浏览器里不一样的地方实在太多、还有GM函数等等因素，所以这个软件用起来还是有点吃力的。<br>尚需发展<br><a href="https://sourceforge.net/projects/trixiewpf45/">https://sourceforge.net/projects/trixiewpf45/</a><br>Description</p>
+    <content><![CDATA[<p>由于javascript在IE跟其他浏览器里不一样的地方实在太多、还有GM函数等等因素，所以这个软件用起来还是有点吃力的。<br>尚需发展<br><a href="https://sourceforge.net/projects/trixiewpf45/">https://sourceforge.net/projects/trixiewpf45/</a><br>Description</p>
 <p>Several years ago, there was Trix on <a href="http://www.bhelpuri.net/Trixie/">http://www.bhelpuri.net/Trixie/</a> .<br>But there is no official sites, only a copy of Ver.0.2.3 could be gotton.<br>I got a trouble after I installed IE11.<br>I’ve tried to solve my problem making own Greasemonkey and got it.<br>I’ve looking for the way how my Greasemonkey could be applied on IE11.<br>Then I got Trixie binary and started to rewrite it.</p>
 <p>Features:</p>
 <ul>
@@ -28692,6 +28616,9 @@ $(function () {
 <li>.NET 4.5 required</li>
 </ul>
 ]]></content>
+      <categories>
+        <category>坟场</category>
+      </categories>
   </entry>
   <entry>
     <title>journalctl -b -p err 查找错误用</title>
@@ -28704,6 +28631,109 @@ $(function () {
         <tag>Linux</tag>
         <tag>Document</tag>
         <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记一次Raid卡固件升级(刷IT mode)</title>
+    <url>/Hardware/9211-8i/</url>
+    <content><![CDATA[<p>当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程<a href="https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/">https://nguvu.org/freenas/Convert-LSI-HBA-card-to-IT-mode/</a></p>
+<p>主要步骤<br>rufus写Freedos到USB盘<br><img src="https://nguvu.org/images/160130-rufus_boot_USB.png" alt="rufus"></p>
+<p>Copy the following three files from your download to our bootable USB stick.</p>
+<ul>
+<li>sasbios_rel&#x2F;mptsas2.rom</li>
+<li>Firmware&#x2F;HBA_9211_8i_IT&#x2F;2118it.bin</li>
+<li>sas2flsh_dos_rel&#x2F;sas2flsh.exe</li>
+</ul>
+<p>这些文件都放在根目录(不保留文件夹)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -e 6 </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Erase Flash</span><br><span class="line"></span><br><span class="line">	Erasing Flash Region...</span><br><span class="line"></span><br><span class="line">	Erase Flash Operation Successful!</span><br><span class="line"></span><br><span class="line">	Resetting Adapter...</span><br><span class="line">	Reset Successful!</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">C:\SAS2FLSH.EXE -o -f 2118it.bin -b mptsas2.rom </span><br><span class="line">	Advanced Mode Set</span><br><span class="line"></span><br><span class="line">	Adapter Selected is a LSI SAS: SAS2008(B2)   </span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash Firmware Image</span><br><span class="line"></span><br><span class="line">		Firmware Image has a Valid Checksum. </span><br><span class="line">		Firmware Version 20.00.04.00</span><br><span class="line">		Firmware Image compatible with Controller. </span><br><span class="line"></span><br><span class="line">		Valid NVDATA Image found. </span><br><span class="line">		NVDATA Version 14.01.00.00 </span><br><span class="line">		Checking for a compatible NVData image... </span><br><span class="line"></span><br><span class="line">		NVDATA Device ID and Chip Revision match verified.</span><br><span class="line">		Valid Initialization Image verified.</span><br><span class="line">		Valid BootLoader Image verified.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Attempting Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Mfg Page 2 Mismatch Detected.</span><br><span class="line">		Writing Current Mfg Page 2 Settings to NVRAM.</span><br><span class="line">		Updated Mfg Page 2.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">		Chip is in RESET state. Performing Host Boot...</span><br><span class="line">		Firmware Host Boot Successful.</span><br><span class="line"></span><br><span class="line">		Beginning Firmware Download...</span><br><span class="line">		Firmware Download Successful.</span><br><span class="line"></span><br><span class="line">		Resetting Adapter...</span><br><span class="line">		Adapter Successfully Reset.</span><br><span class="line"></span><br><span class="line">	Executing Operation: Flash BIOS Image</span><br><span class="line"></span><br><span class="line">		Validating BIOS Image...</span><br><span class="line"></span><br><span class="line">		BIOS Header Signature is Valid</span><br><span class="line"></span><br><span class="line">		BIOS Image has a Valid Checksum. </span><br><span class="line"></span><br><span class="line">		BIOS PCI Structure Signature Valid.</span><br><span class="line"></span><br><span class="line">		BIOS Image Compatible with the SAS Controller.</span><br><span class="line"></span><br><span class="line">		Attempting to Flash BIOS Image...</span><br><span class="line"></span><br><span class="line">		Verifying Download...</span><br><span class="line"></span><br><span class="line">		Flash BIOS Image Successful.</span><br><span class="line"></span><br><span class="line">		Updated BIOS Version in BIOS Page 3.</span><br><span class="line"></span><br><span class="line">	Finished Processing Commands Successfully.</span><br><span class="line">	Exiting SAS2Flash.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是broadcom里搜索比较坑，不要分词搜，要一个字符串搜，例如”9211_8i_Package_P20”,否则你就会搜不到东西</p>
+<p>可惜我失败了(我应该是放错了exe导致的，我放了x64的，应该放dos的)<br>我按步骤之后执行就遇到了<a href="https://serverfault.com/questions/679175/failed-to-initialize-pal-while-upgrading-an-lsi-9211-8i-to-it">ERROR: Failed to initialize PAL. Exiting program.</a></p>
+<p>然后我找了”installer_p20_for_uefi” 在EFI shell下完成了此次更新</p>
+]]></content>
+      <categories>
+        <category>Hardware</category>
+      </categories>
+      <tags>
+        <tag>Document</tag>
+        <tag>Hardware</tag>
+        <tag>Driver&amp;Firmware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Wintel 的大小核问题处理</title>
+    <url>/Hardware/%E5%A4%A7%E5%B0%8F%E6%A0%B8/</url>
+    <content><![CDATA[<p>咋说呢，毕竟 Intel 不太行了，有一个解决方案其实是 AMD YES!</p>
+<p>但架不住，AMD 的品牌机真没几个牌子做，所以 Intel 现在的状态我是真不太理解。</p>
+<p>现在的设计真傻逼，后台就降 cpu 占用。跑编译的估计都在那骂娘。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">powercfg -attributes SUB_PROCESSOR 7f2f5cfa-f10c-4823-b5e1-e93ae85f46b5 -ATTRIB_HIDE</span><br><span class="line">powercfg -attributes SUB_PROCESSOR 93b8b6dc-0698-4d1c-9ee4-0644e900c85d -ATTRIB_HIDE</span><br><span class="line">powercfg -attributes SUB_PROCESSOR bae08b81-2d5e-4688-ad6a-13243356654b -ATTRIB_HIDE</span><br><span class="line">powercfg -attributes SUB_PROCESSOR b28a6829-c5f7-444e-8f61-10e24e85c532 -ATTRIB_HIDE</span><br></pre></td></tr></table></figure>
+
+<p>然后在电源管理的高级那里改就好了</p>
+<p>资料来源<br><a href="https://www.chiphell.com/thread-2524998-1-1.html">https://www.chiphell.com/thread-2524998-1-1.html</a></p>
+]]></content>
+      <categories>
+        <category>Hardware</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Document</tag>
+        <tag>Hardware</tag>
+        <tag>Issue</tag>
+        <tag>Regedit</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6、7代U装Windows 7强装显卡驱动</title>
+    <url>/Hardware/67%E4%BB%A3U%E5%BC%BA%E8%A3%85%E6%98%BE%E5%8D%A1%E9%A9%B1%E5%8A%A8/</url>
+    <content><![CDATA[<p>过时主要是6代7代和Win7都成为历史眼泪了</p>
+<p><a href="https://forums.intel.com/s/question/0D50P0000490QnOSAU/cant-find-correct-graphics-driver-for-windows-7?language=en_US">https://forums.intel.com/s/question/0D50P0000490QnOSAU/cant-find-correct-graphics-driver-for-windows-7?language=en_US</a></p>
+<p>本身Intel没有提供Windows 7下的核显驱动，一个方法就是下载Windows的驱动，然后通过改igdlh.inf的方式来强行安装。<br>替换打星号的部分(也就是内容)其他部分不要动到</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;=====================================================================</span><br><span class="line"></span><br><span class="line">; Windows 7 Install - DT Only</span><br><span class="line"></span><br><span class="line">;=====================================================================</span><br><span class="line"></span><br><span class="line">[IntelGfx.NTamd64.6.1]</span><br><span class="line"></span><br><span class="line">; SKL HW</span><br><span class="line"></span><br><span class="line">***** REPLACE ********</span><br><span class="line"></span><br><span class="line">;=====================================================================</span><br><span class="line"></span><br><span class="line">; Windows Threshold Install - DT + Mobile</span><br><span class="line"></span><br><span class="line">;=====================================================================</span><br><span class="line"></span><br><span class="line">[IntelGfx.NTamd64.10.0]</span><br><span class="line"></span><br><span class="line">; SKL HW</span><br><span class="line"></span><br><span class="line">***** WITH THIS ********</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Hardware</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>过时(Outdated)</tag>
+        <tag>Document</tag>
+        <tag>Hardware</tag>
+        <tag>Issue</tag>
+        <tag>Driver&amp;Firmware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏</title>
+    <url>/Hardware/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/</url>
+    <content><![CDATA[<p>不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动</p>
+<h1 id="Widnows-7"><a href="#Widnows-7" class="headerlink" title="Widnows 7"></a>Widnows 7</h1><h2 id="改AHCI"><a href="#改AHCI" class="headerlink" title="改AHCI"></a>改AHCI</h2><p>找到下面的注册表子项：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci</span><br></pre></td></tr></table></figure>
+<p>在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)<br><strong>0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态</strong></p>
+<h2 id="改IDE"><a href="#改IDE" class="headerlink" title="改IDE"></a>改IDE</h2><p>是找到</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\pciide</span><br></pre></td></tr></table></figure>
+<h2 id="改RAID"><a href="#改RAID" class="headerlink" title="改RAID"></a>改RAID</h2><p>强烈鄙视HP Z200，硬盘模式只有IDE和RAID+AHCI，结果只有AHCI的驱动还不行</p>
+<h2 id="VM-SCSi"><a href="#VM-SCSi" class="headerlink" title="VM SCSi"></a>VM SCSi</h2><p><a href="https://kb.vmware.com/s/article/1005208">https://kb.vmware.com/s/article/1005208</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\iaStorV</span><br></pre></td></tr></table></figure>
+<p><strong>注意最后是V哈</strong></p>
+<h1 id="Windows-8-Windows-10"><a href="#Windows-8-Windows-10" class="headerlink" title="Windows 8 - Windows 10"></a>Windows 8 - Windows 10</h1><p>AHCI则是找到如下注册表</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\StartOverride\</span><br></pre></td></tr></table></figure>
+<p>把0的值由3改为0</p>
+<p>然后就可以在BIOS里更改为AHCI了，之后等驱动装完后重启几次就好了<br>IDE则和Win7下没有区别。</p>
+<p>RAID还没没试过，所以暂没有<br>Windows 10似乎在不改注册表的情况下，通过进安全模式来安装驱动。(一台HP Z200里的Win10就是这么操作成功的)</p>
+<hr>
+<p><time>2023-03-04</time>增加实体机转VM的修改</p>
+]]></content>
+      <categories>
+        <category>Hardware</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Document</tag>
+        <tag>Hardware</tag>
+        <tag>Issue</tag>
+        <tag>Regedit</tag>
+        <tag>Driver&amp;Firmware</tag>
       </tags>
   </entry>
 </search>
