@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-03-17T03:38:17.861Z</updated>
+  <updated>2025-03-25T07:44:13.855Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ted423.github.io/Linux/journalctl/"/>
     <id>http://ted423.github.io/Linux/journalctl/</id>
     <published>2025-03-17T03:33:23.451Z</published>
-    <updated>2025-03-17T03:38:17.861Z</updated>
+    <updated>2025-03-25T07:44:13.855Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">journalctl -b -p err</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -39,8 +39,6 @@
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
     
   </entry>
   
