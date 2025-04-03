@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-04-02T15:54:34.000Z</updated>
+  <updated>2025-04-03T08:31:24.374Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
     <published>2025-04-02T15:55:36.669Z</published>
-    <updated>2025-04-02T15:54:34.000Z</updated>
+    <updated>2025-04-03T08:31:24.374Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>需要注意它的安装包分为 User 和全局的，全局的要管理员权限安装。普通用户用 User 的就好</p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><p>问题有</p><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西(到现在还没完全解决)</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。<del>(最后发现是 Ditto 的问题)</del>(并不)</li><li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)</li></ul><p>配置项</p><p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)</p><p>我觉得它的设置项过于复杂到 SB 的程度了。</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>需要注意它的安装包分为 User 和全局的，全局的要管理员权限安装。普通用户用 User 的就好</p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><p>问题有</p><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西(到现在还没完全解决)</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。<del>(最后发现是 Ditto 的问题)</del>(并不)</li><li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任<br>(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)<br>我最终把工作区信任整个给关了。可能 VSCode 是把信任工作区和信任文件夹给分开的。开启的话，新打开的窗口默认就算不受信任的工作区。</li></ul><p>配置项</p><p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)</p><p>我觉得它的设置项过于复杂到 SB 的程度了。</p>]]></content>
     
     
       
