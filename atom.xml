@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-03-25T07:44:13.855Z</updated>
+  <updated>2025-04-02T15:54:34.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode</title>
+    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
+    <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
+    <published>2025-04-02T15:55:36.669Z</published>
+    <updated>2025-04-02T15:54:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>需要注意它的安装包分为 User 和全局的，全局的要管理员权限安装。普通用户用 User 的就好</p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><p>问题有</p><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西(到现在还没完全解决)</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。<del>(最后发现是 Ditto 的问题)</del>(并不)</li><li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)</li></ul><p>配置项</p><p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)</p><p>我觉得它的设置项过于复杂到 SB 的程度了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;https://code.visualstudio.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/microsoft/vscode&quot;&gt;https://g</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
+    
+  </entry>
   
   <entry>
     <title>journalctl -b -p err 查找错误用</title>
@@ -538,36 +569,6 @@
     <category term="HD" scheme="http://ted423.github.io/tags/HD/"/>
     
     <category term="720p" scheme="http://ted423.github.io/tags/720p/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[性感MV]AOA - Miniskirt</title>
-    <link href="http://ted423.github.io/Video/AOA%20-%20Miniskirt/"/>
-    <id>http://ted423.github.io/Video/AOA%20-%20Miniskirt/</id>
-    <published>2025-01-10T06:47:11.453Z</published>
-    <updated>2015-12-27T07:44:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://vignette.wikia.nocookie.net/kpop/images/c/c7/AOA_Miniskirt_Japanese_digital_cover.png/revision/latest?cb%5Cu003d20170903202225" alt="AOA - Miniskirt"><br>来源<br><a href="ed2k://|file|AOA%20-%20Miniskirt.mp4|91430286|8FA1C148DB79EB06C901D35D86B84D1A|h=4E5QHRZEKI2LBPOG4PKQSKNUOFCHSPNE|/">ed2k://|file|AOA%20-%20Miniskirt.mp4|91430286|8FA1C148DB79EB06C901D35D86B84D1A|h=4E5QHRZEKI2LBPOG4PKQSKNUOFCHSPNE|/</a></p><p>网盘分流<br><a href="https://mega.nz/#!fxMG2SbL!MmSnfOPg6HcO6P-bxAjLiQuYbgBjSIsjBo7rZLxwNVg">https://mega.nz/#!fxMG2SbL!MmSnfOPg6HcO6P-bxAjLiQuYbgBjSIsjBo7rZLxwNVg</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://vignette.wikia.nocookie.net/kpop/images/c/c7/AOA_Miniskirt_Japanese_digital_cover.png/revision/latest?cb%5Cu003d2017090</summary>
-      
-    
-    
-    
-    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
-    
-    
-    <category term="FHD" scheme="http://ted423.github.io/tags/FHD/"/>
-    
-    <category term="1080p" scheme="http://ted423.github.io/tags/1080p/"/>
-    
-    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
-    
-    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
     
   </entry>
   

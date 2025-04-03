@@ -8616,8 +8616,16 @@ font-size: 0.78em;
   <entry>
     <title>Windows 的 X11 问题</title>
     <url>/Software/X11/</url>
-    <content><![CDATA[<p>其实就是被坑了，网上搜的大部分教程都是 Linux的，虽然报错都是 <code>Gtk-WARNING **: cannot open display: </code>，但实际Win 的 X11 的显示需要本地客户端支持，而实际 Win 的 ssh 自身不支持 X11，MobaXterm 自身集成了所以支持，putty 这种虽然有 X11 设置，但他自身并不直接支持，你需要装个 Xming 。</p>
-<p>目前还没细想 Linux 的 ssh 是不是自身就支持。</p>
+    <content><![CDATA[<h1 id="OLD"><a href="#OLD" class="headerlink" title="OLD"></a>OLD</h1><p>其实就是被坑了，网上搜的大部分教程都是 Linux 的，虽然报错都是 <code>Gtk-WARNING **: cannot open display: </code>，但实际Win 的 X11 的显示需要本地客户端支持，而实际 Win 的 ssh 自身不支持 X11，MobaXterm 自身集成了所以支持，putty 这种虽然有 X11 设置，但他自身并不直接支持，你需要装个 <del>Xming 。</del></p>
+<p><del>目前还没细想 Linux 的 ssh 是不是自身就支持。</del>（不是）</p>
+<hr>
+<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
+<li>Xming 其实很久没维护了，应该装<a href="https://github.com/marchaesen/vcxsrv">vcxsrv</a></li>
+<li>X11 的本地才是服务器端，远端是客户端，客户端连上服务器端在服务器端显示界面</li>
+<li>另外需要注意就是默认的 Windows 下面会一直报<code>X11 forwarding requested but DISPLAY not set</code>,正常应该是 ssh 向远程请求 X11 转发，然后远程的 sshd 配置环境变量。(测试 Linux 跟 MobaXterm 都正常)</li>
+</ol>
+<p>比较坑的就是手动设个 <code>export DISPLAY=localhost:10</code> 之后就可以了。查询 OSX 好像也有类似的问题。你可以尝试写到 .bashrc 里，我没这么做，因为没找到 root cause</p>
+<p>可能跟兼容性有关吧。</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -21031,9 +21039,11 @@ Poppler - PDF函式库
 <li>设置项一堆，然后网页搜索经常搜到过时的东西</li>
 <li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li>
 <li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。<del>(最后发现是 Ditto 的问题)</del>(并不)</li>
+<li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)</li>
 </ul>
 <p>配置项</p>
 <p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)</p>
+<p>我觉得它的设置项过于复杂到 SB 的程度了。</p>
 ]]></content>
       <categories>
         <category>Software</category>
