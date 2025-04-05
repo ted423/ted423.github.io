@@ -6341,14 +6341,14 @@
 <p>配置的一下问题可以看下这里<br><a href="https://github.com/fi3ework/hexo-theme-archer/issues/304">https://github.com/fi3ework/hexo-theme-archer/issues/304</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> hexo algolia --help</span><br><span class="line">INFO  Validating config</span><br><span class="line">Usage: hexo algolia</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line">Index your content in Algolia Search API</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">  --dry-run       Does not push content to Algolia (default: false).</span><br><span class="line">  --flush         Resets the Algolia index before starting the indexation (default: false).</span><br><span class="line">  --indexing-key  An algolia API key with add/delete records permissions.</span><br><span class="line">                  It should be different than the search-only API key configured in _config.yml.</span><br><span class="line">  --layouts       A comma-separated list of page layouts to index (default: &quot;page&quot;).</span><br></pre></td></tr></table></figure>
 <p>flush 什么的，很少有教程说，不过文件换路径会非常有用</p>
-<h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><h2 id="命令文档"><a href="#命令文档" class="headerlink" title="命令文档"></a>命令文档</h2><p><a href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a></p>
-<h2 id="相对连接"><a href="#相对连接" class="headerlink" title="相对连接"></a>相对连接</h2><p><a href="https://hexo.io/zh-cn/docs/asset-folders">https://hexo.io/zh-cn/docs/asset-folders</a></p>
+<h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p>命令文档<br><a href="https://hexo.io/zh-cn/docs/commands.html">https://hexo.io/zh-cn/docs/commands.html</a></p>
+<p>相对连接<br><a href="https://hexo.io/zh-cn/docs/asset-folders">https://hexo.io/zh-cn/docs/asset-folders</a></p>
 <h1 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h1><ul>
 <li>网页有缓存，有时候 Github 更新页面没那么快</li>
 <li>hexo 的相对链接只能在图片或者<code>[]()</code>里使用，<code>&lt;&gt;</code>里不会解析</li>
 <li>Win 不区分大小写，文件名或者 tag 可能会造成问题，处理时需要手动删文件或文件夹（包括 public .git_deploy 里的），还要删掉 db.json</li>
 <li>LF CRLF 可以看下博客的 <a href="/Code/Git/git%20eol">git换行符问题</a>，可以在 .git_deploy 里弄</li>
-<li>默认坑爹配置 hexo-renderer-marked 的 <a href="https://github.com/hexojs/hexo-renderer-marked">smartypants</a>,看 README 就好</li>
+<li>默认坑爹配置 hexo-renderer-marked 的 <a href="https://github.com/hexojs/hexo-renderer-marked">smartypants</a>,看 README 就好，另外记得改了后还得<code>hexo clean</code></li>
 </ul>
 <hr>
 <p><time datetime="2025-03-15">2025-03-15</time> 可读性顺序调整，增加置顶的一些说明，集成了之前 Hexo 精简的文章</p>
