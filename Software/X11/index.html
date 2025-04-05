@@ -27,7 +27,7 @@
 <meta property="og:description" content="OLD其实就是被坑了，网上搜的大部分教程都是 Linux 的，虽然报错都是 Gtk-WARNING **: cannot open display: ，但实际Win 的 X11 的显示需要本地客户端支持，而实际 Win 的 ssh 自身不支持 X11，MobaXterm 自身集成了所以支持，putty 这种虽然有 X11 设置，但他自身并不直接支持，你需要装个 Xming 。 目前还没细想 Lin">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-10T06:47:07.139Z">
-<meta property="article:modified_time" content="2025-04-03T08:25:21.507Z">
+<meta property="article:modified_time" content="2025-04-03T09:28:42.090Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Issue">
@@ -160,7 +160,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            586
+                            633
                         
                         字
                     </li>
@@ -190,6 +190,7 @@
 <p>我甚至试了两个不同的远端 Linux 系统证明不是 Ubuntu 的问题</p>
 <p>比较坑的就是手动设个 <code>export DISPLAY=localhost:10</code> 之后就可以了。查询 OSX 好像也有类似的问题。你可以尝试写到 .bashrc 里，我没这么做，因为没找到 root cause</p>
 <p>可能跟兼容性有关吧。</p>
+<p>另外测试 putty 是OK的，只要勾上 Enable X11 fowarding 就可以了</p>
 </div>
         </div>
         
@@ -210,7 +211,7 @@
                     <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-04-03T08:25:21.507Z" itemprop="dateModified">最后编辑：2025-04-03</time>
+                    <time datetime="2025-04-03T09:28:42.090Z" itemprop="dateModified">最后编辑：2025-04-03</time>
                 </div>
             </div>
         </footer>
