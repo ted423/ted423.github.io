@@ -6290,12 +6290,12 @@
     <title>Hexo + Github搭建博客</title>
     <url>/Code/Hexo%20github/</url>
     <content><![CDATA[<p>Hexo可以作为一个Server使用(<code>hexo server</code>运行), <code>hexo-deployer-git</code>是官方开发的插件用于 Github 上搭建博客。</p>
-<h1 id="需要的环境"><a href="#需要的环境" class="headerlink" title="需要的环境"></a>需要的环境</h1><p>Hexo 基于 node.js ,故需要先装 nodejs(包含npm)。推荐装LTS的。</p>
+<h1 id="安装以及部署"><a href="#安装以及部署" class="headerlink" title="安装以及部署"></a>安装以及部署</h1><h2 id="Github上的操作"><a href="#Github上的操作" class="headerlink" title="Github上的操作"></a>Github上的操作</h2><p>新增一个仓库（Repositories）,仓库名为yourname.github.io</p>
+<h2 id="本地操作"><a href="#本地操作" class="headerlink" title="本地操作"></a>本地操作</h2><h3 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h3><p>Hexo 基于 node.js ,故需要先装 nodejs(包含npm)。推荐装LTS的。</p>
 <p>部署到 Github，需要手动安装 git，并确保 git 版本是最新的。</p>
 <p>最好了解下<a href="https://docs.npmjs.com/cli/v8/commands/npm-init">nodejs项目</a></p>
-<p>请注意 hexo-deployer-git 第一次登陆时不能设置 Socks5代理(蛋疼的是中文 cmd 下显示乱码)，实际显示的是<code>ServicePointManager 不支持具有 socks5 方案的代理</code> ---<time datetime="2023-07-18">2023-07-18</time></p>
-<h1 id="安装以及部署"><a href="#安装以及部署" class="headerlink" title="安装以及部署"></a>安装以及部署</h1><h2 id="Github上的操作"><a href="#Github上的操作" class="headerlink" title="Github上的操作"></a>Github上的操作</h2><p>新增一个仓库（Repositories）,仓库名为yourname.github.io</p>
-<h2 id="本地操作"><a href="#本地操作" class="headerlink" title="本地操作"></a>本地操作</h2><h3 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>请注意 hexo-deployer-git 第一次登陆时不能设置 Socks5 代理(蛋疼的是中文 cmd 下显示乱码)，实际显示的是<code>ServicePointManager 不支持具有 socks5 方案的代理</code> ---<time datetime="2023-07-18">2023-07-18</time></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 <p>创建文件夹并进入</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>其中<code>-g</code>是<code>--global</code>的简写，使用后是安装到系统中，你可以在任何地方使用Hexo命令，而下面则是将<code>hexo-deployer-git</code>直接安装到文件夹(项目中)</p>
@@ -6308,9 +6308,10 @@
 <p>另外注意可以加上 username 跟 mail</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">name: [git user]</span><br><span class="line">email: [git email]</span><br></pre></td></tr></table></figure>
 
-<h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><p><code>.\source\_posts</code><br>这里放的博客文本，<code> hexo new [layout] &lt;title&gt;</code><br>用于生成一个新博客。<br>不过一般我会手动建</p>
-<h3 id="安装一个主题"><a href="#安装一个主题" class="headerlink" title="安装一个主题"></a>安装一个主题</h3><p>这个就自己折腾吧,很多主题还要装依赖<br>还有很多的坑</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<h3 id="文章、主题以及部署"><a href="#文章、主题以及部署" class="headerlink" title="文章、主题以及部署"></a>文章、主题以及部署</h3><p><code>.\source\_posts</code><br>这里放的博客文本，<code> hexo new [layout] &lt;title&gt;</code><br>用于生成一个新博客。<br>不过一般我会手动建</p>
+<p>安装主题就自己折腾吧,很多主题还要装依赖<br>还有很多的坑</p>
+<p>部署命令是</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
 <p>意思可以看上面的命令文档，基本等同于<code>hexo g -d</code></p>
 <p>这里有个<a href="https://github.com/hexojs/hexo-deployer-git/issues/381">Issue</a></p>
 <p>第一次使用的时候会需要你输入 username 和 token (虽然显示的是密码，但实际要输入 github token，至于怎么生成就自己去搜索下好了)</p>
