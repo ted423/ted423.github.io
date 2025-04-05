@@ -159,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            499
+                            509
                         
                         字
                     </li>
@@ -183,7 +183,7 @@
 <p>无签名的UTF8：</p>
 <p>相反，无签名的UTF8是在保存的时候，不再文件头部写入文件的编码格式。</p>
 <p>那么文件编码需要消耗多少空间呢？ —— 答案是3个字节。</p>
-<p><span style="font-weight:bold">BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。<br>请注意，PHP里请勿使用带签名的UTF-8编码来保存(我用过，结果只有FF显示正常，甚至网页源代码也看起来正常，但由于用了require，估计把”EF BB BF”这三个字节输入到文档中了，chrome居然解析出俩双引号)</span></p>
+<p><span style="font-weight:bold">BTW:在UTF-8中使用EF BB BF三个字节BOM是微软私下的处理方式，在其他有些情况下会直接将这三个字节内容作为数据处理，造成程序的异常。在带与不带BOM（Byte Order Mark）的问题上，还需要更多的考虑。<br>请注意，PHP里请勿使用带签名的UTF-8编码来保存(我用过，结果只有FF显示正常，甚至网页源代码也看起来正常，但由于用了require，估计把&quot;EF BB BF&quot;这三个字节输入到文档中了，chrome居然解析出俩双引号)</span></p>
 <p>原文:<a target="_blank" rel="noopener" href="http://blog.useasp.net/archive/2012/04/21/The_different_between_Sign_utf8_to_unsign_utf8.aspx">http://blog.useasp.net/archive/2012/04/21/The_different_between_Sign_utf8_to_unsign_utf8.aspx</a></p>
 </div>
         </div>

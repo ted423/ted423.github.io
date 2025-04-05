@@ -160,7 +160,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1468
+                            1472
                         
                         字
                     </li>
@@ -185,9 +185,9 @@
 <p>另一个就是专门的显卡欺骗器</p>
 <h1 id="x11-Forward"><a href="#x11-Forward" class="headerlink" title="x11 Forward"></a>x11 Forward</h1><h2 id="Mobaxterm"><a href="#Mobaxterm" class="headerlink" title="Mobaxterm"></a>Mobaxterm</h2><p>我对x11最初的印象就是结束了之后就再也连不上了(其实现在也是)<br>连接开始之前黑半天，然后好不容易连上了，关掉就再也连不回去。(并且结束会导致桌面close，上面的所有进程都会结束)<br>在对端开机不登录的情况下 使用x11的时候，对端无法进行登录操作(大概登录管理器无法启动桌面？)结束后正常。<br>在对端登录的情况下，Mobaxterm无法使用x11显示画面。其实我没太理解Mobaxterm是怎么做的，起码其他的地方查了很少有显示整个桌面的教程，大多都是程序的Forwarding</p>
 <h2 id="x2go"><a href="#x2go" class="headerlink" title="x2go"></a>x2go</h2><p>利用x2go也可以用x11，不过比较奇葩的是他不会创建桌面。也就是对端不登陆他不会自己创建(跟Mobaxterm刚好相反)<br>可以利用x2go 直接创建桌面之后再用x11，不过显示效果并不如直接nx协议连。(x2go创建的桌面不会在关闭时结束，但是对端登录是看不到的，两个桌面)<br>进程里可以看到 &#x2F;usr&#x2F;bin&#x2F;x2goruncommand 启动的session</p>
-<h1 id="NX协议相关"><a href="#NX协议相关" class="headerlink" title="NX协议相关"></a>NX协议相关</h1><h2 id="Nomachine"><a href="#Nomachine" class="headerlink" title="Nomachine"></a>Nomachine</h2><p>Nomachine在一些服务器上好好的，但在那种台式机上，intel i3-6100带核显和一台独显机子都出现了不接显示器卡顿的问题，<del>原因不明</del><br>同样环境x2go正常<br>但是他会导致家用机(Nvdia显卡)在重启后分辨率无法正常识别，只剩下1024 x 768(在一次update显卡驱动后解决…. -2021-10-28 刚出的)<br>(之前有强制修改分辨率 修改分辨率会用到两个命令，分别是 xrandr 和 cvt)</p>
+<h1 id="NX协议相关"><a href="#NX协议相关" class="headerlink" title="NX协议相关"></a>NX协议相关</h1><h2 id="Nomachine"><a href="#Nomachine" class="headerlink" title="Nomachine"></a>Nomachine</h2><p>Nomachine在一些服务器上好好的，但在那种台式机上，intel i3-6100带核显和一台独显机子都出现了不接显示器卡顿的问题，<del>原因不明</del><br>同样环境x2go正常<br>但是他会导致家用机(Nvdia显卡)在重启后分辨率无法正常识别，只剩下1024 x 768(在一次update显卡驱动后解决.... -2021-10-28 刚出的)<br>(之前有强制修改分辨率 修改分辨率会用到两个命令，分别是 xrandr 和 cvt)</p>
 <h2 id="x2go-1"><a href="#x2go-1" class="headerlink" title="x2go"></a>x2go</h2><p>x2go中相关使用的桌面都会创建，不会显示对端原生桌面。原生桌面只能使用x11来看<br>但是x2go的自行创建的桌面在那台电脑上会卡死，(现在看来是因为显示器被拔的问题)<br>x2go会在未设置和确认的情况下挂载本机的文件夹到目标服务器<br><del>所以目前想使用大概还是得跑目标机子上登录然后跑回来x11这么用</del></p>
-<h1 id="VNC"><a href="#VNC" class="headerlink" title="VNC"></a>VNC</h1><p><del>最后还是回归VNC的怀抱了…</del><br>用的tigervnc-standalone-server<br>丝滑般流畅</p>
+<h1 id="VNC"><a href="#VNC" class="headerlink" title="VNC"></a>VNC</h1><p><del>最后还是回归VNC的怀抱了...</del><br>用的tigervnc-standalone-server<br>丝滑般流畅</p>
 <p>之前用VNC有个弹密码验证之类的问题，然后我照教程搞了之后VNC里没法弹密码验证，还会疯狂产生报错log把磁盘填满，但我又找不到那个教程了。<br>但没想到我把解决办法又找到了<a target="_blank" rel="noopener" href="https://unix.stackexchange.com/questions/458478/policy-kit-isnt-working-properly">https://unix.stackexchange.com/questions/458478/policy-kit-isnt-working-properly</a></p>
 <p>必须得说vnc这块坑也还是蛮多的，光整个自动启动都快把我整吐了</p>
 <h2 id="Ubuntu-的-Share"><a href="#Ubuntu-的-Share" class="headerlink" title="Ubuntu 的 Share"></a>Ubuntu 的 Share</h2><p>这玩意没法在不登陆的情况下使用。你得先去目标主机登录之后才能远程(第一次还要关那个加密验证)</p>

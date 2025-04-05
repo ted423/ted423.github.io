@@ -159,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1041
+                            1091
                         
                         字
                     </li>
@@ -187,9 +187,9 @@
 <li>svnadmin hotcopy卡住，网上看跟文件系统有关，大概我用的NTFS(NTFS ,samba都不行，只能nfs，samba不行的原因在于某文件创建后会卡住无法删除，改用nfs挂载同目录后正常)</li>
 </ol>
 <h1 id="验证相关"><a href="#验证相关" class="headerlink" title="验证相关"></a>验证相关</h1><p><del>1.8 新增了一个设置，默认关了权限继承</del><br>应该说最新的跟1.6不一样，[&#x2F;]给的权限无法继承，原因不明</p>
-<h1 id="恢复相关"><a href="#恢复相关" class="headerlink" title="恢复相关"></a>恢复相关</h1><p>硬盘炸了，原来项目备份时报错”serialized hash missing terminator”<br>导致项目备份数据不对，恢复后无法使用。期间报错”打开文件系统“db”的BDB环境句柄时出错”(Berkeley DB error for filesystem DB_CONFIG)，”svn E160004 current file”(这个是恢复不了我瞎改导致的，实际文件正常的话recover会自动修正current,手动修改没意义，对不上就会报错)。”svn E200002 malformed representation for node-revision”<br>经确认是有报错之后，备份时丢失了format以及db文件夹下的一些数据<br>正常项目的db文件夹下，revs和revprops都会多套个叫0的文件夹(0-999放到0，1000-1999放到1这样)<br>revs里最大的数字为最终版本号。(不过这个不重要)<br>主要db文件夹下会需要fomart为(我这里是)</p>
+<h1 id="恢复相关"><a href="#恢复相关" class="headerlink" title="恢复相关"></a>恢复相关</h1><p>硬盘炸了，原来项目备份时报错&quot;serialized hash missing terminator&quot;<br>导致项目备份数据不对，恢复后无法使用。期间报错&quot;打开文件系统“db”的BDB环境句柄时出错&quot;(Berkeley DB error for filesystem DB_CONFIG)，&quot;svn E160004 current file&quot;(这个是恢复不了我瞎改导致的，实际文件正常的话recover会自动修正current,手动修改没意义，对不上就会报错)。&quot;svn E200002 malformed representation for node-revision&quot;<br>经确认是有报错之后，备份时丢失了format以及db文件夹下的一些数据<br>正常项目的db文件夹下，revs和revprops都会多套个叫0的文件夹(0-999放到0，1000-1999放到1这样)<br>revs里最大的数字为最终版本号。(不过这个不重要)<br>主要db文件夹下会需要fomart为(我这里是)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">layout sharded 1000</span><br></pre></td></tr></table></figure>
-<p>而报错导致的备份的fomart都是2<br>还需要一个”min-unpacked-rev”(这个从正常项目拷一个塞进去就行)<br>然后<code>svnadmin recover</code>和<code>svnadmin verify</code>就行，但如果期间版本有问题，那就是另外一个问题了</p>
+<p>而报错导致的备份的fomart都是2<br>还需要一个&quot;min-unpacked-rev&quot;(这个从正常项目拷一个塞进去就行)<br>然后<code>svnadmin recover</code>和<code>svnadmin verify</code>就行，但如果期间版本有问题，那就是另外一个问题了</p>
 </div>
         </div>
         

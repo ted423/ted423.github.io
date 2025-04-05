@@ -159,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            494
+                            497
                         
                         字
                     </li>
@@ -181,17 +181,18 @@
             <div itemprop="articleBody"><p>Win 10有个直接开热点的设置，所以下面可能就用不到了<br><a target="_blank" rel="noopener" href="https://www.intel.cn/content/www/cn/zh/support/articles/000023257/network-and-i-o/wireless-networking.html">https://www.intel.cn/content/www/cn/zh/support/articles/000023257/network-and-i-o/wireless-networking.html</a></p>
 <p><strong>需要注意的是，开启WIFI热点时可能会导致有线网通过DHCP获取另外网段的IP时出现问题，需要取消第3步操作后，也就是共享网络勾选，才可以通过DHCP获取到IP</strong></p>
 <ol>
-<li><p>输入<code>netsh wlan show driver</code>先看是否支持承载网络</p>
-</li>
-<li><p>打开CMD,输入</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan set hostednetwork mode=allow ssid=(wifi名) key=(wifi密码)</span><br></pre></td></tr></table></figure></li>
+<li>输入<code>netsh wlan show driver</code>先看是否支持承载网络</li>
+<li>打开CMD,输入</li>
+</ol>
+ <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan set hostednetwork mode=allow ssid=(wifi名) key=(wifi密码)</span><br></pre></td></tr></table></figure>
+<ol start="3">
 <li><p>然后通过</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan start hostednetwork</span><br></pre></td></tr></table></figure>
 <p> 和</p>
  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netsh wlan stop hostednetwork</span><br></pre></td></tr></table></figure>
 <p> 来控制虚拟wifi热点的开启与关闭即可</p>
 </li>
-<li><p>记得打开虚拟热点后要打开 网络和共享中心 在适配器处找到当前网络所在的适配器，右键属性找到共享，将**允许其他网络用户通过…**勾上</p>
+<li><p>记得打开虚拟热点后要打开 网络和共享中心 在适配器处找到当前网络所在的适配器，右键属性找到共享，将**允许其他网络用户通过...**勾上</p>
 </li>
 </ol>
 </div>

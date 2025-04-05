@@ -161,7 +161,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1277
+                            1317
                         
                         字
                     </li>
@@ -183,7 +183,7 @@
             <div itemprop="articleBody"><p><a target="_blank" rel="noopener" href="http://social.technet.microsoft.com/Forums/en-US/ieitprocurrentver/thread/3d74bc03-b0c4-4ec1-88df-b938ec82c159/">http://social.technet.microsoft.com/Forums/en-US/ieitprocurrentver/thread/3d74bc03-b0c4-4ec1-88df-b938ec82c159/</a><br>原来是注册表 [HKEY_CLASSES_ROOT\ftp] 的这个键值出了问题,那个网页上有脚本,复制下来保存为reg文件就可以了.</p>
 <p>这是那个英文网页的注册表脚本:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line">[HKEY_CLASSES_ROOT\ftp]</span><br><span class="line">@=&quot;URL:File Transfer Protocol&quot;</span><br><span class="line">&quot;AppUserModelID&quot;=&quot;Microsoft.InternetExplorer.Default&quot;</span><br><span class="line">&quot;EditFlags&quot;=dword:00000002</span><br><span class="line">&quot;FriendlyTypeName&quot;=&quot;@C:\\Windows\\system32\\ieframe.dll,-905&quot;</span><br><span class="line">&quot;ShellFolder&quot;=&quot;&#123;63da6ec0-2e98-11cf-8d82-444553540000&#125;&quot;</span><br><span class="line">&quot;Source Filter&quot;=&quot;&#123;E436EBB6-524F-11CE-9F53-0020AF0BA770&#125;&quot;</span><br><span class="line">&quot;URL Protocol&quot;=&quot;&quot;</span><br><span class="line">[HKEY_CLASSES_ROOT\ftp\DefaultIcon]</span><br><span class="line">@=hex(2):25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,74,00,25,\</span><br><span class="line">00,5c,00,73,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,75,00,72,00,\</span><br><span class="line">6c,00,2e,00,64,00,6c,00,6c,00,2c,00,30,00,00,00</span><br><span class="line">[HKEY_CLASSES_ROOT\ftp\shell]</span><br><span class="line">@=&quot;open&quot;</span><br><span class="line">[HKEY_CLASSES_ROOT\ftp\shell\open]</span><br></pre></td></tr></table></figure>
-<p>说下我的理解，windows集成了IE ,explorer上输入ftp:&#x2F;&#x2F;实际上是由IE来访问网络的<br>注册表中是<br>“AppUserModelID”&#x3D;”Microsoft.<em>InternetExplorer</em>.Default”<br>“FriendlyTypeName”&#x3D;”@C:\Windows\system32\<em>ieframe</em>.dll,-905”</p>
+<p>说下我的理解，windows集成了IE ,explorer上输入ftp:&#x2F;&#x2F;实际上是由IE来访问网络的<br>注册表中是<br>&quot;AppUserModelID&quot;&#x3D;&quot;Microsoft.<em>InternetExplorer</em>.Default&quot;<br>&quot;FriendlyTypeName&quot;&#x3D;&quot;@C:\Windows\system32\<em>ieframe</em>.dll,-905&quot;</p>
 <p>由于一些浏览器把ftp给关联上了，于是资源管理器里就无法直接访问ftp</p>
 <hr>
 <p>Win 11 应该已经没这块的设置了</p>

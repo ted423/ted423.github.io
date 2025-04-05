@@ -19,12 +19,12 @@
   
     <meta name="keywords" content="Document" />
   
-  <meta name="description" content="参考http:&#x2F;&#x2F;lysandria1985.blogspot.com&#x2F;2013&#x2F;01&#x2F;3-madvr.html? devicesprojector是投影仪的意思。properties 这项，madVR本身都提供比较详细的信息了，可以跳过calibration 是校色，没校色过或低端显示器选disable就好，最下面”disable GPU gamma ramps”如果没有校色过的话就不要勾选di">
+  <meta name="description" content="参考http:&#x2F;&#x2F;lysandria1985.blogspot.com&#x2F;2013&#x2F;01&#x2F;3-madvr.html? devicesprojector是投影仪的意思。properties 这项，madVR本身都提供比较详细的信息了，可以跳过calibration 是校色，没校色过或低端显示器选disable就好，最下面&quot;disable GPU gamma ramps&quot;如果没有校色">
 <meta property="og:type" content="article">
 <meta property="og:title" content="madVR 瞎写篇">
 <meta property="og:url" content="http://ted423.github.io/Document/madvr/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="参考http:&#x2F;&#x2F;lysandria1985.blogspot.com&#x2F;2013&#x2F;01&#x2F;3-madvr.html? devicesprojector是投影仪的意思。properties 这项，madVR本身都提供比较详细的信息了，可以跳过calibration 是校色，没校色过或低端显示器选disable就好，最下面”disable GPU gamma ramps”如果没有校色过的话就不要勾选di">
+<meta property="og:description" content="参考http:&#x2F;&#x2F;lysandria1985.blogspot.com&#x2F;2013&#x2F;01&#x2F;3-madvr.html? devicesprojector是投影仪的意思。properties 这项，madVR本身都提供比较详细的信息了，可以跳过calibration 是校色，没校色过或低端显示器选disable就好，最下面&quot;disable GPU gamma ramps&quot;如果没有校色">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-05-12T08:17:00.000Z">
 <meta property="article:modified_time" content="2021-05-12T08:17:00.000Z">
@@ -158,7 +158,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1282
+                            1298
                         
                         字
                     </li>
@@ -178,13 +178,13 @@
             
             <hr />
             <div itemprop="articleBody"><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a target="_blank" rel="noopener" href="http://lysandria1985.blogspot.com/2013/01/3-madvr.html">http://lysandria1985.blogspot.com/2013/01/3-madvr.html?</a></p>
-<h1 id="devices"><a href="#devices" class="headerlink" title="devices"></a>devices</h1><p>projector是投影仪的意思。<br>properties 这项，madVR本身都提供比较详细的信息了，可以跳过<br>calibration 是校色，没校色过或低端显示器选disable就好，最下面”disable GPU gamma ramps”如果没有校色过的话就不要勾选<br>display modes 这里<br>主要会切换显卡数出分辨率以及刷新率，主要是刷新率符合影片帧率，减少丢帧以及掉帧，需要设备支持，至于是否支持，可以参考Custom display modes<br>个人建议是使用进入全屏切换，这样平时偶尔看下影片不会有长时间的黑屏<br>至于Custom display modes，可以用来取代Reclock<br>原理在这里<br><a target="_blank" rel="noopener" href="http://lysandria1985.blogspot.com/2018/04/3reclock-madvr.html">http://lysandria1985.blogspot.com/2018/04/3reclock-madvr.html</a><br>(但我最后没成功，因为关掉再开后madVR的optimize会重头跑起)</p>
+<h1 id="devices"><a href="#devices" class="headerlink" title="devices"></a>devices</h1><p>projector是投影仪的意思。<br>properties 这项，madVR本身都提供比较详细的信息了，可以跳过<br>calibration 是校色，没校色过或低端显示器选disable就好，最下面&quot;disable GPU gamma ramps&quot;如果没有校色过的话就不要勾选<br>display modes 这里<br>主要会切换显卡数出分辨率以及刷新率，主要是刷新率符合影片帧率，减少丢帧以及掉帧，需要设备支持，至于是否支持，可以参考Custom display modes<br>个人建议是使用进入全屏切换，这样平时偶尔看下影片不会有长时间的黑屏<br>至于Custom display modes，可以用来取代Reclock<br>原理在这里<br><a target="_blank" rel="noopener" href="http://lysandria1985.blogspot.com/2018/04/3reclock-madvr.html">http://lysandria1985.blogspot.com/2018/04/3reclock-madvr.html</a><br>(但我最后没成功，因为关掉再开后madVR的optimize会重头跑起)</p>
 <p>color &amp; gamma<br>开disable calibration controls for this display的情况下 ，建议pure power curve 预设的2.2就可以，可根据光暗调整，暗环境下，可以增加</p>
 <p>HDR<br>看设备调整，通常未说明显示器都是SDR的，播HDR会有色彩问题，建议直接避开HDR影片，这里的选项也不用管。</p>
 <h1 id="processing"><a href="#processing" class="headerlink" title="processing"></a>processing</h1><p>去交错不用动，除非你还看DVD。<br>剩下的除了artifact removal 这块reduce banding artifact 开个low,其他都保持默认就好</p>
 <h1 id="scaling-algorithms"><a href="#scaling-algorithms" class="headerlink" title="scaling algorithms"></a>scaling algorithms</h1><p>madVR核心功能</p>
 <h2 id="chroma-upscaling"><a href="#chroma-upscaling" class="headerlink" title="chroma upscaling"></a>chroma upscaling</h2><p>建议开NGU-AA，档位看自己选就好，我选high会有奇怪的声音，所以还是medium吧。</p>
-<h2 id="image-downscaling"><a href="#image-downscaling" class="headerlink" title="image downscaling"></a>image downscaling</h2><p>SSIM 2D 100% scale in linear light + activate anti-ringing filter<br>这么设置有个前提，不要拿普通显示器跑4K………</p>
+<h2 id="image-downscaling"><a href="#image-downscaling" class="headerlink" title="image downscaling"></a>image downscaling</h2><p>SSIM 2D 100% scale in linear light + activate anti-ringing filter<br>这么设置有个前提，不要拿普通显示器跑4K.........</p>
 <h2 id="image-upscaling"><a href="#image-upscaling" class="headerlink" title="image upscaling"></a>image upscaling</h2><p>选NGU ，选个very high ，剩下的让madvr decide </p>
 <h2 id="upscaling-refinement"><a href="#upscaling-refinement" class="headerlink" title="upscaling refinement"></a>upscaling refinement</h2><p>这里跟锐化有关，个人没调整</p>
 <h1 id="rendering"><a href="#rendering" class="headerlink" title="rendering"></a>rendering</h1><h2 id="general"><a href="#general" class="headerlink" title="general"></a>general</h2><p>delay playback start until render queue is full 勾上<br>use a separate device for presentation (Vista and newer) 勾上<br>use a separate device for DXVA processing (Vista and newer) 勾上</p>

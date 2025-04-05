@@ -159,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~2.05K
+                            ~2.15K
                         
                         字
                     </li>
@@ -185,10 +185,10 @@
 <p>tete009版Firefox 相较于官方版本的改进和不同主要有:</p>
 <p>根据不同的CPU指令集制作不同的版本,使Firefox能够做到根据不同的平台而优化. 这也是众多第三方编译版本共同的特征.<br>改进了Firefox的内存使用. 众所周知, Firefox的内存使用一直为人诟病. tete009的版本根据不同的CPU指令集重写了tmemutil.dll,即内存管理的dll文件,使效率大为提高.<br>改善浏览器的渲染过程, 使渲染效率更高.<br>Module Binder能缩短Firefox的启动时间.</p>
 <p>官方介绍:<br>These are my private builds of the Win32 version of Firefox. These builds are not the official builds of Mozilla. Personally made by me. Use it at your own risk. The features are as follows:</p>
-<p>No installer.<br>If you execute ‘Module binder for Private Build’ and finish modules binding, Firefox may be started faster.<br>An incompatible nssckbi.dll installed in a different directory can impede the startup of a new build. If so, please rename the old nssckbi.dll temporarily before trying to run the new build.<br>Added my patches into a Source folder.</p>
+<p>No installer.<br>If you execute &#39;Module binder for Private Build&#39; and finish modules binding, Firefox may be started faster.<br>An incompatible nssckbi.dll installed in a different directory can impede the startup of a new build. If so, please rename the old nssckbi.dll temporarily before trying to run the new build.<br>Added my patches into a Source folder.</p>
 <p>How to localize the English version of Firefox</p>
-<p>“Firefox private build” is English version, but you can localize it in the following way:</p>
-<p>First, install the XPI language pack. It will be possible to get the official packages from the following URL. Replace the part of “(Firefox’s version)” with the string of Firefox’s version (3.0.0, etc). It is necessary to match the version of Firefox and the version of the XPI language pack:<br><a target="_blank" rel="noopener" href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/</a>(Firefox’s version)&#x2F;win32&#x2F;xpi&#x2F;<br><a href="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/">ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/</a>(Firefox’s version)&#x2F;win32&#x2F;xpi&#x2F;<br>Next, change Firefox’s locale setting to your locale. Here are three examples:<br>Open or create the user.js file contained in the profile folder and add the following line.<br>pref(“general.useragent.locale”, “ja”);<br>Enter about:config in the Firefox’s location bar and change the value of “general.useragent.locale” from “en-US” to your locale string.<br>Change the command-line string of Firefox like the following:<br>“～\firefox.exe” -UILocale ja</p>
+<p>&quot;Firefox private build&quot; is English version, but you can localize it in the following way:</p>
+<p>First, install the XPI language pack. It will be possible to get the official packages from the following URL. Replace the part of &quot;(Firefox&#39;s version)&quot; with the string of Firefox&#39;s version (3.0.0, etc). It is necessary to match the version of Firefox and the version of the XPI language pack:<br><a target="_blank" rel="noopener" href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/">http://releases.mozilla.org/pub/mozilla.org/firefox/releases/</a>(Firefox&#39;s version)&#x2F;win32&#x2F;xpi&#x2F;<br><a href="ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/">ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/</a>(Firefox&#39;s version)&#x2F;win32&#x2F;xpi&#x2F;<br>Next, change Firefox&#39;s locale setting to your locale. Here are three examples:<br>Open or create the user.js file contained in the profile folder and add the following line.<br>pref(&quot;general.useragent.locale&quot;, &quot;ja&quot;);<br>Enter about:config in the Firefox&#39;s location bar and change the value of &quot;general.useragent.locale&quot; from &quot;en-US&quot; to your locale string.<br>Change the command-line string of Firefox like the following:<br>&quot;～\firefox.exe&quot; -UILocale ja</p>
 </div>
         </div>
         

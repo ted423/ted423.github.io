@@ -19,12 +19,12 @@
   
     <meta name="keywords" content="Document, Windows, 安全软件, 过时(Outdated)" />
   
-  <meta name="description" content="目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50以前用，自己写规则经常不起作用，而且找不到官方文档…..但实际上来讲，McAfee的规则还是很难用的现在总算是找到了文档(原来很多地方要用“**”而不是”*“) 分隔符‘,’用于在匹配进程以及排除进程中进行分割，支持带路径的以及进程名 通配符最重要的就是’‘以及">
+  <meta name="description" content="目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50以前用，自己写规则经常不起作用，而且找不到官方文档.....但实际上来讲，McAfee的规则还是很难用的现在总算是找到了文档(原来很多地方要用“**”而不是&quot;*&quot;) 分隔符&#39;,&#39;用于在匹配进程以及排除进程中进行分割，支持带路径">
 <meta property="og:type" content="article">
 <meta property="og:title" content="麦咖啡McAfee 8.8企业版(McAfee VirusScan Enterprise)规则设置">
 <meta property="og:url" content="http://ted423.github.io/Software/Security/McAfee/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50以前用，自己写规则经常不起作用，而且找不到官方文档…..但实际上来讲，McAfee的规则还是很难用的现在总算是找到了文档(原来很多地方要用“**”而不是”*“) 分隔符‘,’用于在匹配进程以及排除进程中进行分割，支持带路径的以及进程名 通配符最重要的就是’‘以及">
+<meta property="og:description" content="目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50以前用，自己写规则经常不起作用，而且找不到官方文档.....但实际上来讲，McAfee的规则还是很难用的现在总算是找到了文档(原来很多地方要用“**”而不是&quot;*&quot;) 分隔符&#39;,&#39;用于在匹配进程以及排除进程中进行分割，支持带路径">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2016-02-14T13:48:00.000Z">
 <meta property="article:modified_time" content="2016-02-14T13:48:00.000Z">
@@ -161,7 +161,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~1.52K
+                            ~1.59K
                         
                         字
                     </li>
@@ -180,9 +180,9 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50<br>以前用，自己写规则经常不起作用，而且找不到官方文档…..<br>但实际上来讲，McAfee的规则还是很难用的<br>现在总算是找到了文档(原来很多地方要用“<code>**</code>”而不是”<code>*</code>“)</p>
-<h1 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h1><p>‘,’用于在匹配进程以及排除进程中进行分割，支持带路径的以及进程名</p>
-<h1 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h1><p>最重要的就是’<em>‘以及’**’的区别，可以这么理解，’</em>‘只是一级目录，’**’则表示多级目录。比方说’C:*‘代表C盘根目录下能看到的所有文件夹以及文件，’C:**’则代表所有C盘下的东西<br>McAfee 8.8 规则设置之难，难于通配符而已。通配符之难，难于8.8不支持“？：\”表示任意盘符。以WINDOWS和Program Files文件夹为例，下面是文件夹的表示方法：</p>
+            <div itemprop="articleBody"><p>目前没在用了(主要以前阻止之后软件仍然一直在写，进入了死循环，CPU爆炸。点名批评Onedrive) - 2021-10-26 20:50<br>以前用，自己写规则经常不起作用，而且找不到官方文档.....<br>但实际上来讲，McAfee的规则还是很难用的<br>现在总算是找到了文档(原来很多地方要用“<code>**</code>”而不是&quot;<code>*</code>&quot;)</p>
+<h1 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h1><p>&#39;,&#39;用于在匹配进程以及排除进程中进行分割，支持带路径的以及进程名</p>
+<h1 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h1><p>最重要的就是&#39;<em>&#39;以及&#39;**&#39;的区别，可以这么理解，&#39;</em>&#39;只是一级目录，&#39;**&#39;则表示多级目录。比方说&#39;C:*&#39;代表C盘根目录下能看到的所有文件夹以及文件，&#39;C:**&#39;则代表所有C盘下的东西<br>McAfee 8.8 规则设置之难，难于通配符而已。通配符之难，难于8.8不支持“？：\”表示任意盘符。以WINDOWS和Program Files文件夹为例，下面是文件夹的表示方法：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*\WINDOWS：表示任意盘符下的WINDOWS文件夹（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS：表示任意盘符下的WINDOWS文件夹（所有进程有效）。</span><br><span class="line">*\**\WINDOWS：表示任意盘符下的WINDOWS文件夹（所有进程有效）。</span><br></pre></td></tr></table></figure>
 <p>文件的通配符表示方法：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（所有进程有效）。</span><br><span class="line">*\**\WINDOWS\**：表示任意盘符WINDOWS文件夹下多级目录中的所有文件（所有进程有效）。</span><br><span class="line">*\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（在“要阻止的进程”中无效）。</span><br><span class="line">**\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（所有进程有效）。</span><br><span class="line">*\**\WINDOWS\**\*.*：表示任意盘符WINDOWS文件夹下多级目录中的所有带后缀的文件（所有进程有效）。</span><br></pre></td></tr></table></figure>

@@ -159,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1387
+                            1397
                         
                         字
                     </li>
@@ -183,7 +183,7 @@
 
 <p>其实是个老问题了，每次 apt upgrade 都会报错，实际就是 &#x2F;boot 分区分的太小，然后塞不进了就报错</p>
 <p>当时参考<a target="_blank" rel="noopener" href="https://superuser.com/questions/1601194/update-initramfs-error-24-write-error-cannot-write-compressed-block">https://superuser.com/questions/1601194/update-initramfs-error-24-write-error-cannot-write-compressed-block</a>解决</p>
-<p>先去 &#x2F;boot 分区里看下老版本是啥<br>然后搜下”linux-image” 或者</p>
+<p>先去 &#x2F;boot 分区里看下老版本是啥<br>然后搜下&quot;linux-image&quot; 或者</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt list --installed | grep &quot;5.4.0-109&quot; (这个版本不固定，不要照抄)</span><br></pre></td></tr></table></figure>
 
 <p>理论卸掉一个 <code>sudo apt remove linux-image-5.4.0-109-generic</code> 就能一切继续了</p>
