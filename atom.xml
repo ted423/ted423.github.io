@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-04-07T08:14:15.348Z</updated>
+  <updated>2025-04-07T12:21:37.231Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记一次试图逃离 MobaXterm</title>
+    <link href="http://ted423.github.io/Software/tryoutMobaXterm/"/>
+    <id>http://ted423.github.io/Software/tryoutMobaXterm/</id>
+    <published>2025-04-07T12:05:48.320Z</published>
+    <updated>2025-04-07T12:21:37.231Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="/Software/MobaXterm">MobaXterm</a> 毕竟现在用的破解，所以如果能不用或者如果有能替代的方案我是很开心的。</p><p>可以看到我之前尝试过一次。</p><p>这回是看到微软新的那个终端非常有想法，故就准备全部切换过去。</p><p>为此还折腾了<a href="/Software/X11">X11</a>。快速连接就靠终端的配置来弄，然后全部使用 sshkey,弄好可能还会变得高端。</p><p>可惜最后被 MobaXterm 自动显示服务器资源情况的功能给击沉了。这种功能基本就只有商业软件会做了吧。或者国产开源之类的。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;/Software/MobaXterm&quot;&gt;MobaXterm&lt;/a&gt; 毕竟现在用的破解，所以如果能不用或者如果有能替代的方案我是很开心的。&lt;/p&gt;
+&lt;p&gt;可以看到我之前尝试过一次。&lt;/p&gt;
+&lt;p&gt;这回是看到微软新的那个终端非常有想法，故就准备全部切换过去。</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
+    
+    <category term="破解&amp;激活" scheme="http://ted423.github.io/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>tmux 使用</title>
@@ -545,34 +577,6 @@
     
     
     <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[MV]真野恵里菜 - お願いだから</title>
-    <link href="http://ted423.github.io/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/"/>
-    <id>http://ted423.github.io/Video/%E7%9C%9F%E9%87%8E%E6%81%B5%E9%87%8C%E8%8F%9C/</id>
-    <published>2025-01-10T06:47:12.904Z</published>
-    <updated>2018-11-22T13:22:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Dance.Shot.Version)].MV.(VOB).vob|293855232|cdd6b63d2be2b5eb977736e25d4cea03|h=qm24cwdhtzwzzbd7vdxpeb2b5ymtd7us|/">ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Dance.Shot.Version)].MV.(VOB).vob|293855232|cdd6b63d2be2b5eb977736e25d4cea03|h=qm24cwdhtzwzzbd7vdxpeb2b5ymtd7us|/</a></p><p><a href="ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Close.Up.Version)].MV.(VOB).vob|293107712|767583085a3ed01ecb67c98e0c176e00|h=3kjtsiwjrqvkf26hfjc3v44hek6jppqf|/">ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Close.Up.Version)].MV.(VOB).vob|293107712|767583085a3ed01ecb67c98e0c176e00|h=3kjtsiwjrqvkf26hfjc3v44hek6jppqf|/</a></p><p><a href="ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから].MV.(VOB).vob|294270976|bd84065e35b6651a22bb576a25fadd87|h=wucl7ouzkqjibzwgh4vwnzi2r5lvknfw|/">ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから].MV.(VOB).vob|294270976|bd84065e35b6651a22bb576a25fadd87|h=wucl7ouzkqjibzwgh4vwnzi2r5lvknfw|/</a></p><p>在线(youtube)</p><iframe width="853" height="480" src="https://www.youtube.com/embed/G0pZo3E0I98" frameborder="0" allowfullscreen></iframe><p><a href="https://mega.nz/#F!j8lXVYAJ!vlOXuyc1GKLTvp0LANq_qA">https://mega.nz/#F!j8lXVYAJ!vlOXuyc1GKLTvp0LANq_qA</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;ed2k://|file|真野惠里菜(Mano.Erina).-.[お愿いだから.(Dance.Shot.Version)].MV.(VOB).vob|293855232|cdd6b63d2be2b5eb977736e25d4cea03|h=qm24cwd</summary>
-      
-    
-    
-    
-    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
-    
-    
-    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
-    
-    <category term="HD" scheme="http://ted423.github.io/tags/HD/"/>
-    
-    <category term="480p" scheme="http://ted423.github.io/tags/480p/"/>
     
   </entry>
   

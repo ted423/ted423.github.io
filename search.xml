@@ -28931,4 +28931,23 @@ $(function () {
         <tag>Command</tag>
       </tags>
   </entry>
+  <entry>
+    <title>记一次试图逃离 MobaXterm</title>
+    <url>/Software/tryoutMobaXterm/</url>
+    <content><![CDATA[<p><a href="/Software/MobaXterm">MobaXterm</a> 毕竟现在用的破解，所以如果能不用或者如果有能替代的方案我是很开心的。</p>
+<p>可以看到我之前尝试过一次。</p>
+<p>这回是看到微软新的那个终端非常有想法，故就准备全部切换过去。</p>
+<p>为此还折腾了<a href="/Software/X11">X11</a>。快速连接就靠终端的配置来弄，然后全部使用 sshkey,弄好可能还会变得高端。</p>
+<p>可惜最后被 MobaXterm 自动显示服务器资源情况的功能给击沉了。这种功能基本就只有商业软件会做了吧。或者国产开源之类的。</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Software</tag>
+        <tag>Terminal</tag>
+        <tag>破解&amp;激活</tag>
+      </tags>
+  </entry>
 </search>
