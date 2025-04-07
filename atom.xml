@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-04-07T03:52:53.907Z</updated>
+  <updated>2025-04-07T07:11:39.513Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tmux 使用</title>
+    <link href="http://ted423.github.io/Linux/tmux/"/>
+    <id>http://ted423.github.io/Linux/tmux/</id>
+    <published>2025-04-07T07:06:17.249Z</published>
+    <updated>2025-04-07T07:11:39.513Z</updated>
+    
+    <content type="html"><![CDATA[<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; tmux &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p><p>核心：</p><ul><li>远程工作时，防止因网络中断导致任务终止。</li><li>高效管理多任务并行环境（如开发、运维、日志监控）。</li><li>替代传统终端，实现类 IDE 的多窗口协作体验。<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 主要命令 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>开启使用命令 &#39;&#39;tmux&#39;&#39;<br>列出会话 &#39;&#39;tmux ls&#39;&#39;<br>重连会话 &#39;&#39;tmux attach -t 0&#39;&#39;</li></ul><p>会话管理</p><p>|  操作  |  命令&#x2F;快捷键  |<br>|  新建会话  |  tmux new -s &lt;会话名&gt;  |<br>|  分离当前会话  |  Ctrl+b → d  |<br>|  列出会话  |  tmux ls  |<br>|  重连会话  |  tmux attach -t &lt;会话名&gt;  |<br>|  关闭会话  |  tmux kill-session -t &lt;会话名&gt;  |<br>|  重命名会话  |  Ctrl+b → $  |</p><p>窗口管理</p><p>|  操作  |  快捷键（Ctrl+b 后按）  |<br>|  新建窗口  |  c  |<br>|  关闭窗口  |  &amp;  |<br>|  切换窗口  |  0-9 或 n（下一窗口）&#x2F;p（上一窗口）  |<br>|  重命名窗口  |  ,  |<br>|  窗口列表  |  w  |</p><p>面板管理<br>|  操作  |  快捷键（Ctrl+b 后按）  |<br>|  垂直分割面板  |  %  |<br>|  水平分割面板  |  &quot;  |<br>|  切换面板  |  方向键（←↑↓→）  |<br>|  关闭面板  |  x  |<br>|  调整面板大小  |  Ctrl+方向键  |<br>|  切换布局  |  空格  |</p><p>按&#39;&#39;ctrl+b&#39;&#39;后按&#39;&#39;[&#39;&#39;进入tmux翻屏模式，之后就可以滚屏了，有最大条目限制</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D; tmux &amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&amp;#x3D;&lt;br&gt;tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
+    
+  </entry>
   
   <entry>
     <title>VSCode</title>
@@ -87,7 +119,7 @@
     <link href="http://ted423.github.io/Linux/journalctl/"/>
     <id>http://ted423.github.io/Linux/journalctl/</id>
     <published>2025-03-17T03:33:23.451Z</published>
-    <updated>2025-03-25T07:44:13.855Z</updated>
+    <updated>2025-04-07T07:08:25.258Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">journalctl -b -p err</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -105,6 +137,8 @@
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
     
   </entry>
   
@@ -537,38 +571,6 @@
     <category term="HD" scheme="http://ted423.github.io/tags/HD/"/>
     
     <category term="480p" scheme="http://ted423.github.io/tags/480p/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[MV][萌女兒字幕組]AKB48 34th Single - Party is Over</title>
-    <link href="http://ted423.github.io/Video/Party%20is%20over/"/>
-    <id>http://ted423.github.io/Video/Party%20is%20over/</id>
-    <published>2025-01-10T06:47:12.111Z</published>
-    <updated>2015-11-15T02:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="网盘分流"><a href="#网盘分流" class="headerlink" title="网盘分流"></a>网盘分流</h1><p><a href="https://mega.nz/#!fg80BD7T!AjWaiYGx8ERNJwsWW2zpQ7tAM5B8tnG-OoA5GuHdvrE">https://mega.nz/#!fg80BD7T!AjWaiYGx8ERNJwsWW2zpQ7tAM5B8tnG-OoA5GuHdvrE</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;网盘分流&quot;&gt;&lt;a href=&quot;#网盘分流&quot; class=&quot;headerlink&quot; title=&quot;网盘分流&quot;&gt;&lt;/a&gt;网盘分流&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://mega.nz/#!fg80BD7T!AjWaiYGx8ERNJwsWW2zpQ7tAM5</summary>
-      
-    
-    
-    
-    <category term="Video" scheme="http://ted423.github.io/categories/Video/"/>
-    
-    
-    <category term="JP" scheme="http://ted423.github.io/tags/JP/"/>
-    
-    <category term="MV" scheme="http://ted423.github.io/tags/MV/"/>
-    
-    <category term="AKB48" scheme="http://ted423.github.io/tags/AKB48/"/>
-    
-    <category term="HD" scheme="http://ted423.github.io/tags/HD/"/>
-    
-    <category term="720p" scheme="http://ted423.github.io/tags/720p/"/>
     
   </entry>
   

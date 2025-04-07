@@ -10467,12 +10467,14 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       <tags>
         <tag>Linux</tag>
         <tag>Document</tag>
+        <tag>Command</tag>
       </tags>
   </entry>
   <entry>
     <title>[资料]debian 更改软件源</title>
     <url>/Linux/apt-source/</url>
-    <content><![CDATA[<p>软件源配置文件位于&#x2F;etc&#x2F;apt&#x2F;source.list<br>资料: <a href="https://wiki.debian.org/SourcesList">https://wiki.debian.org/SourcesList</a></p>
+    <content><![CDATA[<p>Bookworm(12) 已经开始用新的写法了，虽然新的写法试了下在 bullseye(11) 上也可以生效</p>
+<p>软件源配置文件位于&#x2F;etc&#x2F;apt&#x2F;source.list<br>资料: <a href="https://wiki.debian.org/SourcesList">https://wiki.debian.org/SourcesList</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deb http://mirrors.163.com/debian/ jessie main non-free contrib</span><br><span class="line">deb http://mirrors.163.com/debian/ jessie-updates main non-free contrib</span><br><span class="line">deb http://mirrors.163.com/debian/ jessie-backports main non-free contrib</span><br><span class="line">deb-src http://mirrors.163.com/debian/ jessie main non-free contrib</span><br><span class="line">deb-src http://mirrors.163.com/debian/ jessie-updates main non-free contrib</span><br><span class="line">deb-src http://mirrors.163.com/debian/ jessie-backports main non-free contrib</span><br><span class="line">deb http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib</span><br><span class="line">deb-src http://mirrors.163.com/debian-security/ jessie/updates main non-free contrib</span><br></pre></td></tr></table></figure>
 <p>其中jessie 为系统版本代号(可用lsb_release -a进行确认)，须与当前系统保持一致<br>在例如Debian 9就是 stretch</p>
 <p>main consists of DFSG-compliant packages, which do not rely on software outside this area to operate. These are the only packages considered part of the Debian distribution.</p>
@@ -10485,6 +10487,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       </categories>
       <tags>
         <tag>Linux</tag>
+        <tag>过时(Outdated)</tag>
         <tag>Document</tag>
       </tags>
   </entry>
@@ -11867,12 +11870,11 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
       <tags>
         <tag>分类汇总</tag>
         <tag>Windows</tag>
-        <tag>建设中</tag>
-        <tag>Software</tag>
-        <tag>开源</tag>
+        <tag>开源(Open Source)</tag>
         <tag>GPLv2</tag>
         <tag>GPLv3</tag>
         <tag>LGPL</tag>
+        <tag>Software=</tag>
       </tags>
   </entry>
   <entry>
@@ -12265,7 +12267,6 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>Android</tag>
         <tag>开源(Open Source)</tag>
         <tag>Software</tag>
-        <tag>开源</tag>
         <tag>GPLv2</tag>
         <tag>LGPL</tag>
         <tag>OS X</tag>
@@ -28803,6 +28804,34 @@ $(function () {
         <tag>初音ミク(Hatsune Miku)</tag>
         <tag>歌词(LRC)</tag>
         <tag>多行(Autolyric)</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>tmux 使用</title>
+    <url>/Linux/tmux/</url>
+    <content><![CDATA[<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; tmux &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p>
+<p>核心：</p>
+<ul>
+<li>远程工作时，防止因网络中断导致任务终止。</li>
+<li>高效管理多任务并行环境（如开发、运维、日志监控）。</li>
+<li>替代传统终端，实现类 IDE 的多窗口协作体验。<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 主要命令 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>开启使用命令 &#39;&#39;tmux&#39;&#39;<br>列出会话 &#39;&#39;tmux ls&#39;&#39;<br>重连会话 &#39;&#39;tmux attach -t 0&#39;&#39;</li>
+</ul>
+<p>会话管理</p>
+<p>|  操作  |  命令&#x2F;快捷键  |<br>|  新建会话  |  tmux new -s &lt;会话名&gt;  |<br>|  分离当前会话  |  Ctrl+b → d  |<br>|  列出会话  |  tmux ls  |<br>|  重连会话  |  tmux attach -t &lt;会话名&gt;  |<br>|  关闭会话  |  tmux kill-session -t &lt;会话名&gt;  |<br>|  重命名会话  |  Ctrl+b → $  |</p>
+<p>窗口管理</p>
+<p>|  操作  |  快捷键（Ctrl+b 后按）  |<br>|  新建窗口  |  c  |<br>|  关闭窗口  |  &amp;  |<br>|  切换窗口  |  0-9 或 n（下一窗口）&#x2F;p（上一窗口）  |<br>|  重命名窗口  |  ,  |<br>|  窗口列表  |  w  |</p>
+<p>面板管理<br>|  操作  |  快捷键（Ctrl+b 后按）  |<br>|  垂直分割面板  |  %  |<br>|  水平分割面板  |  &quot;  |<br>|  切换面板  |  方向键（←↑↓→）  |<br>|  关闭面板  |  x  |<br>|  调整面板大小  |  Ctrl+方向键  |<br>|  切换布局  |  空格  |</p>
+<p>按&#39;&#39;ctrl+b&#39;&#39;后按&#39;&#39;[&#39;&#39;进入tmux翻屏模式，之后就可以滚屏了，有最大条目限制</p>
+]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Document</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>Software</tag>
+        <tag>Command</tag>
       </tags>
   </entry>
 </search>
