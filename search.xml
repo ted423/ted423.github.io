@@ -12187,7 +12187,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
   <entry>
     <title>Windows 的 X11 问题</title>
     <url>/Software/X11/</url>
-    <content><![CDATA[<p>其实就是被坑了，网上搜的大部分教程都是 Linux 的，虽然报错都是 <code>Gtk-WARNING **: cannot open display: </code>，但实际Win 的 X11 的显示需要本地客户端支持，而实际 Win 的 ssh 自身不支持 X11，MobaXterm 自身集成了所以支持，putty 这种虽然有 X11 设置，但他自身并不直接支持，你需要装个 Xming 。<del><a href="https://github.com/marchaesen/vcxsrv">vcxsrv</a></del></p>
+    <content><![CDATA[<p>其实就是被坑了，网上搜的大部分教程都是 Linux 的，虽然报错都是 <code>Gtk-WARNING **: cannot open display: </code>，但实际Win 的 X11 的显示需要本地软件支持，<del>而实际 Win 的 ssh 自身不支持 X11</del>（ssh 自身都不支持），MobaXterm 自身集成了所以支持，putty 这种虽然有 X11 设置，但他自身并不直接支持，你需要装个 Xming 。<del><a href="https://github.com/marchaesen/vcxsrv">vcxsrv</a></del></p>
 <p><del>目前还没细想 Linux 的 ssh 是不是自身就支持。</del>（不是）</p>
 <p>powershell里跑，跑一次就行，这个是添加个人的环境变量</p>
 <figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">setx DISPLAY localhost:<span class="number">0</span></span><br></pre></td></tr></table></figure>
