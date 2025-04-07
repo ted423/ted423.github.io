@@ -27459,16 +27459,16 @@ Poppler - PDF函式库
   <entry>
     <title>光盘映像类软件</title>
     <url>/Software/Maintenance/%E5%85%89%E7%9B%98%E6%98%A0%E5%83%8F/</url>
-    <content><![CDATA[<p>#Rufus<br><a href="https://rufus.ie/">https://rufus.ie/</a><br>为了找个替代UltraISO的软件特意去寻找的。开源、GPLv3。<br>就做启动盘来说，软件非常专业,甚至Ultraiso无法识别的硬盘盒，这个软件也能正常工作。<br>感觉理论上也可以取代Win32 Disk Imager(还没试装Linux正不正常)<br>缺点是只支持制作启动盘(不过这种只要直接解压也就行了)</p>
+    <content><![CDATA[<h1 id="Rufus"><a href="#Rufus" class="headerlink" title="Rufus"></a>Rufus</h1><p><a href="https://rufus.ie/">https://rufus.ie/</a><br>为了找个替代UltraISO的软件特意去寻找的。开源、GPLv3。<br>就做启动盘来说，软件非常专业,甚至Ultraiso无法识别的硬盘盒，这个软件也能正常工作。<br>感觉理论上也可以取代Win32 Disk Imager(还没试装Linux正不正常)<br>缺点是只支持制作启动盘(不过这种只要直接解压也就行了)</p>
 <p>有点奇葩的是，默认的和便携版其实是完完全全一模一样的程序。<br>没有任何区别</p>
-<p>#cdrtfe<br>这个东西看起来是刻光盘用的，开源，但我整不明白。</p>
-<p>#UltraISO<br>UltraISO 是一个运行在Microsoft Windows平台上的用来创建、修改和转换ISO文件的软件。<br>当然啦，最主要用来创建U盘启动盘装系统。<br>官网:<a href="http://www.ezbsystems.com/ultraiso/index.html">http://www.ezbsystems.com/ultraiso/index.html</a></p>
+<h1 id="ventoy"><a href="#ventoy" class="headerlink" title="ventoy"></a><a href="/Software/Ventoy">ventoy</a></h1><h1 id="cdrtfe"><a href="#cdrtfe" class="headerlink" title="cdrtfe"></a>cdrtfe</h1><p>这个东西看起来是刻光盘用的，开源，但我整不明白。</p>
+<h1 id="UltraISO"><a href="#UltraISO" class="headerlink" title="UltraISO"></a><del>UltraISO</del></h1><p>UltraISO 是一个运行在Microsoft Windows平台上的用来创建、修改和转换ISO文件的软件。<br>当然啦，最主要用来创建U盘启动盘装系统。<br>官网:<a href="http://www.ezbsystems.com/ultraiso/index.html">http://www.ezbsystems.com/ultraiso/index.html</a></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">红名单注册信息（9.7开始貌似失效了）</span><br><span class="line">打开记事本随便复制以下一组注册信息</span><br><span class="line">保存为uikey.ini至程序目录下即可注册！</span><br><span class="line">UserName=’王涛’</span><br><span class="line">Registration=’7C81-1689-4046-626F’</span><br><span class="line">UserName=’累累’</span><br><span class="line">Registration=’4EE9-A156-B015-A70E’</span><br><span class="line">UserName=’Guanjiu’</span><br><span class="line">Registration=’A06C-83A7-701D-6CFC’</span><br></pre></td></tr></table></figure>
 
 
-<p>#Win32 Disk Imager#<br>必须得说，Linux类的制作启动盘这个可能更好一些。比方说CentOS的，UltraISO写到U盘里用不了。<br>缺点是如果U盘不再用Ultraiso写一遍的话(先用别的分区工具重新建分区)，Windows下，会无法在磁盘管理修改和分配盘符(也可能可以直接用其他分区工具重建MBR，忘了试了)<br><strong>ubuntu 15用UltraISO就无法正常启动</strong><br><a href="http://sourceforge.net/projects/win32diskimager/">http://sourceforge.net/projects/win32diskimager/</a></p>
-<p>#ImDisk Toolkit<br>能挂载各种奇奇怪怪的东西,可以用来挂win挂不了的东西。<br><a href="https://sourceforge.net/projects/imdisk-toolkit/">https://sourceforge.net/projects/imdisk-toolkit/</a></p>
-<p><del>#Daemon Tools Ultra</del><br>我发现Win自带了挂载Iso的功能！！所以这个软件有点没用了......<br>目前能不能用我不管了，建议直接访问大眼仔的网站  --2019-06-12<br>DAEMON Tools Ultra 除具备 DAEMON Tools 其它版本的所有功能外，更是具备了更加另人惊喜的高级功能，它支持你创建多达32个SCSI虚拟光驱和4个虚拟IDE设备；它又是一款全能的光盘刻录软件，支持包括蓝光在内的所有光盘格式的刻录；支持将任何镜像文件转换为*.mdf&#x2F;*.mds, *.mdx, *.iso格式等；支持制作镜像，支持制作加密镜像；支持压缩镜像或制作分卷镜像包等等。</p>
+<h1 id="Win32-Disk-Imager"><a href="#Win32-Disk-Imager" class="headerlink" title="Win32 Disk Imager"></a>Win32 Disk Imager</h1><p>必须得说，Linux类的制作启动盘这个可能更好一些。比方说CentOS的，UltraISO写到U盘里用不了。（）<br>缺点是如果U盘不再用Ultraiso写一遍的话(先用别的分区工具重新建分区)，Windows下，会无法在磁盘管理修改和分配盘符(也可能可以直接用其他分区工具重建MBR，忘了试了)<br><strong>ubuntu 15用UltraISO就无法正常启动</strong><br><a href="http://sourceforge.net/projects/win32diskimager/">http://sourceforge.net/projects/win32diskimager/</a></p>
+<h1 id="ImDisk-Toolkit"><a href="#ImDisk-Toolkit" class="headerlink" title="ImDisk Toolkit"></a>ImDisk Toolkit</h1><p>能挂载各种奇奇怪怪的东西,可以用来挂win挂不了的东西。<br><a href="https://sourceforge.net/projects/imdisk-toolkit/">https://sourceforge.net/projects/imdisk-toolkit/</a></p>
+<h1 id="Daemon-Tools-Ultra"><a href="#Daemon-Tools-Ultra" class="headerlink" title="Daemon Tools Ultra"></a><del>Daemon Tools Ultra</del></h1><p>我发现Win自带了挂载Iso的功能！！所以这个软件有点没用了......<br>目前能不能用我不管了，建议直接访问大眼仔的网站  --2019-06-12<br>DAEMON Tools Ultra 除具备 DAEMON Tools 其它版本的所有功能外，更是具备了更加另人惊喜的高级功能，它支持你创建多达32个SCSI虚拟光驱和4个虚拟IDE设备；它又是一款全能的光盘刻录软件，支持包括蓝光在内的所有光盘格式的刻录；支持将任何镜像文件转换为*.mdf&#x2F;*.mds, *.mdx, *.iso格式等；支持制作镜像，支持制作加密镜像；支持压缩镜像或制作分卷镜像包等等。</p>
 <p>官方下载:<a href="http://www.daemon-tools.cc/chn/downloads">http://www.daemon-tools.cc/chn/downloads</a><br>破解补丁:<a href="http://pan.baidu.com/s/1jG9o9Iu">http://pan.baidu.com/s/1jG9o9Iu</a></p>
 <p>Cracker来源:<br><a href="http://www.dayanzai.me/daemon-tools-ultra.html">http://www.dayanzai.me/daemon-tools-ultra.html</a></p>
 <hr>
@@ -27480,10 +27480,10 @@ Poppler - PDF函式库
       <tags>
         <tag>分类汇总</tag>
         <tag>Windows</tag>
+        <tag>开源(Open Source)</tag>
         <tag>Software</tag>
         <tag>破解&amp;激活</tag>
         <tag>第三方修改|绿化</tag>
-        <tag>开源</tag>
         <tag>GPLv3</tag>
         <tag>Maintenance</tag>
       </tags>
