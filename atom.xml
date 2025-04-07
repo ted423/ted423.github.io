@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-04-07T08:11:56.647Z</updated>
+  <updated>2025-04-07T08:14:15.348Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ted423.github.io/Linux/tmux/"/>
     <id>http://ted423.github.io/Linux/tmux/</id>
     <published>2025-04-07T07:06:17.249Z</published>
-    <updated>2025-04-07T08:11:56.647Z</updated>
+    <updated>2025-04-07T08:14:15.348Z</updated>
     
     <content type="html"><![CDATA[<p>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p><p>开源协议是 ISC许可证</p><h1 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h1><ul><li>远程工作时，防止因网络中断导致任务终止。</li><li>高效管理多任务并行环境（如开发、运维、日志监控）。</li><li>替代传统终端，实现类 IDE 的多窗口协作体验。</li></ul><h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 <code>tmux</code></p><p>列出会话 <code>tmux ls</code></p><p>重连会话 <code>tmux attach -t 0</code></p><p>翻页&#x2F;滚动操作 按<code>ctrl+b</code>后按<code>[</code></p><p>复制 按住<code>shift</code></p><h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><table><thead><tr><th>操作</th><th>命令&#x2F;快捷键</th></tr></thead><tbody><tr><td>新建会话</td><td>tmux new -s &lt;会话名&gt;</td></tr><tr><td>分离当前会话</td><td>Ctrl+b → d</td></tr><tr><td>列出会话</td><td>tmux ls</td></tr><tr><td>重连会话</td><td>tmux attach -t &lt;会话名&gt;</td></tr><tr><td>关闭会话</td><td>tmux kill-session -t &lt;会话名&gt;</td></tr><tr><td>重命名会话</td><td>Ctrl+b → $</td></tr></tbody></table><h2 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h2><table><thead><tr><th>操作</th><th>快捷键（Ctrl+b 后按）</th></tr></thead><tbody><tr><td>新建窗口</td><td>c</td></tr><tr><td>关闭窗口</td><td>&amp;</td></tr><tr><td>切换窗口</td><td>0-9 或 n（下一窗口）&#x2F;p（上一窗口）</td></tr><tr><td>重命名窗口</td><td>,</td></tr><tr><td>窗口列表</td><td>w</td></tr></tbody></table><h2 id="面板管理"><a href="#面板管理" class="headerlink" title="面板管理"></a>面板管理</h2><table><thead><tr><th>操作</th><th>快捷键（Ctrl+b 后按）</th></tr></thead><tbody><tr><td>垂直分割面板</td><td>%</td></tr><tr><td>水平分割面板</td><td>&quot;</td></tr><tr><td>切换面板</td><td>方向键（←↑↓→）</td></tr><tr><td>关闭面板</td><td>x</td></tr><tr><td>调整面板大小</td><td>Ctrl+方向键</td></tr><tr><td>切换布局</td><td>空格</td></tr></tbody></table><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>tmux 默认行数上限 2000，应该是性能和内存考虑，不过10万行大概也才几十MiB内存</p><p>全局配置文件 <code>/etc/tmux.conf</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set -g history-limit 100000</span><br><span class="line">set -g mouse on #启用鼠标滚屏</span><br></pre></td></tr></table></figure><p>注意版本，因为老版，例如 CentOS7 用的 mode-mouse</p><p>通常建议是使用个人配置 <code>~/.tmux.conf</code></p>]]></content>
     
