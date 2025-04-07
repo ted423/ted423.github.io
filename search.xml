@@ -12187,18 +12187,29 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
   <entry>
     <title>Windows 的 X11 问题</title>
     <url>/Software/X11/</url>
-    <content><![CDATA[<h1 id="OLD"><a href="#OLD" class="headerlink" title="OLD"></a>OLD</h1><p>其实就是被坑了，网上搜的大部分教程都是 Linux 的，虽然报错都是 <code>Gtk-WARNING **: cannot open display: </code>，但实际Win 的 X11 的显示需要本地客户端支持，而实际 Win 的 ssh 自身不支持 X11，MobaXterm 自身集成了所以支持，putty 这种虽然有 X11 设置，但他自身并不直接支持，你需要装个 <del>Xming 。</del></p>
+    <content><![CDATA[<p>其实就是被坑了，网上搜的大部分教程都是 Linux 的，虽然报错都是 <code>Gtk-WARNING **: cannot open display: </code>，但实际Win 的 X11 的显示需要本地客户端支持，而实际 Win 的 ssh 自身不支持 X11，MobaXterm 自身集成了所以支持，putty 这种虽然有 X11 设置，但他自身并不直接支持，你需要装个 Xming 。<del><a href="https://github.com/marchaesen/vcxsrv">vcxsrv</a></del></p>
 <p><del>目前还没细想 Linux 的 ssh 是不是自身就支持。</del>（不是）</p>
+<p>powershell里跑，跑一次就行，这个是添加个人的环境变量</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">setx DISPLAY localhost:<span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>vcxsrv 中 XLaunch 负责配置以及调用 vcxsrv（Xming 其实也差不多，不过 Xming 有个图标给你直接跑），可以把 XLaunch 生成的配置放到启动文件夹里配置开机运行</p>
+<p>不过 vcxsrv 开机会开两个 cmd 窗口。(所以我最后又换回 xming 了)</p>
+<p>下面是 vcxsrv 被 XLaunch 调用的启动命令(display number -1)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;C:\Program Files\VcXsrv\vcxsrv.exe&quot; -multiwindow -clipboard -wgl -ac -displayfd 444</span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ol>
-<li>Xming 其实很久没维护了，应该装<a href="https://github.com/marchaesen/vcxsrv">vcxsrv</a></li>
-<li>X11 的本地才是服务器端，远端是客户端，客户端连上服务器端在服务器端显示界面</li>
-<li>另外需要注意就是默认的 Windows 下面会一直报<code>X11 forwarding requested but DISPLAY not set</code>,正常应该是 ssh 向远程请求 X11 转发，然后远程的 sshd 配置环境变量。(测试 Linux 跟 MobaXterm 都正常)</li>
+<p>注意事项</p>
+<ol>
+<li>Xming GPL 版本其实很久没维护了，最新版本应该是要付费获取</li>
+<li><a href="https://github.com/marchaesen/vcxsrv">vcxsrv</a> 2024才开始的一个项目，不过我用的话就是感觉每次开都弹两 cmd 窗口比较蛋疼</li>
+<li>X11 的本地才是服务器端，远端是客户端，客户端连上服务器端在服务器端显示界面<br><del>3. 另外需要注意就是默认的 Windows 下面会一直报<code>X11 forwarding requested but DISPLAY not set</code>,正常应该是 ssh 向远程请求 X11 转发，然后远程的 sshd 配置环境变量。(测试 Linux 跟 MobaXterm 都正常)</del>(上面那个环境变量要设)</li>
 </ol>
-<p>我甚至试了两个不同的远端 Linux 系统证明不是 Ubuntu 的问题</p>
-<p>比较坑的就是手动设个 <code>export DISPLAY=localhost:10</code> 之后就可以了。查询 OSX 好像也有类似的问题。你可以尝试写到 .bashrc 里，我没这么做，因为没找到 root cause</p>
-<p>可能跟兼容性有关吧。</p>
-<p>另外测试 putty 是OK的，只要勾上 Enable X11 fowarding 就可以了</p>
+<p><del>我甚至试了两个不同的远端 Linux 系统证明不是 Ubuntu 的问题</del></p>
+<p><del>比较坑的就是手动设个 <code>export DISPLAY=localhost:10</code> 之后就可以了。查询 OSX 好像也有类似的问题。你可以尝试写到 .bashrc 里，我没这么做，因为没找到 root cause</del></p>
+<p><del>可能跟兼容性有关吧。</del></p>
+<p>另外测试 putty 是OK的（可以不用 Win 端加环境变量就可以用），只要勾上 Enable X11 fowarding 就可以了</p>
+<hr>
+<p><time datetime="2025-04-07">2025-04-07</time></p>
+<p><del>今天又发现 Xming 必须用管理员权限运行，否则会不行，但印象里之前不用。</del>（不加环境变量的话）<br><del>vcxsrv 则突然没法用了</del>(其实现在的疑问是为什么之前Linux里设环境变量就能用)</p>
 ]]></content>
       <categories>
         <category>Software</category>
@@ -26745,7 +26756,7 @@ Poppler - PDF函式库
 <li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任<br>(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)<br>我最终把工作区信任整个给关了。可能 VSCode 是把信任工作区和信任文件夹给分开的。开启的话，新打开的窗口默认就算不受信任的工作区。</li>
 </ul>
 <p>配置项</p>
-<p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)</p>
+<p>Hot Exit<br>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)，并且有时候一开给你开两个退出前的窗口</p>
 <p>我觉得它的设置项过于复杂到 SB 的程度了。</p>
 ]]></content>
       <categories>
