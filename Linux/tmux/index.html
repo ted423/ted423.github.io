@@ -19,15 +19,15 @@
   
     <meta name="keywords" content="Command, Document, Linux, Software, 开源(Open Source)" />
   
-  <meta name="description" content="tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。 核心 远程工作时，防止因网络中断导致任务终止。 高效管理多任务并行环境（如开发、运维、日志监控）。 替代传统终端，实现类 IDE 的多窗口协作体验。  主要命令开启使用命令 &#39;&#39;tmux&#39;&#39;列出会">
+  <meta name="description" content="tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。 开源协议是 ISC许可证 核心 远程工作时，防止因网络中断导致任务终止。 高效管理多任务并行环境（如开发、运维、日志监控）。 替代传统终端，实现类 IDE 的多窗口协作体验。  主要命令开启使用命令 tmux 列出会话 tmux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="tmux 使用">
 <meta property="og:url" content="http://ted423.github.io/Linux/tmux/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。 核心 远程工作时，防止因网络中断导致任务终止。 高效管理多任务并行环境（如开发、运维、日志监控）。 替代传统终端，实现类 IDE 的多窗口协作体验。  主要命令开启使用命令 &#39;&#39;tmux&#39;&#39;列出会">
+<meta property="og:description" content="tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。 开源协议是 ISC许可证 核心 远程工作时，防止因网络中断导致任务终止。 高效管理多任务并行环境（如开发、运维、日志监控）。 替代传统终端，实现类 IDE 的多窗口协作体验。  主要命令开启使用命令 tmux 列出会话 tmux">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-07T07:06:17.249Z">
-<meta property="article:modified_time" content="2025-04-07T07:18:06.424Z">
+<meta property="article:modified_time" content="2025-04-07T08:11:56.647Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Document">
@@ -162,7 +162,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            745
+                            841
                         
                         字
                     </li>
@@ -182,12 +182,17 @@
             
             <hr />
             <div itemprop="articleBody"><p>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p>
+<p>开源协议是 ISC许可证</p>
 <h1 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h1><ul>
 <li>远程工作时，防止因网络中断导致任务终止。</li>
 <li>高效管理多任务并行环境（如开发、运维、日志监控）。</li>
 <li>替代传统终端，实现类 IDE 的多窗口协作体验。</li>
 </ul>
-<h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 &#39;&#39;tmux&#39;&#39;<br>列出会话 &#39;&#39;tmux ls&#39;&#39;<br>重连会话 &#39;&#39;tmux attach -t 0&#39;&#39;</p>
+<h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 <code>tmux</code></p>
+<p>列出会话 <code>tmux ls</code></p>
+<p>重连会话 <code>tmux attach -t 0</code></p>
+<p>翻页&#x2F;滚动操作 按<code>ctrl+b</code>后按<code>[</code></p>
+<p>复制 按住<code>shift</code></p>
 <h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><table>
 <thead>
 <tr>
@@ -280,7 +285,12 @@
 <td>空格</td>
 </tr>
 </tbody></table>
-<p>按&#39;&#39;ctrl+b&#39;&#39;后按&#39;&#39;[&#39;&#39;进入tmux翻屏模式，之后就可以滚屏了，有最大条目限制</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>tmux 默认行数上限 2000，应该是性能和内存考虑，不过10万行大概也才几十MiB内存</p>
+<p>全局配置文件 <code>/etc/tmux.conf</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set -g history-limit 100000</span><br><span class="line">set -g mouse on #启用鼠标滚屏</span><br></pre></td></tr></table></figure>
+
+<p>注意版本，因为老版，例如 CentOS7 用的 mode-mouse</p>
+<p>通常建议是使用个人配置 <code>~/.tmux.conf</code></p>
 </div>
         </div>
         
@@ -301,7 +311,7 @@
                     <a class="tag-none-link" href="/tags/Command/" rel="tag">Command</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-04-07T07:18:06.424Z" itemprop="dateModified">最后编辑：2025-04-07</time>
+                    <time datetime="2025-04-07T08:11:56.647Z" itemprop="dateModified">最后编辑：2025-04-07</time>
                 </div>
             </div>
         </footer>

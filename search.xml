@@ -28810,12 +28810,17 @@ $(function () {
     <title>tmux 使用</title>
     <url>/Linux/tmux/</url>
     <content><![CDATA[<p>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p>
+<p>开源协议是 ISC许可证</p>
 <h1 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h1><ul>
 <li>远程工作时，防止因网络中断导致任务终止。</li>
 <li>高效管理多任务并行环境（如开发、运维、日志监控）。</li>
 <li>替代传统终端，实现类 IDE 的多窗口协作体验。</li>
 </ul>
-<h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 &#39;&#39;tmux&#39;&#39;<br>列出会话 &#39;&#39;tmux ls&#39;&#39;<br>重连会话 &#39;&#39;tmux attach -t 0&#39;&#39;</p>
+<h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 <code>tmux</code></p>
+<p>列出会话 <code>tmux ls</code></p>
+<p>重连会话 <code>tmux attach -t 0</code></p>
+<p>翻页&#x2F;滚动操作 按<code>ctrl+b</code>后按<code>[</code></p>
+<p>复制 按住<code>shift</code></p>
 <h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><table>
 <thead>
 <tr>
@@ -28908,7 +28913,12 @@ $(function () {
 <td>空格</td>
 </tr>
 </tbody></table>
-<p>按&#39;&#39;ctrl+b&#39;&#39;后按&#39;&#39;[&#39;&#39;进入tmux翻屏模式，之后就可以滚屏了，有最大条目限制</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>tmux 默认行数上限 2000，应该是性能和内存考虑，不过10万行大概也才几十MiB内存</p>
+<p>全局配置文件 <code>/etc/tmux.conf</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set -g history-limit 100000</span><br><span class="line">set -g mouse on #启用鼠标滚屏</span><br></pre></td></tr></table></figure>
+
+<p>注意版本，因为老版，例如 CentOS7 用的 mode-mouse</p>
+<p>通常建议是使用个人配置 <code>~/.tmux.conf</code></p>
 ]]></content>
       <categories>
         <category>Document</category>
