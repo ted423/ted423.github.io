@@ -28809,18 +28809,105 @@ $(function () {
   <entry>
     <title>tmux 使用</title>
     <url>/Linux/tmux/</url>
-    <content><![CDATA[<p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; tmux &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p>
-<p>核心：</p>
-<ul>
+    <content><![CDATA[<p>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p>
+<h1 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h1><ul>
 <li>远程工作时，防止因网络中断导致任务终止。</li>
 <li>高效管理多任务并行环境（如开发、运维、日志监控）。</li>
-<li>替代传统终端，实现类 IDE 的多窗口协作体验。<br>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; 主要命令 &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>开启使用命令 &#39;&#39;tmux&#39;&#39;<br>列出会话 &#39;&#39;tmux ls&#39;&#39;<br>重连会话 &#39;&#39;tmux attach -t 0&#39;&#39;</li>
+<li>替代传统终端，实现类 IDE 的多窗口协作体验。</li>
 </ul>
-<p>会话管理</p>
-<p>|  操作  |  命令&#x2F;快捷键  |<br>|  新建会话  |  tmux new -s &lt;会话名&gt;  |<br>|  分离当前会话  |  Ctrl+b → d  |<br>|  列出会话  |  tmux ls  |<br>|  重连会话  |  tmux attach -t &lt;会话名&gt;  |<br>|  关闭会话  |  tmux kill-session -t &lt;会话名&gt;  |<br>|  重命名会话  |  Ctrl+b → $  |</p>
-<p>窗口管理</p>
-<p>|  操作  |  快捷键（Ctrl+b 后按）  |<br>|  新建窗口  |  c  |<br>|  关闭窗口  |  &amp;  |<br>|  切换窗口  |  0-9 或 n（下一窗口）&#x2F;p（上一窗口）  |<br>|  重命名窗口  |  ,  |<br>|  窗口列表  |  w  |</p>
-<p>面板管理<br>|  操作  |  快捷键（Ctrl+b 后按）  |<br>|  垂直分割面板  |  %  |<br>|  水平分割面板  |  &quot;  |<br>|  切换面板  |  方向键（←↑↓→）  |<br>|  关闭面板  |  x  |<br>|  调整面板大小  |  Ctrl+方向键  |<br>|  切换布局  |  空格  |</p>
+<h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 &#39;&#39;tmux&#39;&#39;<br>列出会话 &#39;&#39;tmux ls&#39;&#39;<br>重连会话 &#39;&#39;tmux attach -t 0&#39;&#39;</p>
+<h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>命令&#x2F;快捷键</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>新建会话</td>
+<td>tmux new -s &lt;会话名&gt;</td>
+</tr>
+<tr>
+<td>分离当前会话</td>
+<td>Ctrl+b → d</td>
+</tr>
+<tr>
+<td>列出会话</td>
+<td>tmux ls</td>
+</tr>
+<tr>
+<td>重连会话</td>
+<td>tmux attach -t &lt;会话名&gt;</td>
+</tr>
+<tr>
+<td>关闭会话</td>
+<td>tmux kill-session -t &lt;会话名&gt;</td>
+</tr>
+<tr>
+<td>重命名会话</td>
+<td>Ctrl+b → $</td>
+</tr>
+</tbody></table>
+<h2 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h2><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>快捷键（Ctrl+b 后按）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>新建窗口</td>
+<td>c</td>
+</tr>
+<tr>
+<td>关闭窗口</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>切换窗口</td>
+<td>0-9 或 n（下一窗口）&#x2F;p（上一窗口）</td>
+</tr>
+<tr>
+<td>重命名窗口</td>
+<td>,</td>
+</tr>
+<tr>
+<td>窗口列表</td>
+<td>w</td>
+</tr>
+</tbody></table>
+<h2 id="面板管理"><a href="#面板管理" class="headerlink" title="面板管理"></a>面板管理</h2><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>快捷键（Ctrl+b 后按）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>垂直分割面板</td>
+<td>%</td>
+</tr>
+<tr>
+<td>水平分割面板</td>
+<td>&quot;</td>
+</tr>
+<tr>
+<td>切换面板</td>
+<td>方向键（←↑↓→）</td>
+</tr>
+<tr>
+<td>关闭面板</td>
+<td>x</td>
+</tr>
+<tr>
+<td>调整面板大小</td>
+<td>Ctrl+方向键</td>
+</tr>
+<tr>
+<td>切换布局</td>
+<td>空格</td>
+</tr>
+</tbody></table>
 <p>按&#39;&#39;ctrl+b&#39;&#39;后按&#39;&#39;[&#39;&#39;进入tmux翻屏模式，之后就可以滚屏了，有最大条目限制</p>
 ]]></content>
       <categories>
