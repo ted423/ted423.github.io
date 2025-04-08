@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-04-07T12:21:37.231Z</updated>
+  <updated>2025-04-08T08:39:21.572Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LXC 为什么不火</title>
+    <link href="http://ted423.github.io/Linux/LSC/"/>
+    <id>http://ted423.github.io/Linux/LSC/</id>
+    <published>2025-04-08T08:33:19.064Z</published>
+    <updated>2025-04-08T08:39:21.572Z</updated>
+    
+    <content type="html"><![CDATA[<p>LXC容器共享主机的内核，这意味着容器必须运行与主机相同或兼容的内核版本。这一点非常重要，因为它直接影响到容器中可以运行的操作系统类型。</p><p>其实光靠上面这段就够了。前有 KVM，后有 docker,LXC 这种尴尬处境，那肯定火不起来</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;LXC容器共享主机的内核，这意味着容器必须运行与主机相同或兼容的内核版本。这一点非常重要，因为它直接影响到容器中可以运行的操作系统类型。&lt;/p&gt;
+&lt;p&gt;其实光靠上面这段就够了。前有 KVM，后有 docker,LXC 这种尴尬处境，那肯定火不起来&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
+    
+    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
+    
+  </entry>
   
   <entry>
     <title>记一次试图逃离 MobaXterm</title>
@@ -555,28 +591,6 @@
     <category term="Font" scheme="http://ted423.github.io/tags/Font/"/>
     
     <category term="SIL Open Font" scheme="http://ted423.github.io/tags/SIL-Open-Font/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>去你妈的不求甚解</title>
-    <link href="http://ted423.github.io/etc/Fuck/"/>
-    <id>http://ted423.github.io/etc/Fuck/</id>
-    <published>2025-01-10T06:47:13.829Z</published>
-    <updated>2022-05-13T11:17:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>其实早就有这种想法了，无论是把动漫当动画用，还是关于&quot;车速100码&quot;的争论<br><a href="https://www.zhihu.com/question/34935661">https://www.zhihu.com/question/34935661</a><br><a href="https://www.zhihu.com/question/20840941">https://www.zhihu.com/question/20840941</a></p><p>更奇葩的在于最近(我的最近一般指的最近1年)找个x86架构的群晖软件(因为CPU真就是x86)<br><a href="https://www.google.com/search?q=qbittorrent+x86+%E7%BE%A4%E6%99%96&oq=qbittorrent+x86+%E7%BE%A4%E6%99%96&aqs=chrome..69i57.8545j0j1&sourceid=chrome&ie=UTF-8">https://www.google.com/search?q=qbittorrent+x86+群晖&amp;oq=qbittorrent+x86+群晖&amp;aqs=chrome..69i57.8545j0j1&amp;sourceid=chrome&amp;ie=UTF-8</a></p><p>结果放眼望去，全是x64的。甚至包括一堆码农的博客(<br>造成的结果就是，如果你真想找x86的软件包，那大概是真找不到的(因为实际也没有，没人编译，不过你大概短期内也无法确认，实际上没这么个东西。不过docker还是有一个的)</p><p>当遇到类似问题的时候，总会有这么一种观点，不求甚解。<br>只要大家都能理解就好了。<br>甚至还有人意志坚定的指责那些纠正的人。</p><p>结果呢？<br>就是大家都活成了傻逼的样子</p><p>就如同这个</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">请听题：“铁骑”的正确读音是什么？</span><br><span class="line">A. tiě jì</span><br><span class="line">B. tiě qí</span><br><span class="line"></span><br><span class="line">再听题：“空穴来风”的正确释义是什么？</span><br><span class="line"></span><br><span class="line">A. 出现的传言都有一定的根源和依据。</span><br><span class="line">B. 传言没有依据。</span><br><span class="line"></span><br><span class="line">最后一题：一斤等于多少两？</span><br><span class="line">A. 16两</span><br><span class="line">B. 10两</span><br><span class="line"></span><br><span class="line">你以为A是正确答案，其实《现代汉语词典》里的答案都是B。语言这东西嘛，就是约定俗成，互相理解即可，强行纠正没什么意义。说不定哪天，这两个字就增加了释义了呢。</span><br><span class="line"></span><br><span class="line">作者：yuantj</span><br><span class="line">链接：https://www.zhihu.com/question/20840941/answer/1890453633</span><br><span class="line">来源：知乎</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure><p><a href="https://zhuanlan.zhihu.com/p/161624772">https://zhuanlan.zhihu.com/p/161624772</a></p><p>网上查了下汉典(<br>没这奇怪的意思<br>《现代汉语词典》你还在看么？我不看(</p><p>当我发现搜中文很难搜到我需要的东西的时候，我很悲伤。<br>当现在开始不断地嘲讽自主研发浏览器，自主研发系统的时候，其实我很高兴。</p><p>目前我遇到的情况是，搞软件，搞开发的分不清内外网。做硬件开发的，一堆板子用相同的MAC地址问我为什么上不了网。</p><p>什么样的土壤，结出什么样的果实。<br>我并不指望在这种风气下，学术以及科技发展能有啥好结果。</p><p>跟能讨论的人讨论。跟不能讨论的人...，(这就是我为什么注销了知乎。</p><hr><p>今天又遇到一个问题，有人问这个插件怎么 import。（VapourSynth）_2022-05-13<br>我想说这个很好理解啊，这个插件是dll形式的。等我去更新下文档...<br>然后我才发现原文写的 主要分为 Script(.py)脚本 和 Plugins(.dll)插件 两个部分。<br>平时所有人都把 .py 叫插件。（教程中本身也是写着写着全变插件了）</p><p>而英文原文写的也很清楚</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">VapourSynth’s installation is simple. There’s an installer for Windows, Homebrew for Mac, and</span><br><span class="line">every distro’s repository should have VapourSynth.</span><br><span class="line">The VapourSynth documentation lists paths for where to place your plugins. The recommended</span><br><span class="line">path for Windows is &lt;AppData&gt;\VapourSynth\plugins32 or</span><br><span class="line">&lt;AppData&gt;\VapourSynth\plugins64. Unix users can create a configuration file to specify</span><br><span class="line">paths.</span><br><span class="line">Python scripts for VapourSynth should be placed in your Python site-packages folder. On</span><br><span class="line">Arch Linux, this is /usr/lib64/Python3.*/sitepackages/. Windows users will find this</span><br><span class="line">in their local AppData folder.</span><br></pre></td></tr></table></figure><p>其实这个现象可以跟扩展跟插件之争一起看。</p><p>原本如果正确区分的话，根本不需要解释。不用跟人说，.py形式的插件是import，.dll形式的插件是...</p><p>实际上来说，Win下的plugin(插件)应该只有.dll这个形式，这个是系统层面实现的插件。</p><p><del>不过毕竟 wikipedia 不这么认为</del><br>所以躺平吧，爱咋样咋样</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;其实早就有这种想法了，无论是把动漫当动画用，还是关于&amp;quot;车速100码&amp;quot;的争论&lt;br&gt;&lt;a href=&quot;https://www.zhihu.com/question/34935661&quot;&gt;https://www.zhihu.com/question/34935</summary>
-      
-    
-    
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
     
   </entry>
   

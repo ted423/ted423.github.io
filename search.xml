@@ -28950,4 +28950,22 @@ $(function () {
         <tag>破解&amp;激活</tag>
       </tags>
   </entry>
+  <entry>
+    <title>LXC 为什么不火</title>
+    <url>/Linux/LSC/</url>
+    <content><![CDATA[<p>LXC容器共享主机的内核，这意味着容器必须运行与主机相同或兼容的内核版本。这一点非常重要，因为它直接影响到容器中可以运行的操作系统类型。</p>
+<p>其实光靠上面这段就够了。前有 KVM，后有 docker,LXC 这种尴尬处境，那肯定火不起来</p>
+]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Document</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>Software</tag>
+        <tag>defect</tag>
+        <tag>Command</tag>
+      </tags>
+  </entry>
 </search>
