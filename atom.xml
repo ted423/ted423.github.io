@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-04-08T08:39:21.572Z</updated>
+  <updated>2025-04-14T07:09:09.276Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打印机自定义纸张大小注意事项</title>
+    <link href="http://ted423.github.io/Hardware/printer/"/>
+    <id>http://ted423.github.io/Hardware/printer/</id>
+    <published>2025-04-14T06:49:54.764Z</published>
+    <updated>2025-04-14T07:09:09.276Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近主要是添加凭据打印纸之后发现别人的电脑可以选，我自己电脑死活显示不出打印选项。</p><p>具体可能跟驱动版本还有些关系，另一方面，就是惠普打印机只支持宽度小于24厘米，这里是个坑注意下就好了。</p><p>可以设140mm x 240mm。因为纸是竖着放的。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近主要是添加凭据打印纸之后发现别人的电脑可以选，我自己电脑死活显示不出打印选项。&lt;/p&gt;
+&lt;p&gt;具体可能跟驱动版本还有些关系，另一方面，就是惠普打印机只支持宽度小于24厘米，这里是个坑注意下就好了。&lt;/p&gt;
+&lt;p&gt;可以设140mm x 240mm。因为纸是竖着放的。&lt;/p</summary>
+      
+    
+    
+    
+    <category term="Hardware" scheme="http://ted423.github.io/categories/Hardware/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Driver&amp;Firmware" scheme="http://ted423.github.io/tags/Driver-Firmware/"/>
+    
+  </entry>
   
   <entry>
     <title>LXC 为什么不火</title>
@@ -567,30 +601,6 @@
     <category term="完结" scheme="http://ted423.github.io/tags/%E5%AE%8C%E7%BB%93/"/>
     
     <category term="小说" scheme="http://ted423.github.io/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Font]思源黑体</title>
-    <link href="http://ted423.github.io/etc/source-han-sans/"/>
-    <id>http://ted423.github.io/etc/source-han-sans/</id>
-    <published>2025-01-10T06:47:15.142Z</published>
-    <updated>2020-02-08T13:56:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/adobe-fonts/source-han-sans">https://github.com/adobe-fonts/source-han-sans</a><br>这个字体是Adobe和Google共同开发的，谷歌那里叫Noto Sans<br><a href="https://zh.wikipedia.org/wiki/OpenType">OpenType</a>&#x2F;CFF Pan-CJK fonts</p><p>微软雅黑的版权坑<a href="https://zhuanlan.zhihu.com/p/30568782">https://zhuanlan.zhihu.com/p/30568782</a></p><p>可惜的在于这个字体只支持自用，除非对方电脑也有安装，否则是无法显示的。</p><p><del>另外，用了一段时间，虽然微软雅黑有这样那样的问题，但思源黑体真的真的不好看。</del></p><p>在微软上表现比较更好的Source-Han-TrueType<br><a href="https://github.com/Pal3love/Source-Han-TrueType">https://github.com/Pal3love/Source-Han-TrueType</a></p><hr><p><time>2020-02-08</time> 增加TrueType</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/adobe-fonts/source-han-sans&quot;&gt;https://github.com/adobe-fonts/source-han-sans&lt;/a&gt;&lt;br&gt;这个字体是Adobe和Google共同开发的，谷歌那</summary>
-      
-    
-    
-    
-    
-    <category term="Font" scheme="http://ted423.github.io/tags/Font/"/>
-    
-    <category term="SIL Open Font" scheme="http://ted423.github.io/tags/SIL-Open-Font/"/>
     
   </entry>
   

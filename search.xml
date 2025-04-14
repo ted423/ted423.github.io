@@ -28968,4 +28968,22 @@ $(function () {
         <tag>Command</tag>
       </tags>
   </entry>
+  <entry>
+    <title>打印机自定义纸张大小注意事项</title>
+    <url>/Hardware/printer/</url>
+    <content><![CDATA[<p>最近主要是添加凭据打印纸之后发现别人的电脑可以选，我自己电脑死活显示不出打印选项。</p>
+<p>具体可能跟驱动版本还有些关系，另一方面，就是惠普打印机只支持宽度小于24厘米，这里是个坑注意下就好了。</p>
+<p>可以设140mm x 240mm。因为纸是竖着放的。</p>
+]]></content>
+      <categories>
+        <category>Hardware</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>Document</tag>
+        <tag>Hardware</tag>
+        <tag>Issue</tag>
+        <tag>Driver&amp;Firmware</tag>
+      </tags>
+  </entry>
 </search>
