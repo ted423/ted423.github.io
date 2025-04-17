@@ -7047,6 +7047,7 @@
 <h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p><a href="https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/">https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/</a></p>
 <h1 id="Default"><a href="#Default" class="headerlink" title="Default"></a>Default</h1><p>Default Policy 是继承 ACE(Access Control Entry),只能作用于目录。 会在设置任意 Default Policy 之后出现默认的user、group、other、mask条目，可以用<code>setfacl -k</code>全部清除。但 nfs4 无此命令，你只能到存储上操作。</p>
 <p>通常你设置 ACL 只能对已有的条目生效，如果要新文件也生效，就要设 Default Policy</p>
+<p><strong>注意 Default Policy 不会影响<code>cp</code>和<code>mv</code>进目录的文件</strong></p>
 <h1 id="POSIX-ACLs"><a href="#POSIX-ACLs" class="headerlink" title="POSIX ACLs"></a>POSIX ACLs</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">setfacl -R -m group:groupname:r-x path</span><br><span class="line">setfacl -m default:group:groupname:r-x path</span><br></pre></td></tr></table></figure>
 <p>其中 groupname 是可以更改的组名</p>
 <p>文档</p>
