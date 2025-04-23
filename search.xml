@@ -10815,7 +10815,9 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <hr>
 <p><del>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)</del>  --<time>2018-02-26</time></p>
 <p>Windows Update 以后会偷偷再把值给取消掉 --<time>2019-07-03</time></p>
-<p>Win 11 只要<code>AutoEndTasks</code>就可以，重启后生效 -<time datetime="2025-01-22">2025-01-22</time></p>
+<p><del>Win 11</del>只要<code>AutoEndTasks</code>就可以，重启后生效 --<time datetime="2025-01-22">2025-01-22</time></p>
+<p><code>AutoEndTasks</code>是功能值，<code>WaitToKillAppTimeout</code>是关闭进程的时间(ms)，没有前者，后者应该不生效 --<time datetime="2025-04-23">2025-04-23</time></p>
+<p><a href="https://github.com/ted423/reg/blob/main/User/autoendtask.reg">https://github.com/ted423/reg/blob/main/User/autoendtask.reg</a></p>
 ]]></content>
       <categories>
         <category>Issue</category>

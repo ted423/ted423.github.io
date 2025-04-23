@@ -27,7 +27,7 @@
 <meta property="og:description" content="这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师) 个人处理方法 打开注册表管理器，找到 1HKEY_CURRENT_USER\Control Panel\Desktop\ 新建一个AutoEndTas">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-02-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-01-22T00:31:00.000Z">
+<meta property="article:modified_time" content="2025-04-23T08:19:58.638Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Windows 11">
@@ -162,7 +162,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            461
+                            598
                         
                         字
                     </li>
@@ -191,7 +191,9 @@
 <hr>
 <p><del>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)</del>  --<time>2018-02-26</time></p>
 <p>Windows Update 以后会偷偷再把值给取消掉 --<time>2019-07-03</time></p>
-<p>Win 11 只要<code>AutoEndTasks</code>就可以，重启后生效 -<time datetime="2025-01-22">2025-01-22</time></p>
+<p><del>Win 11</del>只要<code>AutoEndTasks</code>就可以，重启后生效 --<time datetime="2025-01-22">2025-01-22</time></p>
+<p><code>AutoEndTasks</code>是功能值，<code>WaitToKillAppTimeout</code>是关闭进程的时间(ms)，没有前者，后者应该不生效 --<time datetime="2025-04-23">2025-04-23</time></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ted423/reg/blob/main/User/autoendtask.reg">https://github.com/ted423/reg/blob/main/User/autoendtask.reg</a></p>
 </div>
         </div>
         
@@ -212,7 +214,7 @@
                     <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>, <a class="tag-none-link" href="/tags/Windows-11/" rel="tag">Windows 11</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-01-22T00:31:00.000Z" itemprop="dateModified">最后编辑：2025-01-22</time>
+                    <time datetime="2025-04-23T08:19:58.638Z" itemprop="dateModified">最后编辑：2025-04-23</time>
                 </div>
             </div>
         </footer>
