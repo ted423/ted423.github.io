@@ -28933,4 +28933,19 @@ $(function () {
         <tag>Compression</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Language ID 列表</title>
+    <url>/Document/Language_tag/</url>
+    <content><![CDATA[<p>参考 Windows 给出的</p>
+<p><a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c?redirectedfrom=MSDN">https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c?redirectedfrom=MSDN</a></p>
+<p><a href="https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f?redirectedfrom=MSDN">https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f?redirectedfrom=MSDN</a></p>
+<p>下面那个有 pdf 可以下载，也就是上面那个文档下载下来</p>
+]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>Document</tag>
+      </tags>
+  </entry>
 </search>
