@@ -12076,6 +12076,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <li>Inkscape: <a href="https://inkscape.org/">https://inkscape.org/</a>(SVG编辑工具,GPLv2)</li>
 <li>ImageMagick: <a href="https://imagemagick.org/index.php">https://imagemagick.org/index.php</a> (开源，但协议是自创的)之前XnViewMP转换遇到问题，找的，挺强大的，不过Xnview遇到的问题应该是那些图片转化本身的bug,ImageMagick在同样的转换下也会出问题</li>
 <li><a href="https://github.com/shssoichiro/oxipng">oxipng</a> png无损压缩优化软件，会生成最小的png，MIT协议</li>
+<li><a href="https://saerasoft.com/caesium">caesium</a> 开源的图片批量压缩工具(GPLv3)，主要 Xnview 商业使用需要付费，这个功能上是不如 Xnview 的</li>
 </ul>
 <h1 id="几款重复图片查找工具"><a href="#几款重复图片查找工具" class="headerlink" title="几款重复图片查找工具"></a>几款重复图片查找工具</h1><p>(就效果来讲Duplicate Finder只支持jpg不过速度快些)</p>
 <ul>
@@ -12085,7 +12086,7 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <li>AntiDupl.NET: <a href="https://ermig1979.github.io/AntiDupl/english/index.html">https://ermig1979.github.io/AntiDupl/english/index.html</a>(MIT,挺强大的，就是太高端了，有些不会用，笑)</li>
 </ul>
 <hr>
-<p><time>2021-06-10</time>增加nomacs<br><time>2021-05-02</time>增加ShareX<br><time>2017-6-6 19:53</time>增加 Adobe Bridge CC<br><time>2017-6-13 20:38</time>增加LICEcap<br><time>2023-6-02</time>增加 digiKam<br><time>2023-6-04</time>增加 oxipng</p>
+<p><time>2021-06-10</time>增加nomacs<br><time>2021-05-02</time>增加ShareX<br><time>2017-6-6 19:53</time>增加 Adobe Bridge CC<br><time>2017-6-13 20:38</time>增加LICEcap<br><time>2023-6-02</time>增加 digiKam<br><time>2023-6-04</time>增加 oxipng<br><time datetime="2025-04-28">2025-04-28</time>增加 caesium</p>
 ]]></content>
       <categories>
         <category>Software</category>
