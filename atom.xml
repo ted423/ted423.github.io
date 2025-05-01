@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-04-24T03:26:00.308Z</updated>
+  <updated>2025-05-01T03:42:58.009Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>迷思，记录下我为什么不用 EverythingToolbar</title>
+    <link href="http://ted423.github.io/Software/EverythingToolbar/"/>
+    <id>http://ted423.github.io/Software/EverythingToolbar/</id>
+    <published>2025-05-01T02:41:33.431Z</published>
+    <updated>2025-05-01T03:42:58.009Z</updated>
+    
+    <content type="html"><![CDATA[<p>我挺喜欢 Everything 的，当时一看这个立马就装了，结果就尴尬了。</p><ol><li>结果没法保存，操作失误或者打开文件位置之后还要重新搜索，实际体验不如我直接在 Everything 里搜索。</li><li>开软件等搜索很喜欢先按Win键，用 EverythingToolbar 反而需要我鼠标点过去，这个跟直接使用 Everything 并没有直接区别。反而还有第一点的负面。</li></ol><p>本着软件尽量少装的原则就卸掉了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我挺喜欢 Everything 的，当时一看这个立马就装了，结果就尴尬了。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;结果没法保存，操作失误或者打开文件位置之后还要重新搜索，实际体验不如我直接在 Everything 里搜索。&lt;/li&gt;
+&lt;li&gt;开软件等搜索很喜欢先按Win键，用 Ever</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
+    
+    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
+    
+  </entry>
   
   <entry>
     <title>[Terminal]Bat 脚本中的变量延迟扩展 (Delayed Expansion)</title>
@@ -82,8 +117,8 @@
   
   <entry>
     <title>LXC 为什么不火</title>
-    <link href="http://ted423.github.io/Linux/LSC/"/>
-    <id>http://ted423.github.io/Linux/LSC/</id>
+    <link href="http://ted423.github.io/Linux/LXC/"/>
+    <id>http://ted423.github.io/Linux/LXC/</id>
     <published>2025-04-08T08:33:19.064Z</published>
     <updated>2025-04-08T08:39:21.572Z</updated>
     
@@ -383,7 +418,7 @@
     <link href="http://ted423.github.io/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B/"/>
     <id>http://ted423.github.io/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B/</id>
     <published>2025-03-05T16:05:27.771Z</published>
-    <updated>2025-03-05T16:05:18.000Z</updated>
+    <updated>2025-05-01T02:25:02.799Z</updated>
     
     <content type="html"><![CDATA[<p>不得不说，以后 AI 应该是会带来一场明明确确的变革，很效率<br>起因是我想逃离 Notion，最近又刚好看到两款类似软件的推荐。</p><p>Trilium Notes, Notion, 和 Vikunja</p><p>Gemini 很清晰的给出了对比。</p><table><thead><tr><th>特性</th><th>Trilium Notes</th><th>Notion</th><th>Vikunja</th></tr></thead><tbody><tr><td>核心定位</td><td>知识管理，个人笔记</td><td>工作空间，笔记+任务+数据库</td><td>任务管理，项目管理</td></tr><tr><td>笔记功能</td><td>强大的富文本编辑器，支持 Markdown、代码高亮等。笔记之间可以建立链接，形成知识网络。</td><td>富文本编辑器，支持 Markdown。笔记可以嵌入各种内容块 (任务、表格、图片等)。</td><td>简单笔记功能，主要用于任务描述、备注等。</td></tr><tr><td>任务管理</td><td>可以通过标签、属性等方式在笔记中标记任务，但相对简单，没有专门的任务管理模块。</td><td>强大的任务管理功能，支持看板、列表、日历等多种视图。可以设置截止日期、负责人、优先级等。</td><td>核心功能就是任务管理，看板、列表、甘特图等视图。支持依赖关系、标签、优先级、到期日、提醒等。</td></tr><tr><td>任务和笔记关联</td><td>可以通过链接将任务和笔记关联起来，方便查找相关信息。</td><td>任务可以嵌入到笔记中，或者将笔记链接到任务。</td><td>任务描述可以包含笔记链接，但关联性相对较弱。</td></tr><tr><td>灵活性&#x2F;定制性</td><td>非常灵活，可以自定义笔记结构、样式等。支持 JavaScript 脚本，可以扩展功能。</td><td>灵活性较高，可以通过页面、数据库、模板等进行定制。</td><td>灵活性相对较低，主要通过设置标签、优先级等属性来定制。</td></tr><tr><td>模板</td><td>没有预设模板，需要自己搭建。</td><td>大量模板，涵盖笔记、任务管理、项目管理等各种场景。</td><td>相对较少，主要集中在项目管理和任务管理方面。</td></tr><tr><td>代码处理</td><td>代码块支持高亮，但可能需要手动设置语言类型。</td><td>代码块支持高亮，但有时会自动修改代码中的字符，需要注意。</td><td>不太适合处理大量代码，主要用于任务相关的小段代码或命令。</td></tr><tr><td>离线使用</td><td>完全离线可用，数据存储在本地。</td><td>部分内容可以离线访问，但同步和协作需要网络连接。</td><td>可以自托管，但移动端通常需要网络访问</td></tr><tr><td>数据安全</td><td>数据存储在本地，安全性较高。可以定期备份。</td><td>数据存储在云端，安全性取决于 Notion 的安全措施。</td><td>可以自托管，安全性由自己掌控。</td></tr><tr><td>协作</td><td>不擅长协作，主要用于个人知识管理。</td><td>协作能力强，可以多人共同编辑页面、管理任务。</td><td>协作能力较强，适合团队进行项目管理。</td></tr></tbody></table><blockquote><p>针对你的需求和 Notion 的问题：<br>模板太花： Notion 确实有很多花哨的模板，但你也可以自己创建简洁的页面和数据库，或者选择一些简约风格的模板。重要的是根据自己的需求定制，而不是被模板牵着鼻子走。<br>代码自动修改： 这是 Notion 的一个已知问题。 解决办法：<br>使用代码块 (Code Block): 确保你把代码放在了 &quot;Code&quot; 块里，而不是简单的文本块。<br>手动检查： 编写或粘贴代码后，务必仔细检查一遍，确保没有被修改。<br>使用外部编辑器： 如果你经常需要处理大量代码，可以考虑在外部编辑器中编写代码，然后复制粘贴到 Notion 中。</p></blockquote><p>我: 主要我不希望花太多时间在研究设置项上，而检查代码不是一个可行方案，保持原始数据无损是一个很重要的需求，不能到使用时才发现数据是坏的</p><p>之后它就给我推了 Trilium Notes </p><blockquote><p>Trilium Notes (优点):<br>本地优先，数据安全： 数据完全存储在本地，你拥有绝对的掌控权，不用担心第三方平台的数据安全问题。<br>原始数据保证： Trilium Notes 本身不会主动修改你的代码。只要你正确地使用了代码块，就可以确保代码的原始性。<br>专注笔记，避免过度设计： 虽然 Trilium Notes 的功能非常强大，但它的核心仍然是笔记。这使得它避免了像 Notion 那样过度设计的问题，让你能够专注于知识的记录和组织<br>Trilium Notes (缺点):<br>任务管理相对简单： 任务管理不是 Trilium Notes 的强项。虽然可以通过标签、属性等方式来标记任务，但缺乏专业的任务管理功能，例如看板、甘特图等。<br>协作能力弱： Trilium Notes 主要面向个人用户，协作能力较弱。<br>解决方案（如果选择Trilium Notes但需要更好的任务管理）：</p></blockquote><p>我：我不需要甘特图这些，但我可能需要记住任务的开始时间，和任务变动</p><blockquote><p>好的，如果你不需要甘特图，但需要记录任务的开始时间和任务的变动，那么 Trilium Notes + 外部任务管理工具 或 Vikunja 这两种方案仍然是比较合适的选择，只是在具体实现上可以做一些调整。<br>Trilium Notes + 外部任务管理工具</p></blockquote><p>我：Vikunja 无法满足么，他无法满足的原因是？</p><blockquote><p>Vikunja 可能无法完全满足需求的原因：<br>笔记功能的局限性:<br>不适合大量知识记录： Vikunja 的笔记功能主要用于任务描述和备注，对于记录大量的知识、构建知识体系来说，功能过于简单。<br>缺乏知识关联： 无法像 Trilium Notes 那样，通过链接将笔记组织成知识网络。</p></blockquote><p>我：我可能不太需要知识网络，只是简单的记录</p><blockquote><p>好的，既然你不需要知识网络，只是简单的记录，那么我们重新评估一下 Vikunja 和 Trilium Notes + 外部任务管理工具这两种方案。<br>在这种情况下，Vikunja 的优势就更加明显了：<br>专注任务管理： 避免了为了知识网络而引入不必要的复杂性。<br>学习曲线更低： 相比于需要学习如何构建知识网络的 Trilium Notes，Vikunja 的学习曲线更低，更容易上手。<br>集成性： 任务和记录都在同一个工具中，减少了工具切换的成本。<br>自带评论和活动日志： 虽然不如专业的日志工具强大，但是对于简单的任务变动记录来说，已经足够。<br>Vikunja 的劣势：<br>笔记功能仍然有限： 虽然够用，但对于需要记录大量细节的任务来说，可能不够方便。<br>代码处理能力弱： 如果需要记录大量的代码片段，仍然可能遇到代码高亮和字符修改的问题。<br>开始时间需要手动维护： 仍然需要通过自定义字段或者备注记录，不如直接修改创建时间直观。<br>Trilium Notes + 外部任务管理工具 的方案，优势会相对降低：<br>知识网络不再是优势： 如果不需要知识网络，Trilium Notes 的优势会大打折扣。<br>多工具管理： 需要在两个工具之间切换，增加了操作的复杂性。<br>在这种简化需求的前提下，强烈建议你优先考虑 Vikunja。<br>从结果来看，我可能会继续用 Notion,因为我之前忽略了 Notion 支持 Markdown 😀 虽然他会自动转换，并且转换之后就只能点点点了。</p></blockquote>]]></content>
     
@@ -397,6 +432,8 @@
       
     
     
+    
+    <category term="etc" scheme="http://ted423.github.io/categories/etc/"/>
     
     
     <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
@@ -567,41 +604,6 @@
     <category term="Game" scheme="http://ted423.github.io/tags/Game/"/>
     
     <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[开源]AB Download Manager - 多段下载器</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/AB%20Download%20Manager/</id>
-    <published>2025-01-24T02:35:07.638Z</published>
-    <updated>2025-01-23T13:22:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/amir1376/ab-download-manager">https://github.com/amir1376/ab-download-manager</a></p><p>开源，Lin + Win,多语言,buff 已经满了。就不多介绍了<br>多段下载，会下载后合并，基本就是 IDM 的开源替代品。<br>目前未测试断点续传</p><hr><p>加个提醒，部分服务器检测到过多的连接，可能会直接Ban你IP，除了thread设到5以外(并不保证一定有效)，没有太合适的建议，请自行斟酌</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/amir1376/ab-download-manager&quot;&gt;https://github.com/amir1376/ab-download-manager&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;开源，Lin + Win,多语言,buf</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="Apache License 2.0" scheme="http://ted423.github.io/tags/Apache-License-2-0/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
     
   </entry>
   

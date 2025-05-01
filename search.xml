@@ -11874,10 +11874,10 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
         <tag>分类汇总</tag>
         <tag>Windows</tag>
         <tag>开源(Open Source)</tag>
+        <tag>Software</tag>
         <tag>GPLv2</tag>
         <tag>GPLv3</tag>
         <tag>LGPL</tag>
-        <tag>Software=</tag>
       </tags>
   </entry>
   <entry>
@@ -14062,6 +14062,9 @@ DisplayPort (简称DP)是视频电子标准协会（VESA）推动的数字式视
 <p>好的，既然你不需要知识网络，只是简单的记录，那么我们重新评估一下 Vikunja 和 Trilium Notes + 外部任务管理工具这两种方案。<br>在这种情况下，Vikunja 的优势就更加明显了：<br>专注任务管理： 避免了为了知识网络而引入不必要的复杂性。<br>学习曲线更低： 相比于需要学习如何构建知识网络的 Trilium Notes，Vikunja 的学习曲线更低，更容易上手。<br>集成性： 任务和记录都在同一个工具中，减少了工具切换的成本。<br>自带评论和活动日志： 虽然不如专业的日志工具强大，但是对于简单的任务变动记录来说，已经足够。<br>Vikunja 的劣势：<br>笔记功能仍然有限： 虽然够用，但对于需要记录大量细节的任务来说，可能不够方便。<br>代码处理能力弱： 如果需要记录大量的代码片段，仍然可能遇到代码高亮和字符修改的问题。<br>开始时间需要手动维护： 仍然需要通过自定义字段或者备注记录，不如直接修改创建时间直观。<br>Trilium Notes + 外部任务管理工具 的方案，优势会相对降低：<br>知识网络不再是优势： 如果不需要知识网络，Trilium Notes 的优势会大打折扣。<br>多工具管理： 需要在两个工具之间切换，增加了操作的复杂性。<br>在这种简化需求的前提下，强烈建议你优先考虑 Vikunja。<br>从结果来看，我可能会继续用 Notion,因为我之前忽略了 Notion 支持 Markdown 😀 虽然他会自动转换，并且转换之后就只能点点点了。</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>etc</category>
+      </categories>
       <tags>
         <tag>个人观点</tag>
       </tags>
@@ -28809,24 +28812,6 @@ $(function () {
       </tags>
   </entry>
   <entry>
-    <title>LXC 为什么不火</title>
-    <url>/Linux/LSC/</url>
-    <content><![CDATA[<p>LXC容器共享主机的内核，这意味着容器必须运行与主机相同或兼容的内核版本。这一点非常重要，因为它直接影响到容器中可以运行的操作系统类型。</p>
-<p>其实光靠上面这段就够了。前有 KVM，后有 docker,LXC 这种尴尬处境，那肯定火不起来</p>
-]]></content>
-      <categories>
-        <category>Document</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>Document</tag>
-        <tag>开源(Open Source)</tag>
-        <tag>Software</tag>
-        <tag>defect</tag>
-        <tag>Command</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>打印机自定义纸张大小注意事项</title>
     <url>/Hardware/printer/</url>
     <content><![CDATA[<p>最近主要是添加凭据打印纸之后发现别人的电脑可以选，我自己电脑死活显示不出打印选项。</p>
@@ -28952,6 +28937,45 @@ $(function () {
         <tag>Code</tag>
         <tag>CMD</tag>
         <tag>Terminal</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LXC 为什么不火</title>
+    <url>/Linux/LXC/</url>
+    <content><![CDATA[<p>LXC容器共享主机的内核，这意味着容器必须运行与主机相同或兼容的内核版本。这一点非常重要，因为它直接影响到容器中可以运行的操作系统类型。</p>
+<p>其实光靠上面这段就够了。前有 KVM，后有 docker,LXC 这种尴尬处境，那肯定火不起来</p>
+]]></content>
+      <categories>
+        <category>Document</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Document</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>Software</tag>
+        <tag>defect</tag>
+        <tag>Command</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>迷思，记录下我为什么不用 EverythingToolbar</title>
+    <url>/Software/EverythingToolbar/</url>
+    <content><![CDATA[<p>我挺喜欢 Everything 的，当时一看这个立马就装了，结果就尴尬了。</p>
+<ol>
+<li>结果没法保存，操作失误或者打开文件位置之后还要重新搜索，实际体验不如我直接在 Everything 里搜索。</li>
+<li>开软件等搜索很喜欢先按Win键，用 EverythingToolbar 反而需要我鼠标点过去，这个跟直接使用 Everything 并没有直接区别。反而还有第一点的负面。</li>
+</ol>
+<p>本着软件尽量少装的原则就卸掉了</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>MIT</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>Software</tag>
+        <tag>defect</tag>
+        <tag>Command</tag>
       </tags>
   </entry>
 </search>
