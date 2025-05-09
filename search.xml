@@ -29005,7 +29005,7 @@ $(function () {
   <entry>
     <title>特殊文件关联</title>
     <url>/Document/%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/</url>
-    <content><![CDATA[<p>最早是被 <a href="/Software/Document&Texteditor/Everedit.md">Everedit</a> 坑的</p>
+    <content><![CDATA[<p>最早是被 <a href="/Software/Document&Texteditor/Everedit">Everedit</a> 坑的</p>
 <p>总之这类文件关联位置如下，可以参考找一下</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\batfile\shell\open\command</span><br></pre></td></tr></table></figure>]]></content>
       <categories>

@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-05-09T08:52:19.108Z</updated>
+  <updated>2025-05-09T08:56:18.116Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://ted423.github.io/Document/%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/"/>
     <id>http://ted423.github.io/Document/%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/</id>
     <published>2025-05-09T08:49:27.342Z</published>
-    <updated>2025-05-09T08:52:19.108Z</updated>
+    <updated>2025-05-09T08:56:18.116Z</updated>
     
-    <content type="html"><![CDATA[<p>最早是被 <a href="/Software/Document&Texteditor/Everedit.md">Everedit</a> 坑的</p><p>总之这类文件关联位置如下，可以参考找一下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\batfile\shell\open\command</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>最早是被 <a href="/Software/Document&Texteditor/Everedit">Everedit</a> 坑的</p><p>总之这类文件关联位置如下，可以参考找一下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\batfile\shell\open\command</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;最早是被 &lt;a href=&quot;/Software/Document&amp;Texteditor/Everedit.md&quot;&gt;Everedit&lt;/a&gt; 坑的&lt;/p&gt;
+    <summary type="html">&lt;p&gt;最早是被 &lt;a href=&quot;/Software/Document&amp;Texteditor/Everedit&quot;&gt;Everedit&lt;/a&gt; 坑的&lt;/p&gt;
 &lt;p&gt;总之这类文件关联位置如下，可以参考找一下&lt;/p&gt;
-&lt;figure class=&quot;highlight plainte</summary>
+&lt;figure class=&quot;highlight plaintext&quot;</summary>
       
     
     
