@@ -28978,4 +28978,26 @@ $(function () {
         <tag>Command</tag>
       </tags>
   </entry>
+  <entry>
+    <title>邮件客户端选型</title>
+    <url>/Software/Mail/</url>
+    <content><![CDATA[<p>目前还是在用 Foxmail，主要是没有太多的可选性</p>
+<h1 id="Outlook"><a href="#Outlook" class="headerlink" title="Outlook"></a>Outlook</h1><p>这是一个收费客户端</p>
+<h1 id="Thunderbird"><a href="#Thunderbird" class="headerlink" title="Thunderbird"></a>Thunderbird</h1><p>过滤器有 Bug，也就是明明符合规则但是不生效。</p>
+<h1 id="Betterbird"><a href="#Betterbird" class="headerlink" title="Betterbird"></a>Betterbird</h1><p>就软件的开发愿景来说是很好的，可惜最新版连中文语言包都不提供了。</p>
+<h1 id="SeaMonkey"><a href="#SeaMonkey" class="headerlink" title="SeaMonkey"></a>SeaMonkey</h1><p>定位错误的一个软件，包含浏览器并且界面很丑。我可以接受浏览器里带邮件客户端，但不能接受这么丑的界面。</p>
+<h1 id="Claws-Mail"><a href="#Claws-Mail" class="headerlink" title="Claws Mail"></a>Claws Mail</h1><p>没中文 界面也相当老</p>
+<h1 id="Mailspring"><a href="#Mailspring" class="headerlink" title="Mailspring"></a>Mailspring</h1><p>不支持 pop3 <a href="https://github.com/Foundry376/Mailspring/issues/45">https://github.com/Foundry376/Mailspring/issues/45</a></p>
+<p>整体来说我觉得这个看法相当的 Stupid，pop3保留副本仍然是相当重要的。特别是大部分的服务商都是有限容量的邮箱。</p>
+]]></content>
+      <categories>
+        <category>Software</category>
+      </categories>
+      <tags>
+        <tag>分类汇总</tag>
+        <tag>Windows</tag>
+        <tag>开源(Open Source)</tag>
+        <tag>Software</tag>
+      </tags>
+  </entry>
 </search>
