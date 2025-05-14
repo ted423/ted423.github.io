@@ -29100,7 +29100,7 @@ $(function () {
 <li>&#39;&#39;objectCategory&#x3D;person&#39;&#39;：查找对象类别为 &quot;person&quot; 的对象（通常包含用户）。</li>
 <li>&#39;&#39;objectClass&#x3D;user&#39;&#39;：查找对象类别为 &quot;user&quot; 的对象。通常与 &#39;&#39;objectCategory&#x3D;person&#39;&#39; 一起使用，更精确地定位用户。</li>
 <li>&#39;&#39;sAMAccountName&#39;&#39;：用户的登录名（通常是 Windows 2000 之前的短名称，例如 &#39;&#39;johndoe&#39;&#39;）。这是最常用的登录名字段。</li>
-<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#x6a;&#111;&#x68;&#x6e;&#100;&#111;&#x65;&#64;&#x79;&#x6f;&#x75;&#114;&#100;&#x6f;&#x6d;&#x61;&#105;&#110;&#x2e;&#x6c;&#111;&#x63;&#x61;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
+<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#x6a;&#111;&#104;&#x6e;&#100;&#111;&#x65;&#64;&#121;&#x6f;&#x75;&#x72;&#100;&#x6f;&#x6d;&#97;&#x69;&#110;&#46;&#x6c;&#x6f;&#99;&#97;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
 <li>&#39;&#39;mail&#39;&#39;：用户的电子邮件地址。有时也用作登录名。</li>
 <li>&#39;&#39;userAccountControl&#39;&#39;：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： &#39;&#39;(!(userAccountControl:1.2.840.113556.1.4.803:&#x3D;2))&#39;&#39;。这里的 &#39;&#39;2&#39;&#39; 代表 &#39;&#39;ADS_UF_ACCOUNTDISABLE&#39;&#39; 标志位，&#39;&#39;:1.2.840.113556.1.4.803:&#x3D;&#39;&#39; 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
 <li>&#39;&#39;memberOf&#39;&#39;：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 &#39;&#39;CN&#x3D;AppUsers,OU&#x3D;Groups,DC&#x3D;yourdomain,DC&#x3D;local&#39;&#39;。</li>

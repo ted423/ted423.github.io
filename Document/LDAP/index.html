@@ -27,7 +27,7 @@
 <meta property="og:description" content="LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。 目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-14T06:28:08.903Z">
-<meta property="article:modified_time" content="2025-05-14T08:12:26.847Z">
+<meta property="article:modified_time" content="2025-05-14T08:13:32.606Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Document">
@@ -180,6 +180,10 @@
             
             
             
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#phpLDAPadmin"><span class="toc-number">1.</span> <span class="toc-text">phpLDAPadmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">名词解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#rootdn"><span class="toc-number">2.1.</span> <span class="toc-text">rootdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OU-Organizational-Unit"><span class="toc-number">2.2.</span> <span class="toc-text">OU(Organizational Unit)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDIF-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.3.</span> <span class="toc-text">LDIF 文件格式介绍</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E7%9A%84-ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">LDAP 的 ACL（访问控制列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E7%9A%84%E8%AF%84%E4%BC%B0%E9%A1%BA%E5%BA%8F"><span class="toc-number">3.1.</span> <span class="toc-text">ACL 的评估顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACI-%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="toc-number">3.2.</span> <span class="toc-text">ACI 语法结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">LDAP 权限验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E9%9B%86%E6%88%90"><span class="toc-number">5.</span> <span class="toc-text">LDAP 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bindn"><span class="toc-number">5.1.</span> <span class="toc-text">bindn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">5.2.</span> <span class="toc-text">LDAP 过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">5.2.1.</span> <span class="toc-text">LDAP 过滤器的基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-AD-%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7%E5%8F%8A%E8%BF%87%E6%BB%A4%E5%99%A8%E6%9E%84%E5%BB%BA%E5%9D%97"><span class="toc-number">5.2.2.</span> <span class="toc-text">常用的 AD 用户属性及过滤器构建块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-LDAP-%E7%94%A8%E6%88%B7%E8%BF%87%E6%BB%A4%E5%99%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">5.2.3.</span> <span class="toc-text">常见的 LDAP 用户过滤器示例</span></a></li></ol></li></ol></li></ol>
+                </div>
+            
             <hr />
             <div itemprop="articleBody"><p>LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。</p>
 <p>目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时的数据不一致情况是允许出现的，只要最终这些数据得到同步即可。</p>
@@ -260,7 +264,7 @@
 <li>&#39;&#39;objectCategory&#x3D;person&#39;&#39;：查找对象类别为 &quot;person&quot; 的对象（通常包含用户）。</li>
 <li>&#39;&#39;objectClass&#x3D;user&#39;&#39;：查找对象类别为 &quot;user&quot; 的对象。通常与 &#39;&#39;objectCategory&#x3D;person&#39;&#39; 一起使用，更精确地定位用户。</li>
 <li>&#39;&#39;sAMAccountName&#39;&#39;：用户的登录名（通常是 Windows 2000 之前的短名称，例如 &#39;&#39;johndoe&#39;&#39;）。这是最常用的登录名字段。</li>
-<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#x6a;&#111;&#x68;&#x6e;&#100;&#111;&#x65;&#64;&#x79;&#x6f;&#x75;&#114;&#100;&#x6f;&#x6d;&#x61;&#105;&#110;&#x2e;&#x6c;&#111;&#x63;&#x61;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
+<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#x6a;&#111;&#104;&#x6e;&#100;&#111;&#x65;&#64;&#121;&#x6f;&#x75;&#x72;&#100;&#x6f;&#x6d;&#97;&#x69;&#110;&#46;&#x6c;&#x6f;&#99;&#97;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
 <li>&#39;&#39;mail&#39;&#39;：用户的电子邮件地址。有时也用作登录名。</li>
 <li>&#39;&#39;userAccountControl&#39;&#39;：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： &#39;&#39;(!(userAccountControl:1.2.840.113556.1.4.803:&#x3D;2))&#39;&#39;。这里的 &#39;&#39;2&#39;&#39; 代表 &#39;&#39;ADS_UF_ACCOUNTDISABLE&#39;&#39; 标志位，&#39;&#39;:1.2.840.113556.1.4.803:&#x3D;&#39;&#39; 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
 <li>&#39;&#39;memberOf&#39;&#39;：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 &#39;&#39;CN&#x3D;AppUsers,OU&#x3D;Groups,DC&#x3D;yourdomain,DC&#x3D;local&#39;&#39;。</li>
@@ -301,7 +305,7 @@
                     <a class="tag-none-link" href="/tags/AD-Active-Directory/" rel="tag">AD(Active Directory)</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-05-14T08:12:26.847Z" itemprop="dateModified">最后编辑：2025-05-14</time>
+                    <time datetime="2025-05-14T08:13:32.606Z" itemprop="dateModified">最后编辑：2025-05-14</time>
                 </div>
             </div>
         </footer>
@@ -336,6 +340,18 @@
         <div class="sticky-area">
     
     
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#phpLDAPadmin"><span class="toc-number">1.</span> <span class="toc-text">phpLDAPadmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">名词解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#rootdn"><span class="toc-number">2.1.</span> <span class="toc-text">rootdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OU-Organizational-Unit"><span class="toc-number">2.2.</span> <span class="toc-text">OU(Organizational Unit)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDIF-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.3.</span> <span class="toc-text">LDIF 文件格式介绍</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E7%9A%84-ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">LDAP 的 ACL（访问控制列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E7%9A%84%E8%AF%84%E4%BC%B0%E9%A1%BA%E5%BA%8F"><span class="toc-number">3.1.</span> <span class="toc-text">ACL 的评估顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACI-%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84"><span class="toc-number">3.2.</span> <span class="toc-text">ACI 语法结构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">LDAP 权限验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E9%9B%86%E6%88%90"><span class="toc-number">5.</span> <span class="toc-text">LDAP 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#bindn"><span class="toc-number">5.1.</span> <span class="toc-text">bindn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">5.2.</span> <span class="toc-text">LDAP 过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">5.2.1.</span> <span class="toc-text">LDAP 过滤器的基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-AD-%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7%E5%8F%8A%E8%BF%87%E6%BB%A4%E5%99%A8%E6%9E%84%E5%BB%BA%E5%9D%97"><span class="toc-number">5.2.2.</span> <span class="toc-text">常用的 AD 用户属性及过滤器构建块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-LDAP-%E7%94%A8%E6%88%B7%E8%BF%87%E6%BB%A4%E5%99%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">5.2.3.</span> <span class="toc-text">常见的 LDAP 用户过滤器示例</span></a></li></ol></li></ol></li></ol>
+    </div>
+</aside>
+                
                 <aside id="krw-about" class="widget widget-kratos-about clearfix">
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
