@@ -29040,7 +29040,7 @@ $(function () {
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rootdn &quot;uid=root,cn=example.com,cn=digest-md5,cn=auth&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="OU-Organizational-Unit"><a href="#OU-Organizational-Unit" class="headerlink" title="OU(Organizational Unit)"></a>OU(Organizational Unit)</h2><p>是 LDAP 中用于构建目录层次结构、组织条目、应用策略和委派管理的基本构建块。它像文件夹一样，帮助你将目录中的信息整理得井井有条，使其更易于管理和理解。</p>
-<p>OU 的名字是可以自定义的，不过因为一些教程和预定义设置的原因的原因，很多人可能会使用比较常见的例如<code>ou=People</code>和<code>ou=Group</code>或<code>ou=users</code>和<code>ou=groups</code>，如 bitnami 的 openldap 的 docker 预制就是后者，而 dokuwiki 的过滤器中默认则用前者过滤。</p>
+<p>OU 的名字是可以自定义的，不过因为一些教程和预定义设置的原因的原因，很多人可能会使用比较常见的例如<code>ou=People</code>和<code>ou=Group</code>或<code>ou=users</code>和<code>ou=groups</code>，如 bitnami 的 OpenLDAP 的 docker 预制就是后者，而 dokuwiki 的过滤器中默认则用前者过滤。</p>
 <p>AD 中也有相同的概念，不过有些管理可能会把 OU 当部门使用，然后把不同的用户塞到不同的 OU。总之，这些跟后面的过滤器是强相关的，因为使用起来五花八门，所以过滤器这块基本都是可以自定义的。</p>
 <h2 id="LDIF-文件格式介绍"><a href="#LDIF-文件格式介绍" class="headerlink" title="LDIF 文件格式介绍"></a>LDIF 文件格式介绍</h2><p>LDIF（<strong>LDAP Data Interchange Format</strong>，LDAP 数据交换格式）是一种基于文本的格式，用于表示 LDAP（轻量目录访问协议）目录中的数据。LDIF 文件通常用于：</p>
 <ul>
@@ -29083,10 +29083,10 @@ $(function () {
 <li>如果你是 root 用户，就会映射为 gidNumber&#x3D;0+uidNumber&#x3D;0,cn&#x3D;peercred,cn&#x3D;external,cn&#x3D;auth。</li>
 <li>通常系统会在 olcAccess 中授予该身份读写权限。</li>
 </ul>
-<h1 id="LDAP-集成"><a href="#LDAP-集成" class="headerlink" title="LDAP 集成"></a>LDAP 集成</h1><p>本页面主要有两种配置，一个是对 AD 的集成，还有一个则是对 openldap 的集成。</p>
-<p>需要注意的是，AD 虽然底层也符合标准，但跟 openldap 的各项属性有很大区别，很多服务会特别的专门适配 AD，但有些会以 openldap 为标准，连接 AD 会需要自行修改配置项。</p>
+<h1 id="LDAP-集成"><a href="#LDAP-集成" class="headerlink" title="LDAP 集成"></a>LDAP 集成</h1><p>本页面主要有两种配置，一个是对 AD 的集成，还有一个则是对 OpenLDAP 的集成。</p>
+<p>需要注意的是，AD 虽然底层也符合标准，但跟 OpenLDAP 的各项属性有很大区别，很多服务会特别的专门适配 AD，但有些会以 OpenLDAP 为标准，连接 AD 会需要自行修改配置项。</p>
 <h2 id="bindn"><a href="#bindn" class="headerlink" title="bindn"></a>bindn</h2><p>通常 AD 下使用具有域控管理员权限的账号，不过出于安全性考虑可以降低权限（普通 domain user 没有读取其他用户邮箱的权限），目前都使用的管理员权限的账号做bind</p>
-<p>openldap 中则一般使用 rootdn (也可以不使用，不过需要创建具有特殊权限的账号)</p>
+<p>OpenLDAP 中则一般使用 rootdn (也可以不使用，不过需要创建具有特殊权限的账号)</p>
 <h2 id="LDAP-过滤器"><a href="#LDAP-过滤器" class="headerlink" title="LDAP 过滤器"></a>LDAP 过滤器</h2><p>LDAP 过滤器 (LDAP Filter) 在与 LDAP&#x2F;AD 集成的应用程序（如 DokuWiki 的 authad 插件 或 Snipe-IT）中扮演着至关重要的角色。它定义了<strong>如何查找和验证用户</strong>。</p>
 <p>简单来说，LDAP 过滤器就像是你在 Active Directory 这个大数据库里进行搜索时使用的<strong>搜索条件</strong>。你需要告诉应用程序：当用户尝试登录时，应该使用哪些标准来找到 AD 中对应的用户对象，并确认这个对象是有效的、允许登录的。</p>
 <p>一个可供参考的问题见 <a href="https://github.com/witersen/SvnAdminV2.0/issues/51">Issue</a></p>
@@ -29100,7 +29100,7 @@ $(function () {
 <li>&#39;&#39;objectCategory&#x3D;person&#39;&#39;：查找对象类别为 &quot;person&quot; 的对象（通常包含用户）。</li>
 <li>&#39;&#39;objectClass&#x3D;user&#39;&#39;：查找对象类别为 &quot;user&quot; 的对象。通常与 &#39;&#39;objectCategory&#x3D;person&#39;&#39; 一起使用，更精确地定位用户。</li>
 <li>&#39;&#39;sAMAccountName&#39;&#39;：用户的登录名（通常是 Windows 2000 之前的短名称，例如 &#39;&#39;johndoe&#39;&#39;）。这是最常用的登录名字段。</li>
-<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#x6a;&#111;&#104;&#x6e;&#100;&#111;&#x65;&#64;&#121;&#x6f;&#x75;&#x72;&#100;&#x6f;&#x6d;&#97;&#x69;&#110;&#46;&#x6c;&#x6f;&#99;&#97;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
+<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#x6a;&#111;&#x68;&#x6e;&#x64;&#111;&#x65;&#x40;&#121;&#x6f;&#x75;&#114;&#x64;&#x6f;&#109;&#97;&#x69;&#x6e;&#46;&#x6c;&#x6f;&#x63;&#x61;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
 <li>&#39;&#39;mail&#39;&#39;：用户的电子邮件地址。有时也用作登录名。</li>
 <li>&#39;&#39;userAccountControl&#39;&#39;：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： &#39;&#39;(!(userAccountControl:1.2.840.113556.1.4.803:&#x3D;2))&#39;&#39;。这里的 &#39;&#39;2&#39;&#39; 代表 &#39;&#39;ADS_UF_ACCOUNTDISABLE&#39;&#39; 标志位，&#39;&#39;:1.2.840.113556.1.4.803:&#x3D;&#39;&#39; 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
 <li>&#39;&#39;memberOf&#39;&#39;：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 &#39;&#39;CN&#x3D;AppUsers,OU&#x3D;Groups,DC&#x3D;yourdomain,DC&#x3D;local&#39;&#39;。</li>
