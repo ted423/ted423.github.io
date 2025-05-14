@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/img/favicon.svg">
+  
+  
+  <title>LDAP &amp; OpenLDAP | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Document/LDAP/">
+  <meta name="author" content="ted423" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="AD(Active Directory), Document, Linux, Software, 开源(Open Source)" />
+  
+  <meta name="description" content="LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LDAP &amp; OpenLDAP">
+<meta property="og:url" content="http://ted423.github.io/Document/LDAP/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-05-14T06:28:08.903Z">
+<meta property="article:modified_time" content="2025-05-14T07:40:47.156Z">
+<meta property="article:author" content="ted423">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Document">
+<meta property="article:tag" content="开源(Open Source)">
+<meta property="article:tag" content="Software">
+<meta property="article:tag" content="AD(Active Directory)">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+    <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">个人小站</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>个人小站</h2> <br />
+                        <span>Take&amp;Give</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Document/LDAP/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">LDAP & OpenLDAP</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-05-14T06:28:08.903Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-05-14</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~5.79K
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时的数据不一致情况是允许出现的，只要最终这些数据得到同步即可。</p>
+<p>LDAP由互联网工程任务组（IETF）的文档RFC定义，使用了描述语言ASN.1定义。最新的版本是版本3，由RFC 4511所定义。</p>
+<p>轻型目录访问协议(Lightweight Directory Access Protocol) 议是一个开放的，中立的，工业标准的应用协议，通过IP协议提供访问控制和维护分布式信息的目录信息。 目录服务在开发内部网和与互联网程序共享用户、系统、网络、服务和应用的过程中占据了重要地位。</p>
+<p>OpenLDAP 是一个基于标准实现的使用最多的 LDAP Server。</p>
+<p>BTW，微软的 Active Directory Domain Services(AD DS) 也提供目录服务，支持 LDAP 协议，不过具体的属性跟 OpenLDAP 有很大的区别。</p>
+<h1 id="phpLDAPadmin"><a href="#phpLDAPadmin" class="headerlink" title="phpLDAPadmin"></a>phpLDAPadmin</h1><p><a target="_blank" rel="noopener" href="https://github.com/leenooks/phpLDAPadmin">phpLDAPadmin</a> 是 LDAP 的一个 Web GUI。</p>
+<p>需要注意大部分的文档都是 v1 的，v2 进行了重构，有很大的区别。<strong>并且不能用 rootdn 登录</strong></p>
+<p>就个人来说，并不太喜欢 v2，虽说直接使用 rootdn 有安全性问题，但是直接不让用就很尬。具体见<a target="_blank" rel="noopener" href="https://github.com/leenooks/phpLDAPadmin/issues/325">Issue</a></p>
+<h1 id="名词解析"><a href="#名词解析" class="headerlink" title="名词解析"></a>名词解析</h1><h2 id="rootdn"><a href="#rootdn" class="headerlink" title="rootdn"></a>rootdn</h2><p>rootdn（Root Distinguished Name）是 LDAP 数据库中的超级管理员 DN，具备对该数据库条目的完全控制权限，不受常规访问控制列表（ACL）限制。</p>
+<p>超级权限 </p>
+<p>rootdn 对应的用户拥有忽略所有 ACL 的完全访问权限，可执行添加、删除、修改、查询等任意操作。  </p>
+<p>配置示例  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">database mdb</span><br><span class="line">suffix &quot;dc=example,dc=com&quot;</span><br><span class="line">rootdn &quot;cn=Manager,dc=example,dc=com&quot;</span><br><span class="line">rootpw secret</span><br></pre></td></tr></table></figure>
+
+<p>SASL 绑定<br>也可以指定 SASL 身份作为 rootdn，例如： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rootdn &quot;uid=root,cn=example.com,cn=digest-md5,cn=auth&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="LDIF-文件格式介绍"><a href="#LDIF-文件格式介绍" class="headerlink" title="LDIF 文件格式介绍"></a>LDIF 文件格式介绍</h2><p>LDIF（<strong>LDAP Data Interchange Format</strong>，LDAP 数据交换格式）是一种基于文本的格式，用于表示 LDAP（轻量目录访问协议）目录中的数据。LDIF 文件通常用于：</p>
+<ul>
+<li>导入（import）或导出（export）LDAP 条目；</li>
+<li>批量添加、删除或修改 LDAP 数据；</li>
+<li>与 &#39;&#39;ldapadd&#39;&#39;, &#39;&#39;ldapmodify&#39;&#39;, &#39;&#39;ldapdelete&#39;&#39; 等命令行工具配合使用。</li>
+</ul>
+<p>LDIF 文件由一系列的“条目（entry）”组成。每个条目表示 LDAP 目录中的一个对象，并由若干“属性（attribute）”组成。条目之间用空行分隔。</p>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dn: cn=John Doe,dc=example,dc=com</span><br><span class="line">objectClass: inetOrgPerson</span><br><span class="line">cn: John Doe</span><br><span class="line">sn: Doe</span><br><span class="line">givenName: John</span><br><span class="line">mail: john.doe@example.com</span><br></pre></td></tr></table></figure>
+
+<h1 id="LDAP-的-ACL（访问控制列表）"><a href="#LDAP-的-ACL（访问控制列表）" class="headerlink" title="LDAP 的 ACL（访问控制列表）"></a>LDAP 的 ACL（访问控制列表）</h1><p>LDAP 的访问控制列表（ACL）用于对目录中的条目或属性进行授权管理，最终以 Access Control Instruction（ACI，访问控制指令）的形式存储和评估。ACL 的核心组成包括<strong>目标（target）</strong>、<strong>权限（permission）</strong>、<strong>主体（subject）<strong>及</strong>版本号与名称</strong>，并按顺序依次检查直到命中或默认拒绝。</p>
+<p>LDAP ACL 提供了一种机制，可对目录中的不同分支、条目或属性进行精细化的读写、添加、删除等权限控制。它既可在导入时通过 LDIF（LDAP Data Interchange Format）配置，也可在运行时结合 &#39;&#39;ldapmodify&#39;&#39;、&#39;&#39;ldapadd&#39;&#39; 等工具动态调整。ACI 的格式和支持的关键字在不同目录服务器（如 OpenLDAP、Oracle Directory、IBM Directory、PingDirectory、ForgeRock DS 等）中大同小异，便于跨平台迁移与统一管理。</p>
+<h2 id="ACL-的评估顺序"><a href="#ACL-的评估顺序" class="headerlink" title="ACL 的评估顺序"></a>ACL 的评估顺序</h2><ul>
+<li>LDAP 服务器会按照配置文件或目录中 ACL 条目的先后顺序逐条检查，<strong>第一个匹配的指令即决定最终授权结果</strong>；  </li>
+<li>ACL 通常按“最具体→最通用”的原则排序（如先匹配精确 DN，再匹配 subtree、再匹配全局）；  </li>
+<li>若无任何 ACL 命中，则采用默认拒绝。</li>
+</ul>
+<h2 id="ACI-语法结构"><a href="#ACI-语法结构" class="headerlink" title="ACI 语法结构"></a>ACI 语法结构</h2><ul>
+<li><strong>targets</strong>：<code>dn.exact=&quot;...&quot;</code>、<code>dn.subtree=&quot;...&quot;</code> 等；  </li>
+<li><strong>version</strong>：如 <code>3.0</code>；  </li>
+<li><strong>acl &quot;name&quot;</strong>：描述性名称；  </li>
+<li><strong>permission</strong>：<code>allow</code>&#x2F;<code>deny</code>；  </li>
+<li><strong>subjects</strong>：匹配用户、组或网络。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aci: (target=&quot;...&quot;)(version 3.0;acl &quot;Read People&quot;;allow (read, search) userdn=&quot;ldap:///uid=reader,ou=People,dc=example,dc=com&quot;;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="LDAP-权限验证"><a href="#LDAP-权限验证" class="headerlink" title="LDAP 权限验证"></a>LDAP 权限验证</h1><p><code>-Y EXTERNAL -H ldapi:///</code>  本地 root 权限绑定，仅限ldapserver本地使用，也就是要在docker内执行命令(权限级别与使用rootdn一样)</p>
+<p>EXTERNAL 是一种 SASL（Simple Authentication and Security Layer）机制，用于通过已有的外部身份验证方式（例如 Unix socket 权限）来认证你的 LDAP 操作。</p>
+<p>SASL 是一种认证框架，OpenLDAP 支持多种 SASL 机制，例如：</p>
+<ul>
+<li>PLAIN</li>
+<li>DIGEST-MD5</li>
+<li>GSSAPI</li>
+<li>EXTERNAL</li>
+</ul>
+<p>EXTERNAL 是其中一种最常见的机制，通常用于本地系统用户以 root 权限访问 OpenLDAP 的配置数据库（cn&#x3D;config），不需要输入用户名和密码。</p>
+<p>当你通过 EXTERNAL 使用 Unix socket 登录时，OpenLDAP 会通过 socket 的所有者判断是谁发起的连接，比如：</p>
+<ul>
+<li>如果你是 root 用户，就会映射为 gidNumber&#x3D;0+uidNumber&#x3D;0,cn&#x3D;peercred,cn&#x3D;external,cn&#x3D;auth。</li>
+<li>通常系统会在 olcAccess 中授予该身份读写权限。</li>
+</ul>
+<h1 id="LDAP-集成"><a href="#LDAP-集成" class="headerlink" title="LDAP 集成"></a>LDAP 集成</h1><p>本页面主要有两种配置，一个是对 AD 的集成，还有一个则是对 openldap 的集成。</p>
+<p>需要注意的是，AD 虽然底层也符合标准，但跟 openldap 的各项属性有很大区别，很多服务会特别的专门适配 AD，但有些会以 openldap 为标准，连接 AD 会需要自行修改配置项。</p>
+<h2 id="bindn"><a href="#bindn" class="headerlink" title="bindn"></a>bindn</h2><p>通常 AD 下使用具有域控管理员权限的账号，不过出于安全性考虑可以降低权限（普通 domain user 没有读取其他用户邮箱的权限），目前都使用的管理员权限的账号做bind</p>
+<p>openldap 中则一般使用 rootdn (也可以不使用，不过需要创建具有特殊权限的账号)</p>
+<h2 id="LDAP-过滤器"><a href="#LDAP-过滤器" class="headerlink" title="LDAP 过滤器"></a>LDAP 过滤器</h2><p>LDAP 过滤器 (LDAP Filter) 在与 LDAP&#x2F;AD 集成的应用程序（如 DokuWiki 的 authad 插件 或 Snipe-IT）中扮演着至关重要的角色。它定义了<strong>如何查找和验证用户</strong>。</p>
+<p>简单来说，LDAP 过滤器就像是你在 Active Directory 这个大数据库里进行搜索时使用的<strong>搜索条件</strong>。你需要告诉应用程序：当用户尝试登录时，应该使用哪些标准来找到 AD 中对应的用户对象，并确认这个对象是有效的、允许登录的。</p>
+<h3 id="LDAP-过滤器的基本语法"><a href="#LDAP-过滤器的基本语法" class="headerlink" title="LDAP 过滤器的基本语法"></a>LDAP 过滤器的基本语法</h3><ul>
+<li>使用括号 &#39;&#39;()&#39;&#39; 包裹整个过滤器。</li>
+<li>基本条件通常是 &#39;&#39;(属性名&#x3D;值)&#39;&#39; 的形式。</li>
+<li>可以使用逻辑运算符将多个条件组合起来：<br>*   <strong>&amp;</strong>：与 (AND) - 所有条件都必须满足。格式：&#39;&#39;(&amp;(条件1)(条件2)...)&#39;&#39;<br>*   <strong>|</strong>：或 (OR) - 至少一个条件满足。格式：&#39;&#39;(|(条件1)(条件2)...)&#39;&#39;<br>*   <strong>!</strong>：非 (NOT) - 条件不满足。格式：&#39;&#39;(!(条件))&#39;&#39;</li>
+<li>值可以是具体的值，也可以是通配符 &#39;&#39;<em>&#39;&#39;，或者是一个*<em>占位符</em></em>，应用程序会在运行时将其替换为用户输入的内容（通常是用户名）。</li>
+</ul>
+<h3 id="常用的-AD-用户属性及过滤器构建块"><a href="#常用的-AD-用户属性及过滤器构建块" class="headerlink" title="常用的 AD 用户属性及过滤器构建块"></a>常用的 AD 用户属性及过滤器构建块</h3><ul>
+<li>&#39;&#39;objectCategory&#x3D;person&#39;&#39;：查找对象类别为 &quot;person&quot; 的对象（通常包含用户）。</li>
+<li>&#39;&#39;objectClass&#x3D;user&#39;&#39;：查找对象类别为 &quot;user&quot; 的对象。通常与 &#39;&#39;objectCategory&#x3D;person&#39;&#39; 一起使用，更精确地定位用户。</li>
+<li>&#39;&#39;sAMAccountName&#39;&#39;：用户的登录名（通常是 Windows 2000 之前的短名称，例如 &#39;&#39;johndoe&#39;&#39;）。这是最常用的登录名字段。</li>
+<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#106;&#x6f;&#x68;&#x6e;&#100;&#x6f;&#101;&#x40;&#x79;&#111;&#117;&#x72;&#100;&#111;&#109;&#97;&#105;&#x6e;&#46;&#108;&#111;&#x63;&#97;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
+<li>&#39;&#39;mail&#39;&#39;：用户的电子邮件地址。有时也用作登录名。</li>
+<li>&#39;&#39;userAccountControl&#39;&#39;：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： &#39;&#39;(!(userAccountControl:1.2.840.113556.1.4.803:&#x3D;2))&#39;&#39;。这里的 &#39;&#39;2&#39;&#39; 代表 &#39;&#39;ADS_UF_ACCOUNTDISABLE&#39;&#39; 标志位，&#39;&#39;:1.2.840.113556.1.4.803:&#x3D;&#39;&#39; 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
+<li>&#39;&#39;memberOf&#39;&#39;：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 &#39;&#39;CN&#x3D;AppUsers,OU&#x3D;Groups,DC&#x3D;yourdomain,DC&#x3D;local&#39;&#39;。</li>
+</ul>
+<h3 id="常见的-LDAP-用户过滤器示例"><a href="#常见的-LDAP-用户过滤器示例" class="headerlink" title="常见的 LDAP 用户过滤器示例"></a>常见的 LDAP 用户过滤器示例</h3><p><strong>注意：</strong> 以下示例使用占位符 &#39;&#39;{username}&#39;&#39; 代表用户输入的用户名。<strong>请务必查阅你所使用的应用程序（如 DokuWiki authad 插件）的文档，确认它实际使用的占位符是什么</strong>，可能是 &#39;&#39;@USER@&#39;&#39;, &#39;&#39;%user%&#39;&#39;, &#39;&#39;$user&#39;&#39; 等。</p>
+<p>最基本：使用 sAMAccountName 查找未禁用的用户 (推荐作为起点) </p>
+<p>下面最外层的括号或许需要取消</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectCategory=person)(objectClass=user)(sAMAccountName=&#123;username&#125;)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))</span><br></pre></td></tr></table></figure>
+<ul>
+<li>&#39;&#39;&amp;&#39;&#39;: 所有条件都需满足。</li>
+<li>&#39;&#39;objectCategory&#x3D;person&#39;&#39; 和 &#39;&#39;objectClass&#x3D;user&#39;&#39;: 确保找到的是用户对象。</li>
+<li>&#39;&#39;sAMAccountName&#x3D;{username}&#39;&#39;: 用户的 &#39;&#39;sAMAccountName&#39;&#39; 属性必须等于登录时输入的用户名。</li>
+<li>&#39;&#39;(!(userAccountControl:1.2.840.113556.1.4.803:&#x3D;2))&#39;&#39;: 确保账户未被禁用。</li>
+</ul>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/AD-Active-Directory/" rel="tag">AD(Active Directory)</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2025-05-14T07:40:47.156Z" itemprop="dateModified">最后编辑：2025-05-14</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 特殊文件关联" href="/Document/文件关联/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Document/LDAP/" data-full-path="http://ted423.github.io/Document/LDAP/"></div>
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+        <div class="sticky-area">
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/img/avatar.png" alt="ted423" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">这个网站将记录我的成果，我的收集，我觉得有价值的一切事物</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                417
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                17
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                155
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">51</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">105</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.66em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.66em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.7em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.68em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.74em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a>
+      </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2025 个人小站 版权所有.</li>
+                            <li>本站已运行<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 ted423 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">打赏</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">打赏提示信息</div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">分享提示信息</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+  <script src="https://https-ted423-github-io.disqus.com/embed.js"></script>
+<script async id="dsq-count-scr" src="https://https-ted423-github-io.disqus.com/count.js"></script>
+<script src="/comments/disqus.js"></script>
+<style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:80% !important}}</style>
+
+
+
+    </body>
+</html>
