@@ -29030,7 +29030,9 @@ $(function () {
 <h1 id="phpLDAPadmin"><a href="#phpLDAPadmin" class="headerlink" title="phpLDAPadmin"></a>phpLDAPadmin</h1><p><a href="https://github.com/leenooks/phpLDAPadmin">phpLDAPadmin</a> 是 LDAP 的一个 Web GUI。</p>
 <p>需要注意大部分的文档都是 v1 的，v2 进行了重构，有很大的区别。<strong>并且不能用 rootdn 登录</strong></p>
 <p>就个人来说，并不太喜欢 v2，虽说直接使用 rootdn 有安全性问题，但是直接不让用就很尬。具体见<a href="https://github.com/leenooks/phpLDAPadmin/issues/325">Issue</a></p>
-<h1 id="名词解析"><a href="#名词解析" class="headerlink" title="名词解析"></a>名词解析</h1><h2 id="rootdn"><a href="#rootdn" class="headerlink" title="rootdn"></a>rootdn</h2><p>rootdn（Root Distinguished Name）是 LDAP 数据库中的超级管理员 DN，具备对该数据库条目的完全控制权限，不受常规访问控制列表（ACL）限制。</p>
+<h1 id="名词解析"><a href="#名词解析" class="headerlink" title="名词解析"></a>名词解析</h1><h2 id="Distinguished-Name-DN"><a href="#Distinguished-Name-DN" class="headerlink" title="Distinguished Name (DN)"></a>Distinguished Name (DN)</h2><p>DN：每个 LDAP 条目在目录树中的唯一标识，类似文件系统中的完整路径；由若干层级的 RDN（Relative Distinguished Name，相对可分辨名称）组成，每个 RDN 为属性–值对。</p>
+<p>RDN 示例：uid&#x3D;john.doe 或 cn&#x3D;Users，多属性 RDN 如 givenName&#x3D;John+sn&#x3D;Doe</p>
+<h2 id="rootdn"><a href="#rootdn" class="headerlink" title="rootdn"></a>rootdn</h2><p>rootdn（Root Distinguished Name）是 LDAP 数据库中的超级管理员 DN，具备对该数据库条目的完全控制权限，不受常规访问控制列表（ACL）限制。</p>
 <p>超级权限 </p>
 <p>rootdn 对应的用户拥有忽略所有 ACL 的完全访问权限，可执行添加、删除、修改、查询等任意操作。  </p>
 <p>配置示例  </p>
@@ -29087,6 +29089,10 @@ $(function () {
 <p>需要注意的是，AD 虽然底层也符合标准，但跟 OpenLDAP 的各项属性有很大区别，很多服务会特别的专门适配 AD，但有些会以 OpenLDAP 为标准，连接 AD 会需要自行修改配置项。</p>
 <h2 id="bindn"><a href="#bindn" class="headerlink" title="bindn"></a>bindn</h2><p>通常 AD 下使用具有域控管理员权限的账号，不过出于安全性考虑可以降低权限（普通 domain user 没有读取其他用户邮箱的权限），目前都使用的管理员权限的账号做bind</p>
 <p>OpenLDAP 中则一般使用 rootdn (也可以不使用，不过需要创建具有特殊权限的账号)</p>
+<h2 id="Base-DN"><a href="#Base-DN" class="headerlink" title="Base DN"></a>Base DN</h2><p>定义：LDAP 搜索操作（例如 ldapsearch）使用的“起始 DN”，决定了查询范围的顶端节点。</p>
+<p>格式：通常为域组件（DC，Domain Component），如 dc&#x3D;example,dc&#x3D;com；也可为组织单元（OU，如 ou&#x3D;Users,dc&#x3D;example,dc&#x3D;com）或通用名称（CN，如 cn&#x3D;Administrator,cn&#x3D;Users,dc&#x3D;example,dc&#x3D;com）。 </p>
+<p><strong>在客户端或应用配置中填入 Base DN 后，后续的搜索操作会从该节点及其子树进行。例如，若 Base DN 为 ou&#x3D;Users,dc&#x3D;example,dc&#x3D;com，那么只有位于该 OU 下的用户才会被索引。</strong></p>
+<p>上面加粗了，因为实际上大多会使用 Users 或 People ,主要是查找用户</p>
 <h2 id="LDAP-过滤器"><a href="#LDAP-过滤器" class="headerlink" title="LDAP 过滤器"></a>LDAP 过滤器</h2><p>LDAP 过滤器 (LDAP Filter) 在与 LDAP&#x2F;AD 集成的应用程序（如 DokuWiki 的 authad 插件 或 Snipe-IT）中扮演着至关重要的角色。它定义了<strong>如何查找和验证用户</strong>。</p>
 <p>简单来说，LDAP 过滤器就像是你在 Active Directory 这个大数据库里进行搜索时使用的<strong>搜索条件</strong>。你需要告诉应用程序：当用户尝试登录时，应该使用哪些标准来找到 AD 中对应的用户对象，并确认这个对象是有效的、允许登录的。</p>
 <p>一个可供参考的问题见 <a href="https://github.com/witersen/SvnAdminV2.0/issues/51">Issue</a></p>
@@ -29100,7 +29106,7 @@ $(function () {
 <li>&#39;&#39;objectCategory&#x3D;person&#39;&#39;：查找对象类别为 &quot;person&quot; 的对象（通常包含用户）。</li>
 <li>&#39;&#39;objectClass&#x3D;user&#39;&#39;：查找对象类别为 &quot;user&quot; 的对象。通常与 &#39;&#39;objectCategory&#x3D;person&#39;&#39; 一起使用，更精确地定位用户。</li>
 <li>&#39;&#39;sAMAccountName&#39;&#39;：用户的登录名（通常是 Windows 2000 之前的短名称，例如 &#39;&#39;johndoe&#39;&#39;）。这是最常用的登录名字段。</li>
-<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#x6a;&#111;&#x68;&#x6e;&#x64;&#111;&#x65;&#x40;&#121;&#x6f;&#x75;&#114;&#x64;&#x6f;&#109;&#97;&#x69;&#x6e;&#46;&#x6c;&#x6f;&#x63;&#x61;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
+<li>&#39;&#39;userPrincipalName&#39;&#39; (UPN)：用户的邮箱风格登录名（例如 &#39;&#39;<a href="mailto:&#x6a;&#x6f;&#104;&#x6e;&#100;&#x6f;&#101;&#x40;&#121;&#111;&#x75;&#x72;&#x64;&#111;&#x6d;&#x61;&#105;&#110;&#46;&#108;&#111;&#x63;&#97;&#108;">johndoe@yourdomain.local</a>&#39;&#39;）。</li>
 <li>&#39;&#39;mail&#39;&#39;：用户的电子邮件地址。有时也用作登录名。</li>
 <li>&#39;&#39;userAccountControl&#39;&#39;：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： &#39;&#39;(!(userAccountControl:1.2.840.113556.1.4.803:&#x3D;2))&#39;&#39;。这里的 &#39;&#39;2&#39;&#39; 代表 &#39;&#39;ADS_UF_ACCOUNTDISABLE&#39;&#39; 标志位，&#39;&#39;:1.2.840.113556.1.4.803:&#x3D;&#39;&#39; 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
 <li>&#39;&#39;memberOf&#39;&#39;：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 &#39;&#39;CN&#x3D;AppUsers,OU&#x3D;Groups,DC&#x3D;yourdomain,DC&#x3D;local&#39;&#39;。</li>
