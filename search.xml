@@ -29032,7 +29032,14 @@ $(function () {
 <h1 id="phpLDAPadmin"><a href="#phpLDAPadmin" class="headerlink" title="phpLDAPadmin"></a>phpLDAPadmin</h1><p><a href="https://github.com/leenooks/phpLDAPadmin">phpLDAPadmin</a> 是 LDAP 的一个 Web GUI。</p>
 <p>需要注意大部分的文档都是 v1 的，v2 进行了重构，有很大的区别。<strong>并且不能用 rootdn 登录</strong></p>
 <p>就个人来说，并不太喜欢 v2，虽说直接使用 rootdn 有安全性问题，但是直接不让用就很尬。具体见<a href="https://github.com/leenooks/phpLDAPadmin/issues/325">Issue</a></p>
-<h1 id="名词解析"><a href="#名词解析" class="headerlink" title="名词解析"></a>名词解析</h1><h2 id="Distinguished-Name-DN"><a href="#Distinguished-Name-DN" class="headerlink" title="Distinguished Name (DN)"></a>Distinguished Name (DN)</h2><p>DN：每个 LDAP 条目在目录树中的唯一标识，类似文件系统中的完整路径；由若干层级的 RDN（Relative Distinguished Name，相对可分辨名称）组成，每个 RDN 为属性–值对。</p>
+<h1 id="名词解析"><a href="#名词解析" class="headerlink" title="名词解析"></a>名词解析</h1><h2 id="OpenLDAP-HDB-与-MDB-后端对比"><a href="#OpenLDAP-HDB-与-MDB-后端对比" class="headerlink" title="OpenLDAP HDB 与 MDB 后端对比"></a>OpenLDAP HDB 与 MDB 后端对比</h2><p>老的 openldap 2.4.44，后端是HDB</p>
+<p>OpenLDAP 中两种主要数据库后端：<strong>HDB</strong>（Hierarchical Berkeley DB）与<strong>MDB</strong>（Memory-Mapped Database），并对它们的架构、性能和配置差异进行对比。</p>
+<ul>
+<li><strong>HDB</strong> 使用 Oracle Berkeley DB (BDB) 存储数据，支持完全的层次结构和子树重命名，但需要合理配置 <code>DB_CONFIG</code>、<code>idlcachesize</code> 等缓存参数以获得良好性能。  </li>
+<li><strong>MDB</strong> 基于 LMDB（Lightning Memory-Mapped Database）库，无需外部缓存，直接通过内存映射实现高效存取，功能等同于 HDB 且支持子树重命名。  </li>
+<li>自 OpenLDAP 2.6 起，<strong>HDB 已移除，MDB 为推荐默认后端</strong>；官方文档建议新部署使用 MDB，并逐步将旧 HDB 迁移至 MDB。</li>
+</ul>
+<h2 id="Distinguished-Name-DN"><a href="#Distinguished-Name-DN" class="headerlink" title="Distinguished Name (DN)"></a>Distinguished Name (DN)</h2><p>DN：每个 LDAP 条目在目录树中的唯一标识，类似文件系统中的完整路径；由若干层级的 RDN（Relative Distinguished Name，相对可分辨名称）组成，每个 RDN 为属性–值对。</p>
 <p>RDN 示例：uid&#x3D;john.doe 或 cn&#x3D;Users，多属性 RDN 如 givenName&#x3D;John+sn&#x3D;Doe</p>
 <h2 id="rootdn"><a href="#rootdn" class="headerlink" title="rootdn"></a>rootdn</h2><p>rootdn（Root Distinguished Name）是 LDAP 数据库中的超级管理员 DN，具备对该数据库条目的完全控制权限，不受常规访问控制列表（ACL）限制。</p>
 <p>超级权限 </p>
