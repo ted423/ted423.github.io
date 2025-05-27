@@ -27,7 +27,7 @@
 <meta property="og:description" content="LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。 目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-05-14T06:28:08.903Z">
-<meta property="article:modified_time" content="2025-05-27T02:46:10.623Z">
+<meta property="article:modified_time" content="2025-05-27T02:52:45.447Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Document">
@@ -162,7 +162,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~11.63K
+                            ~11.58K
                         
                         字
                     </li>
@@ -301,21 +301,21 @@
 </ol>
 <p>指定谁可以执行操作。</p>
 <ul>
-<li><code>*</code>: 任何人，包括匿名用户。 \ <code>by * read</code></li>
-<li><code>anonymous</code>: 未认证的（匿名）用户。 \ <code>by anonymous auth</code></li>
-<li><code>users</code>: 任何已成功认证的用户。 \ <code>by users read</code></li>
-<li><code>self</code>: 正在访问的条目与当前绑定用户的 DN 相同。 \ 这是实现用户修改自己信息（如密码）的关键。 \ <code>by self write</code></li>
-<li><code>dn[.&lt;style&gt;]=&lt;pattern&gt;</code>: 特定 DN 或匹配模式的 DN。 \ Style: <code>base</code> (或 <code>exact</code>), <code>regex</code>, <code>subtree</code> (表示绑定用户是该子树下的用户)。 \ <code>by dn.exact=&quot;cn=admin,dc=example,dc=com&quot; manage</code></li>
+<li><code>*</code>: 任何人，包括匿名用户。<br><code>by * read</code></li>
+<li><code>anonymous</code>: 未认证的（匿名）用户。<br><code>by anonymous auth</code></li>
+<li><code>users</code>: 任何已成功认证的用户。<br><code>by users read</code></li>
+<li><code>self</code>: 正在访问的条目与当前绑定用户的 DN 相同。<br>这是实现用户修改自己信息（如密码）的关键。<br><code>by self write</code></li>
+<li><code>dn[.&lt;style&gt;]=&lt;pattern&gt;</code>: 特定 DN 或匹配模式的 DN。<br>Style: <code>base</code> (或 <code>exact</code>), <code>regex</code>, <code>subtree</code> (表示绑定用户是该子树下的用户)。<br><code>by dn.exact=&quot;cn=admin,dc=example,dc=com&quot; manage</code></li>
 <li><code>group[/&lt;objectclass&gt;[/&lt;groupattr&gt;]][.&lt;style&gt;]=&lt;pattern&gt;</code>: 属于特定组的成员。<ul>
-<li><code>objectclass</code>: 组对象的 objectClass (e.g., <code>groupOfNames</code>, <code>groupOfUniqueNames</code>)。 \ 默认为 <code>groupOfNames</code>。</li>
-<li><code>groupattr</code>: 包含组成员 DN 的属性 (e.g., <code>member</code>, <code>uniqueMember</code>)。 \ 默认为 <code>member</code>。</li>
-<li>Style and Pattern: 用于匹配组的 DN。 \ <code>by group.exact=&quot;cn=administrators,ou=groups,dc=example,dc=com&quot; write</code></li>
+<li><code>objectclass</code>: 组对象的 objectClass (e.g., <code>groupOfNames</code>, <code>groupOfUniqueNames</code>)。<br>默认为 <code>groupOfNames</code>。</li>
+<li><code>groupattr</code>: 包含组成员 DN 的属性 (e.g., <code>member</code>, <code>uniqueMember</code>)。<br>默认为 <code>member</code>。</li>
+<li>Style and Pattern: 用于匹配组的 DN。<br><code>by group.exact=&quot;cn=administrators,ou=groups,dc=example,dc=com&quot; write</code></li>
 </ul>
 </li>
-<li><code>peername.&lt;style&gt;=&lt;pattern&gt;</code>: 基于客户端的 IP 地址或主机名。 \ <code>by peername.ip=&quot;192.168.1.0/24&quot; read</code></li>
+<li><code>peername.&lt;style&gt;=&lt;pattern&gt;</code>: 基于客户端的 IP 地址或主机名。<br><code>by peername.ip=&quot;192.168.1.0/24&quot; read</code></li>
 <li><code>sockname.&lt;style&gt;=&lt;pattern&gt;</code>: 基于服务器监听的 IP 地址。</li>
-<li><code>dnattr=&lt;attrname&gt;</code>: 绑定用户的 DN 存在于目标条目的某个指定属性中 \ （例如，条目的 <code>owner</code> 属性值是当前用户的 DN）。 \ <code>by dnattr=owner write</code></li>
-<li><code>set=&lt;set_expression&gt;</code>: 使用布尔逻辑 (<code>AND</code>, <code>OR</code>, <code>NOT</code>, <code>&amp;</code>, <code>|</code>, <code>!</code>) 组合多个 <code>&lt;who&gt;</code> 条件。 \ <code>by set=&quot;user and group/groupOfNames/member.exact=cn=editors,ou=groups,dc=example,dc=com&quot; write</code> \ 或者更简洁的语法 (OpenLDAP 2.5+): \ <code>by set=&quot;[cn=editors,ou=groups,dc=example,dc=com]/member &amp; user&quot; write</code></li>
+<li><code>dnattr=&lt;attrname&gt;</code>: 绑定用户的 DN 存在于目标条目的某个指定属性中<br>（例如，条目的 <code>owner</code> 属性值是当前用户的 DN）。<br><code>by dnattr=owner write</code></li>
+<li><code>set=&lt;set_expression&gt;</code>: 使用布尔逻辑 (<code>AND</code>, <code>OR</code>, <code>NOT</code>, <code>&amp;</code>, <code>|</code>, <code>!</code>) 组合多个 <code>&lt;who&gt;</code> 条件。<br><code>by set=&quot;user and group/groupOfNames/member.exact=cn=editors,ou=groups,dc=example,dc=com&quot; write</code><br>或者更简洁的语法 (OpenLDAP 2.5+):<code>by set=&quot;[cn=editors,ou=groups,dc=example,dc=com]/member &amp; user&quot; write</code></li>
 </ul>
 <ol start="3">
 <li><code>&lt;access_level&gt;</code> (权限级别)</li>
@@ -422,7 +422,7 @@
                     <a class="tag-none-link" href="/tags/AD-Active-Directory/" rel="tag">AD(Active Directory)</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-05-27T02:46:10.623Z" itemprop="dateModified">最后编辑：2025-05-27</time>
+                    <time datetime="2025-05-27T02:52:45.447Z" itemprop="dateModified">最后编辑：2025-05-27</time>
                 </div>
             </div>
         </footer>
