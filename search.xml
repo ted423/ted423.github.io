@@ -29112,25 +29112,26 @@ $(function () {
 <ul>
 <li><code>*</code>: 应用于所有条目和属性。</li>
 <li><code>dn[.&lt;style&gt;]=&lt;pattern&gt;</code>: 应用于 DN (Distinguished Name) 匹配的条目。<ul>
+<li>Pattern: DN 字符串或正则表达式。<br>例如: <code>dn.subtree=&quot;ou=users,dc=example,dc=com&quot;</code></li>
 <li>Style:<ul>
 <li><code>base</code> (或 <code>exact</code>): 精确匹配 DN。<br><code>to dn.exact=&quot;ou=users,dc=example,dc=com&quot;</code></li>
-<li><code>one</code> (或 <code>onelevel</code>): 匹配指定 DN 的下一级子条目。 \ <code>to dn.one=&quot;ou=groups,dc=example,dc=com&quot;</code></li>
-<li><code>subtree</code>: 匹配指定 DN 及其所有子树条目。 \ <code>to dn.subtree=&quot;dc=example,dc=com&quot;</code></li>
-<li><code>children</code>: 匹配指定 DN 的所有子树条目， \ 但不包括该 DN 本身。</li>
-<li><code>regex</code>: 使用正则表达式匹配 DN。 \ <code>to dn.regex=&quot;uid=[^,]+,ou=users,dc=example,dc=com&quot;</code></li>
+<li><code>one</code> (或 <code>onelevel</code>): 匹配指定 DN 的下一级子条目。<br><code>to dn.one=&quot;ou=groups,dc=example,dc=com&quot;</code></li>
+<li><code>subtree</code>: 匹配指定 DN 及其所有子树条目。<br><code>to dn.subtree=&quot;dc=example,dc=com&quot;</code></li>
+<li><code>children</code>: 匹配指定 DN 的所有子树条目，但不包括该 DN 本身。</li>
+<li><code>regex</code>: 使用正则表达式匹配 DN。<br><code>to dn.regex=&quot;uid=[^,]+,ou=users,dc=example,dc=com&quot;</code></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><code>attrs=&lt;attrlist&gt;</code>: 应用于条目中的特定属性。<ul>
 <li><code>attrlist</code>: 逗号分隔的属性名列表 (e.g., <code>userPassword,mail</code>) 或特殊值：<ul>
-<li><code>entry</code>: 条目本身（控制添加、删除、重命名等操作）， \ 不包括其属性。</li>
-<li><code>children</code>: 条目的子条目（控制添加、删除子条目）。 \ <code>to attrs=userPassword,shadowLastChange</code> \ <code>to attrs=entry</code></li>
+<li><code>entry</code>: 条目本身（控制添加、删除、重命名等操作），不包括其属性。</li>
+<li><code>children</code>: 条目的子条目（控制添加、删除子条目）。<br><code>to attrs=userPassword,shadowLastChange</code><br><code>to attrs=entry</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code>filter=&lt;ldap_filter&gt;</code>: 应用于匹配 LDAP 搜索过滤器的条目。 \ <code>to filter=&quot;(objectClass=inetOrgPerson)&quot;</code></li>
+<li><code>filter=&lt;ldap_filter&gt;</code>: 应用于匹配 LDAP 搜索过滤器的条目。<br><code>to filter=&quot;(objectClass=inetOrgPerson)&quot;</code></li>
 <li><code>val.&lt;attribute&gt;=&lt;value&gt;</code>: (较少用) 应用于其 <code>&lt;attribute&gt;</code> 属性具有特定 <code>&lt;value&gt;</code> 的条目。</li>
 </ul>
 <ol start="2">
