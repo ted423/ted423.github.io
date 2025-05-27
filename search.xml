@@ -29180,6 +29180,11 @@ $(function () {
 <li><code>implicit</code>: (OpenLDAP 2.5+) 使其行为如同由 <code>olcDefaultAccess</code> 定义的默认访问权限。</li>
 <li><code>self &lt;access_level&gt;</code>: 类似于 <code>by self &lt;access_level&gt;</code>，但通常用于特定场景，例如结合 <code>set</code>。</li>
 </ul>
+<p><strong>例子</strong></p>
+<p>一个用于hdb的支持用户自行修改密码的 ACL，注意目前正常普遍是mdb</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dn: olcDatabase=&#123;2&#125;hdb,cn=config</span><br><span class="line">changetype: modify</span><br><span class="line">add: olcAccess</span><br><span class="line">olcAccess: &#123;0&#125;to attrs=userPassword</span><br><span class="line">  by self write</span><br><span class="line">  by anonymous auth</span><br><span class="line">  by * none</span><br><span class="line">-</span><br><span class="line">add: olcAccess</span><br><span class="line">olcAccess: &#123;1&#125;to attrs=shadowLastChange by self write by * read</span><br><span class="line">-</span><br><span class="line">add: olcAccess</span><br><span class="line">olcAccess: &#123;2&#125;to * by * read</span><br></pre></td></tr></table></figure>
+
+
 <h1 id="OpenLDAP-权限验证"><a href="#OpenLDAP-权限验证" class="headerlink" title="OpenLDAP 权限验证"></a>OpenLDAP 权限验证</h1><p><code>-Y EXTERNAL -H ldapi:///</code>  本地 root 权限绑定，仅限ldapserver本地使用，也就是要在docker内执行命令(权限级别与使用rootdn一样)</p>
 <p>EXTERNAL 是一种 SASL（Simple Authentication and Security Layer）机制，用于通过已有的外部身份验证方式（例如 Unix socket 权限）来认证你的 LDAP 操作。</p>
 <p>SASL 是一种认证框架，OpenLDAP 支持多种 SASL 机制，例如：</p>
