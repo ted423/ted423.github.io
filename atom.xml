@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-06-10T14:09:03.491Z</updated>
+  <updated>2025-06-19T03:20:49.505Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不要购买 HKC 的显示器</title>
+    <link href="http://ted423.github.io/Hardware/noHKC/"/>
+    <id>http://ted423.github.io/Hardware/noHKC/</id>
+    <published>2025-06-19T03:18:03.710Z</published>
+    <updated>2025-06-19T03:20:49.505Z</updated>
+    
+    <content type="html"><![CDATA[<p>怎么说呢，就很野鸡<br>这是我第一个见到机身上和软件都看不到SN号的显示器。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;怎么说呢，就很野鸡&lt;br&gt;这是我第一个见到机身上和软件都看不到SN号的显示器。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Hardware" scheme="http://ted423.github.io/categories/Hardware/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
+    
+    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
+    
+  </entry>
   
   <entry>
     <title>LDAP &amp; OpenLDAP</title>
@@ -586,33 +615,6 @@
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Game" scheme="http://ted423.github.io/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>讨鬼传：极物品修改笔记</title>
-    <link href="http://ted423.github.io/Game/%E8%AE%A8%E9%AC%BC%E4%BC%A0%E6%9E%81/"/>
-    <id>http://ted423.github.io/Game/%E8%AE%A8%E9%AC%BC%E4%BC%A0%E6%9E%81/</id>
-    <published>2025-02-10T14:42:51.754Z</published>
-    <updated>2025-02-10T14:41:51.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://bbs.3dmgame.com/thread-4858853-1-1.html">https://bbs.3dmgame.com/thread-4858853-1-1.html</a></p><p>修改器不支持繁中，不过存档日&#x2F;英里面都能读，除了名字会乱码以外没什么问题。英文版似乎没有修改成功，后面是日文版改出的。</p><p>不过修改器 Win 11 下过一会会自己退出</p><p>DLC 武器防具没法使用，估计要找个 Win 10 电脑试试。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://bbs.3dmgame.com/thread-4858853-1-1.html&quot;&gt;https://bbs.3dmgame.com/thread-4858853-1-1.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;修改器不支持繁中，不过存档日&amp;#x2F;</summary>
-      
-    
-    
-    
-    <category term="Game" scheme="http://ted423.github.io/categories/Game/"/>
-    
-    
-    <category term="Game" scheme="http://ted423.github.io/tags/Game/"/>
-    
-    <category term="KOEI" scheme="http://ted423.github.io/tags/KOEI/"/>
     
   </entry>
   
