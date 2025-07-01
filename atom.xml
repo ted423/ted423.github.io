@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-06-19T03:20:49.505Z</updated>
+  <updated>2025-07-01T07:39:37.381Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>K8S(Kubernetes) 笔记</title>
+    <link href="http://ted423.github.io/Software/k8s/"/>
+    <id>http://ted423.github.io/Software/k8s/</id>
+    <published>2025-07-01T07:32:04.759Z</published>
+    <updated>2025-07-01T07:39:37.381Z</updated>
+    
+    <content type="html"><![CDATA[<p>没空系统性整理，所以先记笔记好了</p><h1 id="最新版的Kubernetes-已不再使用-Docker"><a href="#最新版的Kubernetes-已不再使用-Docker" class="headerlink" title="最新版的Kubernetes 已不再使用 Docker"></a>最新版的Kubernetes 已不再使用 Docker</h1><p>Kubernetes v1.24+ 移除了 dockershim，不再直接依赖 Docker Engine 来作为容器运行时，并且推荐使用像 containerd 这样的 CRI 运行时。同时安装 Docker Engine 和独立的 containerd (被 Kubernetes 使用) 确实可能会导致一些混淆或潜在的冲突，但这并不意味着完全不能安装 Docker，或者某些教程推荐安装 Docker 就是完全错误的。<br>这里需要澄清几个关键点，解释为什么有些教程可能仍然会提到安装 docker.io (或 docker-ce)：<br>历史原因和习惯延续：<br>在 Kubernetes v1.23 及更早版本，Docker Engine 是最主流的容器运行时。大量的旧教程和很多人的经验都是基于 Docker 的。<br>即使 dockershim 被移除，Docker Engine 本身的核心运行时就是 containerd。所以，安装 Docker Engine 实际上也会安装和运行 containerd。<br>Docker CLI 的便利性：<br>很多人习惯使用 docker命令行工具 (docker ps, docker images, docker build 等) 来进行本地镜像构建、容器调试等操作。<br>即使 Kubernetes 使用独立的 containerd 实例，管理员或开发者可能仍然希望在节点上拥有 docker CLI 以便进行一些辅助操作。<br>crictl 是与 CRI 运行时（如 containerd）交互的标准工具，但其命令和用户体验与 docker CLI 不同，后者更为用户熟知。<br>误解或简化教程：<br>有些教程可能没有完全更新到最新的 Kubernetes 架构变化，或者为了简化步骤，直接让用户安装 Docker，因为 Docker 安装后，其内部的 containerd 可以被配置为 Kubernetes 的 CRI 运行时。<br>关键点在于如何配置 kubelet： 如果安装了 Docker Engine，kubelet 必须被配置为不使用已废弃的 dockershim，而是直接与 Docker Engine 内部的 containerd 的 CRI socket (&#x2F;run&#x2F;containerd&#x2F;containerd.sock，如果 Docker 将其暴露出来并与 Kubernetes 期望的一致) 通信。<br>Docker 仍然是构建镜像的主流工具：<br>虽然 Kubernetes 运行容器不直接依赖 Docker Engine，但构建容器镜像的生态系统仍然以 Dockerfile 和 docker build (或兼容工具如 buildah, kaniko) 为主。<br>因此，在开发环境或CI&#x2F;CD流程中，Docker Engine 仍然扮演重要角色。有些教程可能会将节点准备和镜像构建环境的准备步骤混合在一起。</p><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><h2 id="pause-的镜像地址定义在-containerd-配置中"><a href="#pause-的镜像地址定义在-containerd-配置中" class="headerlink" title="pause 的镜像地址定义在 containerd 配置中"></a>pause 的镜像地址定义在 containerd 配置中</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;没空系统性整理，所以先记笔记好了&lt;/p&gt;
+&lt;h1 id=&quot;最新版的Kubernetes-已不再使用-Docker&quot;&gt;&lt;a href=&quot;#最新版的Kubernetes-已不再使用-Docker&quot; class=&quot;headerlink&quot; title=&quot;最新版的Kubernetes</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Note" scheme="http://ted423.github.io/tags/Note/"/>
+    
+  </entry>
   
   <entry>
     <title>不要购买 HKC 的显示器</title>
@@ -588,33 +615,6 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="Windows 11" scheme="http://ted423.github.io/tags/Windows-11/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Need for Speed - Payback 存档相关</title>
-    <link href="http://ted423.github.io/Game/Need%20for%20Speed%20-%20Payback/"/>
-    <id>http://ted423.github.io/Game/Need%20for%20Speed%20-%20Payback/</id>
-    <published>2025-02-27T16:00:22.606Z</published>
-    <updated>2025-02-27T16:00:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Payback"><a href="#Payback" class="headerlink" title="Payback"></a>Payback</h1><p>这游戏的存档会包含UserID,不对应的话会提示存档损坏</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2329147391</span><br><span class="line">305402420</span><br></pre></td></tr></table></figure><p>上面的是 FitGirl 打包的，下面的是3DM的</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Payback&quot;&gt;&lt;a href=&quot;#Payback&quot; class=&quot;headerlink&quot; title=&quot;Payback&quot;&gt;&lt;/a&gt;Payback&lt;/h1&gt;&lt;p&gt;这游戏的存档会包含UserID,不对应的话会提示存档损坏&lt;/p&gt;
-&lt;figure class=&quot;hi</summary>
-      
-    
-    
-    
-    <category term="Game" scheme="http://ted423.github.io/categories/Game/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Game" scheme="http://ted423.github.io/tags/Game/"/>
     
   </entry>
   
