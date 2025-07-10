@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-07-04T03:00:25.355Z</updated>
+  <updated>2025-07-10T02:38:58.999Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linkding 试用笔记</title>
+    <link href="http://ted423.github.io/Software/Linkding/"/>
+    <id>http://ted423.github.io/Software/Linkding/</id>
+    <published>2025-07-10T02:22:17.521Z</published>
+    <updated>2025-07-10T02:38:58.999Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://linkding.link/">https://linkding.link</a></p><p><a href="https://github.com/sissbruecker/linkding">https://github.com/sissbruecker/linkding</a></p><p>一开始的想法是我想要个能 tag 分类还能记笔记的书签。</p><p>前面也想用 notion 替代，但是 notion 现在把历史记录也给收缩了。其他可以参考下<a href="/Software/Notion">Notion</a></p><p>但现在发现了几个问题</p><ol><li>界面不太直观，原来有文件夹做大分类，现在只有 tag，并且只按字母顺序排列，如果有主 tag 和 次 tag 可能会好很多。</li><li>没有日期记录</li><li>原生书签跟浏览器集成很好，Vivaldi 的新标签也很美观，在 Linkding 没有很强功能性的情况下不是特别必要。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://linkding.link/&quot;&gt;https://linkding.link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/sissbruecker/linkding&quot;&gt;https://github.com/s</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
+    
+    <category term="Web Service" scheme="http://ted423.github.io/tags/Web-Service/"/>
+    
+  </entry>
   
   <entry>
     <title>AD相关 - 端口以及同步</title>
@@ -51,11 +84,11 @@
   </entry>
   
   <entry>
-    <title>[开源]Bulk Crap Uninstaller</title>
+    <title>Docker 笔记</title>
     <link href="http://ted423.github.io/Software/Docker/"/>
     <id>http://ted423.github.io/Software/Docker/</id>
     <published>2025-07-03T12:01:10.957Z</published>
-    <updated>2025-07-03T12:06:14.828Z</updated>
+    <updated>2025-07-10T02:23:25.005Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h1><p>Dockerfile 是一个文本格式的配置文件，用户可以使用它来自动化地创建自定义的 Docker 镜像。它包含了一系列指令和参数，这些指令按顺序执行，最终生成一个包含了应用程序及其所有依赖的、可移植的镜像。</p><p>关键指令</p><ul><li>FROM：指定基础镜像。每个 Dockerfile 都必须以 FROM 指令开始。例如 FROM python:3.9-slim。</li><li>WORKDIR：设置容器内的工作目录，后续的 RUN, CMD, COPY, ADD 等指令都在此目录下执行。</li><li>COPY：将宿主机的文件或目录复制到镜像的文件系统中。</li><li>RUN：在镜像构建过程中执行命令。常用于安装软件包、依赖库等。例如 RUN pip install -r requirements.txt。</li><li>EXPOSE：声明容器在运行时监听的端口。这主要是一个文档性指令，并不会实际发布端口。</li><li>CMD：提供容器启动时默认执行的命令。如果 docker run 命令指定了其他命令，CMD 会被覆盖。</li></ul><h1 id="Docker-Compose"><a href="#Docker-Compose" class="headerlink" title="Docker Compose"></a>Docker Compose</h1><p>Docker Compose 是一个用于定义和运行多容器 Docker 应用程序的工具。通过一个 YAML 配置文件（docker-compose.yml），您可以描述应用程序的各个服务（容器）、网络、卷等依赖关系，并一键启动整个应用栈。</p><p>需要注意部分修改配置后需要删除已经创建的 volumes，自动移除有时候并不会移除，通过 docker-compose file 创建的 volumes 需要手动移除，单纯修改不会重新创建</p><p>常用命令<br>| 命令 | 说明 |<br>| docker-compose up | 启动所有服务（后台运行加 -d） |<br>| docker-compose down | 停止并删除容器、网络 |<br>| docker-compose build | 重新构建服务镜像 |<br>| docker-compose logs | 查看服务日志 |<br>| docker-compose ps | 查看运行中的服务状态 |</p>]]></content>
     
@@ -261,7 +294,7 @@
     <link href="http://ted423.github.io/Software/EverythingToolbar/"/>
     <id>http://ted423.github.io/Software/EverythingToolbar/</id>
     <published>2025-05-01T02:41:33.431Z</published>
-    <updated>2025-05-01T03:42:58.009Z</updated>
+    <updated>2025-07-10T02:24:33.398Z</updated>
     
     <content type="html"><![CDATA[<p>我挺喜欢 Everything 的，当时一看这个立马就装了，结果就尴尬了。</p><ol><li>结果没法保存，操作失误或者打开文件位置之后还要重新搜索，实际体验不如我直接在 Everything 里搜索。</li><li>开软件等搜索很喜欢先按Win键，用 EverythingToolbar 反而需要我鼠标点过去，这个跟直接使用 Everything 并没有直接区别。反而还有第一点的负面。</li></ol><p>本着软件尽量少装的原则就卸掉了</p>]]></content>
     
@@ -286,8 +319,6 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
-    
-    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
     
   </entry>
   
@@ -598,26 +629,6 @@
     
     
     <category term="Animation" scheme="http://ted423.github.io/tags/Animation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://ted423.github.io/%E5%9D%9F%E5%9C%BA/Pandownload/"/>
-    <id>http://ted423.github.io/%E5%9D%9F%E5%9C%BA/Pandownload/</id>
-    <published>2025-03-14T14:37:35.650Z</published>
-    <updated>2019-08-08T09:46:09.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Title: Pandownload - 百度云专用下载器<br>tags:Windows,资源类<br>date: 2019-03-10 12:34<br>第三方开发，还是相当好用的，不过有可能会被封。<br>由于会需要在软件内登陆，有一定的盗号风险。<br>会对连接的密码建立数据库，这个功能说实话蛮棒的。<br><a href="https://pandownload.com/">https://pandownload.com</a></p><p>同类软件还有<a href="https://github.com/iikira/BaiduPCS-Go">BaiduPCS-Go</a><br>这个软件是命令行的，上手起来更难<br>不过开源 Apache-2.0</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Title: Pandownload - 百度云专用下载器&lt;br&gt;tags:Windows,资源类&lt;br&gt;date: 2019-03-10 12:34&lt;br&gt;第三方开发，还是相当好用的，不过有可能会被封。&lt;br&gt;由于会需要在软件内登陆，有一定的盗号风险。&lt;br&gt;会对连接的密</summary>
-      
-    
-    
-    
     
   </entry>
   
