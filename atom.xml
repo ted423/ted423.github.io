@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-07-10T02:38:58.999Z</updated>
+  <updated>2025-07-11T01:47:30.205Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,19 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Linkding 试用笔记</title>
-    <link href="http://ted423.github.io/Software/Linkding/"/>
-    <id>http://ted423.github.io/Software/Linkding/</id>
+    <title>笔记书签方面的一些纠结</title>
+    <link href="http://ted423.github.io/Software/Notes/"/>
+    <id>http://ted423.github.io/Software/Notes/</id>
     <published>2025-07-10T02:22:17.521Z</published>
-    <updated>2025-07-10T02:38:58.999Z</updated>
+    <updated>2025-07-11T01:47:30.205Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://linkding.link/">https://linkding.link</a></p><p><a href="https://github.com/sissbruecker/linkding">https://github.com/sissbruecker/linkding</a></p><p>一开始的想法是我想要个能 tag 分类还能记笔记的书签。</p><p>前面也想用 notion 替代，但是 notion 现在把历史记录也给收缩了。其他可以参考下<a href="/Software/Notion">Notion</a></p><p>但现在发现了几个问题</p><ol><li>界面不太直观，原来有文件夹做大分类，现在只有 tag，并且只按字母顺序排列，如果有主 tag 和 次 tag 可能会好很多。</li><li>没有日期记录</li><li>原生书签跟浏览器集成很好，Vivaldi 的新标签也很美观，在 Linkding 没有很强功能性的情况下不是特别必要。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>一些记录在 <a href="/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B">选型</a></p><p>其实还用过 Onenote，谷歌的东西，Edge的集锦。</p><h1 id="Linkding-试用笔记"><a href="#Linkding-试用笔记" class="headerlink" title="Linkding 试用笔记"></a>Linkding 试用笔记</h1><p><a href="https://linkding.link/">https://linkding.link</a></p><p><a href="https://github.com/sissbruecker/linkding">https://github.com/sissbruecker/linkding</a></p><p>一开始的想法是我想要个能 tag 分类还能记笔记的书签。</p><p>前面也想用 notion 替代，但是 notion 现在把历史记录也给收缩了。其他可以参考下<a href="/Software/Notion">Notion</a></p><p>但现在发现了几个问题</p><ol><li>界面不太直观，原来有文件夹做大分类，现在只有 tag，并且只按字母顺序排列，如果有主 tag 和 次 tag 可能会好很多。</li><li>没有日期记录</li><li>原生书签跟浏览器集成很好，Vivaldi 的新标签也很美观，在 Linkding 没有很强功能性的情况下不是特别必要。</li></ol><h1 id="Notion-问题"><a href="#Notion-问题" class="headerlink" title="Notion 问题"></a>Notion 问题</h1><ul><li>贴进去一段代码，结果自动给你把字符改了，双引号改中文字符，自动双倍*号。还有别的乱七八糟的改动。</li><li>各种模板过于细化，导致门槛太高。</li><li>现在历史版本要花钱才能看了，对我来说相当不方便</li></ul><h1 id="Trilium-Notes"><a href="#Trilium-Notes" class="headerlink" title="Trilium Notes"></a>Trilium Notes</h1><p>Docker 最后更新是一年，个人感觉这种属于维护者意愿降低。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://linkding.link/&quot;&gt;https://linkding.link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/sissbruecker/linkding&quot;&gt;https://github.com/s</summary>
+    <summary type="html">&lt;p&gt;一些记录在 &lt;a href=&quot;/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B&quot;&gt;选型&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;其实还用过 Onenote，谷歌的东西，Edge的集锦。&lt;/p&gt;
+&lt;h1 id=&quot;Linkding-试用笔记</summary>
       
     
     
