@@ -27,7 +27,7 @@
 <meta property="og:description" content="没空系统性整理，所以先记笔记好了 最新版的Kubernetes 已不再使用 DockerKubernetes v1.24+ 移除了 dockershim，不再直接依赖 Docker Engine 来作为容器运行时，并且推荐使用像 containerd 这样的 CRI 运行时。同时安装 Docker Engine 和独立的 containerd (被 Kubernetes 使用) 确实可能会导致一些">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-07-01T07:32:04.759Z">
-<meta property="article:modified_time" content="2025-07-01T11:14:25.159Z">
+<meta property="article:modified_time" content="2025-07-12T15:41:00.313Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Software">
 <meta property="article:tag" content="Note">
@@ -159,7 +159,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~1.76K
+                            ~2.52K
                         
                         字
                     </li>
@@ -182,10 +182,18 @@
 <h1 id="最新版的Kubernetes-已不再使用-Docker"><a href="#最新版的Kubernetes-已不再使用-Docker" class="headerlink" title="最新版的Kubernetes 已不再使用 Docker"></a>最新版的Kubernetes 已不再使用 Docker</h1><p>Kubernetes v1.24+ 移除了 dockershim，不再直接依赖 Docker Engine 来作为容器运行时，并且推荐使用像 containerd 这样的 CRI 运行时。同时安装 Docker Engine 和独立的 containerd (被 Kubernetes 使用) 确实可能会导致一些混淆或潜在的冲突，但这并不意味着完全不能安装 Docker，或者某些教程推荐安装 Docker 就是完全错误的。<br>这里需要澄清几个关键点，解释为什么有些教程可能仍然会提到安装 docker.io (或 docker-ce)：<br>历史原因和习惯延续：<br>在 Kubernetes v1.23 及更早版本，Docker Engine 是最主流的容器运行时。大量的旧教程和很多人的经验都是基于 Docker 的。<br>即使 dockershim 被移除，Docker Engine 本身的核心运行时就是 containerd。所以，安装 Docker Engine 实际上也会安装和运行 containerd。<br>Docker CLI 的便利性：<br>很多人习惯使用 docker命令行工具 (docker ps, docker images, docker build 等) 来进行本地镜像构建、容器调试等操作。<br>即使 Kubernetes 使用独立的 containerd 实例，管理员或开发者可能仍然希望在节点上拥有 docker CLI 以便进行一些辅助操作。<br>crictl 是与 CRI 运行时（如 containerd）交互的标准工具，但其命令和用户体验与 docker CLI 不同，后者更为用户熟知。<br>误解或简化教程：<br>有些教程可能没有完全更新到最新的 Kubernetes 架构变化，或者为了简化步骤，直接让用户安装 Docker，因为 Docker 安装后，其内部的 containerd 可以被配置为 Kubernetes 的 CRI 运行时。<br>关键点在于如何配置 kubelet： 如果安装了 Docker Engine，kubelet 必须被配置为不使用已废弃的 dockershim，而是直接与 Docker Engine 内部的 containerd 的 CRI socket (&#x2F;run&#x2F;containerd&#x2F;containerd.sock，如果 Docker 将其暴露出来并与 Kubernetes 期望的一致) 通信。<br>Docker 仍然是构建镜像的主流工具：<br>虽然 Kubernetes 运行容器不直接依赖 Docker Engine，但构建容器镜像的生态系统仍然以 Dockerfile 和 docker build (或兼容工具如 buildah, kaniko) 为主。<br>因此，在开发环境或CI&#x2F;CD流程中，Docker Engine 仍然扮演重要角色。有些教程可能会将节点准备和镜像构建环境的准备步骤混合在一起。</p>
 <h1 id="Helm-Charts"><a href="#Helm-Charts" class="headerlink" title="Helm Charts"></a>Helm Charts</h1><p>Helm 是 Kubernetes 的包管理器，目前唯一安装 Kubernetes Dashboard 的方式</p>
 <p>Charts (Helm 包)： Helm 使用一种称为 &quot;Charts&quot; 的打包格式。一个 Chart 就是一个描述了一组相关 Kubernetes 资源的文件集合。它可以包含 Deployment, Service, ConfigMap, Secret, Ingress 等等，以及这些资源的配置模板。Charts 通常允许用户通过一个 values.yaml 文件或命令行参数来定制安装，而无需直接修改 Chart 的模板文件。Helm 会跟踪应用的版本，并允许你轻松地将应用回滚到之前的版本。<br>仓库 (Repositories)： Helm Charts 可以存储在称为 &quot;仓库&quot; 的地方，你可以添加这些仓库来访问社区或组织维护的 Charts。</p>
+<h1 id="Master-移除以及清理"><a href="#Master-移除以及清理" class="headerlink" title="Master 移除以及清理"></a>Master 移除以及清理</h1><p>首先注意主节点不能用<code>delete node</code>，移除可能需要<code>kubectl drain</code>(维护模式)。错误操作或者主节点意外失效，主节点的相关信息仍然会保存在 etcd 里。</p>
+<p>需要进入 etcd pod 操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ETCDCTL_API=3 etcdctl -w table endpoint --cluster status</span><br><span class="line"></span><br><span class="line">//这个命令会列出当前主节点，然后选择要移除的移除</span><br><span class="line">ETCDCTL_API=3 etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key member list</span><br><span class="line"></span><br><span class="line">ETCDCTL_API=3 etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key member remove &lt;id&gt;</span><br></pre></td></tr></table></figure>
+
+
 <h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul>
 <li>pause 的镜像地址定义在 containerd 配置中</li>
 <li>containerd 的 config.toml 可以配置镜像源</li>
 </ul>
+<h1 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h1><p>批量删pods的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n default |grep &quot;Error&quot; |awk &#x27;&#123;print $1&#125;&#x27; |xargs kubectl delete pod</span><br></pre></td></tr></table></figure>
+<p>不过如果机器对 grep 用 alias 显示行号，会需要<code>unalias grep</code></p>
 </div>
         </div>
         
@@ -206,7 +214,7 @@
                     <a class="tag-none-link" href="/tags/Note/" rel="tag">Note</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-07-01T11:14:25.159Z" itemprop="dateModified">最后编辑：2025-07-01</time>
+                    <time datetime="2025-07-12T15:41:00.313Z" itemprop="dateModified">最后编辑：2025-07-12</time>
                 </div>
             </div>
         </footer>
