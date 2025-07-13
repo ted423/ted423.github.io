@@ -19,15 +19,15 @@
   
     <meta name="keywords" content="Code, Git, Github" />
   
-  <meta name="description" content="之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。 默认行为 core.autocrlf&#x3D;input 目前查看(git config --list)是 core.autocrlf&#x3D;true。但有文章说默认是false，该环境应该是Linux，可能 Github-d">
+  <meta name="description" content="之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。（这个现在想来可能是二进制文件没正常识别导致的，实际解决问题的可能是text&#x3D;auto）默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。 默认行为core.autocrlf&#x3D;input 目前查看(git config --list)是 core.aut">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git 换行符问题">
 <meta property="og:url" content="http://ted423.github.io/Code/Git/git%20eol/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。 默认行为 core.autocrlf&#x3D;input 目前查看(git config --list)是 core.autocrlf&#x3D;true。但有文章说默认是false，该环境应该是Linux，可能 Github-d">
+<meta property="og:description" content="之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。（这个现在想来可能是二进制文件没正常识别导致的，实际解决问题的可能是text&#x3D;auto）默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。 默认行为core.autocrlf&#x3D;input 目前查看(git config --list)是 core.aut">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-01-10T06:38:44.298Z">
-<meta property="article:modified_time" content="2025-04-05T12:57:03.269Z">
+<meta property="article:published_time" content="2025-04-06T09:54:42.615Z">
+<meta property="article:modified_time" content="2025-07-13T13:09:52.725Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Github">
 <meta property="article:tag" content="Code">
@@ -151,7 +151,7 @@
                 <h1 class="kratos-page-title text-center" itemprop="name headline">git 换行符问题</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2025-01-10T06:38:44.298Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-01-10</time></li>
+                <li><time datetime="2025-04-06T09:54:42.615Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-04-06</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -160,7 +160,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            925
+                            987
                         
                         字
                     </li>
@@ -179,12 +179,13 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。<br>默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。</p>
-<p><del>默认行为 <code>core.autocrlf=input</code></del> 目前查看(<code>git config --list</code>)是 <code>core.autocrlf=true</code>。但有文章说默认是<code>false</code>，该环境应该是Linux，可能 <code>Github-desktop</code> 的有所不同，如果 Windows 先装 git 可能也不一样。</p>
+            <div itemprop="articleBody"><p>之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。（这个现在想来可能是二进制文件没正常识别导致的，实际解决问题的可能是<code>text=auto</code>）<br>默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。</p>
+<p><del>默认行为core.autocrlf&#x3D;input</del> 目前查看(<code>git config --list</code>)是 <code>core.autocrlf=true</code>。但有文章说默认是<code>false</code>，该环境应该是Linux，可能 <code>Github-desktop</code> 的有所不同，如果 Windows 先装 git 可能也不一样。</p>
 <p>行为说明</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">false 对换行符不做任何修改</span><br><span class="line">True  上传为 lf，git 检出自动替换为 crlf，需要提醒，不确定检出时替换会不会因为文件后缀问题失效，因为部分文件可能不会被识别为 text</span><br><span class="line">input 上传为 lf，检出不做改动，可以避免将 crlf 提交到数据库</span><br></pre></td></tr></table></figure>
 
-<p>一般这种不建议改全局设置，除非你的全部项目都是只有自己一个人维护，另一方面来说团队最好统一配置。可以在项目的 .gitattributes 里改。</p>
+<p><del>一般这种不建议改全局设置，除非你的全部项目都是只有自己一个人维护，</del>实际上我个人是全局关 autocrlf</p>
+<p>团队最好统一配置。可以在项目的 .gitattributes 里改。</p>
 <p><del>一般也不会设置 autocrlf 的值，而是直接固定项目文件的换行符</del></p>
 <p>目前我是自己设了 <code>autocrlf=false</code>，因为我实在受不了预判和&quot;帮你做决定&quot;</p>
 <p><code>text=auto</code>意味着会自动判断，例如一些图片不会被设置文本属性。(之前未设置的时候有遇到exe被设置了text属性)</p>
@@ -220,7 +221,7 @@
                     <a class="tag-none-link" href="/tags/Code/" rel="tag">Code</a>, <a class="tag-none-link" href="/tags/Git/" rel="tag">Git</a>, <a class="tag-none-link" href="/tags/Github/" rel="tag">Github</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-04-05T12:57:03.269Z" itemprop="dateModified">最后编辑：2025-04-05</time>
+                    <time datetime="2025-07-13T13:09:52.725Z" itemprop="dateModified">最后编辑：2025-07-13</time>
                 </div>
             </div>
         </footer>
@@ -229,12 +230,12 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" [Disney]疯狂动物城[Zootopia]" href="/Animation/Zootopia/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" VSCode" href="/Software/Document&Texteditor/VSCode/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" [Git]设置查看和取消代理" href="/Code/Git/git proxy/">下一篇 <i class="fa fa-angle-right"></i></a>
+                <a title=" tmux 使用" href="/Linux/tmux/">下一篇 <i class="fa fa-angle-right"></i></a>
             </div>
             
         </nav>

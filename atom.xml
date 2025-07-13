@@ -490,6 +490,34 @@
   </entry>
   
   <entry>
+    <title>git 换行符问题</title>
+    <link href="http://ted423.github.io/Code/Git/git%20eol/"/>
+    <id>http://ted423.github.io/Code/Git/git%20eol/</id>
+    <published>2025-04-06T09:54:42.615Z</published>
+    <updated>2025-07-13T13:09:52.725Z</updated>
+    
+    <content type="html"><![CDATA[<p>之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。（这个现在想来可能是二进制文件没正常识别导致的，实际解决问题的可能是<code>text=auto</code>）<br>默认上传都是自动改成 Linux(LF) 上传，下下来就还是 LF，Win 上面就全炸了。</p><p><del>默认行为core.autocrlf&#x3D;input</del> 目前查看(<code>git config --list</code>)是 <code>core.autocrlf=true</code>。但有文章说默认是<code>false</code>，该环境应该是Linux，可能 <code>Github-desktop</code> 的有所不同，如果 Windows 先装 git 可能也不一样。</p><p>行为说明</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">false 对换行符不做任何修改</span><br><span class="line">True  上传为 lf，git 检出自动替换为 crlf，需要提醒，不确定检出时替换会不会因为文件后缀问题失效，因为部分文件可能不会被识别为 text</span><br><span class="line">input 上传为 lf，检出不做改动，可以避免将 crlf 提交到数据库</span><br></pre></td></tr></table></figure><p><del>一般这种不建议改全局设置，除非你的全部项目都是只有自己一个人维护，</del>实际上我个人是全局关 autocrlf</p><p>团队最好统一配置。可以在项目的 .gitattributes 里改。</p><p><del>一般也不会设置 autocrlf 的值，而是直接固定项目文件的换行符</del></p><p>目前我是自己设了 <code>autocrlf=false</code>，因为我实在受不了预判和&quot;帮你做决定&quot;</p><p><code>text=auto</code>意味着会自动判断，例如一些图片不会被设置文本属性。(之前未设置的时候有遇到exe被设置了text属性)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* text=auto</span><br><span class="line">* eol=crlf</span><br></pre></td></tr></table></figure><p>更具体的还有</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*           text=auto</span><br><span class="line">*.txttext</span><br><span class="line">*.vcprojtext eol=crlf</span><br><span class="line">*.shtext eol=lf</span><br><span class="line">*.jpg-text</span><br></pre></td></tr></table></figure><p><code>-text</code>意味着去除文本属性</p><p>今天想起来，顺便给 Hexo 里弄了下，这样每次跑不会一大堆 warning，不过设的是 lf</p><p>参考</p><ul><li><a href="https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes">https://stackoverflow.com/questions/42667996/enforce-core-autocrlf-input-through-gitattributes</a></li><li><a href="https://git-scm.com/docs/gitattributes">https://git-scm.com/docs/gitattributes</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;之前被坑过一次，py 文件上传到 Github 后下回来全部用不了，最后发现是因为换行符的问题。（这个现在想来可能是二进制文件没正常识别导致的，实际解决问题的可能是&lt;code&gt;text=auto&lt;/code&gt;）&lt;br&gt;默认上传都是自动改成 Linux(LF) 上传，下下来就</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
+    
+    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
+    
+    <category term="Git" scheme="http://ted423.github.io/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>VSCode</title>
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
@@ -604,32 +632,6 @@
     
     <category term="etc" scheme="http://ted423.github.io/categories/etc/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>关于 Animation 的一些说明</title>
-    <link href="http://ted423.github.io/Animation/readme/"/>
-    <id>http://ted423.github.io/Animation/readme/</id>
-    <published>2025-03-14T15:30:22.550Z</published>
-    <updated>2025-03-14T15:45:09.713Z</updated>
-    
-    <content type="html"><![CDATA[<p>以前其实半懂不懂，所以全写了 Anime，就像卡通，动漫，二次元，ACG一样，乱七八糟的叫法太多，也没仔细理解。</p><p>其实 Anime 是日式叫法，通常专指日式动画。</p><p>Animation 其实覆盖范围比较广，卡通，Anime，2D，3D的其实都能叫 Animation。</p><p>我这里就专门拿来放非 Anime 的东西了。(最近才改)</p><p>BTW 动画电影指的以动画制作的电影，因此也可以算电影(？)</p><p>BTW，卡通应该包含漫画（不过不是七龙珠机器猫那种，应该是父与子那种），通常带有幽默讽刺属性。另外细分还有<a href="https://en.wikipedia.org/wiki/Gag_cartoon">Gag Carton</a>,<a href="https://en.wikipedia.org/wiki/Political_cartoon">Political cartoon</a>(政治卡通？政治漫画)</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;以前其实半懂不懂，所以全写了 Anime，就像卡通，动漫，二次元，ACG一样，乱七八糟的叫法太多，也没仔细理解。&lt;/p&gt;
-&lt;p&gt;其实 Anime 是日式叫法，通常专指日式动画。&lt;/p&gt;
-&lt;p&gt;Animation 其实覆盖范围比较广，卡通，Anime，2D，3D的其实都能叫 </summary>
-      
-    
-    
-    
-    <category term="Animation" scheme="http://ted423.github.io/categories/Animation/"/>
-    
-    
-    <category term="Animation" scheme="http://ted423.github.io/tags/Animation/"/>
     
   </entry>
   
