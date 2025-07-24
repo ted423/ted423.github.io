@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-07-12T08:21:51.130Z</updated>
+  <updated>2025-07-24T12:26:51.394Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ubuntu 更新出现 xxx 的文件列表缺少最后结尾的换行符</title>
+    <link href="http://ted423.github.io/Issue/apt_file_issue/"/>
+    <id>http://ted423.github.io/Issue/apt_file_issue/</id>
+    <published>2025-07-24T11:13:09.992Z</published>
+    <updated>2025-07-24T12:26:51.394Z</updated>
+    
+    <content type="html"><![CDATA[<p>来来回回好几次了，主要是 <a href="/Linux/QNAP453Bmini">QNAP</a> 弄了个U盘做系统，所以文件应该就是坏了</p><p>主要是文件夹里的 <code>/var/lib/dpkg/info</code>不少文件损坏了。<br>其实 <code>/var/lib/dpkg/available</code> 也坏了</p><p>问题的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> cat libqt6wlshellintegration6\:amd64.list</span><br><span class="line">/.</span><br><span class="line">/tsR</span><br><span class="line">/usr/lir</span><br><span class="line">linu▒-gnux82_64</span><br><span class="line">▒usr+mcb/ظ6_6t-,inuxmgnu/licQv4SlSh&#125;|lIntmgra4ion.sgL6.4.2</span><br><span class="line">/Esr/shar%J/usr-&#123;hare/cJ/uSr/qhre/focoli&quot;Q▒6wlshulliftm▒ration6</span><br><span class="line">/mSv/sha2e/doC/libyt6ulchellintegR▒tion6/cop▒▒ight▒▒usz-lij/x86_4-,inux)▒nu/dibQ4vWlShellInvegrati/n.s▒.</span><br></pre></td></tr></table></figure><p>正常的内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/.</span><br><span class="line">/usr</span><br><span class="line">/usr/lib</span><br><span class="line">/usr/lib/x86_64-linux-gnu</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2</span><br><span class="line">/usr/share</span><br><span class="line">/usr/share/doc</span><br><span class="line">/usr/share/doc/libqt6widgets6t64</span><br><span class="line">/usr/share/doc/libqt6widgets6t64/copyright</span><br><span class="line">/usr/share/lintian</span><br><span class="line">/usr/share/lintian/overrides</span><br><span class="line">/usr/share/lintian/overrides/libqt6widgets6t64</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6</span><br><span class="line">/usr/share/doc/libqt6widgets6t64/changelog.Debian.gz</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 触发器 ci 文件包含位置指令语法</span><br><span class="line">在处理时有错误发生：</span><br><span class="line"> /var/cache/apt/archives/python3-ldb_2%3a2.8.0+samba4.19.5+dfsg-4ubuntu9.2_amd64.deb</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cat python3-ldb.postinst</span><br><span class="line">!!/b)f/sh</span><br><span class="line">w▒▒-l</span><br><span class="line"></span><br><span class="line">#AutgmaticA,Ly ydfedbY th[pYphon#</span><br><span class="line">if Mmqnd(-r pY3coUpmle!~/dEv/nu(lb26&amp;13 then</span><br><span class="line">                                                py3#ompele mx python3-ldc*a&#125;d66▒</span><br><span class="line">fi</span><br><span class="line">if co&#125;mand -v pyPy3▒oepide ./de6/nunl 2&gt;&amp;1;0theltypY3cnmpi,e-p p\thmf#-nlf:▒md64` || TrweJ&amp;i</span><br><span class="line">▒#`Wnd automatical|Y idtm$ sw#tion</span><br><span class="line"></span><br><span class="line"> cat python3-ldb.triggers</span><br><span class="line"># r)ggers ▒dFef$by Cemrezdebham/gunshmIbS!2:4.9.5+df3&#x27;-4Ubu.tu9</span><br><span class="line">actKvatE-noawaitldgondkg</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/var/lib/dpkg/info/python3-ldb.prerm: 2: uet,m: not found</span><br><span class="line">/var/lib/dpkg/info/python3-ldb.prerm: 8: Syntax error: &quot;(&quot; unexpected (expecting &quot;then&quot;)</span><br><span class="line">dpkg: 警告: 旧的 python3-ldb 软件包 pre-removal 脚本 子进程返回错误状态 2</span><br><span class="line">dpkg: 现在尝试使用新软件包所带的脚本...</span><br><span class="line">dpkg: ... 它看起来没有问题</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">已安装 samba-common 软件包 post-installation 脚本 子进程返回错误状态 100</span><br></pre></td></tr></table></figure><p>后来还是用这里的方法解决了，不过之后 info 目录里没啥东西了。<br><a href="https://bbs.deepin.org/zh/post/219544">https://bbs.deepin.org/zh/post/219544</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;来来回回好几次了，主要是 &lt;a href=&quot;/Linux/QNAP453Bmini&quot;&gt;QNAP&lt;/a&gt; 弄了个U盘做系统，所以文件应该就是坏了&lt;/p&gt;
+&lt;p&gt;主要是文件夹里的 &lt;code&gt;/var/lib/dpkg/info&lt;/code&gt;不少文件损坏了。&lt;br&gt;其实 &lt;co</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记书签方面的一些纠结</title>
@@ -608,30 +637,6 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>博客时间线的一些整理</title>
-    <link href="http://ted423.github.io/etc/readme/"/>
-    <id>http://ted423.github.io/etc/readme/</id>
-    <published>2025-03-15T08:10:46.789Z</published>
-    <updated>2025-03-15T08:30:52.470Z</updated>
-    
-    <content type="html"><![CDATA[<p>目测 Nextcloud 把文件 create time 干掉了，所以很多文章的时间全炸了。</p><p>然后我从 dropbox 找以前 farbox 的文件创建时间来维护这块，所以很多文章的时会变</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;目测 Nextcloud 把文件 create time 干掉了，所以很多文章的时间全炸了。&lt;/p&gt;
-&lt;p&gt;然后我从 dropbox 找以前 farbox 的文件创建时间来维护这块，所以很多文章的时会变&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="etc" scheme="http://ted423.github.io/categories/etc/"/>
-    
     
   </entry>
   
