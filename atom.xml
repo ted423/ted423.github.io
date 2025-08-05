@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-07-25T07:07:49.649Z</updated>
+  <updated>2025-08-05T07:32:40.269Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]Windows Update:0x80246017</title>
+    <link href="http://ted423.github.io/Issue/Windows%20Update/0x80246017/"/>
+    <id>http://ted423.github.io/Issue/Windows%20Update/0x80246017/</id>
+    <published>2025-08-05T07:24:42.238Z</published>
+    <updated>2025-08-05T07:32:40.269Z</updated>
+    
+    <content type="html"><![CDATA[<p>神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。</p><p>这个报错是新装的纯净系统之后出现的，服务里的<code>Background Intelligent service</code>是手动且没运行，改成自动并手动启动之后就正常了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。&lt;/p&gt;
+&lt;p&gt;这个报错是新装的纯净系统之后出现的，服务里的&lt;code&gt;Background Intelligent service&lt;/code&gt;是</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 11" scheme="http://ted423.github.io/tags/Windows-11/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
+    
+  </entry>
   
   <entry>
     <title>ubuntu 更新出现 xxx 的文件列表缺少最后结尾的换行符</title>
@@ -609,34 +640,6 @@
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
     <category term="Regedit" scheme="http://ted423.github.io/tags/Regedit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>journalctl -b -p err 查找错误用</title>
-    <link href="http://ted423.github.io/Linux/journalctl/"/>
-    <id>http://ted423.github.io/Linux/journalctl/</id>
-    <published>2025-03-17T03:33:23.451Z</published>
-    <updated>2025-04-07T07:08:25.258Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">journalctl -b -p err</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
     
   </entry>
   

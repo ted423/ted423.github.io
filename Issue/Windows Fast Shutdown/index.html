@@ -27,7 +27,7 @@
 <meta property="og:description" content="这个问题困扰了我好久，从windows 8.1 U1 退回到windows 7 结果仍旧关不了机，必须得点那一下。笔记本就没这种问题。一开始以为是笔记本上曾经的某优化软件帮了我，但在台式上装了金山卫士也无效(现在想想,可能是Windows优化大师) 个人处理方法 打开注册表管理器，找到 1HKEY_CURRENT_USER\Control Panel\Desktop\ 新建一个AutoEndTas">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-02-25T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-23T08:19:58.638Z">
+<meta property="article:modified_time" content="2025-07-28T07:23:22.423Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Windows 11">
@@ -162,7 +162,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            598
+                            608
                         
                         字
                     </li>
@@ -189,7 +189,7 @@
 <p>找到<code>WaitToKillAppTimeout</code>(找不到就新建，类型应该是同上)<br>数值改小即可</p>
 <p><del>不过笔记本的这个值没改过，我想大概是有软件直接取消了阻止Windows 关机这个功能吧。</del></p>
 <hr>
-<p><del>目前看来，应该是两个值需要同时设置才行(Windows 10 1709)</del>  --<time>2018-02-26</time></p>
+<p>目前看来，应该是两个值需要同时设置才行(Windows 10 1709) --<time>2018-02-26</time>(加了删除线又取消了)</p>
 <p>Windows Update 以后会偷偷再把值给取消掉 --<time>2019-07-03</time></p>
 <p><del>Win 11</del>只要<code>AutoEndTasks</code>就可以，重启后生效 --<time datetime="2025-01-22">2025-01-22</time></p>
 <p><code>AutoEndTasks</code>是功能值，<code>WaitToKillAppTimeout</code>是关闭进程的时间(ms)，没有前者，后者应该不生效 --<time datetime="2025-04-23">2025-04-23</time></p>
@@ -214,7 +214,7 @@
                     <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>, <a class="tag-none-link" href="/tags/Windows-11/" rel="tag">Windows 11</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-04-23T08:19:58.638Z" itemprop="dateModified">最后编辑：2025-04-23</time>
+                    <time datetime="2025-07-28T07:23:22.423Z" itemprop="dateModified">最后编辑：2025-07-28</time>
                 </div>
             </div>
         </footer>
@@ -269,7 +269,7 @@
                 文章
             </span>
             <span class="count">
-                424
+                425
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -294,7 +294,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">52</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">107</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">107</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">3</span></li></ul>
   </aside>
 
 
