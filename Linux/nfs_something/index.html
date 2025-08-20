@@ -7,8 +7,8 @@
     <link rel="icon" href="/img/favicon.svg">
   
   
-  <title>文章归档: 2025 | 个人小站</title>
-  <link rel="canonical" href="http://ted423.github.io/archives/2025/index.html">
+  <title>NFS 相关 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Linux/nfs_something/">
   <meta name="author" content="ted423" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -17,17 +17,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="软件, 资料, 动画, 漫画, 游戏, ted423" />
+    <meta name="keywords" content="Linux, Notes, Software" />
   
-  <meta name="description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文章归档: 2025">
-<meta property="og:url" content="http://ted423.github.io/archives/2025/index.html">
+  <meta name="description" content="只考虑 NFSv4，NFSv4 强制要求 TCP  参考资料https:&#x2F;&#x2F;docs.aws.amazon.com&#x2F;efs&#x2F;latest&#x2F;ug&#x2F;mounting-fs-nfs-mount-settings.html fsc本地缓存，需要另一个软件支持 hard行为：当 NFS 服务器不可达时，客户端会无限期不断重试 I&#x2F;O 请求，直到服务器恢复正常为止。程序会“停住”不动，等待恢复后继续">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NFS 相关">
+<meta property="og:url" content="http://ted423.github.io/Linux/nfs_something/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="这个网站将记录我的成果，我的收集，我觉得有价值的一切事物">
+<meta property="og:description" content="只考虑 NFSv4，NFSv4 强制要求 TCP  参考资料https:&#x2F;&#x2F;docs.aws.amazon.com&#x2F;efs&#x2F;latest&#x2F;ug&#x2F;mounting-fs-nfs-mount-settings.html fsc本地缓存，需要另一个软件支持 hard行为：当 NFS 服务器不可达时，客户端会无限期不断重试 I&#x2F;O 请求，直到服务器恢复正常为止。程序会“停住”不动，等待恢复后继续">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-19T07:07:42.440Z">
+<meta property="article:modified_time" content="2025-08-19T08:50:55.447Z">
 <meta property="article:author" content="ted423">
-<meta property="article:tag" content="软件, 资料, 动画, 漫画, 游戏, ted423">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="Software">
+<meta property="article:tag" content="Notes">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
@@ -139,281 +143,96 @@
 
         
 
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Linux/nfs_something/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
             
-<style>
-  .post-meta time{color:#00a7e0}
-  @media (max-width:767px){.posts-collapse{margin:0 20px}
-  .posts-collapse .post-meta,
-  .posts-collapse .post-title{display:block;width:auto;text-align:left}}
-  .posts-collapse{position:relative}
-  .posts-collapse::after{content:" ";position:absolute;top:20px;left:0;margin-left:-2px;width:4px;height:calc(100% - 35px);background:#f5f5f5;z-index:-1}
-  @media (max-width:991px){.posts-collapse{margin:0 20px}}
-  .posts-collapse .collection-title{position:relative}
-  .posts-collapse .collection-title h1,
-  .posts-collapse .collection-title h2{margin-left:20px}
-  .posts-collapse .collection-title small{color:#bbb;margin-left:5px}
-  .posts-collapse .collection-title::before{content:" ";position:absolute;left:0;top:50%;margin-left:-4px;margin-top:-4px;width:8px;height:8px;background:#bbb;border-radius:50%}
-  .posts-collapse .post-header{position:relative;transition-duration:.2s;transition-timing-function:ease-in-out;transition-delay:0s;transition-property:border}
-  .posts-collapse .post-header::before{content:" ";position:absolute;left:0;top:12px;width:6px;height:6px;margin-left:-4px;background:#bbb;border-radius:50%;border:1px solid #fff;transition: all .3s ease-in-out}
-  .posts-collapse .post-header:hover{border-bottom-color:#666}
-  .posts-collapse .post-header:hover::before{background:#222}
-  .posts-collapse .post-meta{position:absolute;font-size:12px;left:20px;top:5px}
-  .posts-collapse .kr-comments-count{display:none}
-  .posts-collapse .post-title{margin-left:70px;font-size:16px;font-weight:400;line-height:inherit}
-  .posts-collapse .post-title::after{margin-left:3px;opacity:.6}
-  .posts-collapse .post-title a{color:#666;border-bottom:none}
-</style>
-
-  <article>
-      <div class="kratos-hentry kratos-page-inner clearfix">
-          <header class="kratos-page-header">
-            <h1 class="kratos-page-title text-center" itemprop="name headline">文章归档</h1>
-          </header>
-          <div class="kratos-page-content kr-archive">
-            <div id="archives">
-              <div class="post-block archive post" style="margin-left: 2em;">
-                <h3 class="archive-page-counter">当前共有 425 篇文章 (゜-゜)つロ 干杯~</h3>
-                <div class="posts-collapse">
-                  
-                  
-                    
-                    
-                      <!-- 没遇到Title的会被自动忽略年份，即使并不一致 -->
-                      
-                      <div class="collection-title">
-                        <a href="/archives/2025/"><h2 class="archive-year">2025</h2></a>
-                      </div>
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Linux/nfs_something/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">NFS 相关</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-08-19T07:07:42.440Z">
-                              08-19
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Document/LDAP/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">LDAP & OpenLDAP</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-08-14T12:18:54.009Z">
-                              08-14
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Issue/Windows%20Update/0x80246017/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">[问题处理]Windows Update:0x80246017</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-08-05T07:24:42.238Z">
-                              08-05
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Issue/apt_file_issue/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">ubuntu 更新出现 xxx 的文件列表缺少最后结尾的换行符</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-07-24T13:11:53.957Z">
-                              07-24
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Software/Notes/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">笔记书签方面的一些纠结</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-07-10T02:22:17.521Z">
-                              07-10
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Document/Acrive%20Directry/ADPort_Sync/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">AD相关 - 端口以及同步</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-07-04T02:55:43.245Z">
-                              07-04
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Software/Docker/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">Docker 笔记</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-07-03T12:01:10.957Z">
-                              07-03
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/etc/Milk/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">牛奶笔记</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-07-02T03:41:07.455Z">
-                              07-02
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Software/k8s/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">K8S(Kubernetes) 笔记</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-07-01T07:32:04.759Z">
-                              07-01
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/Hardware/noHKC/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">不要购买 HKC 的显示器</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2025-06-19T03:18:03.710Z">
-                              06-19
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
+                <h1 class="kratos-page-title text-center" itemprop="name headline">NFS 相关</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2025-08-19T07:07:42.440Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-08-19</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            687
+                        
+                        字
+                    </li>
+                
+                
+                    <li>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </li>
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+            <hr />
+            <div itemprop="articleBody"><p>只考虑 NFSv4，NFSv4 强制要求 TCP </p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a target="_blank" rel="noopener" href="https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html">https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html</a></p>
+<h1 id="fsc"><a href="#fsc" class="headerlink" title="fsc"></a>fsc</h1><p>本地缓存，需要另一个软件支持</p>
+<h1 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h1><p>行为：当 NFS 服务器不可达时，客户端会无限期不断重试 I&#x2F;O 请求，直到服务器恢复正常为止。程序会“停住”不动，等待恢复后继续正常运行。</p>
+<p><del>常与 intr 或其替代选项一起使用，使挂载操作可中断（尤其在老内核中），避免客户端彻底卡死。</del>(但是 intr 在 内核 2.6.25 开始废弃，2008 年，RHEL6 开始)</p>
+<p>通常 如果 nfs 挂载的是重要数据盘，一般是 hard。<strong>硬挂载将保持数据一致性</strong></p>
+<h1 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h1><p>客户端在发起 I&#x2F;O 请求后，如果在一定重试次数或超时时间内未收到服务器响应，就会返回错误给应用程序，而不是一直等下去。</p>
+<p>可设置 timeo（超时时间），retrans（最大重发次数），让挂载更具灵活性</p>
+<p>一般建议是只读挂载才使用软挂载。</p>
+<h1 id="timeo-retrans"><a href="#timeo-retrans" class="headerlink" title="timeo &amp; retrans"></a>timeo &amp; retrans</h1><p>硬挂载一般使用默认值就可以，软挂载特别是 timeo 可能需要设短一点，否则会产生超长时间的卡顿后才报错。</p>
+<p>而硬挂载，因为会不断重试，本身就会一直卡顿。</p>
+<p>另外需要注意的是，早期 NFS 是使用 UDP 的，很多教程会与混淆，而在 NFSv4 中，只是用 TCP，需要考虑 TCP 自身的 timeout 情况。</p>
+<h1 id="NFS-Server-命令"><a href="#NFS-Server-命令" class="headerlink" title="NFS Server 命令"></a>NFS Server 命令</h1><p><code>exportfs -ra</code> nfs server 刷新配置而不用重启</p>
+</div>
+        </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
                 </div>
-              </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Notes/" rel="tag">Notes</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2025-08-19T08:50:55.447Z" itemprop="dateModified">最后编辑：2025-08-19</time>
+                </div>
             </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" LDAP &amp; OpenLDAP" href="/Document/LDAP/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Linux/nfs_something/" data-full-path="http://ted423.github.io/Linux/nfs_something/"></div>
         </div>
-      </div>
-      
-        <div class='text-center pagination'>
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2025/page/2/">2</a><a class="page-number" href="/archives/2025/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2025/page/13/">13</a><a class="extend next" rel="next" href="/archives/2025/page/2/"><i class="fa fa-angle-right"></i></a>
-        </div>
-      
-  </article>
-
+    
+</article>
 
         
 
