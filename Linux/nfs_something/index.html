@@ -27,7 +27,7 @@
 <meta property="og:description" content="只考虑 NFSv4，NFSv4 强制要求 TCP  参考资料https:&#x2F;&#x2F;docs.aws.amazon.com&#x2F;efs&#x2F;latest&#x2F;ug&#x2F;mounting-fs-nfs-mount-settings.html fsc本地缓存，需要另一个软件支持 hard行为：当 NFS 服务器不可达时，客户端会无限期不断重试 I&#x2F;O 请求，直到服务器恢复正常为止。程序会“停住”不动，等待恢复后继续">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-19T07:07:42.440Z">
-<meta property="article:modified_time" content="2025-09-03T10:19:45.076Z">
+<meta property="article:modified_time" content="2025-09-04T04:23:41.085Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Software">
@@ -160,7 +160,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            820
+                            973
                         
                         字
                     </li>
@@ -188,7 +188,8 @@
 <h1 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h1><p>客户端在发起 I&#x2F;O 请求后，如果在一定重试次数或超时时间内未收到服务器响应，就会返回错误给应用程序，而不是一直等下去。</p>
 <p>可设置 timeo（超时时间），retrans（最大重发次数），让挂载更具灵活性</p>
 <p>一般建议是只读挂载才使用软挂载。</p>
-<h1 id="async-sync"><a href="#async-sync" class="headerlink" title="async &amp;&amp; sync"></a>async &amp;&amp; sync</h1><p>async 会先进内存，有比较好的性能，但是断电会有问题，sync 不进内存，但是性能会有比较严重的问题。Gemini 是说 zfs 有写缓存的情况下强烈建议使用 sync。</p>
+<h1 id="async-sync"><a href="#async-sync" class="headerlink" title="async &amp; sync"></a>async &amp; sync</h1><p>async 会先进内存，有比较好的性能，但是断电会有问题，sync 不进内存，但是性能会有比较严重的问题。Gemini 是说 zfs 有写缓存的情况下强烈建议使用 sync。</p>
+<p><strong>这个参数同时在客户端和服务端都可以配置，且只影响被配置的机子，async 在客户端配置则只影响客户端是否落盘</strong></p>
 <h1 id="timeo-retrans"><a href="#timeo-retrans" class="headerlink" title="timeo &amp; retrans"></a>timeo &amp; retrans</h1><p>硬挂载一般使用默认值就可以，软挂载特别是 timeo 可能需要设短一点，否则会产生超长时间的卡顿后才报错。</p>
 <p>而硬挂载，因为会不断重试，本身就会一直卡顿。</p>
 <p>另外需要注意的是，早期 NFS 是使用 UDP 的，很多教程会与混淆，而在 NFSv4 中，只是用 TCP，需要考虑 TCP 自身的 timeout 情况。</p>
@@ -196,6 +197,7 @@
 <li><code>exportfs -ra</code> nfs server 刷新配置而不用重启</li>
 <li><code>exportfs -v</code> 查看客户端挂载参数</li>
 </ul>
+<h1 id="NFS-Server-端参数"><a href="#NFS-Server-端参数" class="headerlink" title="NFS Server 端参数"></a>NFS Server 端参数</h1><h1 id="wdelay-no-wdelay"><a href="#wdelay-no-wdelay" class="headerlink" title="wdelay &amp; no_wdelay"></a>wdelay &amp; no_wdelay</h1><p>配置 async 的时候没法使用 no_wdelay，高并发写入时不建议开 wdelay，no_wdelay建议配合 sync 使用</p>
 </div>
         </div>
         
@@ -216,7 +218,7 @@
                     <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Notes/" rel="tag">Notes</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-09-03T10:19:45.076Z" itemprop="dateModified">最后编辑：2025-09-03</time>
+                    <time datetime="2025-09-04T04:23:41.085Z" itemprop="dateModified">最后编辑：2025-09-04</time>
                 </div>
             </div>
         </footer>
@@ -271,7 +273,7 @@
                 文章
             </span>
             <span class="count">
-                427
+                426
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -287,7 +289,7 @@
                 标签
             </span>
             <span class="count">
-                158
+                157
             </span>
         </a>
     </div>
@@ -296,7 +298,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">106</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">3</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">41</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">105</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">3</span></li></ul>
   </aside>
 
 
