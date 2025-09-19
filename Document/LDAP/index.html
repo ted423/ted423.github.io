@@ -26,8 +26,8 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。 目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-09-11T13:32:04.598Z">
-<meta property="article:modified_time" content="2025-09-13T06:38:21.234Z">
+<meta property="article:published_time" content="2025-09-13T06:38:50.287Z">
+<meta property="article:modified_time" content="2025-09-19T02:10:47.526Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Document">
@@ -153,7 +153,7 @@
                 <h1 class="kratos-page-title text-center" itemprop="name headline">LDAP & OpenLDAP</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2025-09-11T13:32:04.598Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-09-11</time></li>
+                <li><time datetime="2025-09-13T06:38:50.287Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-09-13</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -162,7 +162,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~15.45K
+                            ~15.57K
                         
                         字
                     </li>
@@ -181,7 +181,7 @@
             
             
                 <div class="kratos-post-inner-toc toc-div-class" >
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#phpLDAPadmin"><span class="toc-number">1.</span> <span class="toc-text">phpLDAPadmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">名词解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenLDAP-HDB-%E4%B8%8E-MDB-%E5%90%8E%E7%AB%AF%E5%AF%B9%E6%AF%94"><span class="toc-number">2.1.</span> <span class="toc-text">OpenLDAP HDB 与 MDB 后端对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distinguished-Name-DN"><span class="toc-number">2.2.</span> <span class="toc-text">Distinguished Name (DN)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rootdn"><span class="toc-number">2.3.</span> <span class="toc-text">rootdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OU-Organizational-Unit"><span class="toc-number">2.4.</span> <span class="toc-text">OU(Organizational Unit)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDIF-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.5.</span> <span class="toc-text">LDIF 文件格式介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE"><span class="toc-number">2.6.</span> <span class="toc-text">动态配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E7%9A%84-ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">OpenLDAP 的 ACL（访问控制列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F"><span class="toc-number">3.1.</span> <span class="toc-text">ACL 加载顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-number">3.2.</span> <span class="toc-text">ACL 语法详解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">OpenLDAP 权限验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E9%9B%86%E6%88%90"><span class="toc-number">5.</span> <span class="toc-text">LDAP 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OS-%E9%9B%86%E6%88%90"><span class="toc-number">5.1.</span> <span class="toc-text">OS 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSSD-%E6%88%96-NSCD"><span class="toc-number">5.1.1.</span> <span class="toc-text">SSSD 或 NSCD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">5.1.2.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE"><span class="toc-number">5.1.3.</span> <span class="toc-text">集成配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bindn"><span class="toc-number">5.2.</span> <span class="toc-text">bindn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base-DN"><span class="toc-number">5.3.</span> <span class="toc-text">Base DN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">5.4.</span> <span class="toc-text">LDAP 过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">5.4.1.</span> <span class="toc-text">LDAP 过滤器的基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-AD-%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7%E5%8F%8A%E8%BF%87%E6%BB%A4%E5%99%A8%E6%9E%84%E5%BB%BA%E5%9D%97"><span class="toc-number">5.4.2.</span> <span class="toc-text">常用的 AD 用户属性及过滤器构建块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-LDAP-%E7%94%A8%E6%88%B7%E8%BF%87%E6%BB%A4%E5%99%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">5.4.3.</span> <span class="toc-text">常见的 LDAP 用户过滤器示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#etc"><span class="toc-number">5.4.4.</span> <span class="toc-text">etc</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#phpLDAPadmin"><span class="toc-number">1.</span> <span class="toc-text">phpLDAPadmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">名词解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenLDAP-HDB-%E4%B8%8E-MDB-%E5%90%8E%E7%AB%AF%E5%AF%B9%E6%AF%94"><span class="toc-number">2.1.</span> <span class="toc-text">OpenLDAP HDB 与 MDB 后端对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distinguished-Name-DN"><span class="toc-number">2.2.</span> <span class="toc-text">Distinguished Name (DN)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rootdn"><span class="toc-number">2.3.</span> <span class="toc-text">rootdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OU-Organizational-Unit"><span class="toc-number">2.4.</span> <span class="toc-text">OU(Organizational Unit)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDIF-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.5.</span> <span class="toc-text">LDIF 文件格式介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE"><span class="toc-number">2.6.</span> <span class="toc-text">动态配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E9%9B%86%E6%88%90"><span class="toc-number">3.</span> <span class="toc-text">LDAP 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OS-%E9%9B%86%E6%88%90"><span class="toc-number">3.1.</span> <span class="toc-text">OS 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSSD-%E6%88%96-NSCD"><span class="toc-number">3.1.1.</span> <span class="toc-text">SSSD 或 NSCD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.1.2.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.3.</span> <span class="toc-text">集成配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bindn"><span class="toc-number">3.2.</span> <span class="toc-text">bindn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base-DN"><span class="toc-number">3.3.</span> <span class="toc-text">Base DN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">3.4.</span> <span class="toc-text">LDAP 过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">3.4.1.</span> <span class="toc-text">LDAP 过滤器的基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-AD-%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7%E5%8F%8A%E8%BF%87%E6%BB%A4%E5%99%A8%E6%9E%84%E5%BB%BA%E5%9D%97"><span class="toc-number">3.4.2.</span> <span class="toc-text">常用的 AD 用户属性及过滤器构建块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-LDAP-%E7%94%A8%E6%88%B7%E8%BF%87%E6%BB%A4%E5%99%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.4.3.</span> <span class="toc-text">常见的 LDAP 用户过滤器示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E7%9A%84-ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">OpenLDAP 的 ACL（访问控制列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F"><span class="toc-number">4.1.</span> <span class="toc-text">ACL 加载顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-number">4.2.</span> <span class="toc-text">ACL 语法详解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">5.</span> <span class="toc-text">OpenLDAP 权限验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#etc"><span class="toc-number">5.0.1.</span> <span class="toc-text">etc</span></a></li></ol></li></ol></li></ol>
                 </div>
             
             <hr />
@@ -257,6 +257,59 @@
 <p>可以使用标准的 LDAP 命令行工具或各种编程语言的 LDAP 库来编写脚本，以编程方式进行配置更改和管理，这比解析和修改文本文件更可靠、更强大。</p>
 <p><strong>版本控制和审计</strong></p>
 <p>虽然 LDAP 本身不直接提供版本控制，但结合 LDAP 的日志记录和备份策略，可以更容易地跟踪配置更改历史。一些第三方工具也可以辅助实现。</p>
+<h1 id="LDAP-集成"><a href="#LDAP-集成" class="headerlink" title="LDAP 集成"></a>LDAP 集成</h1><p>主要有两种配置，一个是对 AD 的集成，还有一个则是对 OpenLDAP 的集成。</p>
+<p>需要注意的是，AD 虽然底层也符合标准，但跟 OpenLDAP 的各项属性有很大区别，很多服务会特别的专门适配 AD，但有些会以 OpenLDAP 为标准，连接 AD 会需要自行修改配置项。</p>
+<h2 id="OS-集成"><a href="#OS-集成" class="headerlink" title="OS 集成"></a>OS 集成</h2><h3 id="SSSD-或-NSCD"><a href="#SSSD-或-NSCD" class="headerlink" title="SSSD 或 NSCD"></a>SSSD 或 NSCD</h3><p>sssd 会更现代一些，<del>不过强制 ldaps</del>(ubuntu 特性)，安全以及复杂。如果各种 ssl 苦手且目标环境做了物理隔离，建议 nscd。(不过 sssd 战未来)，请务必注意 NSCD 会跟现代的 systemd-resolved 的缓存机制产生冲突和不可预知的行为。遇到问题可能需要<code>sudo nscd -i hosts</code> 清理一下，即便不用636，sssd 也会开启 START_TLS 。</p>
+<p>Ubuntu（尤其是 20.04&#x2F;22.04 及以后的版本）在打包 SSSD 时，通常会附带 更严格的默认安全策略。这可能导致你看到“ldap_id_use_start_tls &#x3D; false 没有效果”。</p>
+<p>sssd.conf 里配置 <code>ldap_auth_disable_tls_never_use_in_production = true</code>可以不开启 tls，这个配置可能跟 sssd 的版本有关，已知 Ubuntu 22 LTS 里是需要开启的，Redhat7系列似乎不用。</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>debian 是有一个 ldapd，<a target="_blank" rel="noopener" href="https://wiki.debian.org/LDAP/PAM">https://wiki.debian.org/LDAP/PAM</a> </p>
+<p>ubuntu 也有 ldapd，但是没有存在感， ubuntu 所有的教程还是基于非 ldapd 的，甚至 AI 都不知道有这个包。</p>
+<h3 id="集成配置"><a href="#集成配置" class="headerlink" title="集成配置"></a>集成配置</h3><p>deb 系是 sudo pam-auth-update，rpm 系是有 <code>authconfig --enableldap --enableldapauth</code>。后者看 redhat 文档就好。</p>
+<p>PS，<code>authconfig</code>中 sssd 和 ldap 是不同的，sssd 的参数是<code>--enablesssdauth --enablesssd</code></p>
+<p>PS2，<code>authconfig</code>默认启用 ldap 只会启用 nslcd，不会启用 nscd。</p>
+<p>PS3，<code>authconfig</code>在有 sssd 的情况下可能<code>--enableldap --enableldapauth</code>会默认启用sssd。</p>
+<p>PS4，默认的 sssd config 可能本身就有问题，你直接启用可能是用不了的，主要是 service 那块没包括 ldap pam 那些</p>
+<h2 id="bindn"><a href="#bindn" class="headerlink" title="bindn"></a>bindn</h2><p>通常 AD 下使用具有域控管理员权限的账号，不过出于安全性考虑可以降低权限（普通 domain user 没有读取其他用户邮箱的权限），目前都使用的管理员权限的账号做bind</p>
+<p>OpenLDAP 中则一般使用 rootdn (也可以不使用，不过需要创建具有特殊权限的账号)</p>
+<h2 id="Base-DN"><a href="#Base-DN" class="headerlink" title="Base DN"></a>Base DN</h2><p>定义：LDAP 搜索操作（例如 ldapsearch）使用的“起始 DN”，决定了查询范围的顶端节点。</p>
+<p>格式：通常为域组件（DC，Domain Component），如 dc&#x3D;example,dc&#x3D;com；也可为组织单元（OU，如 ou&#x3D;Users,dc&#x3D;example,dc&#x3D;com）或通用名称（CN，如 cn&#x3D;Administrator,cn&#x3D;Users,dc&#x3D;example,dc&#x3D;com）。 </p>
+<p><strong>在客户端或应用配置中填入 Base DN 后，后续的搜索操作会从该节点及其子树进行。例如，若 Base DN 为 ou&#x3D;Users,dc&#x3D;example,dc&#x3D;com，那么只有位于该 OU 下的用户才会被索引。</strong></p>
+<p>上面加粗了，因为实际上大多会使用 Users 或 People ,主要是查找用户</p>
+<p>不过你需要注意下有些服务是不需要同步 LDAP 组的，例如 dokuwiki 里就没有设basedn，他会让你设用户过滤和组的过滤条件。</p>
+<h2 id="LDAP-过滤器"><a href="#LDAP-过滤器" class="headerlink" title="LDAP 过滤器"></a>LDAP 过滤器</h2><p>LDAP 过滤器 (LDAP Filter) 在与 LDAP&#x2F;AD 集成的应用程序（如 DokuWiki 的 authad 插件 或 Snipe-IT）中扮演着至关重要的角色。它定义了<strong>如何查找和验证用户</strong>。</p>
+<p>简单来说，LDAP 过滤器就像是你在 Active Directory 这个大数据库里进行搜索时使用的<strong>搜索条件</strong>。你需要告诉应用程序：当用户尝试登录时，应该使用哪些标准来找到 AD 中对应的用户对象，并确认这个对象是有效的、允许登录的。</p>
+<p>一个可供参考的问题见 <a target="_blank" rel="noopener" href="https://github.com/witersen/SvnAdminV2.0/issues/51">Issue</a></p>
+<h3 id="LDAP-过滤器的基本语法"><a href="#LDAP-过滤器的基本语法" class="headerlink" title="LDAP 过滤器的基本语法"></a>LDAP 过滤器的基本语法</h3><ul>
+<li>使用括号 <code>()</code> 包裹整个过滤器。</li>
+<li>基本条件通常是 <code>(属性名=值)</code> 的形式。</li>
+<li>可以使用逻辑运算符将多个条件组合起来：<br>*   <strong>&amp;</strong>：与 (AND) - 所有条件都必须满足。格式：<code>(&amp;(条件1)(条件2)...)</code><br>*   <strong>|</strong>：或 (OR) - 至少一个条件满足。格式：<code>(|(条件1)(条件2)...)</code><br>*   <strong>!</strong>：非 (NOT) - 条件不满足。格式：<code>(!(条件))</code></li>
+<li>值可以是具体的值，也可以是通配符 <code>*</code>，或者是一个<strong>占位符</strong>，应用程序会在运行时将其替换为用户输入的内容（通常是用户名）。</li>
+</ul>
+<h3 id="常用的-AD-用户属性及过滤器构建块"><a href="#常用的-AD-用户属性及过滤器构建块" class="headerlink" title="常用的 AD 用户属性及过滤器构建块"></a>常用的 AD 用户属性及过滤器构建块</h3><ul>
+<li><code>objectCategory=person</code>：查找对象类别为 &quot;person&quot; 的对象（通常包含用户）。</li>
+<li><code>objectClass=user</code>：查找对象类别为 &quot;user&quot; 的对象。通常与 <code>objectCategory=person</code> 一起使用，更精确地定位用户。</li>
+<li><code>sAMAccountName</code>：用户的登录名（通常是 Windows 2000 之前的短名称，例如 <code>johndoe</code>）。这是最常用的登录名字段。</li>
+<li><code>userPrincipalName</code> (UPN)：用户的邮箱风格登录名（例如 <code>johndoe@yourdomain.local</code>）。</li>
+<li><code>mail</code>：用户的电子邮件地址。有时也用作登录名。</li>
+<li><code>userAccountControl</code>：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： <code>(!(userAccountControl:1.2.840.113556.1.4.803:=2))</code>。这里的 <code>2</code> 代表 <code>ADS_UF_ACCOUNTDISABLE</code> 标志位，<code>:1.2.840.113556.1.4.803:=</code> 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
+<li><code>memberOf</code>：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 <code>CN=AppUsers,OU=Groups,DC=yourdomain,DC=local</code>。</li>
+</ul>
+<h3 id="常见的-LDAP-用户过滤器示例"><a href="#常见的-LDAP-用户过滤器示例" class="headerlink" title="常见的 LDAP 用户过滤器示例"></a>常见的 LDAP 用户过滤器示例</h3><p><strong>注意：</strong> 以下示例使用占位符 <code>&#123;username&#125;</code> 代表用户输入的用户名。<strong>请务必查阅你所使用的应用程序（如 DokuWiki authad 插件）的文档，确认它实际使用的占位符是什么</strong>，可能是 <code>@USER@</code>, <code>%user%</code>, <code>$user</code> 等。</p>
+<p>最基本：使用 sAMAccountName 查找未禁用的用户 (推荐作为起点) </p>
+<p>下面最外层的括号或许需要取消</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectCategory=person)(objectClass=user)(sAMAccountName=&#123;username&#125;)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>&amp;</code>: 所有条件都需满足。</li>
+<li><code>objectCategory=person</code> 和 <code>objectClass=user</code>: 确保找到的是用户对象。</li>
+<li><code>sAMAccountName=&#123;username&#125;</code>: 用户的 <code>sAMAccountName</code> 属性必须等于登录时输入的用户名。</li>
+<li><code>(!(userAccountControl:1.2.840.113556.1.4.803:=2))</code>: 确保账户未被禁用。(部分服务会同步已禁用账号，然后在本地显示账号禁用，如果不需要可以直接通过过滤器排除掉)</li>
+</ul>
+<p><strong>OpenLDAP</strong><br>因为大部分都会以 OpenLDAP 为主，所以基本没什么好写的，你只要注意不要因为自己设的不同名字的 OU 被坑了就行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectClass=posixGroup)(|(memberUid=%&#123;uid&#125;)(gidNumber=%&#123;gid&#125;)))</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>objectCategory=posixGroup</code>: 确保找到的是组对象。</li>
+<li><code>|(memberUid=%&#123;uid&#125;)(gidNumber=%&#123;gid&#125;)</code>: 用户主组是gidNumber，memberUid是次组</li>
+</ul>
 <h1 id="OpenLDAP-的-ACL（访问控制列表）"><a href="#OpenLDAP-的-ACL（访问控制列表）" class="headerlink" title="OpenLDAP 的 ACL（访问控制列表）"></a>OpenLDAP 的 ACL（访问控制列表）</h1><p>OpenLDAP 中的访问控制列表 (ACL) 是一套强大的规则，用于定义谁 (who) 可以对目录中的哪些数据 (what) 执行何种操作 (access level)。正确配置 ACL 是保护 LDAP 目录安全、确保数据完整性和实现细粒度权限管理的关键。</p>
 <p>OpenLDAP 的 ACL 规则遵循一个基本结构：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">access to &lt;what&gt;</span><br><span class="line">    [by &lt;who&gt; &lt;access_level&gt; [&lt;control&gt;]]+</span><br></pre></td></tr></table></figure>
@@ -374,58 +427,6 @@
 <li>通常系统会在 olcAccess 中授予该身份读写权限。</li>
 </ul>
 <p>不过有遇到部分执行不了的情况，最后是修改<code>/etc/ldap/slapd.d</code>里解决的</p>
-<h1 id="LDAP-集成"><a href="#LDAP-集成" class="headerlink" title="LDAP 集成"></a>LDAP 集成</h1><p>主要有两种配置，一个是对 AD 的集成，还有一个则是对 OpenLDAP 的集成。</p>
-<p>需要注意的是，AD 虽然底层也符合标准，但跟 OpenLDAP 的各项属性有很大区别，很多服务会特别的专门适配 AD，但有些会以 OpenLDAP 为标准，连接 AD 会需要自行修改配置项。</p>
-<h2 id="OS-集成"><a href="#OS-集成" class="headerlink" title="OS 集成"></a>OS 集成</h2><h3 id="SSSD-或-NSCD"><a href="#SSSD-或-NSCD" class="headerlink" title="SSSD 或 NSCD"></a>SSSD 或 NSCD</h3><p>sssd 会更现代一些，不过强制 ldaps，安全以及复杂。如果各种 ssl 苦手且目标环境做了物理隔离，建议 nscd。(不过 sssd 战未来)，请务必注意 NSCD 会跟现代的 systemd-resolved 的缓存机制产生冲突和不可预知的行为。遇到问题可能需要<code>sudo nscd -i hosts</code> 清理一下，即便不用636，sssd 也会开启 START_TLS 。</p>
-<p>sssd.conf 里配置 <code>ldap_auth_disable_tls_never_use_in_production = true</code>可以不开启 tls，这个配置可能跟 sssd 的版本有关，已知 Ubuntu 22 LTS 里是需要开启的，Redhat7系列似乎不用。</p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>debian 是有一个 ldapd，<a target="_blank" rel="noopener" href="https://wiki.debian.org/LDAP/PAM">https://wiki.debian.org/LDAP/PAM</a> </p>
-<p>ubuntu 也有 ldapd，但是没有存在感， ubuntu 所有的教程还是基于非 ldapd 的，甚至 AI 都不知道有这个包。</p>
-<h3 id="集成配置"><a href="#集成配置" class="headerlink" title="集成配置"></a>集成配置</h3><p>deb 系是 sudo pam-auth-update，rpm 系是有 <code>authconfig --enableldap --enableldapauth</code>。后者看 redhat 文档就好。</p>
-<p>PS，<code>authconfig</code>中 sssd 和 ldap 是不同的，sssd 的参数是<code>--enablesssdauth --enablesssd</code></p>
-<p>PS2，<code>authconfig</code>默认启用 ldap 只会启用 nslcd，不会启用 nscd。</p>
-<p>PS3，<code>authconfig</code>在有 sssd 的情况下可能<code>--enableldap --enableldapauth</code>会默认启用sssd。</p>
-<p>PS4，默认的 sssd config 可能本身就有问题，你直接启用可能是用不了的，主要是 service 那块没包括 ldap pam 那些</p>
-<h2 id="bindn"><a href="#bindn" class="headerlink" title="bindn"></a>bindn</h2><p>通常 AD 下使用具有域控管理员权限的账号，不过出于安全性考虑可以降低权限（普通 domain user 没有读取其他用户邮箱的权限），目前都使用的管理员权限的账号做bind</p>
-<p>OpenLDAP 中则一般使用 rootdn (也可以不使用，不过需要创建具有特殊权限的账号)</p>
-<h2 id="Base-DN"><a href="#Base-DN" class="headerlink" title="Base DN"></a>Base DN</h2><p>定义：LDAP 搜索操作（例如 ldapsearch）使用的“起始 DN”，决定了查询范围的顶端节点。</p>
-<p>格式：通常为域组件（DC，Domain Component），如 dc&#x3D;example,dc&#x3D;com；也可为组织单元（OU，如 ou&#x3D;Users,dc&#x3D;example,dc&#x3D;com）或通用名称（CN，如 cn&#x3D;Administrator,cn&#x3D;Users,dc&#x3D;example,dc&#x3D;com）。 </p>
-<p><strong>在客户端或应用配置中填入 Base DN 后，后续的搜索操作会从该节点及其子树进行。例如，若 Base DN 为 ou&#x3D;Users,dc&#x3D;example,dc&#x3D;com，那么只有位于该 OU 下的用户才会被索引。</strong></p>
-<p>上面加粗了，因为实际上大多会使用 Users 或 People ,主要是查找用户</p>
-<p>不过你需要注意下有些服务是不需要同步 LDAP 组的，例如 dokuwiki 里就没有设basedn，他会让你设用户过滤和组的过滤条件。</p>
-<h2 id="LDAP-过滤器"><a href="#LDAP-过滤器" class="headerlink" title="LDAP 过滤器"></a>LDAP 过滤器</h2><p>LDAP 过滤器 (LDAP Filter) 在与 LDAP&#x2F;AD 集成的应用程序（如 DokuWiki 的 authad 插件 或 Snipe-IT）中扮演着至关重要的角色。它定义了<strong>如何查找和验证用户</strong>。</p>
-<p>简单来说，LDAP 过滤器就像是你在 Active Directory 这个大数据库里进行搜索时使用的<strong>搜索条件</strong>。你需要告诉应用程序：当用户尝试登录时，应该使用哪些标准来找到 AD 中对应的用户对象，并确认这个对象是有效的、允许登录的。</p>
-<p>一个可供参考的问题见 <a target="_blank" rel="noopener" href="https://github.com/witersen/SvnAdminV2.0/issues/51">Issue</a></p>
-<h3 id="LDAP-过滤器的基本语法"><a href="#LDAP-过滤器的基本语法" class="headerlink" title="LDAP 过滤器的基本语法"></a>LDAP 过滤器的基本语法</h3><ul>
-<li>使用括号 <code>()</code> 包裹整个过滤器。</li>
-<li>基本条件通常是 <code>(属性名=值)</code> 的形式。</li>
-<li>可以使用逻辑运算符将多个条件组合起来：<br>*   <strong>&amp;</strong>：与 (AND) - 所有条件都必须满足。格式：<code>(&amp;(条件1)(条件2)...)</code><br>*   <strong>|</strong>：或 (OR) - 至少一个条件满足。格式：<code>(|(条件1)(条件2)...)</code><br>*   <strong>!</strong>：非 (NOT) - 条件不满足。格式：<code>(!(条件))</code></li>
-<li>值可以是具体的值，也可以是通配符 <code>*</code>，或者是一个<strong>占位符</strong>，应用程序会在运行时将其替换为用户输入的内容（通常是用户名）。</li>
-</ul>
-<h3 id="常用的-AD-用户属性及过滤器构建块"><a href="#常用的-AD-用户属性及过滤器构建块" class="headerlink" title="常用的 AD 用户属性及过滤器构建块"></a>常用的 AD 用户属性及过滤器构建块</h3><ul>
-<li><code>objectCategory=person</code>：查找对象类别为 &quot;person&quot; 的对象（通常包含用户）。</li>
-<li><code>objectClass=user</code>：查找对象类别为 &quot;user&quot; 的对象。通常与 <code>objectCategory=person</code> 一起使用，更精确地定位用户。</li>
-<li><code>sAMAccountName</code>：用户的登录名（通常是 Windows 2000 之前的短名称，例如 <code>johndoe</code>）。这是最常用的登录名字段。</li>
-<li><code>userPrincipalName</code> (UPN)：用户的邮箱风格登录名（例如 <code>johndoe@yourdomain.local</code>）。</li>
-<li><code>mail</code>：用户的电子邮件地址。有时也用作登录名。</li>
-<li><code>userAccountControl</code>：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： <code>(!(userAccountControl:1.2.840.113556.1.4.803:=2))</code>。这里的 <code>2</code> 代表 <code>ADS_UF_ACCOUNTDISABLE</code> 标志位，<code>:1.2.840.113556.1.4.803:=</code> 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
-<li><code>memberOf</code>：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 <code>CN=AppUsers,OU=Groups,DC=yourdomain,DC=local</code>。</li>
-</ul>
-<h3 id="常见的-LDAP-用户过滤器示例"><a href="#常见的-LDAP-用户过滤器示例" class="headerlink" title="常见的 LDAP 用户过滤器示例"></a>常见的 LDAP 用户过滤器示例</h3><p><strong>注意：</strong> 以下示例使用占位符 <code>&#123;username&#125;</code> 代表用户输入的用户名。<strong>请务必查阅你所使用的应用程序（如 DokuWiki authad 插件）的文档，确认它实际使用的占位符是什么</strong>，可能是 <code>@USER@</code>, <code>%user%</code>, <code>$user</code> 等。</p>
-<p>最基本：使用 sAMAccountName 查找未禁用的用户 (推荐作为起点) </p>
-<p>下面最外层的括号或许需要取消</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectCategory=person)(objectClass=user)(sAMAccountName=&#123;username&#125;)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>&amp;</code>: 所有条件都需满足。</li>
-<li><code>objectCategory=person</code> 和 <code>objectClass=user</code>: 确保找到的是用户对象。</li>
-<li><code>sAMAccountName=&#123;username&#125;</code>: 用户的 <code>sAMAccountName</code> 属性必须等于登录时输入的用户名。</li>
-<li><code>(!(userAccountControl:1.2.840.113556.1.4.803:=2))</code>: 确保账户未被禁用。(部分服务会同步已禁用账号，然后在本地显示账号禁用，如果不需要可以直接通过过滤器排除掉)</li>
-</ul>
-<p><strong>OpenLDAP</strong><br>因为大部分都会以 OpenLDAP 为主，所以基本没什么好写的，你只要注意不要因为自己设的不同名字的 OU 被坑了就行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectClass=posixGroup)(|(memberUid=%&#123;uid&#125;)(gidNumber=%&#123;gid&#125;)))</span><br></pre></td></tr></table></figure>
-<ul>
-<li><code>objectCategory=posixGroup</code>: 确保找到的是组对象。</li>
-<li><code>|(memberUid=%&#123;uid&#125;)(gidNumber=%&#123;gid&#125;)</code>: 用户主组是gidNumber，memberUid是次组</li>
-</ul>
 <h3 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h3><p>最新的 OpanLDAP 通常使用动态配置</p>
 <p>bitnami 的 openldap 中获取信息</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slapcat -F /bitnami/openldap/slapd.d/</span><br></pre></td></tr></table></figure>
@@ -452,7 +453,7 @@
                     <a class="tag-none-link" href="/tags/AD-Active-Directory/" rel="tag">AD(Active Directory)</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-09-13T06:38:21.234Z" itemprop="dateModified">最后编辑：2025-09-13</time>
+                    <time datetime="2025-09-19T02:10:47.526Z" itemprop="dateModified">最后编辑：2025-09-19</time>
                 </div>
             </div>
         </footer>
@@ -464,6 +465,10 @@
                 <a title=" (无标题)" href="/Code/Git/git_reset_local/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
+            
+            <div class="nav-next clearfix">
+                <a title=" 笔记书签方面的一些纠结" href="/Software/Notes/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
             
         </nav>
     
@@ -495,7 +500,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#phpLDAPadmin"><span class="toc-number">1.</span> <span class="toc-text">phpLDAPadmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">名词解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenLDAP-HDB-%E4%B8%8E-MDB-%E5%90%8E%E7%AB%AF%E5%AF%B9%E6%AF%94"><span class="toc-number">2.1.</span> <span class="toc-text">OpenLDAP HDB 与 MDB 后端对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distinguished-Name-DN"><span class="toc-number">2.2.</span> <span class="toc-text">Distinguished Name (DN)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rootdn"><span class="toc-number">2.3.</span> <span class="toc-text">rootdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OU-Organizational-Unit"><span class="toc-number">2.4.</span> <span class="toc-text">OU(Organizational Unit)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDIF-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.5.</span> <span class="toc-text">LDIF 文件格式介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE"><span class="toc-number">2.6.</span> <span class="toc-text">动态配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E7%9A%84-ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">OpenLDAP 的 ACL（访问控制列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F"><span class="toc-number">3.1.</span> <span class="toc-text">ACL 加载顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-number">3.2.</span> <span class="toc-text">ACL 语法详解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">4.</span> <span class="toc-text">OpenLDAP 权限验证</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E9%9B%86%E6%88%90"><span class="toc-number">5.</span> <span class="toc-text">LDAP 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OS-%E9%9B%86%E6%88%90"><span class="toc-number">5.1.</span> <span class="toc-text">OS 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSSD-%E6%88%96-NSCD"><span class="toc-number">5.1.1.</span> <span class="toc-text">SSSD 或 NSCD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">5.1.2.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE"><span class="toc-number">5.1.3.</span> <span class="toc-text">集成配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bindn"><span class="toc-number">5.2.</span> <span class="toc-text">bindn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base-DN"><span class="toc-number">5.3.</span> <span class="toc-text">Base DN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">5.4.</span> <span class="toc-text">LDAP 过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">5.4.1.</span> <span class="toc-text">LDAP 过滤器的基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-AD-%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7%E5%8F%8A%E8%BF%87%E6%BB%A4%E5%99%A8%E6%9E%84%E5%BB%BA%E5%9D%97"><span class="toc-number">5.4.2.</span> <span class="toc-text">常用的 AD 用户属性及过滤器构建块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-LDAP-%E7%94%A8%E6%88%B7%E8%BF%87%E6%BB%A4%E5%99%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">5.4.3.</span> <span class="toc-text">常见的 LDAP 用户过滤器示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#etc"><span class="toc-number">5.4.4.</span> <span class="toc-text">etc</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#phpLDAPadmin"><span class="toc-number">1.</span> <span class="toc-text">phpLDAPadmin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">名词解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OpenLDAP-HDB-%E4%B8%8E-MDB-%E5%90%8E%E7%AB%AF%E5%AF%B9%E6%AF%94"><span class="toc-number">2.1.</span> <span class="toc-text">OpenLDAP HDB 与 MDB 后端对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Distinguished-Name-DN"><span class="toc-number">2.2.</span> <span class="toc-text">Distinguished Name (DN)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rootdn"><span class="toc-number">2.3.</span> <span class="toc-text">rootdn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OU-Organizational-Unit"><span class="toc-number">2.4.</span> <span class="toc-text">OU(Organizational Unit)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDIF-%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.5.</span> <span class="toc-text">LDIF 文件格式介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E9%85%8D%E7%BD%AE"><span class="toc-number">2.6.</span> <span class="toc-text">动态配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LDAP-%E9%9B%86%E6%88%90"><span class="toc-number">3.</span> <span class="toc-text">LDAP 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#OS-%E9%9B%86%E6%88%90"><span class="toc-number">3.1.</span> <span class="toc-text">OS 集成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSSD-%E6%88%96-NSCD"><span class="toc-number">3.1.1.</span> <span class="toc-text">SSSD 或 NSCD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.1.2.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E9%85%8D%E7%BD%AE"><span class="toc-number">3.1.3.</span> <span class="toc-text">集成配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bindn"><span class="toc-number">3.2.</span> <span class="toc-text">bindn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Base-DN"><span class="toc-number">3.3.</span> <span class="toc-text">Base DN</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">3.4.</span> <span class="toc-text">LDAP 过滤器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LDAP-%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">3.4.1.</span> <span class="toc-text">LDAP 过滤器的基本语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84-AD-%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7%E5%8F%8A%E8%BF%87%E6%BB%A4%E5%99%A8%E6%9E%84%E5%BB%BA%E5%9D%97"><span class="toc-number">3.4.2.</span> <span class="toc-text">常用的 AD 用户属性及过滤器构建块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84-LDAP-%E7%94%A8%E6%88%B7%E8%BF%87%E6%BB%A4%E5%99%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">3.4.3.</span> <span class="toc-text">常见的 LDAP 用户过滤器示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E7%9A%84-ACL%EF%BC%88%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">OpenLDAP 的 ACL（访问控制列表）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F"><span class="toc-number">4.1.</span> <span class="toc-text">ACL 加载顺序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ACL-%E8%AF%AD%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-number">4.2.</span> <span class="toc-text">ACL 语法详解</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#OpenLDAP-%E6%9D%83%E9%99%90%E9%AA%8C%E8%AF%81"><span class="toc-number">5.</span> <span class="toc-text">OpenLDAP 权限验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#etc"><span class="toc-number">5.0.1.</span> <span class="toc-text">etc</span></a></li></ol></li></ol></li></ol>
     </div>
 </aside>
                 
