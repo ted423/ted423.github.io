@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-10-10T14:42:44.476Z</updated>
+  <updated>2025-10-23T16:39:41.052Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[文本编辑器] Notepad4</title>
+    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad4/"/>
+    <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad4/</id>
+    <published>2025-10-23T16:36:51.894Z</published>
+    <updated>2025-10-23T16:39:41.052Z</updated>
+    
+    <content type="html"><![CDATA[<p>4 其实也是继承 notepad2, 又名Notepad2⨯2, Notepad2++，好像是国人开发。</p><p>3其实也还在维护</p><p><a href="https://github.com/zufuliu/notepad4">https://github.com/zufuliu/notepad4</a></p><p>release 有点猛</p><p>就是只有便携版，没有安装包。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;4 其实也是继承 notepad2, 又名Notepad2⨯2, Notepad2++，好像是国人开发。&lt;/p&gt;
+&lt;p&gt;3其实也还在维护&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/zufuliu/notepad4&quot;&gt;https://github.</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="3-clause BSD license" scheme="http://ted423.github.io/tags/3-clause-BSD-license/"/>
+    
+    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nextcloud 相关</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
+    <published>2025-10-10T15:30:03.126Z</published>
+    <updated>2025-10-10T06:06:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li><li>会因为个别文件占用阻塞整个同步操作</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>近期大概是欧盟资金支持(?), Nextcloud 肉眼可见的靠谱了起来</p><h1 id="Server-端升级"><a href="#Server-端升级" class="headerlink" title="Server 端升级"></a>Server 端升级</h1><p>关闭维护模式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ maintenance:mode --off</span><br></pre></td></tr></table></figure><p>升级</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ upgrade</span><br></pre></td></tr></table></figure><p>停止不兼容的应用</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ app:disable maps</span><br></pre></td></tr></table></figure><h1 id="Server-端清理"><a href="#Server-端清理" class="headerlink" title="Server 端清理"></a>Server 端清理</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ trashbin:cleanup --all-users</span><br></pre></td></tr></table></figure><p>这个命令忘了干嘛的，但应该跟清理有关</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ files:scan --all</span><br></pre></td></tr></table></figure><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>但 Nextcloud 的问题也不少<del>，甚至更可怕</del></p><h2 id="已解决"><a href="#已解决" class="headerlink" title="已解决"></a>已解决</h2><ol><li><del>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</del></li><li><del>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</del></li><li><del>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</del></li><li><del>无法开始同步,他会在统计文件数量的时候崩溃，然后无法开始同步 -<time datetime="2025-01-09">2025-01-09</time>update</del></li><li><del><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></del></li><li><del>还有文件丢失时间标签无法同步的</del> issue 关了 <a href="https://github.com/nextcloud/desktop/issues/4378">https://github.com/nextcloud/desktop/issues/4378</a> 未作确认</li><li><del>本地产生了4GiB的log -<time datetime="2025-01-09">2025-01-09</time></del></li></ol><h2 id="不确定状态以及影响"><a href="#不确定状态以及影响" class="headerlink" title="不确定状态以及影响"></a>不确定状态以及影响</h2><ol><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a></li><li>需要管理员权限来删除快捷方式 -<time datetime="2025-01-09">2025-01-09</time></li></ol><h2 id="还有影响的"><a href="#还有影响的" class="headerlink" title="还有影响的"></a>还有影响的</h2><ol><li>目前同步时间较慢，不过这个有可能也要看 Server 性能</li><li>Dropbox 支持 LAN 同步，它不支持</li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p><hr><p><date datetime="2025-10-10">2025-10-10<date> 从抱怨改名了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Dropbox 长期在右键菜单里拉屎&lt;/li&gt;
+&lt;li&gt;很多次同步卡住(后面发现文件有些奇怪的状态)&lt;/li&gt;
+&lt;li&gt;经常被它锁定文件打断操作&lt;/li&gt;
+&lt;li&gt;长期接</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Dropbox" scheme="http://ted423.github.io/tags/Dropbox/"/>
+    
+    <category term="AGPLv3" scheme="http://ted423.github.io/tags/AGPLv3/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+    <category term="Web Service" scheme="http://ted423.github.io/tags/Web-Service/"/>
+    
+  </entry>
   
   <entry>
     <title>学习新名词 Help Vampires (帮助吸血鬼)</title>
@@ -545,72 +622,6 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
-    
-    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记一次试图逃离 MobaXterm</title>
-    <link href="http://ted423.github.io/Software/tryoutMobaXterm/"/>
-    <id>http://ted423.github.io/Software/tryoutMobaXterm/</id>
-    <published>2025-04-07T12:05:48.320Z</published>
-    <updated>2025-04-07T12:21:37.231Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="/Software/MobaXterm">MobaXterm</a> 毕竟现在用的破解，所以如果能不用或者如果有能替代的方案我是很开心的。</p><p>可以看到我之前尝试过一次。</p><p>这回是看到微软新的那个终端非常有想法，故就准备全部切换过去。</p><p>为此还折腾了<a href="/Software/X11">X11</a>。快速连接就靠终端的配置来弄，然后全部使用 sshkey,弄好可能还会变得高端。</p><p>可惜最后被 MobaXterm 自动显示服务器资源情况的功能给击沉了。这种功能基本就只有商业软件会做了吧。或者国产开源之类的。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;/Software/MobaXterm&quot;&gt;MobaXterm&lt;/a&gt; 毕竟现在用的破解，所以如果能不用或者如果有能替代的方案我是很开心的。&lt;/p&gt;
-&lt;p&gt;可以看到我之前尝试过一次。&lt;/p&gt;
-&lt;p&gt;这回是看到微软新的那个终端非常有想法，故就准备全部切换过去。</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
-    
-    <category term="破解&amp;激活" scheme="http://ted423.github.io/tags/%E7%A0%B4%E8%A7%A3-%E6%BF%80%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tmux 使用</title>
-    <link href="http://ted423.github.io/Linux/tmux/"/>
-    <id>http://ted423.github.io/Linux/tmux/</id>
-    <published>2025-04-07T07:06:17.249Z</published>
-    <updated>2025-04-07T08:14:15.348Z</updated>
-    
-    <content type="html"><![CDATA[<p>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p><p>开源协议是 ISC许可证</p><h1 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h1><ul><li>远程工作时，防止因网络中断导致任务终止。</li><li>高效管理多任务并行环境（如开发、运维、日志监控）。</li><li>替代传统终端，实现类 IDE 的多窗口协作体验。</li></ul><h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 <code>tmux</code></p><p>列出会话 <code>tmux ls</code></p><p>重连会话 <code>tmux attach -t 0</code></p><p>翻页&#x2F;滚动操作 按<code>ctrl+b</code>后按<code>[</code></p><p>复制 按住<code>shift</code></p><h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><table><thead><tr><th>操作</th><th>命令&#x2F;快捷键</th></tr></thead><tbody><tr><td>新建会话</td><td>tmux new -s &lt;会话名&gt;</td></tr><tr><td>分离当前会话</td><td>Ctrl+b → d</td></tr><tr><td>列出会话</td><td>tmux ls</td></tr><tr><td>重连会话</td><td>tmux attach -t &lt;会话名&gt;</td></tr><tr><td>关闭会话</td><td>tmux kill-session -t &lt;会话名&gt;</td></tr><tr><td>重命名会话</td><td>Ctrl+b → $</td></tr></tbody></table><h2 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h2><table><thead><tr><th>操作</th><th>快捷键（Ctrl+b 后按）</th></tr></thead><tbody><tr><td>新建窗口</td><td>c</td></tr><tr><td>关闭窗口</td><td>&amp;</td></tr><tr><td>切换窗口</td><td>0-9 或 n（下一窗口）&#x2F;p（上一窗口）</td></tr><tr><td>重命名窗口</td><td>,</td></tr><tr><td>窗口列表</td><td>w</td></tr></tbody></table><h2 id="面板管理"><a href="#面板管理" class="headerlink" title="面板管理"></a>面板管理</h2><table><thead><tr><th>操作</th><th>快捷键（Ctrl+b 后按）</th></tr></thead><tbody><tr><td>垂直分割面板</td><td>%</td></tr><tr><td>水平分割面板</td><td>&quot;</td></tr><tr><td>切换面板</td><td>方向键（←↑↓→）</td></tr><tr><td>关闭面板</td><td>x</td></tr><tr><td>调整面板大小</td><td>Ctrl+方向键</td></tr><tr><td>切换布局</td><td>空格</td></tr></tbody></table><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>tmux 默认行数上限 2000，应该是性能和内存考虑，不过10万行大概也才几十MiB内存</p><p>全局配置文件 <code>/etc/tmux.conf</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set -g history-limit 100000</span><br><span class="line">set -g mouse on #启用鼠标滚屏</span><br></pre></td></tr></table></figure><p>注意版本，因为老版，例如 CentOS7 用的 mode-mouse</p><p>通常建议是使用个人配置 <code>~/.tmux.conf</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。&lt;/p&gt;
-&lt;p&gt;开源协议是 ISC许可证&lt;/p&gt;
-&lt;h1 id=&quot;核心&quot;&gt;&lt;a href=&quot;#核心&quot; c</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
     
