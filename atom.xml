@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-10-23T16:42:40.386Z</updated>
+  <updated>2025-10-23T16:44:00.831Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,17 +21,16 @@
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad4/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad4/</id>
     <published>2025-10-23T16:36:51.894Z</published>
-    <updated>2025-10-23T16:42:40.386Z</updated>
+    <updated>2025-10-23T16:44:00.831Z</updated>
     
-    <content type="html"><![CDATA[<p>4 其实也是继承 notepad2, 又名Notepad2⨯2, Notepad2++，好像是国人开发。甚至原生做了简繁转换的功能。</p><p>可惜代码格式化这块似乎没有。</p><p>3 其实也还在维护</p><p><a href="https://github.com/zufuliu/notepad4">https://github.com/zufuliu/notepad4</a></p><p>release 有点猛</p><p>就是只有便携版，没有安装包。</p>]]></content>
+    <content type="html"><![CDATA[<p>4 其实也是继承 notepad2, 又名Notepad2⨯2, Notepad2++，好像是国人开发。甚至原生做了简繁转换的功能。</p><p>可惜代码格式化这块似乎没做完。</p><p><a href="https://github.com/zufuliu/notepad4/issues/614#issuecomment-2088217105">https://github.com/zufuliu/notepad4/issues/614#issuecomment-2088217105</a></p><p>3 其实也还在维护</p><p><a href="https://github.com/zufuliu/notepad4">https://github.com/zufuliu/notepad4</a></p><p>release 有点猛</p><p>就是只有便携版，没有安装包。</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;4 其实也是继承 notepad2, 又名Notepad2⨯2, Notepad2++，好像是国人开发。甚至原生做了简繁转换的功能。&lt;/p&gt;
-&lt;p&gt;可惜代码格式化这块似乎没有。&lt;/p&gt;
-&lt;p&gt;3 其实也还在维护&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.</summary>
+&lt;p&gt;可惜代码格式化这块似乎没做完。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/zufuliu/note</summary>
       
     
     
