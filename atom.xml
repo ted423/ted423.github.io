@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-10-23T16:46:54.962Z</updated>
+  <updated>2025-11-20T05:53:34.942Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 下硬件检测工具</title>
+    <link href="http://ted423.github.io/Hardware/test/"/>
+    <id>http://ted423.github.io/Hardware/test/</id>
+    <published>2025-11-20T03:55:59.564Z</published>
+    <updated>2025-11-20T05:53:34.942Z</updated>
+    
+    <content type="html"><![CDATA[<p>Linux 下基本看不到 USB 硬盘盒里接的硬盘的 SMART，Windows 下可以。</p><h1 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h1><p>KDE Gnome 都有自带的硬盘信息查看工具，一般来说 gparted 也能看</p><h1 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h1><h2 id="hdparm"><a href="#hdparm" class="headerlink" title="hdparm"></a>hdparm</h2><p>hdparm 是一个底层的硬盘工具。测试过程中会绕过文件系统，直接测试块设备</p><p>hdparm -Tt &#x2F;dev&#x2F;sdb1</p><h2 id="fio-cdm"><a href="#fio-cdm" class="headerlink" title="fio-cdm"></a>fio-cdm</h2><p>注意就是很长时间没更新了，其需要手动安装 fio (这个是长期维护的)。</p><p><a href="https://github.com/xlucn/fio-cdm">https://github.com/xlucn/fio-cdm</a></p><h2 id="stress-ng"><a href="#stress-ng" class="headerlink" title="stress-ng"></a>stress-ng</h2><p><a href="https://github.com/ColinIanKing/stress-ng">https://github.com/ColinIanKing/stress-ng</a></p><p>这个是支持各种硬件的压力测试，不过我主要拿来测内存</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo stress-ng --vm 100 --vm-bytes 2G --timeout 180</span><br></pre></td></tr></table></figure><p>另似乎这个命令版本参数上有差异，IC 内部 CentOS7 下 vm-bytes 是每个 vm 使用，而在 Ubuntu 24.04 LTS 上，可能是总量，htop能观察到每个进程自动申请了相应的内存（10，200 每个进程申请了20GiB）。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Linux 下基本看不到 USB 硬盘盒里接的硬盘的 SMART，Windows 下可以。&lt;/p&gt;
+&lt;h1 id=&quot;GUI&quot;&gt;&lt;a href=&quot;#GUI&quot; class=&quot;headerlink&quot; title=&quot;GUI&quot;&gt;&lt;/a&gt;GUI&lt;/h1&gt;&lt;p&gt;KDE Gnome 都有自</summary>
+      
+    
+    
+    
+    <category term="Hardware" scheme="http://ted423.github.io/categories/Hardware/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
+    
+    <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>[文本编辑器] Notepad4</title>
@@ -588,42 +619,6 @@
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
     <category term="Driver&amp;Firmware" scheme="http://ted423.github.io/tags/Driver-Firmware/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LXC 为什么不火</title>
-    <link href="http://ted423.github.io/Linux/LXC/"/>
-    <id>http://ted423.github.io/Linux/LXC/</id>
-    <published>2025-04-08T08:33:19.064Z</published>
-    <updated>2025-04-08T08:39:21.572Z</updated>
-    
-    <content type="html"><![CDATA[<p>LXC容器共享主机的内核，这意味着容器必须运行与主机相同或兼容的内核版本。这一点非常重要，因为它直接影响到容器中可以运行的操作系统类型。</p><p>其实光靠上面这段就够了。前有 KVM，后有 docker,LXC 这种尴尬处境，那肯定火不起来</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;LXC容器共享主机的内核，这意味着容器必须运行与主机相同或兼容的内核版本。这一点非常重要，因为它直接影响到容器中可以运行的操作系统类型。&lt;/p&gt;
-&lt;p&gt;其实光靠上面这段就够了。前有 KVM，后有 docker,LXC 这种尴尬处境，那肯定火不起来&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
-    
-    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
     
   </entry>
   
