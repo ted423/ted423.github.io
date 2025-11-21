@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-11-21T01:43:48.976Z</updated>
+  <updated>2025-11-21T02:14:19.665Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://ted423.github.io/Linux/Ubuntu_Server_%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/"/>
     <id>http://ted423.github.io/Linux/Ubuntu_Server_%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/</id>
     <published>2025-11-21T01:25:53.851Z</published>
-    <updated>2025-11-21T01:43:48.976Z</updated>
+    <updated>2025-11-21T02:14:19.665Z</updated>
     
-    <content type="html"><![CDATA[<p>Ubuntu Desktop 用的 NetworkManager，个人不太喜欢就想尝试下 Server，Ubuntu Server 用的 systemd-networkd.</p><ol><li><p>Win Server DHCP 的兼容性问题，ipv4 也会 DUID 优先，而 Linux 系的可以处理好，只接受 MAC(未经查证)。</p></li><li><p>默认查到的都告诉你改 Nekworkd 配置，而实际上 Ubuntu 用 Netplan，改相关配置是没用的。</p></li><li><p>Ubuntu Server 默认 Netplan 配置不写 renderer，而必须要<code>renderer: networkd</code>，才能<code>dhcp-identifier: mac</code></p></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>Ubuntu Desktop 用的 NetworkManager，个人不太喜欢就想尝试下 Server，Ubuntu Server 用的 systemd-networkd.</p><ol><li>Win Server DHCP 的兼容性问题，ipv4 也会 DUID 优先，而 Linux 系的可以处理好，只接受 MAC(未经查证)。</li><li>默认查到的都告诉你改 Nekworkd 配置，而实际上 Ubuntu 用 Netplan，改相关配置是没用的。</li><li>Ubuntu Server 默认 Netplan 配置不写 renderer，而必须要<code>renderer: networkd</code>，才能<code>dhcp-identifier: mac</code></li><li>Ubuntu 的桌面默认都带 NetworkManager，不过因为renderer，是写好的，应该问题不大，不过保险起见，不装为好。</li></ol>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;Ubuntu Desktop 用的 NetworkManager，个人不太喜欢就想尝试下 Server，Ubuntu Server 用的 systemd-networkd.&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Win Server DHCP 的兼容性问题，ipv4 也会 DUI</summary>
+&lt;li&gt;Win Server DHCP 的兼容性问题，ipv4 也会 DUID 优</summary>
       
     
     
