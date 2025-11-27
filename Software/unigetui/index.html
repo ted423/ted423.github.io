@@ -27,7 +27,7 @@
 <meta property="og:description" content="Winget 打败了所有（所以地址由 Software Update 改成了 Winget Winget开源，MIT，开源地址 https:&#x2F;&#x2F;github.com&#x2F;microsoft&#x2F;winget-cliWinget 永远的神，Win 10 开始自带目前除了批量升级有点使用上的问题以外，其他做的都挺强 目前可以通过以下方式批量升级(也可以用来备份恢复软件列表)(用GUI其实会比较好)  wing">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-19T08:44:00.000Z">
-<meta property="article:modified_time" content="2023-07-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-11-27T03:31:27.510Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="个人观点">
 <meta property="article:tag" content="Windows">
@@ -165,7 +165,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~2.43K
+                            ~2.53K
                         
                         字
                     </li>
@@ -184,7 +184,7 @@
             
             
                 <div class="kratos-post-inner-toc toc-div-class" >
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Winget"><span class="toc-number">1.</span> <span class="toc-text">Winget</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.1.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UniGetUI"><span class="toc-number">1.2.</span> <span class="toc-text">UniGetUI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%BF%87%E6%9C%89%E5%BF%BD%E7%95%A5%E6%A8%A1%E5%BC%8F%E5%B0%B1%E8%A1%8C%E3%80%82"><span class="toc-number">1.3.</span> <span class="toc-text">不过有忽略模式就行。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E6%87%82%E7%9A%84"><span class="toc-number">1.4.</span> <span class="toc-text">你懂的</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sumo"><span class="toc-number">2.</span> <span class="toc-text">Sumo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chocolatey"><span class="toc-number">3.</span> <span class="toc-text">Chocolatey</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GUI"><span class="toc-number">3.1.</span> <span class="toc-text">GUI</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-not-360-and-etc"><span class="toc-number">4.</span> <span class="toc-text">Why not 360(and etc)</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Winget"><span class="toc-number">1.</span> <span class="toc-text">Winget</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BD%91%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.</span> <span class="toc-text">第三方网页查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.2.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UniGetUI"><span class="toc-number">1.3.</span> <span class="toc-text">UniGetUI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E6%87%82%E7%9A%84"><span class="toc-number">1.4.</span> <span class="toc-text">你懂的</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sumo"><span class="toc-number">2.</span> <span class="toc-text">Sumo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chocolatey"><span class="toc-number">3.</span> <span class="toc-text">Chocolatey</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GUI"><span class="toc-number">3.1.</span> <span class="toc-text">GUI</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-not-360-and-etc"><span class="toc-number">4.</span> <span class="toc-text">Why not 360(and etc)</span></a></li></ol>
                 </div>
             
             <hr />
@@ -197,7 +197,12 @@
 <li><code>winget import 文件</code></li>
 </ol>
 <p>winget 下的升级文件都在 %Temp% 里，一些软件升级时需要关闭其他软件可能会导致升级失败，可以手动运行安装包升级</p>
-<p><a target="_blank" rel="noopener" href="https://winstall.app/apps">https://winstall.app/apps</a></p>
+<h2 id="第三方网页查询"><a href="#第三方网页查询" class="headerlink" title="第三方网页查询"></a>第三方网页查询</h2><p>注意后两者搜索不支持空格</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://winget.run/">https://winget.run</a>        (信息老旧)</li>
+<li><a target="_blank" rel="noopener" href="https://winstall.app/apps">https://winstall.app/apps</a></li>
+<li><a target="_blank" rel="noopener" href="https://wingetgui.com/">https://wingetgui.com</a></li>
+</ul>
 <p>这里可以自己选软件然后生成批量安装的代码</p>
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
 <li>可以安装 ffmpeg 这些，安装到全局会需要管理员权限，然后会自动添加环境变量，但更新遇到过问题<a target="_blank" rel="noopener" href="https://github.com/microsoft/winget-cli/issues/5102">Issue</a>。<del>卸载也只能手动删。</del></li>
@@ -212,7 +217,9 @@
 <p><del>而 WingetUI 的 winget 的配置是放在 <code>C:\Users\XX\AppData\Local\Microsoft\WinGet</code> -<time datetime="2023-07-18">2023-07-18</time></del></p>
 <p>最新的放在软件目录下 -<time datetime="2025-02-10">2025-02-10</time></p>
 <p><a target="_blank" rel="noopener" href="https://www.marticliment.com/unigetui/">https://www.marticliment.com/unigetui/</a><br><a target="_blank" rel="noopener" href="https://github.com/marticliment/UniGetUI">https://github.com/marticliment/UniGetUI</a><br><del>第三方UI，目前没弄懂为啥他获取的会比命令行的要新</del></p>
-<h2 id="不过有忽略模式就行。"><a href="#不过有忽略模式就行。" class="headerlink" title="不过有忽略模式就行。"></a>不过有忽略模式就行。</h2><p><del>首先，下面两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。</del><br><del>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</del></p>
+<p>不过有忽略模式就行。</p>
+<hr>
+<p><del>首先，下面两个软件主要是替代国产软件管理用的，并且属于一种不成熟的替代品。</del><br><del>如果你想寻找一种更好的体验，那大概是可以放弃看这篇文章。</del></p>
 <h2 id="你懂的"><a href="#你懂的" class="headerlink" title="你懂的"></a>你懂的</h2><p>需要管理员运行 cmd，powershell 不行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\Program Files\UniGetUI\winget-cli_x64\winget.exe&quot; settings set DefaultProxy socks://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
 
@@ -244,6 +251,8 @@
 </ul>
 <h1 id="Why-not-360-and-etc"><a href="#Why-not-360-and-etc" class="headerlink" title="Why not 360(and etc)"></a>Why not 360(and etc)</h1><p>实际上我是最早的360以及金山清理专家使用者。<br>然后他们之间打了一架，360弹窗给用户洗脑，往傲游和金山网盾身上扔了一堆屎盆子。<br>而傅盛把清理专家砍了然后做了个界面奇丑无比的金山卫士(因为这玩意做了开机自启)<br>然后在金山卫士开始有一堆受众的时候把卫士砍了。</p>
 <p>国内软件喜欢加驱是免不了的，还喜欢起后台服务，那么作为一个免费加驱软件(剩下的我就不说了)。<br>重点是你愿意为了你需要的功能使用这些免费加驱软件，然后进入他们的流量入口么？</p>
+<hr>
+<p>增加第三方信息网页 <time datetime="2025-11-27">2025-11-27</time></p>
 </div>
         </div>
         
@@ -264,7 +273,7 @@
                     <a class="tag-none-link" href="/tags/Apache-License-2-0/" rel="tag">Apache License 2.0</a>, <a class="tag-none-link" href="/tags/Github/" rel="tag">Github</a>, <a class="tag-none-link" href="/tags/LGPLv2-1/" rel="tag">LGPLv2.1</a>, <a class="tag-none-link" href="/tags/MIT/" rel="tag">MIT</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/" rel="tag">个人观点</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2023-07-17T16:00:00.000Z" itemprop="dateModified">最后编辑：2023-07-18</time>
+                    <time datetime="2025-11-27T03:31:27.510Z" itemprop="dateModified">最后编辑：2025-11-27</time>
                 </div>
             </div>
         </footer>
@@ -311,7 +320,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Winget"><span class="toc-number">1.</span> <span class="toc-text">Winget</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.1.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UniGetUI"><span class="toc-number">1.2.</span> <span class="toc-text">UniGetUI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E8%BF%87%E6%9C%89%E5%BF%BD%E7%95%A5%E6%A8%A1%E5%BC%8F%E5%B0%B1%E8%A1%8C%E3%80%82"><span class="toc-number">1.3.</span> <span class="toc-text">不过有忽略模式就行。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E6%87%82%E7%9A%84"><span class="toc-number">1.4.</span> <span class="toc-text">你懂的</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sumo"><span class="toc-number">2.</span> <span class="toc-text">Sumo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chocolatey"><span class="toc-number">3.</span> <span class="toc-text">Chocolatey</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GUI"><span class="toc-number">3.1.</span> <span class="toc-text">GUI</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-not-360-and-etc"><span class="toc-number">4.</span> <span class="toc-text">Why not 360(and etc)</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Winget"><span class="toc-number">1.</span> <span class="toc-text">Winget</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E7%BD%91%E9%A1%B5%E6%9F%A5%E8%AF%A2"><span class="toc-number">1.1.</span> <span class="toc-text">第三方网页查询</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.2.</span> <span class="toc-text">注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UniGetUI"><span class="toc-number">1.3.</span> <span class="toc-text">UniGetUI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%A0%E6%87%82%E7%9A%84"><span class="toc-number">1.4.</span> <span class="toc-text">你懂的</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Sumo"><span class="toc-number">2.</span> <span class="toc-text">Sumo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Chocolatey"><span class="toc-number">3.</span> <span class="toc-text">Chocolatey</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#GUI"><span class="toc-number">3.1.</span> <span class="toc-text">GUI</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Why-not-360-and-etc"><span class="toc-number">4.</span> <span class="toc-text">Why not 360(and etc)</span></a></li></ol>
     </div>
 </aside>
                 
