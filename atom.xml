@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-11-21T02:14:19.665Z</updated>
+  <updated>2025-11-27T06:09:43.329Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Debian 错误 deb 打包卸载处理</title>
+    <link href="http://ted423.github.io/Issue/Errordeb/"/>
+    <id>http://ted423.github.io/Issue/Errordeb/</id>
+    <published>2025-11-27T06:05:32.021Z</published>
+    <updated>2025-11-27T06:09:43.329Z</updated>
+    
+    <content type="html"><![CDATA[<p>主要是自打包的配置没写好，没法升级，没法重装卸载时配置没法处理导致的不可卸载。</p><p>删除这个文件夹下的<code>/var/lib/dpkg/info/</code>相关文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg --remove --force-all &lt;包名&gt;</span><br></pre></td></tr></table></figure><p>其实建议再仔细看下包的源码，然后尝试还原下里面修改的配置，避免潜在影响。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;主要是自打包的配置没写好，没法升级，没法重装卸载时配置没法处理导致的不可卸载。&lt;/p&gt;
+&lt;p&gt;删除这个文件夹下的&lt;code&gt;/var/lib/dpkg/info/&lt;/code&gt;相关文件&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;tab</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
   
   <entry>
     <title>Ububtu Server 踩坑笔记</title>
@@ -585,36 +613,6 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[Terminal]Bat 脚本中的变量延迟扩展 (Delayed Expansion)</title>
-    <link href="http://ted423.github.io/Code/Terminal/bat_Delayed_Expansion/"/>
-    <id>http://ted423.github.io/Code/Terminal/bat_Delayed_Expansion/</id>
-    <published>2025-04-24T02:57:43.212Z</published>
-    <updated>2025-04-24T03:26:00.308Z</updated>
-    
-    <content type="html"><![CDATA[<p>在 Bat 脚本中，变量的默认扩展方式是即时扩展 (Immediate Expansion)。这意味着，当 Bat 解释器解析一个命令行或一个代码块（用括号 () 括起来的一组命令）时，它会立即用变量的当前值替换所有用百分号<code>%</code>括起来的变量引用（例如<code>%str%</code>）。</p><p>问题出现在当你需要在同一个代码块内部修改一个变量，并且希望在该代码块内部的后续命令中立即使用这个修改后的新值时。由于即时扩展是在代码块开始执行之前进行的，整个块在解析时会使用变量的旧值，而不是你在块内部更新后的值。</p><p>为了解决这个问题，Bat 提供了变量延迟扩展。启用延迟扩展后，你可以使用感叹号<code>!</code>来引用变量（例如<code>!str!</code>）。当 Bat 解释器执行到一个使用<code>!var!</code>的命令时，它会当时去获取变量 var 的最新值。</p><p>一般可能比较难理解，我遇到的就是 if 里面 for 循环赋值输出不正确。需要用<code>!str!</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在 Bat 脚本中，变量的默认扩展方式是即时扩展 (Immediate Expansion)。这意味着，当 Bat 解释器解析一个命令行或一个代码块（用括号 () 括起来的一组命令）时，它会立即用变量的当前值替换所有用百分号&lt;code&gt;%&lt;/code&gt;括起来的变量引用（例如</summary>
-      
-    
-    
-    
-    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Code" scheme="http://ted423.github.io/tags/Code/"/>
-    
-    <category term="CMD" scheme="http://ted423.github.io/tags/CMD/"/>
-    
-    <category term="Terminal" scheme="http://ted423.github.io/tags/Terminal/"/>
     
   </entry>
   
