@@ -19,15 +19,15 @@
   
     <meta name="keywords" content="Document, Driver&Firmware, Hardware, Issue, Regedit, Windows" />
   
-  <meta name="description" content="不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动。 系统应该默认不包含 RAID 的驱动（非 OEM 系统）--2025-11-20 Widnows 7改AHCI找到下面的注册表子项： 1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci 在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3">
+  <meta name="description" content="不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动。 因为最新的电脑基本不再支持 IDE，所以下面的内容仅供参考，顶多就是一些电脑默认是 RAID 模式可能会有用，不过预装系统一般是 Home 版，通常建议改模式之后重装就好。 系统应该默认不包含 RAID 的驱动（非 OEM 系统）--2025-11-20 Services 里 Start 的 0的值应该是启用的意思，AHCI跟IDE驱">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏">
 <meta property="og:url" content="http://ted423.github.io/Hardware/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动。 系统应该默认不包含 RAID 的驱动（非 OEM 系统）--2025-11-20 Widnows 7改AHCI找到下面的注册表子项： 1HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci 在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3">
+<meta property="og:description" content="不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动。 因为最新的电脑基本不再支持 IDE，所以下面的内容仅供参考，顶多就是一些电脑默认是 RAID 模式可能会有用，不过预装系统一般是 Home 版，通常建议改模式之后重装就好。 系统应该默认不包含 RAID 的驱动（非 OEM 系统）--2025-11-20 Services 里 Start 的 0的值应该是启用的意思，AHCI跟IDE驱">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2016-01-14T10:56:00.000Z">
-<meta property="article:modified_time" content="2025-11-21T01:26:47.615Z">
+<meta property="article:modified_time" content="2016-01-14T10:56:00.000Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Document">
 <meta property="article:tag" content="Driver&amp;Firmware">
@@ -163,7 +163,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            785
+                            1004
                         
                         字
                     </li>
@@ -182,12 +182,19 @@
             
             
                 <div class="kratos-post-inner-toc toc-div-class" >
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Widnows-7"><span class="toc-number">1.</span> <span class="toc-text">Widnows 7</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9AHCI"><span class="toc-number">1.1.</span> <span class="toc-text">改AHCI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9IDE"><span class="toc-number">1.2.</span> <span class="toc-text">改IDE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9RAID"><span class="toc-number">1.3.</span> <span class="toc-text">改RAID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VM-SCSi"><span class="toc-number">1.4.</span> <span class="toc-text">VM SCSi</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-8-Windows-10"><span class="toc-number">2.</span> <span class="toc-text">Windows 8 - Windows 10</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-8-Windows-10"><span class="toc-number">1.</span> <span class="toc-text">Windows 8 - Windows 10</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Widnows-7"><span class="toc-number">2.</span> <span class="toc-text">Widnows 7</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9AHCI"><span class="toc-number">2.1.</span> <span class="toc-text">改AHCI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9IDE"><span class="toc-number">2.2.</span> <span class="toc-text">改IDE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9RAID"><span class="toc-number">2.3.</span> <span class="toc-text">改RAID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VM-SCSi"><span class="toc-number">2.4.</span> <span class="toc-text">VM SCSi</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Notes"><span class="toc-number">3.</span> <span class="toc-text">Notes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#virtio-%E6%B2%A1%E6%90%9E%E5%AE%9A%E8%BF%98%EF%BC%8C%E5%BC%80%E4%BA%86-sysprep-%E6%98%AF%E5%8F%AF%E4%BB%A5%EF%BC%8C%E4%B8%8D%E5%BC%80%E8%BF%98%E4%B8%8D%E8%A1%8C"><span class="toc-number">3.1.</span> <span class="toc-text">virtio 没搞定还，开了 sysprep 是可以，不开还不行</span></a></li></ol></li></ol>
                 </div>
             
             <hr />
             <div itemprop="articleBody"><p>不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动。</p>
+<p>因为最新的电脑基本不再支持 IDE，所以下面的内容仅供参考，顶多就是一些电脑默认是 RAID 模式可能会有用，不过预装系统一般是 Home 版，通常建议改模式之后重装就好。</p>
 <p>系统应该默认不包含 RAID 的驱动（非 OEM 系统）--<time datetime="2025-11-20">2025-11-20</time></p>
+<p>Services 里 Start 的 <strong>0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态</strong></p>
+<h1 id="Windows-8-Windows-10"><a href="#Windows-8-Windows-10" class="headerlink" title="Windows 8 - Windows 10"></a>Windows 8 - Windows 10</h1><p>AHCI则是找到如下注册表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\StartOverride\</span><br></pre></td></tr></table></figure>
+<p>把0的值由3改为0</p>
+<p>然后就可以在BIOS里更改为AHCI了，之后等驱动装完后重启几次就好了<br>IDE则和Win7下没有区别。</p>
+<p>RAID还没没试过，所以暂没有<br>Windows 10似乎在不改注册表的情况下，通过进安全模式来安装驱动。(一台HP Z200里的Win10就是这么操作成功的)</p>
 <h1 id="Widnows-7"><a href="#Widnows-7" class="headerlink" title="Widnows 7"></a>Widnows 7</h1><h2 id="改AHCI"><a href="#改AHCI" class="headerlink" title="改AHCI"></a>改AHCI</h2><p>找到下面的注册表子项：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Msahci</span><br></pre></td></tr></table></figure>
 <p>在右窗格中，右键单击“名称”列中的“Start”，将值改为 0 (以前的键值是3)<br><strong>0的值应该是启用的意思，AHCI跟IDE驱动应该能同时启用，如安装的时候就是AHCI模式，改IDE会蓝屏,因为此时的IDE处于未启用状态</strong></p>
@@ -197,13 +204,7 @@
 <h2 id="VM-SCSi"><a href="#VM-SCSi" class="headerlink" title="VM SCSi"></a>VM SCSi</h2><p><a target="_blank" rel="noopener" href="https://kb.vmware.com/s/article/1005208">https://kb.vmware.com/s/article/1005208</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\iaStorV</span><br></pre></td></tr></table></figure>
 <p><strong>注意最后是V哈</strong></p>
-<h1 id="Windows-8-Windows-10"><a href="#Windows-8-Windows-10" class="headerlink" title="Windows 8 - Windows 10"></a>Windows 8 - Windows 10</h1><p>AHCI则是找到如下注册表</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\storahci\StartOverride\</span><br></pre></td></tr></table></figure>
-<p>把0的值由3改为0</p>
-<p>然后就可以在BIOS里更改为AHCI了，之后等驱动装完后重启几次就好了<br>IDE则和Win7下没有区别。</p>
-<p>RAID还没没试过，所以暂没有<br>Windows 10似乎在不改注册表的情况下，通过进安全模式来安装驱动。(一台HP Z200里的Win10就是这么操作成功的)</p>
-<hr>
-<p><time>2023-03-04</time>增加实体机转VM的修改</p>
+<h1 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h1><h2 id="virtio-没搞定还，开了-sysprep-是可以，不开还不行"><a href="#virtio-没搞定还，开了-sysprep-是可以，不开还不行" class="headerlink" title="virtio 没搞定还，开了 sysprep 是可以，不开还不行"></a>virtio 没搞定还，开了 sysprep 是可以，不开还不行</h2><p><time>2023-03-04</time>增加实体机转VM(VMWare)的修改</p>
 </div>
         </div>
         
@@ -224,7 +225,7 @@
                     <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Driver-Firmware/" rel="tag">Driver&Firmware</a>, <a class="tag-none-link" href="/tags/Hardware/" rel="tag">Hardware</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-11-21T01:26:47.615Z" itemprop="dateModified">最后编辑：2025-11-21</time>
+                    <time datetime="2016-01-14T10:56:00.000Z" itemprop="dateModified">最后编辑：2016-01-14</time>
                 </div>
             </div>
         </footer>
@@ -271,7 +272,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Widnows-7"><span class="toc-text">Widnows 7</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9AHCI"><span class="toc-text">改AHCI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9IDE"><span class="toc-text">改IDE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9RAID"><span class="toc-text">改RAID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VM-SCSi"><span class="toc-text">VM SCSi</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-8-Windows-10"><span class="toc-text">Windows 8 - Windows 10</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Windows-8-Windows-10"><span class="toc-text">Windows 8 - Windows 10</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Widnows-7"><span class="toc-text">Widnows 7</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9AHCI"><span class="toc-text">改AHCI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9IDE"><span class="toc-text">改IDE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9RAID"><span class="toc-text">改RAID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VM-SCSi"><span class="toc-text">VM SCSi</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Notes"><span class="toc-text">Notes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#virtio-%E6%B2%A1%E6%90%9E%E5%AE%9A%E8%BF%98%EF%BC%8C%E5%BC%80%E4%BA%86-sysprep-%E6%98%AF%E5%8F%AF%E4%BB%A5%EF%BC%8C%E4%B8%8D%E5%BC%80%E8%BF%98%E4%B8%8D%E8%A1%8C"><span class="toc-text">virtio 没搞定还，开了 sysprep 是可以，不开还不行</span></a></li></ol></li></ol>
     </div>
 </aside>
                 
@@ -291,7 +292,7 @@
                 文章
             </span>
             <span class="count">
-                430
+                433
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -316,7 +317,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">40</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">54</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">105</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">4</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">40</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">53</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">54</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">99</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">14</span></li></ul>
   </aside>
 
 
