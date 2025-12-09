@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-11-28T11:43:12.729Z</updated>
+  <updated>2025-12-08T07:11:25.384Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]Docker Container 卡死关闭</title>
+    <link href="http://ted423.github.io/Issue/stopContainer/"/>
+    <id>http://ted423.github.io/Issue/stopContainer/</id>
+    <published>2025-12-08T03:48:27.920Z</published>
+    <updated>2025-12-08T07:11:25.384Z</updated>
+    
+    <content type="html"><![CDATA[<p>个人遇到的情况是宿主机挂载路径用了 fscache 导致的卡死，表现为 Cotainer 只要开启就会卡死，无法结束。</p><p>看到了 <a href="https://stackoverflow.com/questions/70434777/cannot-kill-container-container-id-tried-to-kill-container-but-did-not-rece">https://stackoverflow.com/questions/70434777/cannot-kill-container-container-id-tried-to-kill-container-but-did-not-rece</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps auxw | grep $(docker container ls | grep &lt;containername&gt;  | awk &#x27;&#123;print $1&#125;&#x27;)</span><br></pre></td></tr></table></figure><p>随后手动结束进程即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;个人遇到的情况是宿主机挂载路径用了 fscache 导致的卡死，表现为 Cotainer 只要开启就会卡死，无法结束。&lt;/p&gt;
+&lt;p&gt;看到了 &lt;a href=&quot;https://stackoverflow.com/questions/70434777/cannot-kill-</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
   
   <entry>
     <title>K8S(Kubernetes) 笔记</title>
@@ -578,38 +605,6 @@
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
     <category term="Regedit" scheme="http://ted423.github.io/tags/Regedit/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>邮件客户端选型</title>
-    <link href="http://ted423.github.io/Software/Mail/"/>
-    <id>http://ted423.github.io/Software/Mail/</id>
-    <published>2025-05-09T02:13:58.639Z</published>
-    <updated>2025-05-09T03:25:40.087Z</updated>
-    
-    <content type="html"><![CDATA[<p>目前还是在用 Foxmail，主要是没有太多的可选性</p><h1 id="Outlook"><a href="#Outlook" class="headerlink" title="Outlook"></a>Outlook</h1><p>这是一个收费客户端</p><h1 id="Thunderbird"><a href="#Thunderbird" class="headerlink" title="Thunderbird"></a>Thunderbird</h1><p>过滤器有 Bug，也就是明明符合规则但是不生效。</p><h1 id="Betterbird"><a href="#Betterbird" class="headerlink" title="Betterbird"></a>Betterbird</h1><p>就软件的开发愿景来说是很好的，可惜最新版连中文语言包都不提供了。</p><h1 id="SeaMonkey"><a href="#SeaMonkey" class="headerlink" title="SeaMonkey"></a>SeaMonkey</h1><p>定位错误的一个软件，包含浏览器并且界面很丑。我可以接受浏览器里带邮件客户端，但不能接受这么丑的界面。</p><h1 id="Claws-Mail"><a href="#Claws-Mail" class="headerlink" title="Claws Mail"></a>Claws Mail</h1><p>没中文 界面也相当老</p><h1 id="Mailspring"><a href="#Mailspring" class="headerlink" title="Mailspring"></a>Mailspring</h1><p>不支持 pop3 <a href="https://github.com/Foundry376/Mailspring/issues/45">https://github.com/Foundry376/Mailspring/issues/45</a></p><p>整体来说我觉得这个看法相当的 Stupid，pop3保留副本仍然是相当重要的。特别是大部分的服务商都是有限容量的邮箱。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;目前还是在用 Foxmail，主要是没有太多的可选性&lt;/p&gt;
-&lt;h1 id=&quot;Outlook&quot;&gt;&lt;a href=&quot;#Outlook&quot; class=&quot;headerlink&quot; title=&quot;Outlook&quot;&gt;&lt;/a&gt;Outlook&lt;/h1&gt;&lt;p&gt;这是一个收费客户端&lt;/p&gt;
-&lt;h</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
   </entry>
   
