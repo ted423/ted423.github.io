@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-12-08T07:11:25.384Z</updated>
+  <updated>2025-12-09T02:48:13.134Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spy++ 查找全局快捷键冲突</title>
+    <link href="http://ted423.github.io/Document/spy++/"/>
+    <id>http://ted423.github.io/Document/spy++/</id>
+    <published>2025-12-09T02:41:15.860Z</published>
+    <updated>2025-12-09T02:48:13.134Z</updated>
+    
+    <content type="html"><![CDATA[<p>来源文章: <a href="https://zhuanlan.zhihu.com/p/704643938">https://zhuanlan.zhihu.com/p/704643938</a></p><p>Warning: 这个方法主要以开发手段来确认问题，比较复杂。</p><p>Spy++ 来源于 Visual Studio，社区版本也都包含。</p><p>安装后找到 spyxx_amd64.exe 并运行。该进程只会抓到同架构的程序的信息，所以理论如果有32位进程设了全局快捷键，只能用32位那个抓（未确认）。</p><ol><li>菜单栏 --&gt; 监视 --&gt; 日志消息，这样打开 消息选项 面板。</li><li>在 窗口 页签，点击 其他窗口 栏目下的 系统中的所有窗口。</li><li>切换到 消息 页签，点击 全部清除 按钮。勾一下 消息组 里面的 键盘。这样会自动在左侧 要查看的消息 里面选中一些项目，其中已经被选中的 WM_HOTKEY 是关键。然后确定。</li></ol><p>之后输入问题快捷键，然后看哪个进程有反应，我的情况是发现是 autolyrics, 就很 emmmm，也不好说作者。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;来源文章: &lt;a href=&quot;https://zhuanlan.zhihu.com/p/704643938&quot;&gt;https://zhuanlan.zhihu.com/p/704643938&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Warning: 这个方法主要以开发手段来确认问题，比较复杂。&lt;</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]Docker Container 卡死关闭</title>
@@ -575,36 +602,6 @@
     <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
     
     <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>特殊文件关联</title>
-    <link href="http://ted423.github.io/Document/%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/"/>
-    <id>http://ted423.github.io/Document/%E6%96%87%E4%BB%B6%E5%85%B3%E8%81%94/</id>
-    <published>2025-05-09T08:49:27.342Z</published>
-    <updated>2025-05-09T08:56:18.116Z</updated>
-    
-    <content type="html"><![CDATA[<p>最早是被 <a href="/Software/Document&Texteditor/Everedit">Everedit</a> 坑的</p><p>总之这类文件关联位置如下，可以参考找一下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Classes\batfile\shell\open\command</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;最早是被 &lt;a href=&quot;/Software/Document&amp;Texteditor/Everedit&quot;&gt;Everedit&lt;/a&gt; 坑的&lt;/p&gt;
-&lt;p&gt;总之这类文件关联位置如下，可以参考找一下&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Regedit" scheme="http://ted423.github.io/tags/Regedit/"/>
     
   </entry>
   
