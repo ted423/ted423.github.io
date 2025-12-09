@@ -19,15 +19,15 @@
   
     <meta name="keywords" content="Issue, Windows, Windows AD, Windows Server" />
   
-  <meta name="description" content="现象报错信息如下&quot;时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。&quot; 事件报告&quot;时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有效的时">
+  <meta name="description" content="问题一现象报错信息如下&quot;时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。&quot; 事件报告&quot;时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[问题处理]AD相关 时间提供程序 NtpClient 问题">
 <meta property="og:url" content="http://ted423.github.io/Issue/NtpClient/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="现象报错信息如下&quot;时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。&quot; 事件报告&quot;时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有效的时">
+<meta property="og:description" content="问题一现象报错信息如下&quot;时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。&quot; 事件报告&quot;时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-12-09T02:17:05.524Z">
+<meta property="article:modified_time" content="2025-12-09T02:37:40.093Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="Issue">
@@ -161,7 +161,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~3.68K
+                            ~3.71K
                         
                         字
                     </li>
@@ -180,38 +180,40 @@
             
             
                 <div class="kratos-post-inner-toc toc-div-class" >
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%B0%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">现象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-number">3.</span> <span class="toc-text">文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#w32tm"><span class="toc-number">5.</span> <span class="toc-text">w32tm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%A6%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">另一个问题</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text">问题一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%B0%E8%B1%A1"><span class="toc-number">1.1.</span> <span class="toc-text">现象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">过程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-number">2.</span> <span class="toc-text">文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#w32tm"><span class="toc-number">3.</span> <span class="toc-text">w32tm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%A6%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">另一个问题</span></a></li></ol>
                 </div>
             
             <hr />
-            <div itemprop="articleBody"><h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1><p>报错信息如下<br>&quot;时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。&quot;</p>
+            <div itemprop="articleBody"><h1 id="问题一"><a href="#问题一" class="headerlink" title="问题一"></a>问题一</h1><h2 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h2><p>报错信息如下<br>&quot;时间提供程序 NtpClient: 在尝试联系域控制器 X 8 次以后，仍然没有收到有效的响应。此域控制器将不再作为时间源使用，并且 NtpClient将尝试发现一个新的域控制器来同步。错误为: 无法连接到对等机。&quot;</p>
 <p>事件报告<br>&quot;时间提供程序 NtpClient 正在从 计算机名(ntp.d|0.0.0.0:123-&gt;目的:123) 接收有效的时间数据。&quot;</p>
 <p>然后基本每条后面跟最前面那种报错报告。</p>
-<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><p>看到了这篇文章<br><a target="_blank" rel="noopener" href="https://shiyousan.com/post/635774974180847748">https://shiyousan.com/post/635774974180847748</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>错误的系统防火墙配置导致 AD 间 ntp 无法通讯(ntp 使用了 udp 123 端口)，外加之前的坑货 Server 上装 360 把 w32tm 服务干了，而其他 site 的坑货弄得 AD 也是弄得乱七八糟的。并且 Server 一堆 2008，不太标准。</p>
+<p>通常来说，域里只要有一台域控出问题，就可能导致问题。</p>
+<p>微软自己的 NTP Server(time.windows.com) 很可能是被墙状态(指的公网因素)。</p>
+<p>默认 AD Server 会自动开启NTP Server，注册表里能看到enable，普通电脑默认不开NTP Server,默认会将 AD 当作 NTP Server。</p>
+<p>理论上域内的NTP Server是自动查询，有啥用啥（没做验证），理论client端不需要做任何配置，可以在client端用<code>w32tm /query /status</code>验证，未加域的机子，不会启用用w32tm，&quot;The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). &quot;说明w32tm是AD域里专用的。</p>
+<p>w32tm配置主要还是通过命令行。</p>
+<p>NTP Server配置可以见<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters</code></p>
+<p>如问题机的type就是NTP，新加的AD是NT5DS(Most domain-joined computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. An exception to this is the domain controller, which functions as the primary domain controller (PDC) emulator operations master for the root forest domain. The PDC emulator operations master in turn is usually configured to synchronize time with an external time source.)<br>具体type的意思文档里都有</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>看到了这篇文章<br><a target="_blank" rel="noopener" href="https://shiyousan.com/post/635774974180847748">https://shiyousan.com/post/635774974180847748</a></p>
 <p>有说明原因，但说的很含糊,甚至有点乱（我自己写的也乱）。因为按我的理解，加域的机子都是把内网AD作为NTP Server的。<del>(但实际不是，<a target="_blank" rel="noopener" href="https://www.azurew.com/windows/windows-server-2016/3098.html">https://www.azurew.com/windows/windows-server-2016/3098.html</a>，也可以不这么设)</del><br>划掉，按个人理解，虽然没有显式的设置以及注明，但实际加域客户端默认都是找AD进行NTP，类似于潜规则。从之前的AD断电导致的客户端时间异常，以及一些相应的文章都表明如此。</p>
-<p>很可能单纯的是网络问题，原先两个域控，我看提示有问题的那个域防火墙开了，但其他工作或者公共的防火墙是关的。<br>而另一台刚好相反，别的都开了，把域防火墙关了.................</p>
-<p>我手头的系统都没有类似设置项，查询的都是看注册表，除了个别设了个内网机子(没报错的那台)</p>
+<p>很可能单纯的是网络问题，原先两个域控，我看提示有问题的那个域防火墙开了，但其他工作或者公共的防火墙是关的。而另一台刚好相反，别的都开了，把域防火墙关了(就是防火墙完全没起作用).................</p>
+<p>我手头的系统都没有类似设置项，查询的都是看注册表，除了个别(含没报错的那台)设了个内网机子</p>
 <p>别的都是 time.windows.com ,0x8或0x9，但是ping不通</p>
 <p>理论上 Server 自己进行过 NTP 所以应该能用才是</p>
-<p>究其原因 123端口是udp的，也就是telnet不通，所以不大好判断。总之是防火墙的锅，所以理论按那个文章写的似乎没有任何意义。也不知道前任是怎么做出这种奇葩配置的，两个防火墙刚好配的相反(域防火墙应该专门针对域里的机子，然后把公用，工作关了就很emmmm)</p>
-<p><time>2022-06-22</time><br>发现360这个憨逼似乎会把win32tm相关服务禁用（再结合360浏览器的速度单位M&#x2F;s,可以确定360是垃圾软件）（这是另一次处理问题发现的） -</p>
+<p>确认了以下 123 端口是udp的，也就是telnet不通，所以不大好判断。总之是防火墙的锅，所以理论按那个文章写的似乎没有任何意义。也不知道前任是怎么做出这种奇葩配置的，两个防火墙刚好配的相反(域防火墙应该专门针对域里的机子，然后把公用，工作关了就很emmmm)</p>
+<p><time>2020-08-17 17:25</time><br>又研究了一下，13天没报错，所以其实是成功了，中间出问题,连续疯狂报错我也没太搞懂。</p>
+<p><time>2022-06-22</time><br>发现360这个憨逼似乎会把win32tm相关服务禁用（再结合360浏览器的速度单位M&#x2F;s,可以确定360是垃圾软件）（这是另一次处理问题发现的）</p>
 <p>仔细看了下，问题机子还有其他问题，在我来之前已经带病坚持了半年。然后我来了一年，就只动过上面的DHCP</p>
-<p>先记一下，之后可能会用到的名词<br>PDC Emulator: The DC with the Primary Domain Controller Emulator role is the authoritative DC in the domain. The PDC Emulator responds to authentication requests, changes passwords, and manages Group Policy Objects. And the PDC Emulator tells everyone else what time it is! It&#39;s good to be the PDC.</p>
+<p>先记一下，之后可能会用到的名词</p>
+<p>PDC Emulator: The DC with the Primary Domain Controller Emulator role is the authoritative DC in the domain. The PDC Emulator responds to authentication requests, changes passwords, and manages Group Policy Objects. And the PDC Emulator tells everyone else what time it is! It&#39;s good to be the PDC.</p>
 <p><a target="_blank" rel="noopener" href="https://www.renanrodrigues.com/post/how-to-configure-ntp-server-in-active-directory-step-by-step">https://www.renanrodrigues.com/post/how-to-configure-ntp-server-in-active-directory-step-by-step</a></p>
 <p>(正常来说，默认会自动配置，不需要一步步的配置，里面的命令挺有用)</p>
-<p><time>2020-08-17 17:25</time><br>又研究了一下，13天没报错，所以其实是成功了，中间出问题,连续疯狂报错我也没太搞懂。</p>
 <h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server">https://docs.microsoft.com/zh-cn/troubleshoot/windows-server/identity/configure-authoritative-time-server</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Windows Server 2016 已改进时间同步算法以与 RFC 规范保持一致。 因此，如果要将本地时间客户端设置为指向多个对等节点，我们建议你准备三个或更多不同的时间服务器。</span><br></pre></td></tr></table></figure>
 
 <p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings">https://docs.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings</a></p>
 <p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/configure-authoritative-time-server">https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/configure-authoritative-time-server</a></p>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>错误的防火墙配置导致 AD 间 ntp 无法通讯(ntp 使用了 udp 123端口)，外加之前的坑货 Server 上装 360 把 w32tm 服务干了，而其他 site 的坑货弄得 AD 也是弄得乱七八糟的。并且 Server 一堆 2008，不太标准。</p>
-<p>通常来说，域里只要有一台域控出问题，就可能导致问题。</p>
-<p>微软自己的 NTP Server(time.windows.com) 很可能是被墙状态。</p>
-<p>默认 AD Server 会自动开启NTP Server，注册表里能看到enable，普通电脑默认不开NTP Server,默认会将 AD 当作 NTP Server。</p>
-<p>理论上域内的NTP Server是自动查询，有啥用啥（没做验证），理论client端不需要做任何配置，可以在client端用<code>w32tm /query /status</code>验证，未加域的机子，不会启用用w32tm，&quot;The Windows Time service (W32Time) synchronizes the date and time for all computers managed by Active Directory Domain Services (AD DS). &quot;说明w32tm是AD域里专用的。<br>w32tm配置主要还是通过命令行。</p>
-<p>NTP Server配置可以见<code>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters</code></p>
-<p>如问题机的type就是NTP，新加的AD是NT5DS(Most domain-joined computers have a time client type of NT5DS, which means that they synchronize time from the domain hierarchy. An exception to this is the domain controller, which functions as the primary domain controller (PDC) emulator operations master for the root forest domain. The PDC emulator operations master in turn is usually configured to synchronize time with an external time source.)<br>具体type的意思文档里都有</p>
 <h1 id="w32tm"><a href="#w32tm" class="headerlink" title="w32tm"></a>w32tm</h1><p>状态<br><code>w32tm /query /status</code></p>
 <p>同步<br><code>w32tm /resync /nowait</code></p>
 <p>Server 端配置<br><code>w32tm /config /manualpeerlist: cn.pool.ntp.org /syncfromflags:manual /reliable:yes /update</code></p>
@@ -241,7 +243,7 @@
                     <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-AD/" rel="tag">Windows AD</a>, <a class="tag-none-link" href="/tags/Windows-Server/" rel="tag">Windows Server</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-12-09T02:17:05.524Z" itemprop="dateModified">最后编辑：2025-12-09</time>
+                    <time datetime="2025-12-09T02:37:40.093Z" itemprop="dateModified">最后编辑：2025-12-09</time>
                 </div>
             </div>
         </footer>
@@ -288,7 +290,7 @@
         <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
     </h4>
     <div class="textwidget">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%B0%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">现象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">过程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-number">3.</span> <span class="toc-text">文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#w32tm"><span class="toc-number">5.</span> <span class="toc-text">w32tm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%A6%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">另一个问题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E4%B8%80"><span class="toc-number">1.</span> <span class="toc-text">问题一</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%B0%E8%B1%A1"><span class="toc-number">1.1.</span> <span class="toc-text">现象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.2.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-number">1.3.</span> <span class="toc-text">过程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E6%A1%A3"><span class="toc-number">2.</span> <span class="toc-text">文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#w32tm"><span class="toc-number">3.</span> <span class="toc-text">w32tm</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%A6%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98"><span class="toc-number">4.</span> <span class="toc-text">另一个问题</span></a></li></ol>
     </div>
 </aside>
                 
