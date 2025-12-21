@@ -89,7 +89,7 @@
     <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 
     <body class="custom-background">
         <div id="kratos-wrapper">
@@ -177,6 +177,10 @@
             
             
             
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92DNS-local-dns"><span class="toc-number">1.</span> <span class="toc-text">递归DNS(local dns)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E4%BB%A5%E5%8F%8A%E8%BF%AD%E4%BB%A3"><span class="toc-number">2.</span> <span class="toc-text">递归以及迭代</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B9%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8-root-name-server"><span class="toc-number">3.</span> <span class="toc-text">根域名服务器(root name server)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B6%E7%BA%A7-DNS-TLD-DNS"><span class="toc-number">4.</span> <span class="toc-text">顶级 DNS(TLD DNS)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%83%E5%A8%81-DNS-Authoritative-name-server"><span class="toc-number">5.</span> <span class="toc-text">权威 DNS(Authoritative name server)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E5%8F%91DNS"><span class="toc-number">6.</span> <span class="toc-text">转发DNS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ECS"><span class="toc-number">7.</span> <span class="toc-text">ECS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%ADDNS%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81ECS%E7%9A%84%E5%8A%9E%E6%B3%95"><span class="toc-number">7.1.</span> <span class="toc-text">判断DNS是否支持ECS的办法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="toc-number">8.</span> <span class="toc-text">软件相关</span></a></li></ol>
+                </div>
+            
             <hr />
             <div itemprop="articleBody"><p>DNS概念<br>DNS一般分为权威服务节点和递归服务节点。<br>我们一般使用的都是递归服务节点。</p>
 <h1 id="递归DNS-local-dns"><a href="#递归DNS-local-dns" class="headerlink" title="递归DNS(local dns)"></a>递归DNS(local dns)</h1><p>递归DNS可以理解为是一种功能复杂些的resolver，其核心功能一个是缓存、一个是递归查询。<br>收到域名查询请求后其首先看本地缓存是否有记录，如果没有则一级一级向上级递归服务器查询，直到最上级递归服务器开始向根服务器，顶级域名服务器（例如“.com”），一级域名服务器（例如“example.com”）<strong>迭代</strong>查询……直到获取到结果然后返回给用户。</p>
@@ -259,6 +263,18 @@
         <div class="sticky-area">
     
     
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92DNS-local-dns"><span class="toc-text">递归DNS(local dns)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E4%BB%A5%E5%8F%8A%E8%BF%AD%E4%BB%A3"><span class="toc-text">递归以及迭代</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B9%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8-root-name-server"><span class="toc-text">根域名服务器(root name server)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B6%E7%BA%A7-DNS-TLD-DNS"><span class="toc-text">顶级 DNS(TLD DNS)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%83%E5%A8%81-DNS-Authoritative-name-server"><span class="toc-text">权威 DNS(Authoritative name server)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E5%8F%91DNS"><span class="toc-text">转发DNS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ECS"><span class="toc-text">ECS</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A4%E6%96%ADDNS%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81ECS%E7%9A%84%E5%8A%9E%E6%B3%95"><span class="toc-text">判断DNS是否支持ECS的办法</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E7%9B%B8%E5%85%B3"><span class="toc-text">软件相关</span></a></li></ol>
+    </div>
+</aside>
+                
                 <aside id="krw-about" class="widget widget-kratos-about clearfix">
     <div class="photo-background"></div>
     <div class="photo-wrapper clearfix">
