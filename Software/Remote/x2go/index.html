@@ -17,22 +17,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="GPLv2, Linux, Open Source, Remote" />
+    <meta name="keywords" content="GPLv2, Linux, Notes, Remote, 开源(Open Source), 过时(Outdated)" />
   
-  <meta name="description" content="不推荐使用，最后又滚回去使用NoMachine了然后发现NoMachine有别的问题 网址https:&#x2F;&#x2F;wiki.x2go.org&#x2F;doku.php&#x2F;start本来想吐槽x2go的，后面发现是自己的问题。闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。看到x2go用NX协议就也想试试，毕竟开源。首先是跟nomachine不兼容。当然这是小事。 x2">
+  <meta name="description" content="不推荐使用，最后又滚回去使用NoMachine了，主要是目前维护不活跃。 然后发现NoMachine有别的问题 下面记录了一些早期测试的记录，不过当时有点菜，很多操作没有仔细去确认，例如 Linux 普通台式机会在没有外接显示器的情况下，把 GPU 置入省点模式，此时画面显示会非常卡，我目前都是给台式机上显卡欺骗器的。 网址https:&#x2F;&#x2F;wiki.x2go.org&#x2F;doku.php&#x2F;start">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[开源]x2go - 远程连接">
 <meta property="og:url" content="http://ted423.github.io/Software/Remote/x2go/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="不推荐使用，最后又滚回去使用NoMachine了然后发现NoMachine有别的问题 网址https:&#x2F;&#x2F;wiki.x2go.org&#x2F;doku.php&#x2F;start本来想吐槽x2go的，后面发现是自己的问题。闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。看到x2go用NX协议就也想试试，毕竟开源。首先是跟nomachine不兼容。当然这是小事。 x2">
+<meta property="og:description" content="不推荐使用，最后又滚回去使用NoMachine了，主要是目前维护不活跃。 然后发现NoMachine有别的问题 下面记录了一些早期测试的记录，不过当时有点菜，很多操作没有仔细去确认，例如 Linux 普通台式机会在没有外接显示器的情况下，把 GPU 置入省点模式，此时画面显示会非常卡，我目前都是给台式机上显卡欺骗器的。 网址https:&#x2F;&#x2F;wiki.x2go.org&#x2F;doku.php&#x2F;start">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-10T06:47:01.569Z">
-<meta property="article:modified_time" content="2021-07-15T09:15:42.000Z">
+<meta property="article:modified_time" content="2025-12-30T01:37:01.632Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Open Source">
+<meta property="article:tag" content="过时(Outdated)">
+<meta property="article:tag" content="开源(Open Source)">
 <meta property="article:tag" content="GPLv2">
 <meta property="article:tag" content="Remote">
+<meta property="article:tag" content="Notes">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
@@ -161,7 +163,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            604
+                            728
                         
                         字
                     </li>
@@ -180,12 +182,24 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p><del>不推荐使用，最后又滚回去使用NoMachine了</del><br><del>然后发现NoMachine有别的问题</del></p>
-<h1 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h1><p><a target="_blank" rel="noopener" href="https://wiki.x2go.org/doku.php/start">https://wiki.x2go.org/doku.php/start</a><br>本来想吐槽x2go的，后面发现是自己的问题。<br>闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。<br>看到x2go用NX协议就也想试试，毕竟开源。<br>首先是跟nomachine不兼容。<br>当然这是小事。</p>
-<p>x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。<br>使用桌面登录会跟你显示器登录是不一样。<br>当然还能用X11<br>这里引入一个小故事</p>
-<p>当我看到x2go在x11可以选择桌面的时候我是很激动的(x11)(<br>毕竟这意味着我可以弄一个别人看不到的桌面。<br>然后我闲着无聊重启了下我就傻逼了。<br>我连不进去了，因为Debian同学没登陆么的桌面，于是我跑到电脑前，登录进了系统，然后再跑回位置上连。(直接使用xfce这些桌面没这个问题。)</p>
+            <div itemprop="articleBody"><p>不推荐使用，最后又滚回去使用NoMachine了，主要是目前维护不活跃。</p>
+<p><del>然后发现NoMachine有别的问题</del></p>
+<p>下面记录了一些早期测试的记录，不过当时有点菜，很多操作没有仔细去确认，例如 Linux 普通台式机会在没有外接显示器的情况下，把 GPU 置入省点模式，此时画面显示会非常卡，我目前都是给台式机上显卡欺骗器的。</p>
+<h1 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h1><p><a target="_blank" rel="noopener" href="https://wiki.x2go.org/doku.php/start">https://wiki.x2go.org/doku.php/start</a></p>
+<p>闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。(QNAP 系统渣，还瞎魔改)</p>
+<p>看到x2go用NX协议就也想试试，毕竟开源。</p>
+<p>首先是跟nomachine不兼容。</p>
+<p>当然这是小事。</p>
+<p>x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。</p>
+<p>使用桌面登录会跟你显示器登录是不一样。</p>
+<p>当然还能用X11</p>
+<p>这里引入一个小故事</p>
+<p>当我看到x2go在x11可以选择桌面的时候我是很激动的(x11)(</p>
+<p>毕竟这意味着我可以弄一个别人看不到的桌面。</p>
+<p>然后我闲着无聊重启了下我就傻逼了。</p>
+<p>我连不进去了，因为 Debian 同学登陆么的桌面，于是我跑到电脑前，登录进了系统，然后再跑回位置上连。(直接使用xfce这些桌面没这个问题。)</p>
 <h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><ol>
-<li>与显示器同步的画面必须要到电脑前登录，否则x2go的x11 foward不工作。(这点NoMachine默认只支持同步显示，并且无需现场登录)</li>
+<li>与显示器同步的画面必须要到电脑前登录，否则x2go的x11 foward不工作。(这点 NoMachine 默认只支持同步显示，并且无需现场登录)</li>
 <li>利用x2go创建的远程画面会卡死。只能强关，关了之后原画面显示内容丢失，甚至我重启开那一会不动，桌面就死了。<del>当然这可能是Mint的锅，不过谁知道呢</del>(我又仔细看了下，我装的是xubuntu,那没事了)</li>
 </ol>
 </div>
@@ -205,10 +219,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/GPLv2/" rel="tag">GPLv2</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Open-Source/" rel="tag">Open Source</a>, <a class="tag-none-link" href="/tags/Remote/" rel="tag">Remote</a>
+                    <a class="tag-none-link" href="/tags/GPLv2/" rel="tag">GPLv2</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Notes/" rel="tag">Notes</a>, <a class="tag-none-link" href="/tags/Remote/" rel="tag">Remote</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>, <a class="tag-none-link" href="/tags/%E8%BF%87%E6%97%B6-Outdated/" rel="tag">过时(Outdated)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2021-07-15T09:15:42.000Z" itemprop="dateModified">最后编辑：2021-07-15</time>
+                    <time datetime="2025-12-30T01:37:01.632Z" itemprop="dateModified">最后编辑：2025-12-30</time>
                 </div>
             </div>
         </footer>
@@ -217,7 +231,7 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" [开源]rdpwrap" href="/Software/Remote/rdpwrap/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" [开源]NETworkManager - Win 下图形化网络工具" href="/Software/Network/NETworkManager/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
@@ -263,7 +277,7 @@
                 文章
             </span>
             <span class="count">
-                437
+                438
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -279,7 +293,7 @@
                 标签
             </span>
             <span class="count">
-                155
+                154
             </span>
         </a>
     </div>
@@ -288,7 +302,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">40</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">54</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">98</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">16</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">40</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">54</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">56</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">99</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">16</span></li></ul>
   </aside>
 
 
@@ -297,7 +311,7 @@
   <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
     <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
       <div class="tag-clouds">
-        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.69em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.64em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.65em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.73em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.71em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.76em;">Anime</a> <a href="/tags/Anti-996-License/" style="font-size: 0.6em;">Anti 996 License</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.67em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a>
+        <a href="/tags/1080i/" style="font-size: 0.6em;">1080i</a> <a href="/tags/1080p/" style="font-size: 0.8em;">1080p</a> <a href="/tags/3-clause-BSD-license/" style="font-size: 0.68em;">3-clause BSD license</a> <a href="/tags/480p/" style="font-size: 0.63em;">480p</a> <a href="/tags/720p/" style="font-size: 0.65em;">720p</a> <a href="/tags/AD-Active-Directory/" style="font-size: 0.65em;">AD(Active Directory)</a> <a href="/tags/AGPLv3/" style="font-size: 0.62em;">AGPLv3</a> <a href="/tags/AKB48/" style="font-size: 0.62em;">AKB48</a> <a href="/tags/ARK/" style="font-size: 0.62em;">ARK</a> <a href="/tags/Android/" style="font-size: 0.72em;">Android</a> <a href="/tags/Animation/" style="font-size: 0.7em;">Animation</a> <a href="/tags/Anime/" style="font-size: 0.77em;">Anime</a> <a href="/tags/Apache-License-2-0/" style="font-size: 0.67em;">Apache License 2.0</a> <a href="/tags/Archived/" style="font-size: 0.6em;">Archived</a> <a href="/tags/BDMV/" style="font-size: 0.75em;">BDMV</a> <a href="/tags/BDrip/" style="font-size: 0.78em;">BDrip</a> <a href="/tags/Backup/" style="font-size: 0.6em;">Backup</a> <a href="/tags/Browser/" style="font-size: 0.73em;">Browser</a>
       </div>
   </aside>
 
