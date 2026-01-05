@@ -84,9 +84,9 @@
     <link href="http://ted423.github.io/Software/Maintenance/BleachBit/"/>
     <id>http://ted423.github.io/Software/Maintenance/BleachBit/</id>
     <published>2025-12-18T05:10:11.026Z</published>
-    <updated>2025-12-18T05:48:29.880Z</updated>
+    <updated>2026-01-05T03:01:54.964Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.bleachbit.org/">https://www.bleachbit.org</a></p><p><a href="https://github.com/bleachbit/bleachbit">https://github.com/bleachbit/bleachbit</a></p><p>首先 CCleaner 是垃圾。</p><p>最近 cleanmgr 莫名其妙的 bug ,扫完清了，然后再打开是一点没清掉。</p><ul><li>这个软件支持自定义路径（虽然还没试过）</li><li>Linux 也支持，不过个人觉得不太需要（？），虽然 Linux 的软件比较喜欢随意路径拉屎。</li><li>深度扫描一般感觉不太需要使用，要用的也要注意这个扫描是严格扫描的后缀，我自己写的 .bak 也被扫出来了，真要有类似需求还是自定义路径吧。免得不小心干掉些可能要保留的东西</li><li>注意 系统 -&gt; 释放磁盘空闲区域 不要使用，这个是生成文件暴力填满硬盘空间。（感觉这个软件最好在界面里加点注释）</li><li>主要需求还是自定义路径，魔方也支持，但是似乎不能用通配符，并且它无了。</li><li>界面有点丑</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.bleachbit.org/">https://www.bleachbit.org</a></p><p><a href="https://github.com/bleachbit/bleachbit">https://github.com/bleachbit/bleachbit</a></p><p>首先 CCleaner 是垃圾。</p><p>最近 cleanmgr 莫名其妙的 bug ,扫完清了，然后再打开是一点没清掉。</p><ul><li>这个软件支持自定义路径（虽然还没试过）</li><li>Linux 也支持，不过个人觉得不太需要（？），虽然 Linux 的软件比较喜欢随意路径拉屎。</li><li>深度扫描一般感觉不太需要使用，要用的也要注意这个扫描是严格扫描的后缀，我自己写的 .bak 也被扫出来了，真要有类似需求还是自定义路径吧。免得不小心干掉些可能要保留的东西</li><li>注意 系统 -&gt; 释放磁盘空闲区域 不要使用，这个是生成文件暴力填满硬盘空间。（感觉这个软件最好在界面里加点注释）</li><li>主要需求还是自定义路径，魔方也支持，但是似乎不能用通配符，并且它无了。</li><li>界面有点丑，界面交互过于简陋</li></ul>]]></content>
     
     
       
