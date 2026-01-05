@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2025-12-31T11:22:14.000Z</updated>
+  <updated>2026-01-05T03:39:20.263Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows RSAT(Remote Server Administration Tools) 远程服务器管理工具</title>
+    <link href="http://ted423.github.io/Document/Acrive%20Directry/RAST/"/>
+    <id>http://ted423.github.io/Document/Acrive%20Directry/RAST/</id>
+    <published>2026-01-05T03:06:38.617Z</published>
+    <updated>2026-01-05T03:39:20.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>Win 上可以装 Openssh Server，之前试了可以连进去。不过 Win 原生有远程的一些命令可以使用，通常没必要使用 ssh。</p><p>以下所有说明基于标准的域环境。</p><p>RSAT 主要涉及到使用 IPC (进程间通信) Inter-Process Communication</p><p>IPC$ (Inter-Process Communication)：这是 Windows 的一个隐藏共享，专门用于进程间通信。</p><h1 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h1><p>RPC 是老协议，但是域控到普通机子仍然一直在走 RPC</p><p>远程过程调用。它是 Windows NT 时代就存在的基石技术。它的核心思想是：让在一台电脑上运行的程序，能够像调用本地函数一样，去调用另一台电脑上的函数。</p><p>走 RPC (Remote Procedure Call) &#x2F; SMB 的命令：</p><ul><li><code>quser</code> &#x2F; <code>qwinsta</code>（查询用户）</li><li><code>logoff</code>（注销用户）</li><li><code>sc</code>（服务控制）</li><li><code>services.msc</code>（远程连接服务控制台）</li><li><code>PsExec</code>（虽然它利用 SMB 管道，但本质依赖 RPC&#x2F;DCOM 机制）</li></ul><p>注意 SMB 是 RPC 的“载体”，也负责 组策略 (Group Policy) 的分发。</p><p>示例命令（远程注销用户登录，用于桌面卡死，无法远程）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">qwinsta /server:&lt;pcname&gt;</span><br><span class="line"> 会话名               用户名                 ID  状态   类型        设备</span><br><span class="line"> services                                            0  断开</span><br><span class="line"> console                                             3  已连接</span><br><span class="line"> rdp-tcp#0                xx              4  运行中</span><br><span class="line"> rdp-tcp                                         65536  侦听</span><br><span class="line"></span><br><span class="line">logoff 4  /server:&lt;pcname&gt;</span><br></pre></td></tr></table></figure><h1 id="WinRM"><a href="#WinRM" class="headerlink" title="WinRM"></a>WinRM</h1><p>WinRM 并不是为了完全替代 RPC 而生的，它只是为了“替代 RPC 在远程管理领域的角色”。(协议开销更大，历史包袱与生态)</p><p>Windows 远程管理。它是微软对 WS-Management 协议的实现。这是一种基于 Web 标准（SOAP&#x2F;XML）的协议。</p><p>WinRM 只使用两个端口: TCP 5985 (HTTP), TCP 5986 (HTTPS)</p><p>示例命令(重启服务)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Invoke-Command -ComputerName &lt;pcname&gt; -ScriptBlock &#123; Restart-Service TermService -Force &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Win 上可以装 Openssh Server，之前试了可以连进去。不过 Win 原生有远程的一些命令可以使用，通常没必要使用 ssh。&lt;/p&gt;
+&lt;p&gt;以下所有说明基于标准的域环境。&lt;/p&gt;
+&lt;p&gt;RSAT 主要涉及到使用 IPC (进程间通信) Inter-Process</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="AD(Active Directory)" scheme="http://ted423.github.io/tags/AD-Active-Directory/"/>
+    
+  </entry>
   
   <entry>
     <title>WSL</title>
@@ -577,40 +607,6 @@
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
     <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AD相关 - 端口以及同步</title>
-    <link href="http://ted423.github.io/Document/Acrive%20Directry/ADPort_Sync/"/>
-    <id>http://ted423.github.io/Document/Acrive%20Directry/ADPort_Sync/</id>
-    <published>2025-07-04T02:55:43.245Z</published>
-    <updated>2025-07-03T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><p>常用端口先不写了</p><p>TCP 49668 (RPC for LSA, SAM, NetLogon)</p><p>TCP 3268 — 非加密的 LDAP 全局编录</p><p>TCP 3269 — 加密的 LDAPS 全局编录</p><h1 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h1><p>使用DCDiag工具检查域控制器健康状态： 运行 DCDiag 工具检查域控制器的健康状态，并生成报告。</p><p><code>dcdiag /v</code><br>强制KCC生成复制拓扑： 使用 repadmin 命令强制KCC（知识一致性检查器）生成新的复制拓扑。</p><p><code>repadmin /kcc</code><br>检查和手动触发复制： 使用 repadmin 命令检查复制状态并手动触发复制。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">repadmin /showrepl</span><br><span class="line">repadmin /syncall /AeD</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>使用命令行手动同步<br>您可以使用 repadmin 和 dcdiag 命令来手动同步域控制器的复制。</p><p>使用 repadmin 命令<br>repadmin 是一个强大的命令行工具，可以用来管理和监控 Active Directory 复制。</p><h1 id="手动同步所有域控制器"><a href="#手动同步所有域控制器" class="headerlink" title="手动同步所有域控制器"></a>手动同步所有域控制器</h1><p><code>repadmin /syncall /AeD</code></p><h1 id="手动同步特定域控制器"><a href="#手动同步特定域控制器" class="headerlink" title="手动同步特定域控制器"></a>手动同步特定域控制器</h1><p><code>repadmin /syncall &lt;域控制器名称/AeD</code><br>使用 dcdiag 命令<br>dcdiag 是一个诊断工具，可以用来检查域控制器的健康状态和诊断复制问题。</p><h1 id="检查域控制器的复制状态"><a href="#检查域控制器的复制状态" class="headerlink" title="检查域控制器的复制状态"></a>检查域控制器的复制状态</h1><p><code>dcdiag /test:replications</code></p><h1 id="检查特定域控制器的复制状态"><a href="#检查特定域控制器的复制状态" class="headerlink" title="检查特定域控制器的复制状态"></a>检查特定域控制器的复制状态</h1><p><code>dcdiag /s:&lt;域控制器名称/test:replications</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;端口&quot;&gt;&lt;a href=&quot;#端口&quot; class=&quot;headerlink&quot; title=&quot;端口&quot;&gt;&lt;/a&gt;端口&lt;/h1&gt;&lt;p&gt;常用端口先不写了&lt;/p&gt;
-&lt;p&gt;TCP 49668 (RPC for LSA, SAM, NetLogon)&lt;/p&gt;
-&lt;p&gt;TCP 3268</summary>
-      
-    
-    
-    
-    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
-    
-    <category term="Windows AD" scheme="http://ted423.github.io/tags/Windows-AD/"/>
-    
-    <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
     
   </entry>
   
