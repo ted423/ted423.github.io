@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-01-05T03:54:38.170Z</updated>
+  <updated>2026-01-07T03:17:53.702Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Github-Destop 下 Gist 的 commit 问题</title>
+    <link href="http://ted423.github.io/Code/Git/gist/"/>
+    <id>http://ted423.github.io/Code/Git/gist/</id>
+    <published>2026-01-07T02:50:16.391Z</published>
+    <updated>2026-01-07T03:17:53.702Z</updated>
+    
+    <content type="html"><![CDATA[<p>Github 似乎没想做 Github-Desktop 跟 Gist 的集成。对于 Gist 来说，Github-Desktop 跟普通的客户端一样，push 会需要单独登录，需要使用 token。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Github 似乎没想做 Github-Desktop 跟 Gist 的集成。对于 Gist 来说，Github-Desktop 跟普通的客户端一样，push 会需要单独登录，需要使用 token。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Git" scheme="http://ted423.github.io/categories/Git/"/>
+    
+    
+    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Git" scheme="http://ted423.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows RSAT(Remote Server Administration Tools) 远程服务器管理工具</title>
@@ -111,12 +140,12 @@
   
   <entry>
     <title>开源文件清理工具 - BleachBit</title>
-    <link href="http://ted423.github.io/Software/Maintenance/BleachBit/"/>
-    <id>http://ted423.github.io/Software/Maintenance/BleachBit/</id>
+    <link href="http://ted423.github.io/%E5%9D%9F%E5%9C%BA/BleachBit/"/>
+    <id>http://ted423.github.io/%E5%9D%9F%E5%9C%BA/BleachBit/</id>
     <published>2025-12-18T05:10:11.026Z</published>
-    <updated>2026-01-05T03:01:54.964Z</updated>
+    <updated>2026-01-08T10:17:04.029Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.bleachbit.org/">https://www.bleachbit.org</a></p><p><a href="https://github.com/bleachbit/bleachbit">https://github.com/bleachbit/bleachbit</a></p><p>首先 CCleaner 是垃圾。</p><p>最近 cleanmgr 莫名其妙的 bug ,扫完清了，然后再打开是一点没清掉。</p><ul><li>这个软件支持自定义路径（虽然还没试过）</li><li>Linux 也支持，不过个人觉得不太需要（？），虽然 Linux 的软件比较喜欢随意路径拉屎。</li><li>深度扫描一般感觉不太需要使用，要用的也要注意这个扫描是严格扫描的后缀，我自己写的 .bak 也被扫出来了，真要有类似需求还是自定义路径吧。免得不小心干掉些可能要保留的东西</li><li>注意 系统 -&gt; 释放磁盘空闲区域 不要使用，这个是生成文件暴力填满硬盘空间。（感觉这个软件最好在界面里加点注释）</li><li>主要需求还是自定义路径，魔方也支持，但是似乎不能用通配符，并且它无了。</li><li>界面有点丑，界面交互过于简陋</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.bleachbit.org/">https://www.bleachbit.org</a></p><p><a href="https://github.com/bleachbit/bleachbit">https://github.com/bleachbit/bleachbit</a></p><p>首先 CCleaner 是垃圾。</p><p>最近 cleanmgr 莫名其妙的 bug ,扫完清了，然后再打开是一点没清掉。</p><ul><li>这个软件支持自定义路径（<strong>加进去没法用可还行</strong>）</li><li>Linux 也支持，不过个人觉得不太需要（？），虽然 Linux 的软件比较喜欢随意路径拉屎。</li><li>深度扫描一般感觉不太需要使用，要用的也要注意这个扫描是严格扫描的后缀，我自己写的 .bak 也被扫出来了，真要有类似需求还是自定义路径吧。免得不小心干掉些可能要保留的东西</li><li>注意 系统 -&gt; 释放磁盘空闲区域 不要使用，这个是生成文件暴力填满硬盘空间。（感觉这个软件最好在界面里加点注释）</li><li>主要需求还是自定义路径，魔方也支持，但是似乎不能用通配符，并且它无了。</li><li>界面有点丑，界面交互过于简陋</li></ul><hr><p>界面看久了，眼睛直接不舒服了可还行，加上不太好的操作，没法自定义，直接送走。</p>]]></content>
     
     
       
@@ -127,7 +156,7 @@
     
     
     
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    <category term="坟场" scheme="http://ted423.github.io/categories/%E5%9D%9F%E5%9C%BA/"/>
     
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
@@ -578,35 +607,6 @@
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
     <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ubuntu 更新出现 xxx 的文件列表缺少最后结尾的换行符</title>
-    <link href="http://ted423.github.io/Issue/apt_file_issue/"/>
-    <id>http://ted423.github.io/Issue/apt_file_issue/</id>
-    <published>2025-07-24T13:11:53.957Z</published>
-    <updated>2025-07-25T07:07:49.649Z</updated>
-    
-    <content type="html"><![CDATA[<p>来来回回好几次了，主要是 <a href="/Linux/QNAP453Bmini">QNAP</a> 弄了个U盘做系统，所以文件应该就是坏了</p><p>主要是文件夹里的 <code>/var/lib/dpkg/info</code>不少文件损坏了。<br>其实 <code>/var/lib/dpkg/available</code> 也坏了</p><p>问题的</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> cat libqt6wlshellintegration6\:amd64.list</span><br><span class="line">/.</span><br><span class="line">/tsR</span><br><span class="line">/usr/lir</span><br><span class="line">linu▒-gnux82_64</span><br><span class="line">▒usr+mcb/ظ6_6t-,inuxmgnu/licQv4SlSh&#125;|lIntmgra4ion.sgL6.4.2</span><br><span class="line">/Esr/shar%J/usr-&#123;hare/cJ/uSr/qhre/focoli&quot;Q▒6wlshulliftm▒ration6</span><br><span class="line">/mSv/sha2e/doC/libyt6ulchellintegR▒tion6/cop▒▒ight▒▒usz-lij/x86_4-,inux)▒nu/dibQ4vWlShellInvegrati/n.s▒.</span><br></pre></td></tr></table></figure><p>正常的内容</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">/.</span><br><span class="line">/usr</span><br><span class="line">/usr/lib</span><br><span class="line">/usr/lib/x86_64-linux-gnu</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2</span><br><span class="line">/usr/share</span><br><span class="line">/usr/share/doc</span><br><span class="line">/usr/share/doc/libqt6widgets6t64</span><br><span class="line">/usr/share/doc/libqt6widgets6t64/copyright</span><br><span class="line">/usr/share/lintian</span><br><span class="line">/usr/share/lintian/overrides</span><br><span class="line">/usr/share/lintian/overrides/libqt6widgets6t64</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6</span><br><span class="line">/usr/share/doc/libqt6widgets6t64/changelog.Debian.gz</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> 触发器 ci 文件包含位置指令语法</span><br><span class="line">在处理时有错误发生：</span><br><span class="line"> /var/cache/apt/archives/python3-ldb_2%3a2.8.0+samba4.19.5+dfsg-4ubuntu9.2_amd64.deb</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">cat python3-ldb.postinst</span><br><span class="line">!!/b)f/sh</span><br><span class="line">w▒▒-l</span><br><span class="line"></span><br><span class="line">#AutgmaticA,Ly ydfedbY th[pYphon#</span><br><span class="line">if Mmqnd(-r pY3coUpmle!~/dEv/nu(lb26&amp;13 then</span><br><span class="line">                                                py3#ompele mx python3-ldc*a&#125;d66▒</span><br><span class="line">fi</span><br><span class="line">if co&#125;mand -v pyPy3▒oepide ./de6/nunl 2&gt;&amp;1;0theltypY3cnmpi,e-p p\thmf#-nlf:▒md64` || TrweJ&amp;i</span><br><span class="line">▒#`Wnd automatical|Y idtm$ sw#tion</span><br><span class="line"></span><br><span class="line"> cat python3-ldb.triggers</span><br><span class="line"># r)ggers ▒dFef$by Cemrezdebham/gunshmIbS!2:4.9.5+df3&#x27;-4Ubu.tu9</span><br><span class="line">actKvatE-noawaitldgondkg</span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/var/lib/dpkg/info/python3-ldb.prerm: 2: uet,m: not found</span><br><span class="line">/var/lib/dpkg/info/python3-ldb.prerm: 8: Syntax error: &quot;(&quot; unexpected (expecting &quot;then&quot;)</span><br><span class="line">dpkg: 警告: 旧的 python3-ldb 软件包 pre-removal 脚本 子进程返回错误状态 2</span><br><span class="line">dpkg: 现在尝试使用新软件包所带的脚本...</span><br><span class="line">dpkg: ... 它看起来没有问题</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">已安装 samba-common 软件包 post-installation 脚本 子进程返回错误状态 100</span><br></pre></td></tr></table></figure><p>后来还是用这里的方法解决了，不过之后 info 目录里没啥东西了。<br><a href="https://bbs.deepin.org/zh/post/219544">https://bbs.deepin.org/zh/post/219544</a></p><p>后面 apt upgrade 有问题，又把 back 里的东西拷回来了</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;来来回回好几次了，主要是 &lt;a href=&quot;/Linux/QNAP453Bmini&quot;&gt;QNAP&lt;/a&gt; 弄了个U盘做系统，所以文件应该就是坏了&lt;/p&gt;
-&lt;p&gt;主要是文件夹里的 &lt;code&gt;/var/lib/dpkg/info&lt;/code&gt;不少文件损坏了。&lt;br&gt;其实 &lt;co</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
     
   </entry>
   
