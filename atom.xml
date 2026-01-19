@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-01-07T03:17:53.702Z</updated>
+  <updated>2026-01-10T14:54:22.198Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iSCSI 简要笔记</title>
+    <link href="http://ted423.github.io/Document/iSCSI/"/>
+    <id>http://ted423.github.io/Document/iSCSI/</id>
+    <published>2026-01-10T14:46:18.495Z</published>
+    <updated>2026-01-10T14:54:22.198Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="名词说明"><a href="#名词说明" class="headerlink" title="名词说明"></a>名词说明</h1><p>SCSI (Small Computer System Interface，小型计算机系统接口) 是一种用于计算机及其外围设备（如硬盘、磁带驱动器、扫描仪等）之间进行数据传输的协议标准和命令集。它定义了一套标准的命令（称为 SCSI 命令集）、协议（如何交换这些命令和数据）以及电气和光学接口。</p><p>iSCSI (Internet Small Computer System Interface) 是一种存储网络协议。它的核心功能是将 SCSI 命令封装在 TCP&#x2F;IP 数据包中，并通过标准的以太网进行传输。本质上，iSCSI 允许两台主机通过 IP 网络交换 SCSI 命令，从而实现块级存储的远程访问，就像设备是本地连接的一样。</p><p>iSCSI 的架构是 C&#x2F;S 架构（客户端&#x2F;服务器）</p><p>initiator (发起端)</p><p>Target (目标端)是 iSCSI 协议架构中的服务端端点 (Server Endpoint)。</p><p>LUN (逻辑单元号)</p><p>LUN（逻辑单元） 与 Target（目标） 之间的内部映射关系（LUN Mapping）。</p><p>一个 Target 可以包含（映射）多个 LUN (LUN 0, LUN 1, ...)。</p><h2 id="LUN-Logical-Unit-Number"><a href="#LUN-Logical-Unit-Number" class="headerlink" title="LUN (Logical Unit Number)"></a>LUN (Logical Unit Number)</h2><p>LUN 逻辑单元 (Logical Unit, LU) 是一个通过 SCSI 协议标准进行寻址的块存储设备。</p><p>LUN 是存储网络环境中，从物理存储资源中抽象出来的、可被服务器独立寻址和使用的块存储单元的数字标识符。</p><p>LUN 可以由截然不同的技术和对象构成。</p><ul><li>直接物理设备映射 (Direct Physical Device Mapping)</li><li>逻辑卷映射 (Logical Volume Mapping)</li><li>文件映射 (File-based Mapping)</li><li>专用卷映射 (Specialized Volume Mapping)  ZFS ZVOL (ZFS Volume) 或 Btrfs 上的类似对象。</li></ul><h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>Target 是存储设备上运行的一个逻辑实体，负责监听 TCP&#x2F;IP 端口（默认 3260），接收并解析来自 Initiator（客户端，即 K8s 节点）的 SCSI 指令。</p><p>每个 Target 都有一个全球唯一的标识符，称为 IQN (iSCSI Qualified Name)。initiator 通过 IQN 唯一定位要连接的目标。</p><p>权限控制通常在 Target 级别进行配置。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;名词说明&quot;&gt;&lt;a href=&quot;#名词说明&quot; class=&quot;headerlink&quot; title=&quot;名词说明&quot;&gt;&lt;/a&gt;名词说明&lt;/h1&gt;&lt;p&gt;SCSI (Small Computer System Interface，小型计算机系统接口) 是一种用于计算机及其外围设</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[Git]设置查看和取消代理</title>
+    <link href="http://ted423.github.io/Code/Git/git%20proxy/"/>
+    <id>http://ted423.github.io/Code/Git/git%20proxy/</id>
+    <published>2026-01-07T10:52:47.035Z</published>
+    <updated>2026-01-19T13:45:28.409Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy socks5://127.0.0.1:7890</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --get http.proxy</span><br></pre></td></tr></table></figure><p>吐槽下git的升级连续用了3个裸IP</p><p>https那个没用</p><hr><p>似乎可能Win下cmd里用就是会解析成IP丢到代理里(</p><h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><p>另外需要注意，git 协议走 ssh,需要 ssh 代理以及 ssh key</p><p>Github Desktop 对 ssh key 的支持并不好，它的官方教程让设置 passphrase,因此每次使用都要输入，但它自己的客户端不支持并且会每次都报错 -<time datetime=2025-01-08>2025-01-08</time></p><p>下面是 Win 的配置,config 文件需要自己新建出来，key 的话，放在那里不用特意写配置</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ProxyCommand connect -S 127.0.0.1:7890 -a none %h %p</span><br><span class="line"></span><br><span class="line">Host github.com</span><br><span class="line">  User git</span><br><span class="line">  Port 22</span><br><span class="line">  Hostname github.com</span><br><span class="line">  TCPKeepAlive yes</span><br><span class="line"></span><br><span class="line">Host ssh.github.com</span><br><span class="line">  User git</span><br><span class="line">  Port 443</span><br><span class="line">  Hostname ssh.github.com</span><br><span class="line">  TCPKeepAlive yes</span><br></pre></td></tr></table></figure><h1 id="临时使用"><a href="#临时使用" class="headerlink" title="临时使用"></a>临时使用</h1><p>注意哈，这里没有写错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -c http.proxy=socks5h://127.0.0.1:13222 &lt;url&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h1&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;s</summary>
+      
+    
+    
+    
+    <category term="Git" scheme="http://ted423.github.io/categories/Git/"/>
+    
+    
+    <category term="Proxy" scheme="http://ted423.github.io/tags/Proxy/"/>
+    
+    <category term="Git" scheme="http://ted423.github.io/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Github-Destop 下 Gist 的 commit 问题</title>
@@ -563,50 +613,6 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="AD(Active Directory)" scheme="http://ted423.github.io/tags/AD-Active-Directory/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://ted423.github.io/Code/Git/git_reset_local/"/>
-    <id>http://ted423.github.io/Code/Git/git_reset_local/</id>
-    <published>2025-08-25T02:32:54.475Z</published>
-    <updated>2025-08-23T11:25:58.000Z</updated>
-    
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows Update:0x80246017</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/0x80246017/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/0x80246017/</id>
-    <published>2025-08-05T07:24:42.238Z</published>
-    <updated>2025-08-05T07:32:40.269Z</updated>
-    
-    <content type="html"><![CDATA[<p>神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。</p><p>这个报错是新装的纯净系统之后出现的，服务里的<code>Background Intelligent service</code>是手动且没运行，改成自动并手动启动之后就正常了</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。&lt;/p&gt;
-&lt;p&gt;这个报错是新装的纯净系统之后出现的，服务里的&lt;code&gt;Background Intelligent service&lt;/code&gt;是</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 11" scheme="http://ted423.github.io/tags/Windows-11/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
     
   </entry>
   
