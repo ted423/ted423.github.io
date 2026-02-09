@@ -26,6 +26,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="https:&#x2F;&#x2F;github.com&#x2F;mcmilk&#x2F;7-Zip-zstd之前某个群吐槽问7z是不是还是VC6编译，别人给的不会覆盖掉原版的7z总之不错。虽然还没详细用到我能推翻之前的结论另外可以说幸运或者不幸的是，新加的那些算法我试了，最高压缩率下都不够LZMA2打的，也可能部分文件特性下有优势？但反正不用更换使用即可  不幸的 见Issue -2024-10-10  似乎又活了 -2025-04">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
 <meta property="article:published_time" content="2023-12-31T16:00:00.000Z">
 <meta property="article:modified_time" content="2025-04-23T02:26:56.127Z">
 <meta property="article:author" content="ted423">
@@ -34,25 +35,37 @@
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="开源(Open Source)">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ted423.github.io/img/favicon.svg">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
+  <!-- JSON-LD 结构化数据 -->
+  
+  
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"[开源]7-Zip-zstd 7z增强版","description":"https://github.com/mcmilk/7-Zip-zstd之前某个群吐槽问7z是不是还是VC6编译，别人给的不会覆盖掉原版的7z总之不错。虽...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2023-12-31T16:00:00.000Z","dateModified":"2025-04-23T02:26:56.127Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Software/Compression/7-Zip-zstd/"}}
+    </script>
+  
+  <!-- 关键 CSS 预加载 -->
+  <link rel="preload" href="/css/kr-core.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/kr-theme/light.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/kr-theme/dark.min.css" as="style" crossorigin>
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all">
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all">
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)">
   
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+    <link rel="stylesheet"  id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/css/highlight/highlight.js/night-eighties.min.css"></noscript>
   
-  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
-  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
   <script src="/js/kr-theme.min.js"></script>
-  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  <link rel="stylesheet"  id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
   
-    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+    <link rel="stylesheet"  id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/nprogress@0.2.0/nprogress.css"></noscript>
   
   
-    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+    <link rel="stylesheet"  href="/vendors/viewerjs@1.11.6/dist/viewer.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></noscript>
   
-  <!-- 不得不预先加载的一些JS文件 -->
+  <!-- 预先加载的JS文件 -->
   
     <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
   
@@ -334,6 +347,8 @@
         </div>
         <div class="kr-tool text-center">
             <div class="tool">
+                <!-- 额外的追加注入项 -->
+                
                 
                     <div class="box search-box">
                         <a href="/search">

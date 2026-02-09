@@ -26,7 +26,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程https:&#x2F;&#x2F;nguvu.org&#x2F;freenas&#x2F;Convert-LSI-HBA-card-to-IT-mode&#x2F; 主要步骤rufus写Freedos到USB盘 Copy the following three files from your downl">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://nguvu.org/images/160130-rufus_boot_USB.png">
+<meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
 <meta property="article:published_time" content="2022-04-13T03:53:00.000Z">
 <meta property="article:modified_time" content="2025-03-16T12:50:55.000Z">
 <meta property="article:author" content="ted423">
@@ -34,26 +34,37 @@
 <meta property="article:tag" content="Driver&amp;Firmware">
 <meta property="article:tag" content="Hardware">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://nguvu.org/images/160130-rufus_boot_USB.png">
+<meta name="twitter:image" content="http://ted423.github.io/img/favicon.svg">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
+  <!-- JSON-LD 结构化数据 -->
+  
+  
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"记一次Raid卡固件升级(刷IT mode)","description":"当时是发现看不到硬盘SN号，经胖哥等一众大佬提醒是Riad卡固件老的问题，并且还直接根据Raid卡型号 LSI 9211-8i 给了我相应的教程htt...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2022-04-13T03:53:00.000Z","dateModified":"2025-03-16T12:50:55.000Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Hardware/9211-8i/"}}
+    </script>
+  
+  <!-- 关键 CSS 预加载 -->
+  <link rel="preload" href="/css/kr-core.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/kr-theme/light.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/kr-theme/dark.min.css" as="style" crossorigin>
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all">
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all">
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)">
   
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+    <link rel="stylesheet"  id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/css/highlight/highlight.js/night-eighties.min.css"></noscript>
   
-  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
-  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
   <script src="/js/kr-theme.min.js"></script>
-  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  <link rel="stylesheet"  id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
   
-    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+    <link rel="stylesheet"  id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/nprogress@0.2.0/nprogress.css"></noscript>
   
   
-    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+    <link rel="stylesheet"  href="/vendors/viewerjs@1.11.6/dist/viewer.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></noscript>
   
-  <!-- 不得不预先加载的一些JS文件 -->
+  <!-- 预先加载的JS文件 -->
   
     <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
   
@@ -346,6 +357,8 @@
         </div>
         <div class="kr-tool text-center">
             <div class="tool">
+                <!-- 额外的追加注入项 -->
+                
                 
                     <div class="box search-box">
                         <a href="/search">

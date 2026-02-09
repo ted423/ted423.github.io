@@ -26,6 +26,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动。 因为最新的电脑基本不再支持 IDE，所以下面的内容仅供参考，顶多就是一些电脑默认是 RAID 模式可能会有用，不过预装系统一般是 Home 版，通常建议改模式之后重装就好。 系统应该默认不包含 RAID 的驱动（非 OEM 系统）--2025-11-20 Services 里 Start 的 0的值应该是启用的意思，AHCI跟IDE驱">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
 <meta property="article:published_time" content="2016-01-14T10:56:00.000Z">
 <meta property="article:modified_time" content="2016-01-14T10:56:00.000Z">
 <meta property="article:author" content="ted423">
@@ -36,25 +37,37 @@
 <meta property="article:tag" content="Regedit">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ted423.github.io/img/favicon.svg">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
+  <!-- JSON-LD 结构化数据 -->
+  
+  
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"[问题处理]硬盘模式更改(RAID、AHCI、IDE)注意事项，避免蓝屏","description":"不改注册表直接改硬盘模式会造成蓝屏，因为系统不会加载相应驱动。\n因为最新的电脑基本不再支持 IDE，所以下面的内容仅供参考，顶多就是一些电脑默认是 RAID 模式可能会有用，不过预装系统一般是 Home 版，通常建议改模式之后重装就好。\n系统应该默认不包含 R...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2016-01-14T10:56:00.000Z","dateModified":"2016-01-14T10:56:00.000Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Hardware/%E7%A1%AC%E7%9B%98%E6%A8%A1%E5%BC%8F%E6%9B%B4%E6%94%B9/"}}
+    </script>
+  
+  <!-- 关键 CSS 预加载 -->
+  <link rel="preload" href="/css/kr-core.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/kr-theme/light.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/kr-theme/dark.min.css" as="style" crossorigin>
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all">
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all">
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)">
   
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+    <link rel="stylesheet"  id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/css/highlight/highlight.js/night-eighties.min.css"></noscript>
   
-  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
-  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
   <script src="/js/kr-theme.min.js"></script>
-  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  <link rel="stylesheet"  id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
   
-    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+    <link rel="stylesheet"  id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/nprogress@0.2.0/nprogress.css"></noscript>
   
   
-    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+    <link rel="stylesheet"  href="/vendors/viewerjs@1.11.6/dist/viewer.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></noscript>
   
-  <!-- 不得不预先加载的一些JS文件 -->
+  <!-- 预先加载的JS文件 -->
   
     <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
   
@@ -366,6 +379,8 @@
         </div>
         <div class="kr-tool text-center">
             <div class="tool">
+                <!-- 额外的追加注入项 -->
+                
                 
                     <div class="box search-box">
                         <a href="/search">

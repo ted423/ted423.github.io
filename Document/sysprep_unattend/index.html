@@ -26,34 +26,44 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="C:\Windows\System32\Sysprep\sysprep.exe 对于系统封装来说，特别是需要批量部署镜像的地方，无人值守自动应答文件还是蛮重要的。 不然你装个系统就听小娜叨叨一次，设置半天，烦都要烦死了。 无人值守最大的价值就在于跳过OOBE,其次就在于本地账户的预设置和一些设置的调整。 不过目前感觉作用不大，因为系统更新很频繁，软件更新也很频繁。软件封进去半年全更新一遍跟全重装一">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://ted423.github.io/img/sysprep_unattend.png">
-<meta property="og:image" content="http://ted423.github.io/img/sysprep_unattend1.png">
+<meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
 <meta property="article:published_time" content="2019-06-11T07:49:00.000Z">
 <meta property="article:modified_time" content="2025-11-21T09:15:39.441Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Document">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://ted423.github.io/img/sysprep_unattend.png">
+<meta name="twitter:image" content="http://ted423.github.io/img/favicon.svg">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
+  <!-- JSON-LD 结构化数据 -->
+  
+  
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"[封装]Windows 无人值守自动应答文件(unattend)xml相关(Sysprep Unattend)","description":"C:\\Windows\\System32\\Sysprep\\sysprep.exe\n对于系统封装来说，特别是需要批量部署镜像的地方，无人值守自动应答文件还是蛮重要的。\n不然你装个系统就听小娜叨叨一次，设置半天，烦都要烦死了。\n","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2019-06-11T07:49:00.000Z","dateModified":"2025-11-21T09:15:39.441Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Document/sysprep_unattend/"}}
+    </script>
+  
+  <!-- 关键 CSS 预加载 -->
+  <link rel="preload" href="/css/kr-core.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/kr-theme/light.min.css" as="style" crossorigin>
+  <link rel="preload" href="/css/kr-theme/dark.min.css" as="style" crossorigin>
   <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all">
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all">
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)">
   
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+    <link rel="stylesheet"  id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/css/highlight/highlight.js/night-eighties.min.css"></noscript>
   
-  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
-  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
   <script src="/js/kr-theme.min.js"></script>
-  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  <link rel="stylesheet"  id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css"></noscript>
   
-    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+    <link rel="stylesheet"  id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/nprogress@0.2.0/nprogress.css"></noscript>
   
   
-    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+    <link rel="stylesheet"  href="/vendors/viewerjs@1.11.6/dist/viewer.min.css" media="print" onload="this.media='all'" onerror="this.media='all'"><noscript><link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></noscript>
   
-  <!-- 不得不预先加载的一些JS文件 -->
+  <!-- 预先加载的JS文件 -->
   
     <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
   
@@ -342,6 +352,8 @@
         </div>
         <div class="kr-tool text-center">
             <div class="tool">
+                <!-- 额外的追加注入项 -->
+                
                 
                     <div class="box search-box">
                         <a href="/search">
