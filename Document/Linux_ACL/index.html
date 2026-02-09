@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
 <meta property="article:published_time" content="2025-01-10T06:46:24.174Z">
-<meta property="article:modified_time" content="2025-04-17T02:17:41.479Z">
+<meta property="article:modified_time" content="2026-02-09T09:46:37.341Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Document">
 <meta property="article:tag" content="Linux">
@@ -41,7 +41,7 @@
   
   
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","headline":"不用 ACL, Linux 的权限管理是一坨","description":"集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。\nLinux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。\n之前比较年轻，以为只是主组和副组，但实际操作...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2025-01-10T06:46:24.174Z","dateModified":"2025-04-17T02:17:41.479Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Document/Linux_ACL/"}}
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"不用 ACL, Linux 的权限管理是一坨","description":"集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。\nLinux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。\n之前比较年轻，以为只是主组和副组，但实际操作...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2025-01-10T06:46:24.174Z","dateModified":"2026-02-09T09:46:37.341Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Document/Linux_ACL/"}}
     </script>
   
   <!-- 关键 CSS 预加载 -->
@@ -172,7 +172,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1239
+                            1340
                         
                         字
                     </li>
@@ -204,12 +204,15 @@
 <h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/">https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/</a></p>
 <h1 id="Default"><a href="#Default" class="headerlink" title="Default"></a>Default</h1><p>Default Policy 是继承 ACE(Access Control Entry),只能作用于目录。 会在设置任意 Default Policy 之后出现默认的user、group、other、mask条目，可以用<code>setfacl -k</code>全部清除。但 nfs4 无此命令，你只能到存储上操作。</p>
 <p>通常你设置 ACL 只能对已有的条目生效，如果要新文件也生效，就要设 Default Policy</p>
-<p><strong>注意 Default Policy 不会影响<code>cp</code>和<code>mv</code>进目录的文件</strong></p>
-<h1 id="POSIX-ACLs"><a href="#POSIX-ACLs" class="headerlink" title="POSIX ACLs"></a>POSIX ACLs</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setfacl -R -m group:groupname:r-x path</span><br><span class="line">setfacl -m default:group:groupname:r-x path</span><br></pre></td></tr></table></figure>
+<p><strong>注意 Default Policy 不会影响<code>cp</code>和<code>mv</code>进目录的文件</strong>(? 可能之前理解有问题，待验证)</p>
+<h1 id="POSIX-ACLs"><a href="#POSIX-ACLs" class="headerlink" title="POSIX ACLs"></a>POSIX ACLs</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setfacl -R -m group:groupname:r-x path</span><br><span class="line">setfacl -m default:group:groupname:r-x path</span><br></pre></td></tr></table></figure>
+
+<p>删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setfacl -R -x default:group:groupname path</span><br></pre></td></tr></table></figure>
 <p>其中 groupname 是可以更改的组名</p>
 <p>文档</p>
 <p><a target="_blank" rel="noopener" href="https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html">https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html</a></p>
-<h1 id="NFSv4-ACL"><a href="#NFSv4-ACL" class="headerlink" title="NFSv4 ACL"></a>NFSv4 ACL</h1><p>NFSv4 ACL 配置时只支持组id，该命令直接提交到 nfs server,故只要在一台上面跑就好</p>
+<h1 id="NFSv4-ACL"><a href="#NFSv4-ACL" class="headerlink" title="NFSv4 ACL"></a>NFSv4 ACL</h1><p>NFSv4 ACL 配置时只支持组id，该命令直接提交到 nfs server,故只要在一台上面跑就好，NFSv4 ACL 会跟 服务器端的 POSIX ACL 做自动转换。</p>
 <p>可以通过</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getent group groupname</span><br></pre></td></tr></table></figure>
 <p>获取组id</p>
@@ -240,7 +243,7 @@
                     <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-04-17T02:17:41.479Z" itemprop="dateModified">最后编辑：2025-04-17</time>
+                    <time datetime="2026-02-09T09:46:37.341Z" itemprop="dateModified">最后编辑：2026-02-09</time>
                 </div>
             </div>
         </footer>
