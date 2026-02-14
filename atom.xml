@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-02-04T08:58:22.021Z</updated>
+  <updated>2026-02-14T15:36:51.448Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]可能是新式待机状态造成的问题</title>
+    <link href="http://ted423.github.io/Issue/%E6%96%B0%E5%BC%8F%E5%BE%85%E6%9C%BA%E7%8A%B6%E6%80%81/"/>
+    <id>http://ted423.github.io/Issue/%E6%96%B0%E5%BC%8F%E5%BE%85%E6%9C%BA%E7%8A%B6%E6%80%81/</id>
+    <published>2026-02-14T14:34:56.009Z</published>
+    <updated>2026-02-14T15:36:51.448Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="官方解释"><a href="#官方解释" class="headerlink" title="官方解释"></a>官方解释</h1><p><a href="https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/modern-standby-states">https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/modern-standby-states</a></p><h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><ol><li>目前笔记本默认都是 S0(Modern Standby)，也叫低电量待机，大多数新笔记本默认都不支持传统的 S3 模式了。<code>powercfg /a</code> 可查</li><li>台式机看起来都支持，不过在系统配置中，支持 S0，就会默认禁用 S3。</li><li>我手动直接关闭了 S0:<code>reg add &quot;HKLM\System\CurrentControlSet\Control\Power&quot; /v PlatformAoAcOverride /t REG_DWORD /d 0 /f</code></li></ol><h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1><p>笔记本合上盖子，在部分情况下，无法重新开机，开机后完全电源键闪几下后完全全新启动。</p><p>尝试关闭睡眠，设置不进入睡眠，开启休眠都无效。</p><p>日志里可以看到电脑进入 S0。</p><p>按前面的彻底关闭 S0 (由于笔记本不支持 S3)，导致睡眠完全消失，作为替代，只使用休眠。</p><h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>实际上笔记本睡眠后起不来是一个长期以来的问题，同型号，同硬件，有的有有的没有。从 Win7 时代就开始了。</p><p>只是目前没法判断是硬件问题还是微软的锅。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;官方解释&quot;&gt;&lt;a href=&quot;#官方解释&quot; class=&quot;headerlink&quot; title=&quot;官方解释&quot;&gt;&lt;/a&gt;官方解释&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://learn.microsoft.com/zh-cn/windows-hardware/de</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]Powershell7的右键菜单奇怪行为</title>
@@ -558,40 +584,6 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记书签方面的一些纠结</title>
-    <link href="http://ted423.github.io/Software/Notes/"/>
-    <id>http://ted423.github.io/Software/Notes/</id>
-    <published>2025-09-15T15:43:42.088Z</published>
-    <updated>2025-09-15T13:46:10.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>一些记录在 <a href="/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B">选型</a></p><p>其实还用过 Onenote，谷歌的东西，Edge的集锦。</p><h1 id="Linkding-试用笔记"><a href="#Linkding-试用笔记" class="headerlink" title="Linkding 试用笔记"></a>Linkding 试用笔记</h1><p><a href="https://linkding.link/">https://linkding.link</a></p><p><a href="https://github.com/sissbruecker/linkding">https://github.com/sissbruecker/linkding</a></p><p>一开始的想法是我想要个能 tag 分类还能记笔记的书签。</p><p>前面也想用 notion 替代，但是 notion 现在把历史记录也给收缩了。</p><p>但现在发现了几个问题</p><ol><li>界面不太直观，原来有文件夹做大分类，现在只有 tag，并且只按字母顺序排列，如果有主 tag 和 次 tag 可能会好很多。</li><li>没有日期记录</li><li>原生书签跟浏览器集成很好，Vivaldi 的新标签也很美观，在 Linkding 没有很强功能性的情况下不是特别必要。</li></ol><h1 id="Notion-问题"><a href="#Notion-问题" class="headerlink" title="Notion 问题"></a>Notion 问题</h1><ul><li>贴进去一段代码，结果自动给你把字符改了，双引号改中文字符，自动双倍*号。还有别的乱七八糟的改动。</li><li>各种模板过于细化，导致门槛太高。</li><li>现在历史版本要花钱才能看了，对我来说相当不方便</li></ul><h1 id="Trilium-Notes"><a href="#Trilium-Notes" class="headerlink" title="Trilium Notes"></a>Trilium Notes</h1><p>Docker Image 最后更新是一年，个人感觉这种属于维护者意愿降低。</p><h1 id="Joplin"><a href="#Joplin" class="headerlink" title="Joplin"></a>Joplin</h1><p>这个插件只会截取网页内容，没法像 Notion 一样同时记录 网页网址。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;一些记录在 &lt;a href=&quot;/etc/%E8%AE%B0%E4%B8%80%E6%AC%A1AI%E9%80%89%E5%9E%8B&quot;&gt;选型&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;其实还用过 Onenote，谷歌的东西，Edge的集锦。&lt;/p&gt;
-&lt;h1 id=&quot;Linkding-试用笔记</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="defect" scheme="http://ted423.github.io/tags/defect/"/>
-    
-    <category term="Web Service" scheme="http://ted423.github.io/tags/Web-Service/"/>
     
   </entry>
   
