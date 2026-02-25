@@ -7,8 +7,8 @@
     <link rel="icon" href="/img/favicon.svg">
   
   
-  <title>在 Linux 下如何强制取消挂载(umount) NFS 目录 | 个人小站</title>
-  <link rel="canonical" href="http://ted423.github.io/Code/Terminal/umount%20-lf/">
+  <title>[shell]符号链接/软连接 | 个人小站</title>
+  <link rel="canonical" href="http://ted423.github.io/Code/Terminal&Shell&Command/Symlink/">
   <meta name="author" content="ted423" />
   <meta http-equiv="Cache-Control" content="no-transform" />
   <meta http-equiv="Cache-Control" content="no-siteapp" />
@@ -17,23 +17,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <meta name="format-detection" content="telphone=no, email=no" />
   
-    <meta name="keywords" content="Code, Document, Linux, Terminal" />
+    <meta name="keywords" content="Code, Terminal&Shell&Command, Windows" />
   
-  <meta name="description" content="这种情况下可以考虑lazy umount即 umount -lf 路径lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。请注意，该方法并不是完全安全的 另外可以参考下https:&#x2F;&#x2F;blog.miniasp.com&#x2F;post&#x2F;2008&#x2F;10&#x2F;20&#x2F;How-to-unmount-NFS-directory-under-Linux-when-hanging不过个人很久之前">
+  <meta name="description" content="另见软件PasteLink http:&#x2F;&#x2F;zh.wikipedia.org&#x2F;wiki&#x2F;NTFS符号链接 Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接 1New-Item -Path &quot;target&quot; -ItemType SymbolicLink -Value &quot;Source&quot; 当然，New-Item这个命令还能用来创">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在 Linux 下如何强制取消挂载(umount) NFS 目录">
-<meta property="og:url" content="http://ted423.github.io/Code/Terminal/umount%20-lf/index.html">
+<meta property="og:title" content="[shell]符号链接&#x2F;软连接">
+<meta property="og:url" content="http://ted423.github.io/Code/Terminal&Shell&Command/Symlink/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="这种情况下可以考虑lazy umount即 umount -lf 路径lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。请注意，该方法并不是完全安全的 另外可以参考下https:&#x2F;&#x2F;blog.miniasp.com&#x2F;post&#x2F;2008&#x2F;10&#x2F;20&#x2F;How-to-unmount-NFS-directory-under-Linux-when-hanging不过个人很久之前">
+<meta property="og:description" content="另见软件PasteLink http:&#x2F;&#x2F;zh.wikipedia.org&#x2F;wiki&#x2F;NTFS符号链接 Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接 1New-Item -Path &quot;target&quot; -ItemType SymbolicLink -Value &quot;Source&quot; 当然，New-Item这个命令还能用来创">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
-<meta property="article:published_time" content="2022-03-25T10:09:00.000Z">
-<meta property="article:modified_time" content="2022-03-27T13:43:14.000Z">
+<meta property="article:published_time" content="2020-01-04T03:52:00.000Z">
+<meta property="article:modified_time" content="2020-01-04T03:52:00.000Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Code">
-<meta property="article:tag" content="Document">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Terminal">
+<meta property="article:tag" content="Terminal&amp;Shell&amp;Command">
+<meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://ted423.github.io/img/favicon.svg">
   
@@ -43,7 +42,7 @@
   
   
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","headline":"在 Linux 下如何强制取消挂载(umount) NFS 目录","description":"这种情况下可以考虑lazy umount即 umount -lf 路径lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。请注意，该方法并不是完全安全的\n另外可以...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2022-03-25T10:09:00.000Z","dateModified":"2022-03-27T13:43:14.000Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Code/Terminal/umount%20-lf/"}}
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"[shell]符号链接/软连接","description":"另见软件PasteLink\nhttp:/...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2020-01-04T03:52:00.000Z","dateModified":"2020-01-04T03:52:00.000Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Code/Terminal&Shell&Command/Symlink/"}}
     </script>
   
   <!-- 关键 CSS 预加载 -->
@@ -158,14 +157,14 @@
         
 
             <article itemscope itemtype="https://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/Terminal/umount%20-lf/">
+    <link itemprop="mainEntityOfPage" href="http://ted423.github.io/Code/Terminal&amp;Shell&amp;Command/Symlink/">
     <div class="kratos-hentry kratos-page-inner clearfix">
         <header class="kratos-page-header">
             
-                <h1 class="kratos-page-title text-center" itemprop="name headline">在 Linux 下如何强制取消挂载(umount) NFS 目录</h1>
+                <h1 class="kratos-page-title text-center" itemprop="name headline">[shell]符号链接/软连接</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2022-03-25T10:09:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2022-03-25</time></li>
+                <li><time datetime="2020-01-04T03:52:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2020-01-04</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -174,7 +173,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            216
+                            ~1.51K
                         
                         字
                     </li>
@@ -193,8 +192,55 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>这种情况下可以考虑lazy umount<br>即 <code>umount -lf 路径</code><br>lazy umount是针对busy而提出的，即可以卸载“busy”的文件系统。<br><strong>请注意，该方法并不是完全安全的</strong></p>
-<p>另外可以参考下<a target="_blank" rel="noopener" href="https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging">https://blog.miniasp.com/post/2008/10/20/How-to-unmount-NFS-directory-under-Linux-when-hanging</a><br>不过个人很久之前弄得，不记得当时有没用这个方式</p>
+            <div itemprop="articleBody"><p>另见<a href="/Software/PasteLink.md">软件PasteLink</a></p>
+<p><a target="_blank" rel="noopener" href="http://zh.wikipedia.org/wiki/NTFS%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5">http://zh.wikipedia.org/wiki/NTFS符号链接</a></p>
+<p>Windows 10 可以再PowerShell里使用 New-Item 创建软硬连接</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New-Item -<span class="built_in">Path</span> &quot;target&quot; -ItemType SymbolicLink -Value &quot;Source&quot;</span><br></pre></td></tr></table></figure>
+<p>当然，New-Item这个命令还能用来创建文件或文件夹啥的<br>硬链接就写HardLink，具体见文档</p>
+<p>官方文档<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-6">https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-6</a></p>
+<hr>
+<p>示例 <code>mklink /j &quot;1.link&quot; &quot;D:\XX&quot;</code></p>
+<p>这样就会生成一个XX文件夹的目录联接</p>
+<p><strong>创建目录联结不需要管理员权限，符号链接和硬链接是需要的</strong></p>
+<p>NTFS符号链接（Symbolic Link），又稱符號連結，是NTFS文件系统中指向文件系统中的另一个对象的一类对象。被指向的对象叫做“目标”。它们可以像普通文件一样操作，但所有对符号链接的操作都实际作用于目标对象。符号链接对用户而言是透明的，符号链接看上去和普通的文件和文件夹没有区别，操作方法也一模一样。NTFS符号链接的设计目的是为了和POSIX标准的操作系统兼容、並用來增進與舊版作業系統的相容性，它首次出现于Windows Vista。</p>
+<p>与Windows 2000开始就有的NTFS连接点不同，符号链接既可以指向本地文件，也可以指向远程SMB网络路径。NTFS连接点只支持本地驱动器的绝对路径，但NTFS符号链接允许使用相对路径。还有，NTFS符号链接允许跨文件系统使用，但是对于跨主机的符号链接，还需要远程机器也支持这一功能才行。</p>
+<p>mklink [[&#x2F;D] | [&#x2F;H] | [&#x2F;J]] link target</p>
+<pre><code>/D –创建指向目录的符号链接，如果不指定此参数，默认为创建文件符号链接。
+/H –创建硬链接（Hardlink），或稱永久連結。
+/J –创建软链接（目录联接）。
+link –指定符号链接的名字
+target –指定符号链接指向的对象的路径（相对或绝对皆可）。
+</code></pre>
+<p>注释<br>符号链接（Symbolic link）</p>
+<ul>
+<li>执行命令 mklink link_name target_name</li>
+<li>创建链接后的图标和快捷方式很像</li>
+<li>在系统中不占用空间</li>
+<li>在文件系统中不是一个单独的文件</li>
+<li>如果源文件被删除了，链接就没用了</li>
+<li>移除源文件不会影响符号链接(只是符号链接也失去了作用而已)</li>
+<li>移除链接文件也不会影响源文件</li>
+</ul>
+<p>硬链接（Hard link）</p>
+<ul>
+<li>在系统中占用的空间与源文件相同，但在系统中引用的是相同的对象（不是拷贝）</li>
+<li>图标和创建快捷方式的图标不同</li>
+<li>移除源文件不会影响硬链接</li>
+<li>移除硬链接不会影响源文件</li>
+<li>如果源文件被删除，它的内容依然通过硬链接存在</li>
+<li>硬链接文件的任何更改都会影响到源文件(反之亦然)</li>
+</ul>
+<p>和普通文件一样，删除符号链接也可以使用del命令，具体语法如下：</p>
+<p>del filename</p>
+<pre><code>filename –要被删除的符号链接的名字
+</code></pre>
+<p>和普通目錄（資料夾）一样，删除目錄符号链接也可以使用rd命令，具体语法如下：</p>
+<p>rd directoryname</p>
+<pre><code>directoryname –要被删除的符号链接的名字
+</code></pre>
+<p>需要提升為管理員權限才能建立符號連結。</p>
+<hr>
+<p><time>2020-01-04</time> 增加Windows 10相关</p>
 </div>
         </div>
         
@@ -212,10 +258,10 @@
             <div class="footer-tag clearfix">
                 <div class="pull-left">
                 <i class="fa fa-tags"></i>
-                    <a class="tag-none-link" href="/tags/Code/" rel="tag">Code</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Terminal/" rel="tag">Terminal</a>
+                    <a class="tag-none-link" href="/tags/Code/" rel="tag">Code</a>, <a class="tag-none-link" href="/tags/Terminal-Shell-Command/" rel="tag">Terminal&Shell&Command</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2022-03-27T13:43:14.000Z" itemprop="dateModified">最后编辑：2022-03-27</time>
+                    <time datetime="2020-01-04T03:52:00.000Z" itemprop="dateModified">最后编辑：2020-01-04</time>
                 </div>
             </div>
         </footer>
@@ -224,19 +270,19 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" [优化]Windows Server 打开任务管理器磁盘监控" href="/Optimization/Server-任务管理器-磁盘/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" 关闭打开文件的安全警告 不提示 这些文件可能对你的计算机有害" href="/Issue/Group Policy/关闭打开文件的安全警告/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
             
             <div class="nav-next clearfix">
-                <a title=" Windows 路由相关" href="/Document/Network/Windows-ip-route/">下一篇 <i class="fa fa-angle-right"></i></a>
+                <a title=" 【GSC】不起眼女主角培育法 霞之丘詩羽 1/7 PVC FIgure" href="/Picture&Photo&Image/手办/霞之丘诗羽/">下一篇 <i class="fa fa-angle-right"></i></a>
             </div>
             
         </nav>
     
     
         <div class="comment-post">
-            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Code/Terminal/umount%20-lf/" data-full-path="http://ted423.github.io/Code/Terminal/umount%20-lf/"></div>
+            <div id="disqus_thread" class="kr-comments lazy-load" data-path="/Code/Terminal&Shell&Command/Symlink/" data-full-path="http://ted423.github.io/Code/Terminal&Shell&Command/Symlink/"></div>
         </div>
     
 </article>
@@ -286,7 +332,7 @@
                 标签
             </span>
             <span class="count">
-                153
+                154
             </span>
         </a>
     </div>
