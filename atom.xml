@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-03-06T15:42:21.654Z</updated>
+  <updated>2026-03-25T09:44:03.254Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</title>
+    <link href="http://ted423.github.io/Issue/python-win/"/>
+    <id>http://ted423.github.io/Issue/python-win/</id>
+    <published>2026-03-21T09:18:59.213Z</published>
+    <updated>2026-03-25T09:44:03.254Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单说就是Win10在<code>C:\Users\XX\AppData\Local\Microsoft\WindowsApps</code>下放了两个0kb的<code>python.exe</code>以及<code>python3.exe</code>用于弹 Windows Store，并把这个路径加到了个人的环境变量。</p><p>而且这个环境变量优先级高所以会优先运行。</p><p>傻逼微软。</p><p>资源管理器里似乎删不掉，要命令行删</p><p>这个叫应用执行别名，可以在设置里关闭。并且没有任何命令行关闭的方式</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;简单说就是Win10在&lt;code&gt;C:&#92;Users&#92;XX&#92;AppData&#92;Local&#92;Microsoft&#92;WindowsApps&lt;/code&gt;下放了两个0kb的&lt;code&gt;python.exe&lt;/code&gt;以及&lt;code&gt;python3.exe&lt;/code&gt;用于弹 Wind</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
   
   <entry>
     <title>动态链路聚合 - LACP - IEEE 802.3ad</title>
@@ -558,38 +584,6 @@
     <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
     
     <category term="建设中" scheme="http://ted423.github.io/tags/%E5%BB%BA%E8%AE%BE%E4%B8%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[文本编辑器] Notepad4</title>
-    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad4/"/>
-    <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad4/</id>
-    <published>2025-10-23T16:36:51.894Z</published>
-    <updated>2025-10-23T16:46:54.962Z</updated>
-    
-    <content type="html"><![CDATA[<p>4 其实也是继承 notepad2, 又名Notepad2⨯2, Notepad2++，国人开发。甚至原生做了简繁转换的功能。</p><p>可惜代码格式化这块似乎没做完。</p><p><a href="https://github.com/zufuliu/notepad4/issues/614#issuecomment-2088217105">https://github.com/zufuliu/notepad4/issues/614#issuecomment-2088217105</a></p><p>3 其实也还在维护</p><p><a href="https://github.com/zufuliu/notepad4">https://github.com/zufuliu/notepad4</a></p><p>release 有点猛</p><p>就是只有便携版，没有安装包。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;4 其实也是继承 notepad2, 又名Notepad2⨯2, Notepad2++，国人开发。甚至原生做了简繁转换的功能。&lt;/p&gt;
-&lt;p&gt;可惜代码格式化这块似乎没做完。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/zufuliu/notepad</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="3-clause BSD license" scheme="http://ted423.github.io/tags/3-clause-BSD-license/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
     
   </entry>
   
