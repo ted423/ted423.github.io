@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-03-25T09:44:03.254Z</updated>
+  <updated>2026-06-16T07:00:44.530Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pnpm 不在本地使用软连接的配置</title>
+    <link href="http://ted423.github.io/Code/pnpm/"/>
+    <id>http://ted423.github.io/Code/pnpm/</id>
+    <published>2026-06-16T06:54:02.110Z</published>
+    <updated>2026-06-16T07:00:44.530Z</updated>
+    
+    <content type="html"><![CDATA[<p>需要</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node-linker=hoisted</span><br></pre></td></tr></table></figure><p>可以写到 .npmrc</p><p>不过我是全局 <code>pnpm config set node-linker hoisted</code>，虽然 AI 告诉我这个违背了 pnpm 的初衷。</p><p>我目前不了解这个概念 幻影依赖（Phantom Dependencies）。hoisted 会有这个问题。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;需要&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="npm" scheme="http://ted423.github.io/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</title>
@@ -552,36 +579,6 @@
     <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
     
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ububtu Server 踩坑笔记</title>
-    <link href="http://ted423.github.io/Linux/Ubuntu_Server_%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/"/>
-    <id>http://ted423.github.io/Linux/Ubuntu_Server_%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/</id>
-    <published>2025-11-20T16:00:00.000Z</published>
-    <updated>2025-11-20T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Ubuntu Desktop 用的 NetworkManager，个人不太喜欢就想尝试下 Server，Ubuntu Server 用的 systemd-networkd.</p><ol><li>Win Server DHCP 的兼容性问题，ipv4 也会 DUID 优先，而 Linux 系的可以处理好，只接受 MAC(未经查证)。</li><li>默认查到的都告诉你改 Nekworkd 配置，而实际上 Ubuntu 用 Netplan，改相关配置是没用的。</li><li>Ubuntu Server 默认 Netplan 配置不写 renderer，而必须要<code>renderer: networkd</code>，才能<code>dhcp-identifier: mac</code></li><li>Ubuntu 的桌面默认都带 NetworkManager，不过因为renderer，是写好的，应该问题不大，不过保险起见，不装为好。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Ubuntu Desktop 用的 NetworkManager，个人不太喜欢就想尝试下 Server，Ubuntu Server 用的 systemd-networkd.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Win Server DHCP 的兼容性问题，ipv4 也会 DUID 优</summary>
-      
-    
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Ubuntu" scheme="http://ted423.github.io/tags/Ubuntu/"/>
     
   </entry>
   
