@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-06-16T07:00:44.530Z</updated>
+  <updated>2026-07-27T08:25:20.187Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开源文件清理工具 - FluentCleaner</title>
+    <link href="http://ted423.github.io/Software/FluentCleaner/"/>
+    <id>http://ted423.github.io/Software/FluentCleaner/</id>
+    <published>2026-07-27T08:21:58.011Z</published>
+    <updated>2026-07-27T08:25:20.187Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/builtbybel/FluentCleaner">https://github.com/builtbybel/FluentCleaner</a></p><p>感觉挺不错的，还没试是否支持自定义路径</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/builtbybel/FluentCleaner&quot;&gt;https://github.com/builtbybel/FluentCleaner&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;感觉挺不错的，还没试是否支持自定义路径&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Maintenance" scheme="http://ted423.github.io/tags/Maintenance/"/>
+    
+  </entry>
   
   <entry>
     <title>pnpm 不在本地使用软连接的配置</title>
@@ -414,19 +446,19 @@
   </entry>
   
   <entry>
-    <title>开源文件清理工具 - BleachBit</title>
+    <title>[不再推荐]开源文件清理工具 - BleachBit</title>
     <link href="http://ted423.github.io/%E5%9D%9F%E5%9C%BA/BleachBit/"/>
     <id>http://ted423.github.io/%E5%9D%9F%E5%9C%BA/BleachBit/</id>
     <published>2025-12-18T05:10:11.026Z</published>
-    <updated>2026-01-08T10:17:04.029Z</updated>
+    <updated>2026-07-27T08:21:28.617Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.bleachbit.org/">https://www.bleachbit.org</a></p><p><a href="https://github.com/bleachbit/bleachbit">https://github.com/bleachbit/bleachbit</a></p><p>首先 CCleaner 是垃圾。</p><p>最近 cleanmgr 莫名其妙的 bug ,扫完清了，然后再打开是一点没清掉。</p><ul><li>这个软件支持自定义路径（<strong>加进去没法用可还行</strong>）</li><li>Linux 也支持，不过个人觉得不太需要（？），虽然 Linux 的软件比较喜欢随意路径拉屎。</li><li>深度扫描一般感觉不太需要使用，要用的也要注意这个扫描是严格扫描的后缀，我自己写的 .bak 也被扫出来了，真要有类似需求还是自定义路径吧。免得不小心干掉些可能要保留的东西</li><li>注意 系统 -&gt; 释放磁盘空闲区域 不要使用，这个是生成文件暴力填满硬盘空间。（感觉这个软件最好在界面里加点注释）</li><li>主要需求还是自定义路径，魔方也支持，但是似乎不能用通配符，并且它无了。</li><li>界面有点丑，界面交互过于简陋</li></ul><hr><p>界面看久了，眼睛直接不舒服了可还行，加上不太好的操作，没法自定义，直接送走。</p>]]></content>
+    <content type="html"><![CDATA[<p>最后没在用了<br><a href="https://www.bleachbit.org/">https://www.bleachbit.org</a></p><p><a href="https://github.com/bleachbit/bleachbit">https://github.com/bleachbit/bleachbit</a></p><p>首先 CCleaner 是垃圾。</p><p>最近 cleanmgr 莫名其妙的 bug ,扫完清了，然后再打开是一点没清掉。</p><ul><li>这个软件支持自定义路径（<strong>加进去没法用可还行</strong>）</li><li>Linux 也支持，不过个人觉得不太需要（？），虽然 Linux 的软件比较喜欢随意路径拉屎。</li><li>深度扫描一般感觉不太需要使用，要用的也要注意这个扫描是严格扫描的后缀，我自己写的 .bak 也被扫出来了，真要有类似需求还是自定义路径吧。免得不小心干掉些可能要保留的东西</li><li>注意 系统 -&gt; 释放磁盘空闲区域 不要使用，这个是生成文件暴力填满硬盘空间。（感觉这个软件最好在界面里加点注释）</li><li>主要需求还是自定义路径，魔方也支持，但是似乎不能用通配符，并且它无了。</li><li>界面有点丑，界面交互过于简陋</li></ul><hr><p>界面看久了，眼睛直接不舒服了可还行，加上不太好的操作，没法自定义。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.bleachbit.org/&quot;&gt;https://www.bleachbit.org&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/bleachbit/bleachbit&quot;&gt;https://github</summary>
+    <summary type="html">&lt;p&gt;最后没在用了&lt;br&gt;&lt;a href=&quot;https://www.bleachbit.org/&quot;&gt;https://www.bleachbit.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/bleachbit/bleachbit&quot;&gt;http</summary>
       
     
     
@@ -551,34 +583,6 @@
     <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
     
     <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Debian 错误 deb 打包卸载处理</title>
-    <link href="http://ted423.github.io/Issue/Errordeb/"/>
-    <id>http://ted423.github.io/Issue/Errordeb/</id>
-    <published>2025-11-27T06:05:32.021Z</published>
-    <updated>2025-11-27T06:09:43.329Z</updated>
-    
-    <content type="html"><![CDATA[<p>主要是自打包的配置没写好，没法升级，没法重装卸载时配置没法处理导致的不可卸载。</p><p>删除这个文件夹下的<code>/var/lib/dpkg/info/</code>相关文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg --remove --force-all &lt;包名&gt;</span><br></pre></td></tr></table></figure><p>其实建议再仔细看下包的源码，然后尝试还原下里面修改的配置，避免潜在影响。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;主要是自打包的配置没写好，没法升级，没法重装卸载时配置没法处理导致的不可卸载。&lt;/p&gt;
-&lt;p&gt;删除这个文件夹下的&lt;code&gt;/var/lib/dpkg/info/&lt;/code&gt;相关文件&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;tab</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   
