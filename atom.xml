@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-08-23T08:54:50.522Z</updated>
+  <updated>2026-08-23T10:29:45.683Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,15 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>BlueStacks 安卓模拟器</title>
     <link href="http://ted423.github.io/Software/BlueStacks/"/>
     <id>http://ted423.github.io/Software/BlueStacks/</id>
     <published>2026-08-23T08:54:50.522Z</published>
-    <updated>2026-08-23T08:54:50.522Z</updated>
+    <updated>2026-08-23T10:29:45.683Z</updated>
+    
+    <content type="html"><![CDATA[<p>曾经用过 Nox, 这个对最新的带 TPM 的机子支持不好。网易的 Mumu，这个是后面更新有一些广告。</p><p><a href="https://www.bluestacks.com/">https://www.bluestacks.com/</a></p><p><a href="https://www.bluestacks.cn/">https://www.bluestacks.cn</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;曾经用过 Nox, 这个对最新的带 TPM 的机子支持不好。网易的 Mumu，这个是后面更新有一些广告。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bluestacks.com/&quot;&gt;https://www.bluestacks.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;</summary>
+      
     
     
     
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
     
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="OS X" scheme="http://ted423.github.io/tags/OS-X/"/>
+    
+    <category term="VM" scheme="http://ted423.github.io/tags/VM/"/>
     
   </entry>
   
