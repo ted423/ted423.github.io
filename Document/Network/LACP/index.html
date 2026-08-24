@@ -27,8 +27,8 @@
 <meta property="og:description" content="链路聚合（Link Aggregation，简称 LAG）是一个广义的“技术概念” 静态聚合严格意义上的静态聚合（手工聚合）  不依赖LACP协议：传统静态聚合（如手工捆绑端口）完全由管理员手动配置，不涉及任何协议协商。 仅依赖物理状态：两端设备需手动匹配聚合参数（如端口成员、聚合模式），不通过协议交互验证配置一致性。  典型场景：旧设备或不支持LACP的环境。 厂商实现中的“静态LACP”模式">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
-<meta property="article:published_time" content="2026-03-06T15:05:54.783Z">
-<meta property="article:modified_time" content="2026-03-06T15:42:21.654Z">
+<meta property="article:published_time" content="2026-03-06T15:43:05.494Z">
+<meta property="article:modified_time" content="2026-08-24T03:42:14.547Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Document">
 <meta property="article:tag" content="Network">
@@ -42,7 +42,7 @@
   
   
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","headline":"动态链路聚合 - LACP - IEEE 802.3ad","description":"链路聚合（Link Aggregation，简称 LAG）是一个广义的“技术概念”\n静态聚合严格意义上的静态聚合（手工聚合）...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2026-03-06T15:05:54.783Z","dateModified":"2026-03-06T15:42:21.654Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Document/Network/LACP/"}}
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"动态链路聚合 - LACP - IEEE 802.3ad","description":"链路聚合（Link Aggregation，简称 LAG）是一个广义的“技术概念”\n静态聚合严格意义上的静态聚合（手工聚合）...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2026-03-06T15:43:05.494Z","dateModified":"2026-08-24T03:42:14.547Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Document/Network/LACP/"}}
     </script>
   
   <!-- 关键 CSS 预加载 -->
@@ -103,7 +103,7 @@
     <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
 
   
-<meta name="generator" content="Hexo 8.1.1"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
     <body class="custom-background">
         <div id="kratos-wrapper">
@@ -164,7 +164,7 @@
                 <h1 class="kratos-page-title text-center" itemprop="name headline">动态链路聚合 - LACP - IEEE 802.3ad</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2026-03-06T15:05:54.783Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2026-03-06</time></li>
+                <li><time datetime="2026-03-06T15:43:05.494Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2026-03-06</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -173,7 +173,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            1122
+                            1211
                         
                         字
                     </li>
@@ -216,8 +216,9 @@
 <p>LACP协议本身是动态的，但其具体实现可以结合静态配置（如手动指定成员）。</p>
 <p>LACP 是一个开放标准，旨在确保不同厂商设备之间的互操作性，并且提供了更强的配置校验和故障检测能力，更加健壮和可靠。</p>
 <h2 id="系统的链路聚合"><a href="#系统的链路聚合" class="headerlink" title="系统的链路聚合"></a>系统的链路聚合</h2><p><a target="_blank" rel="noopener" href="https://docs.redhat.com/zh-cn/documentation/red_hat_enterprise_linux/9/html/configuring_and_managing_networking/configuring-a-network-bond-by-using-nm-connection-editor_configuring-network-bonding">Linux(RedHat文档)</a></p>
-<p>NIC Teaming 是 Windows Server（从 Windows Server 2012<br>开始）的一个内置功能，可以通过服务器管理器 (Server Manager) 图形界面或<br>PowerShell (New-NetLbfoTeam cmdlet) 轻松配置。</p>
-<p>注意需要固定 IP 地址的时候需要配置 Bond 的 mac<br>地址固定，否则接反线会导致 Mac 地址变化，再 nm-connection-editor<br>中需要对 bond 的两个 port 都配置同一个 永久的 Mac 地址</p>
+<p>NIC Teaming 是 Windows Server（从 Windows Server 2012 开始）的一个内置功能，可以通过服务器管理器 (Server Manager) 图形界面或 PowerShell (New-NetLbfoTeam cmdlet) 轻松配置。</p>
+<p><del>注意需要固定 IP 地址的时候需要配置 Bond 的 mac 地址固定，否则接反线会导致 Mac 地址变化，再 nm-connection-editor 中需要对 bond 的两个 port 都配置同一个 保留（Preserve）的 Mac 地址</del></p>
+<p>克隆 MAC 地址 处选“保留（Preserve）”，永久（Permanent）其实意味着 Bond 接口会根据物理网卡加载第一的 MAC 地址改变</p>
 <h3 id="跟网桥配合使用"><a href="#跟网桥配合使用" class="headerlink" title="跟网桥配合使用"></a>跟网桥配合使用</h3><p>对于 GUI，需要先创建网桥再创建 bond&#x2F;带 vlan 的 bond</p>
 <p>注意事项</p>
 <ul>
@@ -245,7 +246,7 @@
                     <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Network/" rel="tag">Network</a>, <a class="tag-none-link" href="/tags/Notes/" rel="tag">Notes</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2026-03-06T15:42:21.654Z" itemprop="dateModified">最后编辑：2026-03-06</time>
+                    <time datetime="2026-08-24T03:42:14.547Z" itemprop="dateModified">最后编辑：2026-08-24</time>
                 </div>
             </div>
         </footer>
