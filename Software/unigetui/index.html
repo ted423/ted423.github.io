@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
 <meta property="article:published_time" content="2022-03-19T08:44:00.000Z">
-<meta property="article:modified_time" content="2026-07-08T07:13:42.458Z">
+<meta property="article:modified_time" content="2026-09-09T07:47:12.165Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Apache License 2.0">
 <meta property="article:tag" content="Github">
@@ -47,7 +47,7 @@
   
   
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","headline":"[开源]软件更新管理 - Winget & UniGetUI","description":"Winget 打败了所有（所以地址由 Software Update 改成了 Winget，然后又改成了 unigetui\nWi...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2022-03-19T08:44:00.000Z","dateModified":"2026-07-08T07:13:42.458Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Software/unigetui/"}}
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"[开源]软件更新管理 - Winget & UniGetUI","description":"Winget 打败了所有（所以地址由 Software Update 改成了 Winget，然后又改成了 unigetui\nWi...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2022-03-19T08:44:00.000Z","dateModified":"2026-09-09T07:47:12.165Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Software/unigetui/"}}
     </script>
   
   <!-- 关键 CSS 预加载 -->
@@ -178,7 +178,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~2.90K
+                            ~2.93K
                         
                         字
                     </li>
@@ -221,9 +221,9 @@
 <h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
 <li>可以安装 ffmpeg 这些，安装到全局会需要管理员权限，然后会自动添加环境变量，但更新遇到过问题<a target="_blank" rel="noopener" href="https://github.com/microsoft/winget-cli/issues/5102">Issue</a>。<del>卸载也只能手动删。</del></li>
 <li>会列出系统无法安装的软件，例如 LTSC 系统出现需要微软商店的 unigram，Server 2019 出现 Microsoft Terminal<code>由于程序包 Microsoft.WindowsTerminal_1.22.10352.0_x64__8wekyb3d8bbwe 与设备不兼容，Windows 无法安装该程序包。该程序包要求 Windows.Mobile 设备系列运行操作系统版本 10、0、19041、0 或更高版本。该设备当前运行的操作系统版本为 10、0、17763、6775。</code></li>
-<li>部分会更新到测试版，例如 Dropbox</li>
+<li>部分会更新到测试版，例如 Dropbox (不过这个应该 repo 维护那块的问题)</li>
 </ul>
-<h2 id="IoT-LTSC-下问题"><a href="#IoT-LTSC-下问题" class="headerlink" title="IoT LTSC 下问题"></a>IoT LTSC 下问题</h2><p>有些情况下手动安装后会找不到 winget.exe</p>
+<h2 id="IoT-LTSC-下问题"><a href="#IoT-LTSC-下问题" class="headerlink" title="IoT LTSC 下问题"></a>IoT LTSC 下问题</h2><p>有些情况下手动安装后会找不到 winget.exe (注意版本号可能不一样)</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Add-AppxPackage -Register &quot;C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.28.240.0_x64__8wekyb3d8bbwe\AppxManifest.xml&quot; -DisableDevelopmentMode</span><br></pre></td></tr></table></figure>
 <p>这个命令可以修复，另外也要检查下 应用执行别名里的状态</p>
 <h2 id="UniGetUI"><a href="#UniGetUI" class="headerlink" title="UniGetUI"></a>UniGetUI</h2><p>开源 LGPLv2.1</p>
@@ -290,7 +290,7 @@
                     <a class="tag-none-link" href="/tags/Apache-License-2-0/" rel="tag">Apache License 2.0</a>, <a class="tag-none-link" href="/tags/Github/" rel="tag">Github</a>, <a class="tag-none-link" href="/tags/LGPLv2-1/" rel="tag">LGPLv2.1</a>, <a class="tag-none-link" href="/tags/MIT/" rel="tag">MIT</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/" rel="tag">个人观点</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2026-07-08T07:13:42.458Z" itemprop="dateModified">最后编辑：2026-07-08</time>
+                    <time datetime="2026-09-09T07:47:12.165Z" itemprop="dateModified">最后编辑：2026-09-09</time>
                 </div>
             </div>
         </footer>
