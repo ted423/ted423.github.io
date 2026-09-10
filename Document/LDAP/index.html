@@ -27,8 +27,8 @@
 <meta property="og:description" content="LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。 目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括对事件（transaction）的支持也不包括回滚特性。目录是很容易被复制的，以便增加它的可用性和可靠性。当目录被复制时，临时">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
-<meta property="article:published_time" content="2025-09-13T06:38:50.287Z">
-<meta property="article:modified_time" content="2025-09-19T03:53:48.940Z">
+<meta property="article:published_time" content="2026-09-09T12:13:20.379Z">
+<meta property="article:modified_time" content="2026-09-09T12:12:34.000Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="AD(Active Directory)">
 <meta property="article:tag" content="Document">
@@ -44,7 +44,7 @@
   
   
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","headline":"LDAP & OpenLDAP","description":"LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。\n目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2025-09-13T06:38:50.287Z","dateModified":"2025-09-19T03:53:48.940Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Document/LDAP/"}}
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"LDAP & OpenLDAP","description":"LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。\n目录是一个特殊的数据库，它的数据经常被查询，但是不经常更新。不像普通的数据库，目录不包括...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2026-09-09T12:13:20.379Z","dateModified":"2026-09-09T12:12:34.000Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Document/LDAP/"}}
     </script>
   
   <!-- 关键 CSS 预加载 -->
@@ -166,7 +166,7 @@
                 <h1 class="kratos-page-title text-center" itemprop="name headline">LDAP & OpenLDAP</h1>
             
             <ul class="kratos-page-meta text-center">
-                <li><time datetime="2025-09-13T06:38:50.287Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2025-09-13</time></li>
+                <li><time datetime="2026-09-09T12:13:20.379Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2026-09-09</time></li>
                 <li itemprop="author" itemscope itemtype="https://schema.org/Person">
                     <i class="fa fa-user"></i> 作者 <span itemprop="name">ted423</span>
                 </li>
@@ -175,7 +175,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~15.57K
+                            ~15.54K
                         
                         字
                     </li>
@@ -277,7 +277,8 @@
 <p>sssd.conf 里配置 <code>ldap_auth_disable_tls_never_use_in_production = true</code>可以不开启 tls，这个配置可能跟 sssd 的版本有关，已知 Ubuntu 22 LTS 里是需要开启的，Redhat7系列似乎不用。</p>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>debian 是有一个 ldapd，<a target="_blank" rel="noopener" href="https://wiki.debian.org/LDAP/PAM">https://wiki.debian.org/LDAP/PAM</a> </p>
 <p>ubuntu 也有 ldapd，但是没有存在感， ubuntu 所有的教程还是基于非 ldapd 的，甚至 AI 都不知道有这个包。</p>
-<h3 id="集成配置"><a href="#集成配置" class="headerlink" title="集成配置"></a>集成配置</h3><p>deb 系是 sudo pam-auth-update，rpm 系是有 <code>authconfig --enableldap --enableldapauth</code>。后者看 redhat 文档就好。</p>
+<h3 id="集成配置"><a href="#集成配置" class="headerlink" title="集成配置"></a>集成配置</h3><p>这一块可能有点问题。当时理解错了</p>
+<p>deb 系是 sudo pam-auth-update，rpm 系是有 <code>authconfig --enableldap --enableldapauth</code>。后者看 redhat 文档就好。</p>
 <p>PS，<code>authconfig</code>中 sssd 和 ldap 是不同的，sssd 的参数是<code>--enablesssdauth --enablesssd</code></p>
 <p>PS2，<code>authconfig</code>默认启用 ldap 只会启用 nslcd，不会启用 nscd。</p>
 <p>PS3，<code>authconfig</code>在有 sssd 的情况下可能<code>--enableldap --enableldapauth</code>会默认启用sssd。</p>
@@ -307,21 +308,21 @@
 <li><code>userAccountControl</code>：一个包含用户账户状态（如是否禁用）的位掩码。查找<strong>未禁用</strong>的用户通常使用位操作符： <code>(!(userAccountControl:1.2.840.113556.1.4.803:=2))</code>。这里的 <code>2</code> 代表 <code>ADS_UF_ACCOUNTDISABLE</code> 标志位，<code>:1.2.840.113556.1.4.803:=</code> 是进行位与 (Bitwise AND) 比较的 LDAP 匹配规则。整个表达式的意思是“userAccountControl 属性中没有设置值为 2 的那个位”。</li>
 <li><code>memberOf</code>：用于检查用户是否属于某个特定的组。值需要是组的完整 <strong>Distinguished Name (DN)</strong>，例如 <code>CN=AppUsers,OU=Groups,DC=yourdomain,DC=local</code>。</li>
 </ul>
-<h3 id="常见的-LDAP-用户过滤器示例"><a href="#常见的-LDAP-用户过滤器示例" class="headerlink" title="常见的 LDAP 用户过滤器示例"></a>常见的 LDAP 用户过滤器示例</h3><p><strong>注意：</strong> 以下示例使用占位符 <code>&#123;username&#125;</code> 代表用户输入的用户名。<strong>请务必查阅你所使用的应用程序（如 DokuWiki authad 插件）的文档，确认它实际使用的占位符是什么</strong>，可能是 <code>@USER@</code>, <code>%user%</code>, <code>$user</code> 等。</p>
+<h3 id="常见的-LDAP-用户过滤器示例"><a href="#常见的-LDAP-用户过滤器示例" class="headerlink" title="常见的 LDAP 用户过滤器示例"></a>常见的 LDAP 用户过滤器示例</h3><p><strong>注意：</strong> 以下示例使用占位符 <code>{username}</code> 代表用户输入的用户名。<strong>请务必查阅你所使用的应用程序（如 DokuWiki authad 插件）的文档，确认它实际使用的占位符是什么</strong>，可能是 <code>@USER@</code>, <code>%user%</code>, <code>$user</code> 等。</p>
 <p>最基本：使用 sAMAccountName 查找未禁用的用户 (推荐作为起点) </p>
 <p>下面最外层的括号或许需要取消</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectCategory=person)(objectClass=user)(sAMAccountName=&#123;username&#125;)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>&amp;</code>: 所有条件都需满足。</li>
 <li><code>objectCategory=person</code> 和 <code>objectClass=user</code>: 确保找到的是用户对象。</li>
-<li><code>sAMAccountName=&#123;username&#125;</code>: 用户的 <code>sAMAccountName</code> 属性必须等于登录时输入的用户名。</li>
+<li><code>sAMAccountName={username}</code>: 用户的 <code>sAMAccountName</code> 属性必须等于登录时输入的用户名。</li>
 <li><code>(!(userAccountControl:1.2.840.113556.1.4.803:=2))</code>: 确保账户未被禁用。(部分服务会同步已禁用账号，然后在本地显示账号禁用，如果不需要可以直接通过过滤器排除掉)</li>
 </ul>
 <p><strong>OpenLDAP</strong><br>因为大部分都会以 OpenLDAP 为主，所以基本没什么好写的，你只要注意不要因为自己设的不同名字的 OU 被坑了就行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(&amp;(objectClass=posixGroup)(|(memberUid=%&#123;uid&#125;)(gidNumber=%&#123;gid&#125;)))</span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>objectCategory=posixGroup</code>: 确保找到的是组对象。</li>
-<li><code>|(memberUid=%&#123;uid&#125;)(gidNumber=%&#123;gid&#125;)</code>: 用户主组是gidNumber，memberUid是次组</li>
+<li><code>|(memberUid=%{uid})(gidNumber=%{gid})</code>: 用户主组是gidNumber，memberUid是次组</li>
 </ul>
 <h1 id="OpenLDAP-的-ACL（访问控制列表）"><a href="#OpenLDAP-的-ACL（访问控制列表）" class="headerlink" title="OpenLDAP 的 ACL（访问控制列表）"></a>OpenLDAP 的 ACL（访问控制列表）</h1><p>OpenLDAP 中的访问控制列表 (ACL) 是一套强大的规则，用于定义谁 (who) 可以对目录中的哪些数据 (what) 执行何种操作 (access level)。正确配置 ACL 是保护 LDAP 目录安全、确保数据完整性和实现细粒度权限管理的关键。</p>
 <p>OpenLDAP 的 ACL 规则遵循一个基本结构：</p>
@@ -332,7 +333,7 @@
 
 <p>其中：</p>
 <ul>
-<li><code>&#123;&lt;index&gt;&#125;</code>: 是一个非负整数，用于对多条 <code>olcAccess</code> 规则进行排序。规则按索引号从小到大评估。</li>
+<li><code>{&lt;index&gt;}</code>: 是一个非负整数，用于对多条 <code>olcAccess</code> 规则进行排序。规则按索引号从小到大评估。</li>
 <li><code>to &lt;what&gt;</code>: 定义规则适用的目标资源（条目或属性）。</li>
 <li><code>by &lt;who&gt; &lt;access_level&gt; [&lt;control&gt;]</code>: 定义授权子句。一个 <code>access to</code> 块可以包含多个 <code>by</code> 子句。</li>
 </ul>
@@ -466,7 +467,7 @@
                     <a class="tag-none-link" href="/tags/AD-Active-Directory/" rel="tag">AD(Active Directory)</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Software/" rel="tag">Software</a>, <a class="tag-none-link" href="/tags/%E5%BC%80%E6%BA%90-Open-Source/" rel="tag">开源(Open Source)</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2025-09-19T03:53:48.940Z" itemprop="dateModified">最后编辑：2025-09-19</time>
+                    <time datetime="2026-09-09T12:12:34.000Z" itemprop="dateModified">最后编辑：2026-09-09</time>
                 </div>
             </div>
         </footer>
@@ -475,13 +476,9 @@
         <nav class="navigation post-navigation clearfix" role="navigation">
             
             <div class="nav-previous clearfix">
-                <a title=" (无标题)" href="/Code/Git/git_reset_local/"><i class="fa fa-angle-left"></i> 上一篇</a>
+                <a title=" BlueStacks 安卓模拟器" href="/Software/BlueStacks/"><i class="fa fa-angle-left"></i> 上一篇</a>
             </div>
             
-            
-            <div class="nav-next clearfix">
-                <a title=" 笔记书签方面的一些纠结" href="/Software/Notes/">下一篇 <i class="fa fa-angle-right"></i></a>
-            </div>
             
         </nav>
     
