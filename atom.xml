@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-09-09T12:12:34.000Z</updated>
+  <updated>2026-09-28T14:57:15.757Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>螺丝刀 CR-V 以及 S2钢</title>
+    <link href="http://ted423.github.io/etc/screwdriver/"/>
+    <id>http://ted423.github.io/etc/screwdriver/</id>
+    <published>2026-09-28T14:50:48.096Z</published>
+    <updated>2026-09-28T14:57:15.757Z</updated>
+    
+    <content type="html"><![CDATA[<p>在手动工具（尤其是螺丝刀、批头、扳手）领域，CR-V（铬钒钢） 和 S2钢 是目前市面上最主流、讨论度最高的两种材质。</p><p>简单来说：CR-V 是“综合性价比之王”，而 S2 是“高硬度性能王者”。</p><p>它们没有绝对的好坏，主要是材质特性不同，适合的场景也不同。下面为您详细拆解这两种材质：</p><hr><h3 id="一、-CR-V（铬钒钢）——-韧性与防锈的六边形战士"><a href="#一、-CR-V（铬钒钢）——-韧性与防锈的六边形战士" class="headerlink" title="一、 CR-V（铬钒钢）—— 韧性与防锈的六边形战士"></a>一、 CR-V（铬钒钢）—— 韧性与防锈的六边形战士</h3><ol><li>什么是 CR-V？<br>CR-V 是 Chrome Vanadium Steel 的缩写。它是在普通碳钢中加入了铬 (Cr) 和 钒 (V) 两种合金元素冶炼而成。</li></ol><ul><li>铬 (Cr)： 负责提高硬度，并且带来极佳的防锈能力。</li><li>钒 (V)： 负责提高材质的韧性（让钢材受力时不易折断）。</li></ul><ol start="2"><li>核心特性：</li></ol><ul><li>硬度适中： 经过热处理后，硬度一般在 HRC 50 - 54 之间。</li><li>韧性极佳： 遇到超大扭力时，它倾向于“变形”而不是“直接崩断”。</li><li>防锈性极好： 表面通常做电镀处理（看起来银光闪闪），平时基本不需要费心保养，不容易生锈。</li><li>成本极低： 价格亲民，量大管饱。</li></ul><ol start="3"><li>最适合用来做什么？</li></ol><ul><li>扳手、套筒、钳子： 这些工具需要承受巨大的形变力，韧性要求高，如果太脆容易崩飞伤人。</li><li>普通家用大号螺丝刀： 比如用来拧木门、大柜子上的大螺丝，CR-V 完全够用。</li></ul><ol start="4"><li>缺点：<br>硬度不够顶尖。如果用 CR-V 材质做成很细小的精修批头，去拧很紧的螺丝时，刀头容易变圆、磨平（俗称“拧秃了”）。</li></ol><hr><h3 id="二、-S2-钢-——-专为“批头”而生的硬度天花板"><a href="#二、-S2-钢-——-专为“批头”而生的硬度天花板" class="headerlink" title="二、 S2 钢 —— 专为“批头”而生的硬度天花板"></a>二、 S2 钢 —— 专为“批头”而生的硬度天花板</h3><ol><li><p>什么是 S2 钢？<br>S2 是一种耐冲击工具钢（属于高级合金钢）。里面含有碳、硅、锰、钼、钒等多种元素，特别是加入了较高比例的硅和钼。它的研发初衷，就是为了承受高强度的扭矩和冲击。</p></li><li><p>核心特性：</p></li></ol><ul><li>硬度极高： 经过热处理后，硬度通常可以达到 HRC 58 - 62。</li><li>极其耐磨： 极难发生形变！这就是为什么 S2 刀头咬合螺丝非常紧，不管怎么拧，刀头上的十字或六角棱角依然锋利，不容易“拧秃”。</li><li>防锈较差： S2 钢本身的防锈能力不如 CR-V。所以市面上的 S2 批头通常不是银光闪闪的，而是会做发黑、发红、古铜色烤漆等表面处理来防锈。</li><li>成本较高： 价格比普通 CR-V 贵一些（但好在现在国产供应链强大，价格也打下来了）。</li></ul><ol start="3"><li>最适合用来做什么？</li></ol><ul><li>电动螺丝刀批头： 电动工具扭力大且瞬间冲击力强，S2 钢极其耐磨，寿命是 CR-V 的好几倍。</li><li>精密螺丝刀（拆手机&#x2F;电脑）： 电子产品的螺丝非常小，刀头一旦磨损哪怕0.1毫米就会滑丝。S2 的高硬度能确保极小刀头的刚性。</li><li>内六角扳手： 尤其是细长型的内六角，需要高硬度来防止头部滑角。</li></ul><ol start="4"><li>缺点：<br>“过刚易折”。因为硬度太高，导致它的绝对韧性不如 CR-V。如果你拿极细的 S2 螺丝刀去当撬棍用，或者用大号手电钻猛烈打底孔，它不会像 CR-V 那样弯曲，而是可能“啪”的一声直接崩断。</li></ol><hr><h3 id="💡-终极总结与对比表"><a href="#💡-终极总结与对比表" class="headerlink" title="💡 终极总结与对比表"></a>💡 终极总结与对比表</h3><table><thead><tr><th align="left">特性</th><th align="left">CR-V (铬钒钢)</th><th align="left">S2 工具钢</th></tr></thead><tbody><tr><td align="left">洛氏硬度 (HRC)</td><td align="left">50 - 54 (适中)</td><td align="left">58 - 62 (极高)</td></tr><tr><td align="left">韧性 (抗折断)</td><td align="left">⭐⭐⭐⭐⭐ (很好)</td><td align="left">⭐⭐⭐ (一般)</td></tr><tr><td align="left">耐磨性 (抗拧秃)</td><td align="left">⭐⭐⭐ (一般)</td><td align="left">⭐⭐⭐⭐⭐ (极好)</td></tr><tr><td align="left">防锈能力</td><td align="left">⭐⭐⭐⭐⭐ (闪亮不生锈)</td><td align="left">⭐⭐⭐ (容易生锈，需涂层&#x2F;油)</td></tr><tr><td align="left">外观特征</td><td align="left">通常为亮银色电镀 (哑光或镜面)</td><td align="left">通常为古铜色、红棕色、发黑色</td></tr><tr><td align="left">适用场景</td><td align="left">扳手、套筒、普通手动螺丝刀</td><td align="left">电动批头、精密修机螺丝刀、高强度作业</td></tr></tbody></table><p>用一句话给您的购买建议：<br>买扳手、套筒、大号一字改锥（用来撬东西），买 CR-V，便宜又耐造，不易断；<br>买电动螺丝刀的替换批头、修手机&#x2F;电脑的精修套装，必须认准 S2，咬合紧密不滑丝！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在手动工具（尤其是螺丝刀、批头、扳手）领域，CR-V（铬钒钢） 和 S2钢 是目前市面上最主流、讨论度最高的两种材质。&lt;/p&gt;
+&lt;p&gt;简单来说：CR-V 是“综合性价比之王”，而 S2 是“高硬度性能王者”。&lt;/p&gt;
+&lt;p&gt;它们没有绝对的好坏，主要是材质特性不同，适合的场景</summary>
+      
+    
+    
+    
+    <category term="etc" scheme="http://ted423.github.io/categories/etc/"/>
+    
+    
+    <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
+    
+    <category term="AI generate" scheme="http://ted423.github.io/tags/AI-generate/"/>
+    
+  </entry>
   
   <entry>
     <title>LDAP &amp; OpenLDAP</title>
@@ -567,33 +595,6 @@
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Docker Container 卡死关闭</title>
-    <link href="http://ted423.github.io/Issue/stopContainer/"/>
-    <id>http://ted423.github.io/Issue/stopContainer/</id>
-    <published>2025-12-08T03:48:27.920Z</published>
-    <updated>2025-12-08T07:11:25.384Z</updated>
-    
-    <content type="html"><![CDATA[<p>个人遇到的情况是宿主机挂载路径用了 fscache 导致的卡死，表现为 Cotainer 只要开启就会卡死，无法结束。</p><p>看到了 <a href="https://stackoverflow.com/questions/70434777/cannot-kill-container-container-id-tried-to-kill-container-but-did-not-rece">https://stackoverflow.com/questions/70434777/cannot-kill-container-container-id-tried-to-kill-container-but-did-not-rece</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps auxw | grep $(docker container ls | grep &lt;containername&gt;  | awk &#x27;&#123;print $1&#125;&#x27;)</span><br></pre></td></tr></table></figure><p>随后手动结束进程即可</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;个人遇到的情况是宿主机挂载路径用了 fscache 导致的卡死，表现为 Cotainer 只要开启就会卡死，无法结束。&lt;/p&gt;
-&lt;p&gt;看到了 &lt;a href=&quot;https://stackoverflow.com/questions/70434777/cannot-kill-</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   
