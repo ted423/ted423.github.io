@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-10-29T02:46:36.706Z</updated>
+  <updated>2026-10-29T02:55:33.030Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="http://ted423.github.io/Issue/smartctl/"/>
     <id>http://ted423.github.io/Issue/smartctl/</id>
     <published>2026-10-29T02:07:19.559Z</published>
-    <updated>2026-10-29T02:46:36.706Z</updated>
+    <updated>2026-10-29T02:55:33.030Z</updated>
     
-    <content type="html"><![CDATA[<p>在 Linux 中</p><p>硬盘(ATA)  ←→  桥接芯片  ←→  USB  ←→  SCSI 层  ←→  sd 驱动  ←→  &#x2F;dev&#x2F;sda</p><p>直接接上的硬盘，smartctl 看到的直接是 ATA 设备，自动识别，不用写 -d。</p><p>NVMe：看 &#x2F;dev&#x2F;nvme0 自动识别。</p><p>对于 USB硬盘盒，smartctl 看到的只是 SCSI 设备，它不知道桥接芯片底下是什么、用什么翻译方式，所以手动指定。不然会报报 Unknown USB bridge</p><table><thead><tr><th>写法</th><th>含义</th><th>适用场景</th></tr></thead><tbody><tr><td><code>-d ata</code></td><td>原生 ATA 协议</td><td>直连 SATA 硬盘（<code>/dev/sda</code>）</td></tr><tr><td><code>-d scsi</code></td><td>只走 SCSI 层</td><td>硬盘盒默认行为，读不到 ATA SMART</td></tr><tr><td><code>-d sat</code></td><td>标准 SCSI→ATA 翻译（SAT）</td><td>支持透传的 USB 硬盘盒</td></tr><tr><td><code>-d sat,12</code></td><td>SAT，强制 12 字节 ATA PASS-THROUGH(0xA1)</td><td>桥接只认 12 字节命令时</td></tr><tr><td><code>-d sat,16</code></td><td>SAT，强制 16 字节 ATA PASS-THROUGH(0x85)</td><td>桥接只认 16 字节命令时</td></tr><tr><td><code>-d usbjmicron</code></td><td>JMicron 私有桥接协议</td><td>JMicron JMS 系列硬盘盒</td></tr><tr><td><code>-d usbjmicron,x</code></td><td>JMicron 私有协议 + 指定端口</td><td>双盘位 JMS 硬盘盒</td></tr><tr><td><code>-d usbcypress</code></td><td>Cypress 私有桥接协议</td><td>Cypress AT2LP 等芯片</td></tr><tr><td><code>-d usbsunplus</code></td><td>Sunplus 私有桥接协议</td><td>Sunplus 芯片硬盘盒</td></tr><tr><td><code>-d usbasm1352r</code></td><td>ASMedia ASM1352R 协议</td><td>ASMedia ASM1352R 硬盘盒</td></tr><tr><td><code>-d jmb39x</code></td><td>JMicron JMB39x RAID 模式</td><td>JMicron JMB39x 双盘盒</td></tr><tr><td><code>-d sntjmicron</code></td><td>JMicron 另一组私有协议</td><td>部分 JMS 硬盘盒</td></tr><tr><td><code>-d nvme</code></td><td>NVMe 协议</td><td>直连 NVMe SSD（<code>/dev/nvme0</code>）</td></tr><tr><td><code>-d sat,VID:PID</code></td><td>按 USB 厂商号:产品号直接指定</td><td>型号表未收录的桥接</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<p>smartctl 读 SATA 盘的 SMART，靠的是 ATA pass-through（0x85&#x2F;0xA1） 这条命令穿过 USB 桥接芯片转发给硬盘。但各家桥接芯片（JMicron &#x2F; ASMedia &#x2F; Realtek &#x2F; Sunplus &#x2F; Cypress…）对这条命令的封装方式互不兼容，甚至是私有的。</p><p>Windows 上 CrystalDiskInfo &#x2F; HDDScan 这类工具内置了十几家桥接芯片的私有适配表（按 VID:PID 硬编码），所以常见硬盘盒都能读。<br>Linux 上 smartctl 同样有这张表（drivedb.h &#x2F; 内部 USB 表），但表里没收录的 VID:PID 就直接报错，且不会自己“猜”</p><p>在 Linux 中</p><p>硬盘(ATA)  ←→  桥接芯片  ←→  USB  ←→  SCSI 层  ←→  sd 驱动  ←→  &#x2F;dev&#x2F;sda</p><p>直接接上的硬盘，smartctl 看到的直接是 ATA 设备，自动识别，不用写 -d。</p><p>NVMe：看 &#x2F;dev&#x2F;nvme0 自动识别。</p><p>对于 USB硬盘盒，smartctl 看到的只是 SCSI 设备，它不知道桥接芯片底下是什么、用什么翻译方式，所以需要手动指定。不然会报报 Unknown USB bridge，我这次遇到的用的是<code>-d sat</code></p><p>sat：SCSI to ATA Translation 的缩写，是一个 ANSI T10 标准。</p><table><thead><tr><th>写法</th><th>含义</th><th>适用场景</th></tr></thead><tbody><tr><td><code>-d ata</code></td><td>原生 ATA 协议</td><td>直连 SATA 硬盘（<code>/dev/sda</code>）</td></tr><tr><td><code>-d scsi</code></td><td>只走 SCSI 层</td><td>硬盘盒默认行为，读不到 ATA SMART</td></tr><tr><td><code>-d sat</code></td><td>标准 SCSI→ATA 翻译（SAT）</td><td>支持透传的 USB 硬盘盒</td></tr><tr><td><code>-d sat,12</code></td><td>SAT，强制 12 字节 ATA PASS-THROUGH(0xA1)</td><td>桥接只认 12 字节命令时</td></tr><tr><td><code>-d sat,16</code></td><td>SAT，强制 16 字节 ATA PASS-THROUGH(0x85)</td><td>桥接只认 16 字节命令时</td></tr><tr><td><code>-d usbjmicron</code></td><td>JMicron 私有桥接协议</td><td>JMicron JMS 系列硬盘盒</td></tr><tr><td><code>-d usbjmicron,x</code></td><td>JMicron 私有协议 + 指定端口</td><td>双盘位 JMS 硬盘盒</td></tr><tr><td><code>-d usbcypress</code></td><td>Cypress 私有桥接协议</td><td>Cypress AT2LP 等芯片</td></tr><tr><td><code>-d usbsunplus</code></td><td>Sunplus 私有桥接协议</td><td>Sunplus 芯片硬盘盒</td></tr><tr><td><code>-d usbasm1352r</code></td><td>ASMedia ASM1352R 协议</td><td>ASMedia ASM1352R 硬盘盒</td></tr><tr><td><code>-d jmb39x</code></td><td>JMicron JMB39x RAID 模式</td><td>JMicron JMB39x 双盘盒</td></tr><tr><td><code>-d sntjmicron</code></td><td>JMicron 另一组私有协议</td><td>部分 JMS 硬盘盒</td></tr><tr><td><code>-d nvme</code></td><td>NVMe 协议</td><td>直连 NVMe SSD（<code>/dev/nvme0</code>）</td></tr><tr><td><code>-d sat,VID:PID</code></td><td>按 USB 厂商号:产品号直接指定</td><td>型号表未收录的桥接</td></tr></tbody></table>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;在 Linux 中&lt;/p&gt;
-&lt;p&gt;硬盘(ATA)  ←→  桥接芯片  ←→  USB  ←→  SCSI 层  ←→  sd 驱动  ←→  &amp;#x2F;dev&amp;#x2F;sda&lt;/p&gt;
-&lt;p&gt;直接接上的硬盘，smartctl 看到的直接是 ATA 设备，自动识别，不用写</summary>
+    <summary type="html">&lt;p&gt;smartctl 读 SATA 盘的 SMART，靠的是 ATA pass-through（0x85&amp;#x2F;0xA1） 这条命令穿过 USB 桥接芯片转发给硬盘。但各家桥接芯片（JMicron &amp;#x2F; ASMedia &amp;#x2F; Realtek &amp;#x2F; S</summary>
       
     
     

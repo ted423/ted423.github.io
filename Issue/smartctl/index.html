@@ -19,16 +19,16 @@
   
     <meta name="keywords" content="Document, Issue, Linux" />
   
-  <meta name="description" content="在 Linux 中 硬盘(ATA)  ←→  桥接芯片  ←→  USB  ←→  SCSI 层  ←→  sd 驱动  ←→  &#x2F;dev&#x2F;sda 直接接上的硬盘，smartctl 看到的直接是 ATA 设备，自动识别，不用写 -d。 NVMe：看 &#x2F;dev&#x2F;nvme0 自动识别。 对于 USB硬盘盒，smartctl 看到的只是 SCSI 设备，它不知道桥">
+  <meta name="description" content="smartctl 读 SATA 盘的 SMART，靠的是 ATA pass-through（0x85&#x2F;0xA1） 这条命令穿过 USB 桥接芯片转发给硬盘。但各家桥接芯片（JMicron &#x2F; ASMedia &#x2F; Realtek &#x2F; Sunplus &#x2F; Cypress…）对这条命令的封装方式互不兼容，甚至是私有的。 Windows 上 Crystal">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 下 smartctl 查看带硬盘盒的硬盘信息">
 <meta property="og:url" content="http://ted423.github.io/Issue/smartctl/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="在 Linux 中 硬盘(ATA)  ←→  桥接芯片  ←→  USB  ←→  SCSI 层  ←→  sd 驱动  ←→  &#x2F;dev&#x2F;sda 直接接上的硬盘，smartctl 看到的直接是 ATA 设备，自动识别，不用写 -d。 NVMe：看 &#x2F;dev&#x2F;nvme0 自动识别。 对于 USB硬盘盒，smartctl 看到的只是 SCSI 设备，它不知道桥">
+<meta property="og:description" content="smartctl 读 SATA 盘的 SMART，靠的是 ATA pass-through（0x85&#x2F;0xA1） 这条命令穿过 USB 桥接芯片转发给硬盘。但各家桥接芯片（JMicron &#x2F; ASMedia &#x2F; Realtek &#x2F; Sunplus &#x2F; Cypress…）对这条命令的封装方式互不兼容，甚至是私有的。 Windows 上 Crystal">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ted423.github.io/img/favicon.svg">
 <meta property="article:published_time" content="2026-10-29T02:07:19.559Z">
-<meta property="article:modified_time" content="2026-10-29T02:46:36.706Z">
+<meta property="article:modified_time" content="2026-10-29T02:55:33.030Z">
 <meta property="article:author" content="ted423">
 <meta property="article:tag" content="Document">
 <meta property="article:tag" content="Issue">
@@ -42,7 +42,7 @@
   
   
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Linux 下 smartctl 查看带硬盘盒的硬盘信息","description":"在 Linux 中\n硬盘(ATA)  ←→  桥接芯片  ←→  USB  ←→  SCSI 层  ←→  sd 驱动  ←→  &#x2F;dev&#x2F;sda\n直接接上的硬盘，smartctl 看到的直接是 ATA 设备，自动识别，不用写 -d。","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2026-10-29T02:07:19.559Z","dateModified":"2026-10-29T02:46:36.706Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Issue/smartctl/"}}
+    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Linux 下 smartctl 查看带硬盘盒的硬盘信息","description":"smartctl 读 SATA 盘的 SMART，靠的是 ATA pass-through（0x85&#x2F;0xA1） 这条命令穿过 USB 桥接芯片转发给硬盘。但各家桥接芯片（JMicron &#x2F; ASMedia &#x2F; Realtek &#x2F; Sunplus ...","image":"http://ted423.github.io/img/avatar.png","author":{"@type":"Person","name":"ted423"},"publisher":{"@type":"Organization","name":"个人小站","logo":{"@type":"ImageObject","url":"http://ted423.github.io/img/avatar.png"}},"datePublished":"2026-10-29T02:07:19.559Z","dateModified":"2026-10-29T02:55:33.030Z","mainEntityOfPage":{"@type":"WebPage","@id":"http://ted423.github.io/Issue/smartctl/"}}
     </script>
   
   <!-- 关键 CSS 预加载 -->
@@ -173,7 +173,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            950
+                            1370
                         
                         字
                     </li>
@@ -192,11 +192,14 @@
             
             
             <hr />
-            <div itemprop="articleBody"><p>在 Linux 中</p>
+            <div itemprop="articleBody"><p>smartctl 读 SATA 盘的 SMART，靠的是 ATA pass-through（0x85&#x2F;0xA1） 这条命令穿过 USB 桥接芯片转发给硬盘。但各家桥接芯片（JMicron &#x2F; ASMedia &#x2F; Realtek &#x2F; Sunplus &#x2F; Cypress…）对这条命令的封装方式互不兼容，甚至是私有的。</p>
+<p>Windows 上 CrystalDiskInfo &#x2F; HDDScan 这类工具内置了十几家桥接芯片的私有适配表（按 VID:PID 硬编码），所以常见硬盘盒都能读。<br>Linux 上 smartctl 同样有这张表（drivedb.h &#x2F; 内部 USB 表），但表里没收录的 VID:PID 就直接报错，且不会自己“猜”</p>
+<p>在 Linux 中</p>
 <p>硬盘(ATA)  ←→  桥接芯片  ←→  USB  ←→  SCSI 层  ←→  sd 驱动  ←→  &#x2F;dev&#x2F;sda</p>
 <p>直接接上的硬盘，smartctl 看到的直接是 ATA 设备，自动识别，不用写 -d。</p>
 <p>NVMe：看 &#x2F;dev&#x2F;nvme0 自动识别。</p>
-<p>对于 USB硬盘盒，smartctl 看到的只是 SCSI 设备，它不知道桥接芯片底下是什么、用什么翻译方式，所以手动指定。不然会报报 Unknown USB bridge</p>
+<p>对于 USB硬盘盒，smartctl 看到的只是 SCSI 设备，它不知道桥接芯片底下是什么、用什么翻译方式，所以需要手动指定。不然会报报 Unknown USB bridge，我这次遇到的用的是<code>-d sat</code></p>
+<p>sat：SCSI to ATA Translation 的缩写，是一个 ANSI T10 标准。</p>
 <table>
 <thead>
 <tr>
@@ -296,7 +299,7 @@
                     <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2026-10-29T02:46:36.706Z" itemprop="dateModified">最后编辑：2026-10-29</time>
+                    <time datetime="2026-10-29T02:55:33.030Z" itemprop="dateModified">最后编辑：2026-10-29</time>
                 </div>
             </div>
         </footer>

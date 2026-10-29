@@ -193,9 +193,7 @@
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            在 Linux 中
-硬盘(ATA)  ←→  桥接芯片  ←→  USB  ←→  SCSI 层  ←→  sd 驱动  ←→  &#x2F;dev&#x2F;sda
-直接接上的硬盘，smartctl 看到的直接是 ATA 设备，自动...
+                            smartctl 读 SATA 盘的 SMART，靠的是 ATA pass-through（0x85&#x2F;0xA1） 这条命令穿过 USB 桥接芯片转发给硬盘。但各家桥接芯片（JMicron &#x2F; ASMedia &amp;#x...
                         
                     </p>
                 </div>
