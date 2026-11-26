@@ -193,15 +193,13 @@
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Office_Printer_Halt/" itemprop="mainEntityOfPage"><span itemprop="name headline">连不上的打印机会导致 Office 卡死</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]多同步盘下Dropbox同步状态图标不见</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            其实写这个就只想骂微软。
-长期存在的问题，到现在都没解决。连不上你倒是给个提示啊，我又不打印。不知道什么脑抽回路还不修。
-MDZZ
-
+                            简要地说Windows的overlayIcon(状态图标)最多不能超过15个(我这边好像是超过13个就不行),而Onedrive自己就占了一半(我同时用两个同步盘)这些信息保存在
+1HKEY_LOCAL_MACHINE\SOFTWAR...
                         
                     </p>
                 </div>
@@ -209,13 +207,13 @@ MDZZ
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2026-11-26T09:01:03.291Z" itemprop="datePublished">
+                <time datetime="2026-11-26T09:17:07.628Z" itemprop="datePublished">
                     <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
+                        <a class="tag-none-link" href="/tags/Dropbox/" rel="tag">Dropbox</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>
                     
                 </a>
                 
@@ -227,7 +225,7 @@ MDZZ
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/Office_Printer_Halt/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -245,13 +243,16 @@ MDZZ
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/SMB/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows明明分配了共享权限却无法正常访问网络共享路径</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Errordeb/" itemprop="mainEntityOfPage"><span itemprop="name headline">Debian 错误 deb 打包卸载处理</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            其实最简单的方法是重启。
-说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输...
+                            主要是自打包的配置没写好，没法升级，没法重装卸载时配置没法处理导致的不可卸载。
+删除这个文件夹下的&#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info&#x2F;相关文件
+1sudo dpkg --remove --force-all &lt;包名&gt;
+
+...
                         
                     </p>
                 </div>
@@ -259,13 +260,13 @@ MDZZ
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2026-11-26T09:01:03.291Z" itemprop="datePublished">
+                <time datetime="2026-11-26T09:17:07.628Z" itemprop="datePublished">
                     <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
                     
                 </a>
                 
@@ -277,7 +278,7 @@ MDZZ
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/SMB/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/Errordeb/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -295,14 +296,12 @@ MDZZ
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/SWIG_error/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]CentOS7 SWIG director method error. Error detected when calling 'RepoCB.handleMirrorFailure', ignoring this repo.</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/" itemprop="mainEntityOfPage"><span itemprop="name headline">Ubuntu 和Windows 7共存的GRUB启动顺序</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            简而言之，就是用 dnf，但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。
-实际yum install的时候会提醒你没有 key，要导入 key
-
+                            Grub会自动在C盘加入双系统启动的配置，而且默认会启动Ubuntu，把 windows 7放在最后面。如果要启动windows的话，需要按向下的箭头4、5次，非常麻烦。现阶段还是使用windows要多一点，所以需要修改Grub让 w...
                         
                     </p>
                 </div>
@@ -310,13 +309,13 @@ MDZZ
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2026-11-26T09:01:03.291Z" itemprop="datePublished">
+                <time datetime="2026-11-26T09:17:07.628Z" itemprop="datePublished">
                     <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Redhat%E7%B3%BB/" rel="tag">Redhat系</a>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a>
                     
                 </a>
                 
@@ -328,7 +327,7 @@ MDZZ
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/SWIG_error/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -364,7 +363,7 @@ MDZZ
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2026-11-26T09:01:03.291Z" itemprop="datePublished">
+                <time datetime="2026-11-26T09:17:07.628Z" itemprop="datePublished">
                     <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
@@ -400,13 +399,14 @@ MDZZ
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x0000011b/" itemprop="mainEntityOfPage"><span itemprop="name headline">[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/%E6%96%B0%E5%BC%8F%E5%BE%85%E6%9C%BA%E7%8A%B6%E6%80%81/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]可能是新式待机状态造成的问题</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            原因见这里讨论https:&#x2F;&#x2F;docs.microsoft.com&#x2F;en-us&#x2F;answers&#x2F;questions&#x2F;517533&#x2F;pint-server-and-print-nightmare-update.html
-最早 Win 1...
+                            官方解释https:&#x2F;&#x2F;learn.microsoft.com&#x2F;zh-cn&#x2F;windows-hardware&#x2F;design&#x2F;device-experiences&#x2F;modern-standby-states
+重点
+目前笔记本默认都是 S...
                         
                     </p>
                 </div>
@@ -414,13 +414,13 @@ MDZZ
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2026-11-26T09:01:03.291Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                <time datetime="2026-02-14T15:36:00.000Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-02-14</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-Update/" rel="tag">Windows Update</a>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
                     
                 </a>
                 
@@ -432,58 +432,7 @@ MDZZ
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/Windows%20Update/0x0000011b/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x80072EFE/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows Update:0x80072EFE</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            2008 R2遇到这个问题是由于update agent过旧导致的理论Windows7早期版本也有问题，会导致后台占用很多内存
-从文章得知Win8 和2012也有更新包，但是报错不明
-更新包似乎是这两个系统通用的https:&#x2F;&#x2F;doc...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2026-11-26T09:01:03.291Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/Windows%20Update/0x80072EFE/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/%E6%96%B0%E5%BC%8F%E5%BE%85%E6%9C%BA%E7%8A%B6%E6%80%81/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -688,6 +637,56 @@ mount直接是可以Mount...
             </span>
             <span class="pull-right">
                 <a class="read-more" href="/Issue/NtpClient/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Issue/">Issue</a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Group%20Policy/%E5%85%B3%E9%97%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A/" itemprop="mainEntityOfPage"><span itemprop="name headline">关闭打开文件的安全警告 不提示 这些文件可能对你的计算机有害</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            在组策略中用户配置 --&gt; 管理模板 --&gt; Windows组件 --&gt; 附件管理器打开 &quot;低风险文件类型的包含列表&quot;启用后把相关扩展名添加进去。例如.exe;.js
+另外一个是访问SMB遇到的处...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2019-12-19T08:00:00.000Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2019-12-19</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/%E7%BB%84%E7%AD%96%E7%95%A5-Group-Policy-gpedit-msc/" rel="tag">组策略(Group Policy)gpedit.msc</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Issue/Group%20Policy/%E5%85%B3%E9%97%AD%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E7%9A%84%E5%AE%89%E5%85%A8%E8%AD%A6%E5%91%8A/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
