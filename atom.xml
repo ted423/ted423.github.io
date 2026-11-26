@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-11-26T15:01:48.419Z</updated>
+  <updated>2026-11-26T15:34:28.512Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Adobe Acrobat Reader DC Offline / 离线安装包</title>
+    <link href="http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/"/>
+    <id>http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/</id>
+    <published>2026-11-26T15:34:28.512Z</published>
+    <updated>2026-11-26T15:34:28.512Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://get.adobe.com/cn/reader/enterprise/">https://get.adobe.com/cn/reader/enterprise/</a><br>刚好今年有更新</p><p>现在直接从 Winget 那里获取了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://get.adobe.com/cn/reader/enterprise/&quot;&gt;https://get.adobe.com/cn/reader/enterprise/&lt;/a&gt;&lt;br&gt;刚好今年有更新&lt;/p&gt;
+&lt;p&gt;现在直接从 Winget 那里获取</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Offline Install" scheme="http://ted423.github.io/tags/Offline-Install/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[不再推荐][开源]VSCode</title>
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
-    <published>2026-11-26T15:01:48.419Z</published>
-    <updated>2026-11-26T15:01:48.419Z</updated>
+    <published>2026-11-26T15:34:28.512Z</published>
+    <updated>2026-11-26T15:34:28.512Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>需要注意它的安装包分为 User 和全局的，全局的要管理员权限安装。普通用户用 User 的就好</p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西(到现在还没完全解决)(目前看起来是 Gemini 太菜)</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。<del>(最后发现是 Ditto 的问题)</del>(并不)</li><li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任<br>(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)<br>我最终把工作区信任整个给关了。可能 VSCode 是把信任工作区和信任文件夹给分开的。开启的话，新打开的窗口默认就算不受信任的工作区。</li></ul><h1 id="配置项"><a href="#配置项" class="headerlink" title="配置项"></a>配置项</h1><h2 id="Hot-Exit"><a href="#Hot-Exit" class="headerlink" title="Hot Exit"></a>Hot Exit</h2><p>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)，并且有时候一开给你开两个退出前的窗口</p><p>我觉得它的设置项过于复杂到 SB 的程度了。</p><p>最后发现好像是卡了缓存 -<time datetime="2026-11-17">2026-11-17</time></p><h2 id="disableAIFeatures"><a href="#disableAIFeatures" class="headerlink" title="disableAIFeatures"></a>disableAIFeatures</h2><p>直接搜，动的都懂</p><h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><p>(by Deepseek From Trae)<br>而“已保存文件”的标签页是按工作区记在 <code>workspaceStorage</code> 里的，由另一个默认开启的开关控制——<code>workbench.editor.restoreEditors</code>。这就是你设了 <code>none</code> 仍然会弹出一堆标签页的原因；尤其当你通过双击文件夹、用资源管理器右键或带路径的快捷方式启动时，<code>restoreWindows: none</code> 根本不生效。</p><p>这个作用是 窗口内 已保存文件的标签页&#x2F;布局 是否还原</p>]]></content>
     
@@ -48,38 +75,11 @@
   </entry>
   
   <entry>
-    <title>Adobe Acrobat Reader DC Offline / 离线安装包</title>
-    <link href="http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/"/>
-    <id>http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/</id>
-    <published>2026-11-26T15:01:48.418Z</published>
-    <updated>2026-11-26T15:01:48.418Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://get.adobe.com/cn/reader/enterprise/">https://get.adobe.com/cn/reader/enterprise/</a><br>刚好今年有更新</p><p>现在直接从 Winget 那里获取了</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://get.adobe.com/cn/reader/enterprise/&quot;&gt;https://get.adobe.com/cn/reader/enterprise/&lt;/a&gt;&lt;br&gt;刚好今年有更新&lt;/p&gt;
-&lt;p&gt;现在直接从 Winget 那里获取</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Offline Install" scheme="http://ted423.github.io/tags/Offline-Install/"/>
-    
-  </entry>
-  
-  <entry>
     <title>[COS]菌烨tako</title>
     <link href="http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E8%8F%8C%E7%83%A8tako/"/>
     <id>http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E8%8F%8C%E7%83%A8tako/</id>
-    <published>2026-11-26T15:01:48.416Z</published>
-    <updated>2026-11-26T15:01:48.416Z</updated>
+    <published>2026-11-26T15:34:28.511Z</published>
+    <updated>2026-11-26T15:34:28.511Z</updated>
     
     <content type="html"><![CDATA[<p>傻逼Bitcron似乎把之前的搞没了</p><p><a href="https://shoot.photo/image/PdSqk"><img src="https://shoot.photo/images/2022/07/01/PdSqk.md.jpg" alt="PdSqk.md.jpg"></a><br><a href="https://shoot.photo/image/PdrVH"><img src="https://shoot.photo/images/2022/07/01/PdrVH.md.jpg" alt="PdrVH.md.jpg"></a><br><a href="https://shoot.photo/image/PdjJD"><img src="https://shoot.photo/images/2022/07/01/PdjJD.md.jpg" alt="PdjJD.md.jpg"></a><br><a href="https://shoot.photo/image/Pdcyo"><img src="https://shoot.photo/images/2022/07/01/Pdcyo.md.jpg" alt="Pdcyo.md.jpg"></a><br><a href="https://shoot.photo/image/PdbhO"><img src="https://shoot.photo/images/2022/07/01/PdbhO.md.jpg" alt="PdbhO.md.jpg"></a></p>]]></content>
     
@@ -107,8 +107,8 @@
     <title>NetworkManager - 这才是正宗的</title>
     <link href="http://ted423.github.io/Linux/NetworkManager/"/>
     <id>http://ted423.github.io/Linux/NetworkManager/</id>
-    <published>2026-11-26T15:01:48.412Z</published>
-    <updated>2026-11-26T15:01:48.412Z</updated>
+    <published>2026-11-26T15:34:28.508Z</published>
+    <updated>2026-11-26T15:34:28.508Z</updated>
     
     <content type="html"><![CDATA[<p><del>其实大小写不一样</del></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">nmcli connection add type vlan con-name bond.4  ifname bond.4 dev bond id 4 master bridge.4</span><br><span class="line"></span><br><span class="line">#更新接口状态</span><br><span class="line">nmcli connection up bridge.4</span><br><span class="line"></span><br><span class="line">nmcli connection modify Bond ethernet.cloned-mac-address b4:96:91:a7:2f:2e</span><br><span class="line"></span><br><span class="line">nmcli connection show bond</span><br><span class="line"></span><br><span class="line">nmcli connection modify bridge bridge.mac-address 00:e0:4c:2b:00:57</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -138,8 +138,8 @@
     <title>NFS 相关</title>
     <link href="http://ted423.github.io/Linux/nfs_something/"/>
     <id>http://ted423.github.io/Linux/nfs_something/</id>
-    <published>2026-11-26T15:01:48.412Z</published>
-    <updated>2026-11-26T15:01:48.412Z</updated>
+    <published>2026-11-26T15:34:28.508Z</published>
+    <updated>2026-11-26T15:34:28.508Z</updated>
     
     <content type="html"><![CDATA[<p>只考虑 NFSv4，NFSv4 强制要求 TCP </p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html">https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html</a></p><h1 id="bg"><a href="#bg" class="headerlink" title="bg"></a><del>bg</del></h1><p>后台挂载(Redhat7系列已经不再推荐使用，因为系统底层换成了 systemd，这个参数存在问题)</p><p>如果第一次挂载失败，转入后台继续尝试，不阻塞前台启动过程。这个涉及到有时候网络没那么快好，不使用的情况下，一定情况下可能出现启动完后没挂载的情况或者直接就起不来。</p><h1 id="fsc"><a href="#fsc" class="headerlink" title="fsc"></a>fsc</h1><p>本地缓存，需要另一个软件支持，使用中有点问题。最后没用了</p><h1 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h1><p>行为：当 NFS 服务器不可达时，客户端会无限期不断重试 I&#x2F;O 请求，直到服务器恢复正常为止。程序会“停住”不动，等待恢复后继续正常运行。</p><p><del>常与 intr 或其替代选项一起使用，使挂载操作可中断（尤其在老内核中），避免客户端彻底卡死。</del>(但是 intr 在 内核 2.6.25 开始废弃，2008 年，RHEL6 开始)</p><p>通常 如果 nfs 挂载的是重要数据盘，一般是 hard。<strong>硬挂载将保持数据一致性</strong></p><h1 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h1><p>客户端在发起 I&#x2F;O 请求后，如果在一定重试次数或超时时间内未收到服务器响应，就会返回错误给应用程序，而不是一直等下去。</p><p>可设置 timeo（超时时间），retrans（最大重发次数），让挂载更具灵活性</p><p>一般建议是只读挂载才使用软挂载。</p><h1 id="async-sync"><a href="#async-sync" class="headerlink" title="async &amp; sync"></a>async &amp; sync</h1><p>async 会先进内存，有比较好的性能，但是断电会有问题，sync 不进内存，但是性能会有比较严重的问题。Gemini 是说 zfs 有写缓存的情况下强烈建议使用 sync。</p><p><strong>这个参数同时在客户端和服务端都可以配置，且只影响被配置的机子，async 在客户端配置则只影响客户端</strong></p><h1 id="timeo-retrans"><a href="#timeo-retrans" class="headerlink" title="timeo &amp; retrans"></a>timeo &amp; retrans</h1><p>硬挂载一般使用默认值就可以，软挂载特别是 timeo 可能需要设短一点，否则会产生超长时间的卡顿后才报错。</p><p>而硬挂载，因为会不断重试，本身就会一直卡顿。</p><p>另外需要注意的是，早期 NFS 是使用 UDP 的，很多教程会与混淆，而在 NFSv4 中，只是用 TCP，需要考虑 TCP 自身的 timeout 情况。</p><h1 id="NFS-Server-命令"><a href="#NFS-Server-命令" class="headerlink" title="NFS Server 命令"></a>NFS Server 命令</h1><ul><li><code>exportfs -ra</code> nfs server 刷新配置而不用重启</li><li><code>exportfs -v</code> 查看客户端挂载参数</li></ul><h1 id="NFS-Server-端参数"><a href="#NFS-Server-端参数" class="headerlink" title="NFS Server 端参数"></a>NFS Server 端参数</h1><h1 id="wdelay-no-wdelay"><a href="#wdelay-no-wdelay" class="headerlink" title="wdelay &amp; no_wdelay"></a>wdelay &amp; no_wdelay</h1><p>配置 async 的时候没法使用 no_wdelay，高并发写入时不建议开 wdelay，no_wdelay建议配合 sync 使用</p><h1 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h1><p>客户端查询 nfs 挂载参数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount | grep nfs</span><br><span class="line">nfsstat -m</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -167,8 +167,8 @@
     <title>Samba中支持符号链接</title>
     <link href="http://ted423.github.io/Linux/samba%20symbolic%20link/"/>
     <id>http://ted423.github.io/Linux/samba%20symbolic%20link/</id>
-    <published>2026-11-26T15:01:48.412Z</published>
-    <updated>2026-11-26T15:01:48.412Z</updated>
+    <published>2026-11-26T15:34:28.508Z</published>
+    <updated>2026-11-26T15:34:28.508Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">follow symlinks = yes</span><br></pre></td></tr></table></figure><p><a href="https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path">https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path</a></p><p>吐槽下官方文档被标为陈旧<br><a href="https://www.samba.org/samba/docs/using_samba/ch08.html">https://www.samba.org/samba/docs/using_samba/ch08.html</a></p><p>不过这个可以在 <a href="/Software/Webmin/">Webmin</a> 里点点点开启</p>]]></content>
     
@@ -193,7 +193,7 @@
     <title>tmux 使用</title>
     <link href="http://ted423.github.io/Linux/tmux/"/>
     <id>http://ted423.github.io/Linux/tmux/</id>
-    <published>2026-11-26T15:01:48.412Z</published>
+    <published>2026-11-26T15:34:28.508Z</published>
     <updated>2025-04-06T16:00:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p><p>开源协议是 ISC许可证</p><h1 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h1><ul><li>远程工作时，防止因网络中断导致任务终止。</li><li>高效管理多任务并行环境（如开发、运维、日志监控）。</li><li>替代传统终端，实现类 IDE 的多窗口协作体验。</li></ul><h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 <code>tmux</code></p><p>列出会话 <code>tmux ls</code></p><p>重连会话 <code>tmux attach -t 0</code></p><p>翻页&#x2F;滚动操作 按<code>ctrl+b</code>后按<code>[</code></p><p>复制 按住<code>shift</code></p><h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><table><thead><tr><th>操作</th><th>命令&#x2F;快捷键</th></tr></thead><tbody><tr><td>新建会话</td><td>tmux new -s &lt;会话名&gt;</td></tr><tr><td>分离当前会话</td><td>Ctrl+b → d</td></tr><tr><td>列出会话</td><td>tmux ls</td></tr><tr><td>重连会话</td><td>tmux attach -t &lt;会话名&gt;</td></tr><tr><td>关闭会话</td><td>tmux kill-session -t &lt;会话名&gt;</td></tr><tr><td>重命名会话</td><td>Ctrl+b → $</td></tr></tbody></table><h2 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h2><table><thead><tr><th>操作</th><th>快捷键（Ctrl+b 后按）</th></tr></thead><tbody><tr><td>新建窗口</td><td>c</td></tr><tr><td>关闭窗口</td><td>&amp;</td></tr><tr><td>切换窗口</td><td>0-9 或 n（下一窗口）&#x2F;p（上一窗口）</td></tr><tr><td>重命名窗口</td><td>,</td></tr><tr><td>窗口列表</td><td>w</td></tr></tbody></table><h2 id="面板管理"><a href="#面板管理" class="headerlink" title="面板管理"></a>面板管理</h2><table><thead><tr><th>操作</th><th>快捷键（Ctrl+b 后按）</th></tr></thead><tbody><tr><td>垂直分割面板</td><td>%</td></tr><tr><td>水平分割面板</td><td>&quot;</td></tr><tr><td>切换面板</td><td>方向键（←↑↓→）</td></tr><tr><td>关闭面板</td><td>x</td></tr><tr><td>调整面板大小</td><td>Ctrl+方向键</td></tr><tr><td>切换布局</td><td>空格</td></tr></tbody></table><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>tmux 默认行数上限 2000，应该是性能和内存考虑，不过10万行大概也才几十MiB内存</p><p>全局配置文件 <code>/etc/tmux.conf</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set -g history-limit 100000</span><br><span class="line">set -g mouse on #启用鼠标滚屏</span><br></pre></td></tr></table></figure><p>注意版本，因为老版，例如 CentOS7 用的 mode-mouse</p><p>通常建议是使用个人配置 <code>~/.tmux.conf</code></p>]]></content>
@@ -224,26 +224,62 @@
   </entry>
   
   <entry>
-    <title>[问题处理]SVN踩得几个坑</title>
-    <link href="http://ted423.github.io/Issue/svn/"/>
-    <id>http://ted423.github.io/Issue/svn/</id>
-    <published>2026-11-26T15:01:48.411Z</published>
-    <updated>2026-11-26T15:01:48.411Z</updated>
+    <title>[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</title>
+    <link href="http://ted423.github.io/Issue/Windows%20Update/0x0000011b/"/>
+    <id>http://ted423.github.io/Issue/Windows%20Update/0x0000011b/</id>
+    <published>2026-11-26T15:34:28.507Z</published>
+    <updated>2026-11-26T15:34:28.507Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="The-server-sent-a-truncated-HTTP-response-body"><a href="#The-server-sent-a-truncated-HTTP-response-body" class="headerlink" title="The server sent a truncated HTTP response body"></a>The server sent a truncated HTTP response body</h1><p><a href="https://www.jianshu.com/p/ad53304dbdbf">https://www.jianshu.com/p/ad53304dbdbf</a><br>印象里这篇文章似乎没啥用，后面是要改apache的设置。(主要是网页传输文件大小的问题)</p><h1 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h1><p>大部分文章都强调不能cp和rsync。<del>但结果来说，rsync可能会成为最终结果</del></p><ol><li>SVN并没有提供直接备份所有repo的办法，所有文章的repo都是基于单个repo的，所以要备份只能遍历。</li><li>svnadmin dump 出来的文件比服务器上的repo还要大。</li><li>svnadmin dump 的某个repo只有1kb，空repo也是1kb。手动备份能正常备份，<strong>所以记得一定要开log</strong></li><li>svnadmin hotcopy卡住，网上看跟文件系统有关，大概我用的NTFS(NTFS ,samba都不行，只能nfs，samba不行的原因在于某文件创建后会卡住无法删除，改用nfs挂载同目录后正常)</li></ol><h1 id="验证相关"><a href="#验证相关" class="headerlink" title="验证相关"></a>验证相关</h1><p><del>1.8 新增了一个设置，默认关了权限继承</del><br>应该说最新的跟1.6不一样，[&#x2F;]给的权限无法继承，原因不明</p><h1 id="恢复相关"><a href="#恢复相关" class="headerlink" title="恢复相关"></a>恢复相关</h1><p>硬盘炸了，原来项目备份时报错&quot;serialized hash missing terminator&quot;</p><p>导致项目备份数据不对，恢复后无法使用。期间报错&quot;打开文件系统“db”的BDB环境句柄时出错&quot;(Berkeley DB error for filesystem DB_CONFIG)，&quot;svn E160004 current file&quot;(这个是恢复不了我瞎改导致的，实际文件正常的话recover会自动修正current,手动修改没意义，对不上就会报错)。&quot;svn E200002 malformed representation for node-revision&quot;</p><p>经确认是有报错之后，备份时丢失了format以及db文件夹下的一些数据</p><p>正常项目的db文件夹下，revs和revprops都会多套个叫0的文件夹(0-999放到0，1000-1999放到1这样)</p><p>revs里最大的数字为最终版本号。(不过这个不重要)</p><p>主要db文件夹下会需要fomart为(我这里是)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">layout sharded 1000</span><br></pre></td></tr></table></figure><p>而报错导致的备份的fomart都是2</p><p>还需要一个&quot;min-unpacked-rev&quot;(这个从正常项目拷一个塞进去就行)</p><p>然后<code>svnadmin recover</code>和<code>svnadmin verify</code>就行，但如果期间版本有问题，那就是另外一个问题了</p><h1 id="客户端报错-Can-t-install"><a href="#客户端报错-Can-t-install" class="headerlink" title="客户端报错 Can&#39;t install"></a>客户端报错 Can&#39;t install</h1><p>wc.db 的一个问题</p><p>需要 sqlite3 <a href="https://sqlite.org/download.html">https://sqlite.org/download.html</a></p><p>然后<code>sqlite3 .svn/wc.db</code></p><p>出现交互式命令行界面</p><p>此时输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sqlite&gt; </span><span class="language-bash"><span class="keyword">select</span> * from work_queue;</span></span><br></pre></td></tr></table></figure><p>应该会输出一大堆,最后使用</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sqlite&gt; </span><span class="language-bash">delete from work_queue;</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>原因见这里讨论<br><a href="https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html">https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html</a></p><p>最早 Win 10 等都有问题，后续通过更新补丁，已经可以正常添加。<br>但 Win7 大概是被放弃了,更新到最新也没用，包括 Extended Security Updates 也都不行，只有在服务器上取消补丁或者验证才有用。<br>所以...</p><p>另外可以看下这里<br><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver">https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;The-server-sent-a-truncated-HTTP-response-body&quot;&gt;&lt;a href=&quot;#The-server-sent-a-truncated-HTTP-response-body&quot; class=&quot;headerlink&quot; title=&quot;</summary>
+    <summary type="html">&lt;p&gt;原因见这里讨论&lt;br&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html&quot;&gt;https://docs.m</summary>
       
     
     
     
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
     
-    <category term="Open Source" scheme="http://ted423.github.io/tags/Open-Source/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
     
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]Windows Update:0x80072EFE</title>
+    <link href="http://ted423.github.io/Issue/Windows%20Update/0x80072EFE/"/>
+    <id>http://ted423.github.io/Issue/Windows%20Update/0x80072EFE/</id>
+    <published>2026-11-26T15:34:28.507Z</published>
+    <updated>2026-11-26T15:34:28.507Z</updated>
+    
+    <content type="html"><![CDATA[<p>2008 R2遇到<br>这个问题是由于update agent过旧导致的<br>理论Windows7早期版本也有问题，会导致后台占用很多内存</p><p>从文章得知Win8 和2012也有更新包，但是报错不明</p><p>更新包似乎是这两个系统通用的<br><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent">https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2008 R2遇到&lt;br&gt;这个问题是由于update agent过旧导致的&lt;br&gt;理论Windows7早期版本也有问题，会导致后台占用很多内存&lt;/p&gt;
+&lt;p&gt;从文章得知Win8 和2012也有更新包，但是报错不明&lt;/p&gt;
+&lt;p&gt;更新包似乎是这两个系统通用的&lt;br&gt;&lt;a hr</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
     
   </entry>
   
@@ -251,8 +287,8 @@
     <title>[问题处理]Windows Update:0x80246017</title>
     <link href="http://ted423.github.io/Issue/Windows%20Update/0x80246017/"/>
     <id>http://ted423.github.io/Issue/Windows%20Update/0x80246017/</id>
-    <published>2026-11-26T15:01:48.411Z</published>
-    <updated>2026-11-26T15:01:48.411Z</updated>
+    <published>2026-11-26T15:34:28.507Z</published>
+    <updated>2026-11-26T15:34:28.507Z</updated>
     
     <content type="html"><![CDATA[<p>神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。</p><p>这个报错是新装的纯净系统之后出现的，服务里的<code>Background Intelligent service</code>是手动且没运行，改成自动并手动启动之后就正常了</p>]]></content>
     
@@ -282,8 +318,8 @@
     <title>[问题处理]Windows 7 update 报 80072EE2</title>
     <link href="http://ted423.github.io/Issue/Windows%20Update/80072EE2/"/>
     <id>http://ted423.github.io/Issue/Windows%20Update/80072EE2/</id>
-    <published>2026-11-26T15:01:48.411Z</published>
-    <updated>2026-11-26T15:01:48.411Z</updated>
+    <published>2026-11-26T15:34:28.507Z</published>
+    <updated>2026-11-26T15:34:28.507Z</updated>
     
     <content type="html"><![CDATA[<p>Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net stop wuauserv</span><br><span class="line">reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate</span><br><span class="line">net start wuauserv</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -300,66 +336,6 @@
     
     
     <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/0x0000011b/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/0x0000011b/</id>
-    <published>2026-11-26T15:01:48.410Z</published>
-    <updated>2026-11-26T15:01:48.410Z</updated>
-    
-    <content type="html"><![CDATA[<p>原因见这里讨论<br><a href="https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html">https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html</a></p><p>最早 Win 10 等都有问题，后续通过更新补丁，已经可以正常添加。<br>但 Win7 大概是被放弃了,更新到最新也没用，包括 Extended Security Updates 也都不行，只有在服务器上取消补丁或者验证才有用。<br>所以...</p><p>另外可以看下这里<br><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver">https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;原因见这里讨论&lt;br&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html&quot;&gt;https://docs.m</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows Update:0x80072EFE</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/0x80072EFE/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/0x80072EFE/</id>
-    <published>2026-11-26T15:01:48.410Z</published>
-    <updated>2026-11-26T15:01:48.411Z</updated>
-    
-    <content type="html"><![CDATA[<p>2008 R2遇到<br>这个问题是由于update agent过旧导致的<br>理论Windows7早期版本也有问题，会导致后台占用很多内存</p><p>从文章得知Win8 和2012也有更新包，但是报错不明</p><p>更新包似乎是这两个系统通用的<br><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent">https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;2008 R2遇到&lt;br&gt;这个问题是由于update agent过旧导致的&lt;br&gt;理论Windows7早期版本也有问题，会导致后台占用很多内存&lt;/p&gt;
-&lt;p&gt;从文章得知Win8 和2012也有更新包，但是报错不明&lt;/p&gt;
-&lt;p&gt;更新包似乎是这两个系统通用的&lt;br&gt;&lt;a hr</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
     
     <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
@@ -607,6 +583,37 @@
     <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
     
     <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
+    
+    <category term="Maintenance" scheme="http://ted423.github.io/tags/Maintenance/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[不再推荐]开源文件清理工具 - BleachBit</title>
+    <link href="http://ted423.github.io/%E5%9D%9F%E5%9C%BA/BleachBit/"/>
+    <id>http://ted423.github.io/%E5%9D%9F%E5%9C%BA/BleachBit/</id>
+    <published>2026-07-27T08:21:00.000Z</published>
+    <updated>2026-07-27T08:21:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最后没在用了<br><a href="https://www.bleachbit.org/">https://www.bleachbit.org</a></p><p><a href="https://github.com/bleachbit/bleachbit">https://github.com/bleachbit/bleachbit</a></p><p>首先 CCleaner 是垃圾。</p><p>最近 cleanmgr 莫名其妙的 bug ,扫完清了，然后再打开是一点没清掉。</p><ul><li>这个软件支持自定义路径（<strong>加进去没法用可还行</strong>）</li><li>Linux 也支持，不过个人觉得不太需要（？），虽然 Linux 的软件比较喜欢随意路径拉屎。</li><li>深度扫描一般感觉不太需要使用，要用的也要注意这个扫描是严格扫描的后缀，我自己写的 .bak 也被扫出来了，真要有类似需求还是自定义路径吧。免得不小心干掉些可能要保留的东西</li><li>注意 系统 -&gt; 释放磁盘空闲区域 不要使用，这个是生成文件暴力填满硬盘空间。（感觉这个软件最好在界面里加点注释）</li><li>主要需求还是自定义路径，魔方也支持，但是似乎不能用通配符，并且它无了。</li><li>界面有点丑，界面交互过于简陋</li></ul><hr><p>界面看久了，眼睛直接不舒服了可还行，加上不太好的操作，没法自定义。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最后没在用了&lt;br&gt;&lt;a href=&quot;https://www.bleachbit.org/&quot;&gt;https://www.bleachbit.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/bleachbit/bleachbit&quot;&gt;http</summary>
+      
+    
+    
+    
+    <category term="坟场" scheme="http://ted423.github.io/categories/%E5%9D%9F%E5%9C%BA/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="GPLv3" scheme="http://ted423.github.io/tags/GPLv3/"/>
     
     <category term="Maintenance" scheme="http://ted423.github.io/tags/Maintenance/"/>
     
