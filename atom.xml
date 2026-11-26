@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-11-26T15:34:28.512Z</updated>
+  <updated>2026-11-26T15:55:54.504Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Adobe Acrobat Reader DC Offline / 离线安装包</title>
     <link href="http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/"/>
     <id>http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/</id>
-    <published>2026-11-26T15:34:28.512Z</published>
-    <updated>2026-11-26T15:34:28.512Z</updated>
+    <published>2026-11-26T15:55:54.504Z</published>
+    <updated>2026-11-26T15:55:54.504Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://get.adobe.com/cn/reader/enterprise/">https://get.adobe.com/cn/reader/enterprise/</a><br>刚好今年有更新</p><p>现在直接从 Winget 那里获取了</p>]]></content>
     
@@ -47,8 +47,8 @@
     <title>[不再推荐][开源]VSCode</title>
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
-    <published>2026-11-26T15:34:28.512Z</published>
-    <updated>2026-11-26T15:34:28.512Z</updated>
+    <published>2026-11-26T15:55:54.504Z</published>
+    <updated>2026-11-26T15:55:54.504Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>需要注意它的安装包分为 User 和全局的，全局的要管理员权限安装。普通用户用 User 的就好</p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西(到现在还没完全解决)(目前看起来是 Gemini 太菜)</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。<del>(最后发现是 Ditto 的问题)</del>(并不)</li><li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任<br>(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)<br>我最终把工作区信任整个给关了。可能 VSCode 是把信任工作区和信任文件夹给分开的。开启的话，新打开的窗口默认就算不受信任的工作区。</li></ul><h1 id="配置项"><a href="#配置项" class="headerlink" title="配置项"></a>配置项</h1><h2 id="Hot-Exit"><a href="#Hot-Exit" class="headerlink" title="Hot Exit"></a>Hot Exit</h2><p>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)，并且有时候一开给你开两个退出前的窗口</p><p>我觉得它的设置项过于复杂到 SB 的程度了。</p><p>最后发现好像是卡了缓存 -<time datetime="2026-11-17">2026-11-17</time></p><h2 id="disableAIFeatures"><a href="#disableAIFeatures" class="headerlink" title="disableAIFeatures"></a>disableAIFeatures</h2><p>直接搜，动的都懂</p><h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><p>(by Deepseek From Trae)<br>而“已保存文件”的标签页是按工作区记在 <code>workspaceStorage</code> 里的，由另一个默认开启的开关控制——<code>workbench.editor.restoreEditors</code>。这就是你设了 <code>none</code> 仍然会弹出一堆标签页的原因；尤其当你通过双击文件夹、用资源管理器右键或带路径的快捷方式启动时，<code>restoreWindows: none</code> 根本不生效。</p><p>这个作用是 窗口内 已保存文件的标签页&#x2F;布局 是否还原</p>]]></content>
     
@@ -71,275 +71,6 @@
     <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
     
     <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[COS]菌烨tako</title>
-    <link href="http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E8%8F%8C%E7%83%A8tako/"/>
-    <id>http://ted423.github.io/Picture&amp;Photo&amp;Image/COS/%E8%8F%8C%E7%83%A8tako/</id>
-    <published>2026-11-26T15:34:28.511Z</published>
-    <updated>2026-11-26T15:34:28.511Z</updated>
-    
-    <content type="html"><![CDATA[<p>傻逼Bitcron似乎把之前的搞没了</p><p><a href="https://shoot.photo/image/PdSqk"><img src="https://shoot.photo/images/2022/07/01/PdSqk.md.jpg" alt="PdSqk.md.jpg"></a><br><a href="https://shoot.photo/image/PdrVH"><img src="https://shoot.photo/images/2022/07/01/PdrVH.md.jpg" alt="PdrVH.md.jpg"></a><br><a href="https://shoot.photo/image/PdjJD"><img src="https://shoot.photo/images/2022/07/01/PdjJD.md.jpg" alt="PdjJD.md.jpg"></a><br><a href="https://shoot.photo/image/Pdcyo"><img src="https://shoot.photo/images/2022/07/01/Pdcyo.md.jpg" alt="Pdcyo.md.jpg"></a><br><a href="https://shoot.photo/image/PdbhO"><img src="https://shoot.photo/images/2022/07/01/PdbhO.md.jpg" alt="PdbhO.md.jpg"></a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;傻逼Bitcron似乎把之前的搞没了&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://shoot.photo/image/PdSqk&quot;&gt;&lt;img src=&quot;https://shoot.photo/images/2022/07/01/PdSqk.md.jpg&quot; alt=&quot;Pd</summary>
-      
-    
-    
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/categories/Picture-Photo-Image/"/>
-    
-    
-    <category term="Picture&amp;Photo&amp;Image" scheme="http://ted423.github.io/tags/Picture-Photo-Image/"/>
-    
-    <category term="COS" scheme="http://ted423.github.io/tags/COS/"/>
-    
-    <category term="三次元" scheme="http://ted423.github.io/tags/%E4%B8%89%E6%AC%A1%E5%85%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NetworkManager - 这才是正宗的</title>
-    <link href="http://ted423.github.io/Linux/NetworkManager/"/>
-    <id>http://ted423.github.io/Linux/NetworkManager/</id>
-    <published>2026-11-26T15:34:28.508Z</published>
-    <updated>2026-11-26T15:34:28.508Z</updated>
-    
-    <content type="html"><![CDATA[<p><del>其实大小写不一样</del></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">nmcli connection add type vlan con-name bond.4  ifname bond.4 dev bond id 4 master bridge.4</span><br><span class="line"></span><br><span class="line">#更新接口状态</span><br><span class="line">nmcli connection up bridge.4</span><br><span class="line"></span><br><span class="line">nmcli connection modify Bond ethernet.cloned-mac-address b4:96:91:a7:2f:2e</span><br><span class="line"></span><br><span class="line">nmcli connection show bond</span><br><span class="line"></span><br><span class="line">nmcli connection modify bridge bridge.mac-address 00:e0:4c:2b:00:57</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;del&gt;其实大小写不一样&lt;/del&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
-      
-    
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
-    
-    <category term="Network" scheme="http://ted423.github.io/tags/Network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NFS 相关</title>
-    <link href="http://ted423.github.io/Linux/nfs_something/"/>
-    <id>http://ted423.github.io/Linux/nfs_something/</id>
-    <published>2026-11-26T15:34:28.508Z</published>
-    <updated>2026-11-26T15:34:28.508Z</updated>
-    
-    <content type="html"><![CDATA[<p>只考虑 NFSv4，NFSv4 强制要求 TCP </p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html">https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html</a></p><h1 id="bg"><a href="#bg" class="headerlink" title="bg"></a><del>bg</del></h1><p>后台挂载(Redhat7系列已经不再推荐使用，因为系统底层换成了 systemd，这个参数存在问题)</p><p>如果第一次挂载失败，转入后台继续尝试，不阻塞前台启动过程。这个涉及到有时候网络没那么快好，不使用的情况下，一定情况下可能出现启动完后没挂载的情况或者直接就起不来。</p><h1 id="fsc"><a href="#fsc" class="headerlink" title="fsc"></a>fsc</h1><p>本地缓存，需要另一个软件支持，使用中有点问题。最后没用了</p><h1 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h1><p>行为：当 NFS 服务器不可达时，客户端会无限期不断重试 I&#x2F;O 请求，直到服务器恢复正常为止。程序会“停住”不动，等待恢复后继续正常运行。</p><p><del>常与 intr 或其替代选项一起使用，使挂载操作可中断（尤其在老内核中），避免客户端彻底卡死。</del>(但是 intr 在 内核 2.6.25 开始废弃，2008 年，RHEL6 开始)</p><p>通常 如果 nfs 挂载的是重要数据盘，一般是 hard。<strong>硬挂载将保持数据一致性</strong></p><h1 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h1><p>客户端在发起 I&#x2F;O 请求后，如果在一定重试次数或超时时间内未收到服务器响应，就会返回错误给应用程序，而不是一直等下去。</p><p>可设置 timeo（超时时间），retrans（最大重发次数），让挂载更具灵活性</p><p>一般建议是只读挂载才使用软挂载。</p><h1 id="async-sync"><a href="#async-sync" class="headerlink" title="async &amp; sync"></a>async &amp; sync</h1><p>async 会先进内存，有比较好的性能，但是断电会有问题，sync 不进内存，但是性能会有比较严重的问题。Gemini 是说 zfs 有写缓存的情况下强烈建议使用 sync。</p><p><strong>这个参数同时在客户端和服务端都可以配置，且只影响被配置的机子，async 在客户端配置则只影响客户端</strong></p><h1 id="timeo-retrans"><a href="#timeo-retrans" class="headerlink" title="timeo &amp; retrans"></a>timeo &amp; retrans</h1><p>硬挂载一般使用默认值就可以，软挂载特别是 timeo 可能需要设短一点，否则会产生超长时间的卡顿后才报错。</p><p>而硬挂载，因为会不断重试，本身就会一直卡顿。</p><p>另外需要注意的是，早期 NFS 是使用 UDP 的，很多教程会与混淆，而在 NFSv4 中，只是用 TCP，需要考虑 TCP 自身的 timeout 情况。</p><h1 id="NFS-Server-命令"><a href="#NFS-Server-命令" class="headerlink" title="NFS Server 命令"></a>NFS Server 命令</h1><ul><li><code>exportfs -ra</code> nfs server 刷新配置而不用重启</li><li><code>exportfs -v</code> 查看客户端挂载参数</li></ul><h1 id="NFS-Server-端参数"><a href="#NFS-Server-端参数" class="headerlink" title="NFS Server 端参数"></a>NFS Server 端参数</h1><h1 id="wdelay-no-wdelay"><a href="#wdelay-no-wdelay" class="headerlink" title="wdelay &amp; no_wdelay"></a>wdelay &amp; no_wdelay</h1><p>配置 async 的时候没法使用 no_wdelay，高并发写入时不建议开 wdelay，no_wdelay建议配合 sync 使用</p><h1 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h1><p>客户端查询 nfs 挂载参数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount | grep nfs</span><br><span class="line">nfsstat -m</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;只考虑 NFSv4，NFSv4 强制要求 TCP &lt;/p&gt;
-&lt;h1 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://docs.aws.ama</summary>
-      
-    
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Samba中支持符号链接</title>
-    <link href="http://ted423.github.io/Linux/samba%20symbolic%20link/"/>
-    <id>http://ted423.github.io/Linux/samba%20symbolic%20link/</id>
-    <published>2026-11-26T15:34:28.508Z</published>
-    <updated>2026-11-26T15:34:28.508Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">follow symlinks = yes</span><br></pre></td></tr></table></figure><p><a href="https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path">https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path</a></p><p>吐槽下官方文档被标为陈旧<br><a href="https://www.samba.org/samba/docs/using_samba/ch08.html">https://www.samba.org/samba/docs/using_samba/ch08.html</a></p><p>不过这个可以在 <a href="/Software/Webmin/">Webmin</a> 里点点点开启</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
-      
-    
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>tmux 使用</title>
-    <link href="http://ted423.github.io/Linux/tmux/"/>
-    <id>http://ted423.github.io/Linux/tmux/</id>
-    <published>2026-11-26T15:34:28.508Z</published>
-    <updated>2025-04-06T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。</p><p>开源协议是 ISC许可证</p><h1 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h1><ul><li>远程工作时，防止因网络中断导致任务终止。</li><li>高效管理多任务并行环境（如开发、运维、日志监控）。</li><li>替代传统终端，实现类 IDE 的多窗口协作体验。</li></ul><h1 id="主要命令"><a href="#主要命令" class="headerlink" title="主要命令"></a>主要命令</h1><p>开启使用命令 <code>tmux</code></p><p>列出会话 <code>tmux ls</code></p><p>重连会话 <code>tmux attach -t 0</code></p><p>翻页&#x2F;滚动操作 按<code>ctrl+b</code>后按<code>[</code></p><p>复制 按住<code>shift</code></p><h2 id="会话管理"><a href="#会话管理" class="headerlink" title="会话管理"></a>会话管理</h2><table><thead><tr><th>操作</th><th>命令&#x2F;快捷键</th></tr></thead><tbody><tr><td>新建会话</td><td>tmux new -s &lt;会话名&gt;</td></tr><tr><td>分离当前会话</td><td>Ctrl+b → d</td></tr><tr><td>列出会话</td><td>tmux ls</td></tr><tr><td>重连会话</td><td>tmux attach -t &lt;会话名&gt;</td></tr><tr><td>关闭会话</td><td>tmux kill-session -t &lt;会话名&gt;</td></tr><tr><td>重命名会话</td><td>Ctrl+b → $</td></tr></tbody></table><h2 id="窗口管理"><a href="#窗口管理" class="headerlink" title="窗口管理"></a>窗口管理</h2><table><thead><tr><th>操作</th><th>快捷键（Ctrl+b 后按）</th></tr></thead><tbody><tr><td>新建窗口</td><td>c</td></tr><tr><td>关闭窗口</td><td>&amp;</td></tr><tr><td>切换窗口</td><td>0-9 或 n（下一窗口）&#x2F;p（上一窗口）</td></tr><tr><td>重命名窗口</td><td>,</td></tr><tr><td>窗口列表</td><td>w</td></tr></tbody></table><h2 id="面板管理"><a href="#面板管理" class="headerlink" title="面板管理"></a>面板管理</h2><table><thead><tr><th>操作</th><th>快捷键（Ctrl+b 后按）</th></tr></thead><tbody><tr><td>垂直分割面板</td><td>%</td></tr><tr><td>水平分割面板</td><td>&quot;</td></tr><tr><td>切换面板</td><td>方向键（←↑↓→）</td></tr><tr><td>关闭面板</td><td>x</td></tr><tr><td>调整面板大小</td><td>Ctrl+方向键</td></tr><tr><td>切换布局</td><td>空格</td></tr></tbody></table><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>tmux 默认行数上限 2000，应该是性能和内存考虑，不过10万行大概也才几十MiB内存</p><p>全局配置文件 <code>/etc/tmux.conf</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">set -g history-limit 100000</span><br><span class="line">set -g mouse on #启用鼠标滚屏</span><br></pre></td></tr></table></figure><p>注意版本，因为老版，例如 CentOS7 用的 mode-mouse</p><p>通常建议是使用个人配置 <code>~/.tmux.conf</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;tmux（Terminal Multiplexer）是一款 终端复用工具，允许在单一终端窗口中创建、管理和切换多个 会话、窗口 和 面板，支持终端会话的持久化与灵活分屏。&lt;/p&gt;
-&lt;p&gt;开源协议是 ISC许可证&lt;/p&gt;
-&lt;h1 id=&quot;核心&quot;&gt;&lt;a href=&quot;#核心&quot; c</summary>
-      
-    
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Command" scheme="http://ted423.github.io/tags/Command/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/0x0000011b/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/0x0000011b/</id>
-    <published>2026-11-26T15:34:28.507Z</published>
-    <updated>2026-11-26T15:34:28.507Z</updated>
-    
-    <content type="html"><![CDATA[<p>原因见这里讨论<br><a href="https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html">https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html</a></p><p>最早 Win 10 等都有问题，后续通过更新补丁，已经可以正常添加。<br>但 Win7 大概是被放弃了,更新到最新也没用，包括 Extended Security Updates 也都不行，只有在服务器上取消补丁或者验证才有用。<br>所以...</p><p>另外可以看下这里<br><a href="https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver">https://docs.microsoft.com/en-us/windows-hardware/drivers/print/v4-printer-driver</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;原因见这里讨论&lt;br&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/answers/questions/517533/pint-server-and-print-nightmare-update.html&quot;&gt;https://docs.m</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows Update:0x80072EFE</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/0x80072EFE/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/0x80072EFE/</id>
-    <published>2026-11-26T15:34:28.507Z</published>
-    <updated>2026-11-26T15:34:28.507Z</updated>
-    
-    <content type="html"><![CDATA[<p>2008 R2遇到<br>这个问题是由于update agent过旧导致的<br>理论Windows7早期版本也有问题，会导致后台占用很多内存</p><p>从文章得知Win8 和2012也有更新包，但是报错不明</p><p>更新包似乎是这两个系统通用的<br><a href="https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent">https://docs.microsoft.com/zh-cn/troubleshoot/windows-client/deployment/update-windows-update-agent</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;2008 R2遇到&lt;br&gt;这个问题是由于update agent过旧导致的&lt;br&gt;理论Windows7早期版本也有问题，会导致后台占用很多内存&lt;/p&gt;
-&lt;p&gt;从文章得知Win8 和2012也有更新包，但是报错不明&lt;/p&gt;
-&lt;p&gt;更新包似乎是这两个系统通用的&lt;br&gt;&lt;a hr</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 10" scheme="http://ted423.github.io/tags/Windows-10/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows Update:0x80246017</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/0x80246017/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/0x80246017/</id>
-    <published>2026-11-26T15:34:28.507Z</published>
-    <updated>2026-11-26T15:34:28.507Z</updated>
-    
-    <content type="html"><![CDATA[<p>神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。</p><p>这个报错是新装的纯净系统之后出现的，服务里的<code>Background Intelligent service</code>是手动且没运行，改成自动并手动启动之后就正常了</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。&lt;/p&gt;
-&lt;p&gt;这个报错是新装的纯净系统之后出现的，服务里的&lt;code&gt;Background Intelligent service&lt;/code&gt;是</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Windows 11" scheme="http://ted423.github.io/tags/Windows-11/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[问题处理]Windows 7 update 报 80072EE2</title>
-    <link href="http://ted423.github.io/Issue/Windows%20Update/80072EE2/"/>
-    <id>http://ted423.github.io/Issue/Windows%20Update/80072EE2/</id>
-    <published>2026-11-26T15:34:28.507Z</published>
-    <updated>2026-11-26T15:34:28.507Z</updated>
-    
-    <content type="html"><![CDATA[<p>Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net stop wuauserv</span><br><span class="line">reg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate</span><br><span class="line">net start wuauserv</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;</summary>
-      
-    
-    
-    
-    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
-    <category term="Windows Update" scheme="http://ted423.github.io/tags/Windows-Update/"/>
     
   </entry>
   
@@ -426,6 +157,35 @@
     <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
     
     <category term="AI generate" scheme="http://ted423.github.io/tags/AI-generate/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NFS 相关</title>
+    <link href="http://ted423.github.io/Linux/nfs_something/"/>
+    <id>http://ted423.github.io/Linux/nfs_something/</id>
+    <published>2026-09-10T01:24:00.000Z</published>
+    <updated>2026-09-10T01:24:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>只考虑 NFSv4，NFSv4 强制要求 TCP </p><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a href="https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html">https://docs.aws.amazon.com/efs/latest/ug/mounting-fs-nfs-mount-settings.html</a></p><h1 id="bg"><a href="#bg" class="headerlink" title="bg"></a><del>bg</del></h1><p>后台挂载(Redhat7系列已经不再推荐使用，因为系统底层换成了 systemd，这个参数存在问题)</p><p>如果第一次挂载失败，转入后台继续尝试，不阻塞前台启动过程。这个涉及到有时候网络没那么快好，不使用的情况下，一定情况下可能出现启动完后没挂载的情况或者直接就起不来。</p><h1 id="fsc"><a href="#fsc" class="headerlink" title="fsc"></a>fsc</h1><p>本地缓存，需要另一个软件支持，使用中有点问题。最后没用了</p><h1 id="hard"><a href="#hard" class="headerlink" title="hard"></a>hard</h1><p>行为：当 NFS 服务器不可达时，客户端会无限期不断重试 I&#x2F;O 请求，直到服务器恢复正常为止。程序会“停住”不动，等待恢复后继续正常运行。</p><p><del>常与 intr 或其替代选项一起使用，使挂载操作可中断（尤其在老内核中），避免客户端彻底卡死。</del>(但是 intr 在 内核 2.6.25 开始废弃，2008 年，RHEL6 开始)</p><p>通常 如果 nfs 挂载的是重要数据盘，一般是 hard。<strong>硬挂载将保持数据一致性</strong></p><h1 id="soft"><a href="#soft" class="headerlink" title="soft"></a>soft</h1><p>客户端在发起 I&#x2F;O 请求后，如果在一定重试次数或超时时间内未收到服务器响应，就会返回错误给应用程序，而不是一直等下去。</p><p>可设置 timeo（超时时间），retrans（最大重发次数），让挂载更具灵活性</p><p>一般建议是只读挂载才使用软挂载。</p><h1 id="async-sync"><a href="#async-sync" class="headerlink" title="async &amp; sync"></a>async &amp; sync</h1><p>async 会先进内存，有比较好的性能，但是断电会有问题，sync 不进内存，但是性能会有比较严重的问题。Gemini 是说 zfs 有写缓存的情况下强烈建议使用 sync。</p><p><strong>这个参数同时在客户端和服务端都可以配置，且只影响被配置的机子，async 在客户端配置则只影响客户端</strong></p><h1 id="timeo-retrans"><a href="#timeo-retrans" class="headerlink" title="timeo &amp; retrans"></a>timeo &amp; retrans</h1><p>硬挂载一般使用默认值就可以，软挂载特别是 timeo 可能需要设短一点，否则会产生超长时间的卡顿后才报错。</p><p>而硬挂载，因为会不断重试，本身就会一直卡顿。</p><p>另外需要注意的是，早期 NFS 是使用 UDP 的，很多教程会与混淆，而在 NFSv4 中，只是用 TCP，需要考虑 TCP 自身的 timeout 情况。</p><h1 id="NFS-Server-命令"><a href="#NFS-Server-命令" class="headerlink" title="NFS Server 命令"></a>NFS Server 命令</h1><ul><li><code>exportfs -ra</code> nfs server 刷新配置而不用重启</li><li><code>exportfs -v</code> 查看客户端挂载参数</li></ul><h1 id="NFS-Server-端参数"><a href="#NFS-Server-端参数" class="headerlink" title="NFS Server 端参数"></a>NFS Server 端参数</h1><h1 id="wdelay-no-wdelay"><a href="#wdelay-no-wdelay" class="headerlink" title="wdelay &amp; no_wdelay"></a>wdelay &amp; no_wdelay</h1><p>配置 async 的时候没法使用 no_wdelay，高并发写入时不建议开 wdelay，no_wdelay建议配合 sync 使用</p><h1 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h1><p>客户端查询 nfs 挂载参数</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount | grep nfs</span><br><span class="line">nfsstat -m</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;只考虑 NFSv4，NFSv4 强制要求 TCP &lt;/p&gt;
+&lt;h1 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://docs.aws.ama</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
     
   </entry>
   
@@ -616,6 +376,229 @@
     <category term="GPLv3" scheme="http://ted423.github.io/tags/GPLv3/"/>
     
     <category term="Maintenance" scheme="http://ted423.github.io/tags/Maintenance/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pnpm 不在本地使用软连接的配置</title>
+    <link href="http://ted423.github.io/Code/pnpm/"/>
+    <id>http://ted423.github.io/Code/pnpm/</id>
+    <published>2026-06-16T07:00:00.000Z</published>
+    <updated>2026-06-16T07:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>需要</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node-linker=hoisted</span><br></pre></td></tr></table></figure><p>可以写到 .npmrc</p><p>不过我是全局 <code>pnpm config set node-linker hoisted</code>，虽然 AI 告诉我这个违背了 pnpm 的初衷。</p><p>我目前不了解这个概念 幻影依赖（Phantom Dependencies）。hoisted 会有这个问题。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;需要&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="Code" scheme="http://ted423.github.io/categories/Code/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="npm" scheme="http://ted423.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]Windows 10明明加了python便携版环境变量但是仍然弹Windows Store让安装的问题</title>
+    <link href="http://ted423.github.io/Issue/python-win/"/>
+    <id>http://ted423.github.io/Issue/python-win/</id>
+    <published>2026-03-25T09:44:00.000Z</published>
+    <updated>2026-03-25T09:44:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>简单说就是Win10在<code>C:\Users\XX\AppData\Local\Microsoft\WindowsApps</code>下放了两个0kb的<code>python.exe</code>以及<code>python3.exe</code>用于弹 Windows Store，并把这个路径加到了个人的环境变量。</p><p>而且这个环境变量优先级高所以会优先运行。</p><p>傻逼微软。</p><p>资源管理器里似乎删不掉，要命令行删</p><p>这个叫应用执行别名，可以在设置里关闭。并且没有任何命令行关闭的方式</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;简单说就是Win10在&lt;code&gt;C:&#92;Users&#92;XX&#92;AppData&#92;Local&#92;Microsoft&#92;WindowsApps&lt;/code&gt;下放了两个0kb的&lt;code&gt;python.exe&lt;/code&gt;以及&lt;code&gt;python3.exe&lt;/code&gt;用于弹 Wind</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="傻逼微软" scheme="http://ted423.github.io/tags/%E5%82%BB%E9%80%BC%E5%BE%AE%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NetworkManager - 这才是正宗的</title>
+    <link href="http://ted423.github.io/Linux/NetworkManager/"/>
+    <id>http://ted423.github.io/Linux/NetworkManager/</id>
+    <published>2026-03-06T15:42:00.000Z</published>
+    <updated>2026-03-06T15:42:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><del>其实大小写不一样</del></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">nmcli connection add type vlan con-name bond.4  ifname bond.4 dev bond id 4 master bridge.4</span><br><span class="line"></span><br><span class="line">#更新接口状态</span><br><span class="line">nmcli connection up bridge.4</span><br><span class="line"></span><br><span class="line">nmcli connection modify Bond ethernet.cloned-mac-address b4:96:91:a7:2f:2e</span><br><span class="line"></span><br><span class="line">nmcli connection show bond</span><br><span class="line"></span><br><span class="line">nmcli connection modify bridge bridge.mac-address 00:e0:4c:2b:00:57</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;del&gt;其实大小写不一样&lt;/del&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
+    
+    <category term="Network" scheme="http://ted423.github.io/tags/Network/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Samba中支持符号链接</title>
+    <link href="http://ted423.github.io/Linux/samba%20symbolic%20link/"/>
+    <id>http://ted423.github.io/Linux/samba%20symbolic%20link/</id>
+    <published>2026-03-06T15:12:00.000Z</published>
+    <updated>2026-03-06T15:12:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">follow symlinks = yes</span><br></pre></td></tr></table></figure><p><a href="https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path">https://unix.stackexchange.com/questions/5120/how-do-you-make-samba-follow-symlink-outside-the-shared-path</a></p><p>吐槽下官方文档被标为陈旧<br><a href="https://www.samba.org/samba/docs/using_samba/ch08.html">https://www.samba.org/samba/docs/using_samba/ch08.html</a></p><p>不过这个可以在 <a href="/Software/Webmin/">Webmin</a> 里点点点开启</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]可能是新式待机状态造成的问题</title>
+    <link href="http://ted423.github.io/Issue/%E6%96%B0%E5%BC%8F%E5%BE%85%E6%9C%BA%E7%8A%B6%E6%80%81/"/>
+    <id>http://ted423.github.io/Issue/%E6%96%B0%E5%BC%8F%E5%BE%85%E6%9C%BA%E7%8A%B6%E6%80%81/</id>
+    <published>2026-02-14T15:36:00.000Z</published>
+    <updated>2026-02-14T15:36:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="官方解释"><a href="#官方解释" class="headerlink" title="官方解释"></a>官方解释</h1><p><a href="https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/modern-standby-states">https://learn.microsoft.com/zh-cn/windows-hardware/design/device-experiences/modern-standby-states</a></p><h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><ol><li>目前笔记本默认都是 S0(Modern Standby)，也叫低电量待机，大多数新笔记本默认都不支持传统的 S3 模式了。<code>powercfg /a</code> 可查</li><li>台式机看起来都支持，不过在系统配置中，支持 S0，就会默认禁用 S3。</li><li>我手动直接关闭了 S0:<code>reg add &quot;HKLM\System\CurrentControlSet\Control\Power&quot; /v PlatformAoAcOverride /t REG_DWORD /d 0 /f</code></li></ol><h1 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h1><p>笔记本合上盖子，在部分情况下，无法重新开机，开机后完全电源键闪几下后完全全新启动。</p><p>尝试关闭睡眠，设置不进入睡眠，开启休眠都无效。</p><p>日志里可以看到电脑进入 S0。</p><p>按前面的彻底关闭 S0 (由于笔记本不支持 S3)，导致睡眠完全消失，作为替代，只使用休眠。</p><h1 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h1><p>实际上笔记本睡眠后起不来是一个长期以来的问题，同型号，同硬件，有的有有的没有。从 Win7 时代就开始了。</p><p>只是目前没法判断是硬件问题还是微软的锅。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;官方解释&quot;&gt;&lt;a href=&quot;#官方解释&quot; class=&quot;headerlink&quot; title=&quot;官方解释&quot;&gt;&lt;/a&gt;官方解释&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://learn.microsoft.com/zh-cn/windows-hardware/de</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不用 ACL, Linux 的权限管理是一坨</title>
+    <link href="http://ted423.github.io/Document/Linux_ACL/"/>
+    <id>http://ted423.github.io/Document/Linux_ACL/</id>
+    <published>2026-02-09T09:46:00.000Z</published>
+    <updated>2026-02-09T09:46:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。</p><p>Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。</p><p>之前比较年轻，以为只是主组和副组，但实际操作中会被新建文件的 gid 和 umask 干的手忙脚乱。其实还是操作姿势不对，因为这块主要还是靠 ACL。不过 Linux 比较奇葩了，<a href="https://unix.stackexchange.com/questions/536300/why-is-nfsv4-not-translating-posix-acls-in-a-usable-way">见此</a>,愣是一个系统干出来左右手互博的感觉</p><p>不过感觉目前这块的文档都不太靠谱，感觉很多写文档的人其实自己也没完全摸透。</p><p>ACL 目前有两组控制，一个是本地控制(POSIX ACLs)，一个是挂载 NFS 的控制(NFSv4 ACLs)。两组配置会自动转换</p><p>ACL 配置独立于 Linux 的 mode 权限(chmod -&gt; change mode)。可以对文件夹进行精细的权限控制。</p><h1 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h1><p><a href="https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/">https://help.aliyun.com/zh/nas/user-guide/apsara-file-storage-nas-nfs-acls/</a></p><h1 id="Default"><a href="#Default" class="headerlink" title="Default"></a>Default</h1><p>Default Policy 是继承 ACE(Access Control Entry),只能作用于目录。 会在设置任意 Default Policy 之后出现默认的user、group、other、mask条目，可以用<code>setfacl -k</code>全部清除。但 nfs4 无此命令，你只能到存储上操作。</p><p>通常你设置 ACL 只能对已有的条目生效，如果要新文件也生效，就要设 Default Policy</p><p><strong>注意 Default Policy 不会影响<code>cp</code>和<code>mv</code>进目录的文件</strong>(? 可能之前理解有问题，待验证)</p><h1 id="POSIX-ACLs"><a href="#POSIX-ACLs" class="headerlink" title="POSIX ACLs"></a>POSIX ACLs</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setfacl -R -m group:groupname:r-x path</span><br><span class="line">setfacl -m default:group:groupname:r-x path</span><br></pre></td></tr></table></figure><p>删除</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setfacl -R -x default:group:groupname path</span><br></pre></td></tr></table></figure><p>其中 groupname 是可以更改的组名</p><p>文档</p><p><a href="https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html">https://docs.oracle.com/cd/E56344_01/html/E54075/setfacl-1.html</a></p><h1 id="NFSv4-ACL"><a href="#NFSv4-ACL" class="headerlink" title="NFSv4 ACL"></a>NFSv4 ACL</h1><p>NFSv4 ACL 配置时只支持组id，该命令直接提交到 nfs server,故只要在一台上面跑就好，NFSv4 ACL 会跟 服务器端的 POSIX ACL 做自动转换。</p><p>可以通过</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">getent group groupname</span><br></pre></td></tr></table></figure><p>获取组id</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nfs4_setfacl -a A:fdg:1000:RWX path</span><br></pre></td></tr></table></figure><p><code>g</code>(group)代表设置组id，大写<code>RWX</code>会自动对应到 mode 的<code>rwx</code>，避免 NFSv4 ACL 和 mode 的兼容问题。(但不清楚具体情况)。<code>-R</code>代表递归</p><p><code>fd</code>应该是表示只允许条目访问，<code>fdg</code>设置后默认会配置禁止 linux mode 权限的使用。通常不要使用</p><p>配置完后可以通过验证是否成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nfs4_getfacl path</span><br></pre></td></tr></table></figure><p>文档</p><p><a href="https://linux.die.net/man/1/nfs4_setfacl">https://linux.die.net/man/1/nfs4_setfacl</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;集中式数据存储对大型企业来说是必须的。微软有 AD 那套东西。&lt;/p&gt;
+&lt;p&gt;Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技术水平等问题，通常会做物理隔离。但协作开发肯定有权限管理这块的需求。&lt;/p&gt;
+&lt;p&gt;之前比较年轻，以为只是主组和副</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Linux" scheme="http://ted423.github.io/tags/Linux/"/>
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>K8S(Kubernetes) 笔记</title>
+    <link href="http://ted423.github.io/Software/k8s/"/>
+    <id>http://ted423.github.io/Software/k8s/</id>
+    <published>2026-02-07T16:00:00.000Z</published>
+    <updated>2026-02-08T15:24:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>没空系统性整理，所以先记笔记好了</p><h1 id="最新版的Kubernetes-已不再使用-Docker"><a href="#最新版的Kubernetes-已不再使用-Docker" class="headerlink" title="最新版的Kubernetes 已不再使用 Docker"></a>最新版的Kubernetes 已不再使用 Docker</h1><p>Kubernetes v1.24+ 移除了 dockershim，不再直接依赖 Docker Engine 来作为容器运行时，并且推荐使用像 containerd 这样的 CRI 运行时。同时安装 Docker Engine 和独立的 containerd (被 Kubernetes 使用) 确实可能会导致一些混淆或潜在的冲突，但这并不意味着完全不能安装 Docker，或者某些教程推荐安装 Docker 就是完全错误的。<br>这里需要澄清几个关键点，解释为什么有些教程可能仍然会提到安装 docker.io (或 docker-ce)：<br>历史原因和习惯延续：<br>在 Kubernetes v1.23 及更早版本，Docker Engine 是最主流的容器运行时。大量的旧教程和很多人的经验都是基于 Docker 的。<br>即使 dockershim 被移除，Docker Engine 本身的核心运行时就是 containerd。所以，安装 Docker Engine 实际上也会安装和运行 containerd。<br>Docker CLI 的便利性：<br>很多人习惯使用 docker命令行工具 (docker ps, docker images, docker build 等) 来进行本地镜像构建、容器调试等操作。<br>即使 Kubernetes 使用独立的 containerd 实例，管理员或开发者可能仍然希望在节点上拥有 docker CLI 以便进行一些辅助操作。<br>crictl 是与 CRI 运行时（如 containerd）交互的标准工具，但其命令和用户体验与 docker CLI 不同，后者更为用户熟知。<br>误解或简化教程：<br>有些教程可能没有完全更新到最新的 Kubernetes 架构变化，或者为了简化步骤，直接让用户安装 Docker，因为 Docker 安装后，其内部的 containerd 可以被配置为 Kubernetes 的 CRI 运行时。<br>关键点在于如何配置 kubelet： 如果安装了 Docker Engine，kubelet 必须被配置为不使用已废弃的 dockershim，而是直接与 Docker Engine 内部的 containerd 的 CRI socket (&#x2F;run&#x2F;containerd&#x2F;containerd.sock，如果 Docker 将其暴露出来并与 Kubernetes 期望的一致) 通信。<br>Docker 仍然是构建镜像的主流工具：<br>虽然 Kubernetes 运行容器不直接依赖 Docker Engine，但构建容器镜像的生态系统仍然以 Dockerfile 和 docker build (或兼容工具如 buildah, kaniko) 为主。(可以看下最下面的命令)<br>因此，在开发环境或CI&#x2F;CD流程中，Docker Engine 仍然扮演重要角色。有些教程可能会将节点准备和镜像构建环境的准备步骤混合在一起。</p><h1 id="Helm-Helm-Charts"><a href="#Helm-Helm-Charts" class="headerlink" title="Helm &amp; Helm Charts"></a>Helm &amp; Helm Charts</h1><p>Helm 是 Kubernetes 的包管理器，目前唯一安装 Kubernetes Dashboard 的方式(然后它 Archive 了)，目前应该是推荐用<a href="https://github.com/kubernetes-sigs/headlamp">headlamp</a></p><p>Charts (Helm 包)： Helm 使用一种称为 &quot;Charts&quot; 的打包格式。一个 Chart 就是一个描述了一组相关 Kubernetes 资源的文件集合。它可以包含 Deployment, Service, ConfigMap, Secret, Ingress 等等，以及这些资源的配置模板。Charts 通常允许用户通过一个 values.yaml 文件或命令行参数来定制安装，而无需直接修改 Chart 的模板文件。Helm 会跟踪应用的版本，并允许你轻松地将应用回滚到之前的版本。</p><p>仓库 (Repositories)： Helm Charts 可以存储在称为 &quot;仓库&quot; 的地方，你可以添加这些仓库来访问社区或组织维护的 Charts。</p><h2 id="一些命令"><a href="#一些命令" class="headerlink" title="一些命令"></a>一些命令</h2><p>如 nfs-csi 的镜像代理</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">helm upgrade --install nfs-csi csi-driver-nfs/csi-driver-nfs --namespace kube-system \</span><br><span class="line">  --<span class="built_in">set</span> image.nfs.repository=docker.x.lan/k8s/sig-storage/nfsplugin \</span><br><span class="line">  --<span class="built_in">set</span> image.csiProvisioner.repository=docker.x.lan/k8s/sig-storage/csi-provisioner \</span><br><span class="line">  --<span class="built_in">set</span> image.livenessProbe.repository=docker.x.lan/k8s/sig-storage/livenessprobe \</span><br><span class="line">  --<span class="built_in">set</span> image.csiResizer.repository=docker.x.lan/k8s/sig-storage/csi-resizer \</span><br><span class="line">  --<span class="built_in">set</span> image.csiSnapshotter.repository=docker.x.lan/k8s/sig-storage/csi-snapshotter \</span><br><span class="line">  --<span class="built_in">set</span> image.csiNodeDriverRegistrar.repository=docker.x.lan/k8s/sig-storage/csi-node-driver-registrar</span><br></pre></td></tr></table></figure><p>打印官方提供的配置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">helm show values grafana/alloy</span><br></pre></td></tr></table></figure><h1 id="Master-移除以及清理"><a href="#Master-移除以及清理" class="headerlink" title="Master 移除以及清理"></a>Master 移除以及清理</h1><p><strong>注意事项</strong></p><ul><li>当需要调整 K8S Master 的时候，首要注意的 K8S 主节点之间是多数表决，一定要注意控制节点个数长期保持奇数，否则可能有集群不稳定以及脑裂（集群分裂成配置不同的两个）的风险。一般建议主节点为偶数的时间不要超过1小时。</li><li>在已有集群的情况下，注意不要让 Keeplived 在没有主节点功能的节点上启动。否则有可能其会竞争为当前的工作主节点，导致整个集群无法访问。</li><li>应该先添加节点后再进行删除。</li></ul><p>首先注意主节点不能用<code>delete node</code>，移除可能需要<code>kubectl drain</code>(维护模式)。错误操作或者主节点意外失效，主节点的相关信息仍然会保存在 etcd 里。</p><p>需要进入 etcd pod 操作</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ETCDCTL_API=3 etcdctl -w table endpoint --cluster status</span><br><span class="line"></span><br><span class="line">//这个命令会列出当前主节点，然后选择要移除的移除</span><br><span class="line">ETCDCTL_API=3 etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key member list</span><br><span class="line"></span><br><span class="line">ETCDCTL_API=3 etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key member remove &lt;id&gt;</span><br></pre></td></tr></table></figure><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul><li>pause 的镜像地址定义在 containerd 配置中</li><li>containerd 的 config.toml 可以配置镜像源</li></ul><h1 id="常用维护命令"><a href="#常用维护命令" class="headerlink" title="常用维护命令"></a>常用维护命令</h1><p>列出 default 下的所有 pods</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n default -o wide</span><br></pre></td></tr></table></figure><p>删除一个 pod (通常会自己重启)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl delete pod &lt;podname&gt; -n default</span><br></pre></td></tr></table></figure><p>批量删pods的命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n default |grep &quot;Error&quot; |awk &#x27;&#123;print $1&#125;&#x27; |xargs kubectl delete pod</span><br></pre></td></tr></table></figure><p>不过如果机器对 grep 用 alias 显示行号，会需要<code>unalias grep</code></p><h2 id="crictl"><a href="#crictl" class="headerlink" title="crictl"></a>crictl</h2><p>crictl 是为 Kubernetes 设计的，通过 CRI (Container Runtime Interface) 标准与任何兼容的容器运行时（如 containerd, CRI-O）交互。它是跨运行时的调试工具。</p><p><strong>列出所有 pods</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl pods</span><br></pre></td></tr></table></figure><p><strong>列出镜像</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl images</span><br></pre></td></tr></table></figure><p><strong>下载镜像</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl pull &lt;image-name&gt;</span><br></pre></td></tr></table></figure><p><strong>crictl 只支持下载删除镜像，但不支持 tag、build 等功能</strong></p><p><strong>查看容器 log</strong><br>下面是 containerid ，不是名字，也不是pod id</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl  logs &lt;containerid&gt;</span><br></pre></td></tr></table></figure><h3 id="runtime-endpoint"><a href="#runtime-endpoint" class="headerlink" title="runtime-endpoint"></a>runtime-endpoint</h3><p>runtime-endpoint 是容器运行时（如 containerd, CRI-O）暴露其 CRI 服务的通信地址，<code>--runtime-endpoint</code>用于指定 crictl 工具需要连接的、实现了容器运行时接口（CRI）的 gRPC 服务的监听地址。目前不写也没事</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">containerd: unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line">CRI-O: unix:///var/run/crio/crio.sock</span><br><span class="line"></span><br><span class="line">dockershim (在 Kubernetes v1.24+ 中已移除): unix:///var/run/dockershim.sock</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl --runtime-endpoint unix:///run/containerd/containerd.sock ps -a</span><br></pre></td></tr></table></figure><h2 id="ctr"><a href="#ctr" class="headerlink" title="ctr"></a>ctr</h2><p>ctr 是 containerd 项目自带的原生客户端，直接与 containerd 的 API 交互，绕过了 CRI 层。它只适用于 containerd，并且功能更底层。</p><p>在 Kubernetes 环境中，containerd 会为 Kubelet 创建一个名为 k8s.io 的命名空间。因此，使用 ctr 查看 K8s管理的资源时，必须指定该命名空间。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> ctr -n k8s.io images <span class="built_in">ls</span></span><br></pre></td></tr></table></figure><p>其他还包括 <code>images tag</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zcat harbor.v2.14.1.tar.gz | <span class="built_in">sudo</span> ctr -n k8s.io images import -</span><br></pre></td></tr></table></figure><p>(docker 支持tgz,ctr只支持tar)</p><p>这些用来替代<code>docker</code>的命令</p><h2 id="nerdctl"><a href="#nerdctl" class="headerlink" title="nerdctl"></a>nerdctl</h2><p>是 containerd 的另一个客户端工具。它的目标是提供一个与 Docker CLI 完全兼容的体验。</p><p>未测试</p><p>看了下，目前是需要自己下 bin 文件使用，还涉及到 docker-buildx, debian 目前还不建议用。其它系统自行调研下好了</p><h2 id="其他维护命令"><a href="#其他维护命令" class="headerlink" title="其他维护命令"></a>其他维护命令</h2><p>查看报错，通常用于确认节点的异常。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo journalctl -u kubelet -f --no-pager</span><br></pre></td></tr></table></figure><hr><p>helm ctr 命令说明更新 -<time datetime="2026-02-08">2026-02-08</time></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;没空系统性整理，所以先记笔记好了&lt;/p&gt;
+&lt;h1 id=&quot;最新版的Kubernetes-已不再使用-Docker&quot;&gt;&lt;a href=&quot;#最新版的Kubernetes-已不再使用-Docker&quot; class=&quot;headerlink&quot; title=&quot;最新版的Kubernetes</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="Notes" scheme="http://ted423.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[问题处理]Powershell7的右键菜单奇怪行为</title>
+    <link href="http://ted423.github.io/Issue/pwsh/"/>
+    <id>http://ted423.github.io/Issue/pwsh/</id>
+    <published>2026-02-04T08:58:00.000Z</published>
+    <updated>2026-02-04T08:58:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.ps1</span><br></pre></td></tr></table></figure><p>下面的 UserChoice 删掉</p><p>选择 Vscode 打开会不显示，默认打开是记事本的话会显示。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    <category term="Issue" scheme="http://ted423.github.io/categories/Issue/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
+    <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
+    
+    <category term="傻逼微软" scheme="http://ted423.github.io/tags/%E5%82%BB%E9%80%BC%E5%BE%AE%E8%BD%AF/"/>
     
   </entry>
   
