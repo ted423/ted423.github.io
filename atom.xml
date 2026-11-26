@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-11-26T14:54:29.835Z</updated>
+  <updated>2026-11-26T14:56:34.811Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -17,38 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>PasteLink - Win下便捷创建硬链接软连接</title>
-    <link href="http://ted423.github.io/Software/PasteLink/"/>
-    <id>http://ted423.github.io/Software/PasteLink/</id>
-    <published>2026-11-26T14:54:29.835Z</published>
-    <updated>2026-11-26T14:54:29.835Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/zhaoyangwx/PasteLink">https://github.com/zhaoyangwx/PasteLink</a><br>软件没设 License, 故应该算开源无限制？</p><p>长期没有维护比较可惜，不过应该没什么明显问题。</p><p>注意 .reg 文件的编码改为 utf-8,不然使用可能会右键菜单乱码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file]</span><br><span class="line">@=&quot;粘贴为硬连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&lt;\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink]</span><br><span class="line">@=&quot;粘贴为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file]</span><br><span class="line">@=&quot;复制目录，粘贴文件为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&gt;\&quot;&quot;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/zhaoyangwx/PasteLink&quot;&gt;https://github.com/zhaoyangwx/PasteLink&lt;/a&gt;&lt;br&gt;软件没设 License, 故应该算开源无限制？&lt;/p&gt;
-&lt;p&gt;长期没有维护比较</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
-    
-  </entry>
-  
-  <entry>
     <title>WSL</title>
     <link href="http://ted423.github.io/Software/WSL/"/>
     <id>http://ted423.github.io/Software/WSL/</id>
-    <published>2026-11-26T14:54:29.835Z</published>
-    <updated>2026-11-26T14:54:29.835Z</updated>
+    <published>2026-11-26T14:56:34.811Z</published>
+    <updated>2026-11-26T14:56:34.811Z</updated>
     
     <content type="html"><![CDATA[<h1 id="WSL-Windows-Subsystem-for-Linux"><a href="#WSL-Windows-Subsystem-for-Linux" class="headerlink" title="WSL (Windows Subsystem for Linux)"></a>WSL (Windows Subsystem for Linux)</h1><p>WSL 是微软推出的兼容层工具，允许用户在 Windows 系统上原生运行 Linux 二进制文件，无需传统虚拟机或双系统。</p><h2 id="核心优势"><a href="#核心优势" class="headerlink" title="核心优势"></a>核心优势</h2><p>无缝的 Windows 与 Linux 集成</p><h3 id="文件系统互操作性"><a href="#文件系统互操作性" class="headerlink" title="文件系统互操作性"></a>文件系统互操作性</h3><ul><li><strong>在 Linux 中访问 Windows 文件</strong>：<br>自动挂载在 <code>/mnt</code> 下。例如，访问 C 盘用户目录：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/mnt/c/Users/YourName</span><br></pre></td></tr></table></figure></li><li><strong>在 Windows 中访问 Linux 文件</strong>：<br>在资源管理器地址栏输入以下路径（其中 <code>&lt;发行版名称&gt;</code> 需替换为实际名称，如 <code>Ubuntu-22.04</code>）：<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\\wsl$\&lt;发行版名称&gt;\</span><br></pre></td></tr></table></figure></li><li><strong>典型用例</strong>：<br>开发者可以直接使用 Windows 端的 IDE（如 VS Code）编辑位于 Linux 环境中的代码文件。</li></ul><h3 id="命令行混合调用"><a href="#命令行混合调用" class="headerlink" title="命令行混合调用"></a>命令行混合调用</h3><ul><li><strong>在 PowerShell 或 CMD 中运行 Linux 命令</strong>：<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="built_in">ls</span> <span class="literal">-l</span> /home  <span class="comment"># 调用 Linux 的 `ls` 命令</span></span><br></pre></td></tr></table></figure></li><li><strong>在 Linux 中运行 Windows 程序</strong>：<br>可以直接调用 <code>.exe</code>，例如 <code>explorer.exe .</code>。</li></ul><hr><h2 id="安装与初始化"><a href="#安装与初始化" class="headerlink" title="安装与初始化"></a>安装与初始化</h2><p>在管理员模式下的 PowerShell 或 CMD 中执行：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化安装（默认安装 Ubuntu）</span></span><br><span class="line">wsl.exe <span class="literal">--install</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 列出可在线安装的发行版列表</span></span><br><span class="line">wsl <span class="literal">--list</span> <span class="literal">--online</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装指定的发行版</span></span><br><span class="line">wsl <span class="literal">--install</span> <span class="literal">-d</span> &lt;发行版名称&gt;</span><br><span class="line"><span class="comment"># 示例：wsl --install -d Ubuntu-22.04</span></span><br></pre></td></tr></table></figure><hr><h2 id="常用操作命令"><a href="#常用操作命令" class="headerlink" title="常用操作命令"></a>常用操作命令</h2><h3 id="管理发行版"><a href="#管理发行版" class="headerlink" title="管理发行版"></a>管理发行版</h3><table><thead><tr><th align="left">功能</th><th align="left">命令</th></tr></thead><tbody><tr><td align="left"><strong>列出所有发行版</strong></td><td align="left"><code>wsl -l -v</code></td></tr><tr><td align="left"><strong>设置默认发行版</strong></td><td align="left"><code>wsl --set-default &lt;名称&gt;</code></td></tr><tr><td align="left"><strong>直接运行命令</strong></td><td align="left"><code>wsl &lt;命令&gt;</code> (如 <code>wsl ls /</code>)</td></tr><tr><td align="left"><strong>版本更新</strong></td><td align="left"><code>wsl --update</code></td></tr></tbody></table><h3 id="备份与迁移-导入-导出"><a href="#备份与迁移-导入-导出" class="headerlink" title="备份与迁移 (导入&#x2F;导出)"></a>备份与迁移 (导入&#x2F;导出)</h3><p><strong>导出（备份）</strong>：<br>将现有系统打包成 tar 文件。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--export</span> &lt;名称&gt; &lt;备份文件名&gt;.tar</span><br><span class="line"><span class="comment"># 示例：wsl --export Ubuntu-22.04 backup.tar</span></span><br></pre></td></tr></table></figure><p><strong>导入（恢复&#x2F;迁移）</strong>：<br>将备份文件导入为新的发行版。</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wsl <span class="literal">--import</span> &lt;新名称&gt; &lt;安装路径&gt; &lt;备份文件名&gt;.tar</span><br><span class="line"><span class="comment"># 示例：wsl --import Ubuntu-New D:\WSL\Ubuntu backup.tar</span></span><br></pre></td></tr></table></figure><p><strong>⚠️ 注意事项</strong>：</p><ol><li><strong>删除需谨慎</strong>：使用 <code>wsl --unregister &lt;名称&gt;</code> 会注销发行版并<strong>永久删除</strong>其对应的虚拟磁盘文件（ext4.vhdx），请务必先备份。</li><li><strong>迁移建议</strong>：<ul><li><strong>推荐</strong>：使用官方的 <code>export</code> 和 <code>import</code> 流程，这能最大程度避免跨机器兼容性问题。</li><li><strong>本机迁移</strong>：如果是本机移动位置，也可以先关闭 WSL，手动移动 <code>.vhdx</code> 硬盘文件，然后 <code>unregister</code> 原系统，再在新位置执行 <code>import</code>（指向移动后的文件）。</li><li><strong>注册表修改（不推荐）</strong>：WSL 注册信息存储在 <code>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Lxss</code>，理论上修改 <code>BasePath</code> 可行，但风险较大，不建议操作。</li></ul></li></ol><hr><h2 id="社区镜像与自定义安装"><a href="#社区镜像与自定义安装" class="headerlink" title="社区镜像与自定义安装"></a>社区镜像与自定义安装</h2><p>推荐直接使用在线安装。如果需要使用社区镜像（如 openSUSE），可以手动下载并导入。</p><h3 id="资源链接"><a href="#资源链接" class="headerlink" title="资源链接"></a>资源链接</h3><ul><li><strong>官方文档</strong>: <a href="https://learn.microsoft.com/zh-cn/windows/wsl/install-manual">Microsoft Learn - WSL 安装手册</a></li><li><strong>官方 Ubuntu 22.04 镜像</strong>: <a href="https://aka.ms/wslubuntu2204">aka.ms&#x2F;wslubuntu2204</a></li><li><strong>社区镜像源 (openSUSE 等)</strong>: <a href="https://download.opensuse.org/repositories/Virtualization:/WSL:/instarball/">OpenSUSE Repository</a></li></ul><h3 id="手动导入示例"><a href="#手动导入示例" class="headerlink" title="手动导入示例"></a>手动导入示例</h3><p>假设镜像文件位于 <code>_images</code> 目录：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 语法：wsl --import &lt;系统名&gt; &lt;安装目录&gt; &lt;镜像tar包路径&gt;</span></span><br><span class="line">wsl <span class="literal">--import</span> openS<span class="built_in">USE-Leap</span><span class="literal">-15</span>.<span class="number">6</span> .\openS<span class="built_in">USE-Leap</span><span class="literal">-15</span>.<span class="number">6</span>\ .\openS<span class="built_in">USE-Leap</span><span class="literal">-15</span>.<span class="number">6</span><span class="literal">-15</span>.<span class="number">6</span>.x86_64.tar</span><br></pre></td></tr></table></figure><hr><h2 id="其他命令-Legacy-Global-Config"><a href="#其他命令-Legacy-Global-Config" class="headerlink" title="其他命令 (Legacy &#x2F; Global Config)"></a>其他命令 (Legacy &#x2F; Global Config)</h2><p><code>wslconfig</code> 是较旧但依然有效的全局配置工具：</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出当前已安装系统（包含详细信息）</span></span><br><span class="line">wslconfig /l</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换默认的系统</span></span><br><span class="line">wslconfig.exe /setdefault openS<span class="built_in">USE-Leap</span><span class="literal">-16</span>.<span class="number">0</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -81,8 +54,8 @@
     <title>Windows 的 X11 问题</title>
     <link href="http://ted423.github.io/Software/X11/"/>
     <id>http://ted423.github.io/Software/X11/</id>
-    <published>2026-11-26T14:54:29.835Z</published>
-    <updated>2026-11-26T14:54:29.835Z</updated>
+    <published>2026-11-26T14:56:34.811Z</published>
+    <updated>2026-11-26T14:56:34.811Z</updated>
     
     <content type="html"><![CDATA[<p>其实就是被坑了，网上搜的大部分教程都是 Linux 的，虽然报错都是 <code>Gtk-WARNING **: cannot open display: </code>，但实际 ssh 中 X11 需要本地软件支持，MobaXterm 自身集成了 X11 Server 所以支持，putty 这种虽然有 X11 设置，但他自身并不直接支持，你需要装个 Xming 。<del><a href="https://github.com/marchaesen/vcxsrv">vcxsrv</a></del></p><p>powershell里跑，跑一次就行，这个是添加个人的环境变量</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setx DISPLAY localhost:<span class="number">0</span></span><br></pre></td></tr></table></figure><p>vcxsrv 中 XLaunch 负责配置以及调用 vcxsrv（Xming 其实也差不多，不过 Xming 有个图标给你直接跑），可以把 XLaunch 生成的配置放到启动文件夹里配置开机运行</p><p>不过 vcxsrv 开机会开两个 cmd 窗口。(所以我最后又换回 xming 了)</p><p>下面是 vcxsrv 被 XLaunch 调用的启动命令(display number -1)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\Program Files\VcXsrv\vcxsrv.exe&quot; -multiwindow -clipboard -wgl -ac -displayfd 444</span><br></pre></td></tr></table></figure><hr><p>注意事项</p><ol><li>Xming GPL 版本其实很久没维护了，最新版本应该是要付费获取</li><li><a href="https://github.com/marchaesen/vcxsrv">vcxsrv</a> 2024才开始的一个项目，不过我用的话就是感觉每次开都弹两 cmd 窗口比较蛋疼</li><li>X11 的本地才是服务器端，远端是客户端，客户端连上服务器端在服务器端显示界面<br><del>3. 另外需要注意就是默认的 Windows 下面会一直报<code>X11 forwarding requested but DISPLAY not set</code>,正常应该是 ssh 向远程请求 X11 转发，然后远程的 sshd 配置环境变量。(测试 Linux 跟 MobaXterm 都正常)</del>(上面那个环境变量要设)</li></ol><p><del>我甚至试了两个不同的远端 Linux 系统证明不是 Ubuntu 的问题</del></p><p><del>比较坑的就是手动设个 <code>export DISPLAY=localhost:10</code> 之后就可以了。查询 OSX 好像也有类似的问题。你可以尝试写到 .bashrc 里，我没这么做，因为没找到 root cause</del></p><p><del>可能跟兼容性有关吧。</del></p><p>另外测试 putty 是OK的（可以不用 Win 端加环境变量就可以用），只要勾上 Enable X11 fowarding 就可以了</p><hr><p><time datetime="2025-04-07">2025-04-07</time></p><p><del>今天又发现 Xming 必须用管理员权限运行，否则会不行，但印象里之前不用。</del>（不加环境变量的话）<br><del>vcxsrv 则突然没法用了</del>(其实现在的疑问是为什么之前Linux里设环境变量就能用)</p>]]></content>
     
@@ -109,8 +82,8 @@
     <title>K8S(Kubernetes) 笔记</title>
     <link href="http://ted423.github.io/Software/k8s/"/>
     <id>http://ted423.github.io/Software/k8s/</id>
-    <published>2026-11-26T14:54:29.835Z</published>
-    <updated>2026-11-26T14:54:29.835Z</updated>
+    <published>2026-11-26T14:56:34.811Z</published>
+    <updated>2026-11-26T14:56:34.811Z</updated>
     
     <content type="html"><![CDATA[<p>没空系统性整理，所以先记笔记好了</p><h1 id="最新版的Kubernetes-已不再使用-Docker"><a href="#最新版的Kubernetes-已不再使用-Docker" class="headerlink" title="最新版的Kubernetes 已不再使用 Docker"></a>最新版的Kubernetes 已不再使用 Docker</h1><p>Kubernetes v1.24+ 移除了 dockershim，不再直接依赖 Docker Engine 来作为容器运行时，并且推荐使用像 containerd 这样的 CRI 运行时。同时安装 Docker Engine 和独立的 containerd (被 Kubernetes 使用) 确实可能会导致一些混淆或潜在的冲突，但这并不意味着完全不能安装 Docker，或者某些教程推荐安装 Docker 就是完全错误的。<br>这里需要澄清几个关键点，解释为什么有些教程可能仍然会提到安装 docker.io (或 docker-ce)：<br>历史原因和习惯延续：<br>在 Kubernetes v1.23 及更早版本，Docker Engine 是最主流的容器运行时。大量的旧教程和很多人的经验都是基于 Docker 的。<br>即使 dockershim 被移除，Docker Engine 本身的核心运行时就是 containerd。所以，安装 Docker Engine 实际上也会安装和运行 containerd。<br>Docker CLI 的便利性：<br>很多人习惯使用 docker命令行工具 (docker ps, docker images, docker build 等) 来进行本地镜像构建、容器调试等操作。<br>即使 Kubernetes 使用独立的 containerd 实例，管理员或开发者可能仍然希望在节点上拥有 docker CLI 以便进行一些辅助操作。<br>crictl 是与 CRI 运行时（如 containerd）交互的标准工具，但其命令和用户体验与 docker CLI 不同，后者更为用户熟知。<br>误解或简化教程：<br>有些教程可能没有完全更新到最新的 Kubernetes 架构变化，或者为了简化步骤，直接让用户安装 Docker，因为 Docker 安装后，其内部的 containerd 可以被配置为 Kubernetes 的 CRI 运行时。<br>关键点在于如何配置 kubelet： 如果安装了 Docker Engine，kubelet 必须被配置为不使用已废弃的 dockershim，而是直接与 Docker Engine 内部的 containerd 的 CRI socket (&#x2F;run&#x2F;containerd&#x2F;containerd.sock，如果 Docker 将其暴露出来并与 Kubernetes 期望的一致) 通信。<br>Docker 仍然是构建镜像的主流工具：<br>虽然 Kubernetes 运行容器不直接依赖 Docker Engine，但构建容器镜像的生态系统仍然以 Dockerfile 和 docker build (或兼容工具如 buildah, kaniko) 为主。(可以看下最下面的命令)<br>因此，在开发环境或CI&#x2F;CD流程中，Docker Engine 仍然扮演重要角色。有些教程可能会将节点准备和镜像构建环境的准备步骤混合在一起。</p><h1 id="Helm-Helm-Charts"><a href="#Helm-Helm-Charts" class="headerlink" title="Helm &amp; Helm Charts"></a>Helm &amp; Helm Charts</h1><p>Helm 是 Kubernetes 的包管理器，目前唯一安装 Kubernetes Dashboard 的方式(然后它 Archive 了)，目前应该是推荐用<a href="https://github.com/kubernetes-sigs/headlamp">headlamp</a></p><p>Charts (Helm 包)： Helm 使用一种称为 &quot;Charts&quot; 的打包格式。一个 Chart 就是一个描述了一组相关 Kubernetes 资源的文件集合。它可以包含 Deployment, Service, ConfigMap, Secret, Ingress 等等，以及这些资源的配置模板。Charts 通常允许用户通过一个 values.yaml 文件或命令行参数来定制安装，而无需直接修改 Chart 的模板文件。Helm 会跟踪应用的版本，并允许你轻松地将应用回滚到之前的版本。</p><p>仓库 (Repositories)： Helm Charts 可以存储在称为 &quot;仓库&quot; 的地方，你可以添加这些仓库来访问社区或组织维护的 Charts。</p><h2 id="一些命令"><a href="#一些命令" class="headerlink" title="一些命令"></a>一些命令</h2><p>如 nfs-csi 的镜像代理</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">helm upgrade --install nfs-csi csi-driver-nfs/csi-driver-nfs --namespace kube-system \</span><br><span class="line">  --<span class="built_in">set</span> image.nfs.repository=docker.x.lan/k8s/sig-storage/nfsplugin \</span><br><span class="line">  --<span class="built_in">set</span> image.csiProvisioner.repository=docker.x.lan/k8s/sig-storage/csi-provisioner \</span><br><span class="line">  --<span class="built_in">set</span> image.livenessProbe.repository=docker.x.lan/k8s/sig-storage/livenessprobe \</span><br><span class="line">  --<span class="built_in">set</span> image.csiResizer.repository=docker.x.lan/k8s/sig-storage/csi-resizer \</span><br><span class="line">  --<span class="built_in">set</span> image.csiSnapshotter.repository=docker.x.lan/k8s/sig-storage/csi-snapshotter \</span><br><span class="line">  --<span class="built_in">set</span> image.csiNodeDriverRegistrar.repository=docker.x.lan/k8s/sig-storage/csi-node-driver-registrar</span><br></pre></td></tr></table></figure><p>打印官方提供的配置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">helm show values grafana/alloy</span><br></pre></td></tr></table></figure><h1 id="Master-移除以及清理"><a href="#Master-移除以及清理" class="headerlink" title="Master 移除以及清理"></a>Master 移除以及清理</h1><p><strong>注意事项</strong></p><ul><li>当需要调整 K8S Master 的时候，首要注意的 K8S 主节点之间是多数表决，一定要注意控制节点个数长期保持奇数，否则可能有集群不稳定以及脑裂（集群分裂成配置不同的两个）的风险。一般建议主节点为偶数的时间不要超过1小时。</li><li>在已有集群的情况下，注意不要让 Keeplived 在没有主节点功能的节点上启动。否则有可能其会竞争为当前的工作主节点，导致整个集群无法访问。</li><li>应该先添加节点后再进行删除。</li></ul><p>首先注意主节点不能用<code>delete node</code>，移除可能需要<code>kubectl drain</code>(维护模式)。错误操作或者主节点意外失效，主节点的相关信息仍然会保存在 etcd 里。</p><p>需要进入 etcd pod 操作</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ETCDCTL_API=3 etcdctl -w table endpoint --cluster status</span><br><span class="line"></span><br><span class="line">//这个命令会列出当前主节点，然后选择要移除的移除</span><br><span class="line">ETCDCTL_API=3 etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key member list</span><br><span class="line"></span><br><span class="line">ETCDCTL_API=3 etcdctl --endpoints 127.0.0.1:2379 --cacert /etc/kubernetes/pki/etcd/ca.crt --cert /etc/kubernetes/pki/etcd/server.crt --key /etc/kubernetes/pki/etcd/server.key member remove &lt;id&gt;</span><br></pre></td></tr></table></figure><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><ul><li>pause 的镜像地址定义在 containerd 配置中</li><li>containerd 的 config.toml 可以配置镜像源</li></ul><h1 id="常用维护命令"><a href="#常用维护命令" class="headerlink" title="常用维护命令"></a>常用维护命令</h1><p>列出 default 下的所有 pods</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n default -o wide</span><br></pre></td></tr></table></figure><p>删除一个 pod (通常会自己重启)</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl delete pod &lt;podname&gt; -n default</span><br></pre></td></tr></table></figure><p>批量删pods的命令</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n default |grep &quot;Error&quot; |awk &#x27;&#123;print $1&#125;&#x27; |xargs kubectl delete pod</span><br></pre></td></tr></table></figure><p>不过如果机器对 grep 用 alias 显示行号，会需要<code>unalias grep</code></p><h2 id="crictl"><a href="#crictl" class="headerlink" title="crictl"></a>crictl</h2><p>crictl 是为 Kubernetes 设计的，通过 CRI (Container Runtime Interface) 标准与任何兼容的容器运行时（如 containerd, CRI-O）交互。它是跨运行时的调试工具。</p><p><strong>列出所有 pods</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl pods</span><br></pre></td></tr></table></figure><p><strong>列出镜像</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl images</span><br></pre></td></tr></table></figure><p><strong>下载镜像</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl pull &lt;image-name&gt;</span><br></pre></td></tr></table></figure><p><strong>crictl 只支持下载删除镜像，但不支持 tag、build 等功能</strong></p><p><strong>查看容器 log</strong><br>下面是 containerid ，不是名字，也不是pod id</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl  logs &lt;containerid&gt;</span><br></pre></td></tr></table></figure><h3 id="runtime-endpoint"><a href="#runtime-endpoint" class="headerlink" title="runtime-endpoint"></a>runtime-endpoint</h3><p>runtime-endpoint 是容器运行时（如 containerd, CRI-O）暴露其 CRI 服务的通信地址，<code>--runtime-endpoint</code>用于指定 crictl 工具需要连接的、实现了容器运行时接口（CRI）的 gRPC 服务的监听地址。目前不写也没事</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">containerd: unix:///run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line">CRI-O: unix:///var/run/crio/crio.sock</span><br><span class="line"></span><br><span class="line">dockershim (在 Kubernetes v1.24+ 中已移除): unix:///var/run/dockershim.sock</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crictl --runtime-endpoint unix:///run/containerd/containerd.sock ps -a</span><br></pre></td></tr></table></figure><h2 id="ctr"><a href="#ctr" class="headerlink" title="ctr"></a>ctr</h2><p>ctr 是 containerd 项目自带的原生客户端，直接与 containerd 的 API 交互，绕过了 CRI 层。它只适用于 containerd，并且功能更底层。</p><p>在 Kubernetes 环境中，containerd 会为 Kubelet 创建一个名为 k8s.io 的命名空间。因此，使用 ctr 查看 K8s管理的资源时，必须指定该命名空间。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> ctr -n k8s.io images <span class="built_in">ls</span></span><br></pre></td></tr></table></figure><p>其他还包括 <code>images tag</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zcat harbor.v2.14.1.tar.gz | <span class="built_in">sudo</span> ctr -n k8s.io images import -</span><br></pre></td></tr></table></figure><p>(docker 支持tgz,ctr只支持tar)</p><p>这些用来替代<code>docker</code>的命令</p><h2 id="nerdctl"><a href="#nerdctl" class="headerlink" title="nerdctl"></a>nerdctl</h2><p>是 containerd 的另一个客户端工具。它的目标是提供一个与 Docker CLI 完全兼容的体验。</p><p>未测试</p><p>看了下，目前是需要自己下 bin 文件使用，还涉及到 docker-buildx, debian 目前还不建议用。其它系统自行调研下好了</p><h2 id="其他维护命令"><a href="#其他维护命令" class="headerlink" title="其他维护命令"></a>其他维护命令</h2><p>查看报错，通常用于确认节点的异常。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo journalctl -u kubelet -f --no-pager</span><br></pre></td></tr></table></figure><hr><p>helm ctr 命令说明更新 -<time datetime="2026-02-08">2026-02-08</time></p>]]></content>
     
@@ -136,8 +109,8 @@
     <title>[开源]localsend - 跨端文件传输工具</title>
     <link href="http://ted423.github.io/Software/localsend/"/>
     <id>http://ted423.github.io/Software/localsend/</id>
-    <published>2026-11-26T14:54:29.835Z</published>
-    <updated>2026-11-26T14:54:29.835Z</updated>
+    <published>2026-11-26T14:56:34.811Z</published>
+    <updated>2026-11-26T14:56:34.811Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://github.com/localsend/localsend">https://github.com/localsend/localsend</a></p><p>缺点就是要在同一个wifi&#x2F;网段下面，不过能通过发送连接来解决这个问题，不过这个还需要一个聊天软件或者剪贴板同步工具之类的来处理</p>]]></content>
     
@@ -173,8 +146,8 @@
     <title>记一次试图逃离 MobaXterm</title>
     <link href="http://ted423.github.io/Software/tryoutMobaXterm/"/>
     <id>http://ted423.github.io/Software/tryoutMobaXterm/</id>
-    <published>2026-11-26T14:54:29.835Z</published>
-    <updated>2026-11-26T14:54:29.835Z</updated>
+    <published>2026-11-26T14:56:34.811Z</published>
+    <updated>2026-11-26T14:56:34.811Z</updated>
     
     <content type="html"><![CDATA[<p><a href="/Software/MobaXterm">MobaXterm</a> 毕竟现在用的破解，所以如果能不用或者如果有能替代的方案我是很开心的。</p><p>可以看到我之前尝试过一次。</p><p>这回是看到微软新的那个终端非常有想法，故就准备全部切换过去。</p><p>为此还折腾了<a href="/Software/X11">X11</a>。快速连接就靠终端的配置来弄，然后全部使用 sshkey,弄好可能还会变得高端。</p><p>可惜最后被 MobaXterm 自动显示服务器资源情况的功能给击沉了。这种功能基本就只有商业软件会做了吧。或者国产开源之类的。</p>]]></content>
     
@@ -202,11 +175,70 @@
   </entry>
   
   <entry>
+    <title>邮件客户端选型</title>
+    <link href="http://ted423.github.io/Software/Mail/"/>
+    <id>http://ted423.github.io/Software/Mail/</id>
+    <published>2026-11-26T14:56:34.810Z</published>
+    <updated>2026-11-26T14:56:34.810Z</updated>
+    
+    <content type="html"><![CDATA[<p>目前还是在用 Foxmail，主要是没有太多的可选性</p><h1 id="Outlook"><a href="#Outlook" class="headerlink" title="Outlook"></a>Outlook</h1><p>这是一个收费客户端</p><h1 id="Thunderbird"><a href="#Thunderbird" class="headerlink" title="Thunderbird"></a>Thunderbird</h1><p>过滤器有 Bug，也就是明明符合规则但是不生效。</p><h1 id="Betterbird"><a href="#Betterbird" class="headerlink" title="Betterbird"></a>Betterbird</h1><p>就软件的开发愿景来说是很好的，可惜最新版连中文语言包都不提供了。</p><h1 id="SeaMonkey"><a href="#SeaMonkey" class="headerlink" title="SeaMonkey"></a>SeaMonkey</h1><p>定位错误的一个软件，包含浏览器并且界面很丑。我可以接受浏览器里带邮件客户端，但不能接受这么丑的界面。</p><h1 id="Claws-Mail"><a href="#Claws-Mail" class="headerlink" title="Claws Mail"></a>Claws Mail</h1><p>没中文 界面也相当老</p><h1 id="Mailspring"><a href="#Mailspring" class="headerlink" title="Mailspring"></a>Mailspring</h1><p>不支持 pop3 <a href="https://github.com/Foundry376/Mailspring/issues/45">https://github.com/Foundry376/Mailspring/issues/45</a></p><p>整体来说我觉得这个看法相当的 Stupid，pop3保留副本仍然是相当重要的。特别是大部分的服务商都是有限容量的邮箱。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;目前还是在用 Foxmail，主要是没有太多的可选性&lt;/p&gt;
+&lt;h1 id=&quot;Outlook&quot;&gt;&lt;a href=&quot;#Outlook&quot; class=&quot;headerlink&quot; title=&quot;Outlook&quot;&gt;&lt;/a&gt;Outlook&lt;/h1&gt;&lt;p&gt;这是一个收费客户端&lt;/p&gt;
+&lt;h</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
+    
+    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PasteLink - Win下便捷创建硬链接软连接</title>
+    <link href="http://ted423.github.io/Software/PasteLink/"/>
+    <id>http://ted423.github.io/Software/PasteLink/</id>
+    <published>2026-11-26T14:56:34.810Z</published>
+    <updated>2026-11-26T14:56:34.810Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/zhaoyangwx/PasteLink">https://github.com/zhaoyangwx/PasteLink</a><br>软件没设 License, 故应该算开源无限制？</p><p>长期没有维护比较可惜，不过应该没什么明显问题。</p><p>注意 .reg 文件的编码改为 utf-8,不然使用可能会右键菜单乱码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file]</span><br><span class="line">@=&quot;粘贴为硬连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteHLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&lt;\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink]</span><br><span class="line">@=&quot;粘贴为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W\&quot;&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file]</span><br><span class="line">@=&quot;复制目录，粘贴文件为符号连接&quot;</span><br><span class="line"></span><br><span class="line">[HKEY_CLASSES_ROOT\Directory\Background\shell\PasteLink_file\command]</span><br><span class="line">@=&quot;\&quot;C:\\Windows\\System32\\PasteLink.exe\&quot; \&quot;%W&gt;\&quot;&quot;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/zhaoyangwx/PasteLink&quot;&gt;https://github.com/zhaoyangwx/PasteLink&lt;/a&gt;&lt;br&gt;软件没设 License, 故应该算开源无限制？&lt;/p&gt;
+&lt;p&gt;长期没有维护比较</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="Github" scheme="http://ted423.github.io/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
     <title>[开源]x2go - 远程连接</title>
     <link href="http://ted423.github.io/Software/Remote/x2go/"/>
     <id>http://ted423.github.io/Software/Remote/x2go/</id>
-    <published>2026-11-26T14:54:29.835Z</published>
-    <updated>2026-11-26T14:54:29.835Z</updated>
+    <published>2026-11-26T14:56:34.810Z</published>
+    <updated>2026-11-26T14:56:34.810Z</updated>
     
     <content type="html"><![CDATA[<p>不推荐使用，最后又滚回去使用NoMachine了，主要是目前维护不活跃。</p><p><del>然后发现NoMachine有别的问题</del></p><p>下面记录了一些早期测试的记录，不过当时有点菜，很多操作没有仔细去确认，例如 Linux 普通台式机会在没有外接显示器的情况下，把 GPU 置入省点模式，此时画面显示会非常卡，我目前都是给台式机上显卡欺骗器的。</p><h1 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h1><p><a href="https://wiki.x2go.org/doku.php/start">https://wiki.x2go.org/doku.php/start</a></p><p>闲着无聊试新的远程方式，看看有没合心意的，之前试过QNAP的spice，结果默认剪贴板也是没得。(QNAP 系统渣，还瞎魔改)</p><p>看到x2go用NX协议就也想试试，毕竟开源。</p><p>首先是跟nomachine不兼容。</p><p>当然这是小事。</p><p>x2go支持的桌面是有限的，像什么KDE5不支持，所以你需要使用xfce等在支持列表上的桌面。</p><p>使用桌面登录会跟你显示器登录是不一样。</p><p>当然还能用X11</p><p>这里引入一个小故事</p><p>当我看到x2go在x11可以选择桌面的时候我是很激动的(x11)(</p><p>毕竟这意味着我可以弄一个别人看不到的桌面。</p><p>然后我闲着无聊重启了下我就傻逼了。</p><p>我连不进去了，因为 Debian 同学登陆么的桌面，于是我跑到电脑前，登录进了系统，然后再跑回位置上连。(直接使用xfce这些桌面没这个问题。)</p><h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><ol><li>与显示器同步的画面必须要到电脑前登录，否则x2go的x11 foward不工作。(这点 NoMachine 默认只支持同步显示，并且无需现场登录)</li><li>利用x2go创建的远程画面会卡死。只能强关，关了之后原画面显示内容丢失，甚至我重启开那一会不动，桌面就死了。<del>当然这可能是Mint的锅，不过谁知道呢</del>(我又仔细看了下，我装的是xubuntu,那没事了)</li></ol>]]></content>
     
@@ -241,8 +273,8 @@
     <title>FastStone Capture Full Serial Key</title>
     <link href="http://ted423.github.io/Software/FastStone%20Capture%20Full%20Serial%20Key/"/>
     <id>http://ted423.github.io/Software/FastStone%20Capture%20Full%20Serial%20Key/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2026-11-26T14:56:34.809Z</updated>
     
     <content type="html"><![CDATA[<p>来源<br><a href="https://gist.github.com/xrman/4468f545b169969466bceb694d742dad">https://gist.github.com/xrman/4468f545b169969466bceb694d742dad</a></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Name : Free Software</span><br><span class="line">key : BXRQE-RMMXB-QRFSZ-CVVOX</span><br><span class="line">worked</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -266,43 +298,11 @@
   </entry>
   
   <entry>
-    <title>邮件客户端选型</title>
-    <link href="http://ted423.github.io/Software/Mail/"/>
-    <id>http://ted423.github.io/Software/Mail/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
-    
-    <content type="html"><![CDATA[<p>目前还是在用 Foxmail，主要是没有太多的可选性</p><h1 id="Outlook"><a href="#Outlook" class="headerlink" title="Outlook"></a>Outlook</h1><p>这是一个收费客户端</p><h1 id="Thunderbird"><a href="#Thunderbird" class="headerlink" title="Thunderbird"></a>Thunderbird</h1><p>过滤器有 Bug，也就是明明符合规则但是不生效。</p><h1 id="Betterbird"><a href="#Betterbird" class="headerlink" title="Betterbird"></a>Betterbird</h1><p>就软件的开发愿景来说是很好的，可惜最新版连中文语言包都不提供了。</p><h1 id="SeaMonkey"><a href="#SeaMonkey" class="headerlink" title="SeaMonkey"></a>SeaMonkey</h1><p>定位错误的一个软件，包含浏览器并且界面很丑。我可以接受浏览器里带邮件客户端，但不能接受这么丑的界面。</p><h1 id="Claws-Mail"><a href="#Claws-Mail" class="headerlink" title="Claws Mail"></a>Claws Mail</h1><p>没中文 界面也相当老</p><h1 id="Mailspring"><a href="#Mailspring" class="headerlink" title="Mailspring"></a>Mailspring</h1><p>不支持 pop3 <a href="https://github.com/Foundry376/Mailspring/issues/45">https://github.com/Foundry376/Mailspring/issues/45</a></p><p>整体来说我觉得这个看法相当的 Stupid，pop3保留副本仍然是相当重要的。特别是大部分的服务商都是有限容量的邮箱。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;目前还是在用 Foxmail，主要是没有太多的可选性&lt;/p&gt;
-&lt;h1 id=&quot;Outlook&quot;&gt;&lt;a href=&quot;#Outlook&quot; class=&quot;headerlink&quot; title=&quot;Outlook&quot;&gt;&lt;/a&gt;Outlook&lt;/h1&gt;&lt;p&gt;这是一个收费客户端&lt;/p&gt;
-&lt;h</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Software" scheme="http://ted423.github.io/tags/Software/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Office Tool Plus</title>
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/Office%20Tool%20Plus/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/Office%20Tool%20Plus/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2026-11-26T14:56:34.809Z</updated>
     
     <content type="html"><![CDATA[<p>第三方Office部署工具 神器<br>不过清理的话，并不会完全干净(不过微软官方工具也一样)<br><a href="https://otp.landian.vip/zh-cn/">https://otp.landian.vip/zh-cn/</a></p>]]></content>
     
@@ -330,8 +330,8 @@
     <title>[开源]SumatraPDF</title>
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/SumatraPDF/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/SumatraPDF/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2026-11-26T14:56:34.809Z</updated>
     
     <content type="html"><![CDATA[<p>由于adobe reader免费，这个软件还是有些尴尬的。不过在epub和其他格式的文件方面很有优势，甚至可以拿来看压缩包形式的漫画。<br>只不过由于他的名字，不是很显眼。<br>不过2016到现在都没出新的release,似乎在忙着重构？看epub和cbz使用中都遇到了一些小问题<a href="https://forum.sumatrapdfreader.org/t/something-about-epub-and-cbz/2244">https://forum.sumatrapdfreader.org/t/something-about-epub-and-cbz/2244</a></p><h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><p><a href="https://www.sumatrapdfreader.org/free-pdf-reader.html">https://www.sumatrapdfreader.org/free-pdf-reader.html</a></p><h1 id="github"><a href="#github" class="headerlink" title="github"></a>github</h1><p><a href="https://github.com/sumatrapdfreader/sumatrapdf">https://github.com/sumatrapdfreader/sumatrapdf</a></p><p>Sumatra PDF是由Krzysztof Kowalczyk所开发的轻量级PDF查看器，属于自由软件。使用GPLv3协议</p><p>Sumatra PDF 由下列两个函式库组成：</p><pre><code>MuPDF - PDF函式库Poppler - PDF函式库</code></pre><p>Sumatra PDF的设计风格极简。软件的安装档案体积小，只有大约1MB，比起Adobe Reader的安装档案27.5MB小很多，启动也较快速，并且拥有多20多种语言接口。由于只有一个档案，可以视为是可携式软件。</p><p>Sumatra PDF有一个实用的功能，就是它可以记住每一个PDF档案上使用者最后浏览的页面，这使得浏览电子书非常方便。</p><p>SumatraPDF, also known as Sumatra, is a PDF reader for Microsoft Windows only. The program also opens Open XML Paper Specification, DjVu, EPUB, XPS, CHM, CBZ and CBR, and MOBI files. It is written primarily by two contributors: zeniko and Krzysztof Kowalczyk</p><p>Sumatra includes free software code under version three of the GNU General Public License, while the included Unrar utility is under a commercial &quot;all rights reserved&quot; freeware licence, making Sumatra overall freeware.<br>#Prerelease<br>重构中<br><a href="https://www.sumatrapdfreader.org/prerelease.html">https://www.sumatrapdfreader.org/prerelease.html</a></p><hr><p>囧了，我发现 <a href="http://www.gxxd.net.cn:1001/date/T/A2095750.pdf(%E5%A4%B1%E6%95%88%E8%BF%9E%E6%8E%A5)">http://www.gxxd.net.cn:1001/date/T/A2095750.pdf(失效连接)</a> 只有火狐能正常显示，其他所有pdf软件都因为没有字体显示不出来，CSS大法好</p><hr><p><time>2020-06-03</time>增加Prerelease网页</p>]]></content>
     
@@ -360,8 +360,8 @@
     <title>[不再推荐][开源]VSCode</title>
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2026-11-26T14:56:34.809Z</updated>
     
     <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>需要注意它的安装包分为 User 和全局的，全局的要管理员权限安装。普通用户用 User 的就好</p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西(到现在还没完全解决)(目前看起来是 Gemini 太菜)</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。<del>(最后发现是 Ditto 的问题)</del>(并不)</li><li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任<br>(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)<br>我最终把工作区信任整个给关了。可能 VSCode 是把信任工作区和信任文件夹给分开的。开启的话，新打开的窗口默认就算不受信任的工作区。</li></ul><h1 id="配置项"><a href="#配置项" class="headerlink" title="配置项"></a>配置项</h1><h2 id="Hot-Exit"><a href="#Hot-Exit" class="headerlink" title="Hot Exit"></a>Hot Exit</h2><p>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)，并且有时候一开给你开两个退出前的窗口</p><p>我觉得它的设置项过于复杂到 SB 的程度了。</p><p>最后发现好像是卡了缓存 -<time datetime="2026-11-17">2026-11-17</time></p><h2 id="disableAIFeatures"><a href="#disableAIFeatures" class="headerlink" title="disableAIFeatures"></a>disableAIFeatures</h2><p>直接搜，动的都懂</p><h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><p>(by Deepseek From Trae)<br>而“已保存文件”的标签页是按工作区记在 <code>workspaceStorage</code> 里的，由另一个默认开启的开关控制——<code>workbench.editor.restoreEditors</code>。这就是你设了 <code>none</code> 仍然会弹出一堆标签页的原因；尤其当你通过双击文件夹、用资源管理器右键或带路径的快捷方式启动时，<code>restoreWindows: none</code> 根本不生效。</p><p>这个作用是 窗口内 已保存文件的标签页&#x2F;布局 是否还原</p>]]></content>
     
@@ -391,8 +391,8 @@
     <title>文本编辑器类的个人选择</title>
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2026-11-26T14:56:34.809Z</updated>
     
     <content type="html"><![CDATA[<p>本博有俩文本编辑器，其实我用过很多，所以就写写<br>最早更换文本编辑器主要还是为了代码美化，基本都是基于对javascript的美化效果，试过VS、Sumblime等等等，当时还找了个专门做这类破解的，似乎叫流风清音。<br>最后发现Everedit不错，价格是100多的终身，我就直接入了正。（可以在很多终端上激活）<br>小问题也有，例如关联实现有点问题，大概是收益不好，更新不怎么勤快。</p><p>之所以写这个是我发现notepad++不支持打开大文件(3g，目测有人把某个文件追加写入到.sh后面了)，然后everedit,notepad3都行。<br>另外就是nodepad++的扩展，找起来网址都是一堆，但是要找原发布地址就很难，并且很难保证还能用。装起来也比较复杂，有点费时。<br>不过notepad++支持跨文件替换(就是需要都是打开状态)</p><p>notepad3,必装,就是没有扩展之类的功能<br>sublime text，会有奇奇怪怪的输入法问题(当时写这个似乎是因为在Linux上面用)</p>]]></content>
     
@@ -421,8 +421,8 @@
     <title>[文本编辑器] Notepad4</title>
     <link href="http://ted423.github.io/Software/Document&amp;Texteditor/notepad4/"/>
     <id>http://ted423.github.io/Software/Document&amp;Texteditor/notepad4/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2026-11-26T14:56:34.809Z</updated>
     
     <content type="html"><![CDATA[<p>4 其实也是继承 notepad2, 又名Notepad2⨯2, Notepad2++，国人开发。甚至原生做了简繁转换的功能。</p><p>可惜代码格式化这块似乎没做完。</p><p><a href="https://github.com/zufuliu/notepad4/issues/614#issuecomment-2088217105">https://github.com/zufuliu/notepad4/issues/614#issuecomment-2088217105</a></p><p>3 其实也还在维护</p><p><a href="https://github.com/zufuliu/notepad4">https://github.com/zufuliu/notepad4</a></p><p>release 有点猛</p><p>就是只有便携版，没有安装包。</p>]]></content>
     
@@ -453,8 +453,8 @@
     <title>Nextcloud 相关</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Nextcloud/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2026-11-26T14:56:34.809Z</updated>
     
     <content type="html"><![CDATA[<p>上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。</p><ol><li>Dropbox 长期在右键菜单里拉屎</li><li>很多次同步卡住(后面发现文件有些奇怪的状态)</li><li>经常被它锁定文件打断操作</li><li>长期接U盘&#x2F;移动硬盘弹窗拉屎</li><li>会因为个别文件占用阻塞整个同步操作</li></ol><p>Nextcloud 那个忽略文件名还是很有用的，毕竟有些文件夹，例如 node_modules 没啥用还经常造成问题。</p><p>近期大概是欧盟资金支持(?), Nextcloud 肉眼可见的靠谱了起来</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>Nextcloud 的问题也不少<del>，甚至更可怕</del></p><h2 id="已解决"><a href="#已解决" class="headerlink" title="已解决"></a>已解决</h2><ol><li><del>超长的同步检查时间。甚至会对设置了忽略的文件夹进行检查。并且是肉眼可见的一个个检查</del></li><li><del>Release 版本可能长期有各种问题，最新的客户端(3.14.*)很喜欢崩溃，崩溃这个问题比较严重，毕竟同步盘肯定是要长期同步的，Linux 的还好(长期3.11版本有关)</del></li><li><del>同步机制问题，其他端删除的文件会被新开机的电脑重新同步回去</del></li><li><del>无法开始同步,他会在统计文件数量的时候崩溃，然后无法开始同步 -<time datetime="2025-01-09">2025-01-09</time>update</del></li><li><del><a href="https://github.com/nextcloud/desktop/issues/7594">https://github.com/nextcloud/desktop/issues/7594</a></del></li><li><del>还有文件丢失时间标签无法同步的</del> issue 关了 <a href="https://github.com/nextcloud/desktop/issues/4378">https://github.com/nextcloud/desktop/issues/4378</a> 未作确认</li><li><del>本地产生了4GiB的log -<time datetime="2025-01-09">2025-01-09</time></del></li></ol><h2 id="不确定状态以及影响"><a href="#不确定状态以及影响" class="headerlink" title="不确定状态以及影响"></a>不确定状态以及影响</h2><ol><li><a href="https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19">https://help.nextcloud.com/t/unable-to-upload-sync-htaccess-files/47523/19</a> <a href="https://github.com/nextcloud/server/issues/13831">https://github.com/nextcloud/server/issues/13831</a></li><li>需要管理员权限来删除快捷方式 -<time datetime="2025-01-09">2025-01-09</time></li></ol><h2 id="还有影响的"><a href="#还有影响的" class="headerlink" title="还有影响的"></a>还有影响的</h2><ol><li>目前同步时间较慢，不过这个有可能也要看 Server 性能</li><li>Dropbox 支持 LAN 同步，它不支持</li><li><a href="https://github.com/nextcloud-snap/nextcloud-snap/issues/1031#issuecomment-1670204085">https://github.com/nextcloud-snap/nextcloud-snap/issues/1031#issuecomment-1670204085</a></li></ol><p>整体来说，东西还是 Dropbox 比较保险，带 node_modules 的才放 Nextcloud 里<br>目前确认 Nextcloud 同步机制问题很大。</p><h1 id="Server-端升级"><a href="#Server-端升级" class="headerlink" title="Server 端升级"></a>Server 端升级</h1><p>以下命令需要找到 nextcloud 的文件夹，swiizin 装的在<code>/srv/nextcloud</code>，一般可能在<code>/var/www/nextcloud</code></p><p>网页版升级不会自动开维护模式，需要自己手动打开，网页刷新下才不报错</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ maintenance:mode --on</span><br></pre></td></tr></table></figure><p>关闭维护模式</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ maintenance:mode --off</span><br></pre></td></tr></table></figure><p>升级</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ upgrade</span><br></pre></td></tr></table></figure><p>OCC 命令跑不见的处理办法（这个基本意味着升级出了问题，需要从 Backup 里恢复不少东西）</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php updater/updater.phar</span><br></pre></td></tr></table></figure><p>停止不兼容的应用</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ app:disable maps</span><br></pre></td></tr></table></figure><h1 id="Server-端清理"><a href="#Server-端清理" class="headerlink" title="Server 端清理"></a>Server 端清理</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ trashbin:cleanup --all-users</span><br></pre></td></tr></table></figure><p>这个命令忘了干嘛的，但应该跟清理有关</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo -u www-data php occ files:scan --all</span><br></pre></td></tr></table></figure><hr><p><time datetime="2025-10-10">2025-10-10<time> 从抱怨改名了<br><time datetime="2026-02-09">2026-02-09<time> occ 那块进行路径提醒</p>]]></content>
     
@@ -498,7 +498,7 @@
     <title>我为什么仍在使用迅雷</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/Use%20Thunder/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
+    <published>2026-11-26T14:56:34.809Z</published>
     <updated>2021-04-24T08:28:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>当然啦，毫无疑问迅雷是个傻逼软件。<br>上来它就会先在你电脑里拉几托屎，比如跑网络路径或者随便个什么盘里建文件夹，又或者直接读你剪贴板，直接接管BT种子。</p><p>不过上个图<br><a href="https://www.z4a.net/image/gEUKSJ"><img src="https://www.z4a.net/images/2021/04/24/3f5bca5f9b853c106d6a4c6fd1d33a9e.jpg" alt="我为什么仍在使用迅雷"></a><br><a href="https://www.z4a.net/image/gEUFnr"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-155525.png" alt="我为什么仍在使用迅雷1"></a></p><p>嘛，这时候一般就有人要试图给我安利什么aria2c，FDM，IDM啥的。<br>但实际上我尝试过很多次了。完全没有任何意义。<br>但这里必须说清楚了，<strong>这种没速度不是单线程或者多线程导致的</strong><br>经常研究出国线路的同学应该很清楚才是。<br>1202年了，单线程多线程下载的速度早就不是速度跑不满的主因了。</p><p>至于原理，上个图吧<br><a href="https://www.z4a.net/image/gEUYHa"><img src="https://www.z4a.net/images/2021/04/24/-2021-04-24-161355.png" alt="-2021-04-24-161355.png"></a><br>剩下的懂得都懂，不懂得也没必要再解释了，别再给我安利就行，没有意义。</p>]]></content>
@@ -527,7 +527,7 @@
     <title>下载、资源类软件缺陷记录</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/download-defect/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/download-defect/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
+    <published>2026-11-26T14:56:34.809Z</published>
     <updated>2021-04-24T08:17:00.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="BUG"><a href="#BUG" class="headerlink" title="BUG"></a>BUG</h1><ul><li>aria2c <a href="https://ted423.bitcron.com/post/software/zi-yuan-lei/aria2c">https://ted423.bitcron.com/post/software/zi-yuan-lei/aria2c</a></li><li>Transmission<ol><li>tracker连接性不强，获取tracker信息过慢</li><li>制作种子不支持网络映射</li><li>单线程，牺牲性能降低占用(理论我觉得rt会更好，不过rt不支持改名文件夹这些，并且两个长期不更新的软件)</li><li>部分种子识别有问题，部分种子无法使用(我提issue被ban)</li><li>长期严重 <a href="https://github.com/transmission/transmission/issues/7078">issue</a> 版本,Issue 虽然修了，但还没发新版(5月份版本的 bug,8.26 Issue 创建,10月份未发新版)</li></ol></li><li>qbittorrent</li></ul><ol><li>制作的种子dmhy无法读取中文文件名(但应该是网站问题)</li><li>制作的种子tracker中必须隔开一行，否则traker其他软件无法识别</li><li>Others <a href="https://github.com/qbittorrent/qBittorrent/issues/created_by/ted423">https://github.com/qbittorrent/qBittorrent/issues/created_by/ted423</a></li></ol><ul><li>迅雷</li></ul><ol><li>做种相当week,特别是点击添加重新下载时会直接把已下载文件从磁盘抹掉</li><li>现在的版本不能从别的地方下好然后拉进去补充进度了</li><li>迅雷并不会显示具体的tracker信息，并且也不会具体的显示谁给你传数据，也不会显示你在给谁传数据，个人感觉它是努力淡化BT原理，营造一种速度都是迅雷提供的错觉，所以很多迅雷用户体现一种反智现象</li></ol><ul><li>Deluge</li></ul><ol><li>对中文支持不好,添加种子时路径有中文就出错了，但BT下载的文件夹又可以是中文</li><li>2.0.3大概是不准备也没法支持Windows了</li></ol><h1 id="我为什么仍在使用迅雷"><a href="#我为什么仍在使用迅雷" class="headerlink" title="我为什么仍在使用迅雷"></a>我为什么仍在使用迅雷</h1><p><a href="https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder">https://ted423.bitcron.com/post/software/zi-yuan-lei/use-thunder</a></p><hr><p><time>2021-04-24</time>增加一些问题<br><time>2019-08-10</time>增加Transmission，Bittorrent经判断校验缺少文件导致另一个文件无法完成校验是正常的（与分块有关）</p>]]></content>
@@ -560,8 +560,8 @@
     <title>[落尘之木] 迅雷 Thunder11.1.4.1142 落尘之木去广告</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/thunder/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/thunder/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2026-11-26T14:54:29.834Z</updated>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2026-11-26T14:56:34.809Z</updated>
     
     <content type="html"><![CDATA[<p>目前所有使用高速通道的版本都已经没用了。新出的会员加速版本基本上都没啥区别<br><strong>请特别注意尽量不要在迅雷下载目标文件夹里有部分或全部下载完成文件的情况下，把种子重新添加到迅雷，这个傻逼公司的傻逼开发脑子应该有屎，在你操作正常的情况下也会清掉你已经下载的文件，所以建议先备份或改名相应文件再手动操作</strong></p><p><strong>对于一些发软件版本不改下载连接的，迅雷会给你用p2p和镜像连接下老版本</strong></p><p>Thunder 11 支持迅雷云盘取回<br>迅雷11.1.4版本的开发周期长达一个月，憋了不少新功能。下面来一起看看吧！</p><p>我给的不是最新的，可以去他博客翻下最新的<br><a href="https://www.luochenzhimu.com/?s=thunder">https://www.luochenzhimu.com/?s=thunder</a></p><p>【迅雷11】是继【迅雷X】之后的换代版PC迅雷客户端。 在【迅雷11】上我们重新设计了主界面框架，许多忠实雷友们过去一直吐槽的太像浏览器的问题，现在已经得到解决。</p><p>【迅雷11】的最大亮点，是我们开创性的将【下载】与【云盘】合二为一。</p><p>当您下载网络中的文件时，可以灵活的选择将文件下载到【电脑】或者【云盘】。</p><h1 id="下载列表"><a href="#下载列表" class="headerlink" title="下载列表"></a>下载列表</h1><p>首先要从下载列表说起，在这个版本中，我们将下载列表的任务分类，由原来【迅雷9、迅雷X】采用的纵向排列，改为横向排列。这是由于纵向排列时，每次需要切换任务分类，都要在上下分类之间长距离的移动鼠标，使用较为不便。</p><h1 id="悬浮窗"><a href="#悬浮窗" class="headerlink" title="悬浮窗"></a>悬浮窗</h1><p>悬浮窗也迎来了变化，从【迅雷7】一直用到【迅雷X】的圆形悬浮窗，现在终于改版啦！</p><p>迅雷11新的悬浮窗看上去像是个立方体，当有正在下载的任务时，会在右侧展开一个简短的进度条。</p><p>这个全新的设计可以更清晰的显示下载进度，视觉效果也炫酷不少哦。</p><h1 id="立即添加（到云盘）"><a href="#立即添加（到云盘）" class="headerlink" title="立即添加（到云盘）"></a>立即添加（到云盘）</h1><p>如果您是会员用户，当您选中任意一个下载中的任务时，在下载任务的下方会出现一个新的扩展栏，可以让您快捷的将任务添加到云盘里。</p><h1 id="下载列表展示云盘取回"><a href="#下载列表展示云盘取回" class="headerlink" title="下载列表展示云盘取回"></a>下载列表展示云盘取回</h1><p>在迅雷11过去的几个版本中，从云盘取回的任务，都只展示在云盘模块的【传输列表】里，对于经常需要查看云盘取回文件的用户来说颇为不便。现在通过下载列表也可以查看云盘取回的文件了。</p><p>#更新信息</p><ul><li>下载列表的任务分类由纵向排列改为横向排列</li><li>采用全新视觉设计的悬浮窗</li><li>新增【手机扫码免费加速】功能</li><li>左侧栏【下载、云盘】右侧增加数字红点（可展示当前正在下载的任务数，以及正在云添加和上传的文件数）</li><li>下载列表中视频任务下方增加【云盘播放】功能</li><li>下载列表中非视频任务下方增加【立即添加（到云盘）】功能</li><li>下载列表中支持展示从云盘取回的文件</li><li>新增【云盘视频智能缓存】功能，改善云盘视频播放体验（可在设置中心停用）</li><li>修正某些情况下，播放组件下载解码器失败的问题</li><li>云盘增加文件【举报、申诉】功能</li><li>云盘传输列表入口移至顶部</li><li>云盘回收站改为独立对话框</li></ul><h1 id="落尘之木优化内容"><a href="#落尘之木优化内容" class="headerlink" title="落尘之木优化内容"></a>落尘之木优化内容</h1><ol><li>本地VIP专享悬浮窗</li><li>移除发现栏</li><li>精简多余菜单</li><li>自动识别VIP用户，非VIP直升本地超级会员</li><li>移除下载区文字广告</li><li>移除头像悬浮广告</li><li>禁止更新版本</li></ol><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>使用方法：<br>先下载迅雷11安装：<a href="https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe">https://down.sandai.net/thunder11/XunLeiSetup11.1.4.1142.exe</a><br>运行，稍等片刻<br>有三个选项：【1】迅雷11去广告、【2】迅雷11去广告小窗口、【3】非会员保持蓝悬浮窗<br>命令窗口输入对应数字回车</p><p>迅雷 Thunder11.0.3.1014 落尘之木去广告<br>落尘之木：<a href="https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip">https://dl.luochenzhimu.com/software/Thunder/Thunder11/Thunder11.1.4.1142.zip</a><br>迅雷云盘：<a href="https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1">https://pan.xunlei.com/s/VMPZWCMtSA4EySpJlPIOku9FA1</a> 提取码：gqxf<br>百度网盘：<a href="https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999">https://pan.baidu.com/s/1c1vsDFSS1I09qRfkb2E8Rw#9999</a> 提取码：9999<br>蓝奏云：<a href="https://wwx.lanzoux.com/b04b4u5je">https://wwx.lanzoux.com/b04b4u5je</a></p><hr><p><time>2018-12-21 22:13</time>更新为10.1.7.262<br><time>2020-10-23</time>Thunder11.0.3.1014</p>]]></content>
     
@@ -585,10 +585,40 @@
   </entry>
   
   <entry>
+    <title>[开源]Torrent File Editor</title>
+    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/torrent%20file%20editor/"/>
+    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/torrent%20file%20editor/</id>
+    <published>2026-11-26T14:56:34.809Z</published>
+    <updated>2020-06-26T11:06:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>种子文件修改器，主要用来改tracker，文件信息改了，种子使用的时候会出错<br><a href="https://torrent-file-editor.github.io/">https://torrent-file-editor.github.io/</a></p><hr><p><time>2020-06-26 19:06</time> 没注意projeect转到github了，果然都在逃离sourceforge</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;种子文件修改器，主要用来改tracker，文件信息改了，种子使用的时候会出错&lt;br&gt;&lt;a href=&quot;https://torrent-file-editor.github.io/&quot;&gt;https://torrent-file-editor.github.io/&lt;/a&gt;&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
+    
+    
+    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
+    
+    <category term="GPLv3" scheme="http://ted423.github.io/tags/GPLv3/"/>
+    
+    <category term="macOS" scheme="http://ted423.github.io/tags/macOS/"/>
+    
+    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
+    
+  </entry>
+  
+  <entry>
     <title>迅雷(thunder)/快车(FlashGet)下载地址转换</title>
     <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/"/>
     <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
+    <published>2026-11-26T14:56:34.809Z</published>
     <updated>2015-08-02T16:00:00.000Z</updated>
     
     <content type="html"><![CDATA[<p>原文: <a href="http://www.weste.net/2007/11-29/21525122417.html">http://www.weste.net/2007/11-29/21525122417.html</a><br>迅雷就在地址前后分别加上“AA”和“ZZ”，然后进行Base64编码</p><p>快车是在地址前后分别加上了“[FLASHGET]”，然后Base64编码，编码后有在地址后加上“&amp;id数字&amp;数字”</p><p>示例:<br>对本页地址进行转换<br><a href="thunder://QUFodHRwczovL3RlZDQyMy5mYXJib3guY29tL3Bvc3QvYmlhbi1jaGVuZy1sZWkvd3d3L3hpYS16YWktZGktemhpLXpodWFuLWh1YW5aWg==">thunder://QUFodHRwczovL3RlZDQyMy5mYXJib3guY29tL3Bvc3QvYmlhbi1jaGVuZy1sZWkvd3d3L3hpYS16YWktZGktemhpLXpodWFuLWh1YW5aWg==</a></p><p><a href="Flashget://W0ZMQVNIR0VUXWh0dHBzOi8vdGVkNDIzLmZhcmJveC5jb20vcG9zdC9iaWFuLWNoZW5nLWxlaS93d3cveGlhLXphaS1kaS16aGktemh1YW4taHVhbltGTEFTSEdFVF0=">Flashget://W0ZMQVNIR0VUXWh0dHBzOi8vdGVkNDIzLmZhcmJveC5jb20vcG9zdC9iaWFuLWNoZW5nLWxlaS93d3cveGlhLXphaS1kaS16aGktemh1YW4taHVhbltGTEFTSEdFVF0=</a></p><p>顺便QQ的最简单...直接加密解密就好了<br><a href="qqdl://aHR0cHM6Ly90ZWQ0MjMuZmFyYm94LmNvbS9wb3N0L2JpYW4tY2hlbmctbGVpL3d3dy94aWEtemFpLWRpLXpoaS16aHVhbi1odWFu">qqdl://aHR0cHM6Ly90ZWQ0MjMuZmFyYm94LmNvbS9wb3N0L2JpYW4tY2hlbmctbGVpL3d3dy94aWEtemFpLWRpLXpoaS16aHVhbi1odWFu</a></p><p>在线Base64加密解密地址:<a href="http://tool.chinaz.com/Tools/Base64.aspx">http://tool.chinaz.com/Tools/Base64.aspx</a></p>]]></content>
@@ -605,39 +635,6 @@
     
     
     <category term="WWW" scheme="http://ted423.github.io/tags/WWW/"/>
-    
-    <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网络同步盘缺陷记录</title>
-    <link href="http://ted423.github.io/Software/Download&amp;File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/"/>
-    <id>http://ted423.github.io/Software/Download&amp;File%20hosting%20service/%E5%90%8C%E6%AD%A5%E7%9B%98%E8%AF%84%E4%BB%B7/</id>
-    <published>2026-11-26T14:54:29.834Z</published>
-    <updated>2015-11-28T08:57:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="优秀"><a href="#优秀" class="headerlink" title="优秀"></a>优秀</h1><ul><li>dropbox<br><del>同步不够实时(服务器端的改变并不会立刻同步回本地)</del><br><del>如果你希望他立刻进行一次完全的同步，你需要退出他的客户端再重新打开。</del></li><li>Onedrive<br>不支持局域网内同步,同步逻辑有缺陷，偶尔会干删一堆文件到回收站再重新下载的事(由于下调存储空间一事，已经不准备继续使用，准备转yandisk看看，15元&#x2F;月才50G，我就呵呵了)</li><li>快盘<br>国内做的最好的同步盘，不过服务器实在...<br>客户端弹窗简直烦人<br>因为有秒传机制，会出现上传的某些文件永远无法下载（你也没法重传，因为秒传了）<br>因为上一条，是否使用自己斟酌</li></ul><h1 id="可用"><a href="#可用" class="headerlink" title="可用"></a>可用</h1><ul><li>mega<br>支持创建同名文件(夹)，不利于同步，同步依据文件修改时间，在修改时间不变改变文件的情况下会去下载源文件覆盖修改后的文件。<br>在其他电脑上直接在网页端上传文件同步回本地后会再次进行上传（可能跟装了浏览器扩展有关），然后创建出同名文件夹(我这里甚至出现了重启次机子就会重新上传的状况)</li><li>Yandex<br>同步时会导致同步文件夹内的文件写入慢，影响其他读取该文件夹的软件运行<br>不支持回复文件历史<br><del>* 新浪微盘同步盘</del><br>同步时暴力拒绝其他修改，你可以把他理解为一个手动同步工具...<br>需要修改时你就暂停他的同步吧。<br><del>*  酷盘(已死)</del></li></ul><h1 id="不推荐使用"><a href="#不推荐使用" class="headerlink" title="不推荐使用"></a>不推荐使用</h1><ul><li>Google Drive<br>这同步简直败坏谷歌的名声（虽说谷歌做的所有软件一直不是我喜欢的，因为感觉太偏执了）<br>支持创建同名文件(夹)，不会进行匹配，所以多端同步做的简直shit,你只能让他自己去同步。如果你自己往里放文件协助同步你会发现服务端建立了一堆同名文件或文件夹，然后你会在另一端看到一堆wrong,逗我。</li><li>360同步<br>只支持单任务，在上传时居然会不去判断网盘内的修改，然后就出现了完全重复的两个文件。基本只是个玩具，根本算不上同步盘。如果你希望他把你的资料弄得乱七八糟，你可以使用他。</li><li>百度云同步<br>服务器相当不稳定，一般的同步问题都是服务器导致的，甚至有时明明同步未完成，网盘也会判断同步已完成。百度对部分视频进行了破坏性修改，突破了网盘的底线，因此不建议使用这个网盘存储自己的资料</li><li>微云<br>我当时用的时候，微云是文件名同步，即便改变文件内容，微云也不会去重新同步</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;优秀&quot;&gt;&lt;a href=&quot;#优秀&quot; class=&quot;headerlink&quot; title=&quot;优秀&quot;&gt;&lt;/a&gt;优秀&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;dropbox&lt;br&gt;&lt;del&gt;同步不够实时(服务器端的改变并不会立刻同步回本地)&lt;/del&gt;&lt;br&gt;&lt;del&gt;如果你希望他立刻</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="个人观点" scheme="http://ted423.github.io/tags/%E4%B8%AA%E4%BA%BA%E8%A7%82%E7%82%B9/"/>
-    
-    <category term="分类汇总" scheme="http://ted423.github.io/tags/%E5%88%86%E7%B1%BB%E6%B1%87%E6%80%BB/"/>
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Dropbox" scheme="http://ted423.github.io/tags/Dropbox/"/>
     
     <category term="Download&amp;File hosting service" scheme="http://ted423.github.io/tags/Download-File-hosting-service/"/>
     
