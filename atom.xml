@@ -6,7 +6,7 @@
   <link href="http://ted423.github.io/atom.xml" rel="self"/>
   
   <link href="http://ted423.github.io/"/>
-  <updated>2026-11-26T15:55:54.504Z</updated>
+  <updated>2026-10-29T02:55:00.000Z</updated>
   <id>http://ted423.github.io/</id>
   
   <author>
@@ -15,64 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Adobe Acrobat Reader DC Offline / 离线安装包</title>
-    <link href="http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/"/>
-    <id>http://ted423.github.io/Software/Adobe%20Acrobat%20Reader%20DC%20Offline/</id>
-    <published>2026-11-26T15:55:54.504Z</published>
-    <updated>2026-11-26T15:55:54.504Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://get.adobe.com/cn/reader/enterprise/">https://get.adobe.com/cn/reader/enterprise/</a><br>刚好今年有更新</p><p>现在直接从 Winget 那里获取了</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://get.adobe.com/cn/reader/enterprise/&quot;&gt;https://get.adobe.com/cn/reader/enterprise/&lt;/a&gt;&lt;br&gt;刚好今年有更新&lt;/p&gt;
-&lt;p&gt;现在直接从 Winget 那里获取</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="Offline Install" scheme="http://ted423.github.io/tags/Offline-Install/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>[不再推荐][开源]VSCode</title>
-    <link href="http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/"/>
-    <id>http://ted423.github.io/Software/Document&amp;Texteditor/VSCode/</id>
-    <published>2026-11-26T15:55:54.504Z</published>
-    <updated>2026-11-26T15:55:54.504Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com</a></p><p><a href="https://github.com/microsoft/vscode">https://github.com/microsoft/vscode</a></p><p>需要注意它的安装包分为 User 和全局的，全局的要管理员权限安装。普通用户用 User 的就好</p><p>VSCode 是我非常想用但又用的非常蛋疼的一个软件</p><h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ul><li>经常帮你记住一堆文件，打开弹出乱七八糟的东西(到现在还没完全解决)(目前看起来是 Gemini 太菜)</li><li>设置项一堆，然后网页搜索经常搜到过时的东西</li><li>中文全都给你弄个框框框住(非基本 ASCII 字符 设置)</li><li>开久了卡死，就一个标签在那，明显哪里存在这内存泄漏之类的问题。<del>(最后发现是 Ditto 的问题)</del>(并不)</li><li>信任文件夹之后，子文件夹打开的文件仍然提示不受信任<br>(AI告诉我：如果用户直接打开子文件夹（例如通过文件资源管理器或命令行），VS Code 可能将其视为独立工作区，而不是父文件夹的一部分，从而触发初始信任提示。官方文档建议始终通过父文件夹打开，以确保继承信任。)<br>我最终把工作区信任整个给关了。可能 VSCode 是把信任工作区和信任文件夹给分开的。开启的话，新打开的窗口默认就算不受信任的工作区。</li></ul><h1 id="配置项"><a href="#配置项" class="headerlink" title="配置项"></a>配置项</h1><h2 id="Hot-Exit"><a href="#Hot-Exit" class="headerlink" title="Hot Exit"></a>Hot Exit</h2><p>应该是上面那个造成帮你记住一堆文件的 <strong>其中</strong> 一个配置(并且似乎关闭了也偶尔会生效)，并且有时候一开给你开两个退出前的窗口</p><p>我觉得它的设置项过于复杂到 SB 的程度了。</p><p>最后发现好像是卡了缓存 -<time datetime="2026-11-17">2026-11-17</time></p><h2 id="disableAIFeatures"><a href="#disableAIFeatures" class="headerlink" title="disableAIFeatures"></a>disableAIFeatures</h2><p>直接搜，动的都懂</p><h2 id="etc"><a href="#etc" class="headerlink" title="etc"></a>etc</h2><p>(by Deepseek From Trae)<br>而“已保存文件”的标签页是按工作区记在 <code>workspaceStorage</code> 里的，由另一个默认开启的开关控制——<code>workbench.editor.restoreEditors</code>。这就是你设了 <code>none</code> 仍然会弹出一堆标签页的原因；尤其当你通过双击文件夹、用资源管理器右键或带路径的快捷方式启动时，<code>restoreWindows: none</code> 根本不生效。</p><p>这个作用是 窗口内 已保存文件的标签页&#x2F;布局 是否还原</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;https://code.visualstudio.com&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/microsoft/vscode&quot;&gt;https://g</summary>
-      
-    
-    
-    
-    <category term="Software" scheme="http://ted423.github.io/categories/Software/"/>
-    
-    
-    <category term="Windows" scheme="http://ted423.github.io/tags/Windows/"/>
-    
-    <category term="MIT" scheme="http://ted423.github.io/tags/MIT/"/>
-    
-    <category term="开源(Open Source)" scheme="http://ted423.github.io/tags/%E5%BC%80%E6%BA%90-Open-Source/"/>
-    
-    <category term="Document&amp;Texteditor" scheme="http://ted423.github.io/tags/Document-Texteditor/"/>
-    
-  </entry>
   
   <entry>
     <title>Linux 下 smartctl 查看带硬盘盒的硬盘信息</title>
@@ -216,11 +158,11 @@
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
+    
     <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
     
     <category term="Regedit" scheme="http://ted423.github.io/tags/Regedit/"/>
-    
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   
@@ -599,6 +541,57 @@
     <category term="Windows Server" scheme="http://ted423.github.io/tags/Windows-Server/"/>
     
     <category term="傻逼微软" scheme="http://ted423.github.io/tags/%E5%82%BB%E9%80%BC%E5%BE%AE%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Container Storage Interface (CSI)</title>
+    <link href="http://ted423.github.io/Document/CSI/"/>
+    <id>http://ted423.github.io/Document/CSI/</id>
+    <published>2026-01-20T14:20:00.000Z</published>
+    <updated>2026-01-20T14:20:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Container Storage Interface (CSI) 用来建立一个标准的、通用的存储接口，使得存储供应商（SP）只需要编写一次插件，就可以在所有支持 CSI 的容器编排系统中使用。</p><p>CSI 是目前 Kubernetes 和其他容器编排系统（如 Mesos, Docker Swarm）推荐和事实上的标准接口，用于实现存储的动态供给。</p><h1 id="内联-In-tree-卷插件"><a href="#内联-In-tree-卷插件" class="headerlink" title="内联 (In-tree) 卷插件"></a>内联 (In-tree) 卷插件</h1><p>这些插件是 Kubernetes 核心代码的一部分，例如 <code>awsElasticBlockStore</code>、<code>gcePersistentDisk</code>、<code>azureDisk</code>、<code>cephfs</code>、<code>nfs</code>、<code>iscsi</code> 等。</p><ul><li><strong>动态供给机制</strong>: 当用户创建一个 <code>PVC</code> 并引用一个支持动态供给的 <code>StorageClass</code> 时，Kubernetes 的 <code>kube-controller-manager</code> 会调用对应的内联卷插件去创建后端存储资源。</li><li><strong>缺点</strong>:<ul><li>与 Kubernetes 核心代码紧密耦合，新存储功能的开发和发布需要与 Kubernetes 版本同步。</li><li>如果一个存储供应商要支持 Kubernetes，他们必须将自己的代码贡献到 Kubernetes 核心仓库中，这增加了门槛和维护成本。</li><li>更新驱动需要升级整个 Kubernetes 集群。</li></ul></li></ul><h1 id="CSI-Container-Storage-Interface"><a href="#CSI-Container-Storage-Interface" class="headerlink" title="CSI (Container Storage Interface)"></a>CSI (Container Storage Interface)</h1><p>k8s 里通过 helm 部署</p><p>CSI 就是为了解决内联插件的这些问题而诞生的。它提供了一个<strong>标准接口</strong>，将存储插件的开发从 Kubernetes 核心中剥离出来。</p><ul><li><strong>动态供给机制</strong>: 当用户创建 <code>PVC</code> 和 <code>StorageClass</code> 时，Kubernetes 会调用 CSI 驱动的 <code>CreateVolume</code> RPC 方法去创建后端存储资源。</li><li><strong>优点</strong>:<ul><li><strong>解耦</strong>: 存储插件可以独立于 Kubernetes 发布和更新。</li><li><strong>扩展性</strong>: 任何存储供应商都可以基于 CSI 规范开发自己的驱动，无需修改 Kubernetes 核心代码。</li><li><strong>灵活性</strong>: 新功能（如快照、扩容）可以更快地实现和迭代。</li></ul></li></ul><h1 id="动态供给-Dynamic-Provisioning"><a href="#动态供给-Dynamic-Provisioning" class="headerlink" title="动态供给 (Dynamic Provisioning)"></a>动态供给 (Dynamic Provisioning)</h1><p>动态供给允许存储卷按需创建。系统根据用户的 PVC 请求，自动在存储端创建物理卷，并自动生成对应的 PV 对象。先有请求，后有卷。</p><p>动态供给通常只能生成机器生成的、具有唯一性的名字（通常包含 UUID），用户无法完全自定义后端存储的卷名。</p><h1 id="静态供给-Static-Provisioning"><a href="#静态供给-Static-Provisioning" class="headerlink" title="静态供给 (Static Provisioning)"></a>静态供给 (Static Provisioning)</h1><p>预先在存储端创建好物理卷，并手动在 Kubernetes 中创建对应的 PV 对象。先有卷，后有请求。管理员手动创建 PV<br>PVC，并手动写配置文件进行挂载。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Container Storage Interface (CSI) 用来建立一个标准的、通用的存储接口，使得存储供应商（SP）只需要编写一次插件，就可以在所有支持 CSI 的容器编排系统中使用。&lt;/p&gt;
+&lt;p&gt;CSI 是目前 Kubernetes 和其他容器编排系统（如 M</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
+    
+    <category term="k8s(Kubernetes)" scheme="http://ted423.github.io/tags/k8s-Kubernetes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iSCSI 简要笔记</title>
+    <link href="http://ted423.github.io/Document/iSCSI/"/>
+    <id>http://ted423.github.io/Document/iSCSI/</id>
+    <published>2026-01-10T14:54:00.000Z</published>
+    <updated>2026-01-10T14:54:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="名词说明"><a href="#名词说明" class="headerlink" title="名词说明"></a>名词说明</h1><p>SCSI (Small Computer System Interface，小型计算机系统接口) 是一种用于计算机及其外围设备（如硬盘、磁带驱动器、扫描仪等）之间进行数据传输的协议标准和命令集。它定义了一套标准的命令（称为 SCSI 命令集）、协议（如何交换这些命令和数据）以及电气和光学接口。</p><p>iSCSI (Internet Small Computer System Interface) 是一种存储网络协议。它的核心功能是将 SCSI 命令封装在 TCP&#x2F;IP 数据包中，并通过标准的以太网进行传输。本质上，iSCSI 允许两台主机通过 IP 网络交换 SCSI 命令，从而实现块级存储的远程访问，就像设备是本地连接的一样。</p><p>iSCSI 的架构是 C&#x2F;S 架构（客户端&#x2F;服务器）</p><p>initiator (发起端)</p><p>Target (目标端)是 iSCSI 协议架构中的服务端端点 (Server Endpoint)。</p><p>LUN (逻辑单元号)</p><p>LUN（逻辑单元） 与 Target（目标） 之间的内部映射关系（LUN Mapping）。</p><p>一个 Target 可以包含（映射）多个 LUN (LUN 0, LUN 1, ...)。</p><h2 id="LUN-Logical-Unit-Number"><a href="#LUN-Logical-Unit-Number" class="headerlink" title="LUN (Logical Unit Number)"></a>LUN (Logical Unit Number)</h2><p>LUN 逻辑单元 (Logical Unit, LU) 是一个通过 SCSI 协议标准进行寻址的块存储设备。</p><p>LUN 是存储网络环境中，从物理存储资源中抽象出来的、可被服务器独立寻址和使用的块存储单元的数字标识符。</p><p>LUN 可以由截然不同的技术和对象构成。</p><ul><li>直接物理设备映射 (Direct Physical Device Mapping)</li><li>逻辑卷映射 (Logical Volume Mapping)</li><li>文件映射 (File-based Mapping)</li><li>专用卷映射 (Specialized Volume Mapping)  ZFS ZVOL (ZFS Volume) 或 Btrfs 上的类似对象。</li></ul><h2 id="Target"><a href="#Target" class="headerlink" title="Target"></a>Target</h2><p>Target 是存储设备上运行的一个逻辑实体，负责监听 TCP&#x2F;IP 端口（默认 3260），接收并解析来自 Initiator（客户端，即 K8s 节点）的 SCSI 指令。</p><p>每个 Target 都有一个全球唯一的标识符，称为 IQN (iSCSI Qualified Name)。initiator 通过 IQN 唯一定位要连接的目标。</p><p>权限控制通常在 Target 级别进行配置。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;名词说明&quot;&gt;&lt;a href=&quot;#名词说明&quot; class=&quot;headerlink&quot; title=&quot;名词说明&quot;&gt;&lt;/a&gt;名词说明&lt;/h1&gt;&lt;p&gt;SCSI (Small Computer System Interface，小型计算机系统接口) 是一种用于计算机及其外围设</summary>
+      
+    
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/categories/Document/"/>
+    
+    
+    <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
   </entry>
   
