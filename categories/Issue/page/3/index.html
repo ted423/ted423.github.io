@@ -95,7 +95,7 @@
     <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
 
   
-<meta name="generator" content="Hexo 8.1.1"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
     <body class="custom-background">
         <div id="kratos-wrapper">
@@ -193,114 +193,17 @@
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]多同步盘下Dropbox同步状态图标不见</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Github/Github-lfs/" itemprop="mainEntityOfPage"><span itemprop="name headline">Github git-lfs 注意事项</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            简要地说Windows的overlayIcon(状态图标)最多不能超过15个(我这边好像是超过13个就不行),而Onedrive自己就占了一半(我同时用两个同步盘)这些信息保存在
-1HKEY_LOCAL_MACHINE\SOFTWAR...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:32.912Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Dropbox/" rel="tag">Dropbox</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
+                            其实主要就是 Github 的 lfs 空间只有1G。 但是坑的点在于。
 
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]AD 中帐户经常被锁定的处理办法</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            这个软件可以用来排查https:&#x2F;&#x2F;www.microsoft.com&#x2F;en-us&#x2F;download&#x2F;details.aspx?id&#x3D;15201
-我遇到的情况是有个同仁的电脑中毒，然后一直在那登字典登陆别人帐户的。
-看下是哪个 AD ...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:32.052Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
+在达到限制前不会有任何提醒。
+空间使用量藏得很深。
 
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/80072EE2/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows 7 update 报 80072EE2</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题
-123net stop wuauservreg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Wind...
+然后就是第二方面，网上所有的教程都是删除本地 lfs 文件的。实际你没法自己删除 Gihub Serve...
                         
                     </p>
                 </div>
@@ -308,13 +211,13 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-10T06:46:31.220Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-Update/" rel="tag">Windows Update</a>
+                        <a class="tag-none-link" href="/tags/Git/" rel="tag">Git</a>, <a class="tag-none-link" href="/tags/Github/" rel="tag">Github</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>
                     
                 </a>
                 
@@ -326,58 +229,7 @@
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/Windows%20Update/80072EE2/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x80072EFE/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows Update:0x80072EFE</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            2008 R2遇到这个问题是由于update agent过旧导致的理论Windows7早期版本也有问题，会导致后台占用很多内存
-从文章得知Win8 和2012也有更新包，但是报错不明
-更新包似乎是这两个系统通用的https:&#x2F;&#x2F;doc...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:30.833Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/Windows%20Update/0x80072EFE/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/Github/Github-lfs/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -409,8 +261,8 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-10T06:46:30.681Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
@@ -445,14 +297,14 @@
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/SWIG_error/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]CentOS7 SWIG director method error. Error detected when calling 'RepoCB.handleMirrorFailure', ignoring this repo.</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x80072EFE/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows Update:0x80072EFE</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            简而言之，就是用 dnf，但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。
-实际yum install的时候会提醒你没有 key，要导入 key
-
+                            2008 R2遇到这个问题是由于update agent过旧导致的理论Windows7早期版本也有问题，会导致后台占用很多内存
+从文章得知Win8 和2012也有更新包，但是报错不明
+更新包似乎是这两个系统通用的https:&#x2F;&#x2F;doc...
                         
                     </p>
                 </div>
@@ -460,13 +312,13 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-09T04:09:58.601Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-09</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Redhat%E7%B3%BB/" rel="tag">Redhat系</a>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>
                     
                 </a>
                 
@@ -478,7 +330,158 @@
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/SWIG_error/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/Windows%20Update/0x80072EFE/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Issue/">Issue</a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x80246017/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows Update:0x80246017</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。
+这个报错是新装的纯净系统之后出现的，服务里的Background Intelligent service是...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-11/" rel="tag">Windows 11</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Issue/Windows%20Update/0x80246017/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Issue/">Issue</a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/80072EE2/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows 7 update 报 80072EE2</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题
+123net stop wuauservreg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Wind...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-Update/" rel="tag">Windows Update</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Issue/Windows%20Update/80072EE2/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Issue/">Issue</a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]AD 中帐户经常被锁定的处理办法</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            这个软件可以用来排查https:&#x2F;&#x2F;www.microsoft.com&#x2F;en-us&#x2F;download&#x2F;details.aspx?id&#x3D;15201
+我遇到的情况是有个同仁的电脑中毒，然后一直在那登字典登陆别人帐户的。
+看下是哪个 AD ...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.647Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -729,7 +732,7 @@ mount直接是可以Mount...
                 文章
             </span>
             <span class="count">
-                450
+                449
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -754,7 +757,7 @@ mount直接是可以Mount...
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">47</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">99</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">18</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">47</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">99</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">18</span></li></ul>
   </aside>
 
 

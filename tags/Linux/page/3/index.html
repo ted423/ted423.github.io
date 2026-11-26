@@ -95,7 +95,7 @@
     <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
 
   
-<meta name="generator" content="Hexo 8.1.1"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
     <body class="custom-background">
         <div id="kratos-wrapper">
@@ -188,13 +188,14 @@
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/update-initramfs/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]update-initramfs failed</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/SWIG_error/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]CentOS7 SWIG director method error. Error detected when calling 'RepoCB.handleMirrorFailure', ignoring this repo.</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            Ubuntu apt upgrade 时报错
-1234567891011121314151617update-initramfs: Generating &#x2F;boot&#x2F;initrd.img-5.4.0-110-genericError ...
+                            简而言之，就是用 dnf，但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。
+实际yum install的时候会提醒你没有 key，要导入 key
+
                         
                     </p>
                 </div>
@@ -202,13 +203,13 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-10T06:46:35.618Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Redhat%E7%B3%BB/" rel="tag">Redhat系</a>
                     
                 </a>
                 
@@ -220,7 +221,7 @@
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/update-initramfs/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/SWIG_error/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -238,12 +239,15 @@
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/" itemprop="mainEntityOfPage"><span itemprop="name headline">Ubuntu 和Windows 7共存的GRUB启动顺序</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/apt_file_issue/" itemprop="mainEntityOfPage"><span itemprop="name headline">ubuntu 更新出现 xxx 的文件列表缺少最后结尾的换行符</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            Grub会自动在C盘加入双系统启动的配置，而且默认会启动Ubuntu，把 windows 7放在最后面。如果要启动windows的话，需要按向下的箭头4、5次，非常麻烦。现阶段还是使用windows要多一点，所以需要修改Grub让 w...
+                            来来回回好几次了，主要是 QNAP 弄了个U盘做系统，所以文件应该就是坏了
+主要是文件夹里的 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;info不少文件损坏了。其实 &#x2F;var&#x2F;lib&#x2F;dpkg&#x2F;available 也坏了
+问题的
+12345678 ...
                         
                     </p>
                 </div>
@@ -251,8 +255,8 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-10T06:46:32.947Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
@@ -269,7 +273,108 @@
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/apt_file_issue/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Hardware/">Hardware</a>
+                    <h2 class="kratos-entry-title"><a href="/Hardware/test/" itemprop="mainEntityOfPage"><span itemprop="name headline">Linux 下硬件检测工具</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            Linux 下基本看不到 USB 硬盘盒里接的硬盘的 SMART，Windows 下可以。
+GUIKDE Gnome 都有自带的硬盘信息查看工具，一般来说 gparted 也能看
+CLIhdparmhdparm 是一个底层的硬盘工具。...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.647Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Hardware/" rel="tag">Hardware</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Hardware/test/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Document/">Document</a>
+                    <h2 class="kratos-entry-title"><a href="/Document/LDAP/" itemprop="mainEntityOfPage"><span itemprop="name headline">LDAP & OpenLDAP</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            LDAP[轻型目录访问协议](Lightweight Directory Access Protocol)(属于X.500) 是一种目录服务(Directory service)标准。
+目录是一个特殊的数据库，它的数据经常被查询，但是...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.644Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/AD-Active-Directory/" rel="tag">AD(Active Directory)</a>, <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Document/LDAP/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -302,8 +407,8 @@ Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技�
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-10T06:46:24.174Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
+                <time datetime="2026-11-26T03:15:21.644Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
@@ -337,19 +442,15 @@ Linux 就是 NFS 了，因为 Linux 较多用于研发环境并且 IT 人员技�
             
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Software/">Software</a>
-                    <h2 class="kratos-entry-title"><a href="/Software/Download&File%20hosting%20service/Nextcloud/" itemprop="mainEntityOfPage"><span itemprop="name headline">Nextcloud 相关</span></a>
+                        <a class="label-link" href="/categories/Linux/">Linux</a>
+                    <h2 class="kratos-entry-title"><a href="/Linux/Ubuntu_Server_%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" itemprop="mainEntityOfPage"><span itemprop="name headline">Ububtu Server 踩坑笔记</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            上 Nextcloud 主要是我对于 Dropbox 的一些不满化为了行动。
+                            Ubuntu Desktop 用的 NetworkManager，个人不太喜欢就想尝试下 Server，Ubuntu Server 用的 systemd-networkd.
 
-Dropbox 长期在右键菜单里拉屎
-很多次同步卡住(后面发现文件有些奇怪的状态)
-经常被它锁定文件打断操作
-长期接U盘&#x2F;移动硬盘弹窗拉屎
-会因...
+Win Server DHCP 的兼容性问题，ipv4 也...
                         
                     </p>
                 </div>
@@ -357,13 +458,13 @@ Dropbox 长期在右键菜单里拉屎
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-09T04:10:02.955Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-09</a>
+                <time datetime="2025-11-20T16:00:00.000Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2025-11-21</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/AGPLv3/" rel="tag">AGPLv3</a>, <a class="tag-none-link" href="/tags/Download-File-hosting-service/" rel="tag">Download&File hosting service</a>, <a class="tag-none-link" href="/tags/Dropbox/" rel="tag">Dropbox</a>
+                        <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a>
                     
                 </a>
                 
@@ -375,58 +476,7 @@ Dropbox 长期在右键菜单里拉屎
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Software/Download&File%20hosting%20service/Nextcloud/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/SWIG_error/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]CentOS7 SWIG director method error. Error detected when calling 'RepoCB.handleMirrorFailure', ignoring this repo.</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            简而言之，就是用 dnf，但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。
-实际yum install的时候会提醒你没有 key，要导入 key
-
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-09T04:09:58.601Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-09</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Redhat%E7%B3%BB/" rel="tag">Redhat系</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/SWIG_error/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Linux/Ubuntu_Server_%E8%B8%A9%E5%9D%91%E7%AC%94%E8%AE%B0/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -478,56 +528,6 @@ QNAP系统除了 RAID 和 DDNS 以外基本没啥有意义的东西。所以如�
             </span>
             <span class="pull-right">
                 <a class="read-more" href="/Linux/QNAP453Bmini/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Linux/">Linux</a>
-                    <h2 class="kratos-entry-title"><a href="/Linux/samba%20symbolic%20link/" itemprop="mainEntityOfPage"><span itemprop="name headline">Samba中支持符号链接</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            1follow symlinks &#x3D; yes
-https:&#x2F;&#x2F;unix.stackexchange.com&#x2F;questions&#x2F;5120&#x2F;how-do-you-make-samba-follow-symlink-outside-the...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2024-09-18T13:55:28.300Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2024-09-18</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Linux/samba%20symbolic%20link/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -731,7 +731,7 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
                 文章
             </span>
             <span class="count">
-                450
+                449
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -756,7 +756,7 @@ Cached 指系统全部的文件缓存，不包括 swapcache 和 buffers
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">47</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">99</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">18</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">47</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">99</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">18</span></li></ul>
   </aside>
 
 

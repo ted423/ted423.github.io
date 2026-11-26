@@ -95,7 +95,7 @@
     <style>#kratos-widget-area #krw-toc .toc-item>.toc-child{max-height:unset}@media (min-width: 1200px) {.container {width:75%}}@media (min-width: 992px) {.col-md-8 {width: 75%;}.col-md-4 {width: 25%;}}</style>
 
   
-<meta name="generator" content="Hexo 8.1.1"></head>
+<meta name="generator" content="Hexo 8.1.2"></head>
 
     <body class="custom-background">
         <div id="kratos-wrapper">
@@ -188,13 +188,15 @@
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/SMB/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows明明分配了共享权限却无法正常访问网络共享路径</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/rdpclip/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]RDP下无法正常复制粘贴问题的处理</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            其实最简单的方法是重启。
-说下原因，敲下net use你会看到显示了一堆共享路径的连接。也就是说Win的话，你不重启他不会重新去连接。这时候就有可能报错连不上(有可能是缓存，也可能是用之前的用户名密码直接就怼上去了。也别问为啥不弹让输...
+                            首先不是被组策略阻止的。
+因为有时候是嵌套RDP使用，之前可以用，用着用着就不行了。
+这种时候在远程服务器端结束进程 rdpclip.exe，然后手动再执行一下。基本就可以了。
+
                         
                     </p>
                 </div>
@@ -202,8 +204,8 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-10T06:46:33.750Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
@@ -220,56 +222,7 @@
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/SMB/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Kerberos/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows域中Kerberos问题造成的共享目录无法访问</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            参考资料https:&#x2F;&#x2F;support.microsoft.com&#x2F;zh-hk&#x2F;help&#x2F;327825&#x2F;problems-with-kerberos-authentication-when-a-user-belongs-to-many...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:33.215Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/Kerberos/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/rdpclip/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -305,8 +258,8 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-10T06:46:33.110Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
@@ -341,257 +294,6 @@
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/" itemprop="mainEntityOfPage"><span itemprop="name headline">Ubuntu 和Windows 7共存的GRUB启动顺序</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            Grub会自动在C盘加入双系统启动的配置，而且默认会启动Ubuntu，把 windows 7放在最后面。如果要启动windows的话，需要按向下的箭头4、5次，非常麻烦。现阶段还是使用windows要多一点，所以需要修改Grub让 w...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:32.947Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Ubuntu/" rel="tag">Ubuntu</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/GRUB%E5%90%AF%E5%8A%A8%E9%A1%BA%E5%BA%8F/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]多同步盘下Dropbox同步状态图标不见</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            简要地说Windows的overlayIcon(状态图标)最多不能超过15个(我这边好像是超过13个就不行),而Onedrive自己就占了一半(我同时用两个同步盘)这些信息保存在
-1HKEY_LOCAL_MACHINE\SOFTWAR...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:32.912Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Dropbox/" rel="tag">Dropbox</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Regedit/" rel="tag">Regedit</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/Dropbox%E5%9B%BE%E6%A0%87/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]AD 中帐户经常被锁定的处理办法</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            这个软件可以用来排查https:&#x2F;&#x2F;www.microsoft.com&#x2F;en-us&#x2F;download&#x2F;details.aspx?id&#x3D;15201
-我遇到的情况是有个同仁的电脑中毒，然后一直在那登字典登陆别人帐户的。
-看下是哪个 AD ...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:32.052Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/80072EE2/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows 7 update 报 80072EE2</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题
-123net stop wuauservreg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Wind...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:31.220Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-Update/" rel="tag">Windows Update</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/Windows%20Update/80072EE2/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x80072EFE/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows Update:0x80072EFE</span></a>
-                </header>
-                <div class="kratos-entry-content">
-                    <p itemProp="description">
-                        
-                            2008 R2遇到这个问题是由于update agent过旧导致的理论Windows7早期版本也有问题，会导致后台占用很多内存
-从文章得知Win8 和2012也有更新包，但是报错不明
-更新包似乎是这两个系统通用的https:&#x2F;&#x2F;doc...
-                        
-                    </p>
-                </div>
-            </div>
-        </div>
-        <footer class="kratos-entry-post-meta">
-            <span class="pull-left">
-                <time datetime="2025-01-10T06:46:30.833Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
-                </time>
-                <a>
-                    
-                        <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>
-                    
-                </a>
-                
-                    <a>
-                        <i class="fa fa-eye"></i>
-                         次阅读
-                    </a>
-                
-                
-            </span>
-            <span class="pull-right">
-                <a class="read-more" href="/Issue/Windows%20Update/0x80072EFE/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
-            </span>
-        </footer>
-    </div>
-</article>
-    
-
-    
-    
-        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
-    <div class="kratos-entry-border clearfix">
-        
-        <div class="kratos-entry-post-main">
-            
-            
-            <div class="kratos-entry-post-inner">
-                <header class="kratos-entry-header">
-                        <a class="label-link" href="/categories/Issue/">Issue</a>
                     <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x0000011b/" itemprop="mainEntityOfPage"><span itemprop="name headline">[无解问题]域环境 Windows 7 无法添加网络打印机，报 0x0000011b</span></a>
                 </header>
                 <div class="kratos-entry-content">
@@ -606,8 +308,8 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-10T06:46:30.681Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-10</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
@@ -642,14 +344,14 @@
             <div class="kratos-entry-post-inner">
                 <header class="kratos-entry-header">
                         <a class="label-link" href="/categories/Issue/">Issue</a>
-                    <h2 class="kratos-entry-title"><a href="/Issue/SWIG_error/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]CentOS7 SWIG director method error. Error detected when calling 'RepoCB.handleMirrorFailure', ignoring this repo.</span></a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x80072EFE/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows Update:0x80072EFE</span></a>
                 </header>
                 <div class="kratos-entry-content">
                     <p itemProp="description">
                         
-                            简而言之，就是用 dnf，但是证书过期导致的，yum 报错不一样，CentOS 7的 dnf 不太完善。
-实际yum install的时候会提醒你没有 key，要导入 key
-
+                            2008 R2遇到这个问题是由于update agent过旧导致的理论Windows7早期版本也有问题，会导致后台占用很多内存
+从文章得知Win8 和2012也有更新包，但是报错不明
+更新包似乎是这两个系统通用的https:&#x2F;&#x2F;doc...
                         
                     </p>
                 </div>
@@ -657,13 +359,13 @@
         </div>
         <footer class="kratos-entry-post-meta">
             <span class="pull-left">
-                <time datetime="2025-01-09T04:09:58.601Z" itemprop="datePublished">
-                    <a><i class="fa fa-calendar"></i> 2025-01-09</a>
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
                 </time>
                 <a>
                     
                         <i class="fa fa-tags"></i>
-                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Linux/" rel="tag">Linux</a>, <a class="tag-none-link" href="/tags/Redhat%E7%B3%BB/" rel="tag">Redhat系</a>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-10/" rel="tag">Windows 10</a>
                     
                 </a>
                 
@@ -675,7 +377,311 @@
                 
             </span>
             <span class="pull-right">
-                <a class="read-more" href="/Issue/SWIG_error/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+                <a class="read-more" href="/Issue/Windows%20Update/0x80072EFE/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Issue/">Issue</a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/0x80246017/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows Update:0x80246017</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            神奇的 Windows，很多报错都是遇到一次以后就很难再遇到了。而 Windows Update 的，甚至给我整出了一个系列。
+这个报错是新装的纯净系统之后出现的，服务里的Background Intelligent service是...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-11/" rel="tag">Windows 11</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Issue/Windows%20Update/0x80246017/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Issue/">Issue</a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/Windows%20Update/80072EE2/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]Windows 7 update 报 80072EE2</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            Windows的东西有时候是比较奇葩的，在完全纯净的环境下都会出问题
+123net stop wuauservreg delete HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Wind...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.648Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>, <a class="tag-none-link" href="/tags/Windows-Update/" rel="tag">Windows Update</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Issue/Windows%20Update/80072EE2/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Hardware/">Hardware</a>
+                    <h2 class="kratos-entry-title"><a href="/Hardware/printer/" itemprop="mainEntityOfPage"><span itemprop="name headline">打印机自定义纸张大小注意事项</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            最近主要是添加凭据打印纸之后发现别人的电脑可以选，我自己电脑死活显示不出打印选项。
+具体可能跟驱动版本还有些关系，另一方面，就是惠普打印机只支持宽度小于21.59厘米，而打印服务器里我把宽设的24cm，这里是个坑注意下就好了。
+可以设...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.647Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Driver-Firmware/" rel="tag">Driver&Firmware</a>, <a class="tag-none-link" href="/tags/Hardware/" rel="tag">Hardware</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Hardware/printer/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Hardware/">Hardware</a>
+                    <h2 class="kratos-entry-title"><a href="/Hardware/%E5%A4%A7%E5%B0%8F%E6%A0%B8/" itemprop="mainEntityOfPage"><span itemprop="name headline">Wintel 的大小核问题处理</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            咋说呢，毕竟 Intel 不太行了，有一个解决方案其实是 AMD YES!
+但架不住，AMD 的品牌机真没几个牌子做，所以 Intel 现在的状态我是真不太理解。
+现在的设计真傻逼，后台就降 cpu 占用。跑编译的估计都在那骂娘。
+1...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.647Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Document/" rel="tag">Document</a>, <a class="tag-none-link" href="/tags/Hardware/" rel="tag">Hardware</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Hardware/%E5%A4%A7%E5%B0%8F%E6%A0%B8/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Issue/">Issue</a>
+                    <h2 class="kratos-entry-title"><a href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/" itemprop="mainEntityOfPage"><span itemprop="name headline">[问题处理]AD 中帐户经常被锁定的处理办法</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            这个软件可以用来排查https:&#x2F;&#x2F;www.microsoft.com&#x2F;en-us&#x2F;download&#x2F;details.aspx?id&#x3D;15201
+我遇到的情况是有个同仁的电脑中毒，然后一直在那登字典登陆别人帐户的。
+看下是哪个 AD ...
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.647Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>, <a class="tag-none-link" href="/tags/Windows/" rel="tag">Windows</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Issue/AD%E5%B8%90%E6%88%B7%E9%94%81%E5%AE%9A/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
+            </span>
+        </footer>
+    </div>
+</article>
+    
+
+    
+    
+        <article class="kratos-hentry clearfix" itemscope itemtype="https://schema.org/Article">
+    <div class="kratos-entry-border clearfix">
+        
+        <div class="kratos-entry-post-main">
+            
+            
+            <div class="kratos-entry-post-inner">
+                <header class="kratos-entry-header">
+                        <a class="label-link" href="/categories/Git/">Git</a>
+                    <h2 class="kratos-entry-title"><a href="/Code/Git/gist/" itemprop="mainEntityOfPage"><span itemprop="name headline">Github-Destop 下 Gist 的 commit 问题</span></a>
+                </header>
+                <div class="kratos-entry-content">
+                    <p itemProp="description">
+                        
+                            Github 似乎没想做 Github-Desktop 跟 Gist 的集成。对于 Gist 来说，Github-Desktop 跟普通的客户端一样，push 会需要单独登录，需要使用 token。
+
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        <footer class="kratos-entry-post-meta">
+            <span class="pull-left">
+                <time datetime="2026-11-26T03:15:21.641Z" itemprop="datePublished">
+                    <a><i class="fa fa-calendar"></i> 2026-11-26</a>
+                </time>
+                <a>
+                    
+                        <i class="fa fa-tags"></i>
+                        <a class="tag-none-link" href="/tags/Git/" rel="tag">Git</a>, <a class="tag-none-link" href="/tags/Github/" rel="tag">Github</a>, <a class="tag-none-link" href="/tags/Issue/" rel="tag">Issue</a>
+                    
+                </a>
+                
+                    <a>
+                        <i class="fa fa-eye"></i>
+                         次阅读
+                    </a>
+                
+                
+            </span>
+            <span class="pull-right">
+                <a class="read-more" href="/Code/Git/gist/" title="阅读全文">阅读全文<i class="fa fa-chevron-circle-right"></i></a>
             </span>
         </footer>
     </div>
@@ -722,7 +728,7 @@
                 文章
             </span>
             <span class="count">
-                450
+                449
             </span>
         </a>
         <a class="meta-item" href="/categories/">
@@ -747,7 +753,7 @@
                 
   <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
     <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">47</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">99</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">18</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Animation/">Animation</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Anime/">Anime</a><span class="category-list-count">15</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Browser/">Browser</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">35</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Comic/">Comic</a><span class="category-list-count">12</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Document/">Document</a><span class="category-list-count">47</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Game/">Game</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hardware/">Hardware</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Issue/">Issue</a><span class="category-list-count">58</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Optimization/">Optimization</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Picture-Photo-Image/">Picture&Photo&Image</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Software/">Software</a><span class="category-list-count">99</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Video/">Video</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">etc</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%9D%9F%E5%9C%BA/">坟场</a><span class="category-list-count">18</span></li></ul>
   </aside>
 
 
