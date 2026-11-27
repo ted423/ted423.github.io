@@ -158,11 +158,11 @@
     
     <category term="Document" scheme="http://ted423.github.io/tags/Document/"/>
     
-    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
-    
     <category term="Hardware" scheme="http://ted423.github.io/tags/Hardware/"/>
     
     <category term="Regedit" scheme="http://ted423.github.io/tags/Regedit/"/>
+    
+    <category term="Issue" scheme="http://ted423.github.io/tags/Issue/"/>
     
   </entry>
   
